@@ -1,14 +1,11 @@
-import Link from "next/link";
-
-import { ResultsList } from "@/components/search/results-list";
+import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
-import { getBrands, getSearchResults } from "@/lib/data";
-import { defaultSearchFilters } from "@/lib/constants";
+import { getBrands, getLocations } from "@/lib/data";
 
 export default async function HomePage() {
-  const [brands, featuredResults] = await Promise.all([
+  const [brands, locations] = await Promise.all([
     getBrands(),
-    getSearchResults(defaultSearchFilters),
+    getLocations(),
   ]);
 
   return (
@@ -22,17 +19,7 @@ export default async function HomePage() {
         <SearchForm brands={brands} />
       </section>
 
-      <section className="panel quick-links">
-        <div>
-          <h2>できること</h2>
-          <p>クラスを絞り込んで一覧表示し、気になった店舗は詳細ページで曜日別スケジュールまで確認できます。</p>
-        </div>
-        <div className="link-row">
-          <Link href="/search">条件なしで一覧を見る</Link>
-        </div>
-      </section>
-
-      <ResultsList results={featuredResults.slice(0, 4)} />
+      <LocationMapSection locations={locations} />
     </div>
   );
 }
