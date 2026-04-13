@@ -8,7 +8,7 @@ export function Header() {
           GymMap MVP
         </Link>
         <nav className="header-nav">
-          <Link href="/search">検索結果</Link>
+          <Link href="/search">クラスを探す</Link>
         </nav>
       </div>
     </header>

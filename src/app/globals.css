@@ -168,6 +168,12 @@ p {
   justify-content: flex-end;
 }
 
+.form-help {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .quick-links,
 .section-heading,
 .result-card,

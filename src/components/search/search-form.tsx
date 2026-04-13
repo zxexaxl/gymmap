@@ -52,6 +52,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
       <div className="search-actions">
         <button type="submit">検索する</button>
       </div>
+      <p className="form-help">条件を入れて検索結果一覧へ進めます。未入力のままでも一覧表示できます。</p>
     </form>
   );
 }

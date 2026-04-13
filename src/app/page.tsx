@@ -17,19 +17,18 @@ export default async function HomePage() {
         <p className="eyebrow">Gym studio schedule search</p>
         <h1>曜日・時間・プログラム名からジムのスタジオ枠を横断検索</h1>
         <p className="hero-copy">
-          MVP ではスタジオプログラム検索に絞り、店舗詳細と簡易データ確認画面までを用意しています。
+          気になるクラスを、曜日や時間帯、エリア、チェーン名からまとめて探せるシンプルな MVP です。
         </p>
         <SearchForm brands={brands} />
       </section>
 
       <section className="panel quick-links">
         <div>
-          <h2>この MVP でできること</h2>
-          <p>プログラム名、曜日、時間帯、エリア、チェーン名で検索できます。</p>
+          <h2>まずはシンプルに探せます</h2>
+          <p>プログラム名、曜日、開始時刻帯、エリア、チェーン名で絞り込み、店舗詳細まで確認できます。</p>
         </div>
         <div className="link-row">
-          <Link href="/search">検索結果ページへ</Link>
-          <Link href="/admin/data">管理用データ確認画面</Link>
+          <Link href="/search">条件なしで一覧を見る</Link>
         </div>
       </section>
 

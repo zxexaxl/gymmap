@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
 import { getBrands, getSearchResults } from "@/lib/data";
@@ -15,8 +17,15 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   return (
     <div className="page-stack">
       <section className="panel">
-        <h1>検索結果一覧</h1>
-        <p className="muted">開始時刻順で表示しています。</p>
+        <div className="section-heading">
+          <div>
+            <h1>検索結果</h1>
+            <p className="muted">条件を調整しながら、開始時刻順でクラスを確認できます。</p>
+          </div>
+          <div className="link-row">
+            <Link href="/">検索トップへ戻る</Link>
+          </div>
+        </div>
         <SearchForm brands={brands} initialValues={filters} />
       </section>
       <ResultsList results={results} />
