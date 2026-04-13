@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
-import { timeRangeOptions, weekdayOptions } from "@/lib/constants";
+import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
 import { getBrands, getSearchResults } from "@/lib/data";
 import { normalizeSearchFilters } from "@/lib/utils";
 
@@ -17,6 +17,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const [brands, results] = await Promise.all([getBrands(), getSearchResults(filters)]);
   const weekdayLabel = weekdayOptions.find((option) => option.value === filters.weekday)?.label ?? "指定なし";
   const timeRangeLabel = timeRangeOptions.find((option) => option.value === filters.timeRange)?.label ?? "指定なし";
+  const durationRangeLabel = durationRangeOptions.find((option) => option.value === filters.durationRange)?.label ?? "指定なし";
 
   return (
     <div className="page-stack">
@@ -35,7 +36,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           </div>
         </div>
         <p className="search-summary">
-          プログラム名: {filters.q || "指定なし"} / 曜日: {weekdayLabel} / 時間帯: {timeRangeLabel} /
+          プログラム名: {filters.q || "指定なし"} / 曜日: {weekdayLabel} / 時間帯: {timeRangeLabel} / 所要時間: {durationRangeLabel} /
           エリア・店舗名: {filters.area || "指定なし"} / チェーン名: {filters.brand || "指定なし"}
         </p>
         <SearchForm brands={brands} initialValues={filters} />

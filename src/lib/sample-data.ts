@@ -10,9 +10,18 @@ import type {
   SearchResult,
   SourcePage,
 } from "@/lib/types";
+import { enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 
 const now = new Date("2026-04-13T09:00:00+09:00").toISOString();
 
+// 開発時のダミーデータです。
+// 手動で 1 件ずつ増やしたい場合は、下の 4 ブロックに追加してください。
+// 1. sampleBrands: ブランドを追加
+// 2. sampleLocations: 店舗を追加。brand_id は sampleBrands の id と一致させる
+// 3. samplePrograms / sampleProgramAliases: プログラムと別名を追加
+// 4. sampleSchedules: 店舗 id とプログラム id を指定してクラス枠を追加
+
+// 1. ブランド
 export const sampleBrands: GymBrand[] = [
   {
     id: "brand-golds",
@@ -43,6 +52,7 @@ export const sampleBrands: GymBrand[] = [
   },
 ];
 
+// 2. 店舗
 export const sampleLocations: GymLocation[] = [
   {
     id: "loc-golds-shibuya",
@@ -77,6 +87,25 @@ export const sampleLocations: GymLocation[] = [
     nearest_station: "銀座一丁目駅",
     official_url: "https://www.goldsgym.jp/shop/13120",
     source_url: "https://www.goldsgym.jp/shop/13120/program",
+    is_active: true,
+    last_verified_at: now,
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "loc-golds-omotesando",
+    brand_id: "brand-golds",
+    name: "Gold's Gym 表参道店",
+    slug: "golds-gym-omotesando",
+    postal_code: "150-0001",
+    prefecture: "東京都",
+    city: "渋谷区",
+    address_line: "神宮前 4-3-2 表参道スクエア 3F",
+    latitude: 35.6677,
+    longitude: 139.7123,
+    nearest_station: "表参道駅",
+    official_url: "https://www.goldsgym.jp/shop/13130",
+    source_url: "https://www.goldsgym.jp/shop/13130/program",
     is_active: true,
     last_verified_at: now,
     created_at: now,
@@ -158,8 +187,28 @@ export const sampleLocations: GymLocation[] = [
     created_at: now,
     updated_at: now,
   },
+  {
+    id: "loc-central-kichijoji",
+    brand_id: "brand-central",
+    name: "セントラルスポーツ 吉祥寺",
+    slug: "central-kichijoji",
+    postal_code: "180-0004",
+    prefecture: "東京都",
+    city: "武蔵野市",
+    address_line: "吉祥寺本町 1-10-1",
+    latitude: 35.7034,
+    longitude: 139.5796,
+    nearest_station: "吉祥寺駅",
+    official_url: "https://www.central.co.jp/club/kichijoji/",
+    source_url: "https://www.central.co.jp/club/kichijoji/schedule/",
+    is_active: true,
+    last_verified_at: now,
+    created_at: now,
+    updated_at: now,
+  },
 ];
 
+// 3. プログラム
 export const samplePrograms: Program[] = [
   {
     id: "program-bodycombat",
@@ -238,7 +287,8 @@ export const sampleProgramAliases: ProgramAlias[] = [
   },
 ];
 
-export const sampleSchedules: ClassSchedule[] = [
+// 4. スケジュール
+const baseSampleSchedules: ClassSchedule[] = [
   {
     id: "schedule-1",
     location_id: "loc-golds-shibuya",
@@ -286,7 +336,7 @@ export const sampleSchedules: ClassSchedule[] = [
     start_time: "10:00",
     end_time: "11:00",
     duration_minutes: 60,
-    studio_name: "Studio 2",
+    studio_name: "スタジオ 2",
     instructor_name: "Aki",
     source_page_url: "https://example.com/konami-shinjuku/yoga",
     source_snapshot_id: null,
@@ -335,6 +385,44 @@ export const sampleSchedules: ClassSchedule[] = [
     updated_at: now,
   },
   {
+    id: "schedule-7",
+    location_id: "loc-golds-omotesando",
+    program_id: "program-yoga",
+    raw_program_name: "ヨガストレッチ",
+    weekday: "thursday",
+    start_time: "12:30",
+    end_time: "13:30",
+    duration_minutes: 60,
+    studio_name: "マインド&ボディスタジオ",
+    instructor_name: "Mika",
+    source_page_url: "https://example.com/golds-omotesando/yoga",
+    source_snapshot_id: null,
+    valid_from: "2026-04-01",
+    valid_to: null,
+    extracted_at: now,
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "schedule-8",
+    location_id: "loc-golds-omotesando",
+    program_id: "program-bodypump",
+    raw_program_name: "BODYPUMP 30",
+    weekday: "saturday",
+    start_time: "14:00",
+    end_time: "14:30",
+    duration_minutes: 30,
+    studio_name: "メインスタジオ",
+    instructor_name: "Kenta",
+    source_page_url: "https://example.com/golds-omotesando/bodypump",
+    source_snapshot_id: null,
+    valid_from: "2026-04-01",
+    valid_to: null,
+    extracted_at: now,
+    created_at: now,
+    updated_at: now,
+  },
+  {
     id: "schedule-6",
     location_id: "loc-central-kinshicho",
     program_id: "program-bodycombat",
@@ -353,7 +441,28 @@ export const sampleSchedules: ClassSchedule[] = [
     created_at: now,
     updated_at: now,
   },
+  {
+    id: "schedule-9",
+    location_id: "loc-central-kichijoji",
+    program_id: "program-pilates",
+    raw_program_name: "ピラティス ベーシック",
+    weekday: "monday",
+    start_time: "11:30",
+    end_time: "12:20",
+    duration_minutes: 50,
+    studio_name: "コンディショニングスタジオ",
+    instructor_name: "Yui",
+    source_page_url: "https://example.com/central-kichijoji/pilates",
+    source_snapshot_id: null,
+    valid_from: "2026-04-01",
+    valid_to: null,
+    extracted_at: now,
+    created_at: now,
+    updated_at: now,
+  },
 ];
+
+export const sampleSchedules: ClassSchedule[] = enrichSchedulesWithNormalization(baseSampleSchedules);
 
 export const sampleSourcePages: SourcePage[] = sampleLocations.map((location, index) => ({
   id: `source-${index + 1}`,

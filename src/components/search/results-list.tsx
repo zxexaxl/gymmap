@@ -43,7 +43,10 @@ export function ResultsList({ results, hasActiveFilters = false }: ResultsListPr
               <p className="result-time">
                 {formatWeekday(item.schedule.weekday)} {item.schedule.start_time} - {item.schedule.end_time}
               </p>
-              <h3>{item.program.name}</h3>
+              <h3>{item.schedule.raw_program_name}</h3>
+              {item.schedule.canonical_program_name && item.schedule.canonical_program_name !== item.schedule.raw_program_name ? (
+                <p className="muted">正規名: {item.schedule.canonical_program_name}</p>
+              ) : null}
               <p className="result-location">{item.location.name}</p>
               <p className="muted">{item.brand.name}</p>
               <p className="muted">
@@ -51,6 +54,10 @@ export function ResultsList({ results, hasActiveFilters = false }: ResultsListPr
               </p>
             </div>
             <dl className="result-meta">
+              <div>
+                <dt>所要時間</dt>
+                <dd>{item.schedule.duration_minutes ? `${item.schedule.duration_minutes}分` : "-"}</dd>
+              </div>
               <div>
                 <dt>最終更新日</dt>
                 <dd>{formatDate(item.location.last_verified_at ?? item.schedule.updated_at)}</dd>

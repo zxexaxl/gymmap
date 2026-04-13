@@ -1,4 +1,4 @@
-type Primitive = string | number | boolean | null | undefined | Record<string, unknown>;
+type Primitive = string | number | boolean | null | undefined | string[] | Record<string, unknown>;
 
 type AdminDataTableProps<T extends Record<string, Primitive>> = {
   title: string;

@@ -51,6 +51,7 @@ export function normalizeSearchFilters(searchParams?: Record<string, string | st
     q: pick("q").trim(),
     weekday: pick("weekday").trim(),
     timeRange: pick("timeRange").trim(),
+    durationRange: pick("durationRange").trim(),
     brand: pick("brand").trim(),
     area: pick("area").trim(),
   };
@@ -73,6 +74,30 @@ export function isTimeInRange(time: string, range: string) {
 
   if (range === "evening") {
     return hours >= 17 && hours < 23;
+  }
+
+  return true;
+}
+
+export function isDurationInRange(durationMinutes: number | null, range: string) {
+  if (!range) {
+    return true;
+  }
+
+  if (durationMinutes === null) {
+    return false;
+  }
+
+  if (range === "short") {
+    return durationMinutes <= 45;
+  }
+
+  if (range === "medium") {
+    return durationMinutes >= 46 && durationMinutes <= 59;
+  }
+
+  if (range === "long") {
+    return durationMinutes >= 60;
   }
 
   return true;

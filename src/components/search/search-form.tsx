@@ -1,4 +1,4 @@
-import { defaultSearchFilters, timeRangeOptions, weekdayOptions } from "@/lib/constants";
+import { defaultSearchFilters, durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
 import type { GymBrand, SearchFilters } from "@/lib/types";
 
 type SearchFormProps = {
@@ -29,6 +29,16 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
           <span>開始時刻帯</span>
           <select name="timeRange" defaultValue={initialValues.timeRange}>
             {timeRangeOptions.map((option) => (
+              <option key={option.value || "all"} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="field field-emphasis">
+          <span>所要時間</span>
+          <select name="durationRange" defaultValue={initialValues.durationRange}>
+            {durationRangeOptions.map((option) => (
               <option key={option.value || "all"} value={option.value}>
                 {option.label}
               </option>

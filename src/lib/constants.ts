@@ -28,10 +28,18 @@ export const timeRangeOptions = [
   { value: "evening", label: "夕方以降 (17:00-22:59)" },
 ];
 
+export const durationRangeOptions = [
+  { value: "", label: "指定なし" },
+  { value: "short", label: "45分以下" },
+  { value: "medium", label: "46〜59分" },
+  { value: "long", label: "60分以上" },
+];
+
 export const defaultSearchFilters: SearchFilters = {
   q: "",
   weekday: "",
   timeRange: "",
+  durationRange: "",
   brand: "",
   area: "",
 };

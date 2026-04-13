@@ -63,10 +63,19 @@ export type ClassSchedule = {
   location_id: string;
   program_id: string;
   raw_program_name: string;
+  canonical_program_name?: string | null;
+  normalized_text?: string;
+  comparison_key?: string;
   weekday: Weekday;
   start_time: string;
   end_time: string;
   duration_minutes: number | null;
+  program_brand?: string | null;
+  category_primary?: string | null;
+  tags?: string[];
+  match_method?: "exact" | "similar" | "unresolved";
+  confidence?: number;
+  needs_review?: boolean;
   studio_name: string | null;
   instructor_name: string | null;
   source_page_url: string | null;
@@ -126,6 +135,7 @@ export type SearchFilters = {
   q: string;
   weekday: string;
   timeRange: string;
+  durationRange: string;
   brand: string;
   area: string;
 };

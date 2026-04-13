@@ -4,6 +4,7 @@ import {
   sampleBrands,
   sampleLocations,
 } from "@/lib/sample-data";
+import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
 import type {
   AdminDataset,
@@ -18,7 +19,7 @@ import type {
   IngestionItem,
   IngestionRun,
 } from "@/lib/types";
-import { getLocationAddress, isTimeInRange } from "@/lib/utils";
+import { getLocationAddress, isDurationInRange, isTimeInRange } from "@/lib/utils";
 
 type SupabaseJoinedSchedule = ClassSchedule & {
   gym_locations: GymLocation & {
@@ -28,12 +29,14 @@ type SupabaseJoinedSchedule = ClassSchedule & {
 };
 
 function mapJoinedSchedule(row: SupabaseJoinedSchedule): SearchResult {
+  const normalizedSchedule = enrichScheduleWithNormalization({
+    ...row,
+    location: undefined,
+    program: undefined,
+  });
+
   return {
-    schedule: {
-      ...row,
-      location: undefined,
-      program: undefined,
-    },
+    schedule: normalizedSchedule,
     location: {
       ...row.gym_locations,
       brand: row.gym_locations.gym_brands,
@@ -58,10 +61,17 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
         return false;
       }
 
+      if (!isDurationInRange(item.schedule.duration_minutes, filters.durationRange)) {
+        return false;
+      }
+
       if (keyword) {
         const haystack = [
           item.program.name,
           item.schedule.raw_program_name,
+          item.schedule.canonical_program_name,
+          item.schedule.category_primary,
+          ...(item.schedule.tags ?? []),
           item.location.name,
           item.brand.name,
         ]
@@ -167,6 +177,7 @@ export async function getLocationBySlug(slug: string): Promise<LocationDetail | 
     q: "",
     weekday: "",
     timeRange: "",
+    durationRange: "",
     brand: "",
     area: "",
   });
@@ -226,7 +237,9 @@ export async function getAdminDataset(): Promise<AdminDataset> {
     gym_brands: gym_brands.length ? gym_brands : buildAdminSampleDataset().gym_brands,
     gym_locations: gym_locations.length ? gym_locations : buildAdminSampleDataset().gym_locations,
     programs: programs.length ? programs : buildAdminSampleDataset().programs,
-    class_schedules: class_schedules.length ? class_schedules : buildAdminSampleDataset().class_schedules,
+    class_schedules: class_schedules.length
+      ? enrichSchedulesWithNormalization(class_schedules)
+      : buildAdminSampleDataset().class_schedules,
     source_pages: source_pages.length ? source_pages : buildAdminSampleDataset().source_pages,
     ingestion_runs: ingestion_runs.length ? ingestion_runs : buildAdminSampleDataset().ingestion_runs,
     ingestion_items: ingestion_items.length ? ingestion_items : buildAdminSampleDataset().ingestion_items,
