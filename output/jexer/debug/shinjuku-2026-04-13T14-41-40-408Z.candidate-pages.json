@@ -1,0 +1,98 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+  "branch_base_url": "https://www.jexer.jp/mb/shinjuku/",
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "depth": 1,
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/tue_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/wed_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/wed_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/wed_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/wed_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/thu_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/thu_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/thu_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/thu_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/fri_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/fri_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sat_10c.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sun_10a.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sun_10b.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sun_10bike.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sun_10c.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "depth": 1,
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "aqua",
+        "contains_schedule_rows": true,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/shinjuku/schedule/mon_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/tue_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/wed_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/fri_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sat_10p.html",
+          "https://www.jexer.jp/mb/shinjuku/schedule/sun_10p.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "depth": 1,
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 0.9
+      }
+    }
+  ]
+}

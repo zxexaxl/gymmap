@@ -1,4 +1,4 @@
-import { programMaster, type ProgramMasterEntry } from "./program-master";
+import { programMaster, type ProgramBrand, type ProgramCategoryPrimary, type ProgramMasterEntry } from "./program-master";
 
 export type ProgramNormalizationInput = {
   rawProgramName: string;
@@ -12,8 +12,8 @@ export type ProgramNormalizationResult = {
   comparison_key: string;
   duration_minutes: number | null;
   canonical_program_name: string | null;
-  program_brand: string | null;
-  category_primary: string | null;
+  program_brand: ProgramBrand | null;
+  category_primary: ProgramCategoryPrimary | null;
   tags: string[];
   match_method: "exact" | "similar" | "unresolved";
   confidence: number;
@@ -221,6 +221,43 @@ function resolveProgram(comparisonKey: string) {
   };
 }
 
+function shouldNeedsReview({
+  matchMethod,
+  confidence,
+  entry,
+  comparisonKey,
+}: {
+  matchMethod: "exact" | "similar";
+  confidence: number;
+  entry: ProgramMasterEntry;
+  comparisonKey: string;
+}) {
+  if (matchMethod === "exact") {
+    return false;
+  }
+
+  const safeBrandPrograms = new Set(["BODYCOMBAT", "BODYPUMP", "ZUMBA", "リトモス", "チームバイク", "メガダンス", "バイラバイラ"]);
+  const safeContainmentPrograms = new Set(["ヨガ", "ピラティス", "ペルビックストレッチ", "エアロビクス"]);
+
+  if (entry.programBrand && confidence >= 0.84) {
+    return false;
+  }
+
+  if (safeBrandPrograms.has(entry.canonicalProgramName) && confidence >= 0.84) {
+    return false;
+  }
+
+  if (safeContainmentPrograms.has(entry.canonicalProgramName) && comparisonKey.includes(buildComparisonKey(normalizeText(entry.canonicalProgramName)))) {
+    return false;
+  }
+
+  if (confidence >= 0.92) {
+    return false;
+  }
+
+  return true;
+}
+
 export function normalizeProgramName(input: ProgramNormalizationInput): ProgramNormalizationResult {
   const normalizedText = normalizeText(input.rawProgramName);
   const comparisonKey = buildComparisonKey(normalizedText);
@@ -256,7 +293,12 @@ export function normalizeProgramName(input: ProgramNormalizationInput): ProgramN
     tags: match.entry.tags,
     match_method: match.matchMethod,
     confidence: match.confidence,
-    needs_review: match.matchMethod !== "exact",
+    needs_review: shouldNeedsReview({
+      matchMethod: match.matchMethod,
+      confidence: match.confidence,
+      entry: match.entry,
+      comparisonKey,
+    }),
   };
 }
 

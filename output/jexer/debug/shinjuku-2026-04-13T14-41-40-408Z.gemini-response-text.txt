@@ -1,0 +1,67 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "00:00",
+      "raw_program_name": "ﾌﾟｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "instructor_name": null
+    }
+  ]
+}

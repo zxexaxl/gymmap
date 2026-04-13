@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_day_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fitness.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/index.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb79/V5JeobCSH11glAS2hIod7WMg6qX8qncqikHaifXcA/MCKqh107HHVawwYg"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1361,
+    "candidatesTokenCount": 150,
+    "totalTokenCount": 1511,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1361
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "aHLdaeSxNtGX0-kPvtX_8As"
+}

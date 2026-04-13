@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_day_detail\",\n  \"schedule_kind\": \"aqua\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/aqua.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/index.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7REXxehvqgf+duxDwDtWG5v7Fm8YsOFKzWq/OtK4et1dtgfoFmvQW9wx7ey4k"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1338,
+    "candidatesTokenCount": 150,
+    "totalTokenCount": 1488,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1338
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "9gHdaYfSE6v-2roP3oC58Qs"
+}

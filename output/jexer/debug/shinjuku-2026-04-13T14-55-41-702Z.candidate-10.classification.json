@@ -1,0 +1,21 @@
+{
+  "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "classification": {
+    "page_type": "schedule_day_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/shinjuku/schedule/wed_10b.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/index.html"
+    ],
+    "confidence": 1
+  }
+}

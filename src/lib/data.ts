@@ -4,6 +4,7 @@ import {
   sampleBrands,
   sampleLocations,
 } from "@/lib/sample-data";
+import { getProgramSearchAliases } from "@/lib/program-master";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
 import type {
@@ -47,44 +48,36 @@ function mapJoinedSchedule(row: SupabaseJoinedSchedule): SearchResult {
 }
 
 function filterResults(results: SearchResult[], filters: SearchFilters) {
-  const keyword = filters.q.toLowerCase();
+  const keyword = normalizeSearchKeyword(filters.q);
   const brandKeyword = filters.brand.toLowerCase();
   const areaKeyword = filters.area.toLowerCase();
 
   return results
-    .filter((item) => {
+    .map((item) => {
       if (filters.weekday && item.schedule.weekday !== filters.weekday) {
-        return false;
+        return null;
       }
 
       if (!isTimeInRange(item.schedule.start_time, filters.timeRange)) {
-        return false;
+        return null;
       }
 
       if (!isDurationInRange(item.schedule.duration_minutes, filters.durationRange)) {
-        return false;
+        return null;
       }
 
       if (keyword) {
-        const haystack = [
-          item.program.name,
-          item.schedule.raw_program_name,
-          item.schedule.canonical_program_name,
-          item.schedule.category_primary,
-          ...(item.schedule.tags ?? []),
-          item.location.name,
-          item.brand.name,
-        ]
-          .join(" ")
-          .toLowerCase();
+        const score = scoreKeywordMatch(item, keyword);
 
-        if (!haystack.includes(keyword)) {
-          return false;
+        if (score <= 0) {
+          return null;
         }
+
+        return { item, score };
       }
 
       if (brandKeyword && !item.brand.name.toLowerCase().includes(brandKeyword)) {
-        return false;
+        return null;
       }
 
       if (areaKeyword) {
@@ -99,13 +92,72 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
           .toLowerCase();
 
         if (!locationText.includes(areaKeyword)) {
-          return false;
+          return null;
         }
       }
 
-      return true;
+      return { item, score: 0 };
     })
-    .sort((a, b) => a.schedule.start_time.localeCompare(b.schedule.start_time));
+    .filter((value): value is { item: SearchResult; score: number } => Boolean(value))
+    .sort((left, right) => {
+      if (right.score !== left.score) {
+        return right.score - left.score;
+      }
+
+      return left.item.schedule.start_time.localeCompare(right.item.schedule.start_time);
+    })
+    .map((entry) => entry.item);
+}
+
+function normalizeSearchKeyword(value: string) {
+  return value
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[／/]/g, " ")
+    .replace(/[()（）【】\[\]]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function compactSearchKeyword(value: string) {
+  return normalizeSearchKeyword(value).replace(/\s+/g, "");
+}
+
+function getMatchScore(query: string, candidate?: string | null) {
+  if (!candidate) {
+    return 0;
+  }
+
+  const normalizedCandidate = normalizeSearchKeyword(candidate);
+  const compactCandidate = compactSearchKeyword(candidate);
+  const compactQuery = query.replace(/\s+/g, "");
+
+  if (normalizedCandidate === query || compactCandidate === compactQuery) {
+    return 3;
+  }
+
+  if (normalizedCandidate.startsWith(query) || compactCandidate.startsWith(compactQuery)) {
+    return 2;
+  }
+
+  if (normalizedCandidate.includes(query) || compactCandidate.includes(compactQuery)) {
+    return 1;
+  }
+
+  return 0;
+}
+
+function scoreKeywordMatch(item: SearchResult, query: string) {
+  const aliases = getProgramSearchAliases(item.schedule.canonical_program_name);
+  let bestScore = 0;
+
+  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.raw_program_name) * 100);
+  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.canonical_program_name) * 90);
+  bestScore = Math.max(bestScore, ...aliases.map((alias) => getMatchScore(query, alias) * 80), 0);
+  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.program_brand) * 50);
+  bestScore = Math.max(bestScore, ...(item.schedule.tags ?? []).map((tag) => getMatchScore(query, tag) * 30), 0);
+
+  return bestScore;
 }
 
 export async function getSearchResults(filters: SearchFilters): Promise<SearchResult[]> {

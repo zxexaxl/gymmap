@@ -1,0 +1,15 @@
+{
+  "url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+  "discovered_from": null,
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "mixed",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html"
+    ],
+    "confidence": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://www.jexer.jp/mb/shinjuku/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [],
+    "confidence": 0.9
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "total_records": 263,
+  "needs_review_count": 118,
+  "unresolved_count": 34,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 252
+    },
+    {
+      "key": "Les Mills",
+      "count": 11
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "mind_body",
+      "count": 76
+    },
+    {
+      "key": "cycling",
+      "count": 54
+    },
+    {
+      "key": "conditioning",
+      "count": 46
+    },
+    {
+      "key": "null",
+      "count": 34
+    },
+    {
+      "key": "cardio",
+      "count": 27
+    },
+    {
+      "key": "dance",
+      "count": 17
+    },
+    {
+      "key": "martial_arts",
+      "count": 6
+    },
+    {
+      "key": "strength",
+      "count": 3
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ﾁｰﾑﾊﾞｲｸ",
+      "count": 54
+    },
+    {
+      "key": "ﾎｯﾄﾖｶﾞ",
+      "count": 54
+    },
+    {
+      "key": "ｻｰｷｯﾄ",
+      "count": 46
+    },
+    {
+      "key": "AEROBICS",
+      "count": 12
+    },
+    {
+      "key": "ｽﾞﾝﾊﾞ",
+      "count": 9
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ",
+      "count": 8
+    },
+    {
+      "key": "ﾘﾄﾓｽ",
+      "count": 6
+    },
+    {
+      "key": "ｴｱﾛｳｫｰｸ",
+      "count": 5
+    },
+    {
+      "key": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "count": 5
+    },
+    {
+      "key": "RPBｺﾝﾄﾛｰﾙ",
+      "count": 4
+    }
+  ]
+}

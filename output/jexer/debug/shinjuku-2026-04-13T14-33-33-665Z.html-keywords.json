@@ -1,0 +1,7 @@
+{
+  "table": true,
+  "schedule": true,
+  "program": false,
+  "lesson": false,
+  "studio": false
+}

@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/wed_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/wed_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/wed_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/wed_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10c.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10a.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10b.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10bike.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10c.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7i9/T14zdu3VUpqKiV75kNj1eXeOzcAjKVrotR3DsNSW4pkrvzJ+068FPnw1B"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1873,
+    "candidatesTokenCount": 885,
+    "totalTokenCount": 2758,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1873
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "MXLdaejxNInv2roP7Ji84As"
+}

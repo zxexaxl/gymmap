@@ -196,12 +196,23 @@ Supabase の seed も増やしたい場合:
 - まず機械的に文字列正規化し、比較用キーを作る
 - `start_time` / `end_time` があればそこから所要時間を計算する
 - 小さな正規名マスタ [src/lib/program-master.ts](/Users/te/Documents/GymMap/src/lib/program-master.ts) に対して完全一致、次に類似一致を試す
+- `category_primary` は `cardio / strength / mind_body / dance / cycling / aquatic / martial_arts / conditioning / other` の固定集合で管理する
+- `program_brand` は `Les Mills / Radical Fitness / MOSSA / ZUMBA` などのブランド軸で持ち、カテゴリとは混同しない
 - 閾値未満は `unresolved` として保留する
+
+判定の考え方:
+
+- `exact`: 正規キーでそのまま一致したもの
+- `similar`: 類似一致で吸収したもの。既知ブランドの代表プログラムや、ヨガ / ピラティス系の安全な寄せは review なしで通す場合がある
+- `unresolved`: 小さなマスタでも安全に寄せられないもの
+- `needs_review=true` の代表例は、類似一致でも確信度が十分でないケース、ブランド不明の曖昧な名称、どの正規名にも安全に寄せられないケース
 
 使いどころ:
 
 - `class schedule` は表示前に正規化され、`canonical_program_name` や `duration_minutes` を持つ
-- 検索では `raw_program_name` に加えて `canonical_program_name` も使う
+- 自由語検索では `raw_program_name`、`canonical_program_name`、`searchAliases`、`program_brand`、`tags` を項目別に判定する
+- `category_primary` は自由語検索対象に入れず、カテゴリ絞り込み寄りの扱いにする
+- 英字 / 全角カナ / 半角カナの橋渡しは `searchAliases` で行い、スコア順で結果を並べる
 - 検索フォームでは所要時間フィルタを使える
 - `unresolved` は無理に確定せず、レビュー候補として扱う
 
@@ -210,13 +221,104 @@ Supabase の seed も増やしたい場合:
 1. 新しい正規プログラムを追加したいときは `programMaster` に 1 エントリ追加する
 2. `comparisonKeys` には完全一致させたい短いキーだけ入れる
 3. `searchHints` には典型的な表記例を 2-4 個だけ足す
-4. 曖昧なケースは無理に増やさず `unresolved` のままレビュー対象にする
+4. ブランドが分かる場合は `programBrand` も設定する
+5. 曖昧なケースは無理に増やさず `unresolved` のままレビュー対象にする
 
 テスト:
 
 ```bash
 npm run test
 ```
+
+## JEXER 東京圏 抽出実験
+
+JEXER のスタジオスケジュール抽出は、まだ実験用途の手動実行スクリプトです。自動クロールや大量実行はまだ入れていません。
+
+必要な環境変数:
+
+```env
+GEMINI_API_KEY=your-gemini-api-key
+GEMINI_MODEL_ID=gemini-3.1-flash-lite-preview
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
+
+- `GEMINI_MODEL_ID` は未設定でも `gemini-3.1-flash-lite-preview` を使います
+- 将来 `gemini-2.5-flash` などへ切り替える場合は環境変数だけ変えればよい構成です
+
+実行方法:
+
+```bash
+npm run extract:jexer -- --target=shinjuku
+```
+
+- experimental scripts は `scripts/experimental/load-env.ts` 経由で `.env.local` を読み込むので、通常は手動 `export` は不要です
+
+または任意 URL を直接指定できます。
+
+```bash
+npm run extract:jexer -- --url=https://www.jexer.jp/mb/kameido/schedule/mon_10a.html --location-name="JEXER 亀戸"
+```
+
+- 人が最初に入れる URL は店舗トップ URL や支店 URL だけで構いません
+- その先は同一支店配下の候補ページを集めて、Gemini が `schedule_index / schedule_detail / schedule_day_detail / ignore` を判定し、本抽出対象を選びます
+- まだ実験用途のため、本格クローラではなく浅い候補収集と AI 判定に寄せた構成です
+
+最初に試す URL 例:
+
+- `shinjuku`: `https://www.jexer.jp/mb/shinjuku/schedule/index.html`
+- `ikebukuro`: `https://www.jexer.jp/mb/ikebukuro/index.html`
+- `ueno`: `https://www.jexer.jp/mb/ueno/`
+- `kameido-monday-a`: `https://www.jexer.jp/mb/kameido/schedule/mon_10a.html`
+- `index.html` は入口ページだけで、実際のスタジオスケジュールは `fitness.html` やその先の日別 HTML にある場合があります。抽出スクリプトはまずリンク先をたどってから Gemini に渡します。
+- JEXER では `fitness.html` や `aqua.html` も入口ページである場合があります。スタジオ抽出では `aqua` 系は除外し、`mon_10a.html` のような日別詳細 HTML を優先して本抽出対象に選びます。
+
+出力:
+
+- `output/jexer/*.json` に保存されます
+- `extract:jexer` 実行後は `output/jexer/*.summary.json` も保存されます
+- 抽出後に `normalizeProgramName` も通すため、`canonical_program_name` や `needs_review` も確認できます
+- デバッグ用に `output/jexer/debug/` へ生 HTML、Gemini 入力、Gemini 生レスポンスも保存されます
+- `candidate-pages.json` と `selection.json` を見ると、入口 URL からどの候補が集まり、どの URL が本抽出対象に選ばれたかを確認できます
+
+0件だったときの確認手順:
+
+- `output/jexer/debug/*.source.html` を見て、そもそもスケジュール表が取得できているか確認します
+- `output/jexer/debug/*.html-keywords.json` を見て、`table` や `schedule` などのキーワードが HTML に含まれるか確認します
+- `output/jexer/debug/*.gemini-input.txt` を見て、Gemini に渡した入力が想定どおりか確認します
+- `output/jexer/debug/*.gemini-response.json` と `*.gemini-response-text.txt` を見て、Gemini が 0 件を返したのか、返却自体が崩れているのかを切り分けます
+- `records: []` なら HTML 構造とプロンプトの噛み合いをまず疑い、レスポンス保存に失敗していれば API エラーやパース失敗を疑ってください
+
+抽出結果サマリー:
+
+```bash
+npm run summary:jexer -- --file=output/jexer/shinjuku-2026-04-13T12-00-00-000Z.json
+```
+
+- 総 records 件数
+- `needs_review=true` 件数
+- `unresolved` 件数
+- `program_brand` ごとの件数
+- `category_primary` ごとの件数
+- 頻出 `raw_program_name` 上位
+
+JEXER 抽出 JSON の取り込み:
+
+```bash
+npm run import:jexer -- --file=output/jexer/shinjuku-2026-04-13T12-00-00-000Z.json
+```
+
+- `class_schedules` を対象に手動取り込みします
+- `gym_locations` は `location_name` で対応付けます。見つからない店舗は warning を出して skip します
+- `programs` は `canonical_program_name` を優先して対応付けし、未登録なら小さく作成します。`canonical_program_name` がない場合は `raw_program_name` を使います
+- `class_schedules` には `raw_program_name`、`canonical_program_name`、`duration_minutes`、`program_brand`、`category_primary`、`tags`、`needs_review`、`confidence`、`source_page_url`、`weekday`、`start_time`、`end_time`、`instructor_name` を保存します
+- 同じ `location_id + weekday + start_time + end_time + raw_program_name + source_page_url` の行があれば update、なければ insert します
+- まず確認だけしたい場合は `--dry-run` を付けてください
+
+DB投入前の目安:
+
+- `unresolved` が多すぎないかを先に確認します。0 が理想ですが、まずは少数件まで下がっているかを見ます
+- `needs_review` は一括レビューできる件数に収まっているかを見ます。安全な `similar` は review なしに倒し、曖昧なものだけ残す方針です
+- `program_brand=null` の比率もざっくり確認します。ブランド系プログラムが多い店舗なのにほぼ `null` なら、master 追加前に投入しない方が安全です
 
 ## よくある詰まりどころ
 

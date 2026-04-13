@@ -1,0 +1,39 @@
+{
+  "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10c.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sun_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sun_10b.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sun_10bike.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": true,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  }
+}

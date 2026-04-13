@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"aqua\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/shinjuku/schedule/mon_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/wed_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/sun_10p.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7egnspbLEh5q5agfUepzi35CrlSu4ezu2B10Cu6jJPLg0uEi8ono8uZvtGHnS"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1328,
+    "candidatesTokenCount": 273,
+    "totalTokenCount": 1601,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1328
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "rwDdaZWxFuGd0-kP0uqvqAw"
+}
