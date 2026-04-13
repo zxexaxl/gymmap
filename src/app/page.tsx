@@ -15,17 +15,17 @@ export default async function HomePage() {
     <div className="page-stack">
       <section className="hero panel">
         <p className="eyebrow">Gym studio schedule search</p>
-        <h1>曜日・時間・プログラム名からジムのスタジオ枠を横断検索</h1>
+        <h1>曜日や時間帯から、気になるスタジオプログラムをまとめて探す</h1>
         <p className="hero-copy">
-          気になるクラスを、曜日や時間帯、エリア、チェーン名からまとめて探せるシンプルな MVP です。
+          プログラム名、曜日、時間帯、エリア、チェーン名から、複数のジムのクラス情報を横断して探せます。
         </p>
         <SearchForm brands={brands} />
       </section>
 
       <section className="panel quick-links">
         <div>
-          <h2>まずはシンプルに探せます</h2>
-          <p>プログラム名、曜日、開始時刻帯、エリア、チェーン名で絞り込み、店舗詳細まで確認できます。</p>
+          <h2>できること</h2>
+          <p>クラスを絞り込んで一覧表示し、気になった店舗は詳細ページで曜日別スケジュールまで確認できます。</p>
         </div>
         <div className="link-row">
           <Link href="/search">条件なしで一覧を見る</Link>

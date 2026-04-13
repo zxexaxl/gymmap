@@ -15,7 +15,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
           <span>プログラム名</span>
           <input name="q" defaultValue={initialValues.q} placeholder="BODYCOMBAT / Yoga など" />
         </label>
-        <label className="field">
+        <label className="field field-emphasis">
           <span>曜日</span>
           <select name="weekday" defaultValue={initialValues.weekday}>
             {weekdayOptions.map((option) => (
@@ -25,7 +25,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
             ))}
           </select>
         </label>
-        <label className="field">
+        <label className="field field-emphasis">
           <span>開始時刻帯</span>
           <select name="timeRange" defaultValue={initialValues.timeRange}>
             {timeRangeOptions.map((option) => (
@@ -52,7 +52,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
       <div className="search-actions">
         <button type="submit">検索する</button>
       </div>
-      <p className="form-help">条件を入れて検索結果一覧へ進めます。未入力のままでも一覧表示できます。</p>
+      <p className="form-help">条件を入れて絞り込めます。未入力のまま検索すると、登録されているクラスを一覧表示します。</p>
     </form>
   );
 }

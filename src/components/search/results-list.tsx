@@ -5,14 +5,23 @@ import { formatDate, formatWeekday, getLocationAddress } from "@/lib/utils";
 
 type ResultsListProps = {
   results: SearchResult[];
+  hasActiveFilters?: boolean;
 };
 
-export function ResultsList({ results }: ResultsListProps) {
+export function ResultsList({ results, hasActiveFilters = false }: ResultsListProps) {
   if (!results.length) {
     return (
-      <section className="panel">
-        <h2>検索結果</h2>
-        <p>条件に一致するクラスが見つかりませんでした。キーワードや時間帯を変えてみてください。</p>
+      <section className="panel empty-state">
+        <div className="section-heading">
+          <div>
+            <h2>検索結果 0件</h2>
+            <p className="muted">
+              {hasActiveFilters
+                ? "条件に合うクラスは見つかりませんでした。キーワードや時間帯を少し広げて、もう一度探してみてください。"
+                : "まだ表示できるクラスがありません。データが入るとここに一覧が表示されます。"}
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -20,20 +29,23 @@ export function ResultsList({ results }: ResultsListProps) {
   return (
     <section className="panel">
       <div className="section-heading">
-        <h2>検索結果</h2>
-        <p>{results.length} 件</p>
+        <div>
+          <h2>検索結果 {results.length}件</h2>
+          <p className="muted">
+            {hasActiveFilters ? "条件に合うクラスを開始時刻順で表示しています。" : "登録されているクラスを開始時刻順で表示しています。"}
+          </p>
+        </div>
       </div>
       <div className="result-list">
         {results.map((item) => (
           <article key={item.schedule.id} className="result-card">
             <div className="result-card-main">
-              <h3>{item.program.name}</h3>
-              <p className="muted">
+              <p className="result-time">
                 {formatWeekday(item.schedule.weekday)} {item.schedule.start_time} - {item.schedule.end_time}
               </p>
-              <p>
-                {item.brand.name} / {item.location.name}
-              </p>
+              <h3>{item.program.name}</h3>
+              <p className="result-location">{item.location.name}</p>
+              <p className="muted">{item.brand.name}</p>
               <p className="muted">
                 {getLocationAddress(item.location.prefecture, item.location.city, item.location.address_line)}
               </p>
