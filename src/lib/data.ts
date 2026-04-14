@@ -59,8 +59,8 @@ function isTrackedOimachiRecord(item: SearchResult) {
   const raw = item.schedule.raw_program_name;
 
   return (
-    (item.schedule.start_time === "19:40" && (canonical === "BODYPUMP" || raw.includes("BODYPUMP"))) ||
-    (item.schedule.start_time === "20:50" && (canonical === "BODYCOMBAT" || raw.includes("BODYCOMBAT")))
+    (item.schedule.start_time.startsWith("19:40") && (canonical === "BODYPUMP" || raw.includes("BODYPUMP"))) ||
+    (item.schedule.start_time.startsWith("20:50") && (canonical === "BODYCOMBAT" || raw.includes("BODYCOMBAT")))
   );
 }
 
@@ -203,6 +203,46 @@ function scoreKeywordMatch(item: SearchResult, query: string) {
   return scoreProgramQueryMatch(item, query);
 }
 
+async function fetchAllJoinedSchedules() {
+  const supabase = getSupabaseClient();
+  const pageSize = 1000;
+  const rows: SupabaseJoinedSchedule[] = [];
+  let from = 0;
+
+  while (true) {
+    const to = from + pageSize - 1;
+    const { data, error } = await supabase
+      .from("class_schedules")
+      .select(
+        `
+          *,
+          gym_locations (
+            *,
+            gym_brands (*)
+          ),
+          programs (*)
+        `,
+      )
+      .order("start_time", { ascending: true })
+      .range(from, to);
+
+    if (error) {
+      throw error;
+    }
+
+    const batch = (data as SupabaseJoinedSchedule[]) ?? [];
+    rows.push(...batch);
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    from += pageSize;
+  }
+
+  return rows;
+}
+
 export async function getSearchResults(filters: SearchFilters): Promise<SearchResult[]> {
   if (!hasSupabaseEnv()) {
     return [];
@@ -228,27 +268,16 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
     );
   }
 
-  const supabase = getSupabaseClient();
-  const { data, error } = await supabase
-    .from("class_schedules")
-    .select(
-      `
-        *,
-        gym_locations (
-          *,
-          gym_brands (*)
-        ),
-        programs (*)
-      `,
-    )
-    .order("start_time", { ascending: true });
+  let data: SupabaseJoinedSchedule[];
 
-  if (error) {
-    console.error("Failed to load schedules from Supabase:", error.message);
+  try {
+    data = await fetchAllJoinedSchedules();
+  } catch (error) {
+    console.error("Failed to load schedules from Supabase:", error instanceof Error ? error.message : String(error));
     return [];
   }
 
-  const mappedResults = (data as SupabaseJoinedSchedule[]).map(mapJoinedSchedule);
+  const mappedResults = data.map(mapJoinedSchedule);
   logTrackedSearchStage("db_response", filters, mappedResults);
 
   return filterResults(mappedResults, filters);
