@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/schedule/?shop=4\",\n    \"https://www.jexer.jp/mb/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/info/\",\n    \"https://www.jexer.jp/mb/admission.html\",\n    \"https://www.jexer.jp/mb/facilities.html\",\n    \"https://www.jexer.jp/mb/visit/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3223,
+    "candidatesTokenCount": 183,
+    "totalTokenCount": 3408,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3223
+      }
+    ],
+    "thoughtsTokenCount": 2
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "nRveaaGQL-220-kPlMucuA8"
+}

@@ -1,0 +1,38 @@
+{
+  "url": "https://www.jexer.jp/mb/yotsuya/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/yotsuya/admission.html",
+  "depth": 2,
+  "url_score": 4,
+  "score_reasons": [
+    "shared_segments:2",
+    "close_to_parent"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": true,
+    "timeLikeCount": 6,
+    "repeatingBlockCount": 0,
+    "linkCount": 21,
+    "rowCount": 6
+  },
+  "usage_metadata": {
+    "prompt_token_count": 3204,
+    "candidates_token_count": 123,
+    "total_token_count": 3327,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [],
+    "confidence": 1
+  }
+}

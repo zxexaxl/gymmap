@@ -1,0 +1,13 @@
+{
+  "source_url": "https://www.jexer.jp/mb/yotsuya/",
+  "extraction_urls": [],
+  "keywords": {},
+  "usage_metadata": {
+    "prompt_token_count": 18072,
+    "candidates_token_count": 1434,
+    "total_token_count": 19518,
+    "thoughts_token_count": 12,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

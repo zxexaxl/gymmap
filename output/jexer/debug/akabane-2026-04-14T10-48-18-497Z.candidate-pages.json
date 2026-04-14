@@ -1,0 +1,972 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/akabane/",
+  "entry_origin": "https://www.jexer.jp",
+  "budget": {
+    "maxVisitedPages": 18,
+    "maxAiClassifications": 16,
+    "maxPdfPages": 4,
+    "maxDepth": 3,
+    "maxSeedsFromEntry": 8,
+    "maxLinksPerPage": 10
+  },
+  "failed_fetches": [
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=5",
+      "discoveredFrom": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/index.html",
+      "discoveredFrom": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 404 Not Found",
+      "status": 404,
+      "statusText": "Not Found",
+      "responseBodyPreview": "File not found.\n"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=5",
+      "discoveredFrom": "ai_recommendation:https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=5",
+      "discoveredFrom": "ai_recommendation:https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/index.html",
+      "discoveredFrom": "index_link_collection:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 404 Not Found",
+      "status": 404,
+      "statusText": "Not Found",
+      "responseBodyPreview": "File not found.\n"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=5",
+      "discoveredFrom": "ai_recommendation:https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/index.html",
+      "discoveredFrom": "index_link_collection:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 404 Not Found",
+      "status": 404,
+      "statusText": "Not Found",
+      "responseBodyPreview": "File not found.\n"
+    }
+  ],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/mb/akabane/",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 2,
+      "visited_url": "https://www.jexer.jp/mb/akabane/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 3,
+      "visited_url": "https://www.jexer.jp/mb/akabane/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 4,
+      "visited_url": "https://www.jexer.jp/mb/akabane/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 5,
+      "visited_url": "https://www.jexer.jp/mb/akabane/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 6,
+      "visited_url": "https://www.jexer.jp/mb/info/",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 7,
+      "visited_url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 8,
+      "visited_url": "https://www.jexer.jp/mb/akabane/schedule/",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/member/index.html",
+      "depth": 2,
+      "url_score": 8,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "same_origin",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/fitness.html",
+        "https://www.jexer.jp/mb/akabane/schedule/aqua.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 9,
+      "visited_url": "https://www.jexer.jp/mb/akabane/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/admission.html",
+      "depth": 2,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/schedule/?shop=5",
+        "https://www.jexer.jp/mb/akabane/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 10,
+      "visited_url": "https://www.jexer.jp/mb/akabane/schedule/fitness.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 15,
+      "score_reasons": [
+        "positive:schedule,fitness",
+        "shared_segments:2",
+        "close_to_parent",
+        "same_origin",
+        "same_directory_as_parent",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "studio",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10c.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10c.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10c.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10c.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10c.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10br.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10c.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 11,
+      "visited_url": "https://www.jexer.jp/mb/akabane/schedule/aqua.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 12,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "close_to_parent",
+        "same_origin",
+        "same_directory_as_parent",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/fri_10pb.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sat_10pb.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/sun_10pb.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/thu_10pb.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/tue_10pb.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10pa.html",
+        "https://www.jexer.jp/mb/akabane/schedule/wed_10pb.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 12,
+      "visited_url": "https://www.jexer.jp/mb/akabane/schedule/100412/list.html",
+      "discovered_from": "index_link_collection:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 8,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "close_to_parent",
+        "index_collection"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/100412/studio_a.html",
+        "https://www.jexer.jp/mb/akabane/schedule/100412/studio_b.html",
+        "https://www.jexer.jp/mb/akabane/schedule/100412/pool_f.html",
+        "https://www.jexer.jp/mb/akabane/schedule/100412/pool_s.html",
+        "https://www.jexer.jp/mb/akabane/schedule/100412/ring.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 13,
+      "visited_url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/shop/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 14,
+      "visited_url": "https://www.jexer.jp/mb/akabane/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "url_score": 0,
+      "score_reasons": [
+        "negative:instructor",
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "instructor",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/akabane/",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3169,
+        "candidates_token_count": 116,
+        "total_token_count": 3287,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 4,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2217,
+        "candidates_token_count": 90,
+        "total_token_count": 2309,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1344,
+        "candidates_token_count": 90,
+        "total_token_count": 1434,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/index.html"
+        ],
+        "confidence": 0.8
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1102,
+        "candidates_token_count": 90,
+        "total_token_count": 1194,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 13,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1278,
+        "candidates_token_count": 90,
+        "total_token_count": 1370,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/index.html"
+        ],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/admission.html",
+      "depth": 2,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3196,
+        "candidates_token_count": 118,
+        "total_token_count": 3314,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/schedule/?shop=5",
+          "https://www.jexer.jp/mb/akabane/instructor/weekly.html"
+        ],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/info/",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 7,
+        "rowCount": 4
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2149,
+        "candidates_token_count": 138,
+        "total_token_count": 2287,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 2,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1278,
+        "candidates_token_count": 88,
+        "total_token_count": 1366,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1009,
+        "candidates_token_count": 88,
+        "total_token_count": 1099,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/shop/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/akabane/index.html",
+      "depth": 3,
+      "url_score": 0,
+      "score_reasons": [
+        "negative:instructor",
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 10,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 994,
+        "candidates_token_count": 122,
+        "total_token_count": 1118,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "instructor",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/schedule/",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/member/index.html",
+      "depth": 2,
+      "url_score": 8,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "same_origin",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1170,
+        "candidates_token_count": 119,
+        "total_token_count": 1289,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/fitness.html",
+          "https://www.jexer.jp/mb/akabane/schedule/aqua.html"
+        ],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/schedule/fitness.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 15,
+      "score_reasons": [
+        "positive:schedule,fitness",
+        "shared_segments:2",
+        "close_to_parent",
+        "same_origin",
+        "same_directory_as_parent",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 28,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1910,
+        "candidates_token_count": 769,
+        "total_token_count": 2679,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10c.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10c.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10c.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10c.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10c.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10br.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10c.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/schedule/aqua.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 12,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "close_to_parent",
+        "same_origin",
+        "same_directory_as_parent",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 16,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1619,
+        "candidates_token_count": 419,
+        "total_token_count": 2038,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/fri_10pb.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sat_10pb.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/sun_10pb.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/thu_10pb.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/tue_10pb.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10pa.html",
+          "https://www.jexer.jp/mb/akabane/schedule/wed_10pb.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/schedule/100412/list.html",
+      "discovered_from": "index_link_collection:https://www.jexer.jp/mb/akabane/schedule/",
+      "depth": 3,
+      "url_score": 8,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:2",
+        "close_to_parent",
+        "index_collection"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 9,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1224,
+        "candidates_token_count": 237,
+        "total_token_count": 1461,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/100412/studio_a.html",
+          "https://www.jexer.jp/mb/akabane/schedule/100412/studio_b.html",
+          "https://www.jexer.jp/mb/akabane/schedule/100412/pool_f.html",
+          "https://www.jexer.jp/mb/akabane/schedule/100412/pool_s.html",
+          "https://www.jexer.jp/mb/akabane/schedule/100412/ring.html"
+        ],
+        "confidence": 1
+      }
+    }
+  ]
+}

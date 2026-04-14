@@ -6,6 +6,7 @@ import path from "node:path";
 import { PDFParse } from "pdf-parse";
 
 import { normalizeProgramName } from "../../src/lib/normalizeProgramName";
+import { getBrandDiscoveryStrategy, type BrandDiscoveryStrategy } from "../../src/lib/extraction/brand-discovery-strategies";
 import {
   generateStructuredJsonFromGeminiWithDebug,
   GeminiStructuredResponseError,
@@ -43,6 +44,11 @@ type CandidatePage = {
   contentType: string | null;
   html: string;
   pdfText: string | null;
+};
+
+type ExtractedHtmlLink = {
+  url: string;
+  text: string | null;
 };
 
 type PageClassification = {
@@ -287,24 +293,29 @@ async function fetchPdfText(sourceUrl: string) {
 }
 
 function extractHtmlLinks(pageUrl: string, html: string) {
-  const matches = html.matchAll(/href=["']([^"'#]+)["']/gi);
-  const urls = new Set<string>();
+  const matches = html.matchAll(/<a\b[^>]*href=["']([^"'#]+)["'][^>]*>([\s\S]*?)<\/a>/gi);
+  const links = new Map<string, ExtractedHtmlLink>();
 
   for (const match of matches) {
     const href = match[1];
+    const rawText = match[2]?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() || null;
 
     if (!href || href.startsWith("mailto:") || href.startsWith("javascript:") || href.startsWith("tel:")) {
       continue;
     }
 
     try {
-      urls.add(new URL(href, pageUrl).toString());
+      const url = new URL(href, pageUrl).toString();
+      const existing = links.get(url);
+      if (!existing || ((rawText?.length ?? 0) > (existing.text?.length ?? 0))) {
+        links.set(url, { url, text: rawText });
+      }
     } catch {
       // best effort
     }
   }
 
-  return Array.from(urls);
+  return Array.from(links.values());
 }
 
 function isSupportedDocumentUrl(candidateUrl: string) {
@@ -328,10 +339,12 @@ function normalizeCandidateUrls({
   urls,
   entryUrl,
   discoveredFrom,
+  brandStrategy,
 }: {
-  urls: string[];
+  urls: Array<string | ExtractedHtmlLink>;
   entryUrl: string;
   discoveredFrom: string | null;
+  brandStrategy?: BrandDiscoveryStrategy | null;
 }) {
   const entryOrigin = getOrigin(entryUrl);
 
@@ -342,18 +355,34 @@ function normalizeCandidateUrls({
   return Array.from(
     new Map(
       urls
-        .map((url) => normalizeUrlLikeInput(url))
-        .filter((url): url is string => Boolean(url))
-        .filter((url) => getOrigin(url) === entryOrigin)
-        .filter((url) => isSupportedDocumentUrl(url))
-        .map((url) => {
-          const score = scoreCandidateUrl({ candidateUrl: url, entryUrl, discoveredFrom });
+        .map((item) => {
+          const rawUrl = typeof item === "string" ? item : item.url;
+          const linkText = typeof item === "string" ? null : item.text;
+          const normalizedUrl = normalizeUrlLikeInput(rawUrl);
+          return normalizedUrl
+            ? {
+                url: normalizedUrl,
+                linkText,
+              }
+            : null;
+        })
+        .filter((item): item is { url: string; linkText: string | null } => Boolean(item))
+        .filter((item) => getOrigin(item.url) === entryOrigin)
+        .filter((item) => isSupportedDocumentUrl(item.url))
+        .map((item) => {
+          const score = scoreCandidateUrl({ candidateUrl: item.url, entryUrl, discoveredFrom });
+          const brandScore = brandStrategy?.scoreCandidate({
+            candidateUrl: item.url,
+            linkText: item.linkText,
+            discoveredFrom,
+          }) ?? { score: 0, reasons: [] };
           return [
-            url,
+            item.url,
             {
-              url,
-              score: score.score,
-              scoreReasons: score.reasons,
+              url: item.url,
+              linkText: item.linkText,
+              score: score.score + brandScore.score,
+              scoreReasons: [...score.reasons, ...brandScore.reasons],
               discoveredFrom,
             },
           ] as const;
@@ -477,6 +506,7 @@ function aggregateUsageMetadata(items: Array<GeminiUsageMetadata | null | undefi
 }
 
 async function collectCandidatePages(entryUrl: string) {
+  const brandStrategy = getBrandDiscoveryStrategy(entryUrl);
   const visited = new Set<string>();
   const enqueued = new Set<string>([entryUrl]);
   const pages: CandidatePage[] = [];
@@ -610,6 +640,7 @@ async function collectCandidatePages(entryUrl: string) {
       urls: discoveredUrls,
       entryUrl,
       discoveredFrom: current.url,
+      brandStrategy,
     }).slice(0, current.depth === 0 ? explorationBudget.maxSeedsFromEntry : explorationBudget.maxLinksPerPage);
 
     for (const nextLink of normalizedLinks) {
@@ -620,7 +651,7 @@ async function collectCandidatePages(entryUrl: string) {
           discoveredFrom: current.url,
           depth: current.depth + 1,
           score: nextLink.score,
-          scoreReasons: nextLink.scoreReasons,
+          scoreReasons: [...nextLink.scoreReasons],
         });
       }
     }
@@ -637,7 +668,12 @@ function getPageText(page: CandidatePage | ClassifiedCandidatePage) {
   return page.contentKind === "pdf" ? page.pdfText ?? "" : page.html;
 }
 
-async function classifyCandidatePage(page: CandidatePage, entryOrigin: string, locationName: string) {
+async function classifyCandidatePage(
+  page: CandidatePage,
+  entryOrigin: string,
+  locationName: string,
+  brandStrategy: BrandDiscoveryStrategy | null,
+) {
   if (page.contentKind === "pdf") {
     return {
       ...page,
@@ -665,6 +701,7 @@ async function classifyCandidatePage(page: CandidatePage, entryOrigin: string, l
     "pdf_schedule means the page is itself a schedule PDF resource.",
     "instructor means an instructor, trainer, or substitution page, not the main class schedule.",
     `The target location is: ${locationName}. Prefer links and pages that look consistent with this location.`,
+    brandStrategy ? brandStrategy.promptHint : "",
     `Only recommend next URLs on the same origin: ${entryOrigin}`,
   ].join(" ");
 
@@ -687,6 +724,7 @@ async function classifyCandidatePage(page: CandidatePage, entryOrigin: string, l
     urls: result.data.recommended_next_links,
     entryUrl: page.url,
     discoveredFrom: `ai_recommendation:${page.url}`,
+    brandStrategy,
   }).map((item) => item.url);
 
   return {
@@ -701,7 +739,12 @@ async function classifyCandidatePage(page: CandidatePage, entryOrigin: string, l
   } satisfies ClassifiedCandidatePage;
 }
 
-async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: string, locationName: string) {
+async function classifyCandidatePages(
+  pages: CandidatePage[],
+  entryOrigin: string,
+  locationName: string,
+  brandStrategy: BrandDiscoveryStrategy | null,
+) {
   const classifiedPages: ClassifiedCandidatePage[] = [];
   let aiClassificationCount = 0;
 
@@ -711,7 +754,7 @@ async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: strin
 
   for (const page of sortedPages) {
     if (page.contentKind === "pdf") {
-      classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName));
+      classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName, brandStrategy));
       continue;
     }
 
@@ -733,7 +776,7 @@ async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: strin
       continue;
     }
 
-    classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName));
+    classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName, brandStrategy));
     aiClassificationCount += 1;
   }
 
@@ -744,11 +787,13 @@ async function collectRecommendedPages({
   classifiedPages,
   entryUrl,
   locationName,
+  brandStrategy,
   remainingBudget,
 }: {
   classifiedPages: ClassifiedCandidatePage[];
   entryUrl: string;
   locationName: string;
+  brandStrategy: BrandDiscoveryStrategy | null;
   remainingBudget: number;
 }) {
   const existingUrls = new Set(classifiedPages.map((page) => page.url));
@@ -792,6 +837,7 @@ async function collectRecommendedPages({
         urls: extractHtmlLinks(page.url, page.html),
         entryUrl,
         discoveredFrom: `index_link_collection:${page.url}`,
+        brandStrategy,
       });
 
       for (const link of discoveredLinks) {
@@ -1240,8 +1286,9 @@ async function runExtractionJob({
   await mkdir(debugDirPath, { recursive: true });
 
   try {
+    const brandStrategy = getBrandDiscoveryStrategy(sourceUrl);
     const { pages: initialPages, entryOrigin, failedFetches: initialFailedFetches } = await collectCandidatePages(sourceUrl);
-    let classifiedPages = await classifyCandidatePages(initialPages, entryOrigin, locationName);
+    let classifiedPages = await classifyCandidatePages(initialPages, entryOrigin, locationName, brandStrategy);
     const failedFetches = [...initialFailedFetches];
     const maxNavigationRounds = 3;
 
@@ -1256,6 +1303,7 @@ async function runExtractionJob({
         classifiedPages,
         entryUrl: sourceUrl,
         locationName,
+        brandStrategy,
         remainingBudget,
       });
 
@@ -1265,7 +1313,7 @@ async function runExtractionJob({
         break;
       }
 
-      classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin, locationName))];
+      classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin, locationName, brandStrategy))];
     }
 
     const selection = selectExtractionTargets({
@@ -1287,6 +1335,7 @@ async function runExtractionJob({
         {
           entry_url: sourceUrl,
           entry_origin: entryOrigin,
+          brand_strategy: brandStrategy?.id ?? null,
           budget: explorationBudget,
           failed_fetches: failedFetches,
           exploration_steps: explorationSteps,

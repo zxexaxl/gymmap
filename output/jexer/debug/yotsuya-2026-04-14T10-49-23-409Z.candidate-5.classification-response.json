@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35009\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35344\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35425\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35383\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35372\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35268\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35265\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35167\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=33906\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=29314\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=35062\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=34874\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=34861\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=34595\",\n    \"https://www.jexer.jp/mb/yotsuya/whatsnew/info.php?info_no=34499\",\n    \"https://www.jexer.jp/mb/yotsuya/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1596,
+    "candidatesTokenCount": 630,
+    "totalTokenCount": 2226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1596
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "vBveaYC7E9O20-kPx9Cb2QU"
+}

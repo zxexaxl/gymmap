@@ -1,0 +1,39 @@
+{
+  "url": "https://www.jexer.jp/mb/visit/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/kameido/index.html",
+  "depth": 3,
+  "url_score": 1,
+  "score_reasons": [
+    "shared_segments:1"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": false,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 0,
+    "linkCount": 3,
+    "rowCount": 1
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1009,
+    "candidates_token_count": 88,
+    "total_token_count": 1099,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/shop/index.html"
+    ],
+    "confidence": 1
+  }
+}

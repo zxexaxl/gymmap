@@ -1,0 +1,46 @@
+{
+  "url": "https://www.jexer.jp/mb/akabane/schedule/100412/list.html",
+  "discovered_from": "index_link_collection:https://www.jexer.jp/mb/akabane/schedule/",
+  "depth": 3,
+  "url_score": 8,
+  "score_reasons": [
+    "positive:schedule",
+    "shared_segments:2",
+    "close_to_parent",
+    "index_collection"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true,
+    "hasRepeatingStructure": false,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 0,
+    "linkCount": 9,
+    "rowCount": 1
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1224,
+    "candidates_token_count": 237,
+    "total_token_count": 1461,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "mixed",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/akabane/schedule/100412/studio_a.html",
+      "https://www.jexer.jp/mb/akabane/schedule/100412/studio_b.html",
+      "https://www.jexer.jp/mb/akabane/schedule/100412/pool_f.html",
+      "https://www.jexer.jp/mb/akabane/schedule/100412/pool_s.html",
+      "https://www.jexer.jp/mb/akabane/schedule/100412/ring.html"
+    ],
+    "confidence": 1
+  }
+}

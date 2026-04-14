@@ -1,0 +1,13 @@
+{
+  "source_url": "https://www.jexer.jp/mb/kameido/",
+  "extraction_urls": [],
+  "keywords": {},
+  "usage_metadata": {
+    "prompt_token_count": 22968,
+    "candidates_token_count": 2149,
+    "total_token_count": 25128,
+    "thoughts_token_count": 11,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

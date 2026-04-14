@@ -1,0 +1,13 @@
+{
+  "source_url": "https://www.jexer.jp/mb/otsuka/",
+  "extraction_urls": [],
+  "keywords": {},
+  "usage_metadata": {
+    "prompt_token_count": 37447,
+    "candidates_token_count": 1433,
+    "total_token_count": 38890,
+    "thoughts_token_count": 10,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

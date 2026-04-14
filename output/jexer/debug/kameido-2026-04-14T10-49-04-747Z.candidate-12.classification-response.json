@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/kameido/schedule/mon_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/mon_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/mon_10br.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/wed_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/wed_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/wed_10br.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/thu_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/thu_10br.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/fri_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/fri_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/fri_10br.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sat_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sat_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sat_10br.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sun_10a.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sun_10b.html\",\n    \"https://www.jexer.jp/mb/kameido/schedule/sun_10br.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1713,
+    "candidatesTokenCount": 591,
+    "totalTokenCount": 2304,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1713
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "rxveaez9MuTU2roP6cWkkA4"
+}

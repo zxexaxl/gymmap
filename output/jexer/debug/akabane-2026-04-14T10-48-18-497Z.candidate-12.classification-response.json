@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/akabane/schedule/tue_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/tue_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/tue_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/tue_10br.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/wed_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/wed_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/wed_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/wed_10br.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/thu_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/thu_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/thu_10br.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/fri_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/fri_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/fri_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/fri_10br.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sat_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sat_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sat_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sat_10br.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sun_10a.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sun_10b.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sun_10c.html\",\n    \"https://www.jexer.jp/mb/akabane/schedule/sun_10br.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1910,
+    "candidatesTokenCount": 769,
+    "totalTokenCount": 2679,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1910
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "hRveabmoKd2N2roP6_qQuQ4"
+}
