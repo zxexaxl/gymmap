@@ -3,11 +3,14 @@ export type ScheduleEntryType =
   | "support_session"
   | "personal_session"
   | "school_course"
-  | "member_guidance";
+  | "member_guidance"
+  | "excluded_candidate";
 
 export type ScheduleEntryClassification = {
   entryType: ScheduleEntryType;
   reason: string;
+  excludedCandidate: boolean;
+  suspectNonRegular: boolean;
 };
 
 function normalize(value: string | null | undefined) {
@@ -41,6 +44,28 @@ const ENTRY_TYPE_RULES: Array<{
   },
 ];
 
+const HARD_EXCLUDE_RULES: Array<{
+  reason: string;
+  keywords: string[];
+}> = [
+  {
+    reason: "matched obvious non-lesson advertising keywords",
+    keywords: ["キャンペーン", "広告", "お知らせ", "news", "インフォメーション"],
+  },
+  {
+    reason: "matched obvious note or annotation keywords",
+    keywords: ["注記", "注意事項", "※", "備考", "但し書き"],
+  },
+  {
+    reason: "matched obvious business-guidance keywords",
+    keywords: ["営業時間", "営業案内", "受付時間", "休館", "休館日", "営業日"],
+  },
+  {
+    reason: "matched page heading keywords",
+    keywords: ["プログラムスケジュール", "スケジュール一覧", "タイムテーブル", "レッスン一覧"],
+  },
+];
+
 export function classifyScheduleEntryType({
   rawProgramName,
   aiCandidate,
@@ -52,24 +77,41 @@ export function classifyScheduleEntryType({
 }): ScheduleEntryClassification {
   const normalizedName = normalize(rawProgramName);
 
+  for (const rule of HARD_EXCLUDE_RULES) {
+    if (rule.keywords.some((keyword) => normalizedName.includes(normalize(keyword)))) {
+      return {
+        entryType: "excluded_candidate",
+        reason: rule.reason,
+        excludedCandidate: true,
+        suspectNonRegular: true,
+      };
+    }
+  }
+
   for (const rule of ENTRY_TYPE_RULES) {
     if (rule.keywords.some((keyword) => normalizedName.includes(normalize(keyword)))) {
       return {
         entryType: rule.entryType,
         reason: rule.reason,
+        excludedCandidate: false,
+        suspectNonRegular: true,
       };
     }
   }
 
-  if (aiCandidate && aiCandidate !== "regular_class") {
+  if (aiCandidate && aiCandidate !== "regular_class" && aiCandidate !== "excluded_candidate") {
     return {
       entryType: aiCandidate,
       reason: aiReason || "ai classified this block as non-regular",
+      excludedCandidate: false,
+      suspectNonRegular: true,
     };
   }
 
   return {
     entryType: "regular_class",
     reason: aiCandidate === "regular_class" ? aiReason || "ai classified this block as regular" : "defaulted to regular class",
+    excludedCandidate: false,
+    suspectNonRegular: false,
   };
 }

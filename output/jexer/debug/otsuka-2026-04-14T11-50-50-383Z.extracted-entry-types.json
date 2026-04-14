@@ -1,0 +1,1967 @@
+{
+  "total_extracted_records": 196,
+  "included_regular_records": 136,
+  "excluded_non_regular_records": 60,
+  "records": [
+    {
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "07:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ファイティング\nエクササイズ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "10:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "11:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "UBOUND45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "12:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "13:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "14:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK30",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "17:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "18:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "19:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "20:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nリフレッシュ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "07:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "08:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nリフレッシュ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "10:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "11:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\n骨盤調整",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "13:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nリンパフロー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "14:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "15:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\n～骨盤調整～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "17:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "WOW!HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "18:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYogaミドル\n～骨盤調整～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "20:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "13:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "14:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "16:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "20:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "18:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "19:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "HIPトレーニング implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "monday",
+      "start_time": "20:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "07:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "09:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "美軸ライン\nエクササイズ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "11:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "フラダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "12:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "13:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "オリジナルダンス\n短期有料スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "14:55",
+      "entry_type_candidate": "school_course",
+      "entry_type": "school_course",
+      "entry_type_reason": "matched school-course keywords",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "18:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "LESMILLS DANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "19:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "UBOUND45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "20:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴～warm～\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "07:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "リフレッシュヨガ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "08:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "美軸ラインストレッチ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "09:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "リラックスヨガ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "11:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "Seasonal Flow Yoga\n~Warm~",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "12:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "筋膜リリース",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "13:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "15:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "17:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\n骨盤調整",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "18:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "19:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "21:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "11:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "12:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス\nアドバンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "13:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "15:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "16:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "19:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "18:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "19:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "自重トレーニング implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "tuesday",
+      "start_time": "20:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "10:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "11:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "12:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "MEGADANZ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "14:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "15:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT30",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "17:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "18:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "UBOUND45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "19:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "21:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYogaミドル\n～骨盤調整～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "07:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "08:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "10:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "11:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "美軸ラインストレッチ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "13:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "美軸フェイス\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "14:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "15:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "17:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\n骨盤調整",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "18:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "19:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "21:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "13:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "14:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "17:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "19:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "18:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "19:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "HIITトレーニング implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "wednesday",
+      "start_time": "20:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "07:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "背骨コンディショニング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "09:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "11:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "UBOUND45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "12:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "13:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "WOW!HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "15:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "16:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "17:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "19:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK30",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "20:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "20:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴～warm～\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "07:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "骨格トレーニング\nRe:style Focus～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "10:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ペルビックストレッチ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "11:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "リラックスヨガ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "12:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "リラックスヨガ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "13:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "15:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "Volcano Yoga\nリンパフロー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "16:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "Volcano Yoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "17:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "Volcano Yoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "18:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "Volcano Yoga\nリンパフロー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "20:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "HOTピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "21:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "15:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス\nアドバンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "15:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "friday",
+      "start_time": "18:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "09:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "フラダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "10:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "12:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "LESMILLS DANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "13:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ファイティング\nエクササイズ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "14:25",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "15:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "16:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP60",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "17:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT60",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "19:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "岩盤浴\nFree Time\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "08:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ペルビックストレッチ\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "09:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "整体オリジナル\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "10:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "ピラティス\n～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "12:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45\n～FLEXIBILITY～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "13:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "WOW！HIP～Warm～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "14:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "16:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "17:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nミドル",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "18:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "14:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス\nアドバンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "16:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "17:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "saturday",
+      "start_time": "18:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "09:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "背骨コンディショニング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "10:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "エアロビクスオリジナル",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "11:40",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYPUMP45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "12:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYCOMBAT45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "13:50",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "WOW！HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "14:55",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYBALANCE45～STRENGTH～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "16:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "BODYATTACK45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "17:05",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "09:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "11:15",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nリフレッシュ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "12:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYogaミドル\n～歪み調整～",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "13:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "HOTピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "15:00",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nミドル",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "16:10",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "VolcanoYoga\nリフレッシュ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "17:20",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "11:30",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス\nアドバンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "12:35",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "マシンピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "13:45",
+      "entry_type_candidate": "regular_class",
+      "entry_type": "regular_class",
+      "entry_type_reason": "ai classified this block as regular",
+      "included_in_schedule_results": true
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "10:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "ゆったりストレッチ implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "11:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "12:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "13:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "14:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "15:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "16:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    },
+    {
+      "raw_program_name": "GYM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "weekday": "sunday",
+      "start_time": "17:15",
+      "entry_type_candidate": "personal_session",
+      "entry_type": "personal_session",
+      "entry_type_reason": "マンツーマンサポート implies personal session",
+      "included_in_schedule_results": false
+    }
+  ]
+}

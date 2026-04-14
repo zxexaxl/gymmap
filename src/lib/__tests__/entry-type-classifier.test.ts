@@ -10,9 +10,11 @@ test("regular studio lessons stay as regular_class", () => {
   });
 
   assert.equal(result.entryType, "regular_class");
+  assert.equal(result.excludedCandidate, false);
+  assert.equal(result.suspectNonRegular, false);
 });
 
-test("support and personal entries are filtered as non-regular", () => {
+test("support and personal entries are kept but flagged as suspect", () => {
   const support = classifyScheduleEntryType({
     rawProgramName: "マンツーマンサポート",
   });
@@ -22,9 +24,13 @@ test("support and personal entries are filtered as non-regular", () => {
 
   assert.equal(support.entryType, "support_session");
   assert.equal(personal.entryType, "personal_session");
+  assert.equal(support.excludedCandidate, false);
+  assert.equal(personal.excludedCandidate, false);
+  assert.equal(support.suspectNonRegular, true);
+  assert.equal(personal.suspectNonRegular, true);
 });
 
-test("school and member-guidance entries are filtered as non-regular", () => {
+test("school and member-guidance entries are kept but flagged as suspect", () => {
   const school = classifyScheduleEntryType({
     rawProgramName: "キッズスクール",
   });
@@ -34,4 +40,22 @@ test("school and member-guidance entries are filtered as non-regular", () => {
 
   assert.equal(school.entryType, "school_course");
   assert.equal(guidance.entryType, "member_guidance");
+  assert.equal(school.excludedCandidate, false);
+  assert.equal(guidance.excludedCandidate, false);
+  assert.equal(school.suspectNonRegular, true);
+  assert.equal(guidance.suspectNonRegular, true);
+});
+
+test("obvious non-class content is excluded", () => {
+  const note = classifyScheduleEntryType({
+    rawProgramName: "※営業時間のご案内",
+  });
+  const heading = classifyScheduleEntryType({
+    rawProgramName: "プログラムスケジュール",
+  });
+
+  assert.equal(note.entryType, "excluded_candidate");
+  assert.equal(heading.entryType, "excluded_candidate");
+  assert.equal(note.excludedCandidate, true);
+  assert.equal(heading.excludedCandidate, true);
 });

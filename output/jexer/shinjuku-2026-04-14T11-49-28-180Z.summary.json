@@ -1,0 +1,102 @@
+{
+  "total_records": 162,
+  "needs_review_count": 115,
+  "unresolved_count": 69,
+  "usage_metadata": {
+    "prompt_token_count": 104051,
+    "candidates_token_count": 33829,
+    "total_token_count": 137880,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 104051,
+  "total_output_tokens": 33829,
+  "total_tokens": 137880,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 130
+    },
+    {
+      "key": "Les Mills",
+      "count": 22
+    },
+    {
+      "key": "ZUMBA",
+      "count": 7
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 69
+    },
+    {
+      "key": "mind_body",
+      "count": 56
+    },
+    {
+      "key": "cardio",
+      "count": 14
+    },
+    {
+      "key": "dance",
+      "count": 12
+    },
+    {
+      "key": "strength",
+      "count": 9
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "HOT YOGAビギナー",
+      "count": 12
+    },
+    {
+      "key": "BODY COMBAT",
+      "count": 10
+    },
+    {
+      "key": "HOT YOGAミドル",
+      "count": 8
+    },
+    {
+      "key": "BODY PUMP",
+      "count": 7
+    },
+    {
+      "key": "HOT YOGAリンパフロー",
+      "count": 7
+    },
+    {
+      "key": "ZUMBA",
+      "count": 7
+    },
+    {
+      "key": "アクア",
+      "count": 6
+    },
+    {
+      "key": "BASIC",
+      "count": 5
+    },
+    {
+      "key": "HOT YOGA骨盤調整",
+      "count": 5
+    },
+    {
+      "key": "BASIC【女性専用クラス】",
+      "count": 4
+    }
+  ]
+}

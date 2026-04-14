@@ -136,9 +136,10 @@ const extractionResponseSchema = {
           raw_program_name: { type: "STRING" },
           instructor_name: { type: "STRING", nullable: true },
           source_url: { type: "STRING" },
+          section_or_area: { type: "STRING", nullable: true },
           entry_type_candidate: {
             type: "STRING",
-            enum: ["regular_class", "support_session", "personal_session", "school_course", "member_guidance"],
+            enum: ["regular_class", "support_session", "personal_session", "school_course", "member_guidance", "excluded_candidate"],
             nullable: true,
           },
           entry_type_reason: { type: "STRING", nullable: true },
@@ -1237,12 +1238,14 @@ function buildExtractionPrompt({
         "Use 24-hour HH:MM format when inferable.",
         "If instructor name is missing, set instructor_name to null.",
         "weekday should be english lowercase when inferable.",
-        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance.",
+        "If the page shows section names such as studio, pool, gym area, cycling, hot studio, beginner studio, or similar, set section_or_area when inferable.",
+        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance, excluded_candidate.",
         "regular_class means a normal studio, pool, gym, cycling, yoga, dance, or similar class that users would search as a lesson.",
         "support_session means support, orientation, measurement, counseling, or machine guidance.",
         "personal_session means personal training, one-to-one, or private coaching.",
         "school_course means school, course, academy, kids, or lecture style sessions.",
         "member_guidance means member-only guidance, procedures, benefits, or information slots.",
+        "Use excluded_candidate only for obvious non-class content such as ads, notes, business guidance, or page headings.",
       ].join(" "),
       userPrompt: [
         `Location name: ${locationName}`,
@@ -1261,12 +1264,14 @@ function buildExtractionPrompt({
         "Use 24-hour HH:MM format when inferable.",
         "If instructor name is missing, set instructor_name to null.",
         "weekday should be english lowercase when inferable.",
-        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance.",
+        "If the page shows section names such as studio, pool, gym area, cycling, hot studio, beginner studio, or similar, set section_or_area when inferable.",
+        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance, excluded_candidate.",
         "regular_class means a normal studio, pool, gym, cycling, yoga, dance, or similar class that users would search as a lesson.",
         "support_session means support, orientation, measurement, counseling, or machine guidance.",
         "personal_session means personal training, one-to-one, or private coaching.",
         "school_course means school, course, academy, kids, or lecture style sessions.",
         "member_guidance means member-only guidance, procedures, benefits, or information slots.",
+        "Use excluded_candidate only for obvious non-class content such as ads, notes, business guidance, or page headings.",
       ].join(" "),
     userPrompt: [
       `Location name: ${locationName}`,
@@ -1337,7 +1342,10 @@ function normalizeRecords(records: ExtractedJexerScheduleRecord[]) {
       normalization_notes: normalized.normalization_notes,
       entry_type: entryType.entryType,
       entry_type_reason: entryType.reason,
-      included_in_schedule_results: entryType.entryType === "regular_class",
+      section_or_area: record.section_or_area ?? null,
+      excluded_candidate: entryType.excludedCandidate,
+      suspect_non_regular: entryType.suspectNonRegular,
+      included_in_schedule_results: !entryType.excludedCandidate,
     };
   });
 }
@@ -1687,7 +1695,7 @@ async function runExtractionJob({
 
     const extractedRecords = extractionResults.flatMap((result) => result.records);
     const normalizedRecords = normalizeRecords(extractedRecords);
-    const filteredRegularRecords = normalizedRecords.filter((record) => record.included_in_schedule_results);
+    const includedRecords = normalizedRecords.filter((record) => record.included_in_schedule_results);
     const usageBreakdown: JexerUsageBreakdown = {
       classification: classificationUsageMetadata,
       extraction: extractionUsageMetadata,
@@ -1700,7 +1708,7 @@ async function runExtractionJob({
       model_id: getGeminiModelId(),
       usage_metadata: aggregateUsageMetadata([usageBreakdown.classification, usageBreakdown.extraction]),
       usage_breakdown: usageBreakdown,
-      records: filteredRegularRecords,
+      records: includedRecords,
     };
 
     await writeDebugFile(
@@ -1710,16 +1718,20 @@ async function runExtractionJob({
       JSON.stringify(
         {
           total_extracted_records: normalizedRecords.length,
-          included_regular_records: filteredRegularRecords.length,
-          excluded_non_regular_records: normalizedRecords.length - filteredRegularRecords.length,
+          included_records: includedRecords.length,
+          excluded_candidates: normalizedRecords.filter((record) => record.excluded_candidate).length,
+          suspect_non_regular_records: normalizedRecords.filter((record) => record.suspect_non_regular).length,
           records: normalizedRecords.map((record) => ({
             raw_program_name: record.raw_program_name,
             source_url: record.source_url,
             weekday: record.weekday,
             start_time: record.start_time,
+            section_or_area: record.section_or_area,
             entry_type_candidate: record.entry_type_candidate ?? null,
             entry_type: record.entry_type,
             entry_type_reason: record.entry_type_reason,
+            excluded_candidate: record.excluded_candidate,
+            suspect_non_regular: record.suspect_non_regular,
             included_in_schedule_results: record.included_in_schedule_results,
           })),
         },
@@ -1736,7 +1748,8 @@ async function runExtractionJob({
     console.log(`Saved extraction result to ${outputPath}`);
     console.log(`Saved summary to ${summaryPath}`);
     console.log(`Extracted records: ${output.records.length}`);
-    console.log(`Excluded non-regular entries: ${normalizedRecords.length - filteredRegularRecords.length}`);
+    console.log(`Excluded obvious non-class entries: ${normalizedRecords.filter((record) => record.excluded_candidate).length}`);
+    console.log(`Included suspect non-regular entries: ${normalizedRecords.filter((record) => record.suspect_non_regular && !record.excluded_candidate).length}`);
 
     if (output.records.length === 0) {
       console.warn("Warning: extraction returned 0 records.");

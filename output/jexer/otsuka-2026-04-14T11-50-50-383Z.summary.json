@@ -1,0 +1,98 @@
+{
+  "total_records": 136,
+  "needs_review_count": 71,
+  "unresolved_count": 39,
+  "usage_metadata": {
+    "prompt_token_count": 87671,
+    "candidates_token_count": 25738,
+    "total_token_count": 113411,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 87671,
+  "total_output_tokens": 25738,
+  "total_tokens": 113411,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 106
+    },
+    {
+      "key": "Les Mills",
+      "count": 20
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 7
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "mind_body",
+      "count": 64
+    },
+    {
+      "key": "null",
+      "count": 39
+    },
+    {
+      "key": "cardio",
+      "count": 12
+    },
+    {
+      "key": "dance",
+      "count": 12
+    },
+    {
+      "key": "strength",
+      "count": 9
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マシンピラティス",
+      "count": 18
+    },
+    {
+      "key": "BODYCOMBAT45",
+      "count": 9
+    },
+    {
+      "key": "BODYPUMP45",
+      "count": 8
+    },
+    {
+      "key": "VolcanoYoga\nビギナー",
+      "count": 6
+    },
+    {
+      "key": "岩盤浴\nFree Time",
+      "count": 6
+    },
+    {
+      "key": "BODYATTACK45",
+      "count": 5
+    },
+    {
+      "key": "VolcanoYoga\nデトックス",
+      "count": 5
+    },
+    {
+      "key": "BODYBALANCE45",
+      "count": 4
+    },
+    {
+      "key": "RITMOS",
+      "count": 4
+    },
+    {
+      "key": "UBOUND45",
+      "count": 4
+    }
+  ]
+}

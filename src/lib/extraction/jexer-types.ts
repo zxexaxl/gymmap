@@ -23,6 +23,7 @@ export type ExtractedJexerScheduleRecord = {
   raw_program_name: string;
   instructor_name: string | null;
   source_url: string;
+  section_or_area?: string | null;
   entry_type_candidate?: ScheduleEntryType | null;
   entry_type_reason?: string | null;
 };
@@ -40,6 +41,9 @@ export type NormalizedExtractedJexerScheduleRecord = ExtractedJexerScheduleRecor
   needs_review: boolean;
   entry_type: ScheduleEntryType;
   entry_type_reason: string;
+  section_or_area: string | null;
+  excluded_candidate: boolean;
+  suspect_non_regular: boolean;
   included_in_schedule_results: boolean;
 };
 
