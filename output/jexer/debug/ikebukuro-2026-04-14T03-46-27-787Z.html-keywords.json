@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "extraction_urls": [],
+  "keywords": {
+    "table": false,
+    "schedule": false,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 8854,
+    "candidates_token_count": 368,
+    "total_token_count": 9222,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1981,
+    "candidates_token_count": 148,
+    "total_token_count": 2129,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/index.html"
+    ],
+    "confidence": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/tue_10p.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1341,
+    "candidates_token_count": 163,
+    "total_token_count": 1504,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/oi/schedule/wed_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "https://www.jexer.jp/mb/oi/index.html"
+    ],
+    "confidence": 1
+  }
+}

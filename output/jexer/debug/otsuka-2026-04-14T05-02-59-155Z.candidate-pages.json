@@ -1,0 +1,141 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/otsuka/",
+  "branch_base_url": "https://www.jexer.jp/mb/otsuka/",
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=32"
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/otsuka/",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3145,
+        "candidates_token_count": 116,
+        "total_token_count": 3261,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/otsuka/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/otsuka/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1445,
+        "candidates_token_count": 89,
+        "total_token_count": 1534,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/otsuka/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/otsuka/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/otsuka/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1242,
+        "candidates_token_count": 64,
+        "total_token_count": 1306,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/otsuka/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/otsuka/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1031,
+        "candidates_token_count": 64,
+        "total_token_count": 1095,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/otsuka/index.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3151,
+        "candidates_token_count": 92,
+        "total_token_count": 3243,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [],
+        "confidence": 0.9
+      }
+    }
+  ]
+}

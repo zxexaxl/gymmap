@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/oi/schedule/sat_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/fitness.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/index.html\",\n    \"https://www.jexer.jp/mb/oi/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1638,
+    "candidatesTokenCount": 163,
+    "totalTokenCount": 1801,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1638
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "68ndadbTC7X81e8PjaGtuAo"
+}

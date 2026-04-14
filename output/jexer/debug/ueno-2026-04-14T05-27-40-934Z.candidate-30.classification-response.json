@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/ueno/schedule/sat_10p.html\",\n    \"https://www.jexer.jp/mb/ueno/schedule/aqua.html\",\n    \"https://www.jexer.jp/mb/ueno/schedule/index.html\",\n    \"https://www.jexer.jp/mb/ueno/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1774,
+    "candidatesTokenCount": 167,
+    "totalTokenCount": 1941,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1774
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "cNDdabTxC4zf1e8PpuPviQ8"
+}

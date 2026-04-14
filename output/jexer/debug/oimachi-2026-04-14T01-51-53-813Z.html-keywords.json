@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.jexer.jp/mb/oi/",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/oi/instructor/index2.html",
+    "https://www.jexer.jp/mb/oi/instructor/index6.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": false,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  }
+}

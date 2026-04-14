@@ -1,0 +1,17 @@
+{
+  "selection_reason": "no eligible schedule_detail pages with schedule rows detected",
+  "selected_urls": [],
+  "selected_count": 0,
+  "selected_pages": [],
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=8"
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 8392,
+    "candidates_token_count": 467,
+    "total_token_count": 8859,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10a.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": true,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  }
+}

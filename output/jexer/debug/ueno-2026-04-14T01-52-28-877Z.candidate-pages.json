@@ -1,0 +1,223 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/ueno/",
+  "branch_base_url": "https://www.jexer.jp/mb/ueno/",
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/ueno/",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/instructor/index.html",
+          "https://www.jexer.jp/mb/ueno/instructor/index1.html",
+          "https://www.jexer.jp/mb/ueno/instructor/index2.html",
+          "https://www.jexer.jp/mb/ueno/instructor/index4.html",
+          "https://www.jexer.jp/mb/ueno/instructor/index5.html"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/index.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/index1.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+          "https://www.jexer.jp/mb/ueno/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/index2.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+          "https://www.jexer.jp/mb/ueno/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/index4.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/instructor/index5.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+          "https://www.jexer.jp/mb/ueno/index.html"
+        ],
+        "confidence": 0.95
+      }
+    }
+  ]
+}

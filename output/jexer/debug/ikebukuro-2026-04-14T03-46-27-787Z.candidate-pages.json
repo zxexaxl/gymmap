@@ -1,0 +1,141 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "branch_base_url": "https://www.jexer.jp/mb/ikebukuro/",
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=9"
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2995,
+        "candidates_token_count": 86,
+        "total_token_count": 3081,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-3.1-flash-lite-preview"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1565,
+        "candidates_token_count": 64,
+        "total_token_count": 1629,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-3.1-flash-lite-preview"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2112,
+        "candidates_token_count": 90,
+        "total_token_count": 2202,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-3.1-flash-lite-preview"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/ikebukuro/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1175,
+        "candidates_token_count": 64,
+        "total_token_count": 1239,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-3.1-flash-lite-preview"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1007,
+        "candidates_token_count": 64,
+        "total_token_count": 1071,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-3.1-flash-lite-preview"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_urls": [],
+        "confidence": 1
+      }
+    }
+  ]
+}

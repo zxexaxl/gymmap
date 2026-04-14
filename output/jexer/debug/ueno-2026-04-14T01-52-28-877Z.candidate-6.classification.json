@@ -1,0 +1,17 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/map.html",
+  "discovered_from": "https://www.jexer.jp/mb/ueno/",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_urls": [],
+    "confidence": 1
+  }
+}

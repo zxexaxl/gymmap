@@ -10,8 +10,20 @@ import {
   getGeminiModelId,
 } from "../../src/lib/extraction/gemini-client";
 import { summarizeJexerExtractionResult } from "../../src/lib/extraction/jexer-summary";
-import { findJexerTarget, jexerTokyoTargets } from "../../src/lib/extraction/jexer-targets";
-import type { ExtractedJexerScheduleRecord, JexerExtractionResult } from "../../src/lib/extraction/jexer-types";
+import {
+  findJexerTarget,
+  isJexerGroupTarget,
+  jexerPartialTargets,
+  jexerStoreTargets,
+  jexerTargetGroups,
+  type JexerExtractionTarget,
+} from "../../src/lib/extraction/jexer-targets";
+import type {
+  ExtractedJexerScheduleRecord,
+  GeminiUsageMetadata,
+  JexerExtractionResult,
+  JexerUsageBreakdown,
+} from "../../src/lib/extraction/jexer-types";
 
 type CandidatePage = {
   url: string;
@@ -21,11 +33,11 @@ type CandidatePage = {
 };
 
 type PageClassification = {
-  page_type: "schedule_index" | "schedule_detail" | "schedule_day_detail" | "ignore";
-  schedule_kind: "studio" | "aqua" | "mixed" | "unknown";
+  page_type: "entry" | "schedule_index" | "schedule_detail" | "pdf_schedule" | "instructor" | "ignore";
+  schedule_kind: "studio" | "bike" | "hot_yoga" | "mixed" | "unknown";
   contains_schedule_rows: boolean;
   contains_detail_links: boolean;
-  recommended_next_urls: string[];
+  recommended_next_links: string[];
   confidence: number;
 };
 
@@ -33,6 +45,7 @@ type ClassifiedCandidatePage = CandidatePage & {
   classification: PageClassification;
   rawResponseJson: string;
   rawResponseText: string;
+  usageMetadata: GeminiUsageMetadata | null;
 };
 
 type PageSignalSummary = {
@@ -40,6 +53,34 @@ type PageSignalSummary = {
   hasTableTag: boolean;
   hasListLinkDensity: boolean;
 };
+
+class FetchHtmlError extends Error {
+  url: string;
+  status: number | null;
+  statusText: string | null;
+  responseBody: string | null;
+
+  constructor({
+    url,
+    status,
+    statusText,
+    responseBody,
+    message,
+  }: {
+    url: string;
+    status: number | null;
+    statusText: string | null;
+    responseBody: string | null;
+    message: string;
+  }) {
+    super(message);
+    this.name = "FetchHtmlError";
+    this.url = url;
+    this.status = status;
+    this.statusText = statusText;
+    this.responseBody = responseBody;
+  }
+}
 
 const extractionResponseSchema = {
   type: "OBJECT",
@@ -67,11 +108,14 @@ const extractionResponseSchema = {
 const classificationResponseSchema = {
   type: "OBJECT",
   properties: {
-    page_type: { type: "STRING", enum: ["schedule_index", "schedule_detail", "schedule_day_detail", "ignore"] },
-    schedule_kind: { type: "STRING", enum: ["studio", "aqua", "mixed", "unknown"] },
+    page_type: {
+      type: "STRING",
+      enum: ["entry", "schedule_index", "schedule_detail", "pdf_schedule", "instructor", "ignore"],
+    },
+    schedule_kind: { type: "STRING", enum: ["studio", "bike", "hot_yoga", "mixed", "unknown"] },
     contains_schedule_rows: { type: "BOOLEAN" },
     contains_detail_links: { type: "BOOLEAN" },
-    recommended_next_urls: {
+    recommended_next_links: {
       type: "ARRAY",
       items: { type: "STRING" },
     },
@@ -82,7 +126,7 @@ const classificationResponseSchema = {
     "schedule_kind",
     "contains_schedule_rows",
     "contains_detail_links",
-    "recommended_next_urls",
+    "recommended_next_links",
     "confidence",
   ],
 } as const;
@@ -111,15 +155,29 @@ function parseArgs(argv: string[]) {
 async function fetchHtml(sourceUrl: string) {
   const response = await fetch(sourceUrl, {
     headers: {
-      "User-Agent": "GymMap-JEXER-Experiment/0.1",
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+      "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+      Referer: new URL(sourceUrl).origin,
+      "Cache-Control": "no-cache",
+      Pragma: "no-cache",
     },
   });
 
+  const body = await response.text();
+
   if (!response.ok) {
-    throw new Error(`Failed to fetch source HTML: ${response.status} ${response.statusText}`);
+    throw new FetchHtmlError({
+      url: sourceUrl,
+      status: response.status,
+      statusText: response.statusText,
+      responseBody: body,
+      message: `Failed to fetch source HTML: ${response.status} ${response.statusText}`,
+    });
   }
 
-  return response.text();
+  return body;
 }
 
 function buildRunBaseName(slug: string) {
@@ -174,12 +232,37 @@ function isSameBranchUrl(candidateUrl: string, branchBaseUrl: string) {
   return candidate.origin === branchBase.origin && candidate.pathname.startsWith(branchBase.pathname);
 }
 
+function isJexerInstructorUrl(candidateUrl: string) {
+  return candidateUrl.includes("/instructor/");
+}
+
+function isJexerSharedScheduleUrl(candidateUrl: string) {
+  return candidateUrl.includes("/mb/schedule/?shop=");
+}
+
+function isClearlyExcludedUrl(candidateUrl: string) {
+  const lowerUrl = candidateUrl.toLowerCase();
+
+  return ["/instructor/", "/contact", "/campaign", "/whatsnew", "/news", "/info.php"].some((keyword) => lowerUrl.includes(keyword));
+}
+
+function isRelevantScheduleUrl(candidateUrl: string, branchBaseUrl: string) {
+  const candidate = new URL(candidateUrl);
+  const branchBase = new URL(branchBaseUrl);
+  const sameOrigin = candidate.origin === branchBase.origin;
+  const isBranchUrl = candidate.pathname.startsWith(branchBase.pathname);
+
+  return sameOrigin && isBranchUrl;
+}
+
 function normalizeWithinBranchUrls(urls: string[], branchBaseUrl: string) {
   return Array.from(
     new Set(
       urls
-        .filter((url) => url.endsWith(".html") || url.endsWith("/"))
-        .filter((url) => isSameBranchUrl(url, branchBaseUrl)),
+        .filter((url) => url.endsWith(".html") || url.endsWith(".pdf") || url.endsWith("/"))
+        .filter((url) => isRelevantScheduleUrl(url, branchBaseUrl))
+        .filter((url) => !isJexerSharedScheduleUrl(url))
+        .filter((url) => !isClearlyExcludedUrl(url)),
     ),
   );
 }
@@ -208,9 +291,77 @@ async function writeDebugFile(debugDirPath: string, baseName: string, suffix: st
   await writeFile(path.join(debugDirPath, `${baseName}.${suffix}`), contents, "utf-8");
 }
 
+async function writeFailureDebugFile({
+  debugDirPath,
+  baseName,
+  slug,
+  locationName,
+  sourceUrl,
+  stage,
+  message,
+  details,
+}: {
+  debugDirPath: string;
+  baseName: string;
+  slug: string;
+  locationName: string;
+  sourceUrl: string;
+  stage: string;
+  message: string;
+  details?: Record<string, unknown>;
+}) {
+  await writeDebugFile(
+    debugDirPath,
+    baseName,
+    "failure.json",
+    JSON.stringify(
+      {
+        slug,
+        location_name: locationName,
+        source_url: sourceUrl,
+        stage,
+        message,
+        details: details ?? null,
+        failed_at: new Date().toISOString(),
+      },
+      null,
+      2,
+    ),
+  );
+}
+
+function getResponseBodyPreview(value: string | null, maxLength = 600) {
+  if (!value) {
+    return null;
+  }
+
+  return value.slice(0, maxLength);
+}
+
+function aggregateUsageMetadata(items: Array<GeminiUsageMetadata | null | undefined>): GeminiUsageMetadata | null {
+  const validItems = items.filter((item): item is GeminiUsageMetadata => Boolean(item));
+
+  if (validItems.length === 0) {
+    return null;
+  }
+
+  const sum = (selector: (item: GeminiUsageMetadata) => number | null | undefined) =>
+    validItems.reduce((total, item) => total + (selector(item) ?? 0), 0);
+
+  return {
+    prompt_token_count: sum((item) => item.prompt_token_count),
+    candidates_token_count: sum((item) => item.candidates_token_count),
+    total_token_count: sum((item) => item.total_token_count),
+    thoughts_token_count: sum((item) => item.thoughts_token_count),
+    cached_content_token_count: sum((item) => item.cached_content_token_count),
+    model_id: getGeminiModelId(),
+  };
+}
+
 async function collectCandidatePages(entryUrl: string) {
   const branchBaseUrl = deriveBranchBaseUrl(entryUrl);
   const visited = new Set<string>();
+  const excludedSharedScheduleUrls = new Set<string>();
   const pages: CandidatePage[] = [];
   const queue: Array<{ url: string; discoveredFrom: string | null; depth: number }> = [
     { url: entryUrl, discoveredFrom: null, depth: 0 },
@@ -224,6 +375,17 @@ async function collectCandidatePages(entryUrl: string) {
     }
 
     visited.add(current.url);
+
+    if (current.url.toLowerCase().endsWith(".pdf")) {
+      pages.push({
+        url: current.url,
+        html: "",
+        discoveredFrom: current.discoveredFrom,
+        depth: current.depth,
+      });
+      continue;
+    }
+
     const html = await fetchHtml(current.url);
     pages.push({
       url: current.url,
@@ -236,7 +398,9 @@ async function collectCandidatePages(entryUrl: string) {
       continue;
     }
 
-    const nextUrls = normalizeWithinBranchUrls(extractHtmlLinks(current.url, html), branchBaseUrl);
+    const discoveredUrls = extractHtmlLinks(current.url, html);
+    discoveredUrls.filter((url) => isJexerSharedScheduleUrl(url)).forEach((url) => excludedSharedScheduleUrls.add(url));
+    const nextUrls = normalizeWithinBranchUrls(discoveredUrls, branchBaseUrl);
 
     for (const nextUrl of nextUrls) {
       if (!visited.has(nextUrl)) {
@@ -249,17 +413,39 @@ async function collectCandidatePages(entryUrl: string) {
     }
   }
 
-  return { branchBaseUrl, pages };
+  return { branchBaseUrl, pages, excludedSharedScheduleUrls: Array.from(excludedSharedScheduleUrls) };
 }
 
 async function classifyCandidatePage(page: CandidatePage, branchBaseUrl: string) {
   const systemPrompt = [
     "You classify JEXER schedule-related HTML pages.",
     "Return only JSON that matches the schema.",
-    "Judge whether the page is a schedule entrance page, a schedule detail page, a day detail page, or irrelevant.",
+    "Classify each page as one of: entry, schedule_index, schedule_detail, pdf_schedule, instructor, ignore.",
+    "entry means a store top or navigation page.",
+    "schedule_index means a page that mainly links to schedule detail pages.",
+    "schedule_detail means a page that directly contains rows for classes or lessons.",
+    "pdf_schedule means the URL itself is a schedule PDF or strongly looks like a PDF schedule resource.",
+    "instructor means a substitute teacher or instructor-specific page, not the main schedule page.",
     "Only recommend next URLs that stay under the same branch base URL.",
     `Branch base URL: ${branchBaseUrl}`,
   ].join(" ");
+
+  if (page.url.toLowerCase().endsWith(".pdf")) {
+    return {
+      ...page,
+      classification: {
+        page_type: "pdf_schedule",
+        schedule_kind: "unknown",
+        contains_schedule_rows: false,
+        contains_detail_links: false,
+        recommended_next_links: [],
+        confidence: 0.99,
+      },
+      rawResponseJson: JSON.stringify({ page_type: "pdf_schedule", inferred_from: "url_extension" }, null, 2),
+      rawResponseText: "pdf_schedule inferred from .pdf URL",
+      usageMetadata: null,
+    } satisfies ClassifiedCandidatePage;
+  }
 
   const userPrompt = [
     `Page URL: ${page.url}`,
@@ -278,10 +464,11 @@ async function classifyCandidatePage(page: CandidatePage, branchBaseUrl: string)
     ...page,
     classification: {
       ...result.data,
-      recommended_next_urls: normalizeWithinBranchUrls(result.data.recommended_next_urls, branchBaseUrl),
+      recommended_next_links: normalizeWithinBranchUrls(result.data.recommended_next_links, branchBaseUrl),
     },
     rawResponseJson: result.rawResponseJson,
     rawResponseText: result.rawResponseText,
+    usageMetadata: result.usageMetadata,
   } satisfies ClassifiedCandidatePage;
 }
 
@@ -297,19 +484,57 @@ async function classifyCandidatePages(pages: CandidatePage[], branchBaseUrl: str
 
 async function collectRecommendedPages(classifiedPages: ClassifiedCandidatePage[], branchBaseUrl: string) {
   const existingUrls = new Set(classifiedPages.map((page) => page.url));
-  const recommendedUrls = Array.from(
-    new Set(classifiedPages.flatMap((page) => page.classification.recommended_next_urls)),
-  ).filter((url) => isSameBranchUrl(url, branchBaseUrl) && !existingUrls.has(url));
+  const recommendedUrlSources = new Map<string, { discoveredFrom: CandidatePage["discoveredFrom"]; depth: number }>();
+  const maxExplorationDepth = 3;
+
+  for (const page of classifiedPages) {
+    if (page.depth >= maxExplorationDepth) {
+      continue;
+    }
+
+    if (page.classification.page_type !== "schedule_index" && page.classification.page_type !== "entry") {
+      continue;
+    }
+
+    for (const url of page.classification.recommended_next_links) {
+      if (!recommendedUrlSources.has(url)) {
+        recommendedUrlSources.set(url, {
+          discoveredFrom: `ai_recommendation:${page.url}`,
+          depth: Math.min(maxExplorationDepth, page.depth + 1),
+        });
+      }
+    }
+
+    if (page.classification.page_type === "schedule_index") {
+      for (const url of extractHtmlLinks(page.url, page.html).filter((url) => url.endsWith(".html") || url.endsWith(".pdf"))) {
+        if (!recommendedUrlSources.has(url)) {
+          recommendedUrlSources.set(url, {
+            discoveredFrom: `index_link_collection:${page.url}`,
+            depth: Math.min(maxExplorationDepth, page.depth + 1),
+          });
+        }
+      }
+    }
+  }
+
+  const recommendedUrls = Array.from(recommendedUrlSources.entries())
+    .filter(([url]) => isSameBranchUrl(url, branchBaseUrl) && !existingUrls.has(url) && !isClearlyExcludedUrl(url))
+    .map(([url, metadata]) => ({
+      url,
+      discoveredFrom: metadata.discoveredFrom,
+      depth: metadata.depth,
+    }));
 
   const pages: CandidatePage[] = [];
 
   for (const recommendedUrl of recommendedUrls) {
-    const html = await fetchHtml(recommendedUrl);
+    const html = recommendedUrl.url.toLowerCase().endsWith(".pdf") ? "" : await fetchHtml(recommendedUrl.url);
+
     pages.push({
-      url: recommendedUrl,
+      url: recommendedUrl.url,
       html,
-      discoveredFrom: "ai_recommendation",
-      depth: 2,
+      discoveredFrom: recommendedUrl.discoveredFrom,
+      depth: recommendedUrl.depth,
     });
   }
 
@@ -317,43 +542,89 @@ async function collectRecommendedPages(classifiedPages: ClassifiedCandidatePage[
 }
 
 function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
-  const eligibleStudioPages = classifiedPages.filter((page) => {
+  const broadDetailPages = classifiedPages.filter((page) => {
     const signals = summarizePageSignals(page.html);
-    const isStudio = page.classification.schedule_kind === "studio";
     const isDetailLike =
-      page.classification.page_type === "schedule_day_detail" || page.classification.page_type === "schedule_detail";
-    const hasScheduleContent = page.classification.contains_schedule_rows && (signals.hasTimeLikeText || signals.hasTableTag);
-    const isLinkOnlyIndex = page.classification.contains_detail_links && signals.hasListLinkDensity && !signals.hasTimeLikeText;
+      page.classification.page_type === "schedule_detail" || page.classification.page_type === "pdf_schedule";
+    const hasScheduleContent =
+      page.classification.page_type === "pdf_schedule" ||
+      page.classification.contains_schedule_rows ||
+      signals.hasTimeLikeText ||
+      signals.hasTableTag;
+    const isClearlyExcluded = isClearlyExcludedUrl(page.url);
 
-    return isStudio && isDetailLike && hasScheduleContent && !isLinkOnlyIndex;
+    return isDetailLike && hasScheduleContent && !isClearlyExcluded;
   });
+  const kindPriority = {
+    studio: 0,
+    bike: 1,
+    hot_yoga: 2,
+    mixed: 3,
+    unknown: 4,
+  } as const;
 
-  const detailStudioPages = eligibleStudioPages.filter((page) => page.classification.page_type === "schedule_day_detail");
-  const secondaryStudioPages = eligibleStudioPages.filter((page) => page.classification.page_type === "schedule_detail");
+  const selectedPages = broadDetailPages.sort((left, right) => {
+    const kindScore = kindPriority[left.classification.schedule_kind] - kindPriority[right.classification.schedule_kind];
 
-  const selectedPages =
-    detailStudioPages.length > 0
-      ? detailStudioPages
-      : secondaryStudioPages.length > 0
-        ? secondaryStudioPages
-        : [];
+    if (kindScore !== 0) {
+      return kindScore;
+    }
+
+    return right.classification.confidence - left.classification.confidence;
+  });
 
   return {
     selectedPages,
+    selectedPageReasons: selectedPages.map((page) => ({
+      url: page.url,
+      page_type: page.classification.page_type,
+      schedule_kind: page.classification.schedule_kind,
+      confidence: page.classification.confidence,
+      reason:
+        page.classification.page_type === "pdf_schedule"
+          ? "selected because the page looks like a schedule PDF"
+          : "selected because AI marked this page as schedule_detail with schedule rows",
+    })),
     selectionReason:
-      detailStudioPages.length > 0
-        ? "studio day-detail pages with time-like schedule content"
-        : secondaryStudioPages.length > 0
-          ? "studio detail pages with time-like schedule content"
-          : "no eligible studio schedule detail pages detected",
+      selectedPages.length > 0
+        ? "schedule_detail or pdf_schedule pages with schedule content, ordered by schedule_kind priority and confidence"
+        : "no eligible schedule_detail or pdf_schedule pages detected",
   };
 }
 
 function buildExtractionHtml(selectedPages: ClassifiedCandidatePage[]) {
   return {
-    extractionHtml: selectedPages.map((page) => `<!-- ${page.url} -->\n${page.html}`).join("\n\n"),
+    extractionHtml: selectedPages
+      .map((page) =>
+        page.classification.page_type === "pdf_schedule"
+          ? `<!-- ${page.url} -->\nPDF schedule URL: ${page.url}`
+          : `<!-- ${page.url} -->\n${page.html}`,
+      )
+      .join("\n\n"),
     extractionUrls: selectedPages.map((page) => page.url),
   };
+}
+
+function buildExplorationSteps(classifiedPages: ClassifiedCandidatePage[], selectedUrls: Set<string>) {
+  return classifiedPages
+    .slice()
+    .sort((left, right) => {
+      if (left.depth !== right.depth) {
+        return left.depth - right.depth;
+      }
+
+      return left.url.localeCompare(right.url);
+    })
+    .map((page, index) => ({
+      step: index + 1,
+      visited_url: page.url,
+      discovered_from: page.discoveredFrom,
+      depth: page.depth,
+      page_type: page.classification.page_type,
+      schedule_kind: page.classification.schedule_kind,
+      recommended_next_links: page.classification.recommended_next_links,
+      selected_for_extraction: selectedUrls.has(page.url),
+    }));
 }
 
 function buildGeminiPrompts({
@@ -405,6 +676,7 @@ async function extractRecordsWithGemini({
     ...prompts,
     rawResponseJson: response.rawResponseJson,
     rawResponseText: response.rawResponseText,
+    usageMetadata: response.usageMetadata,
     records: response.data.records.map((record) => ({
       ...record,
       location_name: record.location_name || locationName,
@@ -440,6 +712,43 @@ function normalizeRecords(records: ExtractedJexerScheduleRecord[]) {
 async function main() {
   const args = parseArgs(process.argv);
   const target = args.target ? findJexerTarget(args.target) : null;
+
+  if (!args.url && !target) {
+    console.error("Usage: npm run extract:jexer -- --target=shinjuku");
+    console.error("   or: npm run extract:jexer -- --url=https://example.com --location-name='JEXER 任意店舗'");
+    console.error("Available store targets:", jexerStoreTargets.map((item) => item.slug).join(", "));
+    console.error("Available partial targets:", jexerPartialTargets.map((item) => item.slug).join(", "));
+    console.error("Available group targets:", jexerTargetGroups.map((item) => item.slug).join(", "));
+    process.exit(1);
+  }
+
+  if (target && isJexerGroupTarget(target)) {
+    console.log(`[jexer] group target: ${target.slug}`);
+
+    for (const memberSlug of target.members) {
+      const memberTarget = findJexerTarget(memberSlug);
+
+      if (!memberTarget || !memberTarget.sourceUrl) {
+        console.warn(`[jexer] skipped missing member target: ${memberSlug}`);
+        continue;
+      }
+
+      console.log(`[jexer] running store target: ${memberTarget.slug} (${memberTarget.locationName})`);
+      try {
+        await runExtractionJob({
+          slug: memberTarget.slug,
+          locationName: memberTarget.locationName,
+          sourceUrl: memberTarget.sourceUrl,
+        });
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error(`[jexer] failed store target: ${memberTarget.slug} (${memberTarget.sourceUrl}) - ${message}`);
+      }
+    }
+
+    return;
+  }
+
   const sourceUrl = args.url || target?.sourceUrl;
   const locationName = args.locationName || target?.locationName;
   const slug = target?.slug || "manual";
@@ -447,28 +756,45 @@ async function main() {
   if (!sourceUrl || !locationName) {
     console.error("Usage: npm run extract:jexer -- --target=shinjuku");
     console.error("   or: npm run extract:jexer -- --url=https://example.com --location-name='JEXER 任意店舗'");
-    console.error("Available targets:", jexerTokyoTargets.map((item) => item.slug).join(", "));
+    console.error("Available store targets:", jexerStoreTargets.map((item) => item.slug).join(", "));
+    console.error("Available partial targets:", jexerPartialTargets.map((item) => item.slug).join(", "));
+    console.error("Available group targets:", jexerTargetGroups.map((item) => item.slug).join(", "));
     process.exit(1);
   }
 
+  await runExtractionJob({ slug, locationName, sourceUrl });
+}
+
+async function runExtractionJob({
+  slug,
+  locationName,
+  sourceUrl,
+}: Pick<JexerExtractionTarget, "slug" | "locationName" | "sourceUrl"> & { sourceUrl: string }) {
   const baseName = buildRunBaseName(slug);
   const outputPath = buildOutputPath(baseName);
   const debugDirPath = buildDebugDirPath();
   await mkdir(path.dirname(outputPath), { recursive: true });
   await mkdir(debugDirPath, { recursive: true });
+  try {
+    const { branchBaseUrl, pages: initialPages, excludedSharedScheduleUrls } = await collectCandidatePages(sourceUrl);
+    let classifiedPages = await classifyCandidatePages(initialPages, branchBaseUrl);
+    const maxNavigationRounds = 3;
 
-  const { branchBaseUrl, pages: initialPages } = await collectCandidatePages(sourceUrl);
-  let classifiedPages = await classifyCandidatePages(initialPages, branchBaseUrl);
-  let selection = selectExtractionTargets(classifiedPages);
+    for (let round = 0; round < maxNavigationRounds; round += 1) {
+      const recommendedPages = await collectRecommendedPages(classifiedPages, branchBaseUrl);
 
-  if (selection.selectedPages.length === 0) {
-    const recommendedPages = await collectRecommendedPages(classifiedPages, branchBaseUrl);
+      if (recommendedPages.length === 0) {
+        break;
+      }
 
-    if (recommendedPages.length > 0) {
       classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages, branchBaseUrl))];
-      selection = selectExtractionTargets(classifiedPages);
     }
-  }
+
+    const selection = selectExtractionTargets(classifiedPages);
+    const explorationSteps = buildExplorationSteps(
+      classifiedPages,
+      new Set(selection.selectedPages.map((page) => page.url)),
+    );
 
   await writeDebugFile(
     debugDirPath,
@@ -478,11 +804,14 @@ async function main() {
       {
         entry_url: sourceUrl,
         branch_base_url: branchBaseUrl,
+        excluded_shared_schedule_urls: excludedSharedScheduleUrls,
+        exploration_steps: explorationSteps,
         candidates: classifiedPages.map((page) => ({
           url: page.url,
           discovered_from: page.discoveredFrom,
           depth: page.depth,
           signals: summarizePageSignals(page.html),
+          usage_metadata: page.usageMetadata,
           classification: page.classification,
         })),
       },
@@ -502,6 +831,7 @@ async function main() {
           url: page.url,
           discovered_from: page.discoveredFrom,
           signals: summarizePageSignals(page.html),
+          usage_metadata: page.usageMetadata,
           classification: page.classification,
         },
         null,
@@ -511,10 +841,11 @@ async function main() {
     await writeDebugFile(debugDirPath, baseName, `candidate-${index + 1}.classification-response.json`, page.rawResponseJson);
   }
 
-  const { extractionHtml, extractionUrls } = buildExtractionHtml(selection.selectedPages);
-  const keywordScan = scanHtmlKeywords(extractionHtml);
+    const { extractionHtml, extractionUrls } = buildExtractionHtml(selection.selectedPages);
+    const keywordScan = scanHtmlKeywords(extractionHtml);
+    const classificationUsageMetadata = aggregateUsageMetadata(classifiedPages.map((page) => page.usageMetadata));
 
-  await writeDebugFile(
+    await writeDebugFile(
     debugDirPath,
     baseName,
     "selection.json",
@@ -523,13 +854,17 @@ async function main() {
         selection_reason: selection.selectionReason,
         selected_urls: extractionUrls,
         selected_count: selection.selectedPages.length,
+        selected_pages: selection.selectedPageReasons,
+        exploration_steps: explorationSteps,
+        excluded_shared_schedule_urls: excludedSharedScheduleUrls,
+        usage_metadata: classificationUsageMetadata,
       },
       null,
       2,
     ),
   );
-  await writeDebugFile(debugDirPath, baseName, "source.html", extractionHtml);
-  await writeDebugFile(
+    await writeDebugFile(debugDirPath, baseName, "source.html", extractionHtml);
+    await writeDebugFile(
     debugDirPath,
     baseName,
     "html-keywords.json",
@@ -538,17 +873,41 @@ async function main() {
         source_url: sourceUrl,
         extraction_urls: extractionUrls,
         keywords: keywordScan,
+        usage_metadata: classificationUsageMetadata,
       },
       null,
       2,
     ),
   );
 
-  console.log("Selected extraction pages:", extractionUrls);
-  console.log("HTML keyword scan:", keywordScan);
+    console.log("Selected extraction pages:", extractionUrls);
+    console.log("HTML keyword scan:", keywordScan);
 
-  const prompts = buildGeminiPrompts({ locationName, sourceUrl: extractionUrls.join(", "), html: extractionHtml });
-  await writeDebugFile(
+    if (selection.selectedPages.length === 0) {
+      const reasonMessage = `No extraction pages selected for ${slug}.`;
+      await writeFailureDebugFile({
+        debugDirPath,
+        baseName,
+        slug,
+        locationName,
+        sourceUrl,
+        stage: "selection",
+        message: reasonMessage,
+        details: {
+          selection_reason: selection.selectionReason,
+          candidate_count: classifiedPages.length,
+          candidate_urls: classifiedPages.map((page) => page.url),
+          exploration_steps: explorationSteps,
+          selected_pages: selection.selectedPageReasons,
+          excluded_shared_schedule_urls: excludedSharedScheduleUrls,
+          shared_schedule_policy: "excluded because /mb/schedule/?shop=... returns unstable 500 responses",
+        },
+      });
+      throw new Error(`${reasonMessage} ${selection.selectionReason}`);
+    }
+
+    const prompts = buildGeminiPrompts({ locationName, sourceUrl: extractionUrls.join(", "), html: extractionHtml });
+    await writeDebugFile(
     debugDirPath,
     baseName,
     "gemini-input.txt",
@@ -557,63 +916,133 @@ async function main() {
     ),
   );
 
-  let geminiResult:
+    let geminiResult:
     | {
         systemPrompt: string;
         userPrompt: string;
         rawResponseJson: string;
         rawResponseText: string;
+        usageMetadata: GeminiUsageMetadata | null;
         records: ExtractedJexerScheduleRecord[];
       }
     | null = null;
 
-  try {
-    geminiResult = await extractRecordsWithGemini({
-      locationName,
-      sourceUrl: extractionUrls.join(", "),
-      html: extractionHtml,
-    });
+    try {
+      geminiResult = await extractRecordsWithGemini({
+        locationName,
+        sourceUrl: extractionUrls.join(", "),
+        html: extractionHtml,
+      });
+    } catch (error) {
+      if (error instanceof GeminiStructuredResponseError) {
+        await writeDebugFile(
+          debugDirPath,
+          baseName,
+          "gemini-response.json",
+          error.rawResponseJson || JSON.stringify({ error: error.message }, null, 2),
+        );
+
+        if (error.rawResponseText) {
+          await writeDebugFile(debugDirPath, baseName, "gemini-response-text.txt", error.rawResponseText);
+        }
+      }
+
+      await writeFailureDebugFile({
+        debugDirPath,
+        baseName,
+        slug,
+        locationName,
+        sourceUrl,
+        stage: "extraction",
+        message: error instanceof Error ? error.message : String(error),
+      });
+      throw error;
+    }
+
+    await writeDebugFile(debugDirPath, baseName, "gemini-response.json", geminiResult.rawResponseJson);
+    await writeDebugFile(debugDirPath, baseName, "gemini-response-text.txt", geminiResult.rawResponseText);
+    await writeDebugFile(
+    debugDirPath,
+    baseName,
+    "usage-metadata.json",
+    JSON.stringify(
+      {
+        model_id: getGeminiModelId(),
+        classification: classificationUsageMetadata,
+        extraction: geminiResult.usageMetadata,
+        total: aggregateUsageMetadata([classificationUsageMetadata, geminiResult.usageMetadata]),
+        pages: classifiedPages.map((page) => ({
+          url: page.url,
+          discovered_from: page.discoveredFrom,
+          usage_metadata: page.usageMetadata,
+          page_type: page.classification.page_type,
+          schedule_kind: page.classification.schedule_kind,
+        })),
+      },
+      null,
+      2,
+    ),
+  );
+
+    const normalizedRecords = normalizeRecords(geminiResult.records);
+    const usageBreakdown: JexerUsageBreakdown = {
+      classification: classificationUsageMetadata,
+      extraction: geminiResult.usageMetadata,
+    };
+    const output: JexerExtractionResult = {
+      location_name: locationName,
+      source_url: sourceUrl,
+      fetched_at: new Date().toISOString(),
+      model_id: getGeminiModelId(),
+      usage_metadata: aggregateUsageMetadata([usageBreakdown.classification, usageBreakdown.extraction]),
+      usage_breakdown: usageBreakdown,
+      records: normalizedRecords,
+    };
+
+    await writeFile(outputPath, JSON.stringify(output, null, 2), "utf-8");
+    const summary = summarizeJexerExtractionResult(output);
+    const summaryPath = outputPath.replace(/\.json$/i, ".summary.json");
+    await writeFile(summaryPath, JSON.stringify(summary, null, 2), "utf-8");
+
+    console.log(`Saved extraction result to ${outputPath}`);
+    console.log(`Saved summary to ${summaryPath}`);
+    console.log(`Extracted records: ${output.records.length}`);
+
+    if (output.records.length === 0) {
+      console.warn("Warning: extraction returned 0 records.");
+      console.warn(`Check debug files under ${debugDirPath}`);
+    }
   } catch (error) {
-    if (error instanceof GeminiStructuredResponseError) {
+    const message = error instanceof Error ? error.message : String(error);
+
+    if (error instanceof FetchHtmlError && error.responseBody) {
       await writeDebugFile(
         debugDirPath,
         baseName,
-        "gemini-response.json",
-        error.rawResponseJson || JSON.stringify({ error: error.message }, null, 2),
+        "fetch-error-response.txt",
+        error.responseBody,
       );
-
-      if (error.rawResponseText) {
-        await writeDebugFile(debugDirPath, baseName, "gemini-response-text.txt", error.rawResponseText);
-      }
     }
 
+    await writeFailureDebugFile({
+      debugDirPath,
+      baseName,
+      slug,
+      locationName,
+      sourceUrl,
+      stage: error instanceof FetchHtmlError ? "fetch_html" : "job",
+      message,
+      details:
+        error instanceof FetchHtmlError
+          ? {
+              failed_url: error.url,
+              status: error.status,
+              status_text: error.statusText,
+              response_body_preview: getResponseBodyPreview(error.responseBody),
+            }
+          : undefined,
+    });
     throw error;
-  }
-
-  await writeDebugFile(debugDirPath, baseName, "gemini-response.json", geminiResult.rawResponseJson);
-  await writeDebugFile(debugDirPath, baseName, "gemini-response-text.txt", geminiResult.rawResponseText);
-
-  const normalizedRecords = normalizeRecords(geminiResult.records);
-  const output: JexerExtractionResult = {
-    location_name: locationName,
-    source_url: sourceUrl,
-    fetched_at: new Date().toISOString(),
-    model_id: getGeminiModelId(),
-    records: normalizedRecords,
-  };
-
-  await writeFile(outputPath, JSON.stringify(output, null, 2), "utf-8");
-  const summary = summarizeJexerExtractionResult(output);
-  const summaryPath = outputPath.replace(/\.json$/i, ".summary.json");
-  await writeFile(summaryPath, JSON.stringify(summary, null, 2), "utf-8");
-
-  console.log(`Saved extraction result to ${outputPath}`);
-  console.log(`Saved summary to ${summaryPath}`);
-  console.log(`Extracted records: ${output.records.length}`);
-
-  if (output.records.length === 0) {
-    console.warn("Warning: extraction returned 0 records.");
-    console.warn(`Check debug files under ${debugDirPath}`);
   }
 }
 

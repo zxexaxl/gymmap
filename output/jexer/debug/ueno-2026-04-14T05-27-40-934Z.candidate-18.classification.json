@@ -1,0 +1,30 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/schedule/thu_10b.html",
+  "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1940,
+    "candidates_token_count": 167,
+    "total_token_count": 2107,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/ueno/schedule/sat_10b.html",
+      "https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "https://www.jexer.jp/mb/ueno/schedule/index.html",
+      "https://www.jexer.jp/mb/ueno/index.html"
+    ],
+    "confidence": 1
+  }
+}

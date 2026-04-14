@@ -1,0 +1,9 @@
+{
+  "slug": "ueno",
+  "location_name": "JEXER 上野",
+  "source_url": "https://www.jexer.jp/mb/ueno/",
+  "stage": "job",
+  "message": "Failed to fetch source HTML: 500 Internal Server Error",
+  "details": null,
+  "failed_at": "2026-04-14T02:12:24.737Z"
+}

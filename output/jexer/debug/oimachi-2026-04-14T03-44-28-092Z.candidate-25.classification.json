@@ -1,0 +1,28 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/sun_10p.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1239,
+    "candidates_token_count": 117,
+    "total_token_count": 1356,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "schedule_day_detail",
+    "schedule_kind": "aqua",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "https://www.jexer.jp/mb/oi/schedule/index.html"
+    ],
+    "confidence": 1
+  }
+}

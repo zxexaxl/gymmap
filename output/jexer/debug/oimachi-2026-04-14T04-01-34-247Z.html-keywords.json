@@ -1,0 +1,34 @@
+{
+  "source_url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10b.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": true,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 38714,
+    "candidates_token_count": 3836,
+    "total_token_count": 42550,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  }
+}

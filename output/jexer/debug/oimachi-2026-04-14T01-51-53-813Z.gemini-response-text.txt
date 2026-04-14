@@ -1,0 +1,67 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "monday",
+      "start_time": "13:10",
+      "end_time": "13:55",
+      "raw_program_name": "HOT YOGA　ﾋﾞｷﾞﾅｰ45",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "菅野有希"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "monday",
+      "start_time": "20:25",
+      "end_time": "20:55",
+      "raw_program_name": "GRIT",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "早川峻也"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "12:55",
+      "end_time": "13:40",
+      "raw_program_name": "HOTYOGAﾋﾞｷﾞﾅｰ45",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "菅野有希"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "raw_program_name": "美軸ﾗｲﾝｽﾄﾚｯﾁ45",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "21:15",
+      "end_time": "22:00",
+      "raw_program_name": "ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "菅田郁美"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "saturday",
+      "start_time": "17:10",
+      "end_time": "17:40",
+      "raw_program_name": "GRIT",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "instructor_name": "早川峻也"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "thursday",
+      "start_time": "21:10",
+      "end_time": "21:55",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ45",
+      "source_url": "https://www.jexer.jp/mb/oi/instructor/index6.html",
+      "instructor_name": null
+    }
+  ]
+}

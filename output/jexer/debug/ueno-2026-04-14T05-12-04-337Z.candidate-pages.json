@@ -1,0 +1,113 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/ueno/index.html",
+  "branch_base_url": "https://www.jexer.jp/mb/ueno/",
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=8"
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/ueno/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3103,
+        "candidates_token_count": 211,
+        "total_token_count": 3314,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1963,
+        "candidates_token_count": 64,
+        "total_token_count": 2027,
+        "thoughts_token_count": null,
+        "cached_content_token_count": 1742,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1249,
+        "candidates_token_count": 64,
+        "total_token_count": 1315,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 0.9
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1050,
+        "candidates_token_count": 64,
+        "total_token_count": 1114,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    }
+  ]
+}

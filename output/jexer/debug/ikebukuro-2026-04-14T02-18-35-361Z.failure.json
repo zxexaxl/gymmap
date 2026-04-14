@@ -1,0 +1,14 @@
+{
+  "slug": "ikebukuro",
+  "location_name": "JEXER 池袋",
+  "source_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "stage": "fetch_html",
+  "message": "Failed to fetch source HTML: 500 Internal Server Error",
+  "details": {
+    "failed_url": "https://www.jexer.jp/mb/schedule/?shop=9",
+    "status": 500,
+    "status_text": "Internal Server Error",
+    "response_body_preview": null
+  },
+  "failed_at": "2026-04-14T02:18:35.522Z"
+}

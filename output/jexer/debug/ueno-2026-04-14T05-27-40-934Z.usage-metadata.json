@@ -1,0 +1,477 @@
+{
+  "model_id": "gemini-2.5-flash-lite",
+  "classification": {
+    "prompt_token_count": 54268,
+    "candidates_token_count": 5238,
+    "total_token_count": 59508,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "extraction": {
+    "prompt_token_count": 37719,
+    "candidates_token_count": 27926,
+    "total_token_count": 65645,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total": {
+    "prompt_token_count": 91987,
+    "candidates_token_count": 33164,
+    "total_token_count": 125153,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "pages": [
+    {
+      "url": "https://www.jexer.jp/mb/ueno/index.html",
+      "discovered_from": null,
+      "usage_metadata": {
+        "prompt_token_count": 3127,
+        "candidates_token_count": 111,
+        "total_token_count": 3238,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "unknown"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1987,
+        "candidates_token_count": 89,
+        "total_token_count": 2076,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "unknown"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1273,
+        "candidates_token_count": 89,
+        "total_token_count": 1362,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "unknown"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1074,
+        "candidates_token_count": 89,
+        "total_token_count": 1163,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "unknown"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1066,
+        "candidates_token_count": 117,
+        "total_token_count": 1183,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/",
+      "usage_metadata": {
+        "prompt_token_count": 1659,
+        "candidates_token_count": 576,
+        "total_token_count": 2235,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/",
+      "usage_metadata": {
+        "prompt_token_count": 1355,
+        "candidates_token_count": 238,
+        "total_token_count": 1593,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/mon_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1779,
+        "candidates_token_count": 146,
+        "total_token_count": 1925,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/mon_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1921,
+        "candidates_token_count": 168,
+        "total_token_count": 2089,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/mon_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1501,
+        "candidates_token_count": 168,
+        "total_token_count": 1669,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/tue_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1704,
+        "candidates_token_count": 145,
+        "total_token_count": 1849,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/tue_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1947,
+        "candidates_token_count": 167,
+        "total_token_count": 2114,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/tue_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1687,
+        "candidates_token_count": 145,
+        "total_token_count": 1832,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/wed_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1780,
+        "candidates_token_count": 167,
+        "total_token_count": 1947,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/wed_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1894,
+        "candidates_token_count": 167,
+        "total_token_count": 2061,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/wed_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1651,
+        "candidates_token_count": 167,
+        "total_token_count": 1818,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/thu_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1847,
+        "candidates_token_count": 145,
+        "total_token_count": 1992,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/thu_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1940,
+        "candidates_token_count": 167,
+        "total_token_count": 2107,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/thu_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1581,
+        "candidates_token_count": 167,
+        "total_token_count": 1748,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sat_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1636,
+        "candidates_token_count": 167,
+        "total_token_count": 1803,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sat_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1775,
+        "candidates_token_count": 167,
+        "total_token_count": 1942,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sat_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1503,
+        "candidates_token_count": 167,
+        "total_token_count": 1670,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sun_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1620,
+        "candidates_token_count": 139,
+        "total_token_count": 1759,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sun_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1699,
+        "candidates_token_count": 139,
+        "total_token_count": 1838,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sun_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1420,
+        "candidates_token_count": 139,
+        "total_token_count": 1559,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/index.html",
+      "discovered_from": "index_link_collection:https://www.jexer.jp/mb/ueno/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1072,
+        "candidates_token_count": 117,
+        "total_token_count": 1189,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/mon_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1834,
+        "candidates_token_count": 168,
+        "total_token_count": 2004,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/tue_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1776,
+        "candidates_token_count": 167,
+        "total_token_count": 1943,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/wed_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1952,
+        "candidates_token_count": 167,
+        "total_token_count": 2119,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/thu_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1774,
+        "candidates_token_count": 167,
+        "total_token_count": 1941,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sat_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1763,
+        "candidates_token_count": 167,
+        "total_token_count": 1930,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ueno/schedule/sun_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1671,
+        "candidates_token_count": 139,
+        "total_token_count": 1810,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    }
+  ]
+}

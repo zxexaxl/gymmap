@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_day_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/fitness.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/index.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7mbDmK1yUZH3zJcQow6MeQ6b8ALXnEexGNMh+I8kewYCKHiFlasZfPJN5gO6P"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1608,
+    "candidatesTokenCount": 144,
+    "totalTokenCount": 1752,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1608
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "NrzdabfWHYbf2roPupvjkQI"
+}

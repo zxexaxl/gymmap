@@ -1,0 +1,55 @@
+{
+  "total_records": 7,
+  "needs_review_count": 5,
+  "unresolved_count": 3,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 6
+    },
+    {
+      "key": "Les Mills",
+      "count": 1
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "mind_body",
+      "count": 3
+    },
+    {
+      "key": "null",
+      "count": 3
+    },
+    {
+      "key": "strength",
+      "count": 1
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "GRIT",
+      "count": 2
+    },
+    {
+      "key": "HOT YOGA　ﾋﾞｷﾞﾅｰ45",
+      "count": 1
+    },
+    {
+      "key": "HOTYOGAﾋﾞｷﾞﾅｰ45",
+      "count": 1
+    },
+    {
+      "key": "ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45",
+      "count": 1
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ45",
+      "count": 1
+    },
+    {
+      "key": "美軸ﾗｲﾝｽﾄﾚｯﾁ45",
+      "count": 1
+    }
+  ]
+}

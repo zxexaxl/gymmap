@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"ignore\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/ueno/whatsnew/info.php?info_no=35519\",\n    \"https://www.jexer.jp/mb/ueno/whatsnew/info.php?info_no=35504\"\n  ],\n  \"confidence\": 0.9\n}",
+            "thoughtSignature": "EjQKMgG+Pvb77x40oVPQZ1g6+5gEAgFj/sIrCmkK69/meoFiORttTSpXhpmKbFVCLVAwrefX"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 970,
+    "candidatesTokenCount": 137,
+    "totalTokenCount": 1107,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 970
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "4Z3dadCoJIbp1e8P6--MgAE"
+}

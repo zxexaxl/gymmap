@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/schedule/mon_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/tue_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/tue_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/wed_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/wed_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/thu_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/fri_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sat_10b.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sun_10b.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7BjI2z+M0ZomUSAxYRq460r5Nk3bM24H04ZxF55RIC/+N6fWNlfLJ84W6GAwd"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1512,
+    "candidatesTokenCount": 449,
+    "totalTokenCount": 1961,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1512
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "I7zdaYWbG_De2roPmN2JoAw"
+}

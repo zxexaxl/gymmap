@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"10:15\",\n      \"end_time\": \"11:15\",\n      \"raw_program_name\": \"ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"高橋(躍)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"11:45\",\n      \"end_time\": \"12:30\",\n      \"raw_program_name\": \"[ｵﾘｼﾞﾅﾙ]ｺｱ･ｼｪｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"片山(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"12:45\",\n      \"end_time\": \"13:45\",\n      \"raw_program_name\": \"ｴｱﾛﾋﾞｸｽﾗｲﾄ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"片山(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"14:00\",\n      \"end_time\": \"14:45\",\n      \"raw_program_name\": \"ZUMBA\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"KIYOMI\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"15:05\",\n      \"end_time\": \"16:05\",\n      \"raw_program_name\": \"けいらくﾋﾞｸｽ(R)60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"中村(勝)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"16:25\",\n      \"end_time\": \"17:10\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"大塚(弦)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"17:25\",\n      \"end_time\": \"18:10\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"羽柴(巨)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"18:30\",\n      \"end_time\": \"18:45\",\n      \"raw_program_name\": \"ｽﾄﾚｯﾁ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"19:05\",\n      \"end_time\": \"20:05\",\n      \"raw_program_name\": \"ﾊﾟﾜｰﾖｶﾞ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"福田(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"10:15\",\n      \"end_time\": \"11:15\",\n      \"raw_program_name\": \"ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"千村(由)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"11:35\",\n      \"end_time\": \"12:35\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"山口(隆)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"12:50\",\n      \"end_time\": \"13:35\",\n      \"raw_program_name\": \"ﾀﾞｲｴｯﾄｴｱﾛ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"高辻(一)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"13:50\",\n      \"end_time\": \"14:50\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"後藤(宏)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"15:05\",\n      \"end_time\": \"15:50\",\n      \"raw_program_name\": \"ｴｱﾛﾋﾞｸｽﾗｲﾄ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"佐藤(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"16:05\",\n      \"end_time\": \"16:55\",\n      \"raw_program_name\": \"ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"高田(ま)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"17:20\",\n      \"end_time\": \"18:20\",\n      \"raw_program_name\": \"ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"山口(達)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"sunday\",\n      \"start_time\": \"18:35\",\n      \"end_time\": \"19:20\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sun_10a.html\",\n      \"instructor_name\": \"坂下(正)\"\n    }\n  ]\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7IN8Ups4iyZU/jfmmBxGbd3tG8rF1YYRkJsYINBSjp8wYqCx3nL+kMXoI0Pfk"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3114,
+    "candidatesTokenCount": 2127,
+    "totalTokenCount": 5241,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3114
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "iZXdad-DKOSa1e8P3t6f4As"
+}

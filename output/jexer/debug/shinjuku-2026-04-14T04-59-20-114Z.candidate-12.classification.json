@@ -1,0 +1,30 @@
+{
+  "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10p.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1382,
+    "candidates_token_count": 172,
+    "total_token_count": 1554,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/shinjuku/schedule/tue_10p.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "https://www.jexer.jp/mb/shinjuku/index.html"
+    ],
+    "confidence": 1
+  }
+}

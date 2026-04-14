@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"aqua\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/tue_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/wed_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/thu_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/fri_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sat_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/sun_10p.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7YJgU37m6rEG9M+lYHK2zZmpG1WsUvk31V8DqSoD4XshXjtUVnd/A6+49Aqhl"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1329,
+    "candidatesTokenCount": 259,
+    "totalTokenCount": 1588,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1329
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "JrzdaZbJAs7g2roP6aPZ8AU"
+}

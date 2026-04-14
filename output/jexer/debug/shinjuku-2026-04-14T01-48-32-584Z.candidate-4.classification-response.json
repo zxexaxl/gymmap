@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"ignore\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/schedule/?shop=25\"\n  ],\n  \"confidence\": 0.9\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7/IbT+xou1tphPSHaqNFXSynfw56uojXVj22QXYmXohpA5uFefkFeWLRcIJw8"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3064,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 3153,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3064
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "_JzdaabyFrSb1e8Pl4TjoQ0"
+}

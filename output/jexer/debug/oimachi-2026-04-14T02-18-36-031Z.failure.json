@@ -1,0 +1,14 @@
+{
+  "slug": "oimachi",
+  "location_name": "JEXER 大井町",
+  "source_url": "https://www.jexer.jp/mb/oi/",
+  "stage": "fetch_html",
+  "message": "Failed to fetch source HTML: 500 Internal Server Error",
+  "details": {
+    "failed_url": "https://www.jexer.jp/mb/schedule/?shop=4",
+    "status": 500,
+    "status_text": "Internal Server Error",
+    "response_body_preview": null
+  },
+  "failed_at": "2026-04-14T02:18:36.178Z"
+}

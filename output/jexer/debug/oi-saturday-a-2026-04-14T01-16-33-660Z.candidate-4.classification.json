@@ -1,0 +1,20 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "mixed",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "https://www.jexer.jp/mb/oi/schedule/aqua.html"
+    ],
+    "confidence": 1
+  }
+}

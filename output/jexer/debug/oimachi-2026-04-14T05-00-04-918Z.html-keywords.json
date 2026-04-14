@@ -1,0 +1,41 @@
+{
+  "source_url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10p.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": true,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 40064,
+    "candidates_token_count": 4258,
+    "total_token_count": 44322,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 1592,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

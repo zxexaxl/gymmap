@@ -1,0 +1,25 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 3109,
+    "candidates_token_count": 92,
+    "total_token_count": 3201,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [],
+    "confidence": 1
+  }
+}

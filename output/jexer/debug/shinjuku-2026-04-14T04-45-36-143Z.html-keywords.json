@@ -1,0 +1,34 @@
+{
+  "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+  "extraction_urls": [
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sun_10a.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/mon_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/tue_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/wed_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/fri_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sat_10p.html",
+    "https://www.jexer.jp/mb/shinjuku/schedule/sun_10p.html"
+  ],
+  "keywords": {
+    "table": true,
+    "schedule": true,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 30513,
+    "candidates_token_count": 3027,
+    "total_token_count": 33546,
+    "thoughts_token_count": 6,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

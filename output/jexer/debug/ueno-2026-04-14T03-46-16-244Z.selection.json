@@ -1,0 +1,16 @@
+{
+  "selection_reason": "no eligible studio schedule detail pages detected",
+  "selected_urls": [],
+  "selected_count": 0,
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=8"
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 8122,
+    "candidates_token_count": 411,
+    "total_token_count": 8533,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  }
+}

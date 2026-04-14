@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/aqua.html\",\n    \"https://www.jexer.jp/mb/shinjuku/schedule/index.html\",\n    \"https://www.jexer.jp/mb/shinjuku/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1392,
+    "candidatesTokenCount": 171,
+    "totalTokenCount": 1563,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1392
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "g8bdaYejKdvv2roPk4yokAY"
+}

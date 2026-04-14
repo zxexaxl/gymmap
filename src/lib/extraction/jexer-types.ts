@@ -1,5 +1,19 @@
 import type { ProgramBrand, ProgramCategoryPrimary } from "../program-master";
 
+export type GeminiUsageMetadata = {
+  prompt_token_count: number | null;
+  candidates_token_count: number | null;
+  total_token_count: number | null;
+  thoughts_token_count?: number | null;
+  cached_content_token_count?: number | null;
+  model_id?: string | null;
+};
+
+export type JexerUsageBreakdown = {
+  classification: GeminiUsageMetadata | null;
+  extraction: GeminiUsageMetadata | null;
+};
+
 export type ExtractedJexerScheduleRecord = {
   location_name: string;
   weekday: string;
@@ -28,5 +42,7 @@ export type JexerExtractionResult = {
   source_url: string;
   fetched_at: string;
   model_id: string;
+  usage_metadata: GeminiUsageMetadata | null;
+  usage_breakdown?: JexerUsageBreakdown;
   records: NormalizedExtractedJexerScheduleRecord[];
 };

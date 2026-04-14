@@ -1,0 +1,141 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/kameido/",
+  "branch_base_url": "https://www.jexer.jp/mb/kameido/",
+  "excluded_shared_schedule_urls": [
+    "https://www.jexer.jp/mb/schedule/?shop=24"
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/kameido/",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3144,
+        "candidates_token_count": 119,
+        "total_token_count": 3263,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2112,
+        "candidates_token_count": 90,
+        "total_token_count": 2202,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1227,
+        "candidates_token_count": 64,
+        "total_token_count": 1291,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1047,
+        "candidates_token_count": 64,
+        "total_token_count": 1111,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/index.html",
+      "discovered_from": "ai_recommendation",
+      "depth": 2,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3150,
+        "candidates_token_count": 94,
+        "total_token_count": 3246,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1512,
+    "candidates_token_count": 449,
+    "total_token_count": 1961,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+      "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/sun_10b.html"
+    ],
+    "confidence": 1
+  }
+}

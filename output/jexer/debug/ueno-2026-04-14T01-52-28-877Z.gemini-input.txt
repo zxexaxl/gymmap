@@ -1,0 +1,12 @@
+Model ID: gemini-3.1-flash-lite-preview
+
+[System Prompt]
+You extract JEXER studio schedule rows from HTML. Return only JSON that matches the provided schema. Do not invent records that are not present in the HTML. Use 24-hour HH:MM format for start_time and end_time when possible. If instructor name is missing, set instructor_name to null. weekday should be english lowercase like monday, tuesday, wednesday, thursday, friday, saturday, sunday when inferable.
+
+[User Prompt]
+Location name: JEXER 上野
+
+Source URL: 
+
+Extract only studio or lesson schedule rows from the following HTML.
+

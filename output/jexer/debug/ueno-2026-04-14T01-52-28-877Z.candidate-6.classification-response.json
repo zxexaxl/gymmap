@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"ignore\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7I0/f+Xnsj+SAWbA3zUgfXQaj6wZMdLBfbf+//+uH0o1zTxntdLvG+JUugsPG"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 993,
+    "candidatesTokenCount": 64,
+    "totalTokenCount": 1057,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 993
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "6Z3dab6bA6abvr0P4tyRiAs"
+}

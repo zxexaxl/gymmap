@@ -260,15 +260,39 @@ npm run extract:jexer -- --url=https://www.jexer.jp/mb/kameido/schedule/mon_10a.
 ```
 
 - 人が最初に入れる URL は店舗トップ URL や支店 URL だけで構いません
-- その先は同一支店配下の候補ページを集めて、Gemini が `schedule_index / schedule_detail / schedule_day_detail / ignore` を判定し、本抽出対象を選びます
+- その先は同一支店配下の候補ページを集めて、Gemini が `entry / schedule_index / schedule_detail / instructor / ignore` を判定します
+- `schedule_index` と判定したページでは、掲載されている詳細候補リンクを原則広く採用し、あとで正規化や抽出結果確認で整える方針です
 - まだ実験用途のため、本格クローラではなく浅い候補収集と AI 判定に寄せた構成です
+- JEXER では shared `https://www.jexer.jp/mb/schedule/?shop=...` URL は 500 になりやすいため、入口・候補・fallback には使わず、店舗固有の `mb/<store>/...` URL を優先します
+
+利用できる target:
+
+- 店舗単位 target: `shinjuku`, `oimachi`, `ueno`, `ikebukuro`, `kameido`, `yotsuya`, `akabane`, `otsuka`, `itabashi`, `shinkoiwa`
+- 部分 target: `oi-saturday-a`, `kameido-monday-a`
+- 都内一括 target: `tokyo-jexer`
+
+都内一括 target の実行:
+
+```bash
+npm run extract:jexer -- --target=tokyo-jexer
+```
+
+- `tokyo-jexer` は都内 JEXER の店舗単位 target を順番に実行します
+- 並列化や自動実行はまだ入れていないため、まずは手動でまとめて回す用途です
+- 部分 target は日別 HTML の調査や再現確認向けで、通常は店舗単位 target を優先してください
 
 最初に試す URL 例:
 
 - `shinjuku`: `https://www.jexer.jp/mb/shinjuku/schedule/index.html`
+- `oimachi`: `https://www.jexer.jp/mb/oi/schedule/index.html`
+- `ueno`: `https://www.jexer.jp/mb/ueno/index.html`
 - `ikebukuro`: `https://www.jexer.jp/mb/ikebukuro/index.html`
-- `ueno`: `https://www.jexer.jp/mb/ueno/`
-- `kameido-monday-a`: `https://www.jexer.jp/mb/kameido/schedule/mon_10a.html`
+- `kameido`: `https://www.jexer.jp/mb/kameido/`
+- `yotsuya`: `https://www.jexer.jp/mb/yotsuya/`
+- `akabane`: `https://www.jexer.jp/mb/akabane/`
+- `otsuka`: `https://www.jexer.jp/mb/otsuka/`
+- `itabashi`: `https://www.jexer.jp/mb/itabashi/`
+- `shinkoiwa`: `https://www.jexer.jp/mb/shinkoiwa/`
 - `index.html` は入口ページだけで、実際のスタジオスケジュールは `fitness.html` やその先の日別 HTML にある場合があります。抽出スクリプトはまずリンク先をたどってから Gemini に渡します。
 - JEXER では `fitness.html` や `aqua.html` も入口ページである場合があります。スタジオ抽出では `aqua` 系は除外し、`mon_10a.html` のような日別詳細 HTML を優先して本抽出対象に選びます。
 
@@ -277,8 +301,16 @@ npm run extract:jexer -- --url=https://www.jexer.jp/mb/kameido/schedule/mon_10a.
 - `output/jexer/*.json` に保存されます
 - `extract:jexer` 実行後は `output/jexer/*.summary.json` も保存されます
 - 抽出後に `normalizeProgramName` も通すため、`canonical_program_name` や `needs_review` も確認できます
+- `output/jexer/*.json` の top-level には `usage_metadata` と `usage_breakdown` が入り、店舗単位の token 使用量を確認できます
 - デバッグ用に `output/jexer/debug/` へ生 HTML、Gemini 入力、Gemini 生レスポンスも保存されます
+- `output/jexer/debug/*.usage-metadata.json` を見ると、classification / extraction / total の token 使用量と、候補ページごとの usage を確認できます
 - `candidate-pages.json` と `selection.json` を見ると、入口 URL からどの候補が集まり、どの URL が本抽出対象に選ばれたかを確認できます
+- `candidate-*.classification.json` には `page_type`, `schedule_kind`, `contains_schedule_rows`, `recommended_next_links`, `confidence` が入り、AI の分類結果を追えます
+- `failure.json` に `excluded_shared_schedule_urls` が出ている場合は、shared schedule URL を共通方針で除外した結果です
+- 方針としては「AI で一覧ページを見つけ、一覧配下の detail 候補は広めに回収して、明らかな除外対象だけ弾く」寄りです
+- Supabase に都内 JEXER 店舗をまとめて追加したい場合は `supabase/sql/insert_jexer_tokyo_locations.sql` を実行してください
+- 神奈川・埼玉・千葉の JEXER 系店舗をまとめて追加したい場合は `supabase/migrations/0003_add_gym_locations_location_type.sql` を先に適用し、その後 `supabase/sql/insert_jexer_kanagawa_saitama_chiba_locations.sql` を実行してください
+- 追加件数の目安は、神奈川県 7 店舗、埼玉県 4 店舗、千葉県 3 店舗です
 
 0件だったときの確認手順:
 
@@ -287,6 +319,7 @@ npm run extract:jexer -- --url=https://www.jexer.jp/mb/kameido/schedule/mon_10a.
 - `output/jexer/debug/*.gemini-input.txt` を見て、Gemini に渡した入力が想定どおりか確認します
 - `output/jexer/debug/*.gemini-response.json` と `*.gemini-response-text.txt` を見て、Gemini が 0 件を返したのか、返却自体が崩れているのかを切り分けます
 - `records: []` なら HTML 構造とプロンプトの噛み合いをまず疑い、レスポンス保存に失敗していれば API エラーやパース失敗を疑ってください
+- コスト確認では `*.summary.json` の `total_prompt_tokens / total_output_tokens / total_tokens` と、`debug/*.usage-metadata.json` の page ごとの usage を見比べると、どの店舗・どの候補判定で token が増えているか追いやすいです
 
 抽出結果サマリー:
 
@@ -313,6 +346,17 @@ npm run import:jexer -- --file=output/jexer/shinjuku-2026-04-13T12-00-00-000Z.js
 - `class_schedules` には `raw_program_name`、`canonical_program_name`、`duration_minutes`、`program_brand`、`category_primary`、`tags`、`needs_review`、`confidence`、`source_page_url`、`weekday`、`start_time`、`end_time`、`instructor_name` を保存します
 - 同じ `location_id + weekday + start_time + end_time + raw_program_name + source_page_url` の行があれば update、なければ insert します
 - まず確認だけしたい場合は `--dry-run` を付けてください
+- 神奈川・埼玉・千葉の JEXER 系店舗を先に `gym_locations` へ入れておくと、`location not found` を個別に潰す運用を減らせます
+
+JEXER 系店舗の追加方針:
+
+- `location_type` は `fitness_club / fitness_spa / light_gym / flat / sopra / bodymake_gym / fitness_studio` を想定しています
+- 今の `class_schedules` 抽出対象として優先しやすいのは、`fitness_spa` と `sopra`、必要に応じて `fitness_studio / bodymake_gym` です
+- 後回しでよいのは、通常クラス時刻表を持たないことが多い `light_gym` と `flat` です
+- 今回の一括追加 SQL で入る店舗は次のとおりです
+- 神奈川県: `JEXER 川崎`, `JEXER 横浜`, `JEXER 新川崎`, `JEXER 東神奈川`, `JEXER Light Gym アーバン保土ヶ谷店`, `JEXER BODY MAKE GYM モザイクモール港北店`, `JEXER Pilates Studio NEWoMan横浜店`
+- 埼玉県: `JEXER 大宮`, `JEXER 浦和`, `JEXER 戸田公園`, `JEXER Light Gym 大宮店`
+- 千葉県: `JEXER Light Gym シャポー市川店`, `JEXER Gym Flat イオンモール柏店`, `JEXER sopra シャポー船橋店`
 
 DB投入前の目安:
 

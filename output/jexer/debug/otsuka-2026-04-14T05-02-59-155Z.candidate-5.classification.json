@@ -1,0 +1,25 @@
+{
+  "url": "https://www.jexer.jp/mb/otsuka/index.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 3151,
+    "candidates_token_count": 92,
+    "total_token_count": 3243,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [],
+    "confidence": 0.9
+  }
+}

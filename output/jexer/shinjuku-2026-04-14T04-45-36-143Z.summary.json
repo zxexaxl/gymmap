@@ -1,0 +1,106 @@
+{
+  "total_records": 124,
+  "needs_review_count": 36,
+  "unresolved_count": 34,
+  "usage_metadata": {
+    "prompt_token_count": 51958,
+    "candidates_token_count": 18074,
+    "total_token_count": 70038,
+    "thoughts_token_count": 6,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 51958,
+  "total_output_tokens": 18074,
+  "total_tokens": 70038,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 88
+    },
+    {
+      "key": "Les Mills",
+      "count": 16
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 11
+    },
+    {
+      "key": "ZUMBA",
+      "count": 9
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 34
+    },
+    {
+      "key": "cardio",
+      "count": 31
+    },
+    {
+      "key": "dance",
+      "count": 23
+    },
+    {
+      "key": "mind_body",
+      "count": 14
+    },
+    {
+      "key": "strength",
+      "count": 8
+    },
+    {
+      "key": "conditioning",
+      "count": 7
+    },
+    {
+      "key": "martial_arts",
+      "count": 7
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ｱｸｱ",
+      "count": 21
+    },
+    {
+      "key": "AEROBICS",
+      "count": 12
+    },
+    {
+      "key": "ｽﾞﾝﾊﾞ",
+      "count": 9
+    },
+    {
+      "key": "ﾐｯﾄｼｪｲﾌﾟ",
+      "count": 6
+    },
+    {
+      "key": "ﾘﾄﾓｽ",
+      "count": 6
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ",
+      "count": 6
+    },
+    {
+      "key": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "count": 5
+    },
+    {
+      "key": "ｴｱﾛｳｫｰｸ",
+      "count": 4
+    },
+    {
+      "key": "ｽﾃｯﾌﾟ",
+      "count": 4
+    },
+    {
+      "key": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30",
+      "count": 4
+    }
+  ]
+}

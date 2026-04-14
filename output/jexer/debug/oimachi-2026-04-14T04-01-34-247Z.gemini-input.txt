@@ -1,0 +1,1370 @@
+Model ID: gemini-3.1-flash-lite-preview
+
+[System Prompt]
+You extract JEXER studio schedule rows from HTML. Return only JSON that matches the provided schema. Do not invent records that are not present in the HTML. Use 24-hour HH:MM format for start_time and end_time when possible. If instructor name is missing, set instructor_name to null. weekday should be english lowercase like monday, tuesday, wednesday, thursday, friday, saturday, sunday when inferable.
+
+[User Prompt]
+Location name: JEXER 大井町
+
+Source URL: https://www.jexer.jp/mb/oi/schedule/mon_10a.html, https://www.jexer.jp/mb/oi/schedule/mon_10b.html, https://www.jexer.jp/mb/oi/schedule/tue_10a.html, https://www.jexer.jp/mb/oi/schedule/tue_10b.html, https://www.jexer.jp/mb/oi/schedule/wed_10a.html, https://www.jexer.jp/mb/oi/schedule/wed_10b.html, https://www.jexer.jp/mb/oi/schedule/thu_10a.html, https://www.jexer.jp/mb/oi/schedule/thu_10b.html, https://www.jexer.jp/mb/oi/schedule/fri_10a.html, https://www.jexer.jp/mb/oi/schedule/fri_10b.html, https://www.jexer.jp/mb/oi/schedule/sat_10a.html, https://www.jexer.jp/mb/oi/schedule/sat_10b.html, https://www.jexer.jp/mb/oi/schedule/sun_10a.html, https://www.jexer.jp/mb/oi/schedule/sun_10b.html
+
+Extract only studio or lesson schedule rows from the following HTML.
+
+<!-- https://www.jexer.jp/mb/oi/schedule/mon_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">月曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60<br>
+担当:KEN<br>
+<br>
+
+<font color="#C2172C" size="2">11:45～12:30</font><br>
+ﾍﾞﾘｰﾀﾞﾝｽ45<br>
+担当:牧口(順)<br>
+<br>
+
+<font color="#C2172C" size="2">12:45～13:00</font><br>
+ﾎﾞｰﾙｴｸｻｻｲｽﾞ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">13:15～14:15</font><br>
+【ｵﾘｼﾞﾅﾙ】ｽﾛｰﾎﾞﾃﾞｨｼｪｲﾌﾟ<br>
+担当:中村(勝)<br><br>
+
+<font color="#C2172C" size="2">14:40～15:40</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:加藤(安)<br><br>
+
+<font color="#C2172C" size="2">16:05～16:50</font><br>
+ｽﾃｯﾌﾟﾗｲﾄ45<br>
+担当:竹縄(愛)<br><br>
+
+<font color="#C2172C" size="2">18:15～18:45</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ30<br>
+担当:真山(丈)<br><br>
+
+<font color="#C2172C" size="2">19:00～19:45</font><br>
+ｽﾃｯﾌﾟﾗｲﾄ45<br>
+担当:小川(朋)<br><br>
+
+<font color="#C2172C" size="2">20:00～21:00</font><br>
+わくわくｴｱﾛ(初中級)<br>
+担当:堀(慎)<br><br>
+
+<font color="#C2172C" size="2">21:15～22:00</font><br>
+RITMOS<br>
+担当:足立(孝)
+
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="tue_10a.html">火曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/mon_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">月曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ﾘﾗｯｸｽﾖｶﾞ<br>
+担当:中川(晴)<br><br>
+
+<font color="#C2172C" size="2">11:50～12:35</font><br>
+Balletone<br>
+担当:高田(ま)<br><br>
+
+<font color="#C2172C" size="2">13:00～13:45</font><br>
+ZUMBA<br>
+担当:ERIKA<br><br>
+
+<font color="#C2172C" size="2">14:05～14:25</font><br>
+全身ｻｰｷｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">14:40～15:10</font><br>
+ｴｱﾛｽﾀｰﾄ<br>
+佐藤(美)<br><br>
+
+<font color="#C2172C" size="2">15:25～15:55</font><br>
+ｸｱﾄﾛﾌｨｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+
+
+<font color="#C2172C" size="2">18:40～18:55</font><br>
+脚ｽｯｷﾘ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">19:10～19:55</font><br>
+ﾘﾗｯｸｽﾖｶﾞ45<br>
+担当:松本(裕)<br><br>
+
+<font color="#C2172C" size="2">20:10～21:00</font><br>
+ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ<br>
+担当:栗原(美)<br><br>
+
+<font color="#C2172C" size="2">21:15～22:00</font><br>
+BITS(ﾋﾞｯﾂ)<br>
+担当:井上(奈)
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="tue_10b.html">火曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/tue_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">火曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60<br>
+担当:佐々木(啓)<br><br>
+
+<font color="#C2172C" size="2">11:45～12:45</font><br>
+ﾀﾞｲｴｯﾄｴｱﾛ60<br>
+担当:佐藤(美)<br><br>
+
+<font color="#C2172C" size="2">13:00～14:00</font><br>
+太極拳ｵﾘｼﾞﾅﾙ<br>
+担当:木間塚(祐)<br><br>
+
+<font color="#C2172C" size="2">14:15～15:00</font><br>
+ﾘﾗｯｸｽﾖｶﾞ45<br>
+担当:片倉(由)<br><br>
+
+<font color="#C2172C" size="2">15:15～15:45</font><br>
+ｴｱﾛｽﾀｰﾄ<br>
+担当:加藤(安)<br><br>
+
+<font color="#C2172C" size="2">15:55～16:55</font><br>
+ﾘﾌﾚｯｼｭ体操60<br>
+担当:加藤(安)<br><br>
+
+<font color="#C2172C" size="2">18:30～19:15</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45<br>
+担当:羽柴(巨)<br><br>
+
+<font color="#C2172C" size="2">19:30～20:15</font><br>
+ｴｱﾛﾋﾞｸｽﾗｲﾄ45<br>
+担当:春田(正)<br><br>
+
+<font color="#C2172C" size="2">20:30～21:15</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ45<br>
+担当:春田(正)<br><br>
+
+<font color="#C2172C" size="2">21:30～22:15</font><br>
+ｺｱﾋﾟﾗﾃｨｽ45<br>
+担当:畠山(和)</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="wed_10a.html">水曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/tue_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">火曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:45～11:30</font><br>
+ﾋﾟﾗﾃｨｽﾌﾛｰ<br>
+担当:今井(し)<br><br>
+
+<font color="#C2172C" size="2">11:45～12:45</font><br>
+ﾌﾗﾀﾞﾝｽ<br>
+担当:福島(真)<br><br>
+
+<font color="#C2172C" size="2">13:00～13:15</font><br>
+お腹ｽｯｷﾘ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">13:30～13:45</font><br>
+ｽﾄﾚｯﾁ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">14:05～14:35</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30<br>
+担当:坂下(正)<br>
+<br>
+
+<font color="#C2172C" size="2">14:50～15:10</font><br>
+全身ｻｰｷｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">15:25～16:10</font><br>
+BITS(ﾋﾞｯﾂ)<br>
+担当:大窪(亜)<br><br>
+
+<font color="#C2172C" size="2">18:50～19:50</font><br>
+自力整体<br>
+担当:竹田(真)<br><br>
+
+<font color="#C2172C" size="2">20:05～20:20</font><br>
+お腹ｽｯｷﾘ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">20:30～21:00</font><br>
+BEAT-EX30<br>
+担当:坂井(紀)<br><br>
+
+<font color="#C2172C" size="2">21:10～22:10</font><br>
+ｽﾄﾘｰﾄﾀﾞﾝｽ(HIPHOP系)<br>
+担当:坂井(紀)</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="wed_10b.html">水曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/wed_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">水曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ｴｱﾛﾋﾞｸｽﾐﾄﾞﾙ60<br>
+担当:遠藤(浩)<br>
+<br>
+
+<font color="#C2172C" size="2">11:45～12:45</font><br>
+ﾊﾟﾜｰﾖｶﾞ60<br>
+担当:秋山(美)<br>
+<br>
+
+<font color="#C2172C" size="2">13:05～13:50</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45<br>
+担当:真山(丈)<br>
+<br>
+
+<font color="#C2172C" size="2">14:15～15:00</font><br>
+ｽﾃｯﾌﾟｺﾝﾎﾞⅠ45<br>
+担当:山口(達)<br>
+<br>
+
+<font color="#C2172C" size="2">15:15～16:15</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:渡邊(英)<br>
+<br>
+
+<font color="#C2172C" size="2">18:15～19:15</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60<br>
+担当:KEN<br>
+<br>
+
+<font color="#C2172C" size="2">19:30～20:15</font><br>
+ｽﾃｯﾌﾟﾗｲﾄ45<br>
+担当:KEN<br>
+<br>
+
+<font color="#C2172C" size="2">20:30～21:00</font><br>
+ｸｱﾄﾛﾌｨｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+
+<font color="#C2172C" size="2">21:15～22:15</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ60<br>
+担当:後藤(宏)<br>
+<br>
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="thu_10a.html">木曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/wed_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">水曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+
+<font color="#C2172C" size="2">10:45～11:30</font><br>
+ﾍﾟﾙﾋﾞｯｸｽﾄﾚｯﾁ<br>
+担当:片倉(由)<br><br>
+
+<font color="#C2172C" size="2">11:55～12:40</font><br>
+ｼﾞｬｽﾞﾀﾞﾝｽ45<br>
+担当:古川(智)<br><br>
+
+<font color="#C2172C" size="2">13:00～13:45</font><br>
+ﾀﾞﾝｻｰｽﾞｽﾄﾚｯﾁ45<br>
+担当:古川(智)<br><br>
+
+<font color="#C2172C" size="2">14:00～14:45</font><br>
+ｺﾘｵｽﾊﾟｲﾗﾙ<br>
+担当:栗原(美)<br><br>
+
+<font color="#C2172C" size="2">15:15～16:00</font><br>
+ｴｱﾛﾋﾞｸｽﾗｲﾄ45<br>
+担当:山口(達)<br><br>
+
+<font color="#C2172C" size="2">18:25～18:45</font><br>
+全身ｻｰｷｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">19:00～19:45</font><br>
+骨盤引き締めﾋﾟﾗﾃｨｽ45<br>
+担当:河内(美)<br><br>
+
+<font color="#C2172C" size="2">20:00～20:45</font><br>
+RITOMOS<br>
+担当:笹井(ひ)<br>
+<br>
+
+<font color="#C2172C" size="2">21:00～21:45</font><br>
+ﾌﾚｷｼﾌﾞﾙｽﾄﾚﾝｸﾞｽ45<br>
+担当:KEN
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="thu_10b.html">木曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/thu_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">木曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:15</font><br>
+ﾗﾃﾝﾀﾞﾝｽ45<br>
+担当:高見(裕)<br>
+<br>
+
+<font color="#C2172C" size="2">11:30～12:30</font><br>
+ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60<br>
+担当:高見(裕)<br>
+<br>
+
+<font color="#C2172C" size="2">12:45～13:45</font><br>
+24式太極拳<br>
+担当:山路(順)<br>
+<br>
+
+
+
+<font color="#C2172C" size="2">14:00～15:00</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:廣瀬(正)<br>
+<br>
+
+<font color="#C2172C" size="2">15:15～16:00</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45<br>
+担当:後藤(宏)<br>
+<br>
+
+<font color="#C2172C" size="2">16:15～16:30</font><br>
+ﾎﾞｰﾙｴｸｻｻｲｽﾞ<br>
+担当:ｽﾀｯﾌ<br>
+<br>
+
+<font color="#C2172C" size="2">18:45～19:00</font><br>
+お腹ｽｯｷﾘ<br>
+担当:ｽﾀｯﾌ<br>
+<br>
+
+<font color="#C2172C" size="2">19:15～20:00</font><br>
+ｽﾃｯﾌﾟｺﾝﾎﾞⅠ45<br>
+担当:中川(正)<br>
+<br>
+
+<font color="#C2172C" size="2">20:15～21:15</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60<br>
+担当:中川(正)<br>
+<br>
+
+<font color="#C2172C" size="2">21:30～22:15</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45<br>
+担当:後藤(宏)</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="fri_10a.html">金曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/thu_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">木曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ﾌﾗﾀﾞﾝｽ<br>
+担当:宮澤(美)<br>
+<br>
+
+<font color="#C2172C" size="2">11:45～12:30</font><br>
+BITS<br>
+担当:佐藤(美)<br>
+<br>
+
+<font color="#C2172C" size="2">12:50～13:35</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ45<br>
+担当:小林(竜)<br>
+<br>
+
+
+<font color="#C2172C" size="2">14:00～14:45</font><br>
+ｺﾘｵｽﾊﾟｲﾗﾙ<br>
+担当:片山(千)<br>
+<br>
+
+<font color="#C2172C" size="2">15:00～15:15</font><br>
+上半身ｽｯｷﾘ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">15:25～16:10</font><br>
+ﾋﾟﾗﾃｨｽﾌﾛｰ<br>
+担当:沼田(尚)<br>
+<br>
+
+
+<font color="#C2172C" size="2">18:45～19:45</font><br>
+ﾊﾟﾜｰﾖｶﾞ60<br>
+担当:秋山(美)<br>
+<br>
+
+<font color="#C2172C" size="2">20:05～20:35</font><br>
+ﾊﾞﾚｴｽﾄﾚｯﾁ30<br>
+担当:石井(敦)<br>
+<br>
+
+<font color="#C2172C" size="2">20:45～21:15</font><br>
+ﾊﾞﾚｴ30<br>
+担当:石井(敦)<br>
+<br>
+
+<font color="#C2172C" size="2">21:30～22:15</font><br>
+ﾘﾗｯｸｽﾖｶﾞ45<br>
+担当:中川(晴)</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="fri_10b.html">金曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/fri_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">金曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:15</font><br>
+RITMOS<br>
+担当:横田(直)<br><br>
+
+<font color="#C2172C" size="2">11:30～12:15</font><br>
+ｴｱﾛﾋﾞｸｽﾐﾄﾞﾙ45<br>
+担当:横田(直)<br><br>
+
+<font color="#C2172C" size="2">12:30～13:00</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ30<br>
+担当:大塚(弦)<br><br>
+
+<font color="#C2172C" size="2">13:15～14:15</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:yoriko<br><br>
+
+<font color="#C2172C" size="2">14:30～15:15</font><br>
+ｴｱﾛﾋﾞｸｽﾗｲﾄ45<br>
+担当:春田(正)<br><br>
+
+<font color="#C2172C" size="2">15:30～16:00</font><br>
+ｽﾃｯﾌﾟｽﾀｰﾄ<br>
+担当:春田(正)<br><br>
+
+<font color="#C2172C" size="2">18:20～18:40</font><br>
+全身ｻｰｷｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">18:55～19:40</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ<br>
+担当:佐藤(美)<br><br>
+
+<font color="#C2172C" size="2">20:00～20:45</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45<br>
+担当:大塚(弦)<br><br>
+
+<font color="#C2172C" size="2">21:00～22:00</font><br>
+ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60<br>
+担当:石河(知)
+
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="sat_10a.html">土曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/fri_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">金曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:40～11:25</font><br>
+adidas yoga<br>
+担当：井上(奈)<br><br>
+
+<font color="#C2172C" size="2">11:40～12:25</font><br>
+骨盤引締め<br>ﾋﾟﾗﾃｨｽ45<br>
+担当:荒金(弘)<br><br>
+
+<font color="#C2172C" size="2">12:40～13:10</font><br>
+ﾊﾞﾚｴｽﾄﾚｯﾁ30<br>
+担当:能見(章)<br><br>
+
+<font color="#C2172C" size="2">13:25～14:10</font><br>
+ZUMBA<br>
+担当:能見(章)<br><br>
+
+
+<font color="#C2172C" size="2">14:30～15:30</font><br>
+自力整体<br>
+担当:竹田(真)<br><br>
+
+<font color="#C2172C" size="2">18:15～19:00</font><br>
+BITS(ﾋﾞｯﾂ)<br>
+担当:安(里)<br><br>
+
+<font color="#C2172C" size="2">19:10～20:10</font><br>
+ﾌﾗﾀﾞﾝｽ<br>
+担当:大野(あ)<br><br>
+
+<font color="#C2172C" size="2">20:25～20:55</font><br>
+ｽﾄﾘｰﾄﾀﾞﾝｽｽﾀｰﾄ(ﾊｳｽ系)<br>
+担当:SUGURU<br><br>
+
+<font color="#C2172C" size="2">21:05～22:05</font><br>
+ｽﾄﾘｰﾄﾀﾞﾝｽ(ﾊｳｽ系)<br>
+担当:SUGURU</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="sat_10b.html">土曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/sat_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">土曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:15～11:15</font><br>
+ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60<br>
+担当:高橋(躍)<br><br>
+
+<font color="#C2172C" size="2">11:45～12:30</font><br>
+[ｵﾘｼﾞﾅﾙ]ｺｱ･ｼｪｲｸ<br>
+担当:片山(千)<br><br>
+
+<font color="#C2172C" size="2">12:45～13:45</font><br>
+ｴｱﾛﾋﾞｸｽﾗｲﾄ60<br>
+担当:片山(千)<br><br>
+
+<font color="#C2172C" size="2">14:00～14:45</font><br>
+ZUMBA<br>
+担当:KIYOMI<br><br>
+
+<font color="#C2172C" size="2">15:05～16:05</font><br>
+けいらくﾋﾞｸｽ(R)60<br>
+担当:中村(勝)<br><br>
+
+<font color="#C2172C" size="2">16:25～17:10</font><br>
+ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45<br>
+担当:大塚(弦)<br><br>
+
+<font color="#C2172C" size="2">17:25～18:10</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45<br>
+担当:羽柴(巨)<br><br>
+
+<font color="#C2172C" size="2">18:30～18:45</font><br>
+ｽﾄﾚｯﾁ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+<font color="#C2172C" size="2">19:05～20:05</font><br>
+ﾊﾟﾜｰﾖｶﾞ60<br>
+担当:福田(美)
+
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="sun_10a.html">日曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/sat_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">土曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+24式太極拳<br>
+担当:大谷(な)<br><br>
+
+<font color="#C2172C" size="2">11:55～１2:25</font><br>
+ｸｱﾄﾛﾌｨｯﾄ<br>
+担当:ｽﾀｯﾌ<br><br>
+
+
+<font color="#C2172C" size="2">12:50～13:50</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:廣瀬(正)<br><br>
+
+<font color="#C2172C" size="2">14:20～15:05</font><br>
+BITS(ﾋﾞｯﾂ)<br>
+担当:坂下(正)<br><br>
+
+<font color="#C2172C" size="2">15:20～16:05</font><br>
+ﾀﾞﾝｻｰｽﾞｽﾄﾚｯﾁ45<br>
+担当:田畑(幸)<br><br>
+
+<font color="#C2172C" size="2">16:15～17:00</font><br>
+ｼﾞｬｽﾞﾀﾞﾝｽ45<br>
+担当:田畑(幸)<br><br>
+
+<font color="#C2172C" size="2">17:15～18:00</font><br>
+ﾋﾟﾗﾃｨｽﾌﾛｰ<br>
+担当:坂本(美)<br><br>
+
+<font color="#C2172C" size="2">18:15～19:00</font><br>
+ﾘﾄﾓｽ<br>
+担当:MAYU
+
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1"><font color="#C2172C">&gt;&gt;</font><a href="sun_10b.html">日曜日 同ｽﾀｼﾞｵへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/sun_10a.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">日曜日 ｽﾀｼﾞｵAｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:15～11:15</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60<br>
+担当:千村(由)<br>
+<br>
+
+<font color="#C2172C" size="2">11:35～12:35</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:山口(隆)<br>
+<br>
+
+<font color="#C2172C" size="2">12:50～13:35</font><br>
+ﾀﾞｲｴｯﾄｴｱﾛ45<br>
+担当:高辻(一)<br>
+<br>
+
+<font color="#C2172C" size="2">13:50～14:50</font><br>
+ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ60<br>
+担当:後藤(宏)<br>
+<br>
+
+<font color="#C2172C" size="2">15:05～15:50</font><br>
+ｴｱﾛﾋﾞｸｽﾗｲﾄ45<br>
+担当:佐藤(美)<br>
+<br>
+
+<font color="#C2172C" size="2">16:05～16:55</font><br>
+ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ<br>
+担当:高田(ま)<br>
+<br>
+
+<font color="#C2172C" size="2">17:20～18:20</font><br>
+ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60<br>
+担当:山口(達)<br>
+<br>
+
+
+<font color="#C2172C" size="2">18:35～19:20</font><br>
+ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45<br>
+担当:坂下(正)</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1">
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>
+
+
+<!-- https://www.jexer.jp/mb/oi/schedule/sun_10b.html -->
+<html>
+<head>
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JEXER mobile site</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNGJ4F2');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body bgcolor="#FFFFFF" text="#333333" link="#0000FF" vlink="#551A8B">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNGJ4F2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--header-->
+<a name="top"></a>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" bgcolor="#C2172C"><img src="../images/logo.gif" width="202" height="45"></td>
+</tr>
+</table>
+<div><img src="../../images/spacer.gif" height="15"></div>
+<!--/header-->
+<!--main-->
+<div style="padding:5px;"><font color="#C2172C" size="2"><img src="../../images/icon_time.gif" width="18" height="14">日曜日 ｽﾀｼﾞｵBｽｹｼﾞｭｰﾙ</font></div>
+<hr color="#C2172C" size="1">
+<div style="padding:5px;"><font size="3">
+<br>
+
+<font color="#C2172C" size="2">10:30～11:30</font><br>
+ﾍﾞﾘｰﾀﾞﾝｽ<br>
+担当:TOMOMI<br>
+<br>
+
+<font color="#C2172C" size="2">11:40～12:40</font><br>
+牧阿佐美ﾊﾞﾚｴ(初級)<br>
+<br>
+
+<font color="#C2172C" size="2">12:45～13:45</font><br>
+牧阿佐美ﾊﾞﾚｴ(中級)<br>
+<br>
+
+<font color="#C2172C" size="2">14:00～14:30</font><br>
+ｴｱﾛｽﾀｰﾄ<br>
+担当:高辻(一)<br>
+<br>
+
+<font color="#C2172C" size="2">15:00～15:45</font><br>
+ﾊﾞﾚﾄﾝ<br>
+担当:高田(ま)<br>
+<br>
+
+<font color="#C2172C" size="2">16:00～16:45</font><br>
+adidas yoga<br>
+担当:井上(奈)<br>
+<br>
+
+<font color="#C2172C" size="2">17:00～17:20</font><br>
+全身ｻｰｷｯﾄ<br>
+担当:ｽﾀｯﾌ<br>
+<br>
+
+<font color="#C2172C" size="2">17:30～17:45</font><br>
+ｽﾄﾚｯﾁ<br>
+担当:ｽﾀｯﾌ<br>
+<br>
+
+
+<font color="#C2172C" size="2">18:00～19:00</font><br>
+ﾘﾗｯｸｽﾖｶﾞ60<br>
+担当:篠崎(由)
+
+
+</font></div>
+<!--/main-->
+<!--navi-->
+<br>
+<div align="right" style="padding:5px;"><font size="1">
+<font color="#C2172C">&lt;&lt;</font><a href="fitness.html">ｽﾀｼﾞｵｽｹｼﾞｭｰﾙTOPへ</a><br>
+<font color="#C2172C">&lt;&lt;</font><a href="index.html">大井町店ｽｹｼﾞｭｰﾙTOPへ</a><br>
+<br>
+<font color="#C2172C">&lt;&lt;</font><a href="../index.html">大井町店TOPへ</a></font></div>
+<br>
+<!--/navi-->
+<!--footer-->
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"><font size="1"><a href="../../index.html">JEXER TOPへ</a></font></div>
+<hr color="#CCCCCC" size="1">
+<div style="padding:5px;"> <font size="1">(c)JEXER Co.,LTD.ALL Rights Reserved.</font></div>
+<!--/footer-->
+</body>
+</html>

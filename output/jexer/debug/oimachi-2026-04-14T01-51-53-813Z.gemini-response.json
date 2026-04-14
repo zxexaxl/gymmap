@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"13:10\",\n      \"end_time\": \"13:55\",\n      \"raw_program_name\": \"HOT YOGA　ﾋﾞｷﾞﾅｰ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"菅野有希\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"20:25\",\n      \"end_time\": \"20:55\",\n      \"raw_program_name\": \"GRIT\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"早川峻也\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"12:55\",\n      \"end_time\": \"13:40\",\n      \"raw_program_name\": \"HOTYOGAﾋﾞｷﾞﾅｰ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"菅野有希\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"18:30\",\n      \"end_time\": \"19:30\",\n      \"raw_program_name\": \"美軸ﾗｲﾝｽﾄﾚｯﾁ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"TOMOMI\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"21:15\",\n      \"end_time\": \"22:00\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"菅田郁美\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"17:10\",\n      \"end_time\": \"17:40\",\n      \"raw_program_name\": \"GRIT\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index2.html\",\n      \"instructor_name\": \"早川峻也\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"thursday\",\n      \"start_time\": \"21:10\",\n      \"end_time\": \"21:55\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/instructor/index6.html\",\n      \"instructor_name\": null\n    }\n  ]\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7xfowlR3mUFFQl4BSkqVO3zdvrP+hxv+bjGbuUuRSKHWKs5BK5iPHek5Z4lRb"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3316,
+    "candidatesTokenCount": 840,
+    "totalTokenCount": 4156,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3316
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "3J3daeOwJ4Kyvr0PoezNMQ"
+}

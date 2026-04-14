@@ -1,0 +1,106 @@
+{
+  "total_records": 227,
+  "needs_review_count": 126,
+  "unresolved_count": 96,
+  "usage_metadata": {
+    "prompt_token_count": 91987,
+    "candidates_token_count": 33164,
+    "total_token_count": 125153,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 91987,
+  "total_output_tokens": 33164,
+  "total_tokens": 125153,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 199
+    },
+    {
+      "key": "Les Mills",
+      "count": 19
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 4
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 96
+    },
+    {
+      "key": "cardio",
+      "count": 52
+    },
+    {
+      "key": "mind_body",
+      "count": 44
+    },
+    {
+      "key": "dance",
+      "count": 19
+    },
+    {
+      "key": "strength",
+      "count": 9
+    },
+    {
+      "key": "martial_arts",
+      "count": 5
+    },
+    {
+      "key": "conditioning",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ｱｸｱ45",
+      "count": 12
+    },
+    {
+      "key": "ﾋﾟﾗﾃｨｽﾌﾛｰ",
+      "count": 11
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ60",
+      "count": 9
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽﾗｲﾄ45",
+      "count": 8
+    },
+    {
+      "key": "ｺﾘｵｽﾊﾟｲﾗﾙ",
+      "count": 7
+    },
+    {
+      "key": "ｽﾃｯﾌﾟﾗｲﾄ45",
+      "count": 7
+    },
+    {
+      "key": "ｽﾋﾟﾆﾝｸﾞ45",
+      "count": 6
+    },
+    {
+      "key": "ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45",
+      "count": 6
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞI45",
+      "count": 5
+    },
+    {
+      "key": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "count": 5
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/instructor/index2.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "mixed",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+      "https://www.jexer.jp/mb/ueno/index.html"
+    ],
+    "confidence": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "discovered_from": null,
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 2995,
+    "candidates_token_count": 86,
+    "total_token_count": 3081,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [],
+    "confidence": 1
+  }
+}

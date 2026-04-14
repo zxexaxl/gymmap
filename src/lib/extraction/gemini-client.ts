@@ -1,6 +1,15 @@
 const defaultGeminiModelId = "gemini-3.1-flash-lite-preview";
 const geminiApiBaseUrl = "https://generativelanguage.googleapis.com/v1beta/models";
 
+export type GeminiUsageMetadata = {
+  prompt_token_count: number | null;
+  candidates_token_count: number | null;
+  total_token_count: number | null;
+  thoughts_token_count?: number | null;
+  cached_content_token_count?: number | null;
+  model_id?: string | null;
+};
+
 type GeminiResponse = {
   candidates?: Array<{
     content?: {
@@ -9,6 +18,13 @@ type GeminiResponse = {
       }>;
     };
   }>;
+  usageMetadata?: {
+    promptTokenCount?: number;
+    candidatesTokenCount?: number;
+    totalTokenCount?: number;
+    thoughtsTokenCount?: number;
+    cachedContentTokenCount?: number;
+  };
 };
 
 export class GeminiStructuredResponseError extends Error {
@@ -27,10 +43,26 @@ export type GeminiStructuredJsonResult<T> = {
   data: T;
   rawResponseJson: string;
   rawResponseText: string;
+  usageMetadata: GeminiUsageMetadata | null;
 };
 
 export function getGeminiModelId() {
   return process.env.GEMINI_MODEL_ID?.trim() || defaultGeminiModelId;
+}
+
+function normalizeGeminiUsageMetadata(rawUsageMetadata: GeminiResponse["usageMetadata"], modelId: string): GeminiUsageMetadata | null {
+  if (!rawUsageMetadata) {
+    return null;
+  }
+
+  return {
+    prompt_token_count: rawUsageMetadata.promptTokenCount ?? null,
+    candidates_token_count: rawUsageMetadata.candidatesTokenCount ?? null,
+    total_token_count: rawUsageMetadata.totalTokenCount ?? null,
+    thoughts_token_count: rawUsageMetadata.thoughtsTokenCount ?? null,
+    cached_content_token_count: rawUsageMetadata.cachedContentTokenCount ?? null,
+    model_id: modelId,
+  };
 }
 
 function getGeminiApiKey() {
@@ -128,6 +160,7 @@ export async function generateStructuredJsonFromGeminiWithDebug<T>({
       data: JSON.parse(text) as T,
       rawResponseJson,
       rawResponseText: text,
+      usageMetadata: normalizeGeminiUsageMetadata(json.usageMetadata, modelId),
     };
   } catch {
     throw new GeminiStructuredResponseError("Gemini structured response could not be parsed as JSON.", {

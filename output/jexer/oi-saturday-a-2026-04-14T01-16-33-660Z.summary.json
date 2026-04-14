@@ -1,0 +1,91 @@
+{
+  "total_records": 17,
+  "needs_review_count": 5,
+  "unresolved_count": 1,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 12
+    },
+    {
+      "key": "Les Mills",
+      "count": 4
+    },
+    {
+      "key": "ZUMBA",
+      "count": 1
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "cardio",
+      "count": 8
+    },
+    {
+      "key": "mind_body",
+      "count": 3
+    },
+    {
+      "key": "strength",
+      "count": 2
+    },
+    {
+      "key": "conditioning",
+      "count": 1
+    },
+    {
+      "key": "dance",
+      "count": 1
+    },
+    {
+      "key": "martial_arts",
+      "count": 1
+    },
+    {
+      "key": "null",
+      "count": 1
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45",
+      "count": 2
+    },
+    {
+      "key": "[ｵﾘｼﾞﾅﾙ]ｺｱ･ｼｪｲｸ",
+      "count": 1
+    },
+    {
+      "key": "ZUMBA",
+      "count": 1
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60",
+      "count": 1
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60",
+      "count": 1
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽﾗｲﾄ45",
+      "count": 1
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽﾗｲﾄ60",
+      "count": 1
+    },
+    {
+      "key": "けいらくﾋﾞｸｽ(R)60",
+      "count": 1
+    },
+    {
+      "key": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "count": 1
+    },
+    {
+      "key": "ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [],
+    "confidence": 0.9
+  }
+}

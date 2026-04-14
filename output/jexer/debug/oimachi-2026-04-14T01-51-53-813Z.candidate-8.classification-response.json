@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"mixed\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/oi/index.html\"\n  ],\n  \"confidence\": 0.95\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7wQWEp533BK/VKY47M9j2mn/ya60oae/Un9T3OqdpcarFQ4zOZDh7SqEzBknH"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2079,
+    "candidatesTokenCount": 114,
+    "totalTokenCount": 2193,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2079
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "y53dafeSAcHV1e8P2vKy2Qg"
+}

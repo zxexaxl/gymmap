@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"ignore\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/index.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7wRc2BsBXfXf0QtC6302YzSdhRG0zK6jiKuOPiTY2FtkMh4IERIKQ4oZAzBfo"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1017,
+    "candidatesTokenCount": 88,
+    "totalTokenCount": 1105,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1017
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "x53daY07p46-vQ_D7OFA"
+}

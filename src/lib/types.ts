@@ -22,6 +22,7 @@ export type GymLocation = {
   brand_id: string;
   name: string;
   slug: string;
+  location_type?: string | null;
   postal_code: string | null;
   prefecture: string | null;
   city: string | null;

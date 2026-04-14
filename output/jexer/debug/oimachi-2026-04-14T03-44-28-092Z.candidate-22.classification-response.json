@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_day_detail\",\n  \"schedule_kind\": \"aqua\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/oi/schedule/fri_10p.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/aqua.html\",\n    \"https://www.jexer.jp/mb/oi/schedule/index.html\"\n  ],\n  \"confidence\": 1.0\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7VlseKZNSd2HHSSIBb+2RCmF2IOsb0q40mSz6usOXfksTvnNICx/lPuQPx1e+"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1277,
+    "candidatesTokenCount": 144,
+    "totalTokenCount": 1421,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1277
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "Trjdad2rK-eh1e8Pve-tmQ0"
+}

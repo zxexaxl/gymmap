@@ -1,0 +1,25 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/whatsnew/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/ueno/index.html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 973,
+    "candidates_token_count": 131,
+    "total_token_count": 1104,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [],
+    "confidence": 0.9
+  }
+}

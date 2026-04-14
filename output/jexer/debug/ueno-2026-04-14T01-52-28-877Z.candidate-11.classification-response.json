@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/ueno/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/ueno/index.html\"\n  ],\n  \"confidence\": 0.95\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7JE5YQUnyCVJ12kij2eaFrKBbQ+fDY2HMDdxbVCtmuIavPJGZz0iTvySvHorb"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 965,
+    "candidatesTokenCount": 116,
+    "totalTokenCount": 1081,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 965
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "9p3dafjzFtf31e8P1K_ogAg"
+}

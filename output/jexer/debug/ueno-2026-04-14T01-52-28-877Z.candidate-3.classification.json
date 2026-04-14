@@ -1,0 +1,23 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/instructor/weekly.html",
+  "discovered_from": "https://www.jexer.jp/mb/ueno/",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/ueno/instructor/index.html",
+      "https://www.jexer.jp/mb/ueno/instructor/index1.html",
+      "https://www.jexer.jp/mb/ueno/instructor/index2.html",
+      "https://www.jexer.jp/mb/ueno/instructor/index4.html",
+      "https://www.jexer.jp/mb/ueno/instructor/index5.html"
+    ],
+    "confidence": 0.95
+  }
+}

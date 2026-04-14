@@ -1,0 +1,28 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1541,
+    "candidates_token_count": 117,
+    "total_token_count": 1658,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "schedule_day_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "https://www.jexer.jp/mb/oi/schedule/index.html"
+    ],
+    "confidence": 1
+  }
+}

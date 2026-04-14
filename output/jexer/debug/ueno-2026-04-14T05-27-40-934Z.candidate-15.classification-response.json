@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/ueno/schedule/thu_10b.html\",\n    \"https://www.jexer.jp/mb/ueno/schedule/fitness.html\",\n    \"https://www.jexer.jp/mb/ueno/schedule/index.html\",\n    \"https://www.jexer.jp/mb/ueno/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1894,
+    "candidatesTokenCount": 167,
+    "totalTokenCount": 2061,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1894
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "X9DdaaTqIKytvr0Pn8f0oA8"
+}

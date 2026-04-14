@@ -1,0 +1,106 @@
+{
+  "total_records": 162,
+  "needs_review_count": 97,
+  "unresolved_count": 59,
+  "usage_metadata": {
+    "prompt_token_count": 70509,
+    "candidates_token_count": 24143,
+    "total_token_count": 94652,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 4195,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 70509,
+  "total_output_tokens": 24143,
+  "total_tokens": 94652,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 142
+    },
+    {
+      "key": "Les Mills",
+      "count": 14
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 3
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 59
+    },
+    {
+      "key": "cardio",
+      "count": 43
+    },
+    {
+      "key": "mind_body",
+      "count": 31
+    },
+    {
+      "key": "dance",
+      "count": 13
+    },
+    {
+      "key": "conditioning",
+      "count": 7
+    },
+    {
+      "key": "strength",
+      "count": 7
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ60",
+      "count": 7
+    },
+    {
+      "key": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45",
+      "count": 5
+    },
+    {
+      "key": "全身ｻｰｷｯﾄ",
+      "count": 5
+    },
+    {
+      "key": "BITS(ﾋﾞｯﾂ)",
+      "count": 4
+    },
+    {
+      "key": "ｱｸｱ45",
+      "count": 4
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽﾗｲﾄ45",
+      "count": 4
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    },
+    {
+      "key": "ｱｸｱ30",
+      "count": 3
+    },
+    {
+      "key": "ｴｱﾛｽﾀｰﾄ",
+      "count": 3
+    },
+    {
+      "key": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60",
+      "count": 3
+    }
+  ]
+}

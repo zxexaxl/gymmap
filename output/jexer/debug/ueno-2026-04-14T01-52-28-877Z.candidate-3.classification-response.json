@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"ignore\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_urls\": [\n    \"https://www.jexer.jp/mb/ueno/instructor/index.html\",\n    \"https://www.jexer.jp/mb/ueno/instructor/index1.html\",\n    \"https://www.jexer.jp/mb/ueno/instructor/index2.html\",\n    \"https://www.jexer.jp/mb/ueno/instructor/index4.html\",\n    \"https://www.jexer.jp/mb/ueno/instructor/index5.html\"\n  ],\n  \"confidence\": 0.95\n}",
+            "thoughtSignature": "EjQKMgG+Pvb7zZKvtQp30TlYP4Nt50oIkUGLGN9YQMKIs2lm87hrxF1liiZUZMRiPFew+6Dc"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 807,
+    "candidatesTokenCount": 192,
+    "totalTokenCount": 999,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 807
+      }
+    ]
+  },
+  "modelVersion": "gemini-3.1-flash-lite-preview",
+  "responseId": "453dacrrMfi3vr0P0vO-MA"
+}

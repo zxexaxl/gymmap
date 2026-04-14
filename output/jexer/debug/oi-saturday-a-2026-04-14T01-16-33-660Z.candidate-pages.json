@@ -1,0 +1,121 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+  "branch_base_url": "https://www.jexer.jp/mb/oi/",
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "discovered_from": null,
+      "depth": 0,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": true
+      },
+      "classification": {
+        "page_type": "schedule_day_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+          "https://www.jexer.jp/mb/oi/schedule/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_day_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+          "https://www.jexer.jp/mb/oi/schedule/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+          "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+          "https://www.jexer.jp/mb/oi/schedule/sun_10b.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [
+          "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+          "https://www.jexer.jp/mb/oi/schedule/aqua.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "depth": 1,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_urls": [],
+        "confidence": 0.9
+      }
+    }
+  ]
+}

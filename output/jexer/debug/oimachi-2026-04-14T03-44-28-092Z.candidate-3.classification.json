@@ -1,0 +1,33 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1329,
+    "candidates_token_count": 259,
+    "total_token_count": 1588,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-3.1-flash-lite-preview"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "aqua",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/tue_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/wed_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/thu_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "https://www.jexer.jp/mb/oi/schedule/sun_10p.html"
+    ],
+    "confidence": 1
+  }
+}

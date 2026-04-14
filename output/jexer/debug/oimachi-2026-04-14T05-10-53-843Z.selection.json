@@ -1,0 +1,185 @@
+{
+  "selection_reason": "schedule_detail pages with schedule rows, ordered by schedule_kind priority and confidence",
+  "selected_urls": [
+    "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+    "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/tue_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/wed_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/thu_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+    "https://www.jexer.jp/mb/oi/schedule/sun_10p.html"
+  ],
+  "selected_count": 21,
+  "selected_pages": [
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/wed_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/wed_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/wed_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10p.html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "confidence": 1,
+      "reason": "selected because AI marked this page as schedule_detail with schedule rows"
+    }
+  ],
+  "excluded_shared_schedule_urls": [],
+  "usage_metadata": {
+    "prompt_token_count": 40064,
+    "candidates_token_count": 4237,
+    "total_token_count": 44301,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 4195,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

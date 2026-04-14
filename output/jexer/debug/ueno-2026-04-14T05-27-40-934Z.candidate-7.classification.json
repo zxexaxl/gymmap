@@ -1,0 +1,32 @@
+{
+  "url": "https://www.jexer.jp/mb/ueno/schedule/aqua.html",
+  "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ueno/schedule/",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1355,
+    "candidates_token_count": 238,
+    "total_token_count": 1593,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/ueno/schedule/mon_10p.html",
+      "https://www.jexer.jp/mb/ueno/schedule/tue_10p.html",
+      "https://www.jexer.jp/mb/ueno/schedule/wed_10p.html",
+      "https://www.jexer.jp/mb/ueno/schedule/thu_10p.html",
+      "https://www.jexer.jp/mb/ueno/schedule/sat_10p.html",
+      "https://www.jexer.jp/mb/ueno/schedule/sun_10p.html"
+    ],
+    "confidence": 1
+  }
+}

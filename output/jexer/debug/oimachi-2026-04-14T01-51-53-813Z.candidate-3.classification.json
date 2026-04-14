@@ -1,0 +1,25 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/instructor/weekly.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/instructor/index.html",
+      "https://www.jexer.jp/mb/oi/instructor/index1.html",
+      "https://www.jexer.jp/mb/oi/instructor/index2.html",
+      "https://www.jexer.jp/mb/oi/instructor/index3.html",
+      "https://www.jexer.jp/mb/oi/instructor/index4.html",
+      "https://www.jexer.jp/mb/oi/instructor/index5.html",
+      "https://www.jexer.jp/mb/oi/instructor/index6.html"
+    ],
+    "confidence": 0.9
+  }
+}

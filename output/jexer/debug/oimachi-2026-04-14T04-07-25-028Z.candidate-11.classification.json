@@ -1,0 +1,30 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+  "discovered_from": "ai_recommendation",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": true
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1696,
+    "candidates_token_count": 165,
+    "total_token_count": 1863,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_day_detail",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_urls": [
+      "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "https://www.jexer.jp/mb/oi/index.html"
+    ],
+    "confidence": 1
+  }
+}
