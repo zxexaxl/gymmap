@@ -10,7 +10,7 @@
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",
     "lint": "eslint .",
-    "test": "tsx --test src/lib/__tests__/normalizeProgramName.test.ts",
+    "test": "tsx --test src/lib/__tests__/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
