@@ -112,6 +112,26 @@ test("program brand is searchable as part of the main query", () => {
   assert.equal(scoreProgramQueryMatch(result, query), 255);
 });
 
+test("brand aliases are searchable as part of the main query", () => {
+  const query = normalizeSearchKeyword("レズミルズ");
+  const result = baseResult({});
+
+  assert.equal(scoreProgramQueryMatch(result, query), 246);
+});
+
+test("radical alias hits Radical Fitness programs", () => {
+  const query = normalizeSearchKeyword("ラディカル");
+  const result = baseResult({
+    raw_program_name: "メガダンス",
+    canonical_program_name: "メガダンス",
+    normalized_text: "メガダンス",
+    comparison_key: "メガダンス",
+    program_brand: "Radical Fitness",
+  });
+
+  assert.equal(scoreProgramQueryMatch(result, query), 246);
+});
+
 test("query debug lists only the actual matching fields", () => {
   const query = normalizeSearchKeyword("body");
   const result = baseResult({});

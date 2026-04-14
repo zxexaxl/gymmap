@@ -70,6 +70,8 @@ export function ResultsList({ results, hasActiveFilters = false, query = "", deb
                             ? "canonical"
                             : hit.field === "program_brand"
                               ? "brand"
+                              : hit.field === "brandAliases"
+                                ? "brandAlias"
                             : "alias"}
                       </p>
                       <p className="search-debug-item">matchedValue: {hit.value}</p>

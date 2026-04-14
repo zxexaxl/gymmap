@@ -21,6 +21,19 @@ export type ProgramMasterEntry = {
   tags: string[];
 };
 
+const programBrandAliases: Record<ProgramBrand, string[]> = {
+  "Les Mills": ["Les Mills", "les mills", "lesmills", "レズミルズ", "レズ・ミルズ"],
+  "Radical Fitness": [
+    "Radical Fitness",
+    "radical fitness",
+    "radical",
+    "ラディカル",
+    "ラディカルフィットネス",
+  ],
+  MOSSA: ["MOSSA", "mossa"],
+  ZUMBA: ["ZUMBA", "zumba", "ズンバ"],
+};
+
 // 巨大な別名辞書ではなく、小さな正規名マスタだけを持ちます。
 // 新しい正規プログラムを増やすときは、1 エントリずつ追加してください。
 // brand は category とは別軸で持ちます。今後 Radical Fitness や MOSSA の
@@ -282,4 +295,12 @@ export function getProgramSearchAliases(canonicalProgramName?: string | null) {
   }
 
   return Array.from(new Set(entry.searchAliases));
+}
+
+export function getProgramBrandAliases(programBrand?: ProgramBrand | string | null) {
+  if (!programBrand) {
+    return [];
+  }
+
+  return programBrandAliases[programBrand as ProgramBrand] ?? [];
 }

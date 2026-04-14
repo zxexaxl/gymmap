@@ -1,8 +1,8 @@
-import { getProgramSearchAliases } from "@/lib/program-master";
+import { getProgramBrandAliases, getProgramSearchAliases } from "@/lib/program-master";
 import type { SearchResult } from "@/lib/types";
 
 export type ProgramQueryHit = {
-  field: "raw_program_name" | "canonical_program_name" | "program_brand" | "searchAliases";
+  field: "raw_program_name" | "canonical_program_name" | "program_brand" | "searchAliases" | "brandAliases";
   value: string;
   score: number;
 };
@@ -48,6 +48,7 @@ function getMatchScore(query: string, candidate?: string | null) {
 export function getProgramQueryDebug(item: SearchResult, query: string): ProgramQueryHit[] {
   const hits: ProgramQueryHit[] = [];
   const aliases = getProgramSearchAliases(item.schedule.canonical_program_name);
+  const brandAliases = getProgramBrandAliases(item.schedule.program_brand);
   const rawScore = getMatchScore(query, item.schedule.raw_program_name);
   const canonicalScore = getMatchScore(query, item.schedule.canonical_program_name);
   const brandScore = getMatchScore(query, item.schedule.program_brand);
@@ -88,6 +89,18 @@ export function getProgramQueryDebug(item: SearchResult, query: string): Program
     }
   });
 
+  brandAliases.forEach((alias) => {
+    const aliasScore = getMatchScore(query, alias);
+
+    if (aliasScore > 0) {
+      hits.push({
+        field: "brandAliases",
+        value: alias,
+        score: aliasScore * 82,
+      });
+    }
+  });
+
   return hits;
 }
 
@@ -97,6 +110,7 @@ export function scoreProgramQueryMatch(item: SearchResult, query: string) {
   const canonicalScore = hits.find((hit) => hit.field === "canonical_program_name")?.score ?? 0;
   const brandScore = hits.find((hit) => hit.field === "program_brand")?.score ?? 0;
   const aliasScore = Math.max(...hits.filter((hit) => hit.field === "searchAliases").map((hit) => hit.score), 0);
+  const brandAliasScore = Math.max(...hits.filter((hit) => hit.field === "brandAliases").map((hit) => hit.score), 0);
 
   if (rawScore > 0) {
     return rawScore;
@@ -112,6 +126,10 @@ export function scoreProgramQueryMatch(item: SearchResult, query: string) {
 
   if (aliasScore > 0) {
     return aliasScore;
+  }
+
+  if (brandAliasScore > 0) {
+    return brandAliasScore;
   }
 
   return 0;
