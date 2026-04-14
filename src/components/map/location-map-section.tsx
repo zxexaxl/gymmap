@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { scoreProgramQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
 import type { GymLocation, SearchResult } from "@/lib/types";
-import { getLocationAddress } from "@/lib/utils";
+import { buildSearchQuery, getLocationAddress } from "@/lib/utils";
 
 type LocationMapSectionProps = {
   locations: GymLocation[];
@@ -88,12 +88,13 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [geolocationStatus, setGeolocationStatus] = useState<"loading" | "granted" | "denied" | "fallback">("loading");
 
-  useEffect(() => {
+  function requestCurrentPosition() {
     if (!("geolocation" in navigator)) {
       setGeolocationStatus("fallback");
       return;
     }
 
+    setGeolocationStatus("loading");
     navigator.geolocation.getCurrentPosition(
       (position) => {
         setCurrentPosition({
@@ -111,14 +112,24 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
         maximumAge: 5 * 60 * 1000,
       },
     );
+  }
+
+  useEffect(() => {
+    requestCurrentPosition();
   }, []);
 
   const normalizedQuery = normalizeSearchKeyword(programQuery);
-  const matchedLocationIds = new Set(
-    normalizedQuery
-      ? searchResults.filter((result) => scoreProgramQueryMatch(result, normalizedQuery) > 0).map((result) => result.location.id)
-      : [],
-  );
+  const matchedResults = normalizedQuery
+    ? searchResults.filter((result) => scoreProgramQueryMatch(result, normalizedQuery) > 0)
+    : searchResults;
+  const matchedLocationIds = new Set(matchedResults.map((result) => result.location.id));
+  const matchesByLocationId = new Map<string, SearchResult[]>();
+
+  matchedResults.forEach((result) => {
+    const matches = matchesByLocationId.get(result.location.id) ?? [];
+    matches.push(result);
+    matchesByLocationId.set(result.location.id, matches);
+  });
   const center = currentPosition ?? TOKYO_CENTER;
   const filteredLocations = locations
     .filter((location) => location.latitude && location.longitude)
@@ -153,12 +164,34 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   const points = visibleLocations.map((location) => toMapPoint(location, viewport));
   const selectedLocation =
     visibleLocations.find((location) => location.id === selectedLocationId) ?? visibleLocations[0] ?? null;
-  const selectedLocationMatches = normalizedQuery
-    ? searchResults
-        .filter((result) => result.location.id === selectedLocation?.id)
-        .filter((result) => scoreProgramQueryMatch(result, normalizedQuery) > 0)
-        .slice(0, 3)
-    : [];
+  const selectedLocationMatches = selectedLocation ? matchesByLocationId.get(selectedLocation.id) ?? [] : [];
+
+  function formatMatchedLessonSummary(locationId: string) {
+    const matches = matchesByLocationId.get(locationId) ?? [];
+
+    if (!matches.length) {
+      return null;
+    }
+
+    const uniqueNames = Array.from(new Set(matches.map((item) => item.schedule.raw_program_name)));
+    const preview = uniqueNames.slice(0, 3);
+    const restCount = uniqueNames.length - preview.length;
+
+    return restCount > 0 ? `${preview.join(", ")} 他${restCount}件` : preview.join(", ");
+  }
+
+  function buildLessonDetailHref(location: GymLocation) {
+    const query = buildSearchQuery({
+      q: programQuery.trim(),
+      weekday: "",
+      timeRange: "",
+      durationRange: "",
+      brand: "",
+      area: location.name,
+    });
+
+    return query ? `/search?${query}` : `/search?area=${encodeURIComponent(location.name)}`;
+  }
 
   useEffect(() => {
     if (!visibleLocations.length) {
@@ -179,6 +212,9 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
         : geolocationStatus === "fallback"
           ? "位置情報未対応のため、東京中心で表示中"
           : "現在地を確認中";
+  const resultSummary = normalizedQuery
+    ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedResults.length}レッスンを表示中`
+    : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
 
   return (
     <section className="panel map-section">
@@ -200,9 +236,16 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
           />
         </label>
         <p className="map-status muted">
-          {statusLabel}
-          {normalizedQuery ? ` / ${visibleLocations.length}店舗がヒット` : ` / ${visibleLocations.length}店舗を表示`}
+          {statusLabel} / {resultSummary}
         </p>
+        {geolocationStatus !== "granted" ? (
+          <div className="map-geolocation-help">
+            <p className="muted">現在地を許可すると、近くのジムを優先して表示できます。</p>
+            <button type="button" className="map-geolocation-button" onClick={requestCurrentPosition}>
+              現在地を使う
+            </button>
+          </div>
+        ) : null}
       </div>
 
       <div className="map-layout">
@@ -231,7 +274,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
               </p>
               <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
               {selectedLocationMatches.length > 0 ? (
-                <p className="muted">一致レッスン: {selectedLocationMatches.map((item) => item.schedule.raw_program_name).join(" / ")}</p>
+                <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
               ) : null}
               <Link href={`/locations/${selectedLocation.slug}`}>店舗詳細を見る</Link>
             </div>
@@ -255,9 +298,13 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
               <h3>{location.name}</h3>
               <p className="muted">{getLocationAddress(location.prefecture, location.city, location.address_line)}</p>
               <p className="muted">{formatDistanceLabel(location.distanceKm ?? null)}</p>
+              {normalizedQuery && formatMatchedLessonSummary(location.id) ? (
+                <p className="muted">一致レッスン: {formatMatchedLessonSummary(location.id)}</p>
+              ) : null}
               <button type="button" className="map-select-button" onClick={() => setSelectedLocationId(location.id)}>
                 地図で見る
               </button>
+              {normalizedQuery ? <Link href={buildLessonDetailHref(location)}>レッスン詳細を見る</Link> : null}
               <Link href={`/locations/${location.slug}`}>店舗詳細を見る</Link>
             </article>
           ))}

@@ -301,6 +301,22 @@ p {
   margin: 0;
 }
 
+.map-geolocation-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.map-geolocation-help p {
+  margin: 0;
+}
+
+.map-geolocation-button {
+  width: auto;
+}
+
 .map-canvas {
   position: relative;
   min-height: 320px;
