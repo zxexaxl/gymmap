@@ -1,6 +1,12 @@
 import { getProgramSearchAliases } from "@/lib/program-master";
 import type { SearchResult } from "@/lib/types";
 
+export type ProgramQueryHit = {
+  field: "raw_program_name" | "canonical_program_name" | "searchAliases";
+  value: string;
+  score: number;
+};
+
 export function normalizeSearchKeyword(value: string) {
   return value
     .normalize("NFKC")
@@ -39,22 +45,59 @@ function getMatchScore(query: string, candidate?: string | null) {
   return 0;
 }
 
-export function scoreProgramQueryMatch(item: SearchResult, query: string) {
+export function getProgramQueryDebug(item: SearchResult, query: string): ProgramQueryHit[] {
+  const hits: ProgramQueryHit[] = [];
   const aliases = getProgramSearchAliases(item.schedule.canonical_program_name);
   const rawScore = getMatchScore(query, item.schedule.raw_program_name);
   const canonicalScore = getMatchScore(query, item.schedule.canonical_program_name);
-  const aliasScore = Math.max(...aliases.map((alias) => getMatchScore(query, alias)), 0);
 
   if (rawScore > 0) {
-    return rawScore * 100;
+    hits.push({
+      field: "raw_program_name",
+      value: item.schedule.raw_program_name,
+      score: rawScore * 100,
+    });
+  }
+
+  if (canonicalScore > 0 && item.schedule.canonical_program_name) {
+    hits.push({
+      field: "canonical_program_name",
+      value: item.schedule.canonical_program_name,
+      score: canonicalScore * 90,
+    });
+  }
+
+  aliases.forEach((alias) => {
+    const aliasScore = getMatchScore(query, alias);
+
+    if (aliasScore > 0) {
+      hits.push({
+        field: "searchAliases",
+        value: alias,
+        score: aliasScore * 80,
+      });
+    }
+  });
+
+  return hits;
+}
+
+export function scoreProgramQueryMatch(item: SearchResult, query: string) {
+  const hits = getProgramQueryDebug(item, query);
+  const rawScore = hits.find((hit) => hit.field === "raw_program_name")?.score ?? 0;
+  const canonicalScore = hits.find((hit) => hit.field === "canonical_program_name")?.score ?? 0;
+  const aliasScore = Math.max(...hits.filter((hit) => hit.field === "searchAliases").map((hit) => hit.score), 0);
+
+  if (rawScore > 0) {
+    return rawScore;
   }
 
   if (canonicalScore > 0) {
-    return canonicalScore * 90;
+    return canonicalScore;
   }
 
   if (aliasScore > 0) {
-    return aliasScore * 80;
+    return aliasScore;
   }
 
   return 0;

@@ -4,6 +4,7 @@ import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
 import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
 import { getBrands, getSearchResults } from "@/lib/data";
+import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import { normalizeSearchFilters } from "@/lib/utils";
 
 type SearchPageProps = {
@@ -13,11 +14,29 @@ type SearchPageProps = {
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const resolvedSearchParams = await searchParams;
   const filters = normalizeSearchFilters(resolvedSearchParams);
+  const debugEnabled = resolvedSearchParams.debug === "1";
   const hasActiveFilters = Object.values(filters).some(Boolean);
   const [brands, results] = await Promise.all([getBrands(), getSearchResults(filters)]);
   const weekdayLabel = weekdayOptions.find((option) => option.value === filters.weekday)?.label ?? "指定なし";
   const timeRangeLabel = timeRangeOptions.find((option) => option.value === filters.timeRange)?.label ?? "指定なし";
   const durationRangeLabel = durationRangeOptions.find((option) => option.value === filters.durationRange)?.label ?? "指定なし";
+
+  if (debugEnabled && filters.q) {
+    const normalizedQuery = normalizeSearchKeyword(filters.q);
+
+    console.log(
+      "[search-debug]",
+      JSON.stringify(
+        results.map((item) => ({
+          raw_program_name: item.schedule.raw_program_name,
+          canonical_program_name: item.schedule.canonical_program_name,
+          hits: getProgramQueryDebug(item, normalizedQuery),
+        })),
+        null,
+        2,
+      ),
+    );
+  }
 
   return (
     <div className="page-stack">
@@ -41,7 +60,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         </p>
         <SearchForm brands={brands} initialValues={filters} />
       </section>
-      <ResultsList results={results} hasActiveFilters={hasActiveFilters} />
+      <ResultsList results={results} hasActiveFilters={hasActiveFilters} query={filters.q} debugEnabled={debugEnabled} />
     </div>
   );
 }

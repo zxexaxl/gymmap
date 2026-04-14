@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { scoreProgramQueryMatch, normalizeSearchKeyword } from "../search-query";
+import { getProgramQueryDebug, scoreProgramQueryMatch, normalizeSearchKeyword } from "../search-query";
 import type { SearchResult } from "../types";
 
 const baseResult = (overrides: Partial<SearchResult["schedule"]>): SearchResult => ({
@@ -103,4 +103,19 @@ test("raw program name wins over canonical and aliases", () => {
   const result = baseResult({});
 
   assert.equal(scoreProgramQueryMatch(result, query), 200);
+});
+
+test("query debug lists only the actual matching fields", () => {
+  const query = normalizeSearchKeyword("body");
+  const result = baseResult({});
+  const hits = getProgramQueryDebug(result, query);
+
+  assert.deepEqual(
+    hits.map((hit) => hit.field),
+    ["raw_program_name", "canonical_program_name", "searchAliases", "searchAliases"],
+  );
+  assert.deepEqual(
+    hits.map((hit) => hit.value),
+    ["BODYCOMBAT 45", "BODYCOMBAT", "body combat", "bodycombat"],
+  );
 });

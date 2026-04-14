@@ -1,14 +1,17 @@
 import Link from "next/link";
 
+import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import type { SearchResult } from "@/lib/types";
 import { formatDate, formatWeekday, getLocationAddress } from "@/lib/utils";
 
 type ResultsListProps = {
   results: SearchResult[];
   hasActiveFilters?: boolean;
+  query?: string;
+  debugEnabled?: boolean;
 };
 
-export function ResultsList({ results, hasActiveFilters = false }: ResultsListProps) {
+export function ResultsList({ results, hasActiveFilters = false, query = "", debugEnabled = false }: ResultsListProps) {
   if (!results.length) {
     return (
       <section className="panel empty-state">
@@ -25,6 +28,8 @@ export function ResultsList({ results, hasActiveFilters = false }: ResultsListPr
       </section>
     );
   }
+
+  const normalizedQuery = normalizeSearchKeyword(query);
 
   return (
     <section className="panel">
@@ -52,6 +57,16 @@ export function ResultsList({ results, hasActiveFilters = false }: ResultsListPr
               <p className="muted">
                 {getLocationAddress(item.location.prefecture, item.location.city, item.location.address_line)}
               </p>
+              {debugEnabled && normalizedQuery ? (
+                <div className="search-debug">
+                  <p className="search-debug-title">debug query: {query}</p>
+                  {getProgramQueryDebug(item, normalizedQuery).map((hit, index) => (
+                    <p key={`${item.schedule.id}-${hit.field}-${hit.value}-${index}`} className="search-debug-item">
+                      {hit.field}: {hit.value}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
             </div>
             <dl className="result-meta">
               <div>
