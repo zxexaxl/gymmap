@@ -210,9 +210,9 @@ Supabase の seed も増やしたい場合:
 使いどころ:
 
 - `class schedule` は表示前に正規化され、`canonical_program_name` や `duration_minutes` を持つ
-- 自由語検索では `raw_program_name`、`canonical_program_name`、`searchAliases`、`program_brand`、`tags` を項目別に判定する
-- `category_primary` は自由語検索対象に入れず、カテゴリ絞り込み寄りの扱いにする
-- 英字 / 全角カナ / 半角カナの橋渡しは `searchAliases` で行い、スコア順で結果を並べる
+- 自由語検索では `raw_program_name`、`canonical_program_name`、`searchAliases` だけを項目別に判定する
+- `category_primary`、`tags`、`program_brand` は自由語検索対象に入れず、まずはレッスン名中心で絞り込む
+- 英字 / 全角カナ / 半角カナの橋渡しは `searchAliases` で行い、`raw_program_name`、`canonical_program_name`、`searchAliases` の優先順で並べる
 - 検索フォームでは所要時間フィルタを使える
 - `unresolved` は無理に確定せず、レビュー候補として扱う
 

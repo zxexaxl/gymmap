@@ -149,15 +149,23 @@ function getMatchScore(query: string, candidate?: string | null) {
 
 function scoreKeywordMatch(item: SearchResult, query: string) {
   const aliases = getProgramSearchAliases(item.schedule.canonical_program_name);
-  let bestScore = 0;
+  const rawScore = getMatchScore(query, item.schedule.raw_program_name);
+  const canonicalScore = getMatchScore(query, item.schedule.canonical_program_name);
+  const aliasScore = Math.max(...aliases.map((alias) => getMatchScore(query, alias)), 0);
 
-  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.raw_program_name) * 100);
-  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.canonical_program_name) * 90);
-  bestScore = Math.max(bestScore, ...aliases.map((alias) => getMatchScore(query, alias) * 80), 0);
-  bestScore = Math.max(bestScore, getMatchScore(query, item.schedule.program_brand) * 50);
-  bestScore = Math.max(bestScore, ...(item.schedule.tags ?? []).map((tag) => getMatchScore(query, tag) * 30), 0);
+  if (rawScore > 0) {
+    return rawScore * 100;
+  }
 
-  return bestScore;
+  if (canonicalScore > 0) {
+    return canonicalScore * 90;
+  }
+
+  if (aliasScore > 0) {
+    return aliasScore * 80;
+  }
+
+  return 0;
 }
 
 export async function getSearchResults(filters: SearchFilters): Promise<SearchResult[]> {
