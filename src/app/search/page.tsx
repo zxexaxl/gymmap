@@ -20,6 +20,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const weekdayLabel = weekdayOptions.find((option) => option.value === filters.weekday)?.label ?? "指定なし";
   const timeRangeLabel = timeRangeOptions.find((option) => option.value === filters.timeRange)?.label ?? "指定なし";
   const durationRangeLabel = durationRangeOptions.find((option) => option.value === filters.durationRange)?.label ?? "指定なし";
+  const shouldTraceOimachi = [filters.q, filters.area, filters.brand]
+    .join(" ")
+    .toLowerCase()
+    .match(/oimachi|大井町|bodypump|bodycombat/);
 
   if (debugEnabled && filters.q) {
     const normalizedQuery = normalizeSearchKeyword(filters.q);
@@ -32,6 +36,43 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           canonical_program_name: item.schedule.canonical_program_name,
           hits: getProgramQueryDebug(item, normalizedQuery),
         })),
+        null,
+        2,
+      ),
+    );
+  }
+
+  if (shouldTraceOimachi) {
+    console.log(
+      "[search-trace]",
+      JSON.stringify(
+        {
+          stage: "ui_render_input",
+          filters,
+          resultCount: results.length,
+          trackedRecords: results
+            .filter(
+              (item) =>
+                item.location.slug === "jexer-oimachi" &&
+                item.schedule.weekday === "friday" &&
+                ((item.schedule.start_time === "19:40" &&
+                  ((item.schedule.canonical_program_name ?? "") === "BODYPUMP" ||
+                    item.schedule.raw_program_name.includes("BODYPUMP"))) ||
+                  (item.schedule.start_time === "20:50" &&
+                    ((item.schedule.canonical_program_name ?? "") === "BODYCOMBAT" ||
+                      item.schedule.raw_program_name.includes("BODYCOMBAT")))),
+            )
+            .map((item) => ({
+              schedule_id: item.schedule.id,
+              location_slug: item.location.slug,
+              location_name: item.location.name,
+              weekday: item.schedule.weekday,
+              start_time: item.schedule.start_time,
+              end_time: item.schedule.end_time,
+              raw_program_name: item.schedule.raw_program_name,
+              canonical_program_name: item.schedule.canonical_program_name ?? null,
+            })),
+        },
         null,
         2,
       ),

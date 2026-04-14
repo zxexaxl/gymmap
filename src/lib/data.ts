@@ -43,6 +43,56 @@ const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
   sunday: 6,
 };
 
+const trackedSearchMarkers = ["oimachi", "大井町", "bodypump", "bodycombat"];
+
+function isTrackedSearch(filters: SearchFilters) {
+  const value = [filters.q, filters.area, filters.brand].join(" ").toLowerCase();
+  return trackedSearchMarkers.some((marker) => value.includes(marker.toLowerCase()));
+}
+
+function isTrackedOimachiRecord(item: SearchResult) {
+  if (item.location.slug !== "jexer-oimachi" || item.schedule.weekday !== "friday") {
+    return false;
+  }
+
+  const canonical = item.schedule.canonical_program_name ?? "";
+  const raw = item.schedule.raw_program_name;
+
+  return (
+    (item.schedule.start_time === "19:40" && (canonical === "BODYPUMP" || raw.includes("BODYPUMP"))) ||
+    (item.schedule.start_time === "20:50" && (canonical === "BODYCOMBAT" || raw.includes("BODYCOMBAT")))
+  );
+}
+
+function logTrackedSearchStage(label: string, filters: SearchFilters, results: SearchResult[]) {
+  if (!isTrackedSearch(filters)) {
+    return;
+  }
+
+  console.log(
+    "[search-trace]",
+    JSON.stringify(
+      {
+        stage: label,
+        filters,
+        resultCount: results.length,
+        trackedRecords: results.filter(isTrackedOimachiRecord).map((item) => ({
+          schedule_id: item.schedule.id,
+          location_slug: item.location.slug,
+          location_name: item.location.name,
+          weekday: item.schedule.weekday,
+          start_time: item.schedule.start_time,
+          end_time: item.schedule.end_time,
+          raw_program_name: item.schedule.raw_program_name,
+          canonical_program_name: item.schedule.canonical_program_name ?? null,
+        })),
+      },
+      null,
+      2,
+    ),
+  );
+}
+
 function mapJoinedSchedule(row: SupabaseJoinedSchedule): SearchResult {
   const normalizedSchedule = enrichScheduleWithNormalization({
     ...row,
@@ -65,8 +115,9 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
   const keyword = normalizeSearchKeyword(filters.q);
   const brandKeyword = filters.brand.toLowerCase();
   const areaKeyword = filters.area.toLowerCase();
+  logTrackedSearchStage("before_filter", filters, results);
 
-  return results
+  const filtered = results
     .map((item) => {
       if (filters.weekday && item.schedule.weekday !== filters.weekday) {
         return null;
@@ -97,6 +148,7 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
       if (areaKeyword) {
         const locationText = [
           item.location.name,
+          item.location.slug,
           item.location.prefecture,
           item.location.city,
           item.location.address_line,
@@ -141,6 +193,10 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
       return left.item.location.name.localeCompare(right.item.location.name);
     })
     .map((entry) => entry.item);
+
+  logTrackedSearchStage("after_filter", filters, filtered);
+
+  return filtered;
 }
 
 function scoreKeywordMatch(item: SearchResult, query: string) {
@@ -150,6 +206,26 @@ function scoreKeywordMatch(item: SearchResult, query: string) {
 export async function getSearchResults(filters: SearchFilters): Promise<SearchResult[]> {
   if (!hasSupabaseEnv()) {
     return [];
+  }
+
+  if (isTrackedSearch(filters)) {
+    console.log(
+      "[search-trace]",
+      JSON.stringify(
+        {
+          stage: "request",
+          filters,
+          dbQuery: {
+            table: "class_schedules",
+            orderBy: "start_time asc",
+            limit: null,
+            dedupe: false,
+          },
+        },
+        null,
+        2,
+      ),
+    );
   }
 
   const supabase = getSupabaseClient();
@@ -172,7 +248,10 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
     return [];
   }
 
-  return filterResults((data as SupabaseJoinedSchedule[]).map(mapJoinedSchedule), filters);
+  const mappedResults = (data as SupabaseJoinedSchedule[]).map(mapJoinedSchedule);
+  logTrackedSearchStage("db_response", filters, mappedResults);
+
+  return filterResults(mappedResults, filters);
 }
 
 export async function getBrands(): Promise<GymBrand[]> {
