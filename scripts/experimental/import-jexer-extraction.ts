@@ -63,6 +63,72 @@ function getImportSupabaseClient() {
   });
 }
 
+function getProjectRefFromUrl(url: string) {
+  try {
+    const hostname = new URL(url).hostname;
+    return hostname.endsWith(".supabase.co") ? hostname.replace(/\.supabase\.co$/, "") : hostname;
+  } catch {
+    return null;
+  }
+}
+
+function getEnvSource(key: string) {
+  return process.env[`CODEX_ENV_SOURCE_${key}`] ?? "unknown";
+}
+
+async function logImportConnectionInfo() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ?? "";
+  const projectRef = url ? getProjectRefFromUrl(url) : null;
+
+  console.log("[import:jexer] connection");
+  console.log(`  supabase_url=${url || "(missing)"}`);
+  console.log(`  project_ref=${projectRef ?? "(unknown)"}`);
+  console.log(`  env_source:NEXT_PUBLIC_SUPABASE_URL=${getEnvSource("NEXT_PUBLIC_SUPABASE_URL")}`);
+  console.log(`  env_source:SUPABASE_SERVICE_ROLE_KEY=${getEnvSource("SUPABASE_SERVICE_ROLE_KEY")}`);
+}
+
+async function logPostImportVerification({
+  supabase,
+  locationIds,
+  locationNamesById,
+  snapshotId,
+}: {
+  supabase: ReturnType<typeof getImportSupabaseClient>;
+  locationIds: string[];
+  locationNamesById: Map<string, string>;
+  snapshotId: string;
+}) {
+  if (locationIds.length === 0) {
+    return;
+  }
+
+  console.log("[import:jexer] verification");
+
+  for (const locationId of locationIds) {
+    const locationName = locationNamesById.get(locationId) ?? locationId;
+
+    const [{ count: totalCount, error: totalError }, { count: snapshotCount, error: snapshotError }] = await Promise.all([
+      supabase.from("class_schedules").select("*", { count: "exact", head: true }).eq("location_id", locationId),
+      supabase
+        .from("class_schedules")
+        .select("*", { count: "exact", head: true })
+        .eq("location_id", locationId)
+        .eq("source_snapshot_id", snapshotId),
+    ]);
+
+    if (totalError || snapshotError) {
+      console.warn(
+        `[import:jexer] verification failed for ${locationName}: ${totalError?.message ?? snapshotError?.message ?? "unknown error"}`,
+      );
+      continue;
+    }
+
+    console.log(
+      `  location=${locationName} total_schedule_count=${totalCount ?? 0} snapshot_schedule_count=${snapshotCount ?? 0}`,
+    );
+  }
+}
+
 function normalizeNameKey(value: string) {
   return value.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
 }
@@ -190,6 +256,7 @@ async function main() {
   }
 
   const extraction = await readExtractionFile(args.file);
+  await logImportConnectionInfo();
   const supabase = getImportSupabaseClient();
 
   const [{ data: locations, error: locationsError }, { data: programs, error: programsError }, { data: schedules, error: schedulesError }] =
@@ -227,6 +294,9 @@ async function main() {
   let updatedCount = 0;
   let skippedCount = 0;
   const warnings: string[] = [];
+  const touchedLocationIds = new Set<string>();
+  const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
+  const snapshotId = path.basename(args.file);
 
   for (const record of extraction.records) {
     const location = locationsByName.get(normalizeNameKey(record.location_name));
@@ -264,7 +334,7 @@ async function main() {
       needs_review: record.needs_review,
       instructor_name: record.instructor_name,
       source_page_url: record.source_url,
-      source_snapshot_id: path.basename(args.file),
+      source_snapshot_id: snapshotId,
       valid_from: null,
       valid_to: null,
       extracted_at: extraction.fetched_at,
@@ -279,6 +349,7 @@ async function main() {
       source_page_url: payload.source_page_url,
     });
     const existingSchedule = existingSchedulesByKey.get(scheduleKey);
+    touchedLocationIds.add(location.id);
 
     if (args.dryRun) {
       if (existingSchedule) {
@@ -321,6 +392,12 @@ async function main() {
   }
 
   console.log(`Import summary: inserted=${insertedCount}, updated=${updatedCount}, skipped=${skippedCount}, warnings=${warnings.length}`);
+  await logPostImportVerification({
+    supabase,
+    locationIds: Array.from(touchedLocationIds),
+    locationNamesById,
+    snapshotId,
+  });
 
   if (warnings.length > 0) {
     console.warn("\nWarnings:");

@@ -1,0 +1,114 @@
+{
+  "total_records": 302,
+  "needs_review_count": 36,
+  "unresolved_count": 34,
+  "usage_metadata": {
+    "prompt_token_count": 118591,
+    "candidates_token_count": 43529,
+    "total_token_count": 162126,
+    "thoughts_token_count": 6,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 118591,
+  "total_output_tokens": 43529,
+  "total_tokens": 162126,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 212
+    },
+    {
+      "key": "MOSSA",
+      "count": 54
+    },
+    {
+      "key": "Les Mills",
+      "count": 16
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 11
+    },
+    {
+      "key": "ZUMBA",
+      "count": 9
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "mind_body",
+      "count": 81
+    },
+    {
+      "key": "conditioning",
+      "count": 60
+    },
+    {
+      "key": "cycling",
+      "count": 54
+    },
+    {
+      "key": "cardio",
+      "count": 34
+    },
+    {
+      "key": "null",
+      "count": 34
+    },
+    {
+      "key": "dance",
+      "count": 24
+    },
+    {
+      "key": "strength",
+      "count": 8
+    },
+    {
+      "key": "martial_arts",
+      "count": 7
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ﾁｰﾑﾊﾞｲｸ",
+      "count": 54
+    },
+    {
+      "key": "ﾎｯﾄﾖｶﾞ",
+      "count": 54
+    },
+    {
+      "key": "ｻｰｷｯﾄ",
+      "count": 51
+    },
+    {
+      "key": "ｱｸｱ",
+      "count": 21
+    },
+    {
+      "key": "AEROBICS",
+      "count": 12
+    },
+    {
+      "key": "ｽﾞﾝﾊﾞ",
+      "count": 9
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ",
+      "count": 8
+    },
+    {
+      "key": "ﾐｯﾄｼｪｲﾌﾟ",
+      "count": 6
+    },
+    {
+      "key": "ﾘﾄﾓｽ",
+      "count": 6
+    },
+    {
+      "key": "ｴｱﾛｳｫｰｸ",
+      "count": 5
+    }
+  ]
+}

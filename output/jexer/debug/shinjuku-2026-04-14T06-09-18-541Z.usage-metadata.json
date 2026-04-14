@@ -1,0 +1,575 @@
+{
+  "model_id": "gemini-2.5-flash-lite",
+  "classification": {
+    "prompt_token_count": 65983,
+    "candidates_token_count": 7200,
+    "total_token_count": 73189,
+    "thoughts_token_count": 6,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "extraction": {
+    "prompt_token_count": 52608,
+    "candidates_token_count": 36329,
+    "total_token_count": 88937,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total": {
+    "prompt_token_count": 118591,
+    "candidates_token_count": 43529,
+    "total_token_count": 162126,
+    "thoughts_token_count": 6,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "pages": [
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "discovered_from": null,
+      "usage_metadata": {
+        "prompt_token_count": 1047,
+        "candidates_token_count": 117,
+        "total_token_count": 1164,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "unknown"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1951,
+        "candidates_token_count": 885,
+        "total_token_count": 2836,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 1406,
+        "candidates_token_count": 273,
+        "total_token_count": 1679,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_index",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+      "usage_metadata": {
+        "prompt_token_count": 3142,
+        "candidates_token_count": 93,
+        "total_token_count": 3235,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "entry",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1985,
+        "candidates_token_count": 172,
+        "total_token_count": 2157,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1852,
+        "candidates_token_count": 174,
+        "total_token_count": 2028,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1657,
+        "candidates_token_count": 172,
+        "total_token_count": 1829,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1572,
+        "candidates_token_count": 149,
+        "total_token_count": 1721,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 2047,
+        "candidates_token_count": 171,
+        "total_token_count": 2218,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1880,
+        "candidates_token_count": 171,
+        "total_token_count": 2051,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1647,
+        "candidates_token_count": 171,
+        "total_token_count": 1818,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1572,
+        "candidates_token_count": 171,
+        "total_token_count": 1743,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/wed_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 2072,
+        "candidates_token_count": 171,
+        "total_token_count": 2243,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/wed_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1826,
+        "candidates_token_count": 173,
+        "total_token_count": 1999,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/wed_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1641,
+        "candidates_token_count": 171,
+        "total_token_count": 1812,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/wed_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1571,
+        "candidates_token_count": 171,
+        "total_token_count": 1742,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/thu_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 2092,
+        "candidates_token_count": 171,
+        "total_token_count": 2263,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/thu_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1856,
+        "candidates_token_count": 171,
+        "total_token_count": 2027,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/thu_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1709,
+        "candidates_token_count": 171,
+        "total_token_count": 1880,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/thu_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1620,
+        "candidates_token_count": 171,
+        "total_token_count": 1791,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 2027,
+        "candidates_token_count": 171,
+        "total_token_count": 2198,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1847,
+        "candidates_token_count": 173,
+        "total_token_count": 2020,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1647,
+        "candidates_token_count": 171,
+        "total_token_count": 1818,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1571,
+        "candidates_token_count": 171,
+        "total_token_count": 1744,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1829,
+        "candidates_token_count": 171,
+        "total_token_count": 2000,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1721,
+        "candidates_token_count": 173,
+        "total_token_count": 1894,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1596,
+        "candidates_token_count": 171,
+        "total_token_count": 1767,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1461,
+        "candidates_token_count": 171,
+        "total_token_count": 1632,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sun_10a.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1721,
+        "candidates_token_count": 142,
+        "total_token_count": 1863,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sun_10b.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1633,
+        "candidates_token_count": 144,
+        "total_token_count": 1777,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sun_10bike.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1486,
+        "candidates_token_count": 142,
+        "total_token_count": 1628,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sun_10c.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/fitness.html",
+      "usage_metadata": {
+        "prompt_token_count": 1365,
+        "candidates_token_count": 142,
+        "total_token_count": 1507,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1428,
+        "candidates_token_count": 172,
+        "total_token_count": 1600,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1425,
+        "candidates_token_count": 171,
+        "total_token_count": 1596,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/wed_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1438,
+        "candidates_token_count": 171,
+        "total_token_count": 1609,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/thu_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1435,
+        "candidates_token_count": 171,
+        "total_token_count": 1606,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1439,
+        "candidates_token_count": 171,
+        "total_token_count": 1612,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1434,
+        "candidates_token_count": 171,
+        "total_token_count": 1605,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sun_10p.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shinjuku/schedule/aqua.html",
+      "usage_metadata": {
+        "prompt_token_count": 1335,
+        "candidates_token_count": 142,
+        "total_token_count": 1477,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio"
+    }
+  ]
+}
