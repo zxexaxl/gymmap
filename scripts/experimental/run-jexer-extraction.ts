@@ -13,6 +13,11 @@ import {
 } from "../../src/lib/extraction/gemini-client";
 import { summarizeJexerExtractionResult } from "../../src/lib/extraction/jexer-summary";
 import {
+  getOrigin,
+  normalizeUrlLikeInput,
+  scoreCandidateUrl,
+} from "../../src/lib/extraction/discovery-url-utils";
+import {
   findJexerTarget,
   isJexerGroupTarget,
   jexerPartialTargets,
@@ -65,11 +70,6 @@ type PageSignalSummary = {
   repeatingBlockCount: number;
   linkCount: number;
   rowCount: number;
-};
-
-type UrlScore = {
-  score: number;
-  reasons: string[];
 };
 
 type ExplorationBudget = {
@@ -304,93 +304,21 @@ function extractHtmlLinks(pageUrl: string, html: string) {
   return Array.from(urls);
 }
 
-function getUrlTokens(candidateUrl: string) {
-  const url = new URL(candidateUrl);
-  return `${url.pathname}${url.search}`.toLowerCase();
-}
+function isSupportedDocumentUrl(candidateUrl: string) {
+  const normalizedUrl = normalizeUrlLikeInput(candidateUrl);
 
-function getPathSegments(candidateUrl: string) {
-  return new URL(candidateUrl).pathname.split("/").filter(Boolean);
-}
-
-function countSharedLeadingSegments(leftUrl: string, rightUrl: string) {
-  const left = getPathSegments(leftUrl);
-  const right = getPathSegments(rightUrl);
-  let count = 0;
-
-  while (count < left.length && count < right.length && left[count] === right[count]) {
-    count += 1;
+  if (!normalizedUrl) {
+    return false;
   }
 
-  return count;
-}
-
-function isSupportedDocumentUrl(candidateUrl: string) {
-  const lowerUrl = candidateUrl.toLowerCase();
+  const lowerUrl = normalizedUrl.toLowerCase();
 
   if (/\.(jpg|jpeg|png|gif|webp|svg|js|css|ico|json|xml|zip)$/i.test(lowerUrl)) {
     return false;
   }
 
-  const url = new URL(candidateUrl);
+  const url = new URL(normalizedUrl);
   return url.pathname.endsWith(".html") || url.pathname.endsWith(".pdf") || url.pathname.endsWith("/") || !path.extname(url.pathname);
-}
-
-function scoreCandidateUrl({
-  candidateUrl,
-  entryUrl,
-  discoveredFrom,
-}: {
-  candidateUrl: string;
-  entryUrl: string;
-  discoveredFrom: string | null;
-}): UrlScore {
-  const tokens = getUrlTokens(candidateUrl);
-  const reasons: string[] = [];
-  let score = 0;
-
-  const positiveKeywords = ["schedule", "lesson", "program", "timetable", "class", "calendar", "studio", "fitness", "pdf"];
-  const negativeKeywords = ["news", "campaign", "contact", "instructor", "trainer", "staff", "blog", "recruit", "privacy", "company"];
-
-  const positiveMatches = positiveKeywords.filter((keyword) => tokens.includes(keyword));
-  const negativeMatches = negativeKeywords.filter((keyword) => tokens.includes(keyword));
-
-  score += positiveMatches.length * 3;
-  score -= negativeMatches.length * 4;
-
-  if (candidateUrl.toLowerCase().endsWith(".pdf")) {
-    score += 5;
-    reasons.push("pdf");
-  }
-
-  if (positiveMatches.length > 0) {
-    reasons.push(`positive:${positiveMatches.join(",")}`);
-  }
-
-  if (negativeMatches.length > 0) {
-    reasons.push(`negative:${negativeMatches.join(",")}`);
-  }
-
-  const sharedSegments = countSharedLeadingSegments(candidateUrl, entryUrl);
-  score += Math.min(sharedSegments, 3);
-  reasons.push(`shared_segments:${sharedSegments}`);
-
-  if (discoveredFrom && countSharedLeadingSegments(candidateUrl, discoveredFrom) >= 2) {
-    score += 2;
-    reasons.push("close_to_parent");
-  }
-
-  if (tokens.includes("mon_") || tokens.includes("tue_") || tokens.includes("wed_") || tokens.includes("thu_") || tokens.includes("fri_") || tokens.includes("sat_") || tokens.includes("sun_")) {
-    score += 4;
-    reasons.push("day_detail_hint");
-  }
-
-  if (tokens.includes("10a") || tokens.includes("10b") || tokens.includes("10c") || tokens.includes("bike") || tokens.includes("hot")) {
-    score += 2;
-    reasons.push("studio_detail_hint");
-  }
-
-  return { score, reasons };
 }
 
 function normalizeCandidateUrls({
@@ -402,18 +330,18 @@ function normalizeCandidateUrls({
   entryUrl: string;
   discoveredFrom: string | null;
 }) {
-  const entryOrigin = new URL(entryUrl).origin;
+  const entryOrigin = getOrigin(entryUrl);
+
+  if (!entryOrigin) {
+    return [];
+  }
 
   return Array.from(
     new Map(
       urls
-        .filter((url) => {
-          try {
-            return new URL(url).origin === entryOrigin;
-          } catch {
-            return false;
-          }
-        })
+        .map((url) => normalizeUrlLikeInput(url))
+        .filter((url): url is string => Boolean(url))
+        .filter((url) => getOrigin(url) === entryOrigin)
         .filter((url) => isSupportedDocumentUrl(url))
         .map((url) => {
           const score = scoreCandidateUrl({ candidateUrl: url, entryUrl, discoveredFrom });
