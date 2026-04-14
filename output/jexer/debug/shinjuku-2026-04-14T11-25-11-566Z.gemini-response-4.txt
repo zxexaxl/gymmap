@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "10:45",
+      "end_time": "11:15",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "13:45",
+      "end_time": "14:15",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "19:00",
+      "end_time": "19:30",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "20:00",
+      "end_time": "20:30",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "21:00",
+      "end_time": "21:30",
+      "raw_program_name": "ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ｻｰｷｯﾄ' is a type of fitness class.",
+      "instructor_name": null
+    }
+  ]
+}

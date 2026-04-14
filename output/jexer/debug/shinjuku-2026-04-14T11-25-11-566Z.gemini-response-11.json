@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"10:00\",\n      \"end_time\": \"10:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"松下(詠)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"11:30\",\n      \"end_time\": \"12:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"松下(詠)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"13:00\",\n      \"end_time\": \"13:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"鈴木(奈)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"鈴木(奈)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"18:30\",\n      \"end_time\": \"19:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"大崎(優)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"19:20\",\n      \"end_time\": \"19:50\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"中谷(俊)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"20:10\",\n      \"end_time\": \"20:40\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"平井(絢)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"21:00\",\n      \"end_time\": \"21:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) suggests a group fitness class.\",\n      \"instructor_name\": \"高垣(美)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1671,
+    "candidatesTokenCount": 1362,
+    "totalTokenCount": 3033,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1671
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "XSTeaduPGuyc1e8P1LCVkAw"
+}

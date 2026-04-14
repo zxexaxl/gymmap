@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"07:20\",\n      \"end_time\": \"08:10\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"ｳﾞｪﾙﾃﾞ(ひ)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"09:25\",\n      \"end_time\": \"10:15\",\n      \"raw_program_name\": \"太極拳\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Tai Chi is a form of exercise class.\",\n      \"instructor_name\": \"河原(佳)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"10:30\",\n      \"end_time\": \"11:15\",\n      \"raw_program_name\": \"ﾋﾞｯﾂ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Bitz is likely a fitness class.\",\n      \"instructor_name\": \"村山(理)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"11:30\",\n      \"end_time\": \"12:30\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Relaxation yoga is a type of yoga class.\",\n      \"instructor_name\": \"NAO\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"12:55\",\n      \"end_time\": \"13:40\",\n      \"raw_program_name\": \"ﾍﾟﾙﾋﾞｯｸｽﾄﾚｯﾁ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Pelvic stretch is a type of stretching exercise class.\",\n      \"instructor_name\": \"加藤(あ)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"13:55\",\n      \"end_time\": \"14:40\",\n      \"raw_program_name\": \"骨盤ﾈｼﾞ締めｴｸｻｻｲｽﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Pelvic twist exercise is a type of exercise class.\",\n      \"instructor_name\": \"MASAKO\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"14:55\",\n      \"end_time\": \"15:40\",\n      \"raw_program_name\": \"RPBｺﾝﾄﾛｰﾙ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"RPB Control is likely a fitness class.\",\n      \"instructor_name\": \"相馬(絵)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"17:50\",\n      \"end_time\": \"18:40\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"神崎(卓)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"19:00\",\n      \"end_time\": \"19:50\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"萩原(香)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"20:10\",\n      \"end_time\": \"21:00\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"神崎(卓)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"tuesday\",\n      \"start_time\": \"21:20\",\n      \"end_time\": \"22:10\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"土師(恵)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1904,
+    "candidatesTokenCount": 1734,
+    "totalTokenCount": 3638,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1904
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "biTeaZrIBJrN1e8PtrfyyAw"
+}

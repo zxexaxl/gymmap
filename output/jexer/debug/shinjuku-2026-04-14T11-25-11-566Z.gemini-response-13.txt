@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "07:20",
+      "end_time": "08:10",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "NAO"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "09:30",
+      "end_time": "10:20",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "網嶋(留)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "10:40",
+      "end_time": "11:30",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞﾘﾌﾚｯｼｭ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞﾘﾌﾚｯｼｭ' (Hot Yoga Refresh) is a typical fitness class.",
+      "instructor_name": "村山(理)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "11:50",
+      "end_time": "12:40",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "成田(生)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "13:00",
+      "end_time": "13:50",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞﾃﾞﾄｯｸｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞﾃﾞﾄｯｸｽ' (Hot Yoga Detox) is a typical fitness class.",
+      "instructor_name": "竹内(愛)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "14:10",
+      "end_time": "15:00",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞﾘﾌﾚｯｼｭ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞﾘﾌﾚｯｼｭ' (Hot Yoga Refresh) is a typical fitness class.",
+      "instructor_name": "齋藤(康)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "15:20",
+      "end_time": "16:10",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "片倉(由)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "17:30",
+      "end_time": "18:20",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "山田(乃)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "18:40",
+      "end_time": "19:30",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "片倉(由)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "19:50",
+      "end_time": "20:40",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "小野(紀)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "21:00",
+      "end_time": "21:50",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program 'ﾎｯﾄﾖｶﾞ' (Hot Yoga) is a typical fitness class.",
+      "instructor_name": "倉又(由)"
+    }
+  ]
+}

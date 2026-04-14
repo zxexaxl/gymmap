@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"09:15\",\n      \"end_time\": \"10:05\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"ヴェルデ(ひ)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"10:25\",\n      \"end_time\": \"11:15\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"井上(菊)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"11:35\",\n      \"end_time\": \"12:25\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"梶原(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"12:45\",\n      \"end_time\": \"13:35\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"糟谷(敦)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:20\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"木崎(純)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"15:40\",\n      \"end_time\": \"16:30\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"林(ゆ)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"16:50\",\n      \"end_time\": \"17:40\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"林(と)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"18:00\",\n      \"end_time\": \"18:50\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"山田(乃)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"19:10\",\n      \"end_time\": \"20:00\",\n      \"raw_program_name\": \"ﾎｯﾄﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"Hot yoga is a type of yoga class.\",\n      \"instructor_name\": \"土師(恵)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1745,
+    "candidatesTokenCount": 1395,
+    "totalTokenCount": 3140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1745
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "aSTeaYLDHNOmvr0P84n0wQM"
+}

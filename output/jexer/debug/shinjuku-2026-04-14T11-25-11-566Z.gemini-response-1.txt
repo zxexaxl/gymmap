@@ -1,0 +1,158 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "07:20",
+      "end_time": "08:05",
+      "raw_program_name": "ｽﾞﾝﾊﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Zumba is a dance fitness program, which is a type of regular class.",
+      "instructor_name": "能見(章)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "08:45",
+      "end_time": "09:30",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Relaxation yoga is a type of yoga class, which is a regular class.",
+      "instructor_name": "綱嶋(留)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "09:50",
+      "end_time": "10:20",
+      "raw_program_name": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Body combat is a martial arts-inspired fitness program, which is a regular class.",
+      "instructor_name": "村山(理)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "10:35",
+      "end_time": "11:20",
+      "raw_program_name": "ﾊﾞﾚﾄﾝ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Balletone is a fitness program that combines ballet, pilates, and fitness, which is a regular class.",
+      "instructor_name": "高橋(典)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "11:40",
+      "end_time": "12:40",
+      "raw_program_name": "ﾍﾞﾘｰﾀﾞﾝｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Belly dance is a dance form that is often taught in group classes, making it a regular class.",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "13:10",
+      "end_time": "13:55",
+      "raw_program_name": "AEROBICS",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Aerobics is a common type of group fitness class.",
+      "instructor_name": "廣田(茂)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "14:10",
+      "end_time": "14:55",
+      "raw_program_name": "ﾘﾄﾓｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Rytmos is a dance fitness program, which is a type of regular class.",
+      "instructor_name": "廣田(茂)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "15:10",
+      "end_time": "16:00",
+      "raw_program_name": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Shape boxing is a fitness class that combines boxing and strength training, making it a regular class.",
+      "instructor_name": "佐々木(貴)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "16:15",
+      "end_time": "17:00",
+      "raw_program_name": "ｴｱﾛｳｫｰｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Aero walk is a type of aerobic exercise class, which is a regular class.",
+      "instructor_name": "小川(朋)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "17:45",
+      "end_time": "18:30",
+      "raw_program_name": "ｽﾞﾝﾊﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Zumba is a dance fitness program, which is a type of regular class.",
+      "instructor_name": "MINORI"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "18:45",
+      "end_time": "19:15",
+      "raw_program_name": "AEROBICS",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Aerobics is a common type of group fitness class.",
+      "instructor_name": "MINORI"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "19:25",
+      "end_time": "20:10",
+      "raw_program_name": "VOLTAGE",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Voltage is likely a high-intensity interval training or dance fitness class, fitting the regular_class category.",
+      "instructor_name": "MADOKA"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "20:25",
+      "end_time": "21:10",
+      "raw_program_name": "ﾒｶﾞﾀﾞﾝｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Mega dance is a dance fitness class, which is a type of regular class.",
+      "instructor_name": "MADOKA"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "friday",
+      "start_time": "21:25",
+      "end_time": "22:25",
+      "raw_program_name": "ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ60",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "Body pump is a weight-based group fitness class, which is a regular class.",
+      "instructor_name": "深田(祐)"
+    }
+  ]
+}

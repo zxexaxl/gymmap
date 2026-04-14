@@ -1,0 +1,36 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"hot_yoga\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1840,
+    "candidatesTokenCount": 68,
+    "totalTokenCount": 1908,
+    "cachedContentTokenCount": 1711,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1840
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1711
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "IiTeaaqiOanJ1e8PqOmO-QM"
+}

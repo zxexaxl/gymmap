@@ -1,0 +1,39 @@
+{
+  "url": "https://www.jexer.jp/index.html",
+  "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/akabane/admission.html",
+  "depth": 2,
+  "url_score": 3,
+  "score_reasons": [
+    "shared_segments:0",
+    "same_origin",
+    "ai_recommended"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": false,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 37,
+    "linkCount": 275,
+    "rowCount": 144
+  },
+  "usage_metadata": {
+    "prompt_token_count": 19357,
+    "candidates_token_count": 121,
+    "total_token_count": 19478,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_links": [],
+    "confidence": 1
+  }
+}

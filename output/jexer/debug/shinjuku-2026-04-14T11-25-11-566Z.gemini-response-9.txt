@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "本田(美)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "11:30",
+      "end_time": "12:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "齋藤(康)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "13:00",
+      "end_time": "13:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "小池(眞)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "14:30",
+      "end_time": "15:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "小島(優)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "18:30",
+      "end_time": "19:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "北脇(潤)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "19:20",
+      "end_time": "19:50",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "近藤(義)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "20:10",
+      "end_time": "20:40",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "近藤(義)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "monday",
+      "start_time": "21:00",
+      "end_time": "21:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "entry_type_candidate": "regular_class",
+      "entry_type_reason": "The program name 'ﾁｰﾑﾊﾞｲｸ' (Team Bike) and the context of a cycling studio schedule indicate a regular class.",
+      "instructor_name": "MASA"
+    }
+  ]
+}

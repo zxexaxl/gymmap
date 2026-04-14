@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"10:00\",\n      \"end_time\": \"10:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"能見(章)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"11:30\",\n      \"end_time\": \"12:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"斉藤(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"13:00\",\n      \"end_time\": \"13:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"鈴木(一)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"岸川(倫)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"18:30\",\n      \"end_time\": \"19:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"高田(夏)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"19:20\",\n      \"end_time\": \"19:50\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"金子(財)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"20:10\",\n      \"end_time\": \"20:40\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"高田(夏)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"21:30\",\n      \"end_time\": \"22:15\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html\",\n      \"entry_type_candidate\": \"regular_class\",\n      \"entry_type_reason\": \"The program 'ﾁｰﾑﾊﾞｲｸ' is a type of cycling class, which falls under regular studio classes.\",\n      \"instructor_name\": \"高田(夏)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1671,
+    "candidatesTokenCount": 1371,
+    "totalTokenCount": 3042,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1671
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "UCTeabTkKb-hvr0P7OSIoQQ"
+}

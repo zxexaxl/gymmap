@@ -1,9 +1,13 @@
+import { buildJexerSharedScheduleUrl, type ExtractionAdapterId } from "./jexer-adapter";
+
 export type JexerExtractionTargetKind = "store" | "partial" | "group";
 
 export type JexerExtractionTarget = {
   slug: string;
   locationName: string;
   sourceUrl?: string;
+  adapter?: ExtractionAdapterId;
+  shopId?: number;
   kind: JexerExtractionTargetKind;
   members?: string[];
 };
@@ -15,61 +19,81 @@ export const jexerStoreTargets: JexerExtractionTarget[] = [
   {
     slug: "shinjuku",
     locationName: "JEXER 新宿",
-    sourceUrl: "https://www.jexer.jp/mb/shinjuku/schedule/index.html",
+    sourceUrl: buildJexerSharedScheduleUrl(25),
+    adapter: "jexer_shared_schedule",
+    shopId: 25,
     kind: "store",
   },
   {
     slug: "oimachi",
     locationName: "JEXER 大井町",
-    sourceUrl: "https://www.jexer.jp/mb/oi/schedule/index.html",
+    sourceUrl: buildJexerSharedScheduleUrl(4),
+    adapter: "jexer_shared_schedule",
+    shopId: 4,
     kind: "store",
   },
   {
     slug: "ueno",
     locationName: "JEXER 上野",
-    sourceUrl: "https://www.jexer.jp/mb/ueno/index.html",
+    sourceUrl: buildJexerSharedScheduleUrl(8),
+    adapter: "jexer_shared_schedule",
+    shopId: 8,
     kind: "store",
   },
   {
     slug: "ikebukuro",
     locationName: "JEXER 池袋",
-    sourceUrl: "https://www.jexer.jp/mb/ikebukuro/index.html",
+    sourceUrl: buildJexerSharedScheduleUrl(9),
+    adapter: "jexer_shared_schedule",
+    shopId: 9,
     kind: "store",
   },
   {
     slug: "kameido",
     locationName: "JEXER 亀戸",
-    sourceUrl: "https://www.jexer.jp/mb/kameido/",
+    sourceUrl: buildJexerSharedScheduleUrl(24),
+    adapter: "jexer_shared_schedule",
+    shopId: 24,
     kind: "store",
   },
   {
     slug: "yotsuya",
     locationName: "JEXER 四ツ谷",
-    sourceUrl: "https://www.jexer.jp/mb/yotsuya/",
+    sourceUrl: buildJexerSharedScheduleUrl(3),
+    adapter: "jexer_shared_schedule",
+    shopId: 3,
     kind: "store",
   },
   {
     slug: "akabane",
     locationName: "JEXER 赤羽",
-    sourceUrl: "https://www.jexer.jp/mb/akabane/",
+    sourceUrl: buildJexerSharedScheduleUrl(5),
+    adapter: "jexer_shared_schedule",
+    shopId: 5,
     kind: "store",
   },
   {
     slug: "otsuka",
     locationName: "JEXER 大塚",
-    sourceUrl: "https://www.jexer.jp/mb/otsuka/",
+    sourceUrl: buildJexerSharedScheduleUrl(32),
+    adapter: "jexer_shared_schedule",
+    shopId: 32,
     kind: "store",
   },
   {
     slug: "itabashi",
     locationName: "JEXER 板橋",
-    sourceUrl: "https://www.jexer.jp/mb/itabashi/",
+    sourceUrl: buildJexerSharedScheduleUrl(67),
+    adapter: "jexer_shared_schedule",
+    shopId: 67,
     kind: "store",
   },
   {
     slug: "shinkoiwa",
     locationName: "JEXER 新小岩",
-    sourceUrl: "https://www.jexer.jp/mb/shinkoiwa/",
+    sourceUrl: buildJexerSharedScheduleUrl(86),
+    adapter: "jexer_shared_schedule",
+    shopId: 86,
     kind: "store",
   },
 ];
@@ -80,12 +104,14 @@ export const jexerPartialTargets: JexerExtractionTarget[] = [
     slug: "oi-saturday-a",
     locationName: "JEXER 大井町",
     sourceUrl: "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+    adapter: "generic_discovery",
     kind: "partial",
   },
   {
     slug: "kameido-monday-a",
     locationName: "JEXER 亀戸",
     sourceUrl: "https://www.jexer.jp/mb/kameido/schedule/mon_10a.html",
+    adapter: "generic_discovery",
     kind: "partial",
   },
 ];

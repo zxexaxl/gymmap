@@ -8,6 +8,7 @@ import { PDFParse } from "pdf-parse";
 import { normalizeProgramName } from "../../src/lib/normalizeProgramName";
 import { getBrandDiscoveryStrategy, type BrandDiscoveryStrategy } from "../../src/lib/extraction/brand-discovery-strategies";
 import { classifyScheduleEntryType } from "../../src/lib/extraction/entry-type-classifier";
+import type { ExtractionAdapterId } from "../../src/lib/extraction/jexer-adapter";
 import {
   generateStructuredJsonFromGeminiWithDebug,
   GeminiStructuredResponseError,
@@ -297,6 +298,46 @@ async function fetchPdfText(sourceUrl: string) {
   } catch (error) {
     throw new Error(`Failed to parse PDF text: ${error instanceof Error ? error.message : String(error)}`);
   }
+}
+
+async function fetchDirectCandidatePage({
+  sourceUrl,
+  adapter,
+  shopId,
+}: {
+  sourceUrl: string;
+  adapter: ExtractionAdapterId;
+  shopId: number | null;
+}): Promise<CandidatePage> {
+  const lowerUrl = sourceUrl.toLowerCase();
+
+  if (lowerUrl.endsWith(".pdf")) {
+    const pdf = await fetchPdfText(sourceUrl);
+    return {
+      url: sourceUrl,
+      discoveredFrom: null,
+      depth: 0,
+      urlScore: 100,
+      scoreReasons: [adapter, ...(shopId ? [`shop_id:${shopId}`] : [])],
+      contentKind: "pdf",
+      contentType: pdf.contentType,
+      html: "",
+      pdfText: pdf.pdfText,
+    };
+  }
+
+  const htmlResource = await fetchHtml(sourceUrl);
+  return {
+    url: sourceUrl,
+    discoveredFrom: null,
+    depth: 0,
+    urlScore: 100,
+    scoreReasons: [adapter, ...(shopId ? [`shop_id:${shopId}`] : [])],
+    contentKind: "html",
+    contentType: htmlResource.contentType,
+    html: htmlResource.html,
+    pdfText: null,
+  };
 }
 
 function extractHtmlLinks(pageUrl: string, html: string) {
@@ -1305,7 +1346,13 @@ async function runExtractionJob({
   slug,
   locationName,
   sourceUrl,
-}: Pick<JexerExtractionTarget, "slug" | "locationName" | "sourceUrl"> & { sourceUrl: string }) {
+  adapter = "generic_discovery",
+  shopId,
+}: (Pick<JexerExtractionTarget, "slug" | "locationName" | "sourceUrl" | "adapter" | "shopId"> & {
+  sourceUrl: string;
+  adapter?: ExtractionAdapterId;
+  shopId?: number | null;
+})): Promise<void> {
   const baseName = buildRunBaseName(slug);
   const outputPath = buildOutputPath(baseName);
   const debugDirPath = buildDebugDirPath();
@@ -1314,40 +1361,106 @@ async function runExtractionJob({
 
   try {
     const brandStrategy = getBrandDiscoveryStrategy(sourceUrl);
-    const { pages: initialPages, entryOrigin, failedFetches: initialFailedFetches } = await collectCandidatePages(sourceUrl);
-    let classifiedPages = await classifyCandidatePages(initialPages, entryOrigin, locationName, brandStrategy);
-    const failedFetches = [...initialFailedFetches];
-    const maxNavigationRounds = 3;
+    let classifiedPages: ClassifiedCandidatePage[] = [];
+    const failedFetches: FailedCandidateFetch[] = [];
+    let entryOrigin = new URL(sourceUrl).origin;
+    let selection:
+      | ReturnType<typeof selectExtractionTargets>
+      | {
+          selectedPages: ClassifiedCandidatePage[];
+          selectedPageReasons: Array<Record<string, unknown>>;
+          groupSummaries: Array<Record<string, unknown>>;
+          selectionReason: string;
+        };
 
-    for (let round = 0; round < maxNavigationRounds; round += 1) {
-      const remainingBudget = Math.max(explorationBudget.maxVisitedPages - classifiedPages.length, 0);
+    if (adapter === "jexer_shared_schedule" && shopId) {
+      const directPage = await fetchDirectCandidatePage({
+        sourceUrl,
+        adapter,
+        shopId,
+      });
+      entryOrigin = new URL(sourceUrl).origin;
+      classifiedPages = await classifyCandidatePages([directPage], entryOrigin, locationName, brandStrategy);
 
-      if (remainingBudget === 0) {
-        break;
+      const directSignals = summarizePageSignals(getPageText(classifiedPages[0]));
+      const hasScheduleContent =
+        classifiedPages[0].classification.contains_schedule_rows ||
+        directSignals.hasTimeLikeText ||
+        directSignals.hasTableTag ||
+        directSignals.hasRepeatingStructure ||
+        directSignals.hasTimeAndTextDensity;
+
+      selection = {
+        selectedPages: hasScheduleContent ? classifiedPages : [],
+        selectedPageReasons: hasScheduleContent
+          ? [
+              {
+                url: classifiedPages[0].url,
+                page_type: classifiedPages[0].classification.page_type,
+                schedule_kind: classifiedPages[0].classification.schedule_kind,
+                confidence: classifiedPages[0].classification.confidence,
+                url_score: classifiedPages[0].urlScore,
+                signals: directSignals,
+                reason: "selected by jexer shared schedule adapter using direct shop URL",
+              },
+            ]
+          : [],
+        groupSummaries: hasScheduleContent
+          ? [
+              {
+                group_key: `id:shop=${shopId}`,
+                aggregate_score: classifiedPages[0].urlScore,
+                page_count: 1,
+                identifiers: [`shop=${shopId}`],
+                urls: [classifiedPages[0].url],
+              },
+            ]
+          : [],
+        selectionReason: hasScheduleContent
+          ? `selected direct JEXER shared schedule page for shop=${shopId}`
+          : "direct JEXER shared schedule page did not expose recognizable schedule content",
+      };
+    } else {
+      const { pages: initialPages, entryOrigin: discoveredEntryOrigin, failedFetches: initialFailedFetches } =
+        await collectCandidatePages(sourceUrl);
+      entryOrigin = discoveredEntryOrigin;
+      classifiedPages = await classifyCandidatePages(initialPages, entryOrigin, locationName, brandStrategy);
+      failedFetches.push(...initialFailedFetches);
+      const maxNavigationRounds = 3;
+
+      for (let round = 0; round < maxNavigationRounds; round += 1) {
+        const remainingBudget = Math.max(explorationBudget.maxVisitedPages - classifiedPages.length, 0);
+
+        if (remainingBudget === 0) {
+          break;
+        }
+
+        const recommendedPages = await collectRecommendedPages({
+          classifiedPages,
+          entryUrl: sourceUrl,
+          locationName,
+          brandStrategy,
+          remainingBudget,
+        });
+
+        failedFetches.push(...recommendedPages.failedFetches);
+
+        if (recommendedPages.pages.length === 0) {
+          break;
+        }
+
+        classifiedPages = [
+          ...classifiedPages,
+          ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin, locationName, brandStrategy)),
+        ];
       }
 
-      const recommendedPages = await collectRecommendedPages({
+      selection = selectExtractionTargets({
         classifiedPages,
         entryUrl: sourceUrl,
         locationName,
-        brandStrategy,
-        remainingBudget,
       });
-
-      failedFetches.push(...recommendedPages.failedFetches);
-
-      if (recommendedPages.pages.length === 0) {
-        break;
-      }
-
-      classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin, locationName, brandStrategy))];
     }
-
-    const selection = selectExtractionTargets({
-      classifiedPages,
-      entryUrl: sourceUrl,
-      locationName,
-    });
     const explorationSteps = buildExplorationSteps(
       classifiedPages,
       new Set(selection.selectedPages.map((page) => page.url)),
@@ -1688,6 +1801,8 @@ async function main() {
           slug: memberTarget.slug,
           locationName: memberTarget.locationName,
           sourceUrl: memberTarget.sourceUrl,
+          adapter: memberTarget.adapter,
+          shopId: memberTarget.shopId,
         });
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
@@ -1708,7 +1823,13 @@ async function main() {
     process.exit(1);
   }
 
-  await runExtractionJob({ slug, locationName, sourceUrl });
+  await runExtractionJob({
+    slug,
+    locationName,
+    sourceUrl,
+    adapter: target?.adapter ?? "generic_discovery",
+    shopId: target?.shopId,
+  });
 }
 
 main().catch((error) => {
