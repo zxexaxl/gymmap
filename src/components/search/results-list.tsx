@@ -68,6 +68,8 @@ export function ResultsList({ results, hasActiveFilters = false, query = "", deb
                           ? "raw"
                           : hit.field === "canonical_program_name"
                             ? "canonical"
+                            : hit.field === "program_brand"
+                              ? "brand"
                             : "alias"}
                       </p>
                       <p className="search-debug-item">matchedValue: {hit.value}</p>

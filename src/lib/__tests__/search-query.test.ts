@@ -105,6 +105,13 @@ test("raw program name wins over canonical and aliases", () => {
   assert.equal(scoreProgramQueryMatch(result, query), 200);
 });
 
+test("program brand is searchable as part of the main query", () => {
+  const query = normalizeSearchKeyword("les mills");
+  const result = baseResult({});
+
+  assert.equal(scoreProgramQueryMatch(result, query), 255);
+});
+
 test("query debug lists only the actual matching fields", () => {
   const query = normalizeSearchKeyword("body");
   const result = baseResult({});

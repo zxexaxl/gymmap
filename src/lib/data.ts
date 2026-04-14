@@ -29,6 +29,16 @@ type SupabaseJoinedSchedule = ClassSchedule & {
   programs: Program;
 };
 
+const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
+  monday: 0,
+  tuesday: 1,
+  wednesday: 2,
+  thursday: 3,
+  friday: 4,
+  saturday: 5,
+  sunday: 6,
+};
+
 function mapJoinedSchedule(row: SupabaseJoinedSchedule): SearchResult {
   const normalizedSchedule = enrichScheduleWithNormalization({
     ...row,
@@ -100,11 +110,31 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
     })
     .filter((value): value is { item: SearchResult; score: number } => Boolean(value))
     .sort((left, right) => {
+      const weekdayDiff =
+        weekdaySortOrder[left.item.schedule.weekday] - weekdaySortOrder[right.item.schedule.weekday];
+
+      if (weekdayDiff !== 0) {
+        return weekdayDiff;
+      }
+
+      const startTimeDiff = left.item.schedule.start_time.localeCompare(right.item.schedule.start_time);
+
+      if (startTimeDiff !== 0) {
+        return startTimeDiff;
+      }
+
+      const leftDuration = left.item.schedule.duration_minutes ?? Number.MAX_SAFE_INTEGER;
+      const rightDuration = right.item.schedule.duration_minutes ?? Number.MAX_SAFE_INTEGER;
+
+      if (leftDuration !== rightDuration) {
+        return leftDuration - rightDuration;
+      }
+
       if (right.score !== left.score) {
         return right.score - left.score;
       }
 
-      return left.item.schedule.start_time.localeCompare(right.item.schedule.start_time);
+      return left.item.location.name.localeCompare(right.item.location.name);
     })
     .map((entry) => entry.item);
 }

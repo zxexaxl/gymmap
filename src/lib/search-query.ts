@@ -2,7 +2,7 @@ import { getProgramSearchAliases } from "@/lib/program-master";
 import type { SearchResult } from "@/lib/types";
 
 export type ProgramQueryHit = {
-  field: "raw_program_name" | "canonical_program_name" | "searchAliases";
+  field: "raw_program_name" | "canonical_program_name" | "program_brand" | "searchAliases";
   value: string;
   score: number;
 };
@@ -50,6 +50,7 @@ export function getProgramQueryDebug(item: SearchResult, query: string): Program
   const aliases = getProgramSearchAliases(item.schedule.canonical_program_name);
   const rawScore = getMatchScore(query, item.schedule.raw_program_name);
   const canonicalScore = getMatchScore(query, item.schedule.canonical_program_name);
+  const brandScore = getMatchScore(query, item.schedule.program_brand);
 
   if (rawScore > 0) {
     hits.push({
@@ -64,6 +65,14 @@ export function getProgramQueryDebug(item: SearchResult, query: string): Program
       field: "canonical_program_name",
       value: item.schedule.canonical_program_name,
       score: canonicalScore * 90,
+    });
+  }
+
+  if (brandScore > 0 && item.schedule.program_brand) {
+    hits.push({
+      field: "program_brand",
+      value: item.schedule.program_brand,
+      score: brandScore * 85,
     });
   }
 
@@ -86,6 +95,7 @@ export function scoreProgramQueryMatch(item: SearchResult, query: string) {
   const hits = getProgramQueryDebug(item, query);
   const rawScore = hits.find((hit) => hit.field === "raw_program_name")?.score ?? 0;
   const canonicalScore = hits.find((hit) => hit.field === "canonical_program_name")?.score ?? 0;
+  const brandScore = hits.find((hit) => hit.field === "program_brand")?.score ?? 0;
   const aliasScore = Math.max(...hits.filter((hit) => hit.field === "searchAliases").map((hit) => hit.score), 0);
 
   if (rawScore > 0) {
@@ -94,6 +104,10 @@ export function scoreProgramQueryMatch(item: SearchResult, query: string) {
 
   if (canonicalScore > 0) {
     return canonicalScore;
+  }
+
+  if (brandScore > 0) {
+    return brandScore;
   }
 
   if (aliasScore > 0) {

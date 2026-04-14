@@ -17,6 +17,8 @@ type Coordinates = {
   longitude: number;
 };
 
+type GeolocationPermissionState = "granted" | "prompt" | "denied" | "unsupported" | "unknown";
+
 const TOKYO_CENTER: Coordinates = {
   latitude: 35.681236,
   longitude: 139.767125,
@@ -86,15 +88,45 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
   const [programQuery, setProgramQuery] = useState("");
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
-  const [geolocationStatus, setGeolocationStatus] = useState<"loading" | "granted" | "denied" | "fallback">("loading");
+  const [geolocationStatus, setGeolocationStatus] = useState<"idle" | "loading" | "granted" | "denied" | "fallback" | "error">("idle");
+  const [permissionState, setPermissionState] = useState<GeolocationPermissionState>("unknown");
+  const [geolocationMessage, setGeolocationMessage] = useState("現在地を確認すると、近くのジムを優先して表示できます。");
 
-  function requestCurrentPosition() {
+  async function syncPermissionState() {
     if (!("geolocation" in navigator)) {
+      setPermissionState("unsupported");
       setGeolocationStatus("fallback");
+      setGeolocationMessage("この環境では位置情報に対応していないため、東京中心で表示しています。");
+      return;
+    }
+
+    if (!("permissions" in navigator) || !navigator.permissions?.query) {
+      setPermissionState("unknown");
+      return;
+    }
+
+    try {
+      const permissionStatus = await navigator.permissions.query({ name: "geolocation" });
+      setPermissionState(permissionStatus.state);
+
+      permissionStatus.onchange = () => {
+        setPermissionState(permissionStatus.state);
+      };
+    } catch {
+      setPermissionState("unknown");
+    }
+  }
+
+  async function requestCurrentPosition() {
+    if (!("geolocation" in navigator)) {
+      setPermissionState("unsupported");
+      setGeolocationStatus("fallback");
+      setGeolocationMessage("この環境では位置情報に対応していないため、東京中心で表示しています。");
       return;
     }
 
     setGeolocationStatus("loading");
+    setGeolocationMessage("現在地を取得しています…");
     navigator.geolocation.getCurrentPosition(
       (position) => {
         setCurrentPosition({
@@ -102,9 +134,16 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
           longitude: position.coords.longitude,
         });
         setGeolocationStatus("granted");
+        setPermissionState("granted");
+        setGeolocationMessage("現在地を取得しました。近い順で表示しています。");
       },
       () => {
         setGeolocationStatus("denied");
+        setGeolocationMessage(
+          permissionState === "denied"
+            ? "このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。"
+            : "位置情報を取得できませんでした。許可設定または端末の位置情報設定をご確認ください。",
+        );
       },
       {
         enableHighAccuracy: false,
@@ -115,6 +154,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   }
 
   useEffect(() => {
+    syncPermissionState();
     requestCurrentPosition();
   }, []);
 
@@ -216,9 +256,13 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
       ? "現在地に近い順で表示中"
       : geolocationStatus === "denied"
         ? "位置情報が使えないため、東京中心で表示中"
+        : geolocationStatus === "error"
+          ? "位置情報を取得できなかったため、東京中心で表示中"
         : geolocationStatus === "fallback"
           ? "位置情報未対応のため、東京中心で表示中"
-          : "現在地を確認中";
+          : geolocationStatus === "loading"
+            ? "現在地を取得中"
+            : "現在地は未取得です";
   const resultSummary = normalizedQuery
     ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedResults.length}レッスンを表示中`
     : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
@@ -245,11 +289,28 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
         <p className="map-status muted">
           {statusLabel} / {resultSummary}
         </p>
+        <p className="map-status-detail muted">
+          {permissionState === "prompt"
+            ? "現在地の利用は未許可です。ボタンを押すとブラウザの許可確認が表示されます。"
+            : permissionState === "denied"
+              ? "このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。"
+              : permissionState === "granted"
+                ? "現在地が使えるため、近い順で一覧を更新しています。"
+                : geolocationMessage}
+        </p>
         {geolocationStatus !== "granted" ? (
           <div className="map-geolocation-help">
-            <p className="muted">現在地を許可すると、近くのジムを優先して表示できます。</p>
-            <button type="button" className="map-geolocation-button" onClick={requestCurrentPosition}>
-              現在地を使う
+            <p className="muted">{geolocationMessage}</p>
+            <button
+              type="button"
+              className="map-geolocation-button"
+              onClick={() => {
+                void syncPermissionState();
+                void requestCurrentPosition();
+              }}
+              disabled={geolocationStatus === "loading"}
+            >
+              {geolocationStatus === "loading" ? "現在地を取得中…" : "現在地を使う"}
             </button>
           </div>
         ) : null}
