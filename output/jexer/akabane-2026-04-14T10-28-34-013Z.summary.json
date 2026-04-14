@@ -1,0 +1,106 @@
+{
+  "total_records": 784,
+  "needs_review_count": 613,
+  "unresolved_count": 532,
+  "usage_metadata": {
+    "prompt_token_count": 399890,
+    "candidates_token_count": 89574,
+    "total_token_count": 489472,
+    "thoughts_token_count": 8,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 399890,
+  "total_output_tokens": 89574,
+  "total_tokens": 489472,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 696
+    },
+    {
+      "key": "Les Mills",
+      "count": 57
+    },
+    {
+      "key": "ZUMBA",
+      "count": 17
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 14
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 532
+    },
+    {
+      "key": "mind_body",
+      "count": 132
+    },
+    {
+      "key": "cardio",
+      "count": 44
+    },
+    {
+      "key": "dance",
+      "count": 40
+    },
+    {
+      "key": "strength",
+      "count": 27
+    },
+    {
+      "key": "martial_arts",
+      "count": 7
+    },
+    {
+      "key": "conditioning",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 193
+    },
+    {
+      "key": "スイミングスクール【ジュニア】",
+      "count": 33
+    },
+    {
+      "key": "BODYCOMBAT",
+      "count": 16
+    },
+    {
+      "key": "リラックスヨガ",
+      "count": 16
+    },
+    {
+      "key": "ZUMBA",
+      "count": 15
+    },
+    {
+      "key": "HOT YOGAビギナー",
+      "count": 13
+    },
+    {
+      "key": "アクア",
+      "count": 12
+    },
+    {
+      "key": "BODY COMBAT",
+      "count": 11
+    },
+    {
+      "key": "BODYPUMP",
+      "count": 10
+    },
+    {
+      "key": "BODY PUMP",
+      "count": 9
+    }
+  ]
+}

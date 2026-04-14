@@ -1,0 +1,36 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/schedule/?shop=24\",\n    \"https://www.jexer.jp/mb/kameido/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/kameido/admission.html\",\n    \"https://www.jexer.jp/mb/kameido/facilities.html\",\n    \"https://www.jexer.jp/mb/kameido/map.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3201,
+    "candidatesTokenCount": 181,
+    "totalTokenCount": 3382,
+    "cachedContentTokenCount": 2780,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3201
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2780
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "wxfeaZzmBKKw0-kPxMmmqAI"
+}

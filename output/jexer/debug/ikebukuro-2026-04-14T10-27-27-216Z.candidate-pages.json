@@ -1,0 +1,1172 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "entry_origin": "https://www.jexer.jp",
+  "budget": {
+    "maxVisitedPages": 18,
+    "maxAiClassifications": 16,
+    "maxPdfPages": 4,
+    "maxDepth": 3,
+    "maxSeedsFromEntry": 8,
+    "maxLinksPerPage": 10
+  },
+  "failed_fetches": [
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=9",
+      "discoveredFrom": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/index.html",
+      "discoveredFrom": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 404 Not Found",
+      "status": 404,
+      "statusText": "Not Found",
+      "responseBodyPreview": "File not found.\n"
+    }
+  ],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=9",
+        "https://www.jexer.jp/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 2,
+      "visited_url": "https://www.jexer.jp/schedule/?shop=9",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "studio",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=17",
+        "https://www.jexer.jp/schedule/?shop=24",
+        "https://www.jexer.jp/schedule/?shop=25",
+        "https://www.jexer.jp/schedule/?shop=3",
+        "https://www.jexer.jp/schedule/?shop=32",
+        "https://www.jexer.jp/schedule/?shop=37",
+        "https://www.jexer.jp/schedule/?shop=4",
+        "https://www.jexer.jp/schedule/?shop=45",
+        "https://www.jexer.jp/schedule/?shop=5",
+        "https://www.jexer.jp/schedule/?shop=6",
+        "https://www.jexer.jp/schedule/?shop=66",
+        "https://www.jexer.jp/schedule/?shop=67",
+        "https://www.jexer.jp/schedule/?shop=7",
+        "https://www.jexer.jp/schedule/?shop=75",
+        "https://www.jexer.jp/schedule/?shop=76",
+        "https://www.jexer.jp/schedule/?shop=8",
+        "https://www.jexer.jp/schedule/?shop=82",
+        "https://www.jexer.jp/schedule/?shop=86",
+        "https://www.jexer.jp/schedule/?shop=9"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 3,
+      "visited_url": "https://www.jexer.jp/mb/ikebukuro/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/ikebukuro/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 4,
+      "visited_url": "https://www.jexer.jp/mb/ikebukuro/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/ikebukuro/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 5,
+      "visited_url": "https://www.jexer.jp/mb/ikebukuro/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/ikebukuro/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 6,
+      "visited_url": "https://www.jexer.jp/mb/ikebukuro/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 7,
+      "visited_url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/ikebukuro/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 8,
+      "visited_url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/shop/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 9,
+      "visited_url": "https://www.jexer.jp/mb/shop/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/visit/index.html",
+      "depth": 2,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/index.html",
+        "https://www.jexer.jp/mb/higashikanagawa/index.html",
+        "https://www.jexer.jp/mb/ikebukuro/index.html",
+        "https://www.jexer.jp/mb/kamata/index.html",
+        "https://www.jexer.jp/mb/kameido/index.html",
+        "https://www.jexer.jp/mb/kawaguchi/index.html",
+        "https://www.jexer.jp/mb/musashikoganei/index.html",
+        "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+        "https://www.jexer.jp/mb/oi/index.html",
+        "https://www.jexer.jp/mb/omiya/index.html",
+        "https://www.jexer.jp/mb/otsuka/index.html",
+        "https://www.jexer.jp/mb/shinjuku/index.html",
+        "https://www.jexer.jp/mb/sopra/akihabara/index.html",
+        "https://www.jexer.jp/mb/toda/index.html",
+        "https://www.jexer.jp/mb/ueno/index.html",
+        "https://www.jexer.jp/mb/yotsuya/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 10,
+      "visited_url": "https://www.jexer.jp/mb/omiya/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 3,
+      "score_reasons": [
+        "shared_segments:1",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=6",
+        "https://www.jexer.jp/mb/admission.html",
+        "https://www.jexer.jp/mb/facilities.html",
+        "https://www.jexer.jp/mb/info/",
+        "https://www.jexer.jp/mb/map.html",
+        "https://www.jexer.jp/mb/member/index.html",
+        "https://www.jexer.jp/mb/visit/index.html",
+        "https://www.jexer.jp/mb/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 11,
+      "visited_url": "https://www.jexer.jp/mb/akabane/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/akabane/schedule/?shop=5",
+        "https://www.jexer.jp/mb/akabane/admission.html",
+        "https://www.jexer.jp/mb/akabane/facilities.html",
+        "https://www.jexer.jp/mb/akabane/info/",
+        "https://www.jexer.jp/mb/akabane/map.html",
+        "https://www.jexer.jp/mb/akabane/visit/index.html",
+        "https://www.jexer.jp/mb/akabane/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 12,
+      "visited_url": "https://www.jexer.jp/mb/higashikanagawa/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/higashikanagawa/admission.html",
+        "https://www.jexer.jp/mb/higashikanagawa/facilities.html",
+        "https://www.jexer.jp/mb/schedule/?shop=17",
+        "https://www.jexer.jp/mb/visit/index.html",
+        "https://www.jexer.jp/mb/higashikanagawa/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 13,
+      "visited_url": "https://www.jexer.jp/mb/kamata/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=10"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 14,
+      "visited_url": "https://www.jexer.jp/mb/kameido/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/schedule/?shop=24",
+        "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 15,
+      "visited_url": "https://www.jexer.jp/mb/kawaguchi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kawaguchi/schedule/?shop=11",
+        "https://www.jexer.jp/mb/kawaguchi/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 16,
+      "visited_url": "https://www.jexer.jp/mb/musashikoganei/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/musashikoganei/schedule/?shop=18",
+        "https://www.jexer.jp/mb/musashikoganei/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 17,
+      "visited_url": "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/nishikawaguchi/admission.html",
+        "https://www.jexer.jp/mb/nishikawaguchi/facilities.html",
+        "https://www.jexer.jp/mb/nishikawaguchi/map.html",
+        "https://www.jexer.jp/mb/nishikawaguchi/whatsnew/index.html",
+        "https://www.jexer.jp/schedule/?shop=22",
+        "https://www.jexer.jp/mb/nishikawaguchi/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 18,
+      "visited_url": "https://www.jexer.jp/mb/oi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/oi/admission.html",
+        "https://www.jexer.jp/mb/oi/facilities.html",
+        "https://www.jexer.jp/mb/oi/map.html",
+        "https://www.jexer.jp/mb/oi/whatsnew/index.html",
+        "https://www.jexer.jp/mb/schedule/?shop=4",
+        "https://www.jexer.jp/mb/index.html",
+        "https://www.jexer.jp/mb/info/",
+        "https://www.jexer.jp/mb/visit/index.html",
+        "https://www.jexer.jp/mb/oi/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 20,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3087,
+        "candidates_token_count": 105,
+        "total_token_count": 3194,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=9",
+          "https://www.jexer.jp/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 24,
+        "repeatingBlockCount": 0,
+        "linkCount": 4,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2210,
+        "candidates_token_count": 90,
+        "total_token_count": 2300,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/ikebukuro/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1273,
+        "candidates_token_count": 90,
+        "total_token_count": 1363,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/ikebukuro/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1105,
+        "candidates_token_count": 90,
+        "total_token_count": 1197,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/ikebukuro/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/ikebukuro/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1663,
+        "candidates_token_count": 679,
+        "total_token_count": 2344,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 2,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1259,
+        "candidates_token_count": 90,
+        "total_token_count": 1349,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/ikebukuro/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 987,
+        "candidates_token_count": 88,
+        "total_token_count": 1077,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/shop/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shop/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/visit/index.html",
+      "depth": 2,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 18,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1614,
+        "candidates_token_count": 434,
+        "total_token_count": 2048,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/index.html",
+          "https://www.jexer.jp/mb/higashikanagawa/index.html",
+          "https://www.jexer.jp/mb/ikebukuro/index.html",
+          "https://www.jexer.jp/mb/kamata/index.html",
+          "https://www.jexer.jp/mb/kameido/index.html",
+          "https://www.jexer.jp/mb/kawaguchi/index.html",
+          "https://www.jexer.jp/mb/musashikoganei/index.html",
+          "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+          "https://www.jexer.jp/mb/oi/index.html",
+          "https://www.jexer.jp/mb/omiya/index.html",
+          "https://www.jexer.jp/mb/otsuka/index.html",
+          "https://www.jexer.jp/mb/shinjuku/index.html",
+          "https://www.jexer.jp/mb/sopra/akihabara/index.html",
+          "https://www.jexer.jp/mb/toda/index.html",
+          "https://www.jexer.jp/mb/ueno/index.html",
+          "https://www.jexer.jp/mb/yotsuya/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/akabane/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3166,
+        "candidates_token_count": 232,
+        "total_token_count": 3398,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/akabane/schedule/?shop=5",
+          "https://www.jexer.jp/mb/akabane/admission.html",
+          "https://www.jexer.jp/mb/akabane/facilities.html",
+          "https://www.jexer.jp/mb/akabane/info/",
+          "https://www.jexer.jp/mb/akabane/map.html",
+          "https://www.jexer.jp/mb/akabane/visit/index.html",
+          "https://www.jexer.jp/mb/akabane/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/higashikanagawa/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3183,
+        "candidates_token_count": 196,
+        "total_token_count": 3379,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/higashikanagawa/admission.html",
+          "https://www.jexer.jp/mb/higashikanagawa/facilities.html",
+          "https://www.jexer.jp/mb/schedule/?shop=17",
+          "https://www.jexer.jp/mb/visit/index.html",
+          "https://www.jexer.jp/mb/higashikanagawa/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kamata/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 20,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3115,
+        "candidates_token_count": 87,
+        "total_token_count": 3202,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=10"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3201,
+        "candidates_token_count": 119,
+        "total_token_count": 3320,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/schedule/?shop=24",
+          "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kawaguchi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 20,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3167,
+        "candidates_token_count": 116,
+        "total_token_count": 3283,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kawaguchi/schedule/?shop=11",
+          "https://www.jexer.jp/mb/kawaguchi/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/musashikoganei/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 4,
+        "repeatingBlockCount": 0,
+        "linkCount": 16,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2920,
+        "candidates_token_count": 122,
+        "total_token_count": 3042,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/musashikoganei/schedule/?shop=18",
+          "https://www.jexer.jp/mb/musashikoganei/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 20,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3146,
+        "candidates_token_count": 212,
+        "total_token_count": 3360,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/nishikawaguchi/admission.html",
+          "https://www.jexer.jp/mb/nishikawaguchi/facilities.html",
+          "https://www.jexer.jp/mb/nishikawaguchi/map.html",
+          "https://www.jexer.jp/mb/nishikawaguchi/whatsnew/index.html",
+          "https://www.jexer.jp/schedule/?shop=22",
+          "https://www.jexer.jp/mb/nishikawaguchi/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3201,
+        "candidates_token_count": 425,
+        "total_token_count": 3628,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/oi/admission.html",
+          "https://www.jexer.jp/mb/oi/facilities.html",
+          "https://www.jexer.jp/mb/oi/map.html",
+          "https://www.jexer.jp/mb/oi/whatsnew/index.html",
+          "https://www.jexer.jp/mb/schedule/?shop=4",
+          "https://www.jexer.jp/mb/index.html",
+          "https://www.jexer.jp/mb/info/",
+          "https://www.jexer.jp/mb/visit/index.html",
+          "https://www.jexer.jp/mb/oi/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/schedule/?shop=9",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/ikebukuro/index.html",
+      "depth": 1,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": false,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 3,
+        "linkCount": 40,
+        "rowCount": 20
+      },
+      "usage_metadata": {
+        "prompt_token_count": 4050,
+        "candidates_token_count": 442,
+        "total_token_count": 4492,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=17",
+          "https://www.jexer.jp/schedule/?shop=24",
+          "https://www.jexer.jp/schedule/?shop=25",
+          "https://www.jexer.jp/schedule/?shop=3",
+          "https://www.jexer.jp/schedule/?shop=32",
+          "https://www.jexer.jp/schedule/?shop=37",
+          "https://www.jexer.jp/schedule/?shop=4",
+          "https://www.jexer.jp/schedule/?shop=45",
+          "https://www.jexer.jp/schedule/?shop=5",
+          "https://www.jexer.jp/schedule/?shop=6",
+          "https://www.jexer.jp/schedule/?shop=66",
+          "https://www.jexer.jp/schedule/?shop=67",
+          "https://www.jexer.jp/schedule/?shop=7",
+          "https://www.jexer.jp/schedule/?shop=75",
+          "https://www.jexer.jp/schedule/?shop=76",
+          "https://www.jexer.jp/schedule/?shop=8",
+          "https://www.jexer.jp/schedule/?shop=82",
+          "https://www.jexer.jp/schedule/?shop=86",
+          "https://www.jexer.jp/schedule/?shop=9"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/omiya/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shop/index.html",
+      "depth": 3,
+      "url_score": 3,
+      "score_reasons": [
+        "shared_segments:1",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 17,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2927,
+        "candidates_token_count": 223,
+        "total_token_count": 3150,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=6",
+          "https://www.jexer.jp/mb/admission.html",
+          "https://www.jexer.jp/mb/facilities.html",
+          "https://www.jexer.jp/mb/info/",
+          "https://www.jexer.jp/mb/map.html",
+          "https://www.jexer.jp/mb/member/index.html",
+          "https://www.jexer.jp/mb/visit/index.html",
+          "https://www.jexer.jp/mb/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    }
+  ]
+}

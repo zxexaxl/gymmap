@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"studio\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/fitnessstudio/kamata/index.html\",\n    \"https://www.jexer.jp/fitnessstudio/omori/index.html\",\n    \"https://www.jexer.jp/fitnessstudio/pilates.yokohama/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 14157,
+    "candidatesTokenCount": 140,
+    "totalTokenCount": 14297,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14157
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "4xbeadv1Fcee1e8P8vyXoQI"
+}

@@ -12,6 +12,7 @@ import {
   getGeminiModelId,
 } from "../../src/lib/extraction/gemini-client";
 import { summarizeJexerExtractionResult } from "../../src/lib/extraction/jexer-summary";
+import { scoreLocationConsistency } from "../../src/lib/extraction/location-consistency";
 import {
   getOrigin,
   normalizeUrlLikeInput,
@@ -59,6 +60,8 @@ type ClassifiedCandidatePage = CandidatePage & {
   rawResponseText: string;
   usageMetadata: GeminiUsageMetadata | null;
 };
+
+type PageLocationConsistency = ReturnType<typeof scoreLocationConsistency>;
 
 type PageSignalSummary = {
   hasTimeLikeText: boolean;
@@ -634,7 +637,7 @@ function getPageText(page: CandidatePage | ClassifiedCandidatePage) {
   return page.contentKind === "pdf" ? page.pdfText ?? "" : page.html;
 }
 
-async function classifyCandidatePage(page: CandidatePage, entryOrigin: string) {
+async function classifyCandidatePage(page: CandidatePage, entryOrigin: string, locationName: string) {
   if (page.contentKind === "pdf") {
     return {
       ...page,
@@ -661,6 +664,7 @@ async function classifyCandidatePage(page: CandidatePage, entryOrigin: string) {
     "schedule_detail means a page that directly contains rows, repeating blocks, or dense time-and-class entries.",
     "pdf_schedule means the page is itself a schedule PDF resource.",
     "instructor means an instructor, trainer, or substitution page, not the main class schedule.",
+    `The target location is: ${locationName}. Prefer links and pages that look consistent with this location.`,
     `Only recommend next URLs on the same origin: ${entryOrigin}`,
   ].join(" ");
 
@@ -697,7 +701,7 @@ async function classifyCandidatePage(page: CandidatePage, entryOrigin: string) {
   } satisfies ClassifiedCandidatePage;
 }
 
-async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: string) {
+async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: string, locationName: string) {
   const classifiedPages: ClassifiedCandidatePage[] = [];
   let aiClassificationCount = 0;
 
@@ -707,7 +711,7 @@ async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: strin
 
   for (const page of sortedPages) {
     if (page.contentKind === "pdf") {
-      classifiedPages.push(await classifyCandidatePage(page, entryOrigin));
+      classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName));
       continue;
     }
 
@@ -729,7 +733,7 @@ async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: strin
       continue;
     }
 
-    classifiedPages.push(await classifyCandidatePage(page, entryOrigin));
+    classifiedPages.push(await classifyCandidatePage(page, entryOrigin, locationName));
     aiClassificationCount += 1;
   }
 
@@ -739,10 +743,12 @@ async function classifyCandidatePages(pages: CandidatePage[], entryOrigin: strin
 async function collectRecommendedPages({
   classifiedPages,
   entryUrl,
+  locationName,
   remainingBudget,
 }: {
   classifiedPages: ClassifiedCandidatePage[];
   entryUrl: string;
+  locationName: string;
   remainingBudget: number;
 }) {
   const existingUrls = new Set(classifiedPages.map((page) => page.url));
@@ -764,11 +770,18 @@ async function collectRecommendedPages({
             entryUrl,
             discoveredFrom: `ai_recommendation:${page.url}`,
           });
+          const locationConsistency = scoreLocationConsistency({
+            entryUrl,
+            candidateUrl: nextUrl,
+            discoveredFrom: `ai_recommendation:${page.url}`,
+            locationName,
+            pageText: "",
+          });
           discoveredCandidates.set(nextUrl, {
             discoveredFrom: `ai_recommendation:${page.url}`,
             depth: page.depth + 1,
-            score: score.score + 2,
-            scoreReasons: [...score.reasons, "ai_recommended"],
+            score: score.score + locationConsistency.score + 2,
+            scoreReasons: [...score.reasons, ...locationConsistency.reasons, "ai_recommended"],
           });
         }
       }
@@ -917,8 +930,16 @@ function isSoftExcludedPage(page: ClassifiedCandidatePage) {
   return page.classification.page_type === "ignore" || page.classification.page_type === "instructor";
 }
 
-function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
-  const selectedPages = classifiedPages
+function selectExtractionTargets({
+  classifiedPages,
+  entryUrl,
+  locationName,
+}: {
+  classifiedPages: ClassifiedCandidatePage[];
+  entryUrl: string;
+  locationName: string;
+}) {
+  const detailCandidates = classifiedPages
     .filter((page) => !isSoftExcludedPage(page))
     .filter((page) => {
       const text = getPageText(page);
@@ -937,7 +958,91 @@ function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
         signals.hasTimeAndTextDensity;
 
       return (explicitDetail || heuristicDetailLike) && hasScheduleContent;
-    })
+    });
+
+  const candidateWithConsistency = detailCandidates.map((page) => {
+    const signals = summarizePageSignals(getPageText(page));
+    const locationConsistency = scoreLocationConsistency({
+      entryUrl,
+      candidateUrl: page.url,
+      discoveredFrom: page.discoveredFrom,
+      locationName,
+      pageText: getPageText(page),
+    });
+
+    return {
+      page,
+      signals,
+      locationConsistency,
+    };
+  });
+
+  const groupedCandidates = new Map<
+    string,
+    {
+      groupKey: string;
+      aggregateScore: number;
+      pageCount: number;
+      identifiers: Set<string>;
+      pages: Array<{
+        page: ClassifiedCandidatePage;
+        signals: PageSignalSummary;
+        locationConsistency: PageLocationConsistency;
+      }>;
+    }
+  >();
+
+  for (const candidate of candidateWithConsistency) {
+    const kindPriority = {
+      studio: 0,
+      bike: 1,
+      hot_yoga: 2,
+      mixed: 3,
+      unknown: 4,
+    } as const;
+    const kindBonus = 4 - kindPriority[candidate.page.classification.schedule_kind];
+    const contentBonus =
+      (candidate.signals.hasTimeAndTextDensity ? 3 : 0) +
+      (candidate.signals.hasRepeatingStructure ? 2 : 0) +
+      (candidate.signals.hasTableTag ? 1 : 0);
+    const pageAggregateScore =
+      candidate.page.urlScore +
+      candidate.page.classification.confidence * 10 +
+      candidate.locationConsistency.score +
+      kindBonus +
+      contentBonus;
+
+    const existing = groupedCandidates.get(candidate.locationConsistency.groupKey) ?? {
+      groupKey: candidate.locationConsistency.groupKey,
+      aggregateScore: 0,
+      pageCount: 0,
+      identifiers: new Set<string>(),
+      pages: [],
+    };
+    existing.aggregateScore += pageAggregateScore;
+    existing.pageCount += 1;
+    if (candidate.locationConsistency.primaryIdentifier) {
+      existing.identifiers.add(candidate.locationConsistency.primaryIdentifier);
+    }
+    existing.pages.push(candidate);
+    groupedCandidates.set(candidate.locationConsistency.groupKey, existing);
+  }
+
+  const sortedGroups = Array.from(groupedCandidates.values()).sort((left, right) => {
+    if (right.aggregateScore !== left.aggregateScore) {
+      return right.aggregateScore - left.aggregateScore;
+    }
+
+    if (right.pageCount !== left.pageCount) {
+      return right.pageCount - left.pageCount;
+    }
+
+    return left.groupKey.localeCompare(right.groupKey);
+  });
+
+  const selectedGroup = sortedGroups[0] ?? null;
+  const selectedPages = (selectedGroup?.pages ?? [])
+    .slice()
     .sort((left, right) => {
       const kindPriority = {
         studio: 0,
@@ -947,22 +1052,27 @@ function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
         unknown: 4,
       } as const;
 
-      const kindDiff = kindPriority[left.classification.schedule_kind] - kindPriority[right.classification.schedule_kind];
+      const kindDiff =
+        kindPriority[left.page.classification.schedule_kind] - kindPriority[right.page.classification.schedule_kind];
       if (kindDiff !== 0) {
         return kindDiff;
       }
 
-      if (right.urlScore !== left.urlScore) {
-        return right.urlScore - left.urlScore;
+      if (right.locationConsistency.score !== left.locationConsistency.score) {
+        return right.locationConsistency.score - left.locationConsistency.score;
       }
 
-      return right.classification.confidence - left.classification.confidence;
+      if (right.page.urlScore !== left.page.urlScore) {
+        return right.page.urlScore - left.page.urlScore;
+      }
+
+      return right.page.classification.confidence - left.page.classification.confidence;
     });
 
   return {
-    selectedPages,
-    selectedPageReasons: selectedPages.map((page) => {
-      const signals = summarizePageSignals(getPageText(page));
+    selectedPages: selectedPages.map((candidate) => candidate.page),
+    selectedPageReasons: selectedPages.map((candidate) => {
+      const { page, signals, locationConsistency } = candidate;
       return {
         url: page.url,
         page_type: page.classification.page_type,
@@ -970,6 +1080,7 @@ function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
         confidence: page.classification.confidence,
         url_score: page.urlScore,
         signals,
+        location_consistency: locationConsistency,
         reason:
           page.classification.page_type === "pdf_schedule"
             ? "selected because this is a schedule PDF candidate"
@@ -978,9 +1089,16 @@ function selectExtractionTargets(classifiedPages: ClassifiedCandidatePage[]) {
               : "selected because the page looks detail-like by repeating schedule structure",
       };
     }),
+    groupSummaries: sortedGroups.map((group) => ({
+      group_key: group.groupKey,
+      aggregate_score: group.aggregateScore,
+      page_count: group.pageCount,
+      identifiers: Array.from(group.identifiers),
+      urls: group.pages.map((candidate) => candidate.page.url),
+    })),
     selectionReason:
       selectedPages.length > 0
-        ? "detail-like pages were selected by page_type, structural signals, and score ranking"
+        ? `detail-like pages were selected by page_type, structural signals, and location consistency grouping (${selectedGroup?.groupKey ?? "unknown_group"})`
         : "no detail-like pages detected within exploration budget",
   };
 }
@@ -1123,7 +1241,7 @@ async function runExtractionJob({
 
   try {
     const { pages: initialPages, entryOrigin, failedFetches: initialFailedFetches } = await collectCandidatePages(sourceUrl);
-    let classifiedPages = await classifyCandidatePages(initialPages, entryOrigin);
+    let classifiedPages = await classifyCandidatePages(initialPages, entryOrigin, locationName);
     const failedFetches = [...initialFailedFetches];
     const maxNavigationRounds = 3;
 
@@ -1137,6 +1255,7 @@ async function runExtractionJob({
       const recommendedPages = await collectRecommendedPages({
         classifiedPages,
         entryUrl: sourceUrl,
+        locationName,
         remainingBudget,
       });
 
@@ -1146,10 +1265,14 @@ async function runExtractionJob({
         break;
       }
 
-      classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin))];
+      classifiedPages = [...classifiedPages, ...(await classifyCandidatePages(recommendedPages.pages, entryOrigin, locationName))];
     }
 
-    const selection = selectExtractionTargets(classifiedPages);
+    const selection = selectExtractionTargets({
+      classifiedPages,
+      entryUrl: sourceUrl,
+      locationName,
+    });
     const explorationSteps = buildExplorationSteps(
       classifiedPages,
       new Set(selection.selectedPages.map((page) => page.url)),
@@ -1225,6 +1348,7 @@ async function runExtractionJob({
           selected_urls: selectedUrls,
           selected_count: selection.selectedPages.length,
           selected_pages: selection.selectedPageReasons,
+          group_summaries: selection.groupSummaries,
           exploration_steps: explorationSteps,
           usage_metadata: classificationUsageMetadata,
         },

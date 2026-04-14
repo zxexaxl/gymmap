@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35766\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35765\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35731\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35725\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35723\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35199\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35512\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=34347\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35476\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35464\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35457\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35325\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=35073\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=33864\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=33708\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=33131\",\n    \"https://www.jexer.jp/mb/ikebukuro/whatsnew/info.php?info_no=32841\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1663,
+    "candidatesTokenCount": 679,
+    "totalTokenCount": 2344,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1663
+      }
+    ],
+    "thoughtsTokenCount": 2
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "lhbeafyCJPTk2roPn83XyQU"
+}

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/fitnesslounge/thejexertokyo/index.html\",\n    \"https://www.jexer.jp/fitnesslounge/annex/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 14332,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 14451,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14332
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "zRbeaduHN9vK1e8PuqGGsA0"
+}

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/akabane/schedule/?shop=5\",\n    \"https://www.jexer.jp/mb/akabane/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/akabane/info/\",\n    \"https://www.jexer.jp/mb/akabane/admission.html\",\n    \"https://www.jexer.jp/mb/akabane/facilities.html\",\n    \"https://www.jexer.jp/mb/akabane/visit/index.html\",\n    \"https://www.jexer.jp/mb/akabane/map.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3166,
+    "candidatesTokenCount": 232,
+    "totalTokenCount": 3398,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3166
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "mxbeafvEOZrN1e8PtrfyyAw"
+}

@@ -1,0 +1,44 @@
+{
+  "url": "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/shop/index.html",
+  "depth": 3,
+  "url_score": 1,
+  "score_reasons": [
+    "shared_segments:1"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": true,
+    "timeLikeCount": 6,
+    "repeatingBlockCount": 0,
+    "linkCount": 20,
+    "rowCount": 6
+  },
+  "usage_metadata": {
+    "prompt_token_count": 3146,
+    "candidates_token_count": 212,
+    "total_token_count": 3360,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/nishikawaguchi/admission.html",
+      "https://www.jexer.jp/mb/nishikawaguchi/facilities.html",
+      "https://www.jexer.jp/mb/nishikawaguchi/map.html",
+      "https://www.jexer.jp/mb/nishikawaguchi/whatsnew/index.html",
+      "https://www.jexer.jp/schedule/?shop=22",
+      "https://www.jexer.jp/mb/nishikawaguchi/instructor/weekly.html"
+    ],
+    "confidence": 1
+  }
+}

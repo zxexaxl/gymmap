@@ -1,0 +1,54 @@
+{
+  "url": "https://www.jexer.jp/mb/shop/index.html",
+  "discovered_from": "https://www.jexer.jp/mb/visit/index.html",
+  "depth": 2,
+  "url_score": 1,
+  "score_reasons": [
+    "shared_segments:1"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true,
+    "hasRepeatingStructure": false,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 0,
+    "linkCount": 18,
+    "rowCount": 1
+  },
+  "usage_metadata": {
+    "prompt_token_count": 1614,
+    "candidates_token_count": 434,
+    "total_token_count": 2048,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [
+      "https://www.jexer.jp/mb/akabane/index.html",
+      "https://www.jexer.jp/mb/higashikanagawa/index.html",
+      "https://www.jexer.jp/mb/ikebukuro/index.html",
+      "https://www.jexer.jp/mb/kamata/index.html",
+      "https://www.jexer.jp/mb/kameido/index.html",
+      "https://www.jexer.jp/mb/kawaguchi/index.html",
+      "https://www.jexer.jp/mb/musashikoganei/index.html",
+      "https://www.jexer.jp/mb/nishikawaguchi/index.html",
+      "https://www.jexer.jp/mb/oi/index.html",
+      "https://www.jexer.jp/mb/omiya/index.html",
+      "https://www.jexer.jp/mb/otsuka/index.html",
+      "https://www.jexer.jp/mb/shinjuku/index.html",
+      "https://www.jexer.jp/mb/sopra/akihabara/index.html",
+      "https://www.jexer.jp/mb/toda/index.html",
+      "https://www.jexer.jp/mb/ueno/index.html",
+      "https://www.jexer.jp/mb/yotsuya/index.html"
+    ],
+    "confidence": 1
+  }
+}

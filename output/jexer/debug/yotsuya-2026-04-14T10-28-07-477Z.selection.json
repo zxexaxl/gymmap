@@ -1,0 +1,369 @@
+{
+  "selection_reason": "no detail-like pages detected within exploration budget",
+  "selected_urls": [],
+  "selected_count": 0,
+  "selected_pages": [],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/schedule/?shop=3",
+        "https://www.jexer.jp/mb/yotsuya/admission.html",
+        "https://www.jexer.jp/mb/yotsuya/facilities.html",
+        "https://www.jexer.jp/mb/yotsuya/map.html",
+        "https://www.jexer.jp/mb/visit/index.html",
+        "https://www.jexer.jp/mb/yotsuya/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 2,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 3,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 4,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 5,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/index.html",
+        "https://www.jexer.jp/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 6,
+      "visited_url": "https://www.jexer.jp/mb/info/",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 7,
+      "visited_url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 8,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/admission.html",
+      "depth": 2,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=3",
+        "https://www.jexer.jp/mb/yotsuya/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 9,
+      "visited_url": "https://www.jexer.jp/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/yotsuya/whatsnew/index.html",
+      "depth": 2,
+      "url_score": 2,
+      "score_reasons": [
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/fitnessstudio/index.html",
+        "https://www.jexer.jp/fitness/index.html",
+        "https://www.jexer.jp/fitnesslounge/index.html",
+        "https://www.jexer.jp/fitnessloungejexer/index.html",
+        "https://www.jexer.jp/bodymakegym/index.html",
+        "https://www.jexer.jp/crossfit/index.html",
+        "https://www.jexer.jp/e-sports/index.html",
+        "https://www.jexer.jp/flat/index.html",
+        "https://www.jexer.jp/futsal/index.html",
+        "https://www.jexer.jp/golfcollege/index.html",
+        "https://www.jexer.jp/jexer_nextbaseathleteslab/index.html",
+        "https://www.jexer.jp/kids/index.html",
+        "https://www.jexer.jp/lightgym/index.html",
+        "https://www.jexer.jp/platinagym/index.html",
+        "https://www.jexer.jp/sopra/index.html",
+        "https://www.jexer.jp/tennis/index.html",
+        "https://www.jexer.jp/thejexertakanawa/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 10,
+      "visited_url": "https://www.jexer.jp/fitnessstudio/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/index.html",
+      "depth": 3,
+      "url_score": 8,
+      "score_reasons": [
+        "positive:studio,fitness",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "studio",
+      "recommended_next_links": [
+        "https://www.jexer.jp/fitnessstudio/kamata/index.html",
+        "https://www.jexer.jp/fitnessstudio/omori/index.html",
+        "https://www.jexer.jp/fitnessstudio/pilates.yokohama/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 11,
+      "visited_url": "https://www.jexer.jp/fitness/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:fitness",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/fitness/akabane/index.html",
+        "https://www.jexer.jp/fitness/higashikanagawa/index.html",
+        "https://www.jexer.jp/fitness/ikebukuro/index.html",
+        "https://www.jexer.jp/fitness/itabashi/index.html",
+        "https://www.jexer.jp/fitness/kameido/index.html",
+        "https://www.jexer.jp/fitness/kawasaki/index.html",
+        "https://www.jexer.jp/fitness/niigata/index.html",
+        "https://www.jexer.jp/fitness/oi/index.html",
+        "https://www.jexer.jp/fitness/omiya/index.html",
+        "https://www.jexer.jp/fitness/otsuka/index.html",
+        "https://www.jexer.jp/fitness/shinjuku/index.html",
+        "https://www.jexer.jp/fitness/shinkawasaki/index.html",
+        "https://www.jexer.jp/fitness/shinkoiwa/index.html",
+        "https://www.jexer.jp/fitness/toda/index.html",
+        "https://www.jexer.jp/fitness/ueno/index.html",
+        "https://www.jexer.jp/fitness/urawa/index.html",
+        "https://www.jexer.jp/fitness/yokohama/index.html",
+        "https://www.jexer.jp/fitness/yotsuya/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 12,
+      "visited_url": "https://www.jexer.jp/fitnesslounge/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:fitness",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/fitnesslounge/annex/index.html",
+        "https://www.jexer.jp/fitnesslounge/thejexertokyo/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 13,
+      "visited_url": "https://www.jexer.jp/fitnessloungejexer/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:fitness",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/fitnessloungejexer/kaihinmakuhari/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 14,
+      "visited_url": "https://www.jexer.jp/schedule/?shop=3",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/yotsuya/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=17",
+        "https://www.jexer.jp/schedule/?shop=24",
+        "https://www.jexer.jp/schedule/?shop=25",
+        "https://www.jexer.jp/schedule/?shop=3",
+        "https://www.jexer.jp/schedule/?shop=32",
+        "https://www.jexer.jp/schedule/?shop=37",
+        "https://www.jexer.jp/schedule/?shop=4",
+        "https://www.jexer.jp/schedule/?shop=45",
+        "https://www.jexer.jp/schedule/?shop=5",
+        "https://www.jexer.jp/schedule/?shop=6",
+        "https://www.jexer.jp/schedule/?shop=66",
+        "https://www.jexer.jp/schedule/?shop=67",
+        "https://www.jexer.jp/schedule/?shop=7",
+        "https://www.jexer.jp/schedule/?shop=75",
+        "https://www.jexer.jp/schedule/?shop=76",
+        "https://www.jexer.jp/schedule/?shop=8",
+        "https://www.jexer.jp/schedule/?shop=82",
+        "https://www.jexer.jp/schedule/?shop=86",
+        "https://www.jexer.jp/schedule/?shop=9"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 15,
+      "visited_url": "https://www.jexer.jp/bodymakegym/index.html",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/index.html",
+      "depth": 3,
+      "url_score": 2,
+      "score_reasons": [
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/bodymakegym/kohoku/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 16,
+      "visited_url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/shop/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 17,
+      "visited_url": "https://www.jexer.jp/mb/yotsuya/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/yotsuya/index.html",
+      "depth": 3,
+      "url_score": 0,
+      "score_reasons": [
+        "negative:instructor",
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "instructor",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/yotsuya/instructor/index.html",
+        "https://www.jexer.jp/mb/yotsuya/instructor/index1.html",
+        "https://www.jexer.jp/mb/yotsuya/instructor/index2.html",
+        "https://www.jexer.jp/mb/yotsuya/instructor/index6.html"
+      ],
+      "selected_for_extraction": false
+    }
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 114185,
+    "candidates_token_count": 2967,
+    "total_token_count": 117160,
+    "thoughts_token_count": 8,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

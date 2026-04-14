@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/oi/whatsnew/info.php?info_no=35540\",\n    \"https://www.jexer.jp/mb/oi/whatsnew/info.php?info_no=35406\",\n    \"https://www.jexer.jp/mb/oi/whatsnew/info.php?info_no=35355\",\n    \"https://www.jexer.jp/mb/oi/whatsnew/info.php?info_no=35096\",\n    \"https://www.jexer.jp/mb/oi/whatsnew/info.php?info_no=26501\",\n    \"https://www.jexer.jp/mb/oi/whatsnew/index.html\",\n    \"https://www.jexer.jp/mb/schedule/?shop=4\",\n    \"https://www.jexer.jp/mb/oi/instructor/weekly.html\",\n    \"https://www.jexer.jp/mb/info/\",\n    \"https://www.jexer.jp/mb/oi/admission.html\",\n    \"https://www.jexer.jp/mb/oi/facilities.html\",\n    \"https://www.jexer.jp/mb/visit/index.html\",\n    \"https://www.jexer.jp/mb/oi/map.html\",\n    \"https://www.jexer.jp/mb/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 3201,
+    "candidatesTokenCount": 425,
+    "totalTokenCount": 3628,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3201
+      }
+    ],
+    "thoughtsTokenCount": 2
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "pBbeaeSZM6_Y1e8Pka-V6Ao"
+}

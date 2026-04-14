@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_index\",\n  \"schedule_kind\": \"mixed\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/otsuka/schedule/fitness.html\",\n    \"https://www.jexer.jp/mb/otsuka/schedule/aqua.html\"\n  ],\n  \"confidence\": 0.9\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1086,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 1203,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1086
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "xhfeacLiPN3o1e8P1eXC-Ag"
+}

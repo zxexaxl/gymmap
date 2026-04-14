@@ -1,0 +1,47 @@
+{
+  "url": "https://www.jexer.jp/mb/omiya/index.html",
+  "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/shop/index.html",
+  "depth": 3,
+  "url_score": 3,
+  "score_reasons": [
+    "shared_segments:1",
+    "ai_recommended"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": true,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": true,
+    "timeLikeCount": 6,
+    "repeatingBlockCount": 0,
+    "linkCount": 17,
+    "rowCount": 6
+  },
+  "usage_metadata": {
+    "prompt_token_count": 2927,
+    "candidates_token_count": 223,
+    "total_token_count": 3150,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "entry",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/schedule/?shop=6",
+      "https://www.jexer.jp/mb/admission.html",
+      "https://www.jexer.jp/mb/facilities.html",
+      "https://www.jexer.jp/mb/info/",
+      "https://www.jexer.jp/mb/map.html",
+      "https://www.jexer.jp/mb/member/index.html",
+      "https://www.jexer.jp/mb/visit/index.html",
+      "https://www.jexer.jp/mb/instructor/weekly.html"
+    ],
+    "confidence": 1
+  }
+}

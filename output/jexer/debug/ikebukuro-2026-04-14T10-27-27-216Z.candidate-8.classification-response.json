@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": true,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/yotsuya/index.html\",\n    \"https://www.jexer.jp/mb/oi/index.html\",\n    \"https://www.jexer.jp/mb/akabane/index.html\",\n    \"https://www.jexer.jp/mb/ueno/index.html\",\n    \"https://www.jexer.jp/mb/ikebukuro/index.html\",\n    \"https://www.jexer.jp/mb/kameido/index.html\",\n    \"https://www.jexer.jp/mb/shinjuku/index.html\",\n    \"https://www.jexer.jp/mb/otsuka/index.html\",\n    \"https://www.jexer.jp/mb/kamata/index.html\",\n    \"https://www.jexer.jp/mb/musashikoganei/index.html\",\n    \"https://www.jexer.jp/mb/sopra/akihabara/index.html\",\n    \"https://www.jexer.jp/mb/higashikanagawa/index.html\",\n    \"https://www.jexer.jp/mb/omiya/index.html\",\n    \"https://www.jexer.jp/mb/toda/index.html\",\n    \"https://www.jexer.jp/mb/kawaguchi/index.html\",\n    \"https://www.jexer.jp/mb/nishikawaguchi/index.html\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1614,
+    "candidatesTokenCount": 434,
+    "totalTokenCount": 2048,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1614
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "mhbeac_LHbqB2roP6oa62AE"
+}

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=28561\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=35492\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=35340\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=33328\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=35242\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=34525\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=34289\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=34258\",\n    \"https://www.jexer.jp/mb/akabane/whatsnew/info.php?info_no=33641\",\n    \"https://www.jexer.jp/mb/akabane/index.html\",\n    \"https://www.jexer.jp/index.html\"\n  ],\n  \"confidence\": 0.9\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1256,
+    "candidatesTokenCount": 431,
+    "totalTokenCount": 1687,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1256
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "2BbeadioCoSj2roP47eD6Ag"
+}

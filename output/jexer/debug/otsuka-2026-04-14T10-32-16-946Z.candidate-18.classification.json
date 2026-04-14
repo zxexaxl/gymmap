@@ -1,0 +1,43 @@
+{
+  "url": "https://www.jexer.jp/schedule/?shop=32",
+  "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/otsuka/",
+  "depth": 1,
+  "url_score": 5,
+  "score_reasons": [
+    "positive:schedule",
+    "shared_segments:0",
+    "ai_recommended"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": false,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 3,
+    "linkCount": 40,
+    "rowCount": 20
+  },
+  "usage_metadata": {
+    "prompt_token_count": 4047,
+    "candidates_token_count": 138,
+    "total_token_count": 4185,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_index",
+    "schedule_kind": "studio",
+    "contains_schedule_rows": false,
+    "contains_detail_links": true,
+    "recommended_next_links": [
+      "https://www.jexer.jp/schedule/pdf/all_program_studio.pdf",
+      "https://www.jexer.jp/schedule/?shop=32",
+      "https://www.jexer.jp/fitness/otsuka/instructor/index.html"
+    ],
+    "confidence": 1
+  }
+}

@@ -1,0 +1,715 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/kameido/",
+  "entry_origin": "https://www.jexer.jp",
+  "budget": {
+    "maxVisitedPages": 18,
+    "maxAiClassifications": 16,
+    "maxPdfPages": 4,
+    "maxDepth": 3,
+    "maxSeedsFromEntry": 8,
+    "maxLinksPerPage": 10
+  },
+  "failed_fetches": [
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=24",
+      "discoveredFrom": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/index.html",
+      "discoveredFrom": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "stage": "initial_collection",
+      "message": "Failed to fetch resource: 404 Not Found",
+      "status": 404,
+      "statusText": "Not Found",
+      "responseBodyPreview": "File not found.\n"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=24",
+      "discoveredFrom": "ai_recommendation:https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    },
+    {
+      "url": "https://www.jexer.jp/mb/schedule/?shop=24",
+      "discoveredFrom": "ai_recommendation:https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "stage": "recommended_collection",
+      "message": "Failed to fetch resource: 500 Internal Server Error",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "responseBodyPreview": "﻿"
+    }
+  ],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/mb/kameido/",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/schedule/?shop=24",
+        "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 2,
+      "visited_url": "https://www.jexer.jp/mb/kameido/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kameido/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 3,
+      "visited_url": "https://www.jexer.jp/mb/kameido/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kameido/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 4,
+      "visited_url": "https://www.jexer.jp/mb/kameido/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kameido/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 5,
+      "visited_url": "https://www.jexer.jp/mb/kameido/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 6,
+      "visited_url": "https://www.jexer.jp/mb/info/",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kameido/"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 7,
+      "visited_url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/kameido/"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 8,
+      "visited_url": "https://www.jexer.jp/mb/kameido/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/admission.html",
+      "depth": 2,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=24",
+        "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 9,
+      "visited_url": "https://www.jexer.jp/schedule/?shop=24",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "studio",
+      "recommended_next_links": [
+        "https://www.jexer.jp/schedule/?shop=17",
+        "https://www.jexer.jp/schedule/?shop=24",
+        "https://www.jexer.jp/schedule/?shop=25",
+        "https://www.jexer.jp/schedule/?shop=3",
+        "https://www.jexer.jp/schedule/?shop=32",
+        "https://www.jexer.jp/schedule/?shop=37",
+        "https://www.jexer.jp/schedule/?shop=4",
+        "https://www.jexer.jp/schedule/?shop=45",
+        "https://www.jexer.jp/schedule/?shop=5",
+        "https://www.jexer.jp/schedule/?shop=6",
+        "https://www.jexer.jp/schedule/?shop=66",
+        "https://www.jexer.jp/schedule/?shop=67",
+        "https://www.jexer.jp/schedule/?shop=7",
+        "https://www.jexer.jp/schedule/?shop=75",
+        "https://www.jexer.jp/schedule/?shop=76",
+        "https://www.jexer.jp/schedule/?shop=8",
+        "https://www.jexer.jp/schedule/?shop=82",
+        "https://www.jexer.jp/schedule/?shop=86",
+        "https://www.jexer.jp/schedule/?shop=9"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 10,
+      "visited_url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "page_type": "entry",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [
+        "https://www.jexer.jp/index.html",
+        "https://www.jexer.jp/shop/index.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 11,
+      "visited_url": "https://www.jexer.jp/mb/kameido/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 0,
+      "score_reasons": [
+        "negative:instructor",
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "page_type": "instructor",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/kameido/",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3182,
+        "candidates_token_count": 119,
+        "total_token_count": 3301,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/schedule/?shop=24",
+          "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/admission.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 22,
+        "repeatingBlockCount": 0,
+        "linkCount": 4,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2156,
+        "candidates_token_count": 90,
+        "total_token_count": 2248,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/facilities.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1271,
+        "candidates_token_count": 90,
+        "total_token_count": 1361,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/index.html"
+        ],
+        "confidence": 0.8
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/map.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1091,
+        "candidates_token_count": 90,
+        "total_token_count": 1181,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/whatsnew/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 9,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1007,
+        "candidates_token_count": 247,
+        "total_token_count": 1254,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/admission.html",
+      "depth": 2,
+      "url_score": 4,
+      "score_reasons": [
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 21,
+        "rowCount": 6
+      },
+      "usage_metadata": {
+        "prompt_token_count": 3209,
+        "candidates_token_count": 112,
+        "total_token_count": 3321,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=24",
+          "https://www.jexer.jp/mb/kameido/instructor/weekly.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/info/",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 7,
+        "rowCount": 4
+      },
+      "usage_metadata": {
+        "prompt_token_count": 2127,
+        "candidates_token_count": 86,
+        "total_token_count": 2215,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/member/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/",
+      "depth": 1,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 2,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1256,
+        "candidates_token_count": 86,
+        "total_token_count": 1344,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/kameido/"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/visit/index.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 1,
+      "score_reasons": [
+        "shared_segments:1"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 3,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 987,
+        "candidates_token_count": 103,
+        "total_token_count": 1090,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "entry",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [
+          "https://www.jexer.jp/index.html",
+          "https://www.jexer.jp/shop/index.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/kameido/instructor/weekly.html",
+      "discovered_from": "https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 0,
+      "score_reasons": [
+        "negative:instructor",
+        "shared_segments:2",
+        "close_to_parent"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 9,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 950,
+        "candidates_token_count": 64,
+        "total_token_count": 1016,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "instructor",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/schedule/?shop=24",
+      "discovered_from": "ai_recommendation:https://www.jexer.jp/mb/kameido/index.html",
+      "depth": 3,
+      "url_score": 5,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:0",
+        "ai_recommended"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": false,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 3,
+        "linkCount": 40,
+        "rowCount": 20
+      },
+      "usage_metadata": {
+        "prompt_token_count": 4051,
+        "candidates_token_count": 442,
+        "total_token_count": 4493,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/schedule/?shop=17",
+          "https://www.jexer.jp/schedule/?shop=24",
+          "https://www.jexer.jp/schedule/?shop=25",
+          "https://www.jexer.jp/schedule/?shop=3",
+          "https://www.jexer.jp/schedule/?shop=32",
+          "https://www.jexer.jp/schedule/?shop=37",
+          "https://www.jexer.jp/schedule/?shop=4",
+          "https://www.jexer.jp/schedule/?shop=45",
+          "https://www.jexer.jp/schedule/?shop=5",
+          "https://www.jexer.jp/schedule/?shop=6",
+          "https://www.jexer.jp/schedule/?shop=66",
+          "https://www.jexer.jp/schedule/?shop=67",
+          "https://www.jexer.jp/schedule/?shop=7",
+          "https://www.jexer.jp/schedule/?shop=75",
+          "https://www.jexer.jp/schedule/?shop=76",
+          "https://www.jexer.jp/schedule/?shop=8",
+          "https://www.jexer.jp/schedule/?shop=82",
+          "https://www.jexer.jp/schedule/?shop=86",
+          "https://www.jexer.jp/schedule/?shop=9"
+        ],
+        "confidence": 1
+      }
+    }
+  ]
+}
