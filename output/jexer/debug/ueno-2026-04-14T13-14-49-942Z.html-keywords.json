@@ -1,0 +1,23 @@
+{
+  "source_url": "https://www.jexer.jp/schedule/fitness/?shop=8",
+  "extraction_urls": [
+    "https://www.jexer.jp/schedule/fitness/?shop=8"
+  ],
+  "keywords": {
+    "https://www.jexer.jp/schedule/fitness/?shop=8": {
+      "table": true,
+      "schedule": true,
+      "program": true,
+      "lesson": false,
+      "studio": true
+    }
+  },
+  "usage_metadata": {
+    "prompt_token_count": 62694,
+    "candidates_token_count": 98,
+    "total_token_count": 62792,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

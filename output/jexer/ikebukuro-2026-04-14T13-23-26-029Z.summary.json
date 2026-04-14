@@ -1,0 +1,98 @@
+{
+  "total_records": 120,
+  "needs_review_count": 83,
+  "unresolved_count": 81,
+  "usage_metadata": {
+    "prompt_token_count": 67266,
+    "candidates_token_count": 16391,
+    "total_token_count": 83657,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 67266,
+  "total_output_tokens": 16391,
+  "total_tokens": 83657,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 99
+    },
+    {
+      "key": "Les Mills",
+      "count": 15
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 3
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 81
+    },
+    {
+      "key": "cardio",
+      "count": 13
+    },
+    {
+      "key": "mind_body",
+      "count": 13
+    },
+    {
+      "key": "dance",
+      "count": 7
+    },
+    {
+      "key": "strength",
+      "count": 6
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 64
+    },
+    {
+      "key": "BODYCOMBAT【暗闇】",
+      "count": 6
+    },
+    {
+      "key": "リラックスヨガ45",
+      "count": 5
+    },
+    {
+      "key": "BODYCOMBAT",
+      "count": 3
+    },
+    {
+      "key": "BODYPUMP",
+      "count": 3
+    },
+    {
+      "key": "BODYPUMP【暗闇】",
+      "count": 3
+    },
+    {
+      "key": "RITMOS",
+      "count": 3
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    },
+    {
+      "key": "K-POP　DANCE　GROOVE",
+      "count": 2
+    },
+    {
+      "key": "WOW!HIP",
+      "count": 2
+    }
+  ]
+}

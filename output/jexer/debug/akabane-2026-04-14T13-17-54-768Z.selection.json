@@ -1,0 +1,66 @@
+{
+  "selection_reason": "selected direct JEXER shared schedule page for shop=5",
+  "selected_urls": [
+    "https://www.jexer.jp/schedule/fitness/?shop=5"
+  ],
+  "selected_count": 1,
+  "selected_pages": [
+    {
+      "url": "https://www.jexer.jp/schedule/fitness/?shop=5",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "confidence": 1,
+      "url_score": 100,
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": false,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": true,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 534,
+        "repeatingBlockCount": 52,
+        "linkCount": 6,
+        "rowCount": 885
+      },
+      "reason": "selected by jexer shared schedule adapter using direct shop URL"
+    }
+  ],
+  "group_summaries": [
+    {
+      "group_key": "id:shop=5",
+      "aggregate_score": 100,
+      "page_count": 1,
+      "identifiers": [
+        "shop=5"
+      ],
+      "urls": [
+        "https://www.jexer.jp/schedule/fitness/?shop=5"
+      ]
+    }
+  ],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/schedule/fitness/?shop=5",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "jexer_shared_schedule",
+        "shop_id:5"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    }
+  ],
+  "usage_metadata": {
+    "prompt_token_count": 54378,
+    "candidates_token_count": 66,
+    "total_token_count": 54444,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

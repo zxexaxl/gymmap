@@ -1,0 +1,98 @@
+{
+  "total_records": 144,
+  "needs_review_count": 112,
+  "unresolved_count": 90,
+  "usage_metadata": {
+    "prompt_token_count": 66843,
+    "candidates_token_count": 23125,
+    "total_token_count": 89970,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 66843,
+  "total_output_tokens": 23125,
+  "total_tokens": 89970,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 126
+    },
+    {
+      "key": "Les Mills",
+      "count": 12
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 1
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 90
+    },
+    {
+      "key": "mind_body",
+      "count": 34
+    },
+    {
+      "key": "dance",
+      "count": 8
+    },
+    {
+      "key": "cardio",
+      "count": 7
+    },
+    {
+      "key": "strength",
+      "count": 5
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 52
+    },
+    {
+      "key": "BODYCOMBAT45",
+      "count": 7
+    },
+    {
+      "key": "お尻引き締め",
+      "count": 6
+    },
+    {
+      "key": "筋膜リリース",
+      "count": 6
+    },
+    {
+      "key": "BODYPUMP45",
+      "count": 5
+    },
+    {
+      "key": "HOTYOGA 骨盤調整45",
+      "count": 5
+    },
+    {
+      "key": "UBOUND45",
+      "count": 5
+    },
+    {
+      "key": "ZUMBA45",
+      "count": 5
+    },
+    {
+      "key": "リラックスヨガ45",
+      "count": 5
+    },
+    {
+      "key": "HOTYOGA ビギナー45",
+      "count": 4
+    }
+  ]
+}

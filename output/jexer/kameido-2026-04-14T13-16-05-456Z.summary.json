@@ -1,0 +1,102 @@
+{
+  "total_records": 169,
+  "needs_review_count": 104,
+  "unresolved_count": 96,
+  "usage_metadata": {
+    "prompt_token_count": 74659,
+    "candidates_token_count": 23264,
+    "total_token_count": 97923,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 74659,
+  "total_output_tokens": 23264,
+  "total_tokens": 97923,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 145
+    },
+    {
+      "key": "Les Mills",
+      "count": 13
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 6
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 96
+    },
+    {
+      "key": "mind_body",
+      "count": 44
+    },
+    {
+      "key": "dance",
+      "count": 14
+    },
+    {
+      "key": "strength",
+      "count": 7
+    },
+    {
+      "key": "cardio",
+      "count": 6
+    },
+    {
+      "key": "conditioning",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 42
+    },
+    {
+      "key": "BODYPUMP",
+      "count": 6
+    },
+    {
+      "key": "有料マシンピラティス",
+      "count": 6
+    },
+    {
+      "key": "BODYCOMBAT",
+      "count": 5
+    },
+    {
+      "key": "STAR有料スイムスクール",
+      "count": 5
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    },
+    {
+      "key": "ホットヨガデトックス",
+      "count": 5
+    },
+    {
+      "key": "アクア",
+      "count": 4
+    },
+    {
+      "key": "ホットヨガリフレッシュ",
+      "count": 4
+    },
+    {
+      "key": "BODY BALANCE",
+      "count": 3
+    }
+  ]
+}

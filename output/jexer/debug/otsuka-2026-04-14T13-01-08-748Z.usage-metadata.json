@@ -1,0 +1,44 @@
+{
+  "model_id": "gemini-2.5-flash-lite",
+  "classification": {
+    "prompt_token_count": 43863,
+    "candidates_token_count": 66,
+    "total_token_count": 43931,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "extraction": {
+    "prompt_token_count": 43872,
+    "candidates_token_count": 28684,
+    "total_token_count": 72556,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total": {
+    "prompt_token_count": 87735,
+    "candidates_token_count": 28750,
+    "total_token_count": 116487,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "pages": [
+    {
+      "url": "https://www.jexer.jp/schedule/fitness/?shop=32",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "url_score": 100,
+      "usage_metadata": {
+        "prompt_token_count": 43872,
+        "candidates_token_count": 28684,
+        "total_token_count": 72556,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    }
+  ]
+}

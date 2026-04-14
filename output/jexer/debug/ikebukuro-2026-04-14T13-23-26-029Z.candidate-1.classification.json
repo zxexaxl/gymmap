@@ -1,0 +1,40 @@
+{
+  "url": "https://www.jexer.jp/schedule/fitness/?shop=9",
+  "discovered_from": null,
+  "depth": 0,
+  "url_score": 100,
+  "score_reasons": [
+    "jexer_shared_schedule",
+    "shop_id:9"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": true,
+    "hasTableTag": false,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": true,
+    "hasTimeAndTextDensity": true,
+    "timeLikeCount": 242,
+    "repeatingBlockCount": 33,
+    "linkCount": 6,
+    "rowCount": 757
+  },
+  "usage_metadata": {
+    "prompt_token_count": 33628,
+    "candidates_token_count": 98,
+    "total_token_count": 33726,
+    "thoughts_token_count": null,
+    "cached_content_token_count": null,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "classification": {
+    "page_type": "schedule_detail",
+    "schedule_kind": "mixed",
+    "contains_schedule_rows": true,
+    "contains_detail_links": false,
+    "recommended_next_links": [
+      "https://www.jexer.jp/schedule/fitness/?shop=9&next=true&nr=1"
+    ],
+    "confidence": 1
+  }
+}

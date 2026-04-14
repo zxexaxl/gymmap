@@ -1,0 +1,98 @@
+{
+  "total_records": 157,
+  "needs_review_count": 99,
+  "unresolved_count": 79,
+  "usage_metadata": {
+    "prompt_token_count": 73695,
+    "candidates_token_count": 22135,
+    "total_token_count": 95830,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 73695,
+  "total_output_tokens": 22135,
+  "total_tokens": 95830,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 135
+    },
+    {
+      "key": "Les Mills",
+      "count": 12
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 7
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 79
+    },
+    {
+      "key": "mind_body",
+      "count": 50
+    },
+    {
+      "key": "dance",
+      "count": 12
+    },
+    {
+      "key": "cardio",
+      "count": 10
+    },
+    {
+      "key": "strength",
+      "count": 6
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマン\nサポート",
+      "count": 40
+    },
+    {
+      "key": "マシンピラティス\nBASIC",
+      "count": 11
+    },
+    {
+      "key": "マシンピラティス\nBASIC\n女性専用",
+      "count": 7
+    },
+    {
+      "key": "BODYCOMBAT",
+      "count": 6
+    },
+    {
+      "key": "BODYPUMP",
+      "count": 6
+    },
+    {
+      "key": "HOTYOGA\nビギナー",
+      "count": 5
+    },
+    {
+      "key": "BODYATTACK",
+      "count": 4
+    },
+    {
+      "key": "UBOUND",
+      "count": 4
+    },
+    {
+      "key": "お腹引き締め",
+      "count": 4
+    },
+    {
+      "key": "リラックスヨガ",
+      "count": 4
+    }
+  ]
+}

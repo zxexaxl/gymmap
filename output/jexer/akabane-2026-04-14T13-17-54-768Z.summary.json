@@ -1,0 +1,102 @@
+{
+  "total_records": 269,
+  "needs_review_count": 205,
+  "unresolved_count": 176,
+  "usage_metadata": {
+    "prompt_token_count": 108766,
+    "candidates_token_count": 37514,
+    "total_token_count": 146280,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 108766,
+  "total_output_tokens": 37514,
+  "total_tokens": 146280,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 243
+    },
+    {
+      "key": "Les Mills",
+      "count": 16
+    },
+    {
+      "key": "ZUMBA",
+      "count": 6
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 4
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 176
+    },
+    {
+      "key": "mind_body",
+      "count": 49
+    },
+    {
+      "key": "cardio",
+      "count": 21
+    },
+    {
+      "key": "dance",
+      "count": 14
+    },
+    {
+      "key": "strength",
+      "count": 7
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 61
+    },
+    {
+      "key": "アクア",
+      "count": 13
+    },
+    {
+      "key": "成人スイミング\nスクール\n有料",
+      "count": 10
+    },
+    {
+      "key": "マシンピラティス",
+      "count": 8
+    },
+    {
+      "key": "BODY COMBAT",
+      "count": 6
+    },
+    {
+      "key": "BODY PUMP",
+      "count": 6
+    },
+    {
+      "key": "UBOUND",
+      "count": 6
+    },
+    {
+      "key": "ジュニアスイミング\nスクール\n有料",
+      "count": 6
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    },
+    {
+      "key": "リラックスヨガ",
+      "count": 5
+    }
+  ]
+}

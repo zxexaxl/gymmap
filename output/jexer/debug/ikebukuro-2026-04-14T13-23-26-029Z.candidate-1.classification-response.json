@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"schedule_detail\",\n  \"schedule_kind\": \"mixed\",\n  \"contains_schedule_rows\": true,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/schedule/fitness/?shop=9&next=true&nr=1\"\n  ],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 33628,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 33726,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 33628
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "0T_eaauJJJjl2roPtNbLsA4"
+}

@@ -1,0 +1,106 @@
+{
+  "total_records": 212,
+  "needs_review_count": 173,
+  "unresolved_count": 139,
+  "usage_metadata": {
+    "prompt_token_count": 89472,
+    "candidates_token_count": 30483,
+    "total_token_count": 119955,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 89472,
+  "total_output_tokens": 30483,
+  "total_tokens": 119955,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 194
+    },
+    {
+      "key": "Les Mills",
+      "count": 12
+    },
+    {
+      "key": "ZUMBA",
+      "count": 4
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 2
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 139
+    },
+    {
+      "key": "mind_body",
+      "count": 38
+    },
+    {
+      "key": "cardio",
+      "count": 17
+    },
+    {
+      "key": "dance",
+      "count": 10
+    },
+    {
+      "key": "strength",
+      "count": 5
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    },
+    {
+      "key": "conditioning",
+      "count": 1
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマン\nサポート\n",
+      "count": 60
+    },
+    {
+      "key": "スイミングスクール\n初級",
+      "count": 11
+    },
+    {
+      "key": "スイミングスクール\n中級",
+      "count": 7
+    },
+    {
+      "key": "アクア\n〔定員40〕",
+      "count": 6
+    },
+    {
+      "key": "ジュニアダンススクール",
+      "count": 6
+    },
+    {
+      "key": "BODY COMBAT\n〔定員45〕",
+      "count": 4
+    },
+    {
+      "key": "リラックスヨガ\n〔定員35〕",
+      "count": 4
+    },
+    {
+      "key": "リラックスヨガ\n〔定員50〕",
+      "count": 4
+    },
+    {
+      "key": "BODY BALANCE\n〔定員25名〕",
+      "count": 3
+    },
+    {
+      "key": "BODY PUMP\n〔定員45〕",
+      "count": 3
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "total_records": 321,
+  "needs_review_count": 213,
+  "unresolved_count": 199,
+  "usage_metadata": {
+    "prompt_token_count": 125398,
+    "candidates_token_count": 45465,
+    "total_token_count": 170863,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 125398,
+  "total_output_tokens": 45465,
+  "total_tokens": 170863,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 289
+    },
+    {
+      "key": "Les Mills",
+      "count": 23
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 6
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 199
+    },
+    {
+      "key": "mind_body",
+      "count": 67
+    },
+    {
+      "key": "cardio",
+      "count": 25
+    },
+    {
+      "key": "dance",
+      "count": 18
+    },
+    {
+      "key": "strength",
+      "count": 10
+    },
+    {
+      "key": "conditioning",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "【マンツーマンサポート】",
+      "count": 44
+    },
+    {
+      "key": "ホットヨガビギナー(定員35名)",
+      "count": 10
+    },
+    {
+      "key": "岩盤浴 Free Time",
+      "count": 10
+    },
+    {
+      "key": "BODY PUMP(定員42名)",
+      "count": 9
+    },
+    {
+      "key": "RPM(日本語)(定員25名)",
+      "count": 9
+    },
+    {
+      "key": "THE TRIP(定員25名)",
+      "count": 9
+    },
+    {
+      "key": "BODY COMBAT(定員60名)",
+      "count": 8
+    },
+    {
+      "key": "アクア45(定員55名)",
+      "count": 7
+    },
+    {
+      "key": "RPM(定員25名)",
+      "count": 6
+    },
+    {
+      "key": "sprint(日本語)(定員25名)　",
+      "count": 6
+    }
+  ]
+}
