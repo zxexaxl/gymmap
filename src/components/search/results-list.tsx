@@ -61,9 +61,17 @@ export function ResultsList({ results, hasActiveFilters = false, query = "", deb
                 <div className="search-debug">
                   <p className="search-debug-title">debug query: {query}</p>
                   {getProgramQueryDebug(item, normalizedQuery).map((hit, index) => (
-                    <p key={`${item.schedule.id}-${hit.field}-${hit.value}-${index}`} className="search-debug-item">
-                      {hit.field}: {hit.value}
-                    </p>
+                    <div key={`${item.schedule.id}-${hit.field}-${hit.value}-${index}`} className="search-debug-row">
+                      <p className="search-debug-item">
+                        matchedBy:{" "}
+                        {hit.field === "raw_program_name"
+                          ? "raw"
+                          : hit.field === "canonical_program_name"
+                            ? "canonical"
+                            : "alias"}
+                      </p>
+                      <p className="search-debug-item">matchedValue: {hit.value}</p>
+                    </div>
                   ))}
                 </div>
               ) : null}

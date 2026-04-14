@@ -54,6 +54,14 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             <Link href="/">検索トップへ戻る</Link>
           </div>
         </div>
+        {debugEnabled ? (
+          <div className="search-debug-banner">
+            <p>DEBUG MODE ON</p>
+            <p>query={filters.q || "(empty)"}</p>
+            <p>debug={String(debugEnabled)}</p>
+            <p>resultCount={results.length}</p>
+          </div>
+        ) : null}
         <p className="search-summary">
           プログラム名: {filters.q || "指定なし"} / 曜日: {weekdayLabel} / 時間帯: {timeRangeLabel} / 所要時間: {durationRangeLabel} /
           エリア・店舗名: {filters.area || "指定なし"} / チェーン名: {filters.brand || "指定なし"}

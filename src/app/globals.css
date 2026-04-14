@@ -422,11 +422,33 @@ p {
   background: #fbf7f0;
 }
 
+.search-debug-banner {
+  margin: 16px 0;
+  padding: 14px 16px;
+  border: 2px solid var(--accent-dark);
+  border-radius: 14px;
+  background: #fff2d8;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.search-debug-banner p {
+  margin: 0 0 4px;
+}
+
+.search-debug-banner p:last-child {
+  margin-bottom: 0;
+}
+
 .search-debug-title {
   margin: 0 0 6px;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--accent-dark);
+}
+
+.search-debug-row + .search-debug-row {
+  margin-top: 6px;
 }
 
 .search-debug-item {
