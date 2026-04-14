@@ -131,14 +131,14 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
         return null;
       }
 
+      let score = 0;
+
       if (keyword) {
-        const score = scoreKeywordMatch(item, keyword);
+        score = scoreKeywordMatch(item, keyword);
 
         if (score <= 0) {
           return null;
         }
-
-        return { item, score };
       }
 
       if (brandKeyword && !item.brand.name.toLowerCase().includes(brandKeyword)) {
@@ -162,7 +162,7 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
         }
       }
 
-      return { item, score: 0 };
+      return { item, score };
     })
     .filter((value): value is { item: SearchResult; score: number } => Boolean(value))
     .sort((left, right) => {
