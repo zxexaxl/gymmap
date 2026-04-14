@@ -2,12 +2,20 @@ import Image from "next/image";
 
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
-import { getBrands, getLocations } from "@/lib/data";
+import { getBrands, getLocations, getSearchResults } from "@/lib/data";
 
 export default async function HomePage() {
-  const [brands, locations] = await Promise.all([
+  const [brands, locations, searchResults] = await Promise.all([
     getBrands(),
     getLocations(),
+    getSearchResults({
+      q: "",
+      weekday: "",
+      timeRange: "",
+      durationRange: "",
+      brand: "",
+      area: "",
+    }),
   ]);
 
   return (
@@ -26,7 +34,7 @@ export default async function HomePage() {
         <SearchForm brands={brands} />
       </section>
 
-      <LocationMapSection locations={locations} />
+      <LocationMapSection locations={locations} searchResults={searchResults} />
     </div>
   );
 }

@@ -281,6 +281,26 @@ p {
   gap: 18px;
 }
 
+.map-toolbar {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.map-search-field {
+  display: grid;
+  gap: 8px;
+}
+
+.map-search-field span {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.map-status {
+  margin: 0;
+}
+
 .map-canvas {
   position: relative;
   min-height: 320px;
@@ -299,6 +319,17 @@ p {
     linear-gradient(rgba(128, 55, 28, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(128, 55, 28, 0.08) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+.map-user-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: #2563eb;
+  border: 3px solid #eff6ff;
+  box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.12);
 }
 
 .map-pin {

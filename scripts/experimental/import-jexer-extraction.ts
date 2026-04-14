@@ -27,7 +27,10 @@ type ClassScheduleRow = {
   start_time: string;
   end_time: string;
   raw_program_name: string;
+  canonical_program_name: string | null;
+  instructor_name: string | null;
   source_page_url: string | null;
+  source_snapshot_id: string | null;
 };
 
 function parseArgs(argv: string[]) {
@@ -133,6 +136,10 @@ function normalizeNameKey(value: string) {
   return value.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
 }
 
+function normalizeOptionalNameKey(value: string | null | undefined) {
+  return value ? normalizeNameKey(value) : "";
+}
+
 function buildProgramSlugBase(value: string) {
   const normalized = value
     .normalize("NFKC")
@@ -166,16 +173,21 @@ function buildScheduleLookupKey(record: {
   start_time: string;
   end_time: string;
   raw_program_name: string;
-  source_page_url: string | null;
+  canonical_program_name?: string | null;
+  instructor_name?: string | null;
 }) {
   return [
     record.location_id,
     record.weekday,
     record.start_time,
     record.end_time,
-    normalizeNameKey(record.raw_program_name),
-    record.source_page_url ?? "",
+    normalizeNameKey(record.canonical_program_name || record.raw_program_name),
+    normalizeOptionalNameKey(record.instructor_name),
   ].join("::");
+}
+
+function isReplaceableImportedSchedule(schedule: ClassScheduleRow) {
+  return Boolean(schedule.source_snapshot_id) && Boolean(schedule.source_page_url?.includes("jexer.jp"));
 }
 
 async function readExtractionFile(filePath: string) {
@@ -263,7 +275,9 @@ async function main() {
     await Promise.all([
       supabase.from("gym_locations").select("id, name"),
       supabase.from("programs").select("id, name, slug, category, default_duration_minutes"),
-      supabase.from("class_schedules").select("id, location_id, weekday, start_time, end_time, raw_program_name, source_page_url"),
+      supabase
+        .from("class_schedules")
+        .select("id, location_id, weekday, start_time, end_time, raw_program_name, canonical_program_name, instructor_name, source_page_url, source_snapshot_id"),
     ]);
 
   if (locationsError || programsError || schedulesError || !locations || !programs || !schedules) {
@@ -289,14 +303,24 @@ async function main() {
   const existingSchedulesByKey = new Map<string, ClassScheduleRow>(
     schedules.map((schedule) => [buildScheduleLookupKey(schedule as ClassScheduleRow), schedule as ClassScheduleRow]),
   );
+  const existingSchedulesByLocation = new Map<string, ClassScheduleRow[]>();
+
+  schedules.forEach((schedule) => {
+    const typedSchedule = schedule as ClassScheduleRow;
+    const rows = existingSchedulesByLocation.get(typedSchedule.location_id) ?? [];
+    rows.push(typedSchedule);
+    existingSchedulesByLocation.set(typedSchedule.location_id, rows);
+  });
 
   let insertedCount = 0;
   let updatedCount = 0;
   let skippedCount = 0;
+  let deletedStaleCount = 0;
   const warnings: string[] = [];
   const touchedLocationIds = new Set<string>();
   const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
   const snapshotId = path.basename(args.file);
+  const importedKeysByLocation = new Map<string, Set<string>>();
 
   for (const record of extraction.records) {
     const location = locationsByName.get(normalizeNameKey(record.location_name));
@@ -346,10 +370,14 @@ async function main() {
       start_time: payload.start_time,
       end_time: payload.end_time,
       raw_program_name: payload.raw_program_name,
-      source_page_url: payload.source_page_url,
+      canonical_program_name: payload.canonical_program_name,
+      instructor_name: payload.instructor_name,
     });
     const existingSchedule = existingSchedulesByKey.get(scheduleKey);
     touchedLocationIds.add(location.id);
+    const locationImportedKeys = importedKeysByLocation.get(location.id) ?? new Set<string>();
+    locationImportedKeys.add(scheduleKey);
+    importedKeysByLocation.set(location.id, locationImportedKeys);
 
     if (args.dryRun) {
       if (existingSchedule) {
@@ -386,12 +414,49 @@ async function main() {
       start_time: payload.start_time,
       end_time: payload.end_time,
       raw_program_name: payload.raw_program_name,
+      canonical_program_name: payload.canonical_program_name,
+      instructor_name: payload.instructor_name,
       source_page_url: payload.source_page_url,
+      source_snapshot_id: payload.source_snapshot_id,
     });
     insertedCount += 1;
   }
 
-  console.log(`Import summary: inserted=${insertedCount}, updated=${updatedCount}, skipped=${skippedCount}, warnings=${warnings.length}`);
+  for (const locationId of touchedLocationIds) {
+    const importedKeys = importedKeysByLocation.get(locationId) ?? new Set<string>();
+    const staleRows = (existingSchedulesByLocation.get(locationId) ?? []).filter(
+      (schedule) => isReplaceableImportedSchedule(schedule) && !importedKeys.has(buildScheduleLookupKey(schedule)),
+    );
+
+    if (staleRows.length === 0) {
+      continue;
+    }
+
+    if (args.dryRun) {
+      deletedStaleCount += staleRows.length;
+      console.log(
+        `[dry-run] would delete stale schedules: location=${locationNamesById.get(locationId) ?? locationId} count=${staleRows.length}`,
+      );
+      continue;
+    }
+
+    const { error } = await supabase.from("class_schedules").delete().in(
+      "id",
+      staleRows.map((row) => row.id),
+    );
+
+    if (error) {
+      throw new Error(
+        `Failed to delete stale class_schedules for ${locationNamesById.get(locationId) ?? locationId}: ${error.message}`,
+      );
+    }
+
+    deletedStaleCount += staleRows.length;
+  }
+
+  console.log(
+    `Import summary: inserted=${insertedCount}, updated=${updatedCount}, deleted_stale=${deletedStaleCount}, skipped=${skippedCount}, warnings=${warnings.length}`,
+  );
   await logPostImportVerification({
     supabase,
     locationIds: Array.from(touchedLocationIds),
