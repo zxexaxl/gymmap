@@ -130,7 +130,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
     matches.push(result);
     matchesByLocationId.set(result.location.id, matches);
   });
-  const center = currentPosition ?? TOKYO_CENTER;
+  const fallbackCenter = currentPosition ?? TOKYO_CENTER;
   const filteredLocations = locations
     .filter((location) => location.latitude && location.longitude)
     .filter((location) => (normalizedQuery ? matchedLocationIds.has(location.id) : true))
@@ -138,7 +138,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
       ...location,
       distanceKm:
         location.latitude && location.longitude
-          ? haversineDistanceKm(center, {
+          ? haversineDistanceKm(fallbackCenter, {
               latitude: location.latitude,
               longitude: location.longitude,
             })
@@ -160,10 +160,17 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
       return left.distanceKm - right.distanceKm;
     });
   const visibleLocations = filteredLocations;
-  const viewport = buildViewport(center, visibleLocations);
-  const points = visibleLocations.map((location) => toMapPoint(location, viewport));
   const selectedLocation =
     visibleLocations.find((location) => location.id === selectedLocationId) ?? visibleLocations[0] ?? null;
+  const mapCenter =
+    selectedLocation && selectedLocation.latitude && selectedLocation.longitude
+      ? {
+          latitude: selectedLocation.latitude,
+          longitude: selectedLocation.longitude,
+        }
+      : fallbackCenter;
+  const viewport = buildViewport(mapCenter, visibleLocations);
+  const points = visibleLocations.map((location) => toMapPoint(location, viewport));
   const selectedLocationMatches = selectedLocation ? matchesByLocationId.get(selectedLocation.id) ?? [] : [];
 
   function formatMatchedLessonSummary(locationId: string) {
@@ -264,22 +271,13 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
               <span />
             </button>
           ))}
-          {selectedLocation ? (
-            <div className="map-info-card">
-              <p className="map-location-brand">{selectedLocation.brand?.name ?? "-"}</p>
-              <h3>{selectedLocation.name}</h3>
-              <p className="muted">
-                {selectedLocation.city}
-                {selectedLocation.address_line ? ` ${selectedLocation.address_line}` : ""}
-              </p>
-              <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
-              {selectedLocationMatches.length > 0 ? (
-                <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
-              ) : null}
-              <Link href={`/locations/${selectedLocation.slug}`}>店舗詳細を見る</Link>
-            </div>
-          ) : null}
-          <div className="map-caption">{currentPosition ? "現在地を中心にした簡易マップ表示" : "東京周辺の簡易マップ表示"}</div>
+          <div className="map-caption">
+            {selectedLocation
+              ? `${selectedLocation.name} を中心に表示`
+              : currentPosition
+                ? "現在地を中心にした簡易マップ表示"
+                : "東京周辺の簡易マップ表示"}
+          </div>
         </div>
 
         <div className="map-location-list">
@@ -304,8 +302,10 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
               <button type="button" className="map-select-button" onClick={() => setSelectedLocationId(location.id)}>
                 地図で見る
               </button>
-              {normalizedQuery ? <Link href={buildLessonDetailHref(location)}>レッスン詳細を見る</Link> : null}
-              <Link href={`/locations/${location.slug}`}>店舗詳細を見る</Link>
+              <div className="map-link-row">
+                {normalizedQuery ? <Link href={buildLessonDetailHref(location)}>レッスン詳細を見る</Link> : null}
+                <Link href={`/locations/${location.slug}`}>店舗詳細を見る</Link>
+              </div>
             </article>
           ))}
         </div>

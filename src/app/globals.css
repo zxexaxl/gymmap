@@ -373,23 +373,6 @@ p {
   background: #7f2f16;
 }
 
-.map-info-card {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  max-width: 260px;
-  padding: 14px 16px;
-  border: 1px solid rgba(201, 183, 157, 0.9);
-  border-radius: 18px;
-  background: rgba(255, 252, 247, 0.96);
-  box-shadow: var(--shadow);
-}
-
-.map-info-card h3,
-.map-info-card p {
-  margin-bottom: 6px;
-}
-
 .map-caption {
   position: absolute;
   left: 16px;
@@ -441,6 +424,12 @@ p {
 
 .map-select-button:hover {
   text-decoration: underline;
+}
+
+.map-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .schedule-groups {
