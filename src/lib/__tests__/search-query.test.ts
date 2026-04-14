@@ -132,6 +132,34 @@ test("radical alias hits Radical Fitness programs", () => {
   assert.equal(scoreProgramQueryMatch(result, query), 246);
 });
 
+test("baila baila is treated as an independent brand", () => {
+  const bailaQuery = normalizeSearchKeyword("バイラバイラ");
+  const radicalQuery = normalizeSearchKeyword("ラディカル");
+  const result = baseResult({
+    raw_program_name: "バイラバイラ",
+    canonical_program_name: "バイラバイラ",
+    normalized_text: "バイラバイラ",
+    comparison_key: "バイラバイラ",
+    program_brand: "BAILA BAILA",
+  });
+
+  assert.equal(scoreProgramQueryMatch(result, bailaQuery), 300);
+  assert.equal(scoreProgramQueryMatch(result, radicalQuery), 0);
+});
+
+test("mossa query does not match team bike", () => {
+  const query = normalizeSearchKeyword("mossa");
+  const result = baseResult({
+    raw_program_name: "チームバイク 45",
+    canonical_program_name: "チームバイク",
+    normalized_text: "チームバイク 45",
+    comparison_key: "チームバイク",
+    program_brand: null,
+  });
+
+  assert.equal(scoreProgramQueryMatch(result, query), 0);
+});
+
 test("query debug lists only the actual matching fields", () => {
   const query = normalizeSearchKeyword("body");
   const result = baseResult({});

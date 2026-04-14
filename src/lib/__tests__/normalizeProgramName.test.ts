@@ -82,6 +82,9 @@ test("matches frequent unresolved candidates with the small master", () => {
   const rpb = normalizeProgramName({
     rawProgramName: "RPBｺﾝﾄﾛｰﾙ",
   });
+  const bailaBaila = normalizeProgramName({
+    rawProgramName: "ﾊﾞｲﾗﾊﾞｲﾗ 45",
+  });
 
   assert.equal(aerobics.canonical_program_name, "エアロビクス");
   assert.equal(aerobics.category_primary, "cardio");
@@ -97,6 +100,8 @@ test("matches frequent unresolved candidates with the small master", () => {
   assert.equal(step.category_primary, "cardio");
   assert.equal(rpb.canonical_program_name, "RPBコントロール");
   assert.equal(rpb.category_primary, "conditioning");
+  assert.equal(bailaBaila.canonical_program_name, "バイラバイラ");
+  assert.equal(bailaBaila.program_brand, "BAILA BAILA");
 });
 
 test("matches additional studio programs with fixed categories", () => {
@@ -137,6 +142,7 @@ test("matches additional studio programs with fixed categories", () => {
   assert.equal(circuit.canonical_program_name, "サーキット");
   assert.equal(circuit.category_primary, "conditioning");
   assert.equal(teambike.canonical_program_name, "チームバイク");
+  assert.equal(teambike.program_brand, null);
   assert.equal(teambike.category_primary, "cycling");
   assert.equal(shapeBoxing.canonical_program_name, "シェイプボクシング");
   assert.equal(shapeBoxing.category_primary, "martial_arts");

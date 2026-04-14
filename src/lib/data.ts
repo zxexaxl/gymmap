@@ -1,9 +1,3 @@
-import {
-  buildAdminSampleDataset,
-  buildSampleSearchResults,
-  sampleBrands,
-  sampleLocations,
-} from "@/lib/sample-data";
 import { normalizeSearchKeyword, scoreProgramQueryMatch } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
@@ -28,6 +22,16 @@ type SupabaseJoinedSchedule = ClassSchedule & {
   };
   programs: Program;
 };
+
+const emptyAdminDataset = (): AdminDataset => ({
+  gym_brands: [],
+  gym_locations: [],
+  programs: [],
+  class_schedules: [],
+  source_pages: [],
+  ingestion_runs: [],
+  ingestion_items: [],
+});
 
 const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
   monday: 0,
@@ -145,7 +149,7 @@ function scoreKeywordMatch(item: SearchResult, query: string) {
 
 export async function getSearchResults(filters: SearchFilters): Promise<SearchResult[]> {
   if (!hasSupabaseEnv()) {
-    return filterResults(buildSampleSearchResults(), filters);
+    return [];
   }
 
   const supabase = getSupabaseClient();
@@ -165,7 +169,7 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
 
   if (error) {
     console.error("Failed to load schedules from Supabase:", error.message);
-    return filterResults(buildSampleSearchResults(), filters);
+    return [];
   }
 
   return filterResults((data as SupabaseJoinedSchedule[]).map(mapJoinedSchedule), filters);
@@ -173,14 +177,14 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
 
 export async function getBrands(): Promise<GymBrand[]> {
   if (!hasSupabaseEnv()) {
-    return sampleBrands;
+    return [];
   }
 
   const supabase = getSupabaseClient();
   const { data, error } = await supabase.from("gym_brands").select("*").order("name");
 
   if (error || !data) {
-    return sampleBrands;
+    return [];
   }
 
   return data;
@@ -188,7 +192,7 @@ export async function getBrands(): Promise<GymBrand[]> {
 
 export async function getLocations(): Promise<GymLocation[]> {
   if (!hasSupabaseEnv()) {
-    return sampleLocations;
+    return [];
   }
 
   const supabase = getSupabaseClient();
@@ -198,7 +202,7 @@ export async function getLocations(): Promise<GymLocation[]> {
     .order("name");
 
   if (error || !data) {
-    return sampleLocations;
+    return [];
   }
 
   return (data as Array<GymLocation & { gym_brands: GymBrand }>).map((row) => ({
@@ -254,7 +258,7 @@ async function fetchTable<T>(table: string): Promise<T[]> {
 
 export async function getAdminDataset(): Promise<AdminDataset> {
   if (!hasSupabaseEnv()) {
-    return buildAdminSampleDataset();
+    return emptyAdminDataset();
   }
 
   const [gym_brands, gym_locations, programs, class_schedules, source_pages, ingestion_runs, ingestion_items] =
@@ -269,14 +273,12 @@ export async function getAdminDataset(): Promise<AdminDataset> {
     ]);
 
   return {
-    gym_brands: gym_brands.length ? gym_brands : buildAdminSampleDataset().gym_brands,
-    gym_locations: gym_locations.length ? gym_locations : buildAdminSampleDataset().gym_locations,
-    programs: programs.length ? programs : buildAdminSampleDataset().programs,
-    class_schedules: class_schedules.length
-      ? enrichSchedulesWithNormalization(class_schedules)
-      : buildAdminSampleDataset().class_schedules,
-    source_pages: source_pages.length ? source_pages : buildAdminSampleDataset().source_pages,
-    ingestion_runs: ingestion_runs.length ? ingestion_runs : buildAdminSampleDataset().ingestion_runs,
-    ingestion_items: ingestion_items.length ? ingestion_items : buildAdminSampleDataset().ingestion_items,
+    gym_brands,
+    gym_locations,
+    programs,
+    class_schedules: class_schedules.length ? enrichSchedulesWithNormalization(class_schedules) : [],
+    source_pages,
+    ingestion_runs,
+    ingestion_items,
   };
 }

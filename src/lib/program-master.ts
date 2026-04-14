@@ -9,7 +9,7 @@ export type ProgramCategoryPrimary =
   | "conditioning"
   | "other";
 
-export type ProgramBrand = "Les Mills" | "Radical Fitness" | "MOSSA" | "ZUMBA";
+export type ProgramBrand = "Les Mills" | "Radical Fitness" | "MOSSA" | "ZUMBA" | "BAILA BAILA";
 
 export type ProgramMasterEntry = {
   canonicalProgramName: string;
@@ -32,6 +32,7 @@ const programBrandAliases: Record<ProgramBrand, string[]> = {
   ],
   MOSSA: ["MOSSA", "mossa"],
   ZUMBA: ["ZUMBA", "zumba", "ズンバ"],
+  "BAILA BAILA": ["BAILA BAILA", "baila baila", "バイラバイラ", "バイラ・バイラ"],
 };
 
 // 巨大な別名辞書ではなく、小さな正規名マスタだけを持ちます。
@@ -116,9 +117,9 @@ export const programMaster: ProgramMasterEntry[] = [
     comparisonKeys: ["チームバイク", "teambike"],
     searchHints: ["ﾁｰﾑﾊﾞｲｸ", "team bike", "teambike"],
     searchAliases: ["チームバイク", "team bike", "teambike"],
-    programBrand: "MOSSA",
+    programBrand: null,
     categoryPrimary: "cycling",
-    tags: ["cycling", "cardio", "mossa"],
+    tags: ["cycling", "cardio"],
   },
   {
     canonicalProgramName: "シェイプボクシング",
@@ -179,9 +180,9 @@ export const programMaster: ProgramMasterEntry[] = [
     comparisonKeys: ["バイラバイラ", "bailabaila"],
     searchHints: ["baila baila", "ﾊﾞｲﾗﾊﾞｲﾗ", "baila45"],
     searchAliases: ["バイラバイラ", "baila baila"],
-    programBrand: "Radical Fitness",
+    programBrand: "BAILA BAILA",
     categoryPrimary: "dance",
-    tags: ["dance", "cardio", "radical_fitness"],
+    tags: ["dance", "cardio", "baila_baila"],
   },
   {
     canonicalProgramName: "太極拳",

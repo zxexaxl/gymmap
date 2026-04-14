@@ -84,7 +84,7 @@
 
 1. Next.js + TypeScript の土台を作成
 2. 共通型とユーティリティを作成
-3. Supabase 接続層と、未設定時のローカルサンプルデータを作成
+3. Supabase 接続層と、検索・管理画面のデータ取得処理を作成
 4. 検索トップ、結果一覧、店舗詳細、管理画面を実装
 5. Supabase 用 SQL と seed を追加
 6. README にローカル起動、Supabase、Vercel、詰まりどころ、今後の拡張を整理
@@ -101,8 +101,8 @@ npm run dev
 
 補足:
 
-- `.env.local` に Supabase の値を入れなくても、ローカルサンプルデータで画面表示はできます。
-- Supabase を設定すると、DB からデータを読むようになります。
+- `.env.local` に Supabase の値を入れたうえで、実データを投入して使う想定です。
+- 現在は構築当初のローカルサンプルデータを削除済みです。
 
 ## Supabase 側でやること
 
@@ -148,34 +148,24 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 
 | 変数名 | 必須 | 用途 |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | 任意 | Supabase Project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 任意 | Supabase anon key |
+| `NEXT_PUBLIC_SUPABASE_URL` | 必須 | Supabase Project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 必須 | Supabase anon key |
 | `ADMIN_ACCESS_KEY` | 管理画面を使う場合は必須 | `/admin/data` の簡易保護用キー |
 
-MVP では未設定でもローカルサンプルデータで確認できます。
+サンプルフォールバックは削除済みなので、画面確認には Supabase 設定と実データ投入が必要です。
 
 ## Seed 投入手順
 
 1. Supabase の SQL Editor を開く
-2. `supabase/seed.sql` を実行する
+2. 必要なブランド・店舗データ、または import スクリプトで使う前提データを投入する
 3. `/search` と `/admin/data` を開いてデータ反映を確認する
    - 管理画面は `/admin/data?key=ADMIN_ACCESS_KEY の値` で開いてください
 
 ## データを 1 件追加する方法
 
-ローカルのダミーデータだけ増やしたい場合:
+Supabase に直接追加したい場合:
 
-1. [src/lib/sample-data.ts](/Users/te/Documents/GymMap/src/lib/sample-data.ts) を開く
-2. 店舗を増やすなら `sampleLocations` に 1 件追加する
-   - `brand_id` は `sampleBrands` の id に合わせます
-3. クラスを増やすなら `sampleSchedules` に 1 件追加する
-   - `location_id` は `sampleLocations` の id
-   - `program_id` は `samplePrograms` の id
-4. `npm run dev` を開き直して `/search` やトップ画面で確認する
-
-Supabase の seed も増やしたい場合:
-
-1. [supabase/seed.sql](/Users/te/Documents/GymMap/supabase/seed.sql) の同じブロックに 1 行追加する
+1. 必要なテーブルに SQL Editor から 1 行追加する
 2. 店舗追加:
    - `gym_locations`
    - 必要に応じて `source_pages`
@@ -185,6 +175,12 @@ Supabase の seed も増やしたい場合:
    - `/search` で一覧や絞り込みを確認
    - `/locations/[slug]` で店舗詳細を確認
    - `/admin/data?key=...` でテーブル内容を確認
+
+JEXER 抽出 JSON から入れる場合:
+
+1. `npm run import:jexer -- --file=... --dry-run` で差分を確認する
+2. 問題なければ `--dry-run` なしで実行する
+3. `/search` と `/admin/data` で投入結果を確認する
 
 ## レッスン名の正規化
 

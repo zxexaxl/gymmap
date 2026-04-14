@@ -4,6 +4,8 @@ import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
 import { getBrands, getLocations, getSearchResults } from "@/lib/data";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const [brands, locations, searchResults] = await Promise.all([
     getBrands(),
