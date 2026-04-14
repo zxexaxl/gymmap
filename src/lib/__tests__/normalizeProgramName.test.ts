@@ -165,6 +165,26 @@ test("matches additional studio programs with fixed categories", () => {
   assert.equal(bodyCare.category_primary, "mind_body");
 });
 
+test("prefers manually confirmed master rules over later heuristics", () => {
+  const teamBike = normalizeProgramName({
+    rawProgramName: "TEAM BIKE 45",
+  });
+  const bailaBaila = normalizeProgramName({
+    rawProgramName: "BAILA BAILA 45",
+  });
+
+  assert.equal(teamBike.canonical_program_name, "チームバイク");
+  assert.equal(teamBike.program_brand, null);
+  assert.equal(teamBike.manually_confirmed, true);
+  assert.equal(teamBike.source_of_truth, "manual_confirmed");
+  assert.equal(teamBike.needs_review, false);
+
+  assert.equal(bailaBaila.canonical_program_name, "バイラバイラ");
+  assert.equal(bailaBaila.program_brand, "BAILA BAILA");
+  assert.equal(bailaBaila.manually_confirmed, true);
+  assert.equal(bailaBaila.source_of_truth, "manual_confirmed");
+});
+
 test("returns unresolved for ambiguous names", () => {
   const result = normalizeProgramName({
     rawProgramName: "ボディメイク プログラム",
@@ -173,4 +193,5 @@ test("returns unresolved for ambiguous names", () => {
   assert.equal(result.canonical_program_name, null);
   assert.equal(result.match_method, "unresolved");
   assert.equal(result.needs_review, true);
+  assert.equal(result.source_of_truth, "raw_unresolved");
 });

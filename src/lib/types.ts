@@ -77,6 +77,11 @@ export type ClassSchedule = {
   match_method?: "exact" | "similar" | "unresolved";
   confidence?: number;
   needs_review?: boolean;
+  manually_confirmed?: boolean;
+  source_of_truth?: "manual_confirmed" | "master_catalog" | "ai_candidate" | "raw_unresolved";
+  brand_candidate?: string | null;
+  category_candidate?: string | null;
+  normalization_notes?: string | null;
   studio_name: string | null;
   instructor_name: string | null;
   source_page_url: string | null;

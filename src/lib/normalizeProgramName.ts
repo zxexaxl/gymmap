@@ -1,4 +1,10 @@
-import { programMaster, type ProgramBrand, type ProgramCategoryPrimary, type ProgramMasterEntry } from "./program-master";
+import {
+  programMaster,
+  type ProgramBrand,
+  type ProgramCategoryPrimary,
+  type ProgramMasterEntry,
+  type ProgramMasterSourceOfTruth,
+} from "./program-master";
 
 export type ProgramNormalizationInput = {
   rawProgramName: string;
@@ -18,6 +24,11 @@ export type ProgramNormalizationResult = {
   match_method: "exact" | "similar" | "unresolved";
   confidence: number;
   needs_review: boolean;
+  manually_confirmed: boolean;
+  source_of_truth: ProgramMasterSourceOfTruth | "ai_candidate" | "raw_unresolved";
+  brand_candidate: ProgramBrand | null;
+  category_candidate: ProgramCategoryPrimary | null;
+  normalization_notes: string | null;
 };
 
 const similarityThreshold = 0.78;
@@ -236,6 +247,10 @@ function shouldNeedsReview({
     return false;
   }
 
+  if (entry.sourceOfTruth === "manual_confirmed") {
+    return false;
+  }
+
   const safeBrandPrograms = new Set(["BODYCOMBAT", "BODYPUMP", "ZUMBA", "リトモス", "チームバイク", "メガダンス", "バイラバイラ"]);
   const safeContainmentPrograms = new Set(["ヨガ", "ピラティス", "ペルビックストレッチ", "エアロビクス"]);
 
@@ -279,8 +294,16 @@ export function normalizeProgramName(input: ProgramNormalizationInput): ProgramN
       match_method: "unresolved",
       confidence: unresolvedConfidence,
       needs_review: true,
+      manually_confirmed: false,
+      source_of_truth: "raw_unresolved",
+      brand_candidate: null,
+      category_candidate: null,
+      normalization_notes: "program master 未登録のため unresolved として保持",
     };
   }
+
+  const manuallyConfirmed = match.entry.sourceOfTruth === "manual_confirmed";
+  const sourceOfTruth = manuallyConfirmed ? "manual_confirmed" : match.matchMethod === "exact" ? "master_catalog" : "master_catalog";
 
   return {
     raw_program_name: input.rawProgramName,
@@ -299,6 +322,15 @@ export function normalizeProgramName(input: ProgramNormalizationInput): ProgramN
       entry: match.entry,
       comparisonKey,
     }),
+    manually_confirmed: manuallyConfirmed,
+    source_of_truth: sourceOfTruth,
+    brand_candidate: manuallyConfirmed ? match.entry.programBrand : null,
+    category_candidate: match.entry.categoryPrimary,
+    normalization_notes: manuallyConfirmed
+      ? "手動確定済み master を最優先で適用"
+      : match.matchMethod === "exact"
+        ? "program master の確定ルールを適用"
+        : "program master の類似一致を適用",
   };
 }
 

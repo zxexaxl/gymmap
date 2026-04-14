@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.jexer.jp/mb/yotsuya/",
+  "extraction_urls": [],
+  "keywords": {
+    "table": false,
+    "schedule": false,
+    "program": false,
+    "lesson": false,
+    "studio": false
+  },
+  "usage_metadata": {
+    "prompt_token_count": 10904,
+    "candidates_token_count": 506,
+    "total_token_count": 11414,
+    "thoughts_token_count": 4,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  }
+}

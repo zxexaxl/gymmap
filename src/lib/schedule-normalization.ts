@@ -20,6 +20,11 @@ export function enrichScheduleWithNormalization(schedule: ClassSchedule): ClassS
     match_method: normalized.match_method,
     confidence: normalized.confidence,
     needs_review: normalized.needs_review,
+    manually_confirmed: normalized.manually_confirmed,
+    source_of_truth: normalized.source_of_truth,
+    brand_candidate: normalized.brand_candidate,
+    category_candidate: normalized.category_candidate,
+    normalization_notes: normalized.normalization_notes,
   };
 }
 

@@ -192,6 +192,7 @@ JEXER 抽出 JSON から入れる場合:
 - まず機械的に文字列正規化し、比較用キーを作る
 - `start_time` / `end_time` があればそこから所要時間を計算する
 - 小さな正規名マスタ [src/lib/program-master.ts](/Users/te/Documents/GymMap/src/lib/program-master.ts) に対して完全一致、次に類似一致を試す
+- 手動で確定したルールは `manualProgramMaster` に追加し、以後はそれを最優先で使う
 - `category_primary` は `cardio / strength / mind_body / dance / cycling / aquatic / martial_arts / conditioning / other` の固定集合で管理する
 - `program_brand` は `Les Mills / Radical Fitness / MOSSA / ZUMBA` などのブランド軸で持ち、カテゴリとは混同しない
 - 閾値未満は `unresolved` として保留する
@@ -201,6 +202,7 @@ JEXER 抽出 JSON から入れる場合:
 - `exact`: 正規キーでそのまま一致したもの
 - `similar`: 類似一致で吸収したもの。既知ブランドの代表プログラムや、ヨガ / ピラティス系の安全な寄せは review なしで通す場合がある
 - `unresolved`: 小さなマスタでも安全に寄せられないもの
+- `source_of_truth`: `manual_confirmed / master_catalog / raw_unresolved` を返し、どのルールで決まったかを追える
 - `needs_review=true` の代表例は、類似一致でも確信度が十分でないケース、ブランド不明の曖昧な名称、どの正規名にも安全に寄せられないケース
 
 使いどころ:
@@ -214,11 +216,12 @@ JEXER 抽出 JSON から入れる場合:
 
 マスタを少しずつ育てる方法:
 
-1. 新しい正規プログラムを追加したいときは `programMaster` に 1 エントリ追加する
-2. `comparisonKeys` には完全一致させたい短いキーだけ入れる
-3. `searchHints` には典型的な表記例を 2-4 個だけ足す
-4. ブランドが分かる場合は `programBrand` も設定する
-5. 曖昧なケースは無理に増やさず `unresolved` のままレビュー対象にする
+1. ユーザーが確認して確定したルールは `manualProgramMaster` に追加する
+2. 新しい正規プログラム候補を追加したいときは `catalogProgramMaster` 側に 1 エントリ追加する
+3. `comparisonKeys` には完全一致させたい短いキーだけ入れる
+4. `searchHints` には典型的な表記例を 2-4 個だけ足す
+5. ブランドが分かる場合だけ `programBrand` を設定し、不確かな場合は `null` のままにする
+6. AI は将来 unknown program の候補提案に使っても、`manualProgramMaster` の確定ルールは上書きしない
 
 テスト:
 
@@ -229,6 +232,10 @@ npm run test
 ## JEXER 東京圏 抽出実験
 
 JEXER のスタジオスケジュール抽出は、まだ実験用途の手動実行スクリプトです。自動クロールや大量実行はまだ入れていません。
+
+設計原則:
+
+- 抽出探索の長期方針は [docs/schedule-extraction-principles.md](/Users/te/Documents/GymMap/docs/schedule-extraction-principles.md) を参照してください。
 
 必要な環境変数:
 
@@ -256,10 +263,12 @@ npm run extract:jexer -- --url=https://www.jexer.jp/mb/kameido/schedule/mon_10a.
 ```
 
 - 人が最初に入れる URL は店舗トップ URL や支店 URL だけで構いません
-- その先は同一支店配下の候補ページを集めて、Gemini が `entry / schedule_index / schedule_detail / instructor / ignore` を判定します
-- `schedule_index` と判定したページでは、掲載されている詳細候補リンクを原則広く採用し、あとで正規化や抽出結果確認で整える方針です
-- まだ実験用途のため、本格クローラではなく浅い候補収集と AI 判定に寄せた構成です
-- JEXER では shared `https://www.jexer.jp/mb/schedule/?shop=...` URL は 500 になりやすいため、入口・候補・fallback には使わず、店舗固有の `mb/<store>/...` URL を優先します
+- その先は same-origin の候補リンクを広く集め、URL スコアと AI 判定を組み合わせて探索します
+- AI は `entry / schedule_index / schedule_detail / pdf_schedule / instructor / ignore` を判定し、`recommended_next_links` で次に進む候補を返します
+- `schedule_index` と判定したページでは、AI 推薦リンクに加えて一覧内の detail / PDF 候補も広く回収します
+- 探索は固定 branch ではなく、`maxVisitedPages / maxAiClassifications / maxPdfPages / maxDepth` の予算で制御します
+- PDF は第一級の抽出対象で、URL 判定、PDF本文取得、PDF専用抽出を分けて扱います
+- まだ実験用途のため、本格クローラではなく浅い候補収集と AI ナビゲーションに寄せた構成です
 
 利用できる target:
 
@@ -289,8 +298,7 @@ npm run extract:jexer -- --target=tokyo-jexer
 - `otsuka`: `https://www.jexer.jp/mb/otsuka/`
 - `itabashi`: `https://www.jexer.jp/mb/itabashi/`
 - `shinkoiwa`: `https://www.jexer.jp/mb/shinkoiwa/`
-- `index.html` は入口ページだけで、実際のスタジオスケジュールは `fitness.html` やその先の日別 HTML にある場合があります。抽出スクリプトはまずリンク先をたどってから Gemini に渡します。
-- JEXER では `fitness.html` や `aqua.html` も入口ページである場合があります。スタジオ抽出では `aqua` 系は除外し、`mon_10a.html` のような日別詳細 HTML を優先して本抽出対象に選びます。
+- `index.html` は入口ページだけで、実際のスタジオスケジュールは `fitness.html`、その先の日別 HTML、または PDF にある場合があります。抽出スクリプトは一覧ページと詳細ページを多段で探索してから Gemini に渡します。
 
 出力:
 
@@ -301,19 +309,20 @@ npm run extract:jexer -- --target=tokyo-jexer
 - デバッグ用に `output/jexer/debug/` へ生 HTML、Gemini 入力、Gemini 生レスポンスも保存されます
 - `output/jexer/debug/*.usage-metadata.json` を見ると、classification / extraction / total の token 使用量と、候補ページごとの usage を確認できます
 - `candidate-pages.json` と `selection.json` を見ると、入口 URL からどの候補が集まり、どの URL が本抽出対象に選ばれたかを確認できます
-- `candidate-*.classification.json` には `page_type`, `schedule_kind`, `contains_schedule_rows`, `recommended_next_links`, `confidence` が入り、AI の分類結果を追えます
-- `failure.json` に `excluded_shared_schedule_urls` が出ている場合は、shared schedule URL を共通方針で除外した結果です
-- 方針としては「AI で一覧ページを見つけ、一覧配下の detail 候補は広めに回収して、明らかな除外対象だけ弾く」寄りです
+- `candidate-*.classification.json` には `page_type`, `schedule_kind`, `contains_schedule_rows`, `recommended_next_links`, `confidence`, `url_score`, `score_reasons` が入り、AI 判定と URL スコアの両方を追えます
+- `selection.json` と `failure.json` には `exploration_steps` が入り、step ごとの訪問 URL、深さ、判定、次リンク候補、抽出採用有無を確認できます
+- 方針としては「same-origin の候補を広めに取り、AI はページ種別判定と次リンク推薦を担当し、detail / PDF は後段で抽出する」寄りです
 - Supabase に都内 JEXER 店舗をまとめて追加したい場合は `supabase/sql/insert_jexer_tokyo_locations.sql` を実行してください
 - 神奈川・埼玉・千葉の JEXER 系店舗をまとめて追加したい場合は `supabase/migrations/0003_add_gym_locations_location_type.sql` を先に適用し、その後 `supabase/sql/insert_jexer_kanagawa_saitama_chiba_locations.sql` を実行してください
 - 追加件数の目安は、神奈川県 7 店舗、埼玉県 4 店舗、千葉県 3 店舗です
 
 0件だったときの確認手順:
 
-- `output/jexer/debug/*.source.html` を見て、そもそもスケジュール表が取得できているか確認します
+- `output/jexer/debug/*.candidate-pages.json` と `*.selection.json` を見て、候補不足なのか、detail 判定不足なのか、PDF に寄っているのかを先に確認します
+- `output/jexer/debug/*.source.html` に相当する入力は `gemini-input-*.txt` 側で確認します
 - `output/jexer/debug/*.html-keywords.json` を見て、`table` や `schedule` などのキーワードが HTML に含まれるか確認します
-- `output/jexer/debug/*.gemini-input.txt` を見て、Gemini に渡した入力が想定どおりか確認します
-- `output/jexer/debug/*.gemini-response.json` と `*.gemini-response-text.txt` を見て、Gemini が 0 件を返したのか、返却自体が崩れているのかを切り分けます
+- `output/jexer/debug/*.gemini-input-*.txt` を見て、Gemini に渡した HTML または PDF本文が想定どおりか確認します
+- `output/jexer/debug/*.gemini-response-*.json` と `*.txt` を見て、Gemini が 0 件を返したのか、返却自体が崩れているのかを切り分けます
 - `records: []` なら HTML 構造とプロンプトの噛み合いをまず疑い、レスポンス保存に失敗していれば API エラーやパース失敗を疑ってください
 - コスト確認では `*.summary.json` の `total_prompt_tokens / total_output_tokens / total_tokens` と、`debug/*.usage-metadata.json` の page ごとの usage を見比べると、どの店舗・どの候補判定で token が増えているか追いやすいです
 

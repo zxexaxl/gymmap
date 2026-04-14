@@ -1,0 +1,14 @@
+{
+  "slug": "itabashi",
+  "location_name": "JEXER 板橋",
+  "source_url": "https://www.jexer.jp/mb/itabashi/",
+  "stage": "fetch_html",
+  "message": "Failed to fetch source HTML: 404 Not Found",
+  "details": {
+    "failed_url": "https://www.jexer.jp/mb/itabashi/",
+    "status": 404,
+    "status_text": "Not Found",
+    "response_body_preview": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n</body></html>\n"
+  },
+  "failed_at": "2026-04-14T09:23:07.623Z"
+}
