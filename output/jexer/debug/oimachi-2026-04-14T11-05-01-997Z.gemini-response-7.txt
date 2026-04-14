@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "10:15",
+      "end_time": "11:15",
+      "raw_program_name": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅠ60",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "千村(由)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "11:35",
+      "end_time": "12:35",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ60",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "山口(隆)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "12:50",
+      "end_time": "13:35",
+      "raw_program_name": "ﾀﾞｲｴｯﾄｴｱﾛ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "高辻(一)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "13:50",
+      "end_time": "14:50",
+      "raw_program_name": "ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ60",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "後藤(宏)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "15:05",
+      "end_time": "15:50",
+      "raw_program_name": "ｴｱﾛﾋﾞｸｽﾗｲﾄ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "佐藤(美)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "16:05",
+      "end_time": "16:55",
+      "raw_program_name": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "高田(ま)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "17:20",
+      "end_time": "18:20",
+      "raw_program_name": "ｴｱﾛﾋﾞｸｽｺﾝﾎﾞⅡ60",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "山口(達)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "18:35",
+      "end_time": "19:20",
+      "raw_program_name": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "instructor_name": "坂下(正)"
+    }
+  ]
+}

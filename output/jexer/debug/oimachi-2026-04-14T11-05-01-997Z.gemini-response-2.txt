@@ -1,0 +1,85 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "10:40",
+      "end_time": "11:25",
+      "raw_program_name": "adidas yoga",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "井上(奈)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "11:40",
+      "end_time": "12:25",
+      "raw_program_name": "骨盤引締め\nﾋﾟﾗﾃｨｽ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "荒金(弘)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "12:40",
+      "end_time": "13:10",
+      "raw_program_name": "ﾊﾞﾚｴｽﾄﾚｯﾁ30",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "能見(章)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "13:25",
+      "end_time": "14:10",
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "能見(章)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "14:30",
+      "end_time": "15:30",
+      "raw_program_name": "自力整体",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "竹田(真)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "18:15",
+      "end_time": "19:00",
+      "raw_program_name": "BITS(ﾋﾞｯﾂ)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "安(里)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "19:10",
+      "end_time": "20:10",
+      "raw_program_name": "ﾌﾗﾀﾞﾝｽ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "大野(あ)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "20:25",
+      "end_time": "20:55",
+      "raw_program_name": "ｽﾄﾘｰﾄﾀﾞﾝｽｽﾀｰﾄ(ﾊｳｽ系)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "SUGURU"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "21:05",
+      "end_time": "22:05",
+      "raw_program_name": "ｽﾄﾘｰﾄﾀﾞﾝｽ(ﾊｳｽ系)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "instructor_name": "SUGURU"
+    }
+  ]
+}

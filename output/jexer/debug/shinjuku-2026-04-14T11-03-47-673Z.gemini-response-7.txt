@@ -1,0 +1,130 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "07:20",
+      "end_time": "08:10",
+      "raw_program_name": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "久我(千)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "09:30",
+      "end_time": "10:15",
+      "raw_program_name": "骨盤引締めﾋﾟﾗﾃｨｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "ﾅｵｺﾓﾘ"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "10:30",
+      "end_time": "11:15",
+      "raw_program_name": "ｴｱﾛｳｫｰｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "満生(恒)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "11:30",
+      "end_time": "12:15",
+      "raw_program_name": "ｽﾞﾝﾊﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "本田(康)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "12:30",
+      "end_time": "13:00",
+      "raw_program_name": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "中村(太)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ30",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "中村(太)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "raw_program_name": "ｽﾃｯﾌﾟ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "満生(恒)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "raw_program_name": "ﾘﾄﾓｽ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "清水(薫)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "raw_program_name": "AEROBICS",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "佐々木(啓)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "18:00",
+      "end_time": "18:45",
+      "raw_program_name": "ﾊﾞﾚﾄﾝ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "大滝(智)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "19:00",
+      "end_time": "19:45",
+      "raw_program_name": "ｽﾞﾝﾊﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "尾島(真)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "20:00",
+      "end_time": "20:45",
+      "raw_program_name": "ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "山里(紅)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "21:05",
+      "end_time": "21:50",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "小松(ひ)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "22:05",
+      "end_time": "22:50",
+      "raw_program_name": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "instructor_name": "深田(祐)"
+    }
+  ]
+}

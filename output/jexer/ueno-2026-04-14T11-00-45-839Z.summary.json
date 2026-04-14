@@ -1,0 +1,102 @@
+{
+  "total_records": 236,
+  "needs_review_count": 192,
+  "unresolved_count": 174,
+  "usage_metadata": {
+    "prompt_token_count": 477015,
+    "candidates_token_count": 27298,
+    "total_token_count": 504322,
+    "thoughts_token_count": 9,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 477015,
+  "total_output_tokens": 27298,
+  "total_tokens": 504322,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 213
+    },
+    {
+      "key": "Les Mills",
+      "count": 14
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 7
+    },
+    {
+      "key": "ZUMBA",
+      "count": 2
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 174
+    },
+    {
+      "key": "mind_body",
+      "count": 23
+    },
+    {
+      "key": "cardio",
+      "count": 16
+    },
+    {
+      "key": "dance",
+      "count": 13
+    },
+    {
+      "key": "strength",
+      "count": 8
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "マンツーマンサポート",
+      "count": 66
+    },
+    {
+      "key": "BODYCOMBAT",
+      "count": 6
+    },
+    {
+      "key": "BODYPUMP",
+      "count": 6
+    },
+    {
+      "key": "リラックスヨガ",
+      "count": 6
+    },
+    {
+      "key": "BODYATTACK",
+      "count": 4
+    },
+    {
+      "key": "水中ウォーキング",
+      "count": 4
+    },
+    {
+      "key": "LesMills SHAPES",
+      "count": 3
+    },
+    {
+      "key": "RITMOS",
+      "count": 3
+    },
+    {
+      "key": "Warmストレッチ",
+      "count": 3
+    },
+    {
+      "key": "アクア45",
+      "count": 3
+    }
+  ]
+}

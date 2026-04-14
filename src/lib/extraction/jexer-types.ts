@@ -1,4 +1,5 @@
 import type { ProgramBrand, ProgramCategoryPrimary } from "../program-master";
+import type { ScheduleEntryType } from "./entry-type-classifier";
 
 export type GeminiUsageMetadata = {
   prompt_token_count: number | null;
@@ -22,6 +23,8 @@ export type ExtractedJexerScheduleRecord = {
   raw_program_name: string;
   instructor_name: string | null;
   source_url: string;
+  entry_type_candidate?: ScheduleEntryType | null;
+  entry_type_reason?: string | null;
 };
 
 export type NormalizedExtractedJexerScheduleRecord = ExtractedJexerScheduleRecord & {
@@ -35,6 +38,9 @@ export type NormalizedExtractedJexerScheduleRecord = ExtractedJexerScheduleRecor
   match_method: "exact" | "similar" | "unresolved";
   confidence: number;
   needs_review: boolean;
+  entry_type: ScheduleEntryType;
+  entry_type_reason: string;
+  included_in_schedule_results: boolean;
 };
 
 export type JexerExtractionResult = {

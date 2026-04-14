@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"10:40\",\n      \"end_time\": \"11:25\",\n      \"raw_program_name\": \"adidas yoga\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"井上(奈)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"11:40\",\n      \"end_time\": \"12:25\",\n      \"raw_program_name\": \"骨盤引締め\\nﾋﾟﾗﾃｨｽ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"荒金(弘)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"12:40\",\n      \"end_time\": \"13:10\",\n      \"raw_program_name\": \"ﾊﾞﾚｴｽﾄﾚｯﾁ30\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"能見(章)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"13:25\",\n      \"end_time\": \"14:10\",\n      \"raw_program_name\": \"ZUMBA\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"能見(章)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:30\",\n      \"raw_program_name\": \"自力整体\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"竹田(真)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"18:15\",\n      \"end_time\": \"19:00\",\n      \"raw_program_name\": \"BITS(ﾋﾞｯﾂ)\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"安(里)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"19:10\",\n      \"end_time\": \"20:10\",\n      \"raw_program_name\": \"ﾌﾗﾀﾞﾝｽ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"大野(あ)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"20:25\",\n      \"end_time\": \"20:55\",\n      \"raw_program_name\": \"ｽﾄﾘｰﾄﾀﾞﾝｽｽﾀｰﾄ(ﾊｳｽ系)\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"SUGURU\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"21:05\",\n      \"end_time\": \"22:05\",\n      \"raw_program_name\": \"ｽﾄﾘｰﾄﾀﾞﾝｽ(ﾊｳｽ系)\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10b.html\",\n      \"instructor_name\": \"SUGURU\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1579,
+    "candidatesTokenCount": 1103,
+    "totalTokenCount": 2682,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1579
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "eB_eaeT1H4Oc0-kPhpK-2AU"
+}

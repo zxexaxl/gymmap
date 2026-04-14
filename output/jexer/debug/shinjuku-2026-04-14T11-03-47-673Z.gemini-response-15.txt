@@ -1,0 +1,103 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "07:20",
+      "end_time": "08:10",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "ｳﾞｪﾙﾃﾞ(ひ)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "09:25",
+      "end_time": "10:15",
+      "raw_program_name": "太極拳",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "河原(佳)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "10:30",
+      "end_time": "11:15",
+      "raw_program_name": "ﾋﾞｯﾂ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "村山(理)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "NAO"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "12:55",
+      "end_time": "13:40",
+      "raw_program_name": "ﾍﾟﾙﾋﾞｯｸｽﾄﾚｯﾁ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "加藤(あ)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "13:55",
+      "end_time": "14:40",
+      "raw_program_name": "骨盤ﾈｼﾞ締めｴｸｻｻｲｽﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "MASAKO"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "14:55",
+      "end_time": "15:40",
+      "raw_program_name": "RPBｺﾝﾄﾛｰﾙ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "相馬(絵)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "17:50",
+      "end_time": "18:40",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "神崎(卓)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "19:00",
+      "end_time": "19:50",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "萩原(香)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "20:10",
+      "end_time": "21:00",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "神崎(卓)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "21:20",
+      "end_time": "22:10",
+      "raw_program_name": "ﾎｯﾄﾖｶﾞ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "instructor_name": "土師(恵)"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "total_records": 137,
+  "needs_review_count": 118,
+  "unresolved_count": 111,
+  "usage_metadata": {
+    "prompt_token_count": 294957,
+    "candidates_token_count": 16674,
+    "total_token_count": 311646,
+    "thoughts_token_count": 15,
+    "cached_content_token_count": 108631,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 294957,
+  "total_output_tokens": 16674,
+  "total_tokens": 311646,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 128
+    },
+    {
+      "key": "Les Mills",
+      "count": 6
+    },
+    {
+      "key": "ZUMBA",
+      "count": 3
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 111
+    },
+    {
+      "key": "mind_body",
+      "count": 12
+    },
+    {
+      "key": "cardio",
+      "count": 6
+    },
+    {
+      "key": "dance",
+      "count": 3
+    },
+    {
+      "key": "strength",
+      "count": 3
+    },
+    {
+      "key": "martial_arts",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "スイミングスクール【ジュニア】",
+      "count": 31
+    },
+    {
+      "key": "マンツーマンサポート",
+      "count": 22
+    },
+    {
+      "key": "スイミングスクール【成人】",
+      "count": 5
+    },
+    {
+      "key": "リラックスヨガ",
+      "count": 5
+    },
+    {
+      "key": "アクア45（定員60名）",
+      "count": 4
+    },
+    {
+      "key": "スイミングスクール【ベビー】",
+      "count": 4
+    },
+    {
+      "key": "体育スクール【キンダージュニア】",
+      "count": 4
+    },
+    {
+      "key": "体育スクール【ジュニア】",
+      "count": 4
+    },
+    {
+      "key": "体育スクール【キンダー】",
+      "count": 3
+    },
+    {
+      "key": "avex dance master【ジュニア】スターター",
+      "count": 2
+    }
+  ]
+}

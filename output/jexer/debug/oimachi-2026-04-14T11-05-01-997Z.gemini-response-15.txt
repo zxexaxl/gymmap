@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "saturday",
+      "start_time": "13:30",
+      "end_time": "14:00",
+      "raw_program_name": "水中ｳｫｰｷﾝｸﾞ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "instructor_name": "staff"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "saturday",
+      "start_time": "14:15",
+      "end_time": "15:00",
+      "raw_program_name": "ｱｸｱ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "instructor_name": "最上(優)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "saturday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "ﾊﾞﾀﾌﾗｲﾍﾞｰｼｯｸ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "instructor_name": "staff"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "saturday",
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "raw_program_name": "ｽﾋﾟｰﾄﾞ&amp;ﾃﾞｨｽﾀﾝｽ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "instructor_name": "staff"
+    }
+  ]
+}

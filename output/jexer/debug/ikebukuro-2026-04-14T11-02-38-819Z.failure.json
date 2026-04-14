@@ -1,0 +1,9 @@
+{
+  "slug": "ikebukuro",
+  "location_name": "JEXER 池袋",
+  "source_url": "https://www.jexer.jp/mb/ikebukuro/index.html",
+  "stage": "job",
+  "message": "Gemini API request failed: 503 Service Unavailable {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+  "details": null,
+  "failed_at": "2026-04-14T11:02:43.771Z"
+}

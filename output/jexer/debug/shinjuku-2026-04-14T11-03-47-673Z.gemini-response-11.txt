@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "松下(詠)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "11:30",
+      "end_time": "12:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "松下(詠)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "13:00",
+      "end_time": "13:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "鈴木(奈)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "14:30",
+      "end_time": "15:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "鈴木(奈)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "18:30",
+      "end_time": "19:00",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "大崎(優)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "19:20",
+      "end_time": "19:50",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "中谷(俊)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "20:10",
+      "end_time": "20:40",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "平井(絢)"
+    },
+    {
+      "location_name": "JEXER 新宿",
+      "weekday": "tuesday",
+      "start_time": "21:00",
+      "end_time": "21:30",
+      "raw_program_name": "ﾁｰﾑﾊﾞｲｸ",
+      "source_url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "instructor_name": "高垣(美)"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "model_id": "gemini-2.5-flash-lite",
+  "classification": {
+    "prompt_token_count": 29284,
+    "candidates_token_count": 1359,
+    "total_token_count": 30643,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "extraction": {
+    "prompt_token_count": 24719,
+    "candidates_token_count": 17921,
+    "total_token_count": 42640,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total": {
+    "prompt_token_count": 54003,
+    "candidates_token_count": 19280,
+    "total_token_count": 73283,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "pages": [
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1919,
+        "candidates_token_count": 1695,
+        "total_token_count": 3614,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10c.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1463,
+        "candidates_token_count": 924,
+        "total_token_count": 2387,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1877,
+        "candidates_token_count": 1708,
+        "total_token_count": 3585,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10c.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1464,
+        "candidates_token_count": 924,
+        "total_token_count": 2388,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1721,
+        "candidates_token_count": 1251,
+        "total_token_count": 2972,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10c.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1353,
+        "candidates_token_count": 702,
+        "total_token_count": 2055,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1939,
+        "candidates_token_count": 1750,
+        "total_token_count": 3689,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10bike.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1539,
+        "candidates_token_count": 979,
+        "total_token_count": 2518,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10bike.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1549,
+        "candidates_token_count": 978,
+        "total_token_count": 2527,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1488,
+        "candidates_token_count": 866,
+        "total_token_count": 2354,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10bike.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "bike",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1539,
+        "candidates_token_count": 994,
+        "total_token_count": 2533,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/fri_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1739,
+        "candidates_token_count": 1338,
+        "total_token_count": 3077,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/mon_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1744,
+        "candidates_token_count": 1347,
+        "total_token_count": 3091,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/sat_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "hot_yoga",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1613,
+        "candidates_token_count": 1098,
+        "total_token_count": 2711,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/shinjuku/schedule/tue_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1772,
+        "candidates_token_count": 1367,
+        "total_token_count": 3139,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2128 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "09:50",
+      "end_time": "10:35",
+      "raw_program_name": "24式太極拳",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保朋美"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "10:50",
+      "end_time": "11:35",
+      "raw_program_name": "ステップライト45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "YASUCO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "11:55",
+      "end_time": "12:40",
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "YASUCO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "12:55",
+      "end_time": "13:40",
+      "raw_program_name": "MEGA-DANZ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "しんDo"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "raw_program_name": "ペルビックストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "木崎　純"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "raw_program_name": "けいらくビクス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "中村勝美"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "raw_program_name": "スローボディシェイプ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "中村勝美"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "19:05",
+      "end_time": "19:50",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "横地"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "BODYATTACK",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "横地"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "21:15",
+      "end_time": "22:00",
+      "raw_program_name": "【暗闇】UBOUND ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "09:40",
+      "end_time": "10:25",
+      "raw_program_name": "HOTYOGA（女性限定）\n骨盤調整",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "ユキ"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "10:45",
+      "end_time": "11:30",
+      "raw_program_name": "HOTYOGA\nビギナー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "ユキ"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "11:55",
+      "end_time": "12:25",
+      "raw_program_name": "Warmストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "乾"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "12:55",
+      "end_time": "13:40",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "木崎　純"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "13:55",
+      "end_time": "14:40",
+      "raw_program_name": "WOW!HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "稲村未彩紀"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "14:55",
+      "end_time": "15:40",
+      "raw_program_name": "美軸ラインストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "15:55",
+      "end_time": "16:25",
+      "raw_program_name": "筋膜リリース",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "野口"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "18:00",
+      "end_time": "18:45",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "千葉博美"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "19:05",
+      "end_time": "19:50",
+      "raw_program_name": "ボディメンテナンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "渋谷輝幸"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "ピラティス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "尚武"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "アクア45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "吉田賢一"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "12:00",
+      "end_time": "12:30",
+      "raw_program_name": "フィンスイムアドバンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "raw_program_name": "成人スイミング\nA-12",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "raw_program_name": "ジュニアスイミング\nＡ-15",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "raw_program_name": "ジュニアスイミング\nＡ-16",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニアスイミング\nＡ-17",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "19:00",
+      "end_time": "19:45",
+      "raw_program_name": "アクア45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "吉田賢一"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "20:00",
+      "end_time": "21:00",
+      "raw_program_name": "成人スイミング\nA-20",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "monday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "エアロウォーク",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "谷口浩子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "11:05",
+      "end_time": "11:50",
+      "raw_program_name": "ダンスエアロ45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "谷口浩子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "12:10",
+      "end_time": "12:55",
+      "raw_program_name": "A-FIT BOX",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Aya"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "WOW!HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "横地"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "松田有輝也"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "16:00",
+      "end_time": "17:30",
+      "raw_program_name": "レンタルスタジオ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "18:10",
+      "end_time": "18:55",
+      "raw_program_name": "エアロビクスコンボⅠ45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "佐藤陽子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "19:10",
+      "end_time": "19:55",
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "佐藤陽子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "UBOUND",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "鳥居"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "21:15",
+      "end_time": "22:00",
+      "raw_program_name": "BODYJAM",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "川島麻里奈"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "ChoreoSpirals",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "片山千穂"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "三船麻里子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "12:05",
+      "end_time": "12:50",
+      "raw_program_name": "スリムフローヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "三船麻里子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "13:15",
+      "end_time": "14:00",
+      "raw_program_name": "ピラティスフロー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "今井しのぶ"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "ZENSEE(陽)",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIHO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "15:10",
+      "end_time": "16:10",
+      "raw_program_name": "キンダー\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "16:20",
+      "end_time": "17:20",
+      "raw_program_name": "キンダージュニア\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニア\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "19:10",
+      "end_time": "19:55",
+      "raw_program_name": "LesMills SHAPES",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIHO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "LesMills DANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "川島麻里奈"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "やさしい水中運動教室",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "11:20",
+      "end_time": "11:50",
+      "raw_program_name": "水中ウォーキング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "根岸"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "12:00",
+      "end_time": "12:30",
+      "raw_program_name": "ディスタンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "12:45",
+      "end_time": "13:15",
+      "raw_program_name": "アクアベーシック",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "葉山亜希恵"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "13:25",
+      "end_time": "13:55",
+      "raw_program_name": "ウォーキングアクア30",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "葉山亜希恵"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "14:05",
+      "end_time": "14:35",
+      "raw_program_name": "クロールベーシック",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "raw_program_name": "ジュニアスイミング\nＢ-15",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "raw_program_name": "ジュニアスイミング\nＢ-16",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニアスイミング\nＢ-17",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "19:00",
+      "end_time": "19:30",
+      "raw_program_name": "平泳ぎベーシック",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "20:00",
+      "end_time": "21:00",
+      "raw_program_name": "成人スイミング\nB-20",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "tuesday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "09:55",
+      "end_time": "10:40",
+      "raw_program_name": "ラテンエクスプレスコンサルサ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "和田節子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "和田節子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "12:05",
+      "end_time": "12:50",
+      "raw_program_name": "LesMills SHAPES",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIHO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "13:10",
+      "end_time": "13:55",
+      "raw_program_name": "UBOUND",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Kana"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "14:25",
+      "end_time": "15:10",
+      "raw_program_name": "エアロビクスライト45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "斉藤朋子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "15:30",
+      "end_time": "16:15",
+      "raw_program_name": "ステップスタート＆ストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "斉藤朋子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "18:10",
+      "end_time": "18:55",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "白石周史"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "19:10",
+      "end_time": "19:55",
+      "raw_program_name": "BODYATTACK",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "家城和大"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "21:15",
+      "end_time": "22:00",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "09:30",
+      "end_time": "10:15",
+      "raw_program_name": "24式太極拳",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "遠藤珠海"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "10:30",
+      "end_time": "11:15",
+      "raw_program_name": "BODYBALANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIHO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "11:30",
+      "end_time": "12:15",
+      "raw_program_name": "WarmYOGAリフレッシュ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "池田"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "12:30",
+      "end_time": "13:00",
+      "raw_program_name": "Warmストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "池田"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "13:15",
+      "end_time": "14:00",
+      "raw_program_name": "Warm美軸ラインストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "14:15",
+      "end_time": "15:00",
+      "raw_program_name": "フラダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "根岸一枝"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "15:40",
+      "end_time": "16:40",
+      "raw_program_name": "ベーシックキンダー\nチアスクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "16:50",
+      "end_time": "17:50",
+      "raw_program_name": "ベーシックキンダージュニア\nチアスクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "19:10",
+      "end_time": "19:55",
+      "raw_program_name": "パワーヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "加地由樹子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "20:10",
+      "end_time": "20:55",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "加地由樹子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "アクア45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "石綿由美"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "raw_program_name": "ベビースイミング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "背泳ぎベーシック",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "13:10",
+      "end_time": "13:40",
+      "raw_program_name": "水中ウォーキング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "鳥居"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "14:30",
+      "end_time": "15:30",
+      "raw_program_name": "ジュニアスイミング\nＣ-14",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "raw_program_name": "ジュニアスイミング\nＣ-15",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "raw_program_name": "ジュニアスイミング\nＣ-16",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニアスイミング\nＣ-17",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "raw_program_name": "ジュニアスイミング\nＣ-18",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "20:00",
+      "end_time": "21:00",
+      "raw_program_name": "成人スイミング\nC-20",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "wednesday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "10:00",
+      "end_time": "10:50",
+      "raw_program_name": "A-FIT BOX",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Aya"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "11:05",
+      "end_time": "11:50",
+      "raw_program_name": "ボディメンテナンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "渋谷輝幸"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "12:10",
+      "end_time": "12:55",
+      "raw_program_name": "Brain to Body",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "花輪里恵子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "13:10",
+      "end_time": "13:40",
+      "raw_program_name": "YOGAコリオ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Rin"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "浅川裕司"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "15:05",
+      "end_time": "15:50",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "18:10",
+      "end_time": "19:00",
+      "raw_program_name": "協栄シェイプボクシング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIWA"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "19:15",
+      "end_time": "20:00",
+      "raw_program_name": "Strength Development",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "青柳紀映"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "20:15",
+      "end_time": "21:00",
+      "raw_program_name": "BODYSTEP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "青柳紀映"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "21:15",
+      "end_time": "22:00",
+      "raw_program_name": "BODYATTACK",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "美軸ラインエクササイズ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "菊名奈穂"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "raw_program_name": "バレトン",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "高橋典子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "12:00",
+      "end_time": "12:45",
+      "raw_program_name": "WOW!HIP（女性限定）",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Rin"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "13:10",
+      "end_time": "13:40",
+      "raw_program_name": "筋膜リリース",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "野口"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "raw_program_name": "ピラティスフロー",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "石川和江"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "15:10",
+      "end_time": "16:10",
+      "raw_program_name": "キンダー\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "16:20",
+      "end_time": "17:20",
+      "raw_program_name": "キンダージュニア\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニア\n体育スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "raw_program_name": "やさしい水中運動教室",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "11:00",
+      "end_time": "11:30",
+      "raw_program_name": "水中ウォーキング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "野口"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "11:40",
+      "end_time": "12:10",
+      "raw_program_name": "ミットシェイプ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "野口"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "raw_program_name": "成人スイミング\nD-12",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "raw_program_name": "ジュニアスイミング\nＤ-15",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "raw_program_name": "ジュニアスイミング\nＤ-16",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "raw_program_name": "ジュニアスイミング\nＤ-17",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "thursday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "09:05",
+      "end_time": "09:50",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "能美 美帆"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "10:10",
+      "end_time": "10:55",
+      "raw_program_name": "ZUMBA",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "和田節子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "11:15",
+      "end_time": "12:00",
+      "raw_program_name": "ラテンエアロ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "和田節子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "12:20",
+      "end_time": "13:05",
+      "raw_program_name": "BODYPUMP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "白石周史"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "13:25",
+      "end_time": "14:10",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "yoriko"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "14:30",
+      "end_time": "15:15",
+      "raw_program_name": "エアロビクスライト45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "YASUCO"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "15:35",
+      "end_time": "16:20",
+      "raw_program_name": "BODYPUMP HEAVY",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "谷顕真"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "16:40",
+      "end_time": "17:10",
+      "raw_program_name": "GRIT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "谷顕真"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "17:30",
+      "end_time": "18:15",
+      "raw_program_name": "MEGA-DANZ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "YUNOKI"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "18:35",
+      "end_time": "19:20",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "石田和巳"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "19:45",
+      "end_time": "20:45",
+      "raw_program_name": "有料スクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "10:25",
+      "end_time": "11:25",
+      "raw_program_name": "ベーシックキンダージュニア\nチアスクール",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "raw_program_name": "ベリーダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "13:25",
+      "end_time": "14:10",
+      "raw_program_name": "フラダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "生方未来"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "14:30",
+      "end_time": "15:15",
+      "raw_program_name": "整体オリジナル",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "竹田真知枝"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "15:35",
+      "end_time": "16:20",
+      "raw_program_name": "ペルビックストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Kaori"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "16:40",
+      "end_time": "17:25",
+      "raw_program_name": "リラックスヨガ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Kaori"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "17:45",
+      "end_time": "18:30",
+      "raw_program_name": "BODYBALANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "NINA"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "08:30",
+      "end_time": "09:30",
+      "raw_program_name": "ジュニアスイミング\nＦ-85",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "raw_program_name": "ジュニアスイミング\nＦ-95",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "raw_program_name": "ベビースイミング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "12:15",
+      "end_time": "13:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-12",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "13:15",
+      "end_time": "14:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-13",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "14:15",
+      "end_time": "15:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-14",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "15:15",
+      "end_time": "16:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-15",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "16:15",
+      "end_time": "17:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-16",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "17:15",
+      "end_time": "18:15",
+      "raw_program_name": "ジュニアスイミング\nＦ-17",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "18:45",
+      "end_time": "19:15",
+      "raw_program_name": "ディスタンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "19:30",
+      "end_time": "20:00",
+      "raw_program_name": "バタフライベーシック",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "saturday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "08:30",
+      "end_time": "09:20",
+      "raw_program_name": "協栄シェイプボクシング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "MIWA"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "09:35",
+      "end_time": "10:20",
+      "raw_program_name": "Strength Development",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "家城和大"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "10:35",
+      "end_time": "11:10",
+      "raw_program_name": "LesMills SHAPES",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "家城和大"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "raw_program_name": "BODYPUMP60",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "田村真紀"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "12:50",
+      "end_time": "13:20",
+      "raw_program_name": "GRIT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "田村真紀"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "13:35",
+      "end_time": "14:20",
+      "raw_program_name": "BODYCOMBAT",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "14:35",
+      "end_time": "15:20",
+      "raw_program_name": "BODYATTACK",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "15:35",
+      "end_time": "16:20",
+      "raw_program_name": "RITMOS",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "佐藤陽子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "16:35",
+      "end_time": "17:20",
+      "raw_program_name": "ステップコンボⅠ45",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "佐藤陽子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "17:40",
+      "end_time": "18:25",
+      "raw_program_name": "K-POP\nDANCE GROOVE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Amane"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "18:40",
+      "end_time": "19:25",
+      "raw_program_name": "【暗闇】UBOUND",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "大久保"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "09:55",
+      "end_time": "10:40",
+      "raw_program_name": "HOTYOGA（ミドルクラス)",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "千葉智子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "10:55",
+      "end_time": "11:40",
+      "raw_program_name": "HOTYOGA骨盤調整",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "千葉智子"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "11:55",
+      "end_time": "12:25",
+      "raw_program_name": "Warmストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "池田"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "12:40",
+      "end_time": "13:25",
+      "raw_program_name": "HOTYOGAデトックス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "池田"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "13:40",
+      "end_time": "14:25",
+      "raw_program_name": "HOTWOW!HIP",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "Rin"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "14:40",
+      "end_time": "15:25",
+      "raw_program_name": "Warm美軸ラインストレッチ",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "16:35",
+      "end_time": "17:20",
+      "raw_program_name": "LesMills DANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "川島麻里奈"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "17:35",
+      "end_time": "18:20",
+      "raw_program_name": "BODYBLANCE",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "川島麻里奈"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "08:30",
+      "end_time": "09:30",
+      "raw_program_name": "ジュニアスイミング\nG-85",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "raw_program_name": "ジュニアスイミング\nG-95",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "11:40",
+      "end_time": "12:25",
+      "raw_program_name": "ベビースイミング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "raw_program_name": "成人スイミング\nG-12",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "水中ウォーキング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "野口"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "16:40",
+      "end_time": "17:10",
+      "raw_program_name": "アクアコンディショニング",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "SEN"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "17:20",
+      "end_time": "17:50",
+      "raw_program_name": "アクアダンス",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": "SEN"
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "10:15",
+      "end_time": "10:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "11:15",
+      "end_time": "11:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "12:15",
+      "end_time": "12:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "13:15",
+      "end_time": "13:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "18:15",
+      "end_time": "18:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "19:15",
+      "end_time": "19:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 上野",
+      "weekday": "sunday",
+      "start_time": "20:15",
+      "end_time": "20:45",
+      "raw_program_name": "マンツーマンサポート",
+      "source_url": "https://www.jexer.jp/schedule/fitness/?shop=17",
+      "instructor_name": null
+    }
+  ]
+}

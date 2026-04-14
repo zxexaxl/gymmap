@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "13:15",
+      "end_time": "14:00",
+      "raw_program_name": "ｱｸｱﾍﾞｰｼｯｸ45",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "instructor_name": "梅澤(左)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "14:15",
+      "end_time": "14:45",
+      "raw_program_name": "ﾐｯﾄﾞｼｪｲﾌﾟ30",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "instructor_name": "ｽﾀｯﾌ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "friday",
+      "start_time": "16:15",
+      "end_time": "16:45",
+      "raw_program_name": "ｸﾛｰﾙｲﾝﾀｰ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "instructor_name": "ｽﾀｯﾌ"
+    }
+  ]
+}

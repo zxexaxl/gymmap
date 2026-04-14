@@ -1,0 +1,110 @@
+{
+  "total_records": 147,
+  "needs_review_count": 1,
+  "unresolved_count": 0,
+  "usage_metadata": {
+    "prompt_token_count": 54003,
+    "candidates_token_count": 19280,
+    "total_token_count": 73283,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 54003,
+  "total_output_tokens": 19280,
+  "total_tokens": 73283,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 124
+    },
+    {
+      "key": "Les Mills",
+      "count": 11
+    },
+    {
+      "key": "Radical Fitness",
+      "count": 6
+    },
+    {
+      "key": "ZUMBA",
+      "count": 5
+    },
+    {
+      "key": "BAILA BAILA",
+      "count": 1
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "mind_body",
+      "count": 46
+    },
+    {
+      "key": "cycling",
+      "count": 31
+    },
+    {
+      "key": "conditioning",
+      "count": 27
+    },
+    {
+      "key": "cardio",
+      "count": 19
+    },
+    {
+      "key": "dance",
+      "count": 13
+    },
+    {
+      "key": "strength",
+      "count": 6
+    },
+    {
+      "key": "martial_arts",
+      "count": 5
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "ﾎｯﾄﾖｶﾞ",
+      "count": 32
+    },
+    {
+      "key": "ﾁｰﾑﾊﾞｲｸ",
+      "count": 31
+    },
+    {
+      "key": "ｻｰｷｯﾄ",
+      "count": 22
+    },
+    {
+      "key": "AEROBICS",
+      "count": 7
+    },
+    {
+      "key": "ｽﾞﾝﾊﾞ",
+      "count": 5
+    },
+    {
+      "key": "ﾘﾄﾓｽ",
+      "count": 5
+    },
+    {
+      "key": "ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ",
+      "count": 4
+    },
+    {
+      "key": "ﾘﾗｯｸｽﾖｶﾞ",
+      "count": 4
+    },
+    {
+      "key": "ｽﾃｯﾌﾟ",
+      "count": 3
+    },
+    {
+      "key": "ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30",
+      "count": 3
+    }
+  ]
+}

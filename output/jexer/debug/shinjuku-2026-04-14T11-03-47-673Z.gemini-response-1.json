@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"07:20\",\n      \"end_time\": \"08:05\",\n      \"raw_program_name\": \"ｽﾞﾝﾊﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"能見(章)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"08:45\",\n      \"end_time\": \"09:30\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"綱嶋(留)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"09:50\",\n      \"end_time\": \"10:20\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ30\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"村山(理)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"10:35\",\n      \"end_time\": \"11:20\",\n      \"raw_program_name\": \"ﾊﾞﾚﾄﾝ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"高橋(典)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"11:40\",\n      \"end_time\": \"12:40\",\n      \"raw_program_name\": \"ﾍﾞﾘｰﾀﾞﾝｽ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"TOMOMI\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"13:10\",\n      \"end_time\": \"13:55\",\n      \"raw_program_name\": \"AEROBICS\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"廣田(茂)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"14:10\",\n      \"end_time\": \"14:55\",\n      \"raw_program_name\": \"ﾘﾄﾓｽ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"廣田(茂)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"15:10\",\n      \"end_time\": \"16:00\",\n      \"raw_program_name\": \"ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"佐々木(貴)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"16:15\",\n      \"end_time\": \"17:00\",\n      \"raw_program_name\": \"ｴｱﾛｳｫｰｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"小川(朋)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"17:45\",\n      \"end_time\": \"18:30\",\n      \"raw_program_name\": \"ｽﾞﾝﾊﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"MINORI\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"18:45\",\n      \"end_time\": \"19:15\",\n      \"raw_program_name\": \"AEROBICS\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"MINORI\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"19:25\",\n      \"end_time\": \"20:10\",\n      \"raw_program_name\": \"VOLTAGE\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"MADOKA\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"20:25\",\n      \"end_time\": \"21:10\",\n      \"raw_program_name\": \"ﾒｶﾞﾀﾞﾝｽ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"MADOKA\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"21:25\",\n      \"end_time\": \"22:25\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨﾊﾞﾝﾌﾟ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/fri_10a.html\",\n      \"instructor_name\": \"深田(祐)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1919,
+    "candidatesTokenCount": 1695,
+    "totalTokenCount": 3614,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1919
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "MB_eaaCSDcno2roPmLPSoAY"
+}

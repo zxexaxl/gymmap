@@ -1,0 +1,103 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "10:45",
+      "end_time": "11:30",
+      "raw_program_name": "ピラティスフロー",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "今井(し)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "11:45",
+      "end_time": "12:45",
+      "raw_program_name": "フラダンス",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "福島(真)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "13:00",
+      "end_time": "13:15",
+      "raw_program_name": "お腹スッキリ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "スタッフ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "13:30",
+      "end_time": "13:45",
+      "raw_program_name": "ストレッチ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "スタッフ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "14:05",
+      "end_time": "14:35",
+      "raw_program_name": "ボディコンバット30",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "坂下(正)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "14:50",
+      "end_time": "15:10",
+      "raw_program_name": "全身サーキット",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "スタッフ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "15:25",
+      "end_time": "16:10",
+      "raw_program_name": "BITS(ビッツ)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "大窪(亜)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "18:50",
+      "end_time": "19:50",
+      "raw_program_name": "自力整体",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "竹田(真)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "20:05",
+      "end_time": "20:20",
+      "raw_program_name": "お腹スッキリ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "スタッフ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "20:30",
+      "end_time": "21:00",
+      "raw_program_name": "BEAT-EX30",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "坂井(紀)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "tuesday",
+      "start_time": "21:10",
+      "end_time": "22:10",
+      "raw_program_name": "ストリートダンス(HIPHOP系)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "instructor_name": "坂井(紀)"
+    }
+  ]
+}

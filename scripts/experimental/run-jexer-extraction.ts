@@ -7,6 +7,7 @@ import { PDFParse } from "pdf-parse";
 
 import { normalizeProgramName } from "../../src/lib/normalizeProgramName";
 import { getBrandDiscoveryStrategy, type BrandDiscoveryStrategy } from "../../src/lib/extraction/brand-discovery-strategies";
+import { classifyScheduleEntryType } from "../../src/lib/extraction/entry-type-classifier";
 import {
   generateStructuredJsonFromGeminiWithDebug,
   GeminiStructuredResponseError,
@@ -134,6 +135,12 @@ const extractionResponseSchema = {
           raw_program_name: { type: "STRING" },
           instructor_name: { type: "STRING", nullable: true },
           source_url: { type: "STRING" },
+          entry_type_candidate: {
+            type: "STRING",
+            enum: ["regular_class", "support_session", "personal_session", "school_course", "member_guidance"],
+            nullable: true,
+          },
+          entry_type_reason: { type: "STRING", nullable: true },
         },
         required: ["location_name", "weekday", "start_time", "end_time", "raw_program_name", "source_url"],
       },
@@ -1189,6 +1196,12 @@ function buildExtractionPrompt({
         "Use 24-hour HH:MM format when inferable.",
         "If instructor name is missing, set instructor_name to null.",
         "weekday should be english lowercase when inferable.",
+        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance.",
+        "regular_class means a normal studio, pool, gym, cycling, yoga, dance, or similar class that users would search as a lesson.",
+        "support_session means support, orientation, measurement, counseling, or machine guidance.",
+        "personal_session means personal training, one-to-one, or private coaching.",
+        "school_course means school, course, academy, kids, or lecture style sessions.",
+        "member_guidance means member-only guidance, procedures, benefits, or information slots.",
       ].join(" "),
       userPrompt: [
         `Location name: ${locationName}`,
@@ -1204,10 +1217,16 @@ function buildExtractionPrompt({
       "You extract gym or fitness class schedule rows from HTML.",
       "Return only JSON that matches the provided schema.",
       "Do not invent records not present in the HTML.",
-      "Use 24-hour HH:MM format when inferable.",
-      "If instructor name is missing, set instructor_name to null.",
-      "weekday should be english lowercase when inferable.",
-    ].join(" "),
+        "Use 24-hour HH:MM format when inferable.",
+        "If instructor name is missing, set instructor_name to null.",
+        "weekday should be english lowercase when inferable.",
+        "For each extracted block, classify entry_type_candidate as one of regular_class, support_session, personal_session, school_course, member_guidance.",
+        "regular_class means a normal studio, pool, gym, cycling, yoga, dance, or similar class that users would search as a lesson.",
+        "support_session means support, orientation, measurement, counseling, or machine guidance.",
+        "personal_session means personal training, one-to-one, or private coaching.",
+        "school_course means school, course, academy, kids, or lecture style sessions.",
+        "member_guidance means member-only guidance, procedures, benefits, or information slots.",
+      ].join(" "),
     userPrompt: [
       `Location name: ${locationName}`,
       `Source URL: ${page.url}`,
@@ -1252,6 +1271,11 @@ function normalizeRecords(records: ExtractedJexerScheduleRecord[]) {
       startTime: record.start_time,
       endTime: record.end_time,
     });
+    const entryType = classifyScheduleEntryType({
+      rawProgramName: record.raw_program_name,
+      aiCandidate: record.entry_type_candidate ?? null,
+      aiReason: record.entry_type_reason ?? null,
+    });
 
     return {
       ...record,
@@ -1270,6 +1294,9 @@ function normalizeRecords(records: ExtractedJexerScheduleRecord[]) {
       brand_candidate: normalized.brand_candidate,
       category_candidate: normalized.category_candidate,
       normalization_notes: normalized.normalization_notes,
+      entry_type: entryType.entryType,
+      entry_type_reason: entryType.reason,
+      included_in_schedule_results: entryType.entryType === "regular_class",
     };
   });
 }
@@ -1547,6 +1574,7 @@ async function runExtractionJob({
 
     const extractedRecords = extractionResults.flatMap((result) => result.records);
     const normalizedRecords = normalizeRecords(extractedRecords);
+    const filteredRegularRecords = normalizedRecords.filter((record) => record.included_in_schedule_results);
     const usageBreakdown: JexerUsageBreakdown = {
       classification: classificationUsageMetadata,
       extraction: extractionUsageMetadata,
@@ -1559,8 +1587,33 @@ async function runExtractionJob({
       model_id: getGeminiModelId(),
       usage_metadata: aggregateUsageMetadata([usageBreakdown.classification, usageBreakdown.extraction]),
       usage_breakdown: usageBreakdown,
-      records: normalizedRecords,
+      records: filteredRegularRecords,
     };
+
+    await writeDebugFile(
+      debugDirPath,
+      baseName,
+      "extracted-entry-types.json",
+      JSON.stringify(
+        {
+          total_extracted_records: normalizedRecords.length,
+          included_regular_records: filteredRegularRecords.length,
+          excluded_non_regular_records: normalizedRecords.length - filteredRegularRecords.length,
+          records: normalizedRecords.map((record) => ({
+            raw_program_name: record.raw_program_name,
+            source_url: record.source_url,
+            weekday: record.weekday,
+            start_time: record.start_time,
+            entry_type_candidate: record.entry_type_candidate ?? null,
+            entry_type: record.entry_type,
+            entry_type_reason: record.entry_type_reason,
+            included_in_schedule_results: record.included_in_schedule_results,
+          })),
+        },
+        null,
+        2,
+      ),
+    );
 
     await writeFile(outputPath, JSON.stringify(output, null, 2), "utf-8");
     const summary = summarizeJexerExtractionResult(output);
@@ -1570,6 +1623,7 @@ async function runExtractionJob({
     console.log(`Saved extraction result to ${outputPath}`);
     console.log(`Saved summary to ${summaryPath}`);
     console.log(`Extracted records: ${output.records.length}`);
+    console.log(`Excluded non-regular entries: ${normalizedRecords.length - filteredRegularRecords.length}`);
 
     if (output.records.length === 0) {
       console.warn("Warning: extraction returned 0 records.");

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"13:30\",\n      \"end_time\": \"14:00\",\n      \"raw_program_name\": \"水中ｳｫｰｷﾝｸﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10p.html\",\n      \"instructor_name\": \"staff\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"14:15\",\n      \"end_time\": \"15:00\",\n      \"raw_program_name\": \"ｱｸｱ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10p.html\",\n      \"instructor_name\": \"最上(優)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"15:15\",\n      \"end_time\": \"15:45\",\n      \"raw_program_name\": \"ﾊﾞﾀﾌﾗｲﾍﾞｰｼｯｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10p.html\",\n      \"instructor_name\": \"staff\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"16:00\",\n      \"end_time\": \"16:45\",\n      \"raw_program_name\": \"ｽﾋﾟｰﾄﾞ&amp;ﾃﾞｨｽﾀﾝｽ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10p.html\",\n      \"instructor_name\": \"staff\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1274,
+    "candidatesTokenCount": 500,
+    "totalTokenCount": 1774,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1274
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "oh_eafqCMs7g2roP6aPZ8AU"
+}

@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"13:15\",\n      \"end_time\": \"14:00\",\n      \"raw_program_name\": \"ｱｸｱﾍﾞｰｼｯｸ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10p.html\",\n      \"instructor_name\": \"梅澤(左)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"14:15\",\n      \"end_time\": \"14:45\",\n      \"raw_program_name\": \"ﾐｯﾄﾞｼｪｲﾌﾟ30\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10p.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"friday\",\n      \"start_time\": \"16:15\",\n      \"end_time\": \"16:45\",\n      \"raw_program_name\": \"ｸﾛｰﾙｲﾝﾀｰ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/fri_10p.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1212,
+    "candidatesTokenCount": 381,
+    "totalTokenCount": 1593,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1212
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "nR_eabGqJpel0-kPvv_eqAU"
+}

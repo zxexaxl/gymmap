@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"11:15\",\n      \"end_time\": \"11:45\",\n      \"raw_program_name\": \"水中ｳｫｰｷﾝｸﾞ30\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"staff\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"12:00\",\n      \"end_time\": \"12:30\",\n      \"raw_program_name\": \"ﾊﾞﾀﾌﾗｲﾍﾞｰｼｯｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"staff\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"13:30\",\n      \"end_time\": \"14:15\",\n      \"raw_program_name\": \"ｱｸｱ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"太田(裕)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:00\",\n      \"raw_program_name\": \"ｱｸｱﾐｯﾄ30\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"太田(裕)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"15:15\",\n      \"end_time\": \"15:45\",\n      \"raw_program_name\": \"平泳ぎﾍﾞｰｼｯｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"staff\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"20:00\",\n      \"end_time\": \"20:30\",\n      \"raw_program_name\": \"平泳ぎｲﾝﾀｰ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10p.html\",\n      \"instructor_name\": \"staff\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1401,
+    "candidatesTokenCount": 729,
+    "totalTokenCount": 2130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1401
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "oB_eaevrF8X82roPgLah2QU"
+}

@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"instructor\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [],\n  \"confidence\": 1.0\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 986,
+    "candidatesTokenCount": 64,
+    "totalTokenCount": 1052,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 986
+      }
+    ],
+    "thoughtsTokenCount": 2
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "-B7eab6nIOOK2roP85Sr4AQ"
+}

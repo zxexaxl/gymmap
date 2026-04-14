@@ -1,0 +1,34 @@
+{
+  "url": "https://www.jexer.jp/schedule/pdf/all_program_studio.pdf",
+  "discovered_from": "index_link_collection:https://www.jexer.jp/schedule/?shop=3",
+  "depth": 2,
+  "url_score": 22,
+  "score_reasons": [
+    "pdf",
+    "positive:schedule,program,studio,pdf",
+    "shared_segments:0",
+    "brand_hint:schedule_program",
+    "index_collection"
+  ],
+  "content_kind": "pdf",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": false,
+    "hasListLinkDensity": false,
+    "hasRepeatingStructure": false,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 0,
+    "linkCount": 0,
+    "rowCount": 0
+  },
+  "usage_metadata": null,
+  "classification": {
+    "page_type": "pdf_schedule",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_links": [],
+    "confidence": 0.99
+  }
+}

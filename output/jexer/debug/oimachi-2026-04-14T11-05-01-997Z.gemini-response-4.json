@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"10:30\",\n      \"end_time\": \"11:30\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"中川(晴)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"11:50\",\n      \"end_time\": \"12:35\",\n      \"raw_program_name\": \"Balletone\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"高田(ま)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"13:00\",\n      \"end_time\": \"13:45\",\n      \"raw_program_name\": \"ZUMBA\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"ERIKA\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"14:05\",\n      \"end_time\": \"14:25\",\n      \"raw_program_name\": \"全身ｻｰｷｯﾄ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"14:40\",\n      \"end_time\": \"15:10\",\n      \"raw_program_name\": \"ｴｱﾛｽﾀｰﾄ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"佐藤(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"15:25\",\n      \"end_time\": \"15:55\",\n      \"raw_program_name\": \"ｸｱﾄﾛﾌｨｯﾄ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"18:40\",\n      \"end_time\": \"18:55\",\n      \"raw_program_name\": \"脚ｽｯｷﾘ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"19:10\",\n      \"end_time\": \"19:55\",\n      \"raw_program_name\": \"ﾘﾗｯｸｽﾖｶﾞ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"松本(裕)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"20:10\",\n      \"end_time\": \"21:00\",\n      \"raw_program_name\": \"ｼｪｲﾌﾟﾎﾞｸｼﾝｸﾞ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"栗原(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"monday\",\n      \"start_time\": \"21:15\",\n      \"end_time\": \"22:00\",\n      \"raw_program_name\": \"BITS(ﾋﾞｯﾂ)\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/mon_10b.html\",\n      \"instructor_name\": \"井上(奈)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1628,
+    "candidatesTokenCount": 1207,
+    "totalTokenCount": 2835,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1628
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "gB_eafPnBOTU2roP6cWkkA4"
+}

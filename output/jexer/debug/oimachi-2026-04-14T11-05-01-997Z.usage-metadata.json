@@ -1,0 +1,254 @@
+{
+  "model_id": "gemini-2.5-flash-lite",
+  "classification": {
+    "prompt_token_count": 27835,
+    "candidates_token_count": 1105,
+    "total_token_count": 28942,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "extraction": {
+    "prompt_token_count": 23327,
+    "candidates_token_count": 15690,
+    "total_token_count": 39017,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total": {
+    "prompt_token_count": 51162,
+    "candidates_token_count": 16795,
+    "total_token_count": 67959,
+    "thoughts_token_count": 2,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "pages": [
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1659,
+        "candidates_token_count": 1239,
+        "total_token_count": 2898,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1579,
+        "candidates_token_count": 1103,
+        "total_token_count": 2682,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1676,
+        "candidates_token_count": 1249,
+        "total_token_count": 2925,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1628,
+        "candidates_token_count": 1207,
+        "total_token_count": 2835,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1600,
+        "candidates_token_count": 1128,
+        "total_token_count": 2728,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1523,
+        "candidates_token_count": 990,
+        "total_token_count": 2513,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1527,
+        "candidates_token_count": 1011,
+        "total_token_count": 2538,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1536,
+        "candidates_token_count": 1082,
+        "total_token_count": 2618,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1691,
+        "candidates_token_count": 1257,
+        "total_token_count": 2948,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1665,
+        "candidates_token_count": 1232,
+        "total_token_count": 2897,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1666,
+        "candidates_token_count": 1272,
+        "total_token_count": 2938,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "url_score": 18,
+      "usage_metadata": {
+        "prompt_token_count": 1690,
+        "candidates_token_count": 1310,
+        "total_token_count": 3000,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "url_score": 16,
+      "usage_metadata": {
+        "prompt_token_count": 1212,
+        "candidates_token_count": 381,
+        "total_token_count": 1593,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "url_score": 16,
+      "usage_metadata": {
+        "prompt_token_count": 1401,
+        "candidates_token_count": 729,
+        "total_token_count": 2130,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "content_kind": "html",
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "url_score": 16,
+      "usage_metadata": {
+        "prompt_token_count": 1274,
+        "candidates_token_count": 500,
+        "total_token_count": 1774,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      }
+    }
+  ]
+}

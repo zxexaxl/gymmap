@@ -1,0 +1,9 @@
+{
+  "slug": "yotsuya",
+  "location_name": "JEXER 四ツ谷",
+  "source_url": "https://www.jexer.jp/mb/yotsuya/",
+  "stage": "job",
+  "message": "Gemini API request failed: 503 Service Unavailable {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+  "details": null,
+  "failed_at": "2026-04-14T11:03:47.182Z"
+}

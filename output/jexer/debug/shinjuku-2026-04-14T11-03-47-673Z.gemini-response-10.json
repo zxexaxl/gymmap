@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"10:00\",\n      \"end_time\": \"10:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"平井(絢)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"11:30\",\n      \"end_time\": \"12:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"平井(絢)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"13:00\",\n      \"end_time\": \"13:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"小川(真)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"14:30\",\n      \"end_time\": \"15:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"高垣(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"16:00\",\n      \"end_time\": \"16:30\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"高垣(美)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"17:30\",\n      \"end_time\": \"18:00\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"大竹(里)\"\n    },\n    {\n      \"location_name\": \"JEXER 新宿\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"19:00\",\n      \"end_time\": \"19:45\",\n      \"raw_program_name\": \"ﾁｰﾑﾊﾞｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/shinjuku/schedule/sat_10bike.html\",\n      \"instructor_name\": \"村山(理)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1488,
+    "candidatesTokenCount": 866,
+    "totalTokenCount": 2354,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1488
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "Th_eafmDJbqB2roP6oa62AE"
+}

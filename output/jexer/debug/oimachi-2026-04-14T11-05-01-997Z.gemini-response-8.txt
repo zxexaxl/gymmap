@@ -1,0 +1,85 @@
+{
+  "records": [
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "10:30",
+      "end_time": "11:30",
+      "raw_program_name": "ﾍﾞﾘｰﾀﾞﾝｽ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "TOMOMI"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "11:40",
+      "end_time": "12:40",
+      "raw_program_name": "牧阿佐美ﾊﾞﾚｴ(初級)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "raw_program_name": "牧阿佐美ﾊﾞﾚｴ(中級)",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": null
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "raw_program_name": "ｴｱﾛｽﾀｰﾄ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "高辻(一)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "raw_program_name": "ﾊﾞﾚﾄﾝ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "高田(ま)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "raw_program_name": "adidas yoga",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "井上(奈)"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "17:00",
+      "end_time": "17:20",
+      "raw_program_name": "全身ｻｰｷｯﾄ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "ｽﾀｯﾌ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "17:30",
+      "end_time": "17:45",
+      "raw_program_name": "ｽﾄﾚｯﾁ",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "ｽﾀｯﾌ"
+    },
+    {
+      "location_name": "JEXER 大井町",
+      "weekday": "sunday",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "raw_program_name": "ﾘﾗｯｸｽﾖｶﾞ60",
+      "source_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "instructor_name": "篠崎(由)"
+    }
+  ]
+}

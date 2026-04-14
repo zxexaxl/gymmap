@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"records\": [\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"10:15\",\n      \"end_time\": \"11:15\",\n      \"raw_program_name\": \"ｽﾃｯﾌﾟｺﾝﾎﾞⅠ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"高橋(躍)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"11:45\",\n      \"end_time\": \"12:30\",\n      \"raw_program_name\": \"[ｵﾘｼﾞﾅﾙ]ｺｱ･ｼｪｲｸ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"片山(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"12:45\",\n      \"end_time\": \"13:45\",\n      \"raw_program_name\": \"ｴｱﾛﾋﾞｸｽﾗｲﾄ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"片山(千)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"14:00\",\n      \"end_time\": \"14:45\",\n      \"raw_program_name\": \"ZUMBA\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"KIYOMI\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"15:05\",\n      \"end_time\": \"16:05\",\n      \"raw_program_name\": \"けいらくﾋﾞｸｽ(R)60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"中村(勝)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"16:25\",\n      \"end_time\": \"17:10\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨﾊﾟﾝﾌﾟ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"大塚(弦)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"17:25\",\n      \"end_time\": \"18:10\",\n      \"raw_program_name\": \"ﾎﾞﾃﾞｨｺﾝﾊﾞｯﾄ45\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"羽柴(巨)\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"18:30\",\n      \"end_time\": \"18:45\",\n      \"raw_program_name\": \"ｽﾄﾚｯﾁ\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"ｽﾀｯﾌ\"\n    },\n    {\n      \"location_name\": \"JEXER 大井町\",\n      \"weekday\": \"saturday\",\n      \"start_time\": \"19:05\",\n      \"end_time\": \"20:05\",\n      \"raw_program_name\": \"ﾊﾟﾜｰﾖｶﾞ60\",\n      \"source_url\": \"https://www.jexer.jp/mb/oi/schedule/sat_10a.html\",\n      \"instructor_name\": \"福田(美)\"\n    }\n  ]\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1600,
+    "candidatesTokenCount": 1128,
+    "totalTokenCount": 2728,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1600
+      }
+    ]
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "gh_eaZWzEerh0-kPhJyV4AU"
+}

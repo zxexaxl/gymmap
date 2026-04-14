@@ -1,0 +1,1084 @@
+{
+  "entry_url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "entry_origin": "https://www.jexer.jp",
+  "brand_strategy": "jexer-fitness-club",
+  "budget": {
+    "maxVisitedPages": 18,
+    "maxAiClassifications": 16,
+    "maxPdfPages": 4,
+    "maxDepth": 3,
+    "maxSeedsFromEntry": 8,
+    "maxLinksPerPage": 10
+  },
+  "failed_fetches": [],
+  "exploration_steps": [
+    {
+      "step": 1,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "page_type": "schedule_index",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [
+        "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+        "https://www.jexer.jp/mb/oi/schedule/aqua.html"
+      ],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 2,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "depth": 1,
+      "url_score": 15,
+      "score_reasons": [
+        "positive:schedule,fitness",
+        "shared_segments:3",
+        "close_to_parent",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "ignore",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 3,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "depth": 1,
+      "url_score": 12,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "ignore",
+      "schedule_kind": "unknown",
+      "recommended_next_links": [],
+      "selected_for_extraction": false
+    },
+    {
+      "step": 4,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 5,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 6,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 7,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 8,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 9,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 10,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 11,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 12,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 13,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 14,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 15,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 16,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "mixed",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 17,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "depth": 3,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    },
+    {
+      "step": 18,
+      "visited_url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "depth": 3,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "page_type": "schedule_detail",
+      "schedule_kind": "studio",
+      "recommended_next_links": [],
+      "selected_for_extraction": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "discovered_from": null,
+      "depth": 0,
+      "url_score": 100,
+      "score_reasons": [
+        "entry_url"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 5,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1143,
+        "candidates_token_count": 115,
+        "total_token_count": 1258,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_index",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": false,
+        "contains_detail_links": true,
+        "recommended_next_links": [
+          "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+          "https://www.jexer.jp/mb/oi/schedule/aqua.html"
+        ],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1884,
+        "candidates_token_count": 66,
+        "total_token_count": 1950,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 18,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1804,
+        "candidates_token_count": 66,
+        "total_token_count": 1870,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1901,
+        "candidates_token_count": 66,
+        "total_token_count": 1967,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1853,
+        "candidates_token_count": 66,
+        "total_token_count": 1921,
+        "thoughts_token_count": 2,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 18,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1825,
+        "candidates_token_count": 66,
+        "total_token_count": 1891,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 16,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1748,
+        "candidates_token_count": 66,
+        "total_token_count": 1814,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 16,
+        "repeatingBlockCount": 0,
+        "linkCount": 5,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1752,
+        "candidates_token_count": 66,
+        "total_token_count": 1818,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sun_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 18,
+        "repeatingBlockCount": 0,
+        "linkCount": 5,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1761,
+        "candidates_token_count": 66,
+        "total_token_count": 1827,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1916,
+        "candidates_token_count": 66,
+        "total_token_count": 1982,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/thu_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "depth": 2,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1890,
+        "candidates_token_count": 66,
+        "total_token_count": 1956,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10a.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/mon_10a.html",
+      "depth": 3,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 20,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1895,
+        "candidates_token_count": 66,
+        "total_token_count": 1961,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/tue_10b.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/mon_10b.html",
+      "depth": 3,
+      "url_score": 18,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "studio_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 22,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1919,
+        "candidates_token_count": 66,
+        "total_token_count": 1985,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "studio",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fri_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 6,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1431,
+        "candidates_token_count": 66,
+        "total_token_count": 1497,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/mon_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 12,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1620,
+        "candidates_token_count": 66,
+        "total_token_count": 1686,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/sat_10p.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "depth": 2,
+      "url_score": 16,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "day_detail_hint",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": true,
+        "hasTableTag": true,
+        "hasListLinkDensity": false,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": true,
+        "timeLikeCount": 8,
+        "repeatingBlockCount": 0,
+        "linkCount": 6,
+        "rowCount": 1
+      },
+      "usage_metadata": {
+        "prompt_token_count": 1493,
+        "candidates_token_count": 66,
+        "total_token_count": 1559,
+        "thoughts_token_count": null,
+        "cached_content_token_count": null,
+        "model_id": "gemini-2.5-flash-lite"
+      },
+      "classification": {
+        "page_type": "schedule_detail",
+        "schedule_kind": "mixed",
+        "contains_schedule_rows": true,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 1
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/fitness.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "depth": 1,
+      "url_score": 15,
+      "score_reasons": [
+        "positive:schedule,fitness",
+        "shared_segments:3",
+        "close_to_parent",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 18,
+        "rowCount": 1
+      },
+      "usage_metadata": null,
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 0
+      }
+    },
+    {
+      "url": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+      "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+      "depth": 1,
+      "url_score": 12,
+      "score_reasons": [
+        "positive:schedule",
+        "shared_segments:3",
+        "close_to_parent",
+        "brand_hint:schedule_program"
+      ],
+      "content_kind": "html",
+      "signals": {
+        "hasTimeLikeText": false,
+        "hasTableTag": true,
+        "hasListLinkDensity": true,
+        "hasRepeatingStructure": false,
+        "hasTimeAndTextDensity": false,
+        "timeLikeCount": 0,
+        "repeatingBlockCount": 0,
+        "linkCount": 11,
+        "rowCount": 1
+      },
+      "usage_metadata": null,
+      "classification": {
+        "page_type": "ignore",
+        "schedule_kind": "unknown",
+        "contains_schedule_rows": false,
+        "contains_detail_links": false,
+        "recommended_next_links": [],
+        "confidence": 0
+      }
+    }
+  ]
+}

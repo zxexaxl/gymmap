@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"page_type\": \"entry\",\n  \"schedule_kind\": \"unknown\",\n  \"contains_schedule_rows\": false,\n  \"contains_detail_links\": false,\n  \"recommended_next_links\": [\n    \"https://www.jexer.jp/mb/ueno/index.html\"\n  ],\n  \"confidence\": 0.8\n}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1337,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 1427,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1337
+      }
+    ],
+    "thoughtsTokenCount": 1
+  },
+  "modelVersion": "gemini-2.5-flash-lite",
+  "responseId": "cR7eafyCH8uA0-kPq5a6mAs"
+}

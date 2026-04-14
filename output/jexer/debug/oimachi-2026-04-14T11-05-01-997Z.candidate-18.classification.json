@@ -1,0 +1,33 @@
+{
+  "url": "https://www.jexer.jp/mb/oi/schedule/aqua.html",
+  "discovered_from": "https://www.jexer.jp/mb/oi/schedule/index.html",
+  "depth": 1,
+  "url_score": 12,
+  "score_reasons": [
+    "positive:schedule",
+    "shared_segments:3",
+    "close_to_parent",
+    "brand_hint:schedule_program"
+  ],
+  "content_kind": "html",
+  "signals": {
+    "hasTimeLikeText": false,
+    "hasTableTag": true,
+    "hasListLinkDensity": true,
+    "hasRepeatingStructure": false,
+    "hasTimeAndTextDensity": false,
+    "timeLikeCount": 0,
+    "repeatingBlockCount": 0,
+    "linkCount": 11,
+    "rowCount": 1
+  },
+  "usage_metadata": null,
+  "classification": {
+    "page_type": "ignore",
+    "schedule_kind": "unknown",
+    "contains_schedule_rows": false,
+    "contains_detail_links": false,
+    "recommended_next_links": [],
+    "confidence": 0
+  }
+}
