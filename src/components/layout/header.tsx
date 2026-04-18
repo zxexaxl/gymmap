@@ -5,7 +5,7 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand-mark">
-          レッスン検索
+          ジム・フィットネスクラブのレッスン検索
         </Link>
         <nav className="header-nav">
           <Link href="/search">レッスンを探す</Link>

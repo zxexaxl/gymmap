@@ -24,7 +24,7 @@ export default async function HomePage() {
     <div className="page-stack">
       <section className="hero panel">
         <div className="hero-copy">
-          <h1>ジム・フィットネスクラブのレッスン検索</h1>
+          <h1>受けたいレッスンを探す</h1>
           <p>
             受けたいレッスン名から、近くのジム・フィットネスクラブのスタジオレッスンを探せます。曜日・開始時間・エリア・店舗で絞り込みできます。
           </p>
