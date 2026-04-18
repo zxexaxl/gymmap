@@ -1,11 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 import { scoreProgramQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
 import type { GymLocation, SearchResult } from "@/lib/types";
 import { buildSearchQuery, getLocationAddress } from "@/lib/utils";
+
+const LeafletGymMap = dynamic(
+  () => import("@/components/map/leaflet-gym-map").then((module) => module.LeafletGymMap),
+  {
+    ssr: false,
+    loading: () => <div className="map-canvas map-canvas-fallback">地図を読み込んでいます…</div>,
+  },
+);
 
 type LocationMapSectionProps = {
   locations: GymLocation[];
@@ -49,39 +58,6 @@ function formatDistanceLabel(distanceKm: number | null) {
   }
 
   return `約${distanceKm.toFixed(1)}km`;
-}
-
-function buildViewport(center: Coordinates, locations: GymLocation[]) {
-  const latitudes = locations.map((location) => location.latitude ?? center.latitude);
-  const longitudes = locations.map((location) => location.longitude ?? center.longitude);
-  const latitudePadding = 0.05;
-  const longitudePadding = 0.05;
-  const minLatitude = Math.min(center.latitude, ...latitudes) - latitudePadding;
-  const maxLatitude = Math.max(center.latitude, ...latitudes) + latitudePadding;
-  const minLongitude = Math.min(center.longitude, ...longitudes) - longitudePadding;
-  const maxLongitude = Math.max(center.longitude, ...longitudes) + longitudePadding;
-
-  return {
-    minLatitude,
-    maxLatitude,
-    minLongitude,
-    maxLongitude,
-  };
-}
-
-function toMapPoint(location: GymLocation, viewport: ReturnType<typeof buildViewport>) {
-  const latitude = location.latitude ?? TOKYO_CENTER.latitude;
-  const longitude = location.longitude ?? TOKYO_CENTER.longitude;
-  const latitudeRange = Math.max(viewport.maxLatitude - viewport.minLatitude, 0.01);
-  const longitudeRange = Math.max(viewport.maxLongitude - viewport.minLongitude, 0.01);
-  const normalizedTop = (viewport.maxLatitude - latitude) / latitudeRange;
-  const normalizedLeft = (longitude - viewport.minLongitude) / longitudeRange;
-
-  return {
-    ...location,
-    top: `${Math.min(90, Math.max(10, normalizedTop * 100))}%`,
-    left: `${Math.min(92, Math.max(8, normalizedLeft * 100))}%`,
-  };
 }
 
 export function LocationMapSection({ locations, searchResults }: LocationMapSectionProps) {
@@ -209,10 +185,6 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
           longitude: selectedLocation.longitude,
         }
       : fallbackCenter;
-  const viewport = buildViewport(mapCenter, visibleLocations);
-  const points = visibleLocations.map((location) => toMapPoint(location, viewport));
-  const selectedLocationMatches = selectedLocation ? matchesByLocationId.get(selectedLocation.id) ?? [] : [];
-
   function formatMatchedLessonSummary(locationId: string) {
     const matches = matchesByLocationId.get(locationId) ?? [];
 
@@ -318,27 +290,19 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
 
       <div className="map-layout">
         <div className="map-canvas" aria-label="ジム位置マップ">
-          <div className="map-grid" />
-          {currentPosition ? <div className="map-user-dot" style={{ top: "50%", left: "50%" }} aria-hidden="true" /> : null}
-          {points.map((point) => (
-            <button
-              key={point.id}
-              type="button"
-              className={`map-pin${selectedLocation?.id === point.id ? " is-active" : ""}`}
-              style={{ top: point.top, left: point.left }}
-              title={`${point.name} (${point.brand?.name ?? "Gym"})`}
-              onClick={() => setSelectedLocationId(point.id)}
-            >
-              <span />
-            </button>
-          ))}
-          <div className="map-caption">
-            {selectedLocation
-              ? `${selectedLocation.name} を中心に表示`
-              : currentPosition
-                ? "現在地を中心にした簡易マップ表示"
-                : "東京周辺の簡易マップ表示"}
-          </div>
+          <LeafletGymMap
+            locations={visibleLocations.map((location) => ({
+              id: location.id,
+              name: location.name,
+              brandName: location.brand?.name,
+              latitude: location.latitude,
+              longitude: location.longitude,
+            }))}
+            selectedLocationId={selectedLocation?.id ?? null}
+            center={mapCenter}
+            currentPosition={currentPosition}
+            onSelectLocation={setSelectedLocationId}
+          />
         </div>
 
         <div className="map-location-list">

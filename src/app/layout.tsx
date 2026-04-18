@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Header } from "@/components/layout/header";
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 export const metadata: Metadata = {

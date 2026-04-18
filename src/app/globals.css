@@ -328,64 +328,69 @@ p {
 
 .map-canvas {
   position: relative;
-  min-height: 320px;
+  min-height: 420px;
+  height: clamp(360px, 48vw, 560px);
   border-radius: 20px;
   border: 1px solid var(--line);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(176, 80, 45, 0.12), transparent 18%),
-    linear-gradient(180deg, #f6efe2 0%, #efe3cf 100%);
+  background: linear-gradient(180deg, #f6efe2 0%, #efe3cf 100%);
   overflow: hidden;
 }
 
-.map-grid {
+.map-canvas-fallback {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.leaflet-map-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.leaflet-map .leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background: #efe3cf;
+}
+
+.leaflet-map .leaflet-control-attribution {
+  font-size: 0.72rem;
+}
+
+.leaflet-map .leaflet-popup-content-wrapper,
+.leaflet-map .leaflet-tooltip {
+  border-radius: 12px;
+}
+
+.map-overlay-message {
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(128, 55, 28, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(128, 55, 28, 0.08) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-.map-user-dot {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  transform: translate(-50%, -50%);
-  background: #2563eb;
-  border: 3px solid #eff6ff;
-  box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.12);
-}
-
-.map-pin {
-  position: absolute;
-  transform: translate(-50%, -100%);
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-}
-
-.map-pin span {
-  display: block;
-  width: 16px;
-  height: 16px;
-  border-radius: 999px;
-  background: var(--accent);
-  border: 3px solid #fff7ef;
-  box-shadow: 0 8px 16px rgba(128, 55, 28, 0.24);
-}
-
-.map-pin.is-active span {
-  width: 20px;
-  height: 20px;
-  background: #7f2f16;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+  z-index: 500;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 250, 240, 0.94);
+  color: var(--text);
+  border: 1px solid rgba(128, 55, 28, 0.18);
+  box-shadow: 0 12px 30px rgba(56, 38, 16, 0.12);
 }
 
 .map-caption {
   position: absolute;
   left: 16px;
   bottom: 16px;
+  z-index: 450;
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 250, 240, 0.95);
@@ -522,6 +527,11 @@ p {
   .map-layout {
     display: grid;
   }
+
+  .map-canvas {
+    min-height: 380px;
+    height: 50vw;
+  }
 }
 
 @media (max-width: 640px) {
@@ -544,5 +554,14 @@ p {
 
   button {
     width: 100%;
+  }
+
+  .map-canvas {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .map-geolocation-help {
+    align-items: stretch;
   }
 }
