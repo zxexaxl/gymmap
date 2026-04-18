@@ -93,13 +93,16 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 68px;
+  min-height: 76px;
   gap: 16px;
 }
 
 .brand-mark {
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 0.55rem + 1.6vw, 1.45rem);
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--accent-dark);
 }
 
 .header-nav {

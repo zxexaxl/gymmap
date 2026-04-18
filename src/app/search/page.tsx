@@ -104,7 +104,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           </div>
         ) : null}
         <p className="search-summary">
-          プログラム名: {filters.q || "指定なし"} / 曜日: {weekdayLabel} / 時間帯: {timeRangeLabel} / 所要時間: {durationRangeLabel} /
+          レッスン名: {filters.q || "指定なし"} / 曜日: {weekdayLabel} / 時間帯: {timeRangeLabel} / 所要時間: {durationRangeLabel} /
           エリア・店舗名: {filters.area || "指定なし"} / チェーン名: {filters.brand || "指定なし"}
         </p>
         <SearchForm brands={brands} initialValues={filters} />

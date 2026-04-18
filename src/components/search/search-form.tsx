@@ -12,7 +12,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
     <form className="panel search-form" action={action}>
       <div className="field-grid">
         <label className="field">
-          <span>プログラム名</span>
+          <span>レッスン名</span>
           <input name="q" defaultValue={initialValues.q} placeholder="BODYCOMBAT / Yoga など" />
         </label>
         <label className="field field-emphasis">
