@@ -5,8 +5,9 @@ import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GymMap MVP",
-  description: "曜日・時間帯・プログラム名から、スポーツジムのスタジオプログラムを横断検索できる MVP",
+  title: "ジム・フィットネスクラブのレッスン検索",
+  description:
+    "ジム・フィットネスクラブのレッスンを検索できるサイトです。BODYCOMBAT、ヨガ、ピラティス、ZUMBA などのスタジオレッスンを、エリア・曜日・開始時間・店舗から探せます。",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

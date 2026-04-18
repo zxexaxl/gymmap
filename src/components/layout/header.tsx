@@ -5,10 +5,10 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand-mark">
-          GymMap MVP
+          レッスン検索
         </Link>
         <nav className="header-nav">
-          <Link href="/search">クラスを探す</Link>
+          <Link href="/search">レッスンを探す</Link>
         </nav>
       </div>
     </header>

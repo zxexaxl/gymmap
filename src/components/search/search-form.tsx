@@ -62,7 +62,7 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
       <div className="search-actions">
         <button type="submit">検索する</button>
       </div>
-      <p className="form-help">条件を入れて絞り込めます。未入力のまま検索すると、登録されているクラスを一覧表示します。</p>
+      <p className="form-help">BODYCOMBAT、ヨガ、ピラティス、ZUMBA などのレッスン検索に対応しています。</p>
     </form>
   );
 }

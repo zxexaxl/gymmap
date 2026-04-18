@@ -23,7 +23,12 @@ export default async function HomePage() {
   return (
     <div className="page-stack">
       <section className="hero panel">
-        <p className="eyebrow">Gym studio schedule search</p>
+        <div className="hero-copy">
+          <h1>ジム・フィットネスクラブのレッスン検索</h1>
+          <p>
+            受けたいレッスン名から、近くのジム・フィットネスクラブのスタジオレッスンを探せます。曜日・開始時間・エリア・店舗で絞り込みできます。
+          </p>
+        </div>
         <div className="hero-photo">
           <Image
             src="/images/hero-studio-program.png"
