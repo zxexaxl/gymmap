@@ -316,6 +316,15 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
             <article
               key={location.id}
               className={`map-location-item${selectedLocation?.id === location.id ? " is-active" : ""}`}
+              role="button"
+              tabIndex={0}
+              onClick={() => setSelectedLocationId(location.id)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setSelectedLocationId(location.id);
+                }
+              }}
             >
               <p className="map-location-brand">{location.brand?.name ?? "-"}</p>
               <h3>{location.name}</h3>
@@ -324,12 +333,35 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
               {normalizedQuery && formatMatchedLessonSummary(location.id) ? (
                 <p className="muted">一致レッスン: {formatMatchedLessonSummary(location.id)}</p>
               ) : null}
-              <button type="button" className="map-select-button" onClick={() => setSelectedLocationId(location.id)}>
+              <button
+                type="button"
+                className="map-select-button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setSelectedLocationId(location.id);
+                }}
+              >
                 地図で見る
               </button>
               <div className="map-link-row">
-                {normalizedQuery ? <Link href={buildLessonDetailHref(location)}>レッスン詳細を見る</Link> : null}
-                <Link href={`/locations/${location.slug}`}>店舗詳細を見る</Link>
+                {normalizedQuery ? (
+                  <Link
+                    href={buildLessonDetailHref(location)}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                    }}
+                  >
+                    レッスン詳細を見る
+                  </Link>
+                ) : null}
+                <Link
+                  href={`/locations/${location.slug}`}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                  }}
+                >
+                  店舗詳細を見る
+                </Link>
               </div>
             </article>
           ))}

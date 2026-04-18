@@ -41,8 +41,9 @@ function MapController({
       map.invalidateSize();
 
       if (hasSelectedLocation || !bounds) {
-        map.setView([center.latitude, center.longitude], 13, {
-          animate: false,
+        map.flyTo([center.latitude, center.longitude], 13, {
+          animate: true,
+          duration: 0.6,
         });
       } else if (bounds) {
         map.fitBounds(bounds, {
