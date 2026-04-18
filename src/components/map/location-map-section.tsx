@@ -240,7 +240,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
     : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
 
   return (
-    <section className="panel map-section">
+    <section id="map-section" className="panel map-section page-anchor-section">
       <div className="section-heading">
         <div>
           <h2>近くのジムを地図から探す</h2>

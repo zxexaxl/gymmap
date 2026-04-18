@@ -22,7 +22,7 @@ export default async function HomePage() {
 
   return (
     <div className="page-stack">
-      <section className="hero panel">
+      <section id="search-section" className="hero panel page-anchor-section">
         <div className="hero-copy">
           <h1>受けたいレッスンを探す</h1>
           <p>
