@@ -34,7 +34,10 @@ async function main() {
   const resolvedPath = path.resolve(process.cwd(), args.file);
   const json = await readFile(resolvedPath, "utf-8");
   const extraction = JSON.parse(json) as JexerExtractionResult;
-  const summary = summarizeJexerExtractionResult(extraction, args.topN);
+  const summary = await summarizeJexerExtractionResult(extraction, {
+    topN: args.topN,
+    currentOutputPath: resolvedPath,
+  });
   const summaryPath = resolvedPath.replace(/\.json$/i, ".summary.json");
 
   await writeFile(summaryPath, JSON.stringify(summary, null, 2), "utf-8");

@@ -1,0 +1,90 @@
+{
+  "total_records": 2295,
+  "needs_review_count": 1875,
+  "unresolved_count": 1576,
+  "usage_metadata": {
+    "prompt_token_count": 121947,
+    "candidates_token_count": 370255,
+    "total_token_count": 492202,
+    "thoughts_token_count": 0,
+    "cached_content_token_count": 0,
+    "model_id": "gemini-2.5-flash-lite"
+  },
+  "total_prompt_tokens": 121947,
+  "total_output_tokens": 370255,
+  "total_tokens": 492202,
+  "by_program_brand": [
+    {
+      "key": "null",
+      "count": 2196
+    },
+    {
+      "key": "ZUMBA",
+      "count": 99
+    }
+  ],
+  "by_category_primary": [
+    {
+      "key": "null",
+      "count": 1576
+    },
+    {
+      "key": "mind_body",
+      "count": 409
+    },
+    {
+      "key": "cardio",
+      "count": 192
+    },
+    {
+      "key": "dance",
+      "count": 116
+    },
+    {
+      "key": "conditioning",
+      "count": 2
+    }
+  ],
+  "top_raw_program_names": [
+    {
+      "key": "キッズ体育スクール",
+      "count": 40
+    },
+    {
+      "key": "ジムスモ/かんたん筋トレトレ",
+      "count": 36
+    },
+    {
+      "key": "ＺＵＭＢＡ（Ｒ）",
+      "count": 35
+    },
+    {
+      "key": "シェイプパンプ",
+      "count": 27
+    },
+    {
+      "key": "ジムスモ/かんたんストレッチ",
+      "count": 27
+    },
+    {
+      "key": "キ ッ ズ 体 育スクール（児童）",
+      "count": 26
+    },
+    {
+      "key": "ヨガ",
+      "count": 24
+    },
+    {
+      "key": "キッズ体育スクール（児童）",
+      "count": 23
+    },
+    {
+      "key": "未成年者利用不可",
+      "count": 21
+    },
+    {
+      "key": "HOTストレッチYoga",
+      "count": 18
+    }
+  ]
+}

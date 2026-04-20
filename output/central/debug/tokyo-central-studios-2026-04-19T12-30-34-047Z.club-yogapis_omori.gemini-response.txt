@@ -1,0 +1,279 @@
+{
+  "records": [
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "raw_program_name": "Ｈ ＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "raw_program_name": "Ｈ ＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "raw_program_name": "ＨＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "raw_program_name": "ＨＯＴヨガパワーヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "10:20",
+      "end_time": "11:20",
+      "raw_program_name": "ＨＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "raw_program_name": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "11:50",
+      "end_time": "12:50",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "12:00",
+      "end_time": "12:40",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "12:00",
+      "end_time": "13:00",
+      "raw_program_name": "ヒップホップスクール",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "school_course",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "raw_program_name": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "saturday",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "raw_program_name": "＊クラブ限定/ＨＯＴヨガボディメイクヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "sunday",
+      "start_time": "13:30",
+      "end_time": "14:30",
+      "raw_program_name": "Ｈ ＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "raw_program_name": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "15:20",
+      "end_time": "16:20",
+      "raw_program_name": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "saturday",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "raw_program_name": "＊クラブ限定/ＨＯＴヨガボディメイクヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "sunday",
+      "start_time": "18:40",
+      "end_time": "19:40",
+      "raw_program_name": "Ｈ ＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "18:30",
+      "end_time": "19:30",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "18:50",
+      "end_time": "19:50",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "19:00",
+      "end_time": "20:00",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "20:10",
+      "end_time": "21:10",
+      "raw_program_name": "Ｈ ＯＴヨガヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "20:00",
+      "end_time": "21:00",
+      "raw_program_name": "ＨＯＴヨガフィールヨガ",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "saturday",
+      "start_time": "20:20",
+      "end_time": "21:20",
+      "raw_program_name": "ＨＯＴヨガピラティス",
+      "source_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "entry_type_candidate": "regular_class",
+      "instructor_name": null,
+      "section_or_area": "スタジオ"
+    }
+  ]
+}

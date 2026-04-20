@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "extract:jexer": "tsx scripts/experimental/run-jexer-extraction.ts",
+    "extract:central": "tsx scripts/experimental/run-central-extraction.ts",
     "import:jexer": "tsx scripts/experimental/import-jexer-extraction.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",

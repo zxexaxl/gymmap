@@ -8,6 +8,7 @@ import { PDFParse } from "pdf-parse";
 import { normalizeProgramName } from "../../src/lib/normalizeProgramName";
 import { getBrandDiscoveryStrategy, type BrandDiscoveryStrategy } from "../../src/lib/extraction/brand-discovery-strategies";
 import { classifyScheduleEntryType } from "../../src/lib/extraction/entry-type-classifier";
+import { buildParsedGeminiDebugArtifacts } from "../../src/lib/extraction/gemini-debug";
 import type { ExtractionAdapterId } from "../../src/lib/extraction/jexer-adapter";
 import {
   generateStructuredJsonFromGeminiWithDebug,
@@ -1642,6 +1643,18 @@ async function runExtractionJob({
 
           if (error.rawResponseText) {
             await writeDebugFile(debugDirPath, baseName, `gemini-response-${index + 1}.txt`, error.rawResponseText);
+            const parsedArtifacts = buildParsedGeminiDebugArtifacts(error.rawResponseText);
+
+            if (parsedArtifacts.parsedJson) {
+              await writeDebugFile(debugDirPath, baseName, `parsed-records-${index + 1}.json`, parsedArtifacts.parsedJson);
+            } else if (parsedArtifacts.parseErrorJson) {
+              await writeDebugFile(
+                debugDirPath,
+                baseName,
+                `parsed-records-${index + 1}.error.json`,
+                parsedArtifacts.parseErrorJson,
+              );
+            }
           }
         }
 
@@ -1666,6 +1679,18 @@ async function runExtractionJob({
     for (const [index, result] of extractionResults.entries()) {
       await writeDebugFile(debugDirPath, baseName, `gemini-response-${index + 1}.json`, result.rawResponseJson);
       await writeDebugFile(debugDirPath, baseName, `gemini-response-${index + 1}.txt`, result.rawResponseText);
+      const parsedArtifacts = buildParsedGeminiDebugArtifacts(result.rawResponseText);
+
+      if (parsedArtifacts.parsedJson) {
+        await writeDebugFile(debugDirPath, baseName, `parsed-records-${index + 1}.json`, parsedArtifacts.parsedJson);
+      } else if (parsedArtifacts.parseErrorJson) {
+        await writeDebugFile(
+          debugDirPath,
+          baseName,
+          `parsed-records-${index + 1}.error.json`,
+          parsedArtifacts.parseErrorJson,
+        );
+      }
     }
 
     const extractionUsageMetadata = aggregateUsageMetadata(extractionResults.map((result) => result.usageMetadata));
@@ -1741,7 +1766,7 @@ async function runExtractionJob({
     );
 
     await writeFile(outputPath, JSON.stringify(output, null, 2), "utf-8");
-    const summary = summarizeJexerExtractionResult(output);
+    const summary = await summarizeJexerExtractionResult(output, { currentOutputPath: outputPath });
     const summaryPath = outputPath.replace(/\.json$/i, ".summary.json");
     await writeFile(summaryPath, JSON.stringify(summary, null, 2), "utf-8");
 

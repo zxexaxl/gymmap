@@ -1,0 +1,354 @@
+{
+  "records": [
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "monday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "tuesday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "wednesday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "thursday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "friday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "saturday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "sunday",
+      "start_time": "04:00",
+      "end_time": "24:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "ジム24会員様及びミッドナイトモーニングコース会員様の相互利用ご案内",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general announcement about membership benefits, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツ ジム24 亀有",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "パワーラック予約制",
+      "source_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a facility usage rule, not a class or session."
+    }
+  ]
+}

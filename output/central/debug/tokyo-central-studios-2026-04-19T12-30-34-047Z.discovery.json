@@ -1,0 +1,5374 @@
+{
+  "entry_url": "https://www.central.co.jp/club/list.html?area_no=3&todo_no=13",
+  "clubs": [
+    {
+      "slug": "yogapis_omori",
+      "club_name": "スタジオ ヨガピス 大森",
+      "club_url": "https://www.central.co.jp/club/yogapis_omori/",
+      "schedule_tab_url": "https://www.central.co.jp/club/yogapis_omori/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 89,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/images/club_pdf2_fn.pdf",
+          "text": "【2026年 4～6月】レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/images/club_pdf5_fn.pdf",
+          "text": "2026年 年間スケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/",
+          "text": "スタジオ ヨガピス 大森",
+          "format": "html",
+          "score": 33,
+          "reasons": [
+            "text:studio",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/images/club_pdf3_fn.pdf",
+          "text": "2/3更新 【ツーリズム情報／旅行ツアー】一覧表 ＜気になるツアーをタップ＞",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/images/club_pdf4_fn.pdf",
+          "text": "12/17更新【有料セッション&キッズ特別練習会】一覧表＜気になるイベントをタップ＞",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/",
+          "text": "スタジオ ヨガピス 大森",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/staff_voice/detail.html?top_no=105489",
+          "text": "スタジオ ヨガピスは初心者にやさしい ♪",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/topics/detail.html?top_no=47413",
+          "text": "ヨガピスは遠赤外線のスタジオだから心地いい！",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/topics/detail.html?top_no=87570",
+          "text": "ヨガもピラティスも楽しめる！女性専用HOTスタジオ「ヨガピス」について",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/topics/detail.html?top_no=100041",
+          "text": "4月～6月のレッスンスケジュールはこちら",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-740-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "seijo",
+      "club_name": "セントラルウェルネスクラブ 成城",
+      "club_url": "https://www.central.co.jp/club/seijo/",
+      "schedule_tab_url": "https://www.central.co.jp/club/seijo/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-242-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/images/club_pdf1_fn.pdf",
+          "text": "2025.4～個人塾スケジュール（スイム・体育パーソナルレッスン）",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/images/club_pdf2_fn.pdf",
+          "text": "パーソナルトレーニングスケジュール＆トレーナー一覧",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/images/club_pdf4_fn.pdf",
+          "text": "4/12更新 【4月～】キッズスイミング・体育・ダンススケジュール・担当一覧・空き状況",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/images/club_pdf5_fn.pdf",
+          "text": "2026.4～レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/images/club_pdf3_fn.pdf",
+          "text": "GWはじめて体験日程一覧",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-242-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/seijo/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15909.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-242-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "tokiwadai",
+      "club_name": "セントラルウェルネスクラブ24 ときわ台",
+      "club_url": "https://www.central.co.jp/club/tokiwadai/",
+      "schedule_tab_url": "https://www.central.co.jp/club/tokiwadai/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-234-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tokiwadai/images/club_pdf3_fn.pdf",
+          "text": "スタジオレッスンのオンライン予約導入について",
+          "format": "pdf",
+          "score": 57,
+          "reasons": [
+            "text:studio",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tokiwadai/images/club_pdf2_fn.pdf",
+          "text": "4月～6月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tokiwadai/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tokiwadai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-234-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tokiwadai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15633.pdf",
+          "text": "【ミッドナイトモーニングコースの皆様へ】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15895.pdf",
+          "text": "フィットネス会員の皆様へ 月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-234-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "cw-kasai",
+      "club_name": "セントラルウェルネスクラブ24 葛西",
+      "club_url": "https://www.central.co.jp/club/cw-kasai/",
+      "schedule_tab_url": "https://www.central.co.jp/club/cw-kasai/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-276-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/images/club_pdf4_fn.pdf",
+          "text": "2026年4月～レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/images/club_pdf1_fn.pdf",
+          "text": "各種手続き受付時間のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/images/club_pdf2_fn.pdf",
+          "text": "2026年フィットネス年間カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/images/club_pdf3_fn.pdf",
+          "text": "2026年キッズスクール年間カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-276-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-kasai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15677.pdf",
+          "text": "MM(ミッドナイトモーニング) 新入退館システム(AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15912.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-276-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "cw-keiseikoiwa",
+      "club_name": "セントラルウェルネスクラブ24 京成小岩",
+      "club_url": "https://www.central.co.jp/club/cw-keiseikoiwa/",
+      "schedule_tab_url": "https://www.central.co.jp/club/cw-keiseikoiwa/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-283-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/images/club_pdf1_fn.pdf",
+          "text": "ゴールデンウィークレッスンスケジュールはこちらから",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/images/club_pdf2_fn.pdf",
+          "text": "2026年4月～6月レッスンスケジュールはこちらから♪",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/images/club_pdf3_fn.pdf",
+          "text": "フィットネスメンバー料金表",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/images/club_pdf4_fn.pdf",
+          "text": "キッズスクール料金表",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/images/club_pdf5_fn.pdf",
+          "text": "カルチャースクール料金表",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/topics/detail.html?top_no=123185",
+          "text": "HOTスタジオで体をじんわり温めよう♪",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-283-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cw-keiseikoiwa/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_10817.pdf",
+          "text": "各種手続き及び電話対応時間変更のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_11127.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15649.pdf",
+          "text": "【ミッドナイトモーニング・24時間メンバー区分のみなさまへ】新入退館システム（AirFob）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-283-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "w_kamiikebukuro",
+      "club_name": "セントラルウェルネスクラブ24 上池袋",
+      "club_url": "https://www.central.co.jp/club/w_kamiikebukuro/",
+      "schedule_tab_url": "https://www.central.co.jp/club/w_kamiikebukuro/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-255-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/images/club_pdf1_fn.pdf",
+          "text": "2026年4～6月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-255-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_kamiikebukuro/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15612.pdf",
+          "text": "【ミッドナイトモーニング・24時間メンバー区分の皆様へ】新入退館システム（Airfob）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15893.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-255-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "kiyose",
+      "club_name": "セントラルウェルネスクラブ24 清瀬",
+      "club_url": "https://www.central.co.jp/club/kiyose/",
+      "schedule_tab_url": "https://www.central.co.jp/club/kiyose/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-007-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/images/club_pdf3_fn.pdf",
+          "text": "2026年4月からのレッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/images/club_pdf2_fn.pdf",
+          "text": "当クラブ深夜早朝相互利用時のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/reserve/schedule/77/175?",
+          "text": "スタジオレッスン予約",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-007-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kiyose/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15671.pdf",
+          "text": "【ミッドナイトモーニングコース（24時間メンバー含む）の皆様へ】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_9821.pdf",
+          "text": "月会費の改定のお知らせ(フィットネス）",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-007-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "w_nishiarai",
+      "club_name": "セントラルウェルネスクラブ24 西新井",
+      "club_url": "https://www.central.co.jp/club/w_nishiarai/",
+      "schedule_tab_url": "https://www.central.co.jp/club/w_nishiarai/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-247-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/images/club_pdf5_fn.pdf",
+          "text": "[フィットネス]2026年4月～6月 レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/images/club_pdf1_fn.pdf",
+          "text": "【フィットネス・キッズ】2026年営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/images/club_pdf2_fn.pdf",
+          "text": "[スクール]2026年4月スクール担当表",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/images/club_pdf3_fn.pdf",
+          "text": "スクールカレンダーはこちらをクリックしてください。",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/images/club_pdf4_fn.pdf",
+          "text": "[フィットネス]2026年4月～6月有料セッション",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-247-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/w_nishiarai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15689.pdf",
+          "text": "【ミッドナイトモーニング会員様・プラスMM会員様対象】アプリ入館システムAIR FOB導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15977.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-247-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "omori",
+      "club_name": "セントラルウェルネスクラブ24 大森",
+      "club_url": "https://www.central.co.jp/club/omori/",
+      "schedule_tab_url": "https://www.central.co.jp/club/omori/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-240-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/images/club_pdf2_fn.pdf",
+          "text": "4/9更新【ゴールデンウィーク】祝日スケジュール 営業時間 9:00～19:00",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/images/club_pdf3_fn.pdf",
+          "text": "3/26更新【2026年4月～6月】レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/images/club_pdf1_fn.pdf",
+          "text": "【3Fオーシャンスパ大森 】2026年4・5月のキャンペーン/営業日のお知らせ",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/images/club_pdf4_fn.pdf",
+          "text": "4/16更新 【ツーリズム情報／旅行ツアー】一覧表 ＜気になるツアーをタップ＞",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/images/club_pdf5_fn.pdf",
+          "text": "3/26更新【有料セッション&キッズ特別練習会】一覧表＜気になるイベントをタップ＞",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_omori/",
+          "text": "スタジオ ヨガピス 大森",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-240-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/omori/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15663.pdf",
+          "text": "【ミッドナイトモーニング・24時間メンバー区分の皆様へ】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15874.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-240-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "higashijujo",
+      "club_name": "セントラルウェルネスクラブ24 東十条",
+      "club_url": "https://www.central.co.jp/club/higashijujo/",
+      "schedule_tab_url": "https://www.central.co.jp/club/higashijujo/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-228-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/images/club_pdf4_fn.pdf",
+          "text": "スタジオレッスン予約登録方法（体験・ビジター）",
+          "format": "pdf",
+          "score": 57,
+          "reasons": [
+            "text:studio",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/images/club_pdf1_fn.pdf",
+          "text": "2026年4月～レッスンスケジュールはこちら",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/images/club_pdf3_fn.pdf",
+          "text": "2026年1月～レッスンスケジュールはこちら",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/images/club_pdf2_fn.pdf",
+          "text": "☆2026年度 新1年生のコース変更のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/images/club_pdf5_fn.pdf",
+          "text": "キッズスクール通常クラス体験・ はじめて体験にご参加のお客様 ご確認ください",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-228-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/higashijujo/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15638.pdf",
+          "text": "【ミッドナイトモーニングコース・MMプラスコースの会員の皆様へ】新入退館システム導入（Airfob）のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15639.pdf",
+          "text": "【ミッドナイトモーニングコースの皆様へ】メールアドレスの登録手順",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15730.pdf",
+          "text": "【4/23復旧予定】ミネラル風呂利用停止について",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15925.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-228-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "minamisenjyu",
+      "club_name": "セントラルウェルネスクラブ24 南千住",
+      "club_url": "https://www.central.co.jp/club/minamisenjyu/",
+      "schedule_tab_url": "https://www.central.co.jp/club/minamisenjyu/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-227-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/images/club_pdf2_fn.pdf",
+          "text": "2026/4/29(水)･5/3(日)･5/5(火)･5/6(水)祝日レッスンスケジュールはこちら",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/images/club_pdf4_fn.pdf",
+          "text": "2026年4月からのレッスンスケジュールはこちら！",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/images/club_pdf1_fn.pdf",
+          "text": "2026年 年間カレンダー(フィットネス/キッズスクール/保育園水泳/英会話スクール/スポーツスクール/成人水泳/マタニティスクール)",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/images/club_pdf3_fn.pdf",
+          "text": "【2026/4】キッズスクール担当表【水泳・体育・ダンス・運動能力】",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-227-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamisenjyu/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15636.pdf",
+          "text": "【ミッドナイトモーニング・24時間メンバー区分の皆様へ】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15942.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-227-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "minamioizumi",
+      "club_name": "セントラルウェルネスクラブ24 保谷",
+      "club_url": "https://www.central.co.jp/club/minamioizumi/",
+      "schedule_tab_url": "https://www.central.co.jp/club/minamioizumi/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-156-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/images/club_pdf3_fn.pdf",
+          "text": "【2026年4月～6月】 レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/images/club_pdf4_fn.pdf",
+          "text": "【2025年7月～】ジムスモ実施スケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/images/club_pdf1_fn.pdf",
+          "text": "☆参加者募集☆ピックルボール",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/images/club_pdf2_fn.pdf",
+          "text": "【2026年】スポーツ種目カレンダー(テニス・空手・スカッシュ･バスケット･バレエ･フラダンス・ゴルフ）)",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-156-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/minamioizumi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15651.pdf",
+          "text": "【ミッドナイトモーニング・２４時間メンバー区分の皆様へ】新入館システム（Airfob) 導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15943.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-156-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "gc24-kameari",
+      "club_name": "セントラルスポーツ ジム24 亀有",
+      "club_url": "https://www.central.co.jp/club/gc24-kameari/",
+      "schedule_tab_url": "https://www.central.co.jp/club/gc24-kameari/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+          "text": "ジム24・MM共通利用開始のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/gc24-kameari/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-314-C-202604.pdf",
+          "text": "その他",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/gc24-kameari/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15613.pdf",
+          "text": "新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15614.pdf",
+          "text": "新入退館システム（AIR FOB）導入までの手順書",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/gc24-kameari/images/club_pdf1_fn.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "csg24-sanbancho",
+      "club_name": "セントラルスポーツ ジム24 三番町",
+      "club_url": "https://www.central.co.jp/club/csg24-sanbancho/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "gc24-kamikitazawa",
+      "club_name": "セントラルスポーツ ジム24 上北沢",
+      "club_url": "https://www.central.co.jp/club/gc24-kamikitazawa/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "gc24-kanda",
+      "club_name": "セントラルスポーツ ジム24 神田",
+      "club_url": "https://www.central.co.jp/club/gc24-kanda/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-nakanobu",
+      "club_name": "セントラルスポーツ ジム24 中延",
+      "club_url": "https://www.central.co.jp/club/csg24-nakanobu/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-mejiro",
+      "club_name": "セントラルスポーツ ジム24 目白",
+      "club_url": "https://www.central.co.jp/club/csg24-mejiro/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "cf-iidabashi",
+      "club_name": "セントラルスポーツ ジムスタ 飯田橋サクラテラス",
+      "club_url": "https://www.central.co.jp/club/cf-iidabashi/",
+      "schedule_tab_url": "https://www.central.co.jp/club/cf-iidabashi/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-282-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 89,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/images/club_pdf4_fn.pdf",
+          "text": "2026年4-6月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/images/club_pdf1_fn.pdf",
+          "text": "2026年フィットネス営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/images/club_pdf2_fn.pdf",
+          "text": "2026年スクール営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/cf-iidabashi/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_9042.pdf",
+          "text": "全国シングル会員 月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-282-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "gc24-aoto",
+      "club_name": "セントラルスポーツジム24 青砥",
+      "club_url": "https://www.central.co.jp/club/gc24-aoto/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "gc24-gotanda",
+      "club_name": "セントラルスポーツジム24Premium五反田",
+      "club_url": "https://www.central.co.jp/club/gc24-gotanda/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-tokiwadai",
+      "club_name": "セントラルスポーツジム24ときわ台",
+      "club_url": "https://www.central.co.jp/club/csg24-tokiwadai/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-eifukucho",
+      "club_name": "セントラルスポーツジム24永福町",
+      "club_url": "https://www.central.co.jp/club/csg24-eifukucho/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-kanamachi",
+      "club_name": "セントラルスポーツジム24金町",
+      "club_url": "https://www.central.co.jp/club/csg24-kanamachi/",
+      "schedule_tab_url": "https://www.central.co.jp/club/csg24-kanamachi/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+          "text": "ジム24・MM共通利用開始のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/csg24-kanamachi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-355-C-202604.pdf",
+          "text": "その他",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/csg24-kanamachi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15615.pdf",
+          "text": "新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15616.pdf",
+          "text": "新入退館システム（AIR FOB）導入までの手順書",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "csg24-iriya",
+      "club_name": "セントラルスポーツジム24入谷",
+      "club_url": "https://www.central.co.jp/club/csg24-iriya/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "csg24-hachimanyama",
+      "club_name": "セントラルスポーツジム24八幡山",
+      "club_url": "https://www.central.co.jp/club/csg24-hachimanyama/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "kameari",
+      "club_name": "セントラルフィットネスクラブ 亀有",
+      "club_url": "https://www.central.co.jp/club/kameari/",
+      "schedule_tab_url": "https://www.central.co.jp/club/kameari/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-046-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-046-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kameari/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15846.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-046-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "nishidai",
+      "club_name": "セントラルフィットネスクラブ 西台",
+      "club_url": "https://www.central.co.jp/club/nishidai/",
+      "schedule_tab_url": "https://www.central.co.jp/club/nishidai/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-143-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/images/club_pdf2_fn.pdf",
+          "text": "2026年4月～６月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/images/club_pdf1_fn.pdf",
+          "text": "当クラブ提携駐車場案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/images/club_pdf4_fn.pdf",
+          "text": "2026年スクールカレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/images/club_pdf5_fn.pdf",
+          "text": "スクールバス振替WEB振替システムご利用方法",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-143-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/nishidai/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-143-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "aoto",
+      "club_name": "セントラルフィットネスクラブ 青砥",
+      "club_url": "https://www.central.co.jp/club/aoto/",
+      "schedule_tab_url": "https://www.central.co.jp/club/aoto/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-126-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/images/club_pdf1_fn.pdf",
+          "text": "【フィットネス】2026年4-6月のレッスンスケジュールはこちら！",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/images/club_pdf4_fn.pdf",
+          "text": "【ゴルフスクール】2026年のレッスンスケジュールはこちら！",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/images/club_pdf5_fn.pdf",
+          "text": "【スカッシュスクール】2026年のレッスンスケジュールはこちら！",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-126-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/aoto/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15674.pdf",
+          "text": "新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15675.pdf",
+          "text": "新入退館システム（AIR FOB）導入までの手順書",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15956.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-126-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "takenotsuka",
+      "club_name": "セントラルフィットネスクラブ 竹の塚",
+      "club_url": "https://www.central.co.jp/club/takenotsuka/",
+      "schedule_tab_url": "https://www.central.co.jp/club/takenotsuka/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-209-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/images/club_pdf3_fn.pdf",
+          "text": "2026年フィットネス営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/images/club_pdf4_fn.pdf",
+          "text": "2026年スクール練習カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/images/club_pdf5_fn.pdf",
+          "text": "各種手続き受付時間のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-209-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/staff_voice/detail.html?top_no=132114",
+          "text": "4/29(水)祝日レッスンスケジュール",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/staff_voice/detail.html?top_no=132115",
+          "text": "5/5(火)祝日レッスンスケジュール",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/staff_voice/detail.html?top_no=132116",
+          "text": "5/6(水)祝日レッスンスケジュール",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/takenotsuka/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15990.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-209-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "tennozu",
+      "club_name": "セントラルフィットネスクラブ 天王洲",
+      "club_url": "https://www.central.co.jp/club/tennozu/",
+      "schedule_tab_url": "https://www.central.co.jp/club/tennozu/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-165-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/images/club_pdf3_fn.pdf",
+          "text": "2026.4月～6月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/images/club_pdf1_fn.pdf",
+          "text": "駅からのアクセス地図（写真付き）",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/images/club_pdf2_fn.pdf",
+          "text": "【エステルーム】アーキのご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/images/club_pdf4_fn.pdf",
+          "text": "2026年フィットネスカレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/images/club_pdf5_fn.pdf",
+          "text": "2026年キッズスクールカレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-165-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tennozu/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15884.pdf",
+          "text": "フィットネス月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-165-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "hachioji",
+      "club_name": "セントラルフィットネスクラブ 八王子",
+      "club_url": "https://www.central.co.jp/club/hachioji/",
+      "schedule_tab_url": "https://www.central.co.jp/club/hachioji/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-136-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/images/club_pdf1_fn.pdf",
+          "text": "2026年1月～レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/images/club_pdf2_fn.pdf",
+          "text": "提携コインパーキング（土曜日8：45～16：45/日曜日8：45～11：45のみ）",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-136-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/staff_voice/detail.html?top_no=131959",
+          "text": "☆GWレッスンスケジュール☆",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/hachioji/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15937.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-136-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "fuchu",
+      "club_name": "セントラルフィットネスクラブ 府中",
+      "club_url": "https://www.central.co.jp/club/fuchu/",
+      "schedule_tab_url": "https://www.central.co.jp/club/fuchu/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-054-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/images/club_pdf2_fn.pdf",
+          "text": "2026年4月～7月のレッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/images/club_pdf5_fn.pdf",
+          "text": "ジムスモスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/images/club_pdf4_fn.pdf",
+          "text": "キッズスクール営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-054-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fuchu/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15900.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-054-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "shimokitazawa",
+      "club_name": "セントラルフィットネスクラブ24 下北沢",
+      "club_url": "https://www.central.co.jp/club/shimokitazawa/",
+      "schedule_tab_url": "https://www.central.co.jp/club/shimokitazawa/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-112-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/images/club_pdf2_fn.pdf",
+          "text": "2026年1月～3月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/images/club_pdf3_fn.pdf",
+          "text": "『ミッドナイトモーニングコース会員様』及び『ジム24会員様』の相互利用ご案内』",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-112-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/shimokitazawa/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15626.pdf",
+          "text": "【ミッドナイトモーニング区分の皆様へ】新入館システム（Airfob）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15968.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-112-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "fussa",
+      "club_name": "セントラルフィットネスクラブ24 福生",
+      "club_url": "https://www.central.co.jp/club/fussa/",
+      "schedule_tab_url": "https://www.central.co.jp/club/fussa/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-069-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fussa/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fussa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yogapis_hachioji/",
+          "text": "スタジオ ヨガピス 八王子",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-069-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/fussa/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_11894.pdf",
+          "text": "料金改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15628.pdf",
+          "text": "【ミッドナイトモーニングメンバーの皆様】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-069-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "yoga",
+      "club_name": "セントラルフィットネスクラブ24 用賀",
+      "club_url": "https://www.central.co.jp/club/yoga/",
+      "schedule_tab_url": "https://www.central.co.jp/club/yoga/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-151-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/images/club_pdf1_fn.pdf",
+          "text": "【2026年4月～】レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/images/club_pdf3_fn.pdf",
+          "text": "【キッズ対象】メール配信サービスご登録のお願い （クラブ番号⇒151）",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/images/club_pdf4_fn.pdf",
+          "text": "【キッズスクール年間カレンダー】",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/images/club_pdf5_fn.pdf",
+          "text": "『ミッドナイトモーニングコース会員様』及び『ジム24会員様』の相互利用ご案内』",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/staff_voice/detail.html?top_no=130112",
+          "text": "ゴールデンウィーク スタジオプログラム【4/29(水)・5/3（日）・5/4(月)・5/6（水）】",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/lp/lesson_reservation02/",
+          "text": "スタジオオンライン予約システムご利用方法について",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-151-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/yoga/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15661.pdf",
+          "text": "【ミッドナイトモーニングコースの皆様へ】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15929.pdf",
+          "text": "【フィットネス】月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-151-A-202604.pdf",
+      "skip_reason": "extraction_failed",
+      "notes": [
+        "Gemini structured response could not be parsed as JSON."
+      ]
+    },
+    {
+      "slug": "tsukuda",
+      "club_name": "セントラルフィットネスクラブ24月島・佃",
+      "club_url": "https://www.central.co.jp/club/tsukuda/",
+      "schedule_tab_url": "https://www.central.co.jp/club/tsukuda/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-366-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/images/club_pdf1_fn.pdf",
+          "text": "2026フィットネス年間カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/images/club_pdf2_fn.pdf",
+          "text": "2026キッズスクール年間カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/home",
+          "text": "スタジオレッスン予約",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-366-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/staff_voice/detail.html?top_no=112356",
+          "text": "レッスンスケジュールのお知らせ",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/tsukuda/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15629.pdf",
+          "text": "【ミッドナイトモーニング・24時間メンバー区分の皆様へ】新入退館システム（Airfob）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15978.pdf",
+          "text": "月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-366-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "kunitachi",
+      "club_name": "セントラルフィットネスクラブ24国立",
+      "club_url": "https://www.central.co.jp/club/kunitachi/",
+      "schedule_tab_url": "https://www.central.co.jp/club/kunitachi/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-371-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/images/club_pdf5_fn.pdf",
+          "text": "4-6月レッスンスケジュール",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/images/club_pdf1_fn.pdf",
+          "text": "【2025年11月開講】オンライン英会話スクール詳細",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/images/club_pdf2_fn.pdf",
+          "text": "キッズスイミング・体育スクール詳細",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/images/club_pdf3_fn.pdf",
+          "text": "フィットネス料金案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/images/club_pdf4_fn.pdf",
+          "text": "キッズスクール体験日程表",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/",
+          "text": "スタジオレッスン予約",
+          "format": "html",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-371-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/kunitachi/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_14327.pdf",
+          "text": "全国シングル会員 月会費改定のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_14380.pdf",
+          "text": "【ミッドナイトモーニング】新入退館システム（AIR FOB）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_14657.pdf",
+          "text": "【ミッドナイトモーニング】新入退館システム（AIR FOB）手順書",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-371-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "ome",
+      "club_name": "セントラルフィットネスクラブ24青梅",
+      "club_url": "https://www.central.co.jp/club/ome/",
+      "schedule_tab_url": "https://www.central.co.jp/club/ome/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-031-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/images/club_pdf5_fn.pdf",
+          "text": "フィットネスレッスンスケジュール【4月】",
+          "format": "pdf",
+          "score": 52,
+          "reasons": [
+            "text:schedule",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/images/club_pdf2_fn.pdf",
+          "text": "キッズスクール2026年カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/home",
+          "text": "スタジオレッスン予約",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-031-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/staff_voice/detail.html?top_no=131997",
+          "text": "GWウィークレッスンスケジュール",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/ome/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15604.pdf",
+          "text": "【24ジムメンバー区分の皆様へ】新入退館システム（Airfob）導入のお知らせ",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15605.pdf",
+          "text": "～～～～～Airfob システム ダウンロード及び登録手順はこちら～～～～～",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-031-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "toa-asagaya",
+      "club_name": "トーアセントラルフィットネスクラブ 阿佐谷",
+      "club_url": "https://www.central.co.jp/club/toa-asagaya/",
+      "schedule_tab_url": "https://www.central.co.jp/club/toa-asagaya/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-122-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15545.pdf",
+          "text": "スタジオレッスンのオンライン予約導入について",
+          "format": "pdf",
+          "score": 43,
+          "reasons": [
+            "text:studio",
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15546.pdf",
+          "text": "スタジオレッスンオンライン予約の初回ご登録方法",
+          "format": "pdf",
+          "score": 43,
+          "reasons": [
+            "text:studio",
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15547.pdf",
+          "text": "スタジオレッスンオンラインご予約・参加方法について",
+          "format": "pdf",
+          "score": 43,
+          "reasons": [
+            "text:studio",
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15950.pdf",
+          "text": "【4/19訂正版】2026年５月２日（土）～５月６日（水）GWレッスンスケジュール",
+          "format": "pdf",
+          "score": 38,
+          "reasons": [
+            "text:schedule",
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/images/club_pdf1_fn.pdf",
+          "text": "2026年バレエスクールカレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/images/club_pdf3_fn.pdf",
+          "text": "成人水泳スクールカレンダー (2026年4～6月)",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/images/club_pdf4_fn.pdf",
+          "text": "スカッシュスクールカレンダー (2026年4～6月)",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/images/club_pdf5_fn.pdf",
+          "text": "ゴルフスクールカレンダー(2026年4～6月)",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://reserve.central.co.jp/home",
+          "text": "スタジオレッスン予約",
+          "format": "unknown",
+          "score": 25,
+          "reasons": [
+            "text:studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-122-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/topics/detail.html?top_no=93698",
+          "text": "★ジムスモ★ 2026年4月スケジュール【無料】",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/toa-asagaya/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/common/images/info/info_15727.pdf",
+          "text": "2026年4月～6月レッスンプログラム",
+          "format": "pdf",
+          "score": 18,
+          "reasons": [
+            "format:pdf"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-122-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "setagaya-rec",
+      "club_name": "ゆうぽうと世田谷レクセンター",
+      "club_url": "https://www.central.co.jp/club/setagaya-rec/",
+      "schedule_tab_url": "https://www.central.co.jp/club/setagaya-rec/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-346-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/images/club_pdf1_fn.pdf",
+          "text": "《テニスコート・体育館等》レンタル施設も充実",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/images/club_pdf2_fn.pdf",
+          "text": "キッズスクールアプリ登録のご案内",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-346-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/setagaya-rec/staff_voice/detail.html?top_no=111084",
+          "text": "【テニススクール】レッスンスケジュール、担当コーチのご案内（2026年4月～6月）",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-346-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "lavie-kamata",
+      "club_name": "ラヴィセントラルフィットネスクラブ 蒲田",
+      "club_url": "https://www.central.co.jp/club/lavie-kamata/",
+      "schedule_tab_url": "https://www.central.co.jp/club/lavie-kamata/club_schedule/",
+      "has_schedule_tab": true,
+      "schedule_tab_fetch_ok": true,
+      "studio_schedule_candidates": [
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-129-A-202604.pdf",
+          "text": "スタジオ",
+          "format": "pdf",
+          "score": 75,
+          "reasons": [
+            "text:studio",
+            "context:pdf",
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/program/studio.html",
+          "text": "スタジオ",
+          "format": "html",
+          "score": 41,
+          "reasons": [
+            "text:studio",
+            "url:program_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/images/club_pdf4_fn.pdf",
+          "text": "2026年フィットネス営業カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/images/club_pdf5_fn.pdf",
+          "text": "2026年スクール年間カレンダー",
+          "format": "pdf",
+          "score": 32,
+          "reasons": [
+            "format:pdf",
+            "url:schedule_pdf"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 28,
+          "reasons": [
+            "text:schedule",
+            "source:schedule_tab"
+          ],
+          "source_page": "schedule_tab"
+        },
+        {
+          "url": "https://www.central.co.jp/club/pdf/psc-129-B-202604.pdf",
+          "text": "プール",
+          "format": "pdf",
+          "score": 24,
+          "reasons": [
+            "context:pdf",
+            "context:web",
+            "format:pdf",
+            "url:schedule_pdf",
+            "exclude:non_studio"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/club_schedule/",
+          "text": "スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/staff_voice/detail.html?top_no=131833",
+          "text": "2026.4月～ジムスモスケジュール",
+          "format": "unknown",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/topics/holiday_pc.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        },
+        {
+          "url": "https://www.central.co.jp/club/lavie-kamata/topics/holiday_sp.html",
+          "text": "休日・祝日スケジュール",
+          "format": "html",
+          "score": 20,
+          "reasons": [
+            "text:schedule"
+          ],
+          "source_page": "club_top"
+        }
+      ],
+      "selected_studio_schedule_url": "https://www.central.co.jp/club/pdf/psc-129-A-202604.pdf",
+      "skip_reason": null,
+      "notes": []
+    },
+    {
+      "slug": "tokyo_aqua",
+      "club_name": "東京アクアティクスセンター",
+      "club_url": "https://www.central.co.jp/club/tokyo_aqua/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    },
+    {
+      "slug": "ia-tatsumi",
+      "club_name": "東京辰巳 アイスアリーナ",
+      "club_url": "https://www.central.co.jp/club/ia-tatsumi/",
+      "schedule_tab_url": null,
+      "has_schedule_tab": false,
+      "schedule_tab_fetch_ok": false,
+      "studio_schedule_candidates": [],
+      "selected_studio_schedule_url": null,
+      "skip_reason": "no_schedule_tab",
+      "notes": []
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "records": [
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "24:00",
+      "raw_program_name": "24時間営業",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a general operating hour, not a specific class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "monday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "tuesday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "wednesday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "thursday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "friday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "saturday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    },
+    {
+      "location_name": "セントラルスポーツジム24金町",
+      "weekday": "sunday",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "raw_program_name": "未成年者利用不可",
+      "source_url": "https://www.central.co.jp/club/csg24-kanamachi/images/club_pdf1_fn.pdf",
+      "entry_type_candidate": "excluded_candidate",
+      "entry_type_reason": "This is a restriction, not a class or session."
+    }
+  ]
+}

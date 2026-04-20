@@ -135,6 +135,7 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 4. Environment Variables に以下を登録
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN`
    - `ADMIN_ACCESS_KEY`
 5. Deploy を実行
 
@@ -150,9 +151,25 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 | --- | --- | --- |
 | `NEXT_PUBLIC_SUPABASE_URL` | 必須 | Supabase Project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 必須 | Supabase anon key |
+| `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Cloudflare Web Analytics を使う場合は必須 | Cloudflare Web Analytics の beacon token |
 | `ADMIN_ACCESS_KEY` | 管理画面を使う場合は必須 | `/admin/data` の簡易保護用キー |
 
 サンプルフォールバックは削除済みなので、画面確認には Supabase 設定と実データ投入が必要です。
+
+## Cloudflare Web Analytics
+
+Cloudflare Web Analytics は `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` が設定されているときだけ読み込まれます。token 未設定でも build は落ちず、script も挿入されません。
+
+Vercel で使う場合:
+
+1. Cloudflare Web Analytics で token を発行する
+2. Vercel の Environment Variables に `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` を追加する
+3. 再デプロイ後にページアクセスして確認する
+
+補足:
+
+- Next.js の App Router 共通レイアウトで `afterInteractive` 読み込みにしているため、描画を邪魔しにくい構成です
+- Cloudflare 側のダッシュボード反映には少し時間がかかる場合があります
 
 ## Seed 投入手順
 
@@ -315,6 +332,28 @@ npm run extract:jexer -- --target=tokyo-jexer
 - Supabase に都内 JEXER 店舗をまとめて追加したい場合は `supabase/sql/insert_jexer_tokyo_locations.sql` を実行してください
 - 神奈川・埼玉・千葉の JEXER 系店舗をまとめて追加したい場合は `supabase/migrations/0003_add_gym_locations_location_type.sql` を先に適用し、その後 `supabase/sql/insert_jexer_kanagawa_saitama_chiba_locations.sql` を実行してください
 - 追加件数の目安は、神奈川県 7 店舗、埼玉県 4 店舗、千葉県 3 店舗です
+
+## Central Sports 東京都内クラブ 抽出実験
+
+Central Sports は、店舗個別ではなくブランド共通導線で抽出します。東京都内クラブ一覧からクラブトップを集め、`スケジュール` タブ有無と `今月のスケジュール` 内の `スタジオ` 導線を確認してから、スタジオスケジュールだけを本抽出対象にします。
+
+実行方法:
+
+```bash
+npm run extract:central -- --target=tokyo-central-studios
+```
+
+debug は `output/central/debug/` に保存されます。
+
+- `*.discovery.json`: 東京都内クラブ一覧、`スケジュール` タブ有無、`スタジオスケジュール` 候補、選定 URL、スキップ理由
+- `*.club-<slug>.top.html`: クラブトップ HTML
+- `*.club-<slug>.schedule.html`: `スケジュール` タブ HTML
+- `*.club-<slug>.studio-source.*`: 本抽出対象の HTML または PDF テキスト
+- `*.club-<slug>.gemini-input.txt` / `*.club-<slug>.gemini-response.*`: Gemini 入出力
+
+- `no_schedule_tab`: クラブトップに `スケジュール` タブがなかった
+- `no_studio_schedule_link`: `スタジオスケジュール` 導線が見つからなかった
+- `unsupported_format`: `スタジオ` 導線は見つかったが HTML/PDF ではなかった
 
 0件だったときの確認手順:
 
