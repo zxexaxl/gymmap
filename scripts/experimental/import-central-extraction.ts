@@ -1,0 +1,701 @@
+import "./load-env";
+
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+
+import { createClient } from "@supabase/supabase-js";
+
+import { prepareCentralImportRecords } from "../../src/lib/extraction/central-import-cleanup";
+import type { JexerExtractionResult, NormalizedExtractedJexerScheduleRecord } from "../../src/lib/extraction/jexer-types";
+
+type ProgramRow = {
+  id: string;
+  name: string;
+  slug: string;
+  category: string | null;
+  default_duration_minutes: number | null;
+};
+
+type LocationRow = {
+  id: string;
+  name: string;
+};
+
+type LocationMatchResult =
+  | { status: "matched"; location: LocationRow; strategy: "exact" | "comparison_key" }
+  | { status: "ambiguous"; comparisonKey: string; candidates: LocationRow[] }
+  | { status: "not_found"; comparisonKey: string };
+
+type ClassScheduleRow = {
+  id: string;
+  location_id: string;
+  weekday: string;
+  start_time: string;
+  end_time: string;
+  raw_program_name: string;
+  canonical_program_name: string | null;
+  instructor_name: string | null;
+  source_page_url: string | null;
+  source_snapshot_id: string | null;
+};
+
+function parseArgs(argv: string[]) {
+  const args = argv.slice(2);
+  const result: { file?: string; dryRun: boolean } = { dryRun: false };
+
+  args.forEach((arg) => {
+    if (arg.startsWith("--file=")) {
+      result.file = arg.replace("--file=", "");
+    }
+
+    if (arg === "--dry-run") {
+      result.dryRun = true;
+    }
+  });
+
+  return result;
+}
+
+function getImportSupabaseClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
+
+  if (!url || !serviceRoleKey) {
+    throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be configured.");
+  }
+
+  return createClient(url, serviceRoleKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  });
+}
+
+function getProjectRefFromUrl(url: string) {
+  try {
+    const hostname = new URL(url).hostname;
+    return hostname.endsWith(".supabase.co") ? hostname.replace(/\.supabase\.co$/, "") : hostname;
+  } catch {
+    return null;
+  }
+}
+
+function getEnvSource(key: string) {
+  return process.env[`CODEX_ENV_SOURCE_${key}`] ?? "unknown";
+}
+
+async function logImportConnectionInfo() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ?? "";
+  const projectRef = url ? getProjectRefFromUrl(url) : null;
+
+  console.log("[import:central] connection");
+  console.log(`  supabase_url=${url || "(missing)"}`);
+  console.log(`  project_ref=${projectRef ?? "(unknown)"}`);
+  console.log(`  env_source:NEXT_PUBLIC_SUPABASE_URL=${getEnvSource("NEXT_PUBLIC_SUPABASE_URL")}`);
+  console.log(`  env_source:SUPABASE_SERVICE_ROLE_KEY=${getEnvSource("SUPABASE_SERVICE_ROLE_KEY")}`);
+}
+
+async function logPostImportVerification({
+  supabase,
+  locationIds,
+  locationNamesById,
+  snapshotId,
+  dryRun,
+}: {
+  supabase: ReturnType<typeof getImportSupabaseClient>;
+  locationIds: string[];
+  locationNamesById: Map<string, string>;
+  snapshotId: string;
+  dryRun: boolean;
+}) {
+  if (locationIds.length === 0) {
+    return;
+  }
+
+  console.log("[import:central] verification");
+  if (dryRun) {
+    console.log("  note=dry-run does not write rows, so snapshot_schedule_count stays 0 unless this snapshot was already imported");
+  }
+
+  for (const locationId of locationIds) {
+    const locationName = locationNamesById.get(locationId) ?? locationId;
+
+    const [{ count: totalCount, error: totalError }, { count: snapshotCount, error: snapshotError }] = await Promise.all([
+      supabase.from("class_schedules").select("*", { count: "exact", head: true }).eq("location_id", locationId),
+      supabase
+        .from("class_schedules")
+        .select("*", { count: "exact", head: true })
+        .eq("location_id", locationId)
+        .eq("source_snapshot_id", snapshotId),
+    ]);
+
+    if (totalError || snapshotError) {
+      console.warn(
+        `[import:central] verification failed for ${locationName}: ${totalError?.message ?? snapshotError?.message ?? "unknown error"}`,
+      );
+      continue;
+    }
+
+    console.log(
+      `  location=${locationName} total_schedule_count=${totalCount ?? 0} snapshot_schedule_count=${snapshotCount ?? 0}`,
+    );
+  }
+}
+
+function normalizeNameKey(value: string) {
+  return value.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+}
+
+function normalizeOptionalNameKey(value: string | null | undefined) {
+  return value ? normalizeNameKey(value) : "";
+}
+
+const CENTRAL_LOCATION_TERMS = [
+  "セントラルスポーツジムスタ",
+  "セントラルスポーツジム",
+  "セントラルスポーツ",
+  "セントラルウェルネスクラブ",
+  "セントラルフィットネスクラブ",
+  "フィットネスクラブ",
+  "ウェルネスクラブ",
+  "スポーツジム",
+  "スポーツ ジム",
+  "ヨガピス",
+  "ラヴィ",
+  "スタジオ",
+  "ジムスタ",
+  "ジム",
+  "レクセンター",
+  "24",
+];
+
+function buildCentralLocationComparisonKey(value: string) {
+  let normalized = value.normalize("NFKC").toLowerCase();
+  normalized = normalized.replace(/[()（）【】\[\]・\/／,，.．\-ー]/g, " ");
+
+  for (const term of CENTRAL_LOCATION_TERMS) {
+    normalized = normalized.replaceAll(term.normalize("NFKC").toLowerCase(), " ");
+  }
+
+  normalized = normalized.replace(/\s+/g, " ").trim();
+  return normalized.replace(/\s+/g, "");
+}
+
+function findCentralLocationMatch({
+  locationName,
+  locationsByExactName,
+  locationsByComparisonKey,
+}: {
+  locationName: string;
+  locationsByExactName: Map<string, LocationRow>;
+  locationsByComparisonKey: Map<string, LocationRow[]>;
+}): LocationMatchResult {
+  const exactMatch = locationsByExactName.get(normalizeNameKey(locationName));
+  if (exactMatch) {
+    return {
+      status: "matched",
+      location: exactMatch,
+      strategy: "exact",
+    };
+  }
+
+  const comparisonKey = buildCentralLocationComparisonKey(locationName);
+  if (!comparisonKey) {
+    return {
+      status: "not_found",
+      comparisonKey,
+    };
+  }
+
+  const candidates = locationsByComparisonKey.get(comparisonKey) ?? [];
+  if (candidates.length === 1) {
+    return {
+      status: "matched",
+      location: candidates[0]!,
+      strategy: "comparison_key",
+    };
+  }
+
+  if (candidates.length > 1) {
+    return {
+      status: "ambiguous",
+      comparisonKey,
+      candidates,
+    };
+  }
+
+  return {
+    status: "not_found",
+    comparisonKey,
+  };
+}
+
+function buildProgramSlugBase(value: string) {
+  const normalized = value
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[／/]/g, "-")
+    .replace(/[()（）【】\[\]]/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9ぁ-んァ-ヶ一-龠-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+
+  return normalized || "program";
+}
+
+function buildUniqueSlug(base: string, existingSlugs: Set<string>) {
+  let candidate = base;
+  let suffix = 2;
+
+  while (existingSlugs.has(candidate)) {
+    candidate = `${base}-${suffix}`;
+    suffix += 1;
+  }
+
+  existingSlugs.add(candidate);
+  return candidate;
+}
+
+function buildScheduleLookupKey(record: {
+  location_id: string;
+  weekday: string;
+  start_time: string;
+  end_time: string;
+  raw_program_name: string;
+  canonical_program_name?: string | null;
+  instructor_name?: string | null;
+}) {
+  return [
+    record.location_id,
+    record.weekday,
+    record.start_time,
+    record.end_time,
+    normalizeNameKey(record.canonical_program_name || record.raw_program_name),
+    normalizeOptionalNameKey(record.instructor_name),
+  ].join("::");
+}
+
+function isReplaceableImportedSchedule(schedule: ClassScheduleRow) {
+  return Boolean(schedule.source_snapshot_id) && Boolean(schedule.source_page_url?.includes("central.co.jp"));
+}
+
+async function readExtractionFile(filePath: string) {
+  const resolvedPath = path.resolve(process.cwd(), filePath);
+  const json = await readFile(resolvedPath, "utf-8");
+  return JSON.parse(json) as JexerExtractionResult;
+}
+
+async function writeImportDebugArtifacts({
+  filePath,
+  preparedRecords,
+  summary,
+}: {
+  filePath: string;
+  preparedRecords: ReturnType<typeof prepareCentralImportRecords>["preparedRecords"];
+  summary: ReturnType<typeof prepareCentralImportRecords>["summary"];
+}) {
+  const resolvedPath = path.resolve(process.cwd(), filePath);
+  const baseName = path.basename(filePath, path.extname(filePath));
+  const debugDir = path.join(path.dirname(resolvedPath), "debug");
+  const summaryPath = path.join(debugDir, `${baseName}.import-normalization-summary.json`);
+  const previewPath = path.join(debugDir, `${baseName}.import-normalization-preview.json`);
+  await mkdir(debugDir, { recursive: true });
+
+  await writeFile(summaryPath, JSON.stringify(summary, null, 2), "utf-8");
+
+  await writeFile(
+    previewPath,
+    JSON.stringify(
+      {
+        records: preparedRecords.map((record) => ({
+          location_name: record.location_name,
+          weekday: record.weekday,
+          start_time: record.start_time,
+          section_or_area: record.section_or_area,
+          raw_program_name_original: record.raw_program_name_original,
+          normalized_program_name_preview: record.normalized_program_name_preview,
+          instructor_name: record.instructor_name,
+          excluded_candidate: record.excluded_candidate,
+          suspect_non_regular: record.suspect_non_regular,
+          normalization_notes: record.normalization_notes,
+        })),
+      },
+      null,
+      2,
+    ),
+    "utf-8",
+  );
+
+  return {
+    debugDir,
+    summaryPath,
+    previewPath,
+  };
+}
+
+async function ensureProgramId({
+  record,
+  programsByName,
+  slugs,
+  supabase,
+  dryRun,
+}: {
+  record: NormalizedExtractedJexerScheduleRecord;
+  programsByName: Map<string, ProgramRow>;
+  slugs: Set<string>;
+  supabase: ReturnType<typeof getImportSupabaseClient>;
+  dryRun: boolean;
+}) {
+  const preferredName = record.canonical_program_name || record.raw_program_name;
+  const preferredKey = normalizeNameKey(preferredName);
+  const rawKey = normalizeNameKey(record.raw_program_name);
+  const existingProgram = programsByName.get(preferredKey) || programsByName.get(rawKey);
+
+  if (existingProgram) {
+    return existingProgram.id;
+  }
+
+  const slug = buildUniqueSlug(buildProgramSlugBase(preferredName), slugs);
+  const newProgram = {
+    name: preferredName,
+    slug,
+    category: record.category_primary ?? "other",
+    description: record.canonical_program_name
+      ? `Imported from Central extraction: ${record.canonical_program_name}`
+      : "Imported from Central extraction",
+    intensity_level: null,
+    beginner_friendly: false,
+    default_duration_minutes: record.duration_minutes,
+  };
+
+  if (dryRun) {
+    const fakeProgram: ProgramRow = {
+      id: `dry-run-${slug}`,
+      name: newProgram.name,
+      slug: newProgram.slug,
+      category: newProgram.category,
+      default_duration_minutes: newProgram.default_duration_minutes,
+    };
+    programsByName.set(preferredKey, fakeProgram);
+    programsByName.set(rawKey, fakeProgram);
+    console.log(`[dry-run] would create program: ${newProgram.name}`);
+    return fakeProgram.id;
+  }
+
+  const { data, error } = await supabase
+    .from("programs")
+    .insert(newProgram as never)
+    .select("id, name, slug, category, default_duration_minutes")
+    .single();
+
+  if (error || !data) {
+    throw new Error(`Failed to create program "${preferredName}": ${error?.message ?? "unknown error"}`);
+  }
+
+  programsByName.set(preferredKey, data as ProgramRow);
+  programsByName.set(rawKey, data as ProgramRow);
+  return (data as ProgramRow).id;
+}
+
+async function main() {
+  const args = parseArgs(process.argv);
+
+  if (!args.file) {
+    console.error("Usage: npm run import:central -- --file=output/central/tokyo-central-studios-xxxx.json");
+    console.error("Optional: add --dry-run to validate without writing");
+    process.exit(1);
+  }
+
+  const extraction = await readExtractionFile(args.file);
+  const { preparedRecords, summary: cleanupSummary } = prepareCentralImportRecords(
+    extraction.records as NormalizedExtractedJexerScheduleRecord[],
+  );
+  const debugArtifacts = await writeImportDebugArtifacts({
+    filePath: args.file,
+    preparedRecords,
+    summary: cleanupSummary,
+  });
+
+  console.log("[import:central] debug artifacts");
+  console.log(`  debug_dir=${debugArtifacts.debugDir}`);
+  console.log(`  summary_path=${debugArtifacts.summaryPath}`);
+  console.log(`  preview_path=${debugArtifacts.previewPath}`);
+  console.log("[import:central] cleanup summary");
+  console.log(
+    `  excluded=${cleanupSummary.excluded} suspect_non_regular=${cleanupSummary.suspect_non_regular} normalized_only=${cleanupSummary.normalized_only} unchanged=${cleanupSummary.unchanged}`,
+  );
+  await logImportConnectionInfo();
+  const supabase = getImportSupabaseClient();
+
+  const [{ data: locations, error: locationsError }, { data: programs, error: programsError }, { data: schedules, error: schedulesError }] =
+    await Promise.all([
+      supabase.from("gym_locations").select("id, name"),
+      supabase.from("programs").select("id, name, slug, category, default_duration_minutes"),
+      supabase
+        .from("class_schedules")
+        .select("id, location_id, weekday, start_time, end_time, raw_program_name, canonical_program_name, instructor_name, source_page_url, source_snapshot_id"),
+    ]);
+
+  if (locationsError || programsError || schedulesError || !locations || !programs || !schedules) {
+    throw new Error(
+      `Failed to load reference data: ${
+        locationsError?.message || programsError?.message || schedulesError?.message || "unknown error"
+      }`,
+    );
+  }
+
+  const locationsByName = new Map<string, LocationRow>(
+    locations.map((location) => [normalizeNameKey(location.name), location as LocationRow]),
+  );
+  const programsByName = new Map<string, ProgramRow>();
+  const slugs = new Set<string>();
+
+  programs.forEach((program) => {
+    const typedProgram = program as ProgramRow;
+    programsByName.set(normalizeNameKey(typedProgram.name), typedProgram);
+    slugs.add(typedProgram.slug);
+  });
+
+  const existingSchedulesByKey = new Map<string, ClassScheduleRow>(
+    schedules.map((schedule) => [buildScheduleLookupKey(schedule as ClassScheduleRow), schedule as ClassScheduleRow]),
+  );
+  const existingSchedulesByLocation = new Map<string, ClassScheduleRow[]>();
+
+  schedules.forEach((schedule) => {
+    const typedSchedule = schedule as ClassScheduleRow;
+    const rows = existingSchedulesByLocation.get(typedSchedule.location_id) ?? [];
+    rows.push(typedSchedule);
+    existingSchedulesByLocation.set(typedSchedule.location_id, rows);
+  });
+
+  let insertedCount = 0;
+  let updatedCount = 0;
+  let skippedCount = 0;
+  let deletedStaleCount = 0;
+  const warnings: string[] = [];
+  let exactLocationMatchCount = 0;
+  let comparisonKeyLocationMatchCount = 0;
+  let ambiguousLocationMatchCount = 0;
+  let notFoundLocationMatchCount = 0;
+  const locationNotFoundExamples: string[] = [];
+  const touchedLocationIds = new Set<string>();
+  const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
+  const snapshotId = path.basename(args.file);
+  const importedKeysByLocation = new Map<string, Set<string>>();
+  const locationsByComparisonKey = new Map<string, LocationRow[]>();
+
+  for (const location of locations as LocationRow[]) {
+    const comparisonKey = buildCentralLocationComparisonKey(location.name);
+    if (!comparisonKey) {
+      continue;
+    }
+
+    const rows = locationsByComparisonKey.get(comparisonKey) ?? [];
+    rows.push(location);
+    locationsByComparisonKey.set(comparisonKey, rows);
+  }
+
+  for (const record of preparedRecords) {
+    if (record.excluded_candidate) {
+      skippedCount += 1;
+      warnings.push(`excluded candidate: ${record.location_name} (${record.raw_program_name_original} -> ${record.raw_program_name})`);
+      continue;
+    }
+
+    const locationMatch = findCentralLocationMatch({
+      locationName: record.location_name,
+      locationsByExactName: locationsByName,
+      locationsByComparisonKey,
+    });
+
+    if (locationMatch.status === "ambiguous") {
+      ambiguousLocationMatchCount += 1;
+      const warning = `location ambiguous: ${record.location_name} -> [${locationMatch.candidates.map((candidate) => candidate.name).join(", ")}] (${record.raw_program_name} ${record.weekday} ${record.start_time})`;
+      warnings.push(warning);
+      if (locationNotFoundExamples.length < 10) {
+        locationNotFoundExamples.push(warning);
+      }
+      skippedCount += 1;
+      continue;
+    }
+
+    if (locationMatch.status === "not_found") {
+      notFoundLocationMatchCount += 1;
+      const warning = `location not found: ${record.location_name} [key=${locationMatch.comparisonKey || "(empty)"}] (${record.raw_program_name} ${record.weekday} ${record.start_time})`;
+      warnings.push(warning);
+      if (locationNotFoundExamples.length < 10) {
+        locationNotFoundExamples.push(warning);
+      }
+      skippedCount += 1;
+      continue;
+    }
+
+    const location = locationMatch.location;
+    if (locationMatch.strategy === "exact") {
+      exactLocationMatchCount += 1;
+    } else {
+      comparisonKeyLocationMatchCount += 1;
+    }
+
+    const programId = await ensureProgramId({
+      record,
+      programsByName,
+      slugs,
+      supabase,
+      dryRun: args.dryRun,
+    });
+
+    const payload = {
+      location_id: location.id,
+      program_id: programId,
+      raw_program_name: record.raw_program_name,
+      canonical_program_name: record.canonical_program_name,
+      normalized_text: record.normalized_text,
+      comparison_key: record.comparison_key,
+      weekday: record.weekday,
+      start_time: record.start_time,
+      end_time: record.end_time,
+      duration_minutes: record.duration_minutes,
+      program_brand: record.program_brand,
+      category_primary: record.category_primary,
+      tags: record.tags,
+      match_method: record.match_method,
+      confidence: record.confidence,
+      needs_review: record.needs_review,
+      instructor_name: record.instructor_name,
+      source_page_url: record.source_url,
+      source_snapshot_id: snapshotId,
+      valid_from: null,
+      valid_to: null,
+      extracted_at: extraction.fetched_at,
+    };
+
+    const scheduleKey = buildScheduleLookupKey({
+      location_id: payload.location_id,
+      weekday: payload.weekday,
+      start_time: payload.start_time,
+      end_time: payload.end_time,
+      raw_program_name: payload.raw_program_name,
+      canonical_program_name: payload.canonical_program_name,
+      instructor_name: payload.instructor_name,
+    });
+    const existingSchedule = existingSchedulesByKey.get(scheduleKey);
+    touchedLocationIds.add(location.id);
+    const locationImportedKeys = importedKeysByLocation.get(location.id) ?? new Set<string>();
+    locationImportedKeys.add(scheduleKey);
+    importedKeysByLocation.set(location.id, locationImportedKeys);
+
+    if (args.dryRun) {
+      if (existingSchedule) {
+        updatedCount += 1;
+        console.log(
+          `[dry-run] would update schedule: ${record.raw_program_name} @ ${record.location_name} ${record.weekday} ${record.start_time}`,
+        );
+      } else {
+        insertedCount += 1;
+        console.log(
+          `[dry-run] would insert schedule: ${record.raw_program_name} @ ${record.location_name} ${record.weekday} ${record.start_time}`,
+        );
+      }
+      continue;
+    }
+
+    if (existingSchedule) {
+      const { error } = await supabase.from("class_schedules").update(payload).eq("id", existingSchedule.id);
+
+      if (error) {
+        throw new Error(`Failed to update class_schedule "${record.raw_program_name}": ${error.message}`);
+      }
+
+      updatedCount += 1;
+      continue;
+    }
+
+    const { data, error } = await supabase.from("class_schedules").insert(payload as never).select("id").single();
+
+    if (error || !data) {
+      throw new Error(`Failed to insert class_schedule "${record.raw_program_name}": ${error?.message ?? "unknown error"}`);
+    }
+
+    existingSchedulesByKey.set(scheduleKey, {
+      id: data.id,
+      location_id: payload.location_id,
+      weekday: payload.weekday,
+      start_time: payload.start_time,
+      end_time: payload.end_time,
+      raw_program_name: payload.raw_program_name,
+      canonical_program_name: payload.canonical_program_name,
+      instructor_name: payload.instructor_name,
+      source_page_url: payload.source_page_url,
+      source_snapshot_id: payload.source_snapshot_id,
+    });
+    insertedCount += 1;
+  }
+
+  for (const locationId of touchedLocationIds) {
+    const importedKeys = importedKeysByLocation.get(locationId) ?? new Set<string>();
+    const staleRows = (existingSchedulesByLocation.get(locationId) ?? []).filter(
+      (schedule) => isReplaceableImportedSchedule(schedule) && !importedKeys.has(buildScheduleLookupKey(schedule)),
+    );
+
+    if (staleRows.length === 0) {
+      continue;
+    }
+
+    if (args.dryRun) {
+      deletedStaleCount += staleRows.length;
+      console.log(
+        `[dry-run] would delete stale schedules: location=${locationNamesById.get(locationId) ?? locationId} count=${staleRows.length}`,
+      );
+      continue;
+    }
+
+    const { error } = await supabase.from("class_schedules").delete().in(
+      "id",
+      staleRows.map((row) => row.id),
+    );
+
+    if (error) {
+      throw new Error(
+        `Failed to delete stale class_schedules for ${locationNamesById.get(locationId) ?? locationId}: ${error.message}`,
+      );
+    }
+
+    deletedStaleCount += staleRows.length;
+  }
+
+  console.log(
+    `Import summary: inserted=${insertedCount}, updated=${updatedCount}, deleted_stale=${deletedStaleCount}, skipped=${skippedCount}, warnings=${warnings.length}`,
+  );
+  console.log("[import:central] location matching summary");
+  console.log(
+    `  exact=${exactLocationMatchCount} comparison_key=${comparisonKeyLocationMatchCount} ambiguous=${ambiguousLocationMatchCount} not_found=${notFoundLocationMatchCount}`,
+  );
+  if (locationNotFoundExamples.length > 0) {
+    console.log("  examples:");
+    locationNotFoundExamples.forEach((example) => {
+      console.log(`    - ${example}`);
+    });
+  }
+  await logPostImportVerification({
+    supabase,
+    locationIds: Array.from(touchedLocationIds),
+    locationNamesById,
+    snapshotId,
+    dryRun: args.dryRun,
+  });
+
+  if (warnings.length > 0) {
+    console.warn("\nWarnings:");
+    warnings.forEach((warning) => {
+      console.warn(`- ${warning}`);
+    });
+  }
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

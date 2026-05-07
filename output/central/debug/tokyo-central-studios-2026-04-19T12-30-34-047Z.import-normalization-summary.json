@@ -1,0 +1,228 @@
+{
+  "excluded": 205,
+  "suspect_non_regular": 782,
+  "normalized_only": 685,
+  "unchanged": 623,
+  "representative_transformations": [
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "10:00",
+      "before": "Ｈ ＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "10:00",
+      "before": "Ｈ ＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "10:00",
+      "before": "ＨＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "10:00",
+      "before": "ＨＯＴヨガパワーヨガ",
+      "after": "HOTヨガパワーヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "10:20",
+      "before": "ＨＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "11:30",
+      "before": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "after": "HOTヨガリンパデトックス&ヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "11:50",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "12:00",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "12:00",
+      "before": "ヒップホップスクール",
+      "after": "ヒップホップスクール",
+      "classification": "suspect_non_regular",
+      "notes": []
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "12:45",
+      "before": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "after": "HOTヨガリンパデトックス&ヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "saturday",
+      "start_time": "13:00",
+      "before": "＊クラブ限定/ＨＯＴヨガボディメイクヨガ",
+      "after": "HOTヨガボディメイクヨガ",
+      "classification": "suspect_non_regular",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols",
+        "removed decoration prefix: /^\\s*[*＊]?\\s*クラブ限定+\\s*[\\/／]\\s*/iu"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "sunday",
+      "start_time": "13:30",
+      "before": "Ｈ ＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "15:00",
+      "before": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "after": "HOTヨガリンパデトックス&ヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "tuesday",
+      "start_time": "15:00",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "wednesday",
+      "start_time": "15:20",
+      "before": "ＨＯＴヨガリンパデトックス＆ヨガ",
+      "after": "HOTヨガリンパデトックス&ヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "thursday",
+      "start_time": "15:30",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "friday",
+      "start_time": "16:30",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "saturday",
+      "start_time": "18:00",
+      "before": "＊クラブ限定/ＨＯＴヨガボディメイクヨガ",
+      "after": "HOTヨガボディメイクヨガ",
+      "classification": "suspect_non_regular",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols",
+        "removed decoration prefix: /^\\s*[*＊]?\\s*クラブ限定+\\s*[\\/／]\\s*/iu"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "sunday",
+      "start_time": "18:40",
+      "before": "Ｈ ＯＴヨガヨガ",
+      "after": "HOTヨガヨガ",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    },
+    {
+      "location_name": "スタジオ ヨガピス 大森",
+      "weekday": "monday",
+      "start_time": "18:30",
+      "before": "ＨＯＴヨガピラティス",
+      "after": "HOTヨガピラティス",
+      "classification": "normalized_only",
+      "notes": [
+        "collapsed OCR whitespace and normalized symbols"
+      ]
+    }
+  ]
+}

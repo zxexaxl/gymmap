@@ -350,10 +350,41 @@ debug は `output/central/debug/` に保存されます。
 - `*.club-<slug>.schedule.html`: `スケジュール` タブ HTML
 - `*.club-<slug>.studio-source.*`: 本抽出対象の HTML または PDF テキスト
 - `*.club-<slug>.gemini-input.txt` / `*.club-<slug>.gemini-response.*`: Gemini 入出力
+- `*.club-<slug>.parsed-records.json`: Gemini の `text` を parse 済みの人間確認用 JSON
 
 - `no_schedule_tab`: クラブトップに `スケジュール` タブがなかった
 - `no_studio_schedule_link`: `スタジオスケジュール` 導線が見つからなかった
 - `unsupported_format`: `スタジオ` 導線は見つかったが HTML/PDF ではなかった
+
+Central 抽出 JSON を Supabase へ取り込む場合:
+
+```bash
+npm run import:central -- --file=output/central/tokyo-central-studios-2026-04-19T12-30-34-047Z.json --dry-run
+```
+
+問題なければ `--dry-run` を外して実行します。
+
+```bash
+npm run import:central -- --file=output/central/tokyo-central-studios-2026-04-19T12-30-34-047Z.json
+```
+
+Central import では投入前に `raw_program_name` を軽く整形し、次の debug を追加で保存します。
+
+- `output/central/debug/<basename>.import-normalization-summary.json`
+  - `excluded / suspect_non_regular / normalized_only / unchanged`
+  - 代表的な変換例 20 件
+- `output/central/debug/<basename>.import-normalization-preview.json`
+  - `raw_program_name_original`
+  - `normalized_program_name_preview`
+  - `excluded_candidate`
+  - `suspect_non_regular`
+  - `normalization_notes`
+
+方針:
+
+- 初回は通常の insert / update
+- 同一 `location + weekday + start/end + canonical/raw name + instructor` は update
+- その月の import に存在しない旧 Central snapshot 行は `deleted_stale` 対象
 
 0件だったときの確認手順:
 
