@@ -32,7 +32,7 @@ export default async function HomePage() {
         <div className="hero-photo">
           <Image
             src="/images/hero-studio-program.png"
-            alt="スタジオプログラムに参加している様子"
+            alt="格闘系スタジオレッスンでパンチ動作をしている様子"
             fill
             priority
             sizes="(max-width: 640px) 100vw, (max-width: 1120px) calc(100vw - 80px), 1072px"
