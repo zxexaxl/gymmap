@@ -1,5 +1,6 @@
 import { getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 export async function GET() {

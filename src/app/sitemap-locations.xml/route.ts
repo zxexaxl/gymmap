@@ -1,6 +1,7 @@
 import { getLocations } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 export async function GET() {
