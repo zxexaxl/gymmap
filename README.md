@@ -135,6 +135,8 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 4. Environment Variables に以下を登録
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `NEXT_PUBLIC_MAP_PROVIDER`
+   - `NEXT_PUBLIC_APPLE_MAPS_TOKEN`
    - `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN`
    - `ADMIN_ACCESS_KEY`
 5. Deploy を実行
@@ -151,6 +153,8 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 | --- | --- | --- |
 | `NEXT_PUBLIC_SUPABASE_URL` | 必須 | Supabase Project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 必須 | Supabase anon key |
+| `NEXT_PUBLIC_MAP_PROVIDER` | 任意 | 地図プロバイダ。`osm` または `apple`。未設定時は `osm` |
+| `NEXT_PUBLIC_APPLE_MAPS_TOKEN` | Apple Maps を使う場合は必須 | Apple MapKit JS 用の Maps token |
 | `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Cloudflare Web Analytics を使う場合は必須 | Cloudflare Web Analytics の beacon token |
 | `ADMIN_ACCESS_KEY` | 管理画面を使う場合は必須 | `/admin/data` の簡易保護用キー |
 
@@ -170,6 +174,22 @@ Vercel で使う場合:
 
 - Next.js の App Router 共通レイアウトで `afterInteractive` 読み込みにしているため、描画を邪魔しにくい構成です
 - Cloudflare 側のダッシュボード反映には少し時間がかかる場合があります
+
+## 地図プロバイダ切替
+
+地図は環境変数で `OpenStreetMap` と `Apple Maps` を切り替えられます。
+
+- `NEXT_PUBLIC_MAP_PROVIDER=osm`
+  - 既定値です
+  - `Leaflet + OpenStreetMap` を使います
+- `NEXT_PUBLIC_MAP_PROVIDER=apple`
+  - `MapKit JS` を使います
+  - `NEXT_PUBLIC_APPLE_MAPS_TOKEN` の設定が必要です
+
+補足:
+
+- Apple Maps の token が未設定、または `MapKit JS` の初期化に失敗した場合は、自動で OpenStreetMap にフォールバックします
+- そのため、Apple Maps を試した後でも `NEXT_PUBLIC_MAP_PROVIDER=osm` に戻せばすぐ切り替えられます
 
 ## Seed 投入手順
 

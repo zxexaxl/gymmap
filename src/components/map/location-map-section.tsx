@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
+import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
 import { scoreProgramQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
 import type { GymLocation, SearchResult } from "@/lib/types";
 import { buildSearchQuery, getLocationAddress } from "@/lib/utils";
@@ -13,6 +14,14 @@ const LeafletGymMap = dynamic(
   {
     ssr: false,
     loading: () => <div className="map-canvas map-canvas-fallback">地図を読み込んでいます…</div>,
+  },
+);
+
+const AppleGymMap = dynamic(
+  () => import("@/components/map/apple-gym-map").then((module) => module.AppleGymMap),
+  {
+    ssr: false,
+    loading: () => <div className="map-canvas map-canvas-fallback">Apple Maps を読み込んでいます…</div>,
   },
 );
 
@@ -61,6 +70,7 @@ function formatDistanceLabel(distanceKm: number | null) {
 }
 
 export function LocationMapSection({ locations, searchResults }: LocationMapSectionProps) {
+  const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
   const [programQuery, setProgramQuery] = useState("");
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
@@ -238,6 +248,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   const resultSummary = normalizedQuery
     ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedResults.length}レッスンを表示中`
     : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
+  const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
 
   return (
     <section id="map-section" className="panel map-section page-anchor-section">
@@ -290,7 +301,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
 
       <div className="map-layout">
         <div className="map-canvas" aria-label="ジム位置マップ">
-          <LeafletGymMap
+          <MapComponent
             locations={visibleLocations.map((location) => ({
               id: location.id,
               name: location.name,
@@ -302,6 +313,11 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
             center={mapCenter}
             currentPosition={currentPosition}
             onSelectLocation={setSelectedLocationId}
+            onProviderError={() => {
+              if (activeMapProvider !== "osm") {
+                setActiveMapProvider("osm");
+              }
+            }}
           />
         </div>
 

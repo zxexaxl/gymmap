@@ -4,26 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap } from "react-leaflet";
 import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
 
-type Coordinates = {
-  latitude: number;
-  longitude: number;
-};
-
-type MapLocation = {
-  id: string;
-  name: string;
-  brandName?: string;
-  latitude: number | null;
-  longitude: number | null;
-};
-
-type LeafletGymMapProps = {
-  locations: MapLocation[];
-  selectedLocationId: string | null;
-  center: Coordinates;
-  currentPosition: Coordinates | null;
-  onSelectLocation: (id: string) => void;
-};
+import type { Coordinates, MapComponentProps } from "@/components/map/map-types";
 
 function MapController({
   center,
@@ -68,7 +49,7 @@ function MapController({
   return null;
 }
 
-export function LeafletGymMap({ locations, selectedLocationId, center, currentPosition, onSelectLocation }: LeafletGymMapProps) {
+export function LeafletGymMap({ locations, selectedLocationId, center, currentPosition, onSelectLocation }: MapComponentProps) {
   const [tileError, setTileError] = useState<string | null>(null);
 
   const selectedLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
