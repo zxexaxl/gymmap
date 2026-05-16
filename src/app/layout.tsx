@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 import { Header } from "@/components/layout/header";
+import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
@@ -9,9 +10,28 @@ const cloudflareWebAnalyticsToken = process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALY
 const clarityProjectId = "weo79q5hg6";
 
 export const metadata: Metadata = {
-  title: "ジム・フィットネスクラブのレッスン検索",
-  description:
-    "ジム・フィットネスクラブのレッスンを検索できるサイトです。BODYCOMBAT、ヨガ、ピラティス、ZUMBA などのスタジオレッスンを、エリア・曜日・開始時間・店舗から探せます。",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: "ジム・フィットネスクラブのレッスン検索 | GymMap",
+    template: "%s | GymMap",
+  },
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "ジム・フィットネスクラブのレッスン検索 | GymMap",
+    description: siteDescription,
+    url: getSiteUrl(),
+    siteName,
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ジム・フィットネスクラブのレッスン検索 | GymMap",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

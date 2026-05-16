@@ -9,6 +9,10 @@ export function getLocationAddress(prefecture?: string | null, city?: string | n
   return [prefecture, city, addressLine].filter(Boolean).join(" ");
 }
 
+export function getAreaName(prefecture?: string | null, city?: string | null) {
+  return city || prefecture || "";
+}
+
 export function formatWeekday(weekday: Weekday) {
   return weekdayLabels[weekday];
 }

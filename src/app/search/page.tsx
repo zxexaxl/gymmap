@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ResultsList } from "@/components/search/results-list";
@@ -5,10 +6,23 @@ import { SearchForm } from "@/components/search/search-form";
 import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
 import { getBrands, getSearchResults } from "@/lib/data";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
+import { siteDescription } from "@/lib/site";
 import { normalizeSearchFilters } from "@/lib/utils";
 
 type SearchPageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export const metadata: Metadata = {
+  title: "検索結果",
+  description: siteDescription,
+  robots: {
+    index: false,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/search",
+  },
 };
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {

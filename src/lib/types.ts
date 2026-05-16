@@ -159,6 +159,22 @@ export type LocationDetail = {
   schedules: SearchResult[];
 };
 
+export type ProgramLandingPage = {
+  program: Program;
+  schedules: SearchResult[];
+  locationCount: number;
+  areaNames: string[];
+  brandNames: string[];
+};
+
+export type AreaProgramLandingPage = {
+  areaName: string;
+  program: Program;
+  schedules: SearchResult[];
+  locationCount: number;
+  brandNames: string[];
+};
+
 export type AdminDataset = {
   gym_brands: GymBrand[];
   gym_locations: GymLocation[];

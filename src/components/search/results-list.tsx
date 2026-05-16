@@ -1,8 +1,9 @@
 import Link from "next/link";
 
+import { buildAreaProgramPath, buildProgramPath } from "@/lib/site";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import type { SearchResult } from "@/lib/types";
-import { formatDate, formatWeekday, getLocationAddress } from "@/lib/utils";
+import { formatDate, formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
 
 type ResultsListProps = {
   results: SearchResult[];
@@ -57,6 +58,14 @@ export function ResultsList({ results, hasActiveFilters = false, query = "", deb
               <p className="muted">
                 {getLocationAddress(item.location.prefecture, item.location.city, item.location.address_line)}
               </p>
+              <div className="link-row">
+                <Link href={buildProgramPath(item.program.slug)}>{item.program.name}の一覧</Link>
+                {getAreaName(item.location.prefecture, item.location.city) ? (
+                  <Link href={buildAreaProgramPath(getAreaName(item.location.prefecture, item.location.city), item.program.slug)}>
+                    {getAreaName(item.location.prefecture, item.location.city)}の{item.program.name}
+                  </Link>
+                ) : null}
+              </div>
               {debugEnabled && normalizedQuery ? (
                 <div className="search-debug">
                   <p className="search-debug-title">debug query: {query}</p>
