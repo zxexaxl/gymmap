@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/generate-static-sitemaps.ts",
     "build": "next build",
     "extract:jexer": "tsx scripts/experimental/run-jexer-extraction.ts",
     "extract:central": "tsx scripts/experimental/run-central-extraction.ts",

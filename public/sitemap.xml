@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://gymmap.vercel.app/sitemap-core.xml</loc>
+    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://gymmap.vercel.app/sitemap-locations.xml</loc>
+    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://gymmap.vercel.app/sitemap-programs.xml</loc>
+    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
+  </sitemap>
+</sitemapindex>
