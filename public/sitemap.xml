@@ -2,14 +2,10 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://gymmap.vercel.app/sitemap-core.xml</loc>
-    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://gymmap.vercel.app/sitemap-locations.xml</loc>
-    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
+    <lastmod>2026-05-16T16:36:41.137Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://gymmap.vercel.app/sitemap-programs.xml</loc>
-    <lastmod>2026-05-16T16:19:57.513Z</lastmod>
+    <lastmod>2026-05-16T16:36:41.137Z</lastmod>
   </sitemap>
 </sitemapindex>
