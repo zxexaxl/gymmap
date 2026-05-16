@@ -1,14 +1,13 @@
 import type { MetadataRoute } from "next";
 
-import { getAreaProgramLandingParams, getLocations, getProgramLandingSlugs } from "@/lib/data";
-import { buildAreaProgramPath, buildProgramPath, getSiteUrl } from "@/lib/site";
+import { getLocations, getProgramLandingSlugs } from "@/lib/data";
+import { buildProgramPath, getSiteUrl } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
-  const [locations, programSlugs, areaProgramParams] = await Promise.all([
+  const [locations, programSlugs] = await Promise.all([
     getLocations(),
     getProgramLandingSlugs(),
-    getAreaProgramLandingParams(),
   ]);
   const now = new Date();
 
@@ -30,12 +29,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,
-    })),
-    ...areaProgramParams.map((entry) => ({
-      url: `${siteUrl}${buildAreaProgramPath(entry.area, entry.program)}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
     })),
   ];
 }

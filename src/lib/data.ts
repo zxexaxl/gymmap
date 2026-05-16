@@ -1,5 +1,6 @@
 import { cache } from "react";
 
+import { programMaster } from "@/lib/program-master";
 import { normalizeSearchKeyword, scoreProgramQueryMatch } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
@@ -49,6 +50,7 @@ const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
 
 const trackedSearchMarkers = ["oimachi", "大井町", "bodypump", "bodycombat"];
 const staticProgramLandingPageLimit = 48;
+const seoProgramNameSet = new Set(programMaster.map((entry) => entry.canonicalProgramName));
 const emptySearchFilters: SearchFilters = {
   q: "",
   weekday: "",
@@ -214,6 +216,10 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
 
 function scoreKeywordMatch(item: SearchResult, query: string) {
   return scoreProgramQueryMatch(item, query);
+}
+
+function normalizeLandingSlug(slug: string) {
+  return decodeURIComponent(slug).trim().toLocaleLowerCase("en-US");
 }
 
 async function fetchAllJoinedSchedules() {
@@ -382,6 +388,10 @@ export async function getProgramLandingPages(limit?: number): Promise<ProgramLan
   const pagesByProgramSlug = new Map<string, ProgramLandingPage>();
 
   results.forEach((item) => {
+    if (!seoProgramNameSet.has(item.program.name)) {
+      return;
+    }
+
     const existing = pagesByProgramSlug.get(item.program.slug);
 
     if (!existing) {
@@ -410,48 +420,30 @@ export async function getProgramLandingPages(limit?: number): Promise<ProgramLan
 
 export async function getProgramLandingBySlug(slug: string): Promise<ProgramLandingPage | null> {
   const pages = await getProgramLandingPages();
-  return pages.find((page) => page.program.slug === slug) ?? null;
-}
+  const normalizedSlug = normalizeLandingSlug(slug);
 
-export async function getAreaProgramLandingParams(limit?: number): Promise<Array<{ area: string; program: string }>> {
-  const results = await getAllSearchResultsCached();
-  const pairs = new Map<string, { area: string; program: string; count: number }>();
-
-  results.forEach((item) => {
-    const areaName = getAreaName(item.location.prefecture, item.location.city);
-
-    if (!areaName) {
-      return;
-    }
-
-    const key = `${areaName}__${item.program.slug}`;
-    const existing = pairs.get(key);
-
-    if (existing) {
-      existing.count += 1;
-      return;
-    }
-
-    pairs.set(key, {
-      area: areaName,
-      program: item.program.slug,
-      count: 1,
-    });
-  });
-
-  const params = Array.from(pairs.values())
-    .filter((entry) => entry.count >= 2)
-    .sort((left, right) => right.count - left.count)
-    .map(({ area, program }) => ({ area, program }));
-
-  return typeof limit === "number" ? params.slice(0, limit) : params;
+  return (
+    pages.find(
+      (page) =>
+        page.program.slug === slug ||
+        normalizeLandingSlug(page.program.slug) === normalizedSlug ||
+        normalizeLandingSlug(page.program.name) === normalizedSlug,
+    ) ?? null
+  );
 }
 
 export async function getAreaProgramLandingByParams(area: string, programSlug: string): Promise<AreaProgramLandingPage | null> {
   const results = await getAllSearchResultsCached();
+  const normalizedSlug = normalizeLandingSlug(programSlug);
   const schedules = results.filter((item) => {
     const areaName = getAreaName(item.location.prefecture, item.location.city);
-    return areaName === area && item.program.slug === programSlug;
+    return (
+      areaName === area &&
+      seoProgramNameSet.has(item.program.name) &&
+      (item.program.slug === programSlug ||
+        normalizeLandingSlug(item.program.slug) === normalizedSlug ||
+        normalizeLandingSlug(item.program.name) === normalizedSlug)
+    );
   });
 
   if (!schedules.length) {

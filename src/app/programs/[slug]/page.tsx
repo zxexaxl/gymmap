@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: ProgramLandingPageProps): Pro
     title: `${page.program.name}が受けられるジム一覧`,
     description,
     alternates: {
-      canonical: buildProgramPath(slug),
+      canonical: buildProgramPath(page.program.slug),
     },
     openGraph: {
       title: `${page.program.name}が受けられるジム一覧 | GymMap`,
       description,
-      url: buildCanonicalPath(buildProgramPath(slug)),
+      url: buildCanonicalPath(buildProgramPath(page.program.slug)),
       locale: "ja_JP",
       type: "article",
     },

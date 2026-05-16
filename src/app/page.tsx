@@ -3,13 +3,13 @@ import Link from "next/link";
 
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
-import { getAreaProgramLandingParams, getBrands, getLocations, getProgramLandingPages, getSearchResults } from "@/lib/data";
-import { buildAreaProgramPath, buildProgramPath } from "@/lib/site";
+import { getBrands, getLocations, getProgramLandingPages, getSearchResults } from "@/lib/data";
+import { buildProgramPath } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const [brands, locations, searchResults, programPages, areaProgramParams] = await Promise.all([
+  const [brands, locations, searchResults, featuredPrograms] = await Promise.all([
     getBrands(),
     getLocations(),
     getSearchResults({
@@ -21,10 +21,7 @@ export default async function HomePage() {
       area: "",
     }),
     getProgramLandingPages(8),
-    getAreaProgramLandingParams(8),
   ]);
-  const featuredPrograms = programPages.slice(0, 8);
-  const featuredAreaPrograms = areaProgramParams.slice(0, 8);
 
   return (
     <div className="page-stack">
@@ -59,24 +56,6 @@ export default async function HomePage() {
             {featuredPrograms.map((page) => (
               <Link key={page.program.slug} href={buildProgramPath(page.program.slug)}>
                 {page.program.name}
-              </Link>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      {featuredAreaPrograms.length ? (
-        <section className="panel">
-          <div className="section-heading">
-            <div>
-              <h2>エリア別に探す</h2>
-              <p className="muted">通いやすい街ごとに、代表的なレッスンを比較できる固定ページです。</p>
-            </div>
-          </div>
-          <div className="link-row">
-            {featuredAreaPrograms.map((entry) => (
-              <Link key={`${entry.area}-${entry.program}`} href={buildAreaProgramPath(entry.area, entry.program)}>
-                {entry.area}の{featuredPrograms.find((page) => page.program.slug === entry.program)?.program.name ?? entry.program}
               </Link>
             ))}
           </div>

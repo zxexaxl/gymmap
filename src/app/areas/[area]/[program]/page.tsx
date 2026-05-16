@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { getAreaProgramLandingByParams, getAreaProgramLandingParams } from "@/lib/data";
+import { getAreaProgramLandingByParams } from "@/lib/data";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { formatWeekday, getLocationAddress } from "@/lib/utils";
 
@@ -32,13 +32,17 @@ export async function generateMetadata({ params }: AreaProgramPageProps): Promis
   return {
     title: `${page.areaName}で${page.program.name}が受けられるジム一覧`,
     description,
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
-      canonical: buildAreaProgramPath(area, program),
+      canonical: buildAreaProgramPath(page.areaName, page.program.slug),
     },
     openGraph: {
       title: `${page.areaName}で${page.program.name}が受けられるジム一覧 | GymMap`,
       description,
-      url: buildCanonicalPath(buildAreaProgramPath(area, program)),
+      url: buildCanonicalPath(buildAreaProgramPath(page.areaName, page.program.slug)),
       locale: "ja_JP",
       type: "article",
     },
