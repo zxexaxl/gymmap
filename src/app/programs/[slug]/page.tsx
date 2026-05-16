@@ -15,6 +15,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+export const dynamicParams = true;
+export const revalidate = 86400;
+
 export async function generateMetadata({ params }: ProgramLandingPageProps): Promise<Metadata> {
   const { slug } = await params;
   const page = await getProgramLandingBySlug(slug);

@@ -10,9 +10,8 @@ type AreaProgramPageProps = {
   params: Promise<{ area: string; program: string }>;
 };
 
-export async function generateStaticParams() {
-  return getAreaProgramLandingParams();
-}
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: AreaProgramPageProps): Promise<Metadata> {
   const { area, program } = await params;

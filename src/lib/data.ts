@@ -48,6 +48,7 @@ const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
 };
 
 const trackedSearchMarkers = ["oimachi", "大井町", "bodypump", "bodycombat"];
+const staticProgramLandingPageLimit = 48;
 const emptySearchFilters: SearchFilters = {
   q: "",
   weekday: "",
@@ -371,12 +372,12 @@ export async function getLocationBySlug(slug: string): Promise<LocationDetail | 
   };
 }
 
-export async function getProgramLandingSlugs(): Promise<string[]> {
-  const pages = await getProgramLandingPages();
+export async function getProgramLandingSlugs(limit = staticProgramLandingPageLimit): Promise<string[]> {
+  const pages = await getProgramLandingPages(limit);
   return pages.map((page) => page.program.slug);
 }
 
-export async function getProgramLandingPages(): Promise<ProgramLandingPage[]> {
+export async function getProgramLandingPages(limit?: number): Promise<ProgramLandingPage[]> {
   const results = await getAllSearchResultsCached();
   const pagesByProgramSlug = new Map<string, ProgramLandingPage>();
 
@@ -402,7 +403,9 @@ export async function getProgramLandingPages(): Promise<ProgramLandingPage[]> {
     existing.brandNames = Array.from(new Set([...existing.brandNames, item.brand.name]));
   });
 
-  return Array.from(pagesByProgramSlug.values()).sort((left, right) => right.schedules.length - left.schedules.length);
+  const pages = Array.from(pagesByProgramSlug.values()).sort((left, right) => right.schedules.length - left.schedules.length);
+
+  return typeof limit === "number" ? pages.slice(0, limit) : pages;
 }
 
 export async function getProgramLandingBySlug(slug: string): Promise<ProgramLandingPage | null> {
@@ -410,7 +413,7 @@ export async function getProgramLandingBySlug(slug: string): Promise<ProgramLand
   return pages.find((page) => page.program.slug === slug) ?? null;
 }
 
-export async function getAreaProgramLandingParams(): Promise<Array<{ area: string; program: string }>> {
+export async function getAreaProgramLandingParams(limit?: number): Promise<Array<{ area: string; program: string }>> {
   const results = await getAllSearchResultsCached();
   const pairs = new Map<string, { area: string; program: string; count: number }>();
 
@@ -436,10 +439,12 @@ export async function getAreaProgramLandingParams(): Promise<Array<{ area: strin
     });
   });
 
-  return Array.from(pairs.values())
+  const params = Array.from(pairs.values())
     .filter((entry) => entry.count >= 2)
     .sort((left, right) => right.count - left.count)
     .map(({ area, program }) => ({ area, program }));
+
+  return typeof limit === "number" ? params.slice(0, limit) : params;
 }
 
 export async function getAreaProgramLandingByParams(area: string, programSlug: string): Promise<AreaProgramLandingPage | null> {

@@ -20,8 +20,8 @@ export default async function HomePage() {
       brand: "",
       area: "",
     }),
-    getProgramLandingPages(),
-    getAreaProgramLandingParams(),
+    getProgramLandingPages(8),
+    getAreaProgramLandingParams(8),
   ]);
   const featuredPrograms = programPages.slice(0, 8);
   const featuredAreaPrograms = areaProgramParams.slice(0, 8);
