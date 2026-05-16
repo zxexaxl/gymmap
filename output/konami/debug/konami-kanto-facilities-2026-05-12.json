@@ -1,0 +1,653 @@
+{
+  "source_result_url": "https://www.konami.com/sportsclub/shisetsu/result.html?pref=%E5%9F%BC%E7%8E%89%E7%9C%8C$$%E5%8D%83%E8%91%89%E7%9C%8C$$%E6%9D%B1%E4%BA%AC%E9%83%BD$$%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C",
+  "retrieved_via_api": "https://www.konami.com/sportsclub/api/facilities.php?pref[]=埼玉県&pref[]=千葉県&pref[]=東京都&pref[]=神奈川県",
+  "total_count": 64,
+  "prefecture_counts": {
+    "東京都": 27,
+    "埼玉県": 11,
+    "千葉県": 13,
+    "神奈川県": 13
+  },
+  "locations": [
+    {
+      "name": "グランサイズ 恵比寿ガーデン",
+      "prefecture": "東京都",
+      "city": "目黒区三田1丁目",
+      "official_url": "https://information.konamisportsclub.jp/004103.html",
+      "source_url": "https://information.konamisportsclub.jp/004103.html",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004103",
+      "code": "004103"
+    },
+    {
+      "name": "コナミスポーツ ジュニアスクール 中野",
+      "prefecture": "東京都",
+      "city": "中野区",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007701/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007701/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007701",
+      "code": "007701"
+    },
+    {
+      "name": "コナミスポーツ ジュニアスクール 西葛西",
+      "prefecture": "東京都",
+      "city": "江戸川区西葛西",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004046/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004046/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004046",
+      "code": "004046"
+    },
+    {
+      "name": "コナミスポーツ テニススクール 西葛西",
+      "prefecture": "東京都",
+      "city": "江戸川区西葛西",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004062/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004062/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004062",
+      "code": "004062"
+    },
+    {
+      "name": "コナミスポーツクラブ 一橋学園",
+      "prefecture": "東京都",
+      "city": "小平市上水本町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004054/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004054/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004054",
+      "code": "004054"
+    },
+    {
+      "name": "コナミスポーツクラブ 二子玉川",
+      "prefecture": "東京都",
+      "city": "世田谷区玉川",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004461/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004461/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004461",
+      "code": "004461"
+    },
+    {
+      "name": "コナミスポーツクラブ 五反田",
+      "prefecture": "東京都",
+      "city": "品川区東五反田",
+      "official_url": "https://information.konamisportsclub.jp/ksc/003930/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/003930/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-003930",
+      "code": "003930"
+    },
+    {
+      "name": "コナミスポーツクラブ 大森町",
+      "prefecture": "東京都",
+      "city": "大田区大森西",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007877/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007877/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007877",
+      "code": "007877"
+    },
+    {
+      "name": "コナミスポーツクラブ 府中",
+      "prefecture": "東京都",
+      "city": "府中市宮西町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004469/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004469/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004469",
+      "code": "004469"
+    },
+    {
+      "name": "コナミスポーツクラブ 恵比寿",
+      "prefecture": "東京都",
+      "city": "渋谷区広尾",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006023/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006023/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006023",
+      "code": "006023"
+    },
+    {
+      "name": "コナミスポーツクラブ 成増",
+      "prefecture": "東京都",
+      "city": "板橋区成増",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007833/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007833/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007833",
+      "code": "007833"
+    },
+    {
+      "name": "コナミスポーツクラブ 本店",
+      "prefecture": "東京都",
+      "city": "品川区東品川",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004501/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004501/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004501",
+      "code": "004501"
+    },
+    {
+      "name": "コナミスポーツクラブ 東大島",
+      "prefecture": "東京都",
+      "city": "江東区大島",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000589/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000589/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000589",
+      "code": "000589"
+    },
+    {
+      "name": "コナミスポーツクラブ 武蔵境",
+      "prefecture": "東京都",
+      "city": "武蔵野市境南町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006028/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006028/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006028",
+      "code": "006028"
+    },
+    {
+      "name": "コナミスポーツクラブ 武蔵野",
+      "prefecture": "東京都",
+      "city": "武蔵野市中町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/003932/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/003932/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-003932",
+      "code": "003932"
+    },
+    {
+      "name": "コナミスポーツクラブ 池袋",
+      "prefecture": "東京都",
+      "city": "豊島区東池袋",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004486/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004486/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004486",
+      "code": "004486"
+    },
+    {
+      "name": "コナミスポーツクラブ 渋谷",
+      "prefecture": "東京都",
+      "city": "渋谷区神泉町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007871/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007871/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007871",
+      "code": "007871"
+    },
+    {
+      "name": "コナミスポーツクラブ 目黒",
+      "prefecture": "東京都",
+      "city": "目黒区下目黒",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006022/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006022/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006022",
+      "code": "006022"
+    },
+    {
+      "name": "コナミスポーツクラブ 目黒青葉台",
+      "prefecture": "東京都",
+      "city": "目黒区青葉台",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004446/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004446/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004446",
+      "code": "004446"
+    },
+    {
+      "name": "コナミスポーツクラブ 碑文谷",
+      "prefecture": "東京都",
+      "city": "目黒区碑文谷",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006034/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006034/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006034",
+      "code": "006034"
+    },
+    {
+      "name": "コナミスポーツクラブ 稲城",
+      "prefecture": "東京都",
+      "city": "稲城市東長沼",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004085/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004085/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004085",
+      "code": "004085"
+    },
+    {
+      "name": "コナミスポーツクラブ 自由が丘駅前",
+      "prefecture": "東京都",
+      "city": "目黒区自由が丘",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006029/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006029/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006029",
+      "code": "006029"
+    },
+    {
+      "name": "コナミスポーツクラブ 船堀",
+      "prefecture": "東京都",
+      "city": "江戸川区",
+      "official_url": "https://information.konamisportsclub.jp/ksc/003964/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/003964/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-003964",
+      "code": "003964"
+    },
+    {
+      "name": "コナミスポーツクラブ 荻窪南口",
+      "prefecture": "東京都",
+      "city": "杉並区荻窪",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006024/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006024/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006024",
+      "code": "006024"
+    },
+    {
+      "name": "コナミスポーツクラブ 蒲田",
+      "prefecture": "東京都",
+      "city": "大田区蒲田",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007876/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007876/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007876",
+      "code": "007876"
+    },
+    {
+      "name": "コナミスポーツクラブ 西新井",
+      "prefecture": "東京都",
+      "city": "足立区梅島",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004043/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004043/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004043",
+      "code": "004043"
+    },
+    {
+      "name": "コナミスポーツクラブ 飯田橋",
+      "prefecture": "東京都",
+      "city": "新宿区揚場町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004414/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004414/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004414",
+      "code": "004414"
+    },
+    {
+      "name": "コナミスポーツ テニススクール 大宮",
+      "prefecture": "埼玉県",
+      "city": "さいたま市大宮区桜木町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000355/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000355/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000355",
+      "code": "000355"
+    },
+    {
+      "name": "コナミスポーツ テニススクール 浦和",
+      "prefecture": "埼玉県",
+      "city": "さいたま市浦和区高砂",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007804/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007804/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007804",
+      "code": "007804"
+    },
+    {
+      "name": "コナミスポーツ テニススクール 狭山",
+      "prefecture": "埼玉県",
+      "city": "狭山市入間川",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004033/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004033/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004033",
+      "code": "004033"
+    },
+    {
+      "name": "コナミスポーツクラブ 入間",
+      "prefecture": "埼玉県",
+      "city": "入間市豊岡",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004498/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004498/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004498",
+      "code": "004498"
+    },
+    {
+      "name": "コナミスポーツクラブ 北上尾",
+      "prefecture": "埼玉県",
+      "city": "上尾市緑丘",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007879/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007879/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007879",
+      "code": "007879"
+    },
+    {
+      "name": "コナミスポーツクラブ 和光",
+      "prefecture": "埼玉県",
+      "city": "和光市白子",
+      "official_url": "https://information.konamisportsclub.jp/ksc/007851/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/007851/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-007851",
+      "code": "007851"
+    },
+    {
+      "name": "コナミスポーツクラブ 川口",
+      "prefecture": "埼玉県",
+      "city": "川口市宮町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004060/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004060/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004060",
+      "code": "004060"
+    },
+    {
+      "name": "コナミスポーツクラブ 川越",
+      "prefecture": "埼玉県",
+      "city": "川越市鯨井新田",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004447/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004447/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004447",
+      "code": "004447"
+    },
+    {
+      "name": "コナミスポーツクラブ 所沢",
+      "prefecture": "埼玉県",
+      "city": "所沢市星の宮",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004053/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004053/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004053",
+      "code": "004053"
+    },
+    {
+      "name": "コナミスポーツクラブ 武蔵浦和",
+      "prefecture": "埼玉県",
+      "city": "さいたま市南区別所",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004081/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004081/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004081",
+      "code": "004081"
+    },
+    {
+      "name": "コナミスポーツクラブ 行田",
+      "prefecture": "埼玉県",
+      "city": "行田市持田",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000590/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000590/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000590",
+      "code": "000590"
+    },
+    {
+      "name": "エグザス 奏の杜",
+      "prefecture": "千葉県",
+      "city": "習志野市",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004112/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004112/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004112",
+      "code": "004112"
+    },
+    {
+      "name": "コナミスポーツ ジュニアスクール 五香",
+      "prefecture": "千葉県",
+      "city": "松戸市",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004041/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004041/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004041",
+      "code": "004041"
+    },
+    {
+      "name": "コナミスポーツクラブ 下総中山",
+      "prefecture": "千葉県",
+      "city": "船橋市本中山2丁目",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004442/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004442/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004442",
+      "code": "004442"
+    },
+    {
+      "name": "コナミスポーツクラブ 五井",
+      "prefecture": "千葉県",
+      "city": "市原市五井",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004039/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004039/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004039",
+      "code": "004039"
+    },
+    {
+      "name": "コナミスポーツクラブ 五香",
+      "prefecture": "千葉県",
+      "city": "松戸市常盤平",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004089/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004089/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004089",
+      "code": "004089"
+    },
+    {
+      "name": "コナミスポーツクラブ 北小金",
+      "prefecture": "千葉県",
+      "city": "松戸市小金",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004475/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004475/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004475",
+      "code": "004475"
+    },
+    {
+      "name": "コナミスポーツクラブ 妙典",
+      "prefecture": "千葉県",
+      "city": "市川市妙典",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004067/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004067/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004067",
+      "code": "004067"
+    },
+    {
+      "name": "コナミスポーツクラブ 市川",
+      "prefecture": "千葉県",
+      "city": "市川市鬼高",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000401/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000401/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000401",
+      "code": "000401"
+    },
+    {
+      "name": "コナミスポーツクラブ 津田沼",
+      "prefecture": "千葉県",
+      "city": "習志野市津田沼",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004411/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004411/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004411",
+      "code": "004411"
+    },
+    {
+      "name": "コナミスポーツクラブ 稲毛",
+      "prefecture": "千葉県",
+      "city": "千葉市稲毛区小仲台",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004462/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004462/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004462",
+      "code": "004462"
+    },
+    {
+      "name": "コナミスポーツクラブ 船橋",
+      "prefecture": "千葉県",
+      "city": "船橋市湊町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004404/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004404/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004404",
+      "code": "004404"
+    },
+    {
+      "name": "コナミスポーツクラブ 西船橋",
+      "prefecture": "千葉県",
+      "city": "船橋市印内町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004423/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004423/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004423",
+      "code": "004423"
+    },
+    {
+      "name": "コナミスポーツクラブ 都賀",
+      "prefecture": "千葉県",
+      "city": "千葉市若葉区都賀",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004483/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004483/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004483",
+      "code": "004483"
+    },
+    {
+      "name": "コナミスポーツクラブ たまプラーザ",
+      "prefecture": "神奈川県",
+      "city": "横浜市青葉区美しが丘",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006026/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006026/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006026",
+      "code": "006026"
+    },
+    {
+      "name": "コナミスポーツクラブ 三ツ境",
+      "prefecture": "神奈川県",
+      "city": "横浜市瀬谷区三ツ境",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004071/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004071/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004071",
+      "code": "004071"
+    },
+    {
+      "name": "コナミスポーツクラブ 上大岡",
+      "prefecture": "神奈川県",
+      "city": "横浜市港南区上大岡西",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004409/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004409/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004409",
+      "code": "004409"
+    },
+    {
+      "name": "コナミスポーツクラブ 中央林間",
+      "prefecture": "神奈川県",
+      "city": "大和市中央林間",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004464/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004464/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004464",
+      "code": "004464"
+    },
+    {
+      "name": "コナミスポーツクラブ 厚木",
+      "prefecture": "神奈川県",
+      "city": "厚木市戸室",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000643/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000643/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000643",
+      "code": "000643"
+    },
+    {
+      "name": "コナミスポーツクラブ 川崎",
+      "prefecture": "神奈川県",
+      "city": "川崎市幸区堀川町",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004479/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004479/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004479",
+      "code": "004479"
+    },
+    {
+      "name": "コナミスポーツクラブ 希望が丘",
+      "prefecture": "神奈川県",
+      "city": "横浜市旭区東希望が丘",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006027/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006027/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006027",
+      "code": "006027"
+    },
+    {
+      "name": "コナミスポーツクラブ 新百合ヶ丘",
+      "prefecture": "神奈川県",
+      "city": "川崎市麻生区上麻生",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004488/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004488/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004488",
+      "code": "004488"
+    },
+    {
+      "name": "コナミスポーツクラブ 横浜",
+      "prefecture": "神奈川県",
+      "city": "横浜市神奈川区沢渡",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004079/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004079/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004079",
+      "code": "004079"
+    },
+    {
+      "name": "コナミスポーツクラブ 橋本",
+      "prefecture": "神奈川県",
+      "city": "相模原市緑区西橋本",
+      "official_url": "https://information.konamisportsclub.jp/ksc/000584/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/000584/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-000584",
+      "code": "000584"
+    },
+    {
+      "name": "コナミスポーツクラブ 武蔵小杉",
+      "prefecture": "神奈川県",
+      "city": "川崎市中原区新丸子東",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004070/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004070/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004070",
+      "code": "004070"
+    },
+    {
+      "name": "コナミスポーツクラブ 洋光台",
+      "prefecture": "神奈川県",
+      "city": "横浜市磯子区洋光台",
+      "official_url": "https://information.konamisportsclub.jp/ksc/004048/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/004048/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-004048",
+      "code": "004048"
+    },
+    {
+      "name": "コナミスポーツクラブ 磯子",
+      "prefecture": "神奈川県",
+      "city": "横浜市磯子区森",
+      "official_url": "https://information.konamisportsclub.jp/ksc/006033/",
+      "source_url": "https://information.konamisportsclub.jp/ksc/006033/",
+      "location_type": "fitness_club",
+      "slug": "konami-sports-006033",
+      "code": "006033"
+    }
+  ]
+}

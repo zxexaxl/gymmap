@@ -1,0 +1,700 @@
+{
+  "source_page": "https://tip.tipness.co.jp/shop_info/",
+  "retrieved_via": "stores_json_used_by_shop_info_page",
+  "raw_count": 40,
+  "deduped_count": 40,
+  "prefecture_counts": {
+    "千葉県": 3,
+    "埼玉県": 3,
+    "東京都": 25,
+    "神奈川県": 9
+  },
+  "target_prefectures": [
+    "東京都",
+    "神奈川県",
+    "千葉県",
+    "埼玉県"
+  ],
+  "locations": [
+    {
+      "name": "蘇我店",
+      "prefecture": "千葉県",
+      "city": "千葉市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "千葉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp065",
+      "store_code": "SHP065",
+      "tipx_flag": false
+    },
+    {
+      "name": "南行徳店",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "千葉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp060",
+      "store_code": "SHP060",
+      "tipx_flag": false
+    },
+    {
+      "name": "船橋店",
+      "prefecture": "千葉県",
+      "city": "船橋市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "千葉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp027",
+      "store_code": "SHP027",
+      "tipx_flag": false
+    },
+    {
+      "name": "武蔵藤沢店",
+      "prefecture": "埼玉県",
+      "city": "入間市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "埼玉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp046",
+      "store_code": "SHP046",
+      "tipx_flag": false
+    },
+    {
+      "name": "イオンモール川口店",
+      "prefecture": "埼玉県",
+      "city": "川口市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "埼玉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp099",
+      "store_code": "SHP099",
+      "tipx_flag": false
+    },
+    {
+      "name": "川口店",
+      "prefecture": "埼玉県",
+      "city": "川口市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "埼玉県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp048",
+      "store_code": "SHP048",
+      "tipx_flag": false
+    },
+    {
+      "name": "三軒茶屋店",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp051",
+      "store_code": "SHP051",
+      "tipx_flag": false
+    },
+    {
+      "name": "喜多見店",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp034",
+      "store_code": "SHP034",
+      "tipx_flag": false
+    },
+    {
+      "name": "明大前店",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp062",
+      "store_code": "SHP062",
+      "tipx_flag": false
+    },
+    {
+      "name": "駒沢大学店",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp100",
+      "store_code": "SHP100",
+      "tipx_flag": false
+    },
+    {
+      "name": "中野店",
+      "prefecture": "東京都",
+      "city": "中野区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp007",
+      "store_code": "SHP007",
+      "tipx_flag": false
+    },
+    {
+      "name": "王子店",
+      "prefecture": "東京都",
+      "city": "北区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP096/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP096/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp096",
+      "store_code": "SHP096",
+      "tipx_flag": false
+    },
+    {
+      "name": "五反田店",
+      "prefecture": "東京都",
+      "city": "品川区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP005/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP005/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp005",
+      "store_code": "SHP005",
+      "tipx_flag": false
+    },
+    {
+      "name": "国分寺店",
+      "prefecture": "東京都",
+      "city": "国分寺市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp031",
+      "store_code": "SHP031",
+      "tipx_flag": false
+    },
+    {
+      "name": "蒲田店",
+      "prefecture": "東京都",
+      "city": "大田区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp041",
+      "store_code": "SHP041",
+      "tipx_flag": false
+    },
+    {
+      "name": "東新宿店",
+      "prefecture": "東京都",
+      "city": "新宿区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp082",
+      "store_code": "SHP082",
+      "tipx_flag": false
+    },
+    {
+      "name": "下井草店",
+      "prefecture": "東京都",
+      "city": "杉並区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp029",
+      "store_code": "SHP029",
+      "tipx_flag": false
+    },
+    {
+      "name": "吉祥寺店",
+      "prefecture": "東京都",
+      "city": "武蔵野市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp004",
+      "store_code": "SHP004",
+      "tipx_flag": false
+    },
+    {
+      "name": "瑞江店",
+      "prefecture": "東京都",
+      "city": "江戸川区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp076",
+      "store_code": "SHP076",
+      "tipx_flag": false
+    },
+    {
+      "name": "木場店",
+      "prefecture": "東京都",
+      "city": "江東区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp036",
+      "store_code": "SHP036",
+      "tipx_flag": false
+    },
+    {
+      "name": "TIP.X TOKYO渋谷",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP001/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP001/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp001",
+      "store_code": "SHP001",
+      "tipx_flag": true
+    },
+    {
+      "name": "六本木店",
+      "prefecture": "東京都",
+      "city": "港区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp008",
+      "store_code": "SHP008",
+      "tipx_flag": false
+    },
+    {
+      "name": "大泉学園店",
+      "prefecture": "東京都",
+      "city": "練馬区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp028",
+      "store_code": "SHP028",
+      "tipx_flag": false
+    },
+    {
+      "name": "東武練馬店",
+      "prefecture": "東京都",
+      "city": "練馬区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp025",
+      "store_code": "SHP025",
+      "tipx_flag": false
+    },
+    {
+      "name": "氷川台店",
+      "prefecture": "東京都",
+      "city": "練馬区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp063",
+      "store_code": "SHP063",
+      "tipx_flag": false
+    },
+    {
+      "name": "練馬店",
+      "prefecture": "東京都",
+      "city": "練馬区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp069",
+      "store_code": "SHP069",
+      "tipx_flag": false
+    },
+    {
+      "name": "新小岩店",
+      "prefecture": "東京都",
+      "city": "葛飾区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp037",
+      "store_code": "SHP037",
+      "tipx_flag": false
+    },
+    {
+      "name": "田無店",
+      "prefecture": "東京都",
+      "city": "西東京市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp032",
+      "store_code": "SHP032",
+      "tipx_flag": false
+    },
+    {
+      "name": "国領店",
+      "prefecture": "東京都",
+      "city": "調布市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp023",
+      "store_code": "SHP023",
+      "tipx_flag": false
+    },
+    {
+      "name": "TIP.X TOKYO池袋",
+      "prefecture": "東京都",
+      "city": "豊島区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP010/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP010/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp010",
+      "store_code": "SHP010",
+      "tipx_flag": true
+    },
+    {
+      "name": "綾瀬店",
+      "prefecture": "東京都",
+      "city": "足立区",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "東京都"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp049",
+      "store_code": "SHP049",
+      "tipx_flag": false
+    },
+    {
+      "name": "宮前平店",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp074",
+      "store_code": "SHP074",
+      "tipx_flag": false
+    },
+    {
+      "name": "宮崎台店",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp026",
+      "store_code": "SHP026",
+      "tipx_flag": false
+    },
+    {
+      "name": "川崎店",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp056",
+      "store_code": "SHP056",
+      "tipx_flag": false
+    },
+    {
+      "name": "新百合ヶ丘店",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp035",
+      "store_code": "SHP035",
+      "tipx_flag": false
+    },
+    {
+      "name": "二俣川店",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp052",
+      "store_code": "SHP052",
+      "tipx_flag": false
+    },
+    {
+      "name": "横浜店",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp070",
+      "store_code": "SHP070",
+      "tipx_flag": false
+    },
+    {
+      "name": "鴨居店",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp067",
+      "store_code": "SHP067",
+      "tipx_flag": false
+    },
+    {
+      "name": "鶴見店",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp084",
+      "store_code": "SHP084",
+      "tipx_flag": false
+    },
+    {
+      "name": "藤沢店",
+      "prefecture": "神奈川県",
+      "city": "藤沢市",
+      "official_url": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "source_url": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "source_pages": [
+        "https://tip.tipness.co.jp/shop_info/"
+      ],
+      "source_tabs": [
+        "神奈川県"
+      ],
+      "location_type": "fitness_club",
+      "slug": "tipness-shp013",
+      "store_code": "SHP013",
+      "tipx_flag": false
+    }
+  ]
+}

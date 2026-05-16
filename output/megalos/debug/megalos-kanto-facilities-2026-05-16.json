@@ -1,0 +1,438 @@
+{
+  "source_page": "https://megalos.co.jp/contents/information/store.html",
+  "retrieved_via": "public_html_store_cards",
+  "raw_count": 38,
+  "unique_url_count": 37,
+  "deduped_count": 38,
+  "prefecture_counts": {
+    "東京都": 25,
+    "神奈川県": 10,
+    "千葉県": 2,
+    "埼玉県": 1
+  },
+  "url_collisions": [
+    {
+      "official_url": "https://megalos.co.jp/tachikawa_kita/",
+      "names": [
+        "メガロス 立川北館",
+        "メガロス 立川南館"
+      ],
+      "addresses": [
+        "東京都立川市曙町2-42-1 パークアベニュー 9F・10F",
+        "東京都立川市柴崎町3-6-29 アレアレア2 4F・5F"
+      ]
+    }
+  ],
+  "skip_reasons": [],
+  "locations": [
+    {
+      "name": "メガロス ゼロプラス 恵比寿ーパーソナルジムー",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://megalos.co.jp/ebisu/",
+      "slug": "megalos-ebisu",
+      "source_url": "https://megalos.co.jp/ebisu/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス ルフレ 恵比寿ー女性専用ジム＆スタジオー",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://megalos.co.jp/ebisu_reflet/",
+      "slug": "megalos-ebisu-reflet",
+      "source_url": "https://megalos.co.jp/ebisu_reflet/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス ルフレ 麻布十番ー女性専用ジム＆スタジオー",
+      "prefecture": "東京都",
+      "city": "港区",
+      "official_url": "https://megalos.co.jp/azabujuban_reflet/",
+      "slug": "megalos-azabujuban-reflet",
+      "source_url": "https://megalos.co.jp/azabujuban_reflet/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 日比谷シャンテ",
+      "prefecture": "東京都",
+      "city": "千代田区",
+      "official_url": "https://megalos.co.jp/hibiya/",
+      "slug": "megalos-hibiya",
+      "source_url": "https://megalos.co.jp/hibiya/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 白金台",
+      "prefecture": "東京都",
+      "city": "港区",
+      "official_url": "https://megalos.co.jp/shirokanedai/",
+      "slug": "megalos-shirokanedai",
+      "source_url": "https://megalos.co.jp/shirokanedai/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 田端",
+      "prefecture": "東京都",
+      "city": "北区",
+      "official_url": "https://megalos.co.jp/tabata/",
+      "slug": "megalos-tabata",
+      "source_url": "https://megalos.co.jp/tabata/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス キッズ錦糸町",
+      "prefecture": "東京都",
+      "city": "墨田区",
+      "official_url": "https://megalos.co.jp/kinshicho/",
+      "slug": "megalos-kinshicho",
+      "source_url": "https://megalos.co.jp/kinshicho/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 小岩",
+      "prefecture": "東京都",
+      "city": "江戸川区",
+      "official_url": "https://megalos.co.jp/koiwa/",
+      "slug": "megalos-koiwa",
+      "source_url": "https://megalos.co.jp/koiwa/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス西新宿キッズアフタースクール",
+      "prefecture": "東京都",
+      "city": "新宿区",
+      "official_url": "https://megalos.co.jp/nishishinjuku/",
+      "slug": "megalos-nishishinjuku",
+      "source_url": "https://megalos.co.jp/nishishinjuku/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス南砂町SUNAMO",
+      "prefecture": "東京都",
+      "city": "江東区",
+      "official_url": "https://megalos.co.jp/minamisunamachi/",
+      "slug": "megalos-minamisunamachi",
+      "source_url": "https://megalos.co.jp/minamisunamachi/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 三鷹",
+      "prefecture": "東京都",
+      "city": "武蔵野市",
+      "official_url": "https://megalos.co.jp/mitaka/",
+      "slug": "megalos-mitaka",
+      "source_url": "https://megalos.co.jp/mitaka/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 吉祥寺",
+      "prefecture": "東京都",
+      "city": "武蔵野市",
+      "official_url": "https://megalos.co.jp/kichijoji/",
+      "slug": "megalos-kichijoji",
+      "source_url": "https://megalos.co.jp/kichijoji/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 武蔵小金井",
+      "prefecture": "東京都",
+      "city": "小金井市",
+      "official_url": "https://megalos.co.jp/musashi/",
+      "slug": "megalos-musashi",
+      "source_url": "https://megalos.co.jp/musashi/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス ルフレ武蔵小金井ー女性専用スタジオー",
+      "prefecture": "東京都",
+      "city": "小金井市",
+      "official_url": "https://megalos.co.jp/musashi_reflet/",
+      "slug": "megalos-musashi-reflet",
+      "source_url": "https://megalos.co.jp/musashi_reflet/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 小平テニススクール",
+      "prefecture": "東京都",
+      "city": "小平市",
+      "official_url": "https://megalos.co.jp/kodaira/",
+      "slug": "megalos-kodaira",
+      "source_url": "https://megalos.co.jp/kodaira/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 八王子",
+      "prefecture": "東京都",
+      "city": "八王子市",
+      "official_url": "https://megalos.co.jp/hachiouji/",
+      "slug": "megalos-hachiouji",
+      "source_url": "https://megalos.co.jp/hachiouji/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 調布",
+      "prefecture": "東京都",
+      "city": "調布市",
+      "official_url": "https://megalos.co.jp/chofu/",
+      "slug": "megalos-chofu",
+      "source_url": "https://megalos.co.jp/chofu/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 町田",
+      "prefecture": "東京都",
+      "city": "町田市",
+      "official_url": "https://megalos.co.jp/machida/",
+      "slug": "megalos-machida",
+      "source_url": "https://megalos.co.jp/machida/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 玉川学園テニススクール",
+      "prefecture": "東京都",
+      "city": "町田市",
+      "official_url": "https://megalos.co.jp/tamagawa/",
+      "slug": "megalos-tamagawa",
+      "source_url": "https://megalos.co.jp/tamagawa/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 葛飾",
+      "prefecture": "東京都",
+      "city": "葛飾区",
+      "official_url": "https://megalos.co.jp/katsushika/",
+      "slug": "megalos-katsushika",
+      "source_url": "https://megalos.co.jp/katsushika/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス東小金井学童クラブ",
+      "prefecture": "東京都",
+      "city": "小金井市",
+      "official_url": "https://megalos.co.jp/megalos_wp/higashikoganei/",
+      "slug": "megalos-megalos-wp-higashikoganei",
+      "source_url": "https://megalos.co.jp/megalos_wp/higashikoganei/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 立川北館",
+      "prefecture": "東京都",
+      "city": "立川市",
+      "official_url": "https://megalos.co.jp/tachikawa_kita/",
+      "slug": "megalos-tachikawa-kita",
+      "source_url": "https://megalos.co.jp/tachikawa_kita/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ],
+      "notes": "url_collision_same_detail_page"
+    },
+    {
+      "name": "メガロス 立川南館",
+      "prefecture": "東京都",
+      "city": "立川市",
+      "official_url": "https://megalos.co.jp/tachikawa_kita/",
+      "slug": "megalos-tachikawa-kita-2",
+      "source_url": "https://megalos.co.jp/tachikawa_kita/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ],
+      "notes": "url_collision_same_detail_page"
+    },
+    {
+      "name": "メガロス ルフレ立川南ー女性専用スタジオー",
+      "prefecture": "東京都",
+      "city": "立川市",
+      "official_url": "https://megalos.co.jp/tachikawa_reflet/",
+      "slug": "megalos-tachikawa-reflet",
+      "source_url": "https://megalos.co.jp/tachikawa_reflet/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス ルフレ みなとみらいー女性専用スタジオー",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/minatomirai_reflet/",
+      "slug": "megalos-minatomirai-reflet",
+      "source_url": "https://megalos.co.jp/minatomirai_reflet/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 横浜天王町",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/yokohama/",
+      "slug": "megalos-yokohama",
+      "source_url": "https://megalos.co.jp/yokohama/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 上永谷",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/kaminagaya/",
+      "slug": "megalos-kaminagaya",
+      "source_url": "https://megalos.co.jp/kaminagaya/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 神奈川",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/kanagawa/",
+      "slug": "megalos-kanagawa",
+      "source_url": "https://megalos.co.jp/kanagawa/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 日吉",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/hiyoshi/",
+      "slug": "megalos-hiyoshi",
+      "source_url": "https://megalos.co.jp/hiyoshi/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 綱島",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/tsunashima/",
+      "slug": "megalos-tsunashima",
+      "source_url": "https://megalos.co.jp/tsunashima/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 市ヶ尾",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://megalos.co.jp/ichigao/",
+      "slug": "megalos-ichigao",
+      "source_url": "https://megalos.co.jp/ichigao/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 鷺沼",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://megalos.co.jp/saginuma/",
+      "slug": "megalos-saginuma",
+      "source_url": "https://megalos.co.jp/saginuma/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 相模大野",
+      "prefecture": "神奈川県",
+      "city": "相模原市",
+      "official_url": "https://megalos.co.jp/sagamiono/",
+      "slug": "megalos-sagamiono",
+      "source_url": "https://megalos.co.jp/sagamiono/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 大和",
+      "prefecture": "神奈川県",
+      "city": "大和市",
+      "official_url": "https://megalos.co.jp/yamato/",
+      "slug": "megalos-yamato",
+      "source_url": "https://megalos.co.jp/yamato/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 本八幡",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "official_url": "https://megalos.co.jp/motoyawata/",
+      "slug": "megalos-motoyawata",
+      "source_url": "https://megalos.co.jp/motoyawata/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 柏",
+      "prefecture": "千葉県",
+      "city": "柏市",
+      "official_url": "https://megalos.co.jp/kashiwa/",
+      "slug": "megalos-kashiwa",
+      "source_url": "https://megalos.co.jp/kashiwa/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    },
+    {
+      "name": "メガロス 草加",
+      "prefecture": "埼玉県",
+      "city": "草加市",
+      "official_url": "https://megalos.co.jp/souka/",
+      "slug": "megalos-souka",
+      "source_url": "https://megalos.co.jp/souka/",
+      "source_pages": [
+        "https://megalos.co.jp/contents/information/store.html"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,772 @@
+{
+  "source_pages": [
+    "https://www.goldsgym.jp/store-finder/11",
+    "https://www.goldsgym.jp/store-finder/17"
+  ],
+  "retrieved_via": "public_html_store_lists",
+  "raw_total_count": 62,
+  "filtered_target_prefecture_count": 53,
+  "deduped_count": 53,
+  "target_prefectures": [
+    "東京都",
+    "埼玉県",
+    "千葉県",
+    "神奈川県"
+  ],
+  "prefecture_counts": {
+    "千葉県": 11,
+    "埼玉県": 5,
+    "東京都": 30,
+    "神奈川県": 7
+  },
+  "excluded_non_target_prefecture_counts": {
+    "茨城県": 3,
+    "栃木県": 2,
+    "群馬県": 3,
+    "unknown": 1
+  },
+  "locations": [
+    {
+      "name": "幕張ベイパークアリーナ",
+      "prefecture": "千葉県",
+      "city": "千葉市",
+      "official_url": "https://www.goldsgym.jp/shop/12131",
+      "source_url": "https://www.goldsgym.jp/shop/12131",
+      "slug": "golds-gym-12131",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12131",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "幕張千葉ANNEX",
+      "prefecture": "千葉県",
+      "city": "千葉市",
+      "official_url": "https://www.goldsgym.jp/shop/12130",
+      "source_url": "https://www.goldsgym.jp/shop/12130",
+      "slug": "golds-gym-12130",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12130",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "幕張千葉WBG",
+      "prefecture": "千葉県",
+      "city": "千葉市",
+      "official_url": "https://www.goldsgym.jp/shop/12120",
+      "source_url": "https://www.goldsgym.jp/shop/12120",
+      "slug": "golds-gym-12120",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12120",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "千葉ニュータウンジョイフルアスレティッククラブ",
+      "prefecture": "千葉県",
+      "city": "印西市",
+      "official_url": "https://www.goldsgym.jp/shop/20211026",
+      "source_url": "https://www.goldsgym.jp/shop/20211026",
+      "slug": "golds-gym-20211026",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "20211026",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "本八幡千葉",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "official_url": "https://www.goldsgym.jp/shop/12180",
+      "source_url": "https://www.goldsgym.jp/shop/12180",
+      "slug": "golds-gym-12180",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12180",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "行徳千葉アスレチックセンター",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "official_url": "https://www.goldsgym.jp/shop/12150",
+      "source_url": "https://www.goldsgym.jp/shop/12150",
+      "slug": "golds-gym-12150",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12150",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "行徳千葉フィットネスセンター (OPEN 24 HOURS)",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "official_url": "https://www.goldsgym.jp/shop/12140",
+      "source_url": "https://www.goldsgym.jp/shop/12140",
+      "slug": "golds-gym-12140",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12140",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "成田千葉",
+      "prefecture": "千葉県",
+      "city": "成田市",
+      "official_url": "https://www.goldsgym.jp/shop/12100",
+      "source_url": "https://www.goldsgym.jp/shop/12100",
+      "slug": "golds-gym-12100",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12100",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "柏千葉 （豊四季）",
+      "prefecture": "千葉県",
+      "city": "柏市",
+      "official_url": "https://www.goldsgym.jp/shop/12110",
+      "source_url": "https://www.goldsgym.jp/shop/12110",
+      "slug": "golds-gym-12110",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12110",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "浦安千葉",
+      "prefecture": "千葉県",
+      "city": "浦安市",
+      "official_url": "https://www.goldsgym.jp/shop/12160",
+      "source_url": "https://www.goldsgym.jp/shop/12160",
+      "slug": "golds-gym-12160",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12160",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "津田沼千葉",
+      "prefecture": "千葉県",
+      "city": "習志野市",
+      "official_url": "https://www.goldsgym.jp/shop/12170",
+      "source_url": "https://www.goldsgym.jp/shop/12170",
+      "slug": "golds-gym-12170",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "12170",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "さいたまスーパーアリーナ",
+      "prefecture": "埼玉県",
+      "city": "さいたま市",
+      "official_url": "https://www.goldsgym.jp/shop/11110",
+      "source_url": "https://www.goldsgym.jp/shop/11110",
+      "slug": "golds-gym-11110",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "11110",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "大宮さいたま (OPEN 24 HOURS)",
+      "prefecture": "埼玉県",
+      "city": "さいたま市",
+      "official_url": "https://www.goldsgym.jp/shop/1112",
+      "source_url": "https://www.goldsgym.jp/shop/1112",
+      "slug": "golds-gym-1112",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "1112",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "久喜埼玉",
+      "prefecture": "埼玉県",
+      "city": "久喜市",
+      "official_url": "https://www.goldsgym.jp/shop/20200508",
+      "source_url": "https://www.goldsgym.jp/shop/20200508",
+      "slug": "golds-gym-20200508",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "20200508",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "吉川埼玉 （フランチャイズ店）",
+      "prefecture": "埼玉県",
+      "city": "吉川市",
+      "official_url": "https://www.goldsgym.jp/shop/11100",
+      "source_url": "https://www.goldsgym.jp/shop/11100",
+      "slug": "golds-gym-11100",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "11100",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "新所沢埼玉",
+      "prefecture": "埼玉県",
+      "city": "所沢市",
+      "official_url": "https://www.goldsgym.jp/shop/11130",
+      "source_url": "https://www.goldsgym.jp/shop/11130",
+      "slug": "golds-gym-11130",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "11130",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "銀座中央",
+      "prefecture": "東京都",
+      "city": "中央区",
+      "official_url": "https://www.goldsgym.jp/shop/13205",
+      "source_url": "https://www.goldsgym.jp/shop/13205",
+      "slug": "golds-gym-13205",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13205",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "銀座東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "中央区",
+      "official_url": "https://www.goldsgym.jp/shop/13200",
+      "source_url": "https://www.goldsgym.jp/shop/13200",
+      "slug": "golds-gym-13200",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13200",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "ウエスト東京",
+      "prefecture": "東京都",
+      "city": "中野区",
+      "official_url": "https://www.goldsgym.jp/shop/13140",
+      "source_url": "https://www.goldsgym.jp/shop/13140",
+      "slug": "golds-gym-13140",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13140",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "東中野東京",
+      "prefecture": "東京都",
+      "city": "中野区",
+      "official_url": "https://www.goldsgym.jp/shop/13130",
+      "source_url": "https://www.goldsgym.jp/shop/13130",
+      "slug": "golds-gym-13130",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13130",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "八王子東京",
+      "prefecture": "東京都",
+      "city": "八王子市",
+      "official_url": "https://www.goldsgym.jp/shop/13260",
+      "source_url": "https://www.goldsgym.jp/shop/13260",
+      "slug": "golds-gym-13260",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13260",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "南大沢東京",
+      "prefecture": "東京都",
+      "city": "八王子市",
+      "official_url": "https://www.goldsgym.jp/shop/10210",
+      "source_url": "https://www.goldsgym.jp/shop/10210",
+      "slug": "golds-gym-10210",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "10210",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "四ツ谷東京",
+      "prefecture": "東京都",
+      "city": "千代田区",
+      "official_url": "https://www.goldsgym.jp/shop/13121",
+      "source_url": "https://www.goldsgym.jp/shop/13121",
+      "slug": "golds-gym-13121",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13121",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "サウス東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "品川区",
+      "official_url": "https://www.goldsgym.jp/shop/13230",
+      "source_url": "https://www.goldsgym.jp/shop/13230",
+      "slug": "golds-gym-13230",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13230",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "国立東京",
+      "prefecture": "東京都",
+      "city": "国立市",
+      "official_url": "https://www.goldsgym.jp/shop/20220627",
+      "source_url": "https://www.goldsgym.jp/shop/20220627",
+      "slug": "golds-gym-20220627",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "20220627",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "曳舟東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "墨田区",
+      "official_url": "https://www.goldsgym.jp/shop/18116",
+      "source_url": "https://www.goldsgym.jp/shop/18116",
+      "slug": "golds-gym-18116",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "18116",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "聖蹟桜ヶ丘東京",
+      "prefecture": "東京都",
+      "city": "多摩市",
+      "official_url": "https://www.goldsgym.jp/shop/191002",
+      "source_url": "https://www.goldsgym.jp/shop/191002",
+      "slug": "golds-gym-191002",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "191002",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "サウス東京ANNEX",
+      "prefecture": "東京都",
+      "city": "大田区",
+      "official_url": "https://www.goldsgym.jp/shop/13220",
+      "source_url": "https://www.goldsgym.jp/shop/13220",
+      "slug": "golds-gym-13220",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13220",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "府中東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "府中市",
+      "official_url": "https://www.goldsgym.jp/shop/13240",
+      "source_url": "https://www.goldsgym.jp/shop/13240",
+      "slug": "golds-gym-13240",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13240",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "西葛西東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "江戸川区",
+      "official_url": "https://www.goldsgym.jp/shop/180914",
+      "source_url": "https://www.goldsgym.jp/shop/180914",
+      "slug": "golds-gym-180914",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "180914",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "イースト東京",
+      "prefecture": "東京都",
+      "city": "江東区",
+      "official_url": "https://www.goldsgym.jp/shop/13110",
+      "source_url": "https://www.goldsgym.jp/shop/13110",
+      "slug": "golds-gym-13110",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13110",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "東陽町スーパーセンター",
+      "prefecture": "東京都",
+      "city": "江東区",
+      "official_url": "https://www.goldsgym.jp/shop/71221",
+      "source_url": "https://www.goldsgym.jp/shop/71221",
+      "slug": "golds-gym-71221",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "71221",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "代々木上原東京",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/13190",
+      "source_url": "https://www.goldsgym.jp/shop/13190",
+      "slug": "golds-gym-13190",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13190",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "代々木公園PREMIUM",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/13191",
+      "source_url": "https://www.goldsgym.jp/shop/13191",
+      "slug": "golds-gym-13191",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13191",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "原宿ANNEX",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/9999",
+      "source_url": "https://www.goldsgym.jp/shop/9999",
+      "slug": "golds-gym-9999",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "9999",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "原宿東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/13150",
+      "source_url": "https://www.goldsgym.jp/shop/13150",
+      "slug": "golds-gym-13150",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13150",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "渋谷東京",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/13180",
+      "source_url": "https://www.goldsgym.jp/shop/13180",
+      "slug": "golds-gym-13180",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13180",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "笹塚東京 (OPEN 24 HOURS)",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/2222",
+      "source_url": "https://www.goldsgym.jp/shop/2222",
+      "slug": "golds-gym-2222",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "2222",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "表参道東京",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "official_url": "https://www.goldsgym.jp/shop/13160",
+      "source_url": "https://www.goldsgym.jp/shop/13160",
+      "slug": "golds-gym-13160",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13160",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "南青山東京",
+      "prefecture": "東京都",
+      "city": "港区",
+      "official_url": "https://www.goldsgym.jp/shop/13170",
+      "source_url": "https://www.goldsgym.jp/shop/13170",
+      "slug": "golds-gym-13170",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13170",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "浜松町東京",
+      "prefecture": "東京都",
+      "city": "港区",
+      "official_url": "https://www.goldsgym.jp/shop/13210",
+      "source_url": "https://www.goldsgym.jp/shop/13210",
+      "slug": "golds-gym-13210",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13210",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "町田東京",
+      "prefecture": "東京都",
+      "city": "町田市",
+      "official_url": "https://www.goldsgym.jp/shop/13250",
+      "source_url": "https://www.goldsgym.jp/shop/13250",
+      "slug": "golds-gym-13250",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13250",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "立川東京",
+      "prefecture": "東京都",
+      "city": "立川市",
+      "official_url": "https://www.goldsgym.jp/shop/20201101",
+      "source_url": "https://www.goldsgym.jp/shop/20201101",
+      "slug": "golds-gym-20201101",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "20201101",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "練馬高野台東京",
+      "prefecture": "東京都",
+      "city": "練馬区",
+      "official_url": "https://www.goldsgym.jp/shop/20220509",
+      "source_url": "https://www.goldsgym.jp/shop/20220509",
+      "slug": "golds-gym-20220509",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "20220509",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "ノース東京",
+      "prefecture": "東京都",
+      "city": "豊島区",
+      "official_url": "https://www.goldsgym.jp/shop/13120",
+      "source_url": "https://www.goldsgym.jp/shop/13120",
+      "slug": "golds-gym-13120",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13120",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "北千住東京",
+      "prefecture": "東京都",
+      "city": "足立区",
+      "official_url": "https://www.goldsgym.jp/shop/13100",
+      "source_url": "https://www.goldsgym.jp/shop/13100",
+      "slug": "golds-gym-13100",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/11"
+      ],
+      "shop_id": "13100",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "厚木神奈川 (OPEN 24 HOURS)",
+      "prefecture": "神奈川県",
+      "city": "厚木市",
+      "official_url": "https://www.goldsgym.jp/shop/14160",
+      "source_url": "https://www.goldsgym.jp/shop/14160",
+      "slug": "golds-gym-14160",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14160",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "溝の口神奈川",
+      "prefecture": "神奈川県",
+      "city": "川崎市",
+      "official_url": "https://www.goldsgym.jp/shop/14110",
+      "source_url": "https://www.goldsgym.jp/shop/14110",
+      "slug": "golds-gym-14110",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14110",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "戸塚神奈川",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://www.goldsgym.jp/shop/14130",
+      "source_url": "https://www.goldsgym.jp/shop/14130",
+      "slug": "golds-gym-14130",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14130",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "横浜上星川 ※フランチャイズ店 (OPEN 24 HOURS)",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://www.goldsgym.jp/shop/14140",
+      "source_url": "https://www.goldsgym.jp/shop/14140",
+      "slug": "golds-gym-14140",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14140",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "横浜馬車道 （フランチャイズ店） ※OPEN 24 HOURS",
+      "prefecture": "神奈川県",
+      "city": "横浜市",
+      "official_url": "https://www.goldsgym.jp/shop/20210924",
+      "source_url": "https://www.goldsgym.jp/shop/20210924",
+      "slug": "golds-gym-20210924",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "20210924",
+      "prefecture_inferred_from_city": true
+    },
+    {
+      "name": "横須賀神奈川 (OPEN 24 HOURS)",
+      "prefecture": "神奈川県",
+      "city": "横須賀市",
+      "official_url": "https://www.goldsgym.jp/shop/14150",
+      "source_url": "https://www.goldsgym.jp/shop/14150",
+      "slug": "golds-gym-14150",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14150",
+      "prefecture_inferred_from_city": false
+    },
+    {
+      "name": "湘南神奈川 (OPEN 24 HOURS)",
+      "prefecture": "神奈川県",
+      "city": "藤沢市",
+      "official_url": "https://www.goldsgym.jp/shop/14170",
+      "source_url": "https://www.goldsgym.jp/shop/14170",
+      "slug": "golds-gym-14170",
+      "location_type": "fitness_club",
+      "source_pages": [
+        "https://www.goldsgym.jp/store-finder/17"
+      ],
+      "shop_id": "14170",
+      "prefecture_inferred_from_city": false
+    }
+  ]
+}
