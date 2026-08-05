@@ -1,5 +1,5 @@
 import { weekdayLabels } from "@/lib/constants";
-import type { SearchFilters, Weekday } from "@/lib/types";
+import type { ClassSchedule, SearchFilters, Weekday } from "@/lib/types";
 
 export function cn(...values: Array<string | false | null | undefined>) {
   return values.filter(Boolean).join(" ");
@@ -22,11 +22,44 @@ export function formatDate(value?: string | null) {
     return "-";
   }
 
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "-";
+  }
+
   return new Intl.DateTimeFormat("ja-JP", {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).format(new Date(value));
+  }).format(date);
+}
+
+export function formatTime(value?: string | null) {
+  if (!value) {
+    return "-";
+  }
+
+  const match = value.match(/^(\d{1,2}):(\d{2})/);
+  return match ? `${match[1].padStart(2, "0")}:${match[2]}` : value;
+}
+
+export function getScheduleUpdatedAt(schedule: ClassSchedule) {
+  return schedule.extracted_at || schedule.updated_at || null;
+}
+
+export function isDateOlderThan(value: string | null | undefined, days: number, now = new Date()) {
+  if (!value) {
+    return false;
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return false;
+  }
+
+  return now.getTime() - date.getTime() > days * 24 * 60 * 60 * 1000;
 }
 
 export function buildSearchQuery(filters: SearchFilters) {

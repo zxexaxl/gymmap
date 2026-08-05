@@ -28,6 +28,9 @@ export const metadata: Metadata = {
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const resolvedSearchParams = await searchParams;
   const filters = normalizeSearchFilters(resolvedSearchParams);
+  const rawPage = Array.isArray(resolvedSearchParams.page) ? resolvedSearchParams.page[0] : resolvedSearchParams.page;
+  const parsedPage = Number.parseInt(rawPage ?? "1", 10);
+  const currentPage = Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1;
   const debugEnabled = resolvedSearchParams.debug === "1";
   const hasActiveFilters = Object.values(filters).some(Boolean);
   const [brands, results] = await Promise.all([getBrands(), getSearchResults(filters)]);
@@ -123,7 +126,14 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         </p>
         <SearchForm brands={brands} initialValues={filters} />
       </section>
-      <ResultsList results={results} hasActiveFilters={hasActiveFilters} query={filters.q} debugEnabled={debugEnabled} />
+      <ResultsList
+        results={results}
+        hasActiveFilters={hasActiveFilters}
+        query={filters.q}
+        debugEnabled={debugEnabled}
+        currentPage={currentPage}
+        searchParams={resolvedSearchParams}
+      />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
 import { getLocationBySlug, getLocationSlugs } from "@/lib/data";
 import { buildCanonicalPath } from "@/lib/site";
-import { formatDate, formatWeekday, getLocationAddress } from "@/lib/utils";
+import { formatDate, formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
 
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
@@ -124,7 +124,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             </dd>
           </div>
           <div>
-            <dt>最終更新日</dt>
+            <dt>店舗情報確認日</dt>
             <dd>{formatDate(location.last_verified_at)}</dd>
           </div>
         </dl>
@@ -146,7 +146,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         <ul className="plain-list">
           {schedules.map((item) => (
             <li key={item.schedule.id}>
-              {formatWeekday(item.schedule.weekday)} {item.schedule.start_time} - {item.schedule.end_time} / {item.program.name} /{" "}
+              {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} - {formatTime(item.schedule.end_time)} / {item.program.name} /{" "}
               {item.schedule.studio_name ?? "スタジオ未設定"}
             </li>
           ))}

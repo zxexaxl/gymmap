@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
-import { formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
+import { formatTime, formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
 
 type ProgramLandingPageProps = {
   params: Promise<{ slug: string }>;
@@ -97,7 +97,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
             <article key={item.schedule.id} className="result-card">
               <div className="result-card-main">
                 <p className="result-time">
-                  {formatWeekday(item.schedule.weekday)} {item.schedule.start_time} - {item.schedule.end_time}
+                  {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} - {formatTime(item.schedule.end_time)}
                 </p>
                 <h3>{item.location.name}</h3>
                 <p className="muted">{item.brand.name}</p>

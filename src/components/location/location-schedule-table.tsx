@@ -1,5 +1,5 @@
 import type { SearchResult, Weekday } from "@/lib/types";
-import { formatWeekday } from "@/lib/utils";
+import { formatTime, formatWeekday } from "@/lib/utils";
 
 const weekdayOrder: Weekday[] = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
@@ -38,8 +38,8 @@ export function LocationScheduleTable({ schedules }: LocationScheduleTableProps)
               <tbody>
                 {group.items.map((item) => (
                   <tr key={item.schedule.id}>
-                    <td>{item.schedule.start_time}</td>
-                    <td>{item.schedule.end_time}</td>
+                    <td>{formatTime(item.schedule.start_time)}</td>
+                    <td>{formatTime(item.schedule.end_time)}</td>
                     <td>{item.program.name}</td>
                     <td>{item.schedule.duration_minutes ? `${item.schedule.duration_minutes}分` : "-"}</td>
                     <td>{item.schedule.studio_name ?? "-"}</td>

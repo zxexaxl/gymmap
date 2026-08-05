@@ -233,6 +233,23 @@ p {
   gap: 14px;
 }
 
+.result-range {
+  margin: 8px 0 0;
+  color: var(--accent-dark);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.freshness-notice {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #d8a73d;
+  border-radius: 14px;
+  background: #fff7dd;
+  color: #684b0c;
+  line-height: 1.7;
+}
+
 .result-card {
   align-items: flex-start;
   border: 1px solid var(--line);
@@ -261,6 +278,65 @@ p {
   display: grid;
   gap: 10px;
   margin: 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pagination-page-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-link {
+  display: inline-flex;
+  min-width: 40px;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  font-weight: 700;
+}
+
+.pagination-link:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.pagination-link.is-current {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.pagination-link.is-disabled {
+  color: #999184;
+  background: transparent;
+}
+
+.pagination-direction {
+  min-width: 72px;
+  padding: 0 14px;
+}
+
+.pagination-ellipsis {
+  padding: 0 2px;
+  color: var(--muted);
 }
 
 .result-meta div,
@@ -608,6 +684,24 @@ p {
 
   button {
     width: 100%;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination-pages {
+    gap: 4px;
+  }
+
+  .pagination-link {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .pagination-direction {
+    min-width: 60px;
+    padding: 0 10px;
   }
 
   .map-canvas {
