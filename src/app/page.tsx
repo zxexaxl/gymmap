@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
-import { getBrands, getLocations, getProgramLandingPages, getSearchResults } from "@/lib/data";
+import { getBrands, getLocations, getPopularPrograms, getSearchResults } from "@/lib/data";
 import { buildProgramPath } from "@/lib/site";
 
 export const revalidate = 900;
@@ -20,7 +20,7 @@ export default async function HomePage() {
       brand: "",
       area: "",
     }),
-    getProgramLandingPages(8),
+    getPopularPrograms(8),
   ]);
 
   return (
@@ -53,9 +53,9 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="link-row">
-            {featuredPrograms.map((page) => (
-              <Link key={page.program.slug} href={buildProgramPath(page.program.slug)}>
-                {page.program.name}
+            {featuredPrograms.map((program) => (
+              <Link key={program.slug} href={buildProgramPath(program.slug)}>
+                {program.name}
               </Link>
             ))}
           </div>

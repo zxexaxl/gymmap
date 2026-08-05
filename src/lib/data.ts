@@ -1,4 +1,5 @@
 import { cache } from "react";
+import { unstable_cache } from "next/cache";
 
 import { programMaster } from "@/lib/program-master";
 import { normalizeSearchKeyword, scoreProgramQueryMatch } from "@/lib/search-query";
@@ -50,6 +51,7 @@ const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
 
 const trackedSearchMarkers = ["oimachi", "大井町", "bodypump", "bodycombat"];
 const staticProgramLandingPageLimit = 48;
+const sharedDataRevalidateSeconds = 60 * 60;
 const seoProgramNameSet = new Set(programMaster.map((entry) => entry.canonicalProgramName));
 const emptySearchFilters: SearchFilters = {
   q: "",
@@ -304,40 +306,134 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
 
 const getAllSearchResultsCached = cache(async () => getSearchResults(emptySearchFilters));
 
+async function fetchBrands(): Promise<GymBrand[]> {
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase.from("gym_brands").select("*").order("name");
+
+  if (error) {
+    throw error;
+  }
+
+  return data ?? [];
+}
+
+const getBrandsFromDataCache = unstable_cache(fetchBrands, ["gym-brands-v1"], {
+  revalidate: sharedDataRevalidateSeconds,
+  tags: ["gym-brands"],
+});
+
 export async function getBrands(): Promise<GymBrand[]> {
   if (!hasSupabaseEnv()) {
     return [];
   }
 
-  const supabase = getSupabaseClient();
-  const { data, error } = await supabase.from("gym_brands").select("*").order("name");
-
-  if (error || !data) {
+  try {
+    return await getBrandsFromDataCache();
+  } catch (error) {
+    console.error("Failed to load brands from Supabase:", error instanceof Error ? error.message : String(error));
     return [];
   }
-
-  return data;
 }
 
-export async function getLocations(): Promise<GymLocation[]> {
-  if (!hasSupabaseEnv()) {
-    return [];
-  }
-
+async function fetchLocations(): Promise<GymLocation[]> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("gym_locations")
     .select("*, gym_brands(*)")
     .order("name");
 
-  if (error || !data) {
-    return [];
+  if (error) {
+    throw error;
   }
 
-  return (data as Array<GymLocation & { gym_brands: GymBrand }>).map((row) => ({
+  return ((data as Array<GymLocation & { gym_brands: GymBrand }>) ?? []).map((row) => ({
     ...row,
     brand: row.gym_brands,
   }));
+}
+
+const getLocationsFromDataCache = unstable_cache(fetchLocations, ["gym-locations-v1"], {
+  revalidate: sharedDataRevalidateSeconds,
+  tags: ["gym-locations", "gym-brands"],
+});
+
+export async function getLocations(): Promise<GymLocation[]> {
+  if (!hasSupabaseEnv()) {
+    return [];
+  }
+
+  try {
+    return await getLocationsFromDataCache();
+  } catch (error) {
+    console.error("Failed to load locations from Supabase:", error instanceof Error ? error.message : String(error));
+    return [];
+  }
+}
+
+async function fetchPopularPrograms(): Promise<Program[]> {
+  const supabase = getSupabaseClient();
+  const pageSize = 1000;
+  const scheduleCounts = new Map<string, number>();
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("class_schedules")
+      .select("program_id")
+      .order("id", { ascending: true })
+      .range(from, from + pageSize - 1);
+
+    if (error) {
+      throw error;
+    }
+
+    const batch = data ?? [];
+
+    batch.forEach(({ program_id }) => {
+      scheduleCounts.set(program_id, (scheduleCounts.get(program_id) ?? 0) + 1);
+    });
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    from += pageSize;
+  }
+
+  const { data: programs, error: programsError } = await supabase.from("programs").select("*");
+
+  if (programsError) {
+    throw programsError;
+  }
+
+  return ((programs as Program[]) ?? [])
+    .filter((program) => seoProgramNameSet.has(program.name) && scheduleCounts.has(program.id))
+    .sort((left, right) => {
+      const countDiff = (scheduleCounts.get(right.id) ?? 0) - (scheduleCounts.get(left.id) ?? 0);
+      return countDiff || left.name.localeCompare(right.name, "ja");
+    });
+}
+
+const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v1"], {
+  revalidate: sharedDataRevalidateSeconds,
+  tags: ["popular-programs", "class-schedules", "programs"],
+});
+
+export async function getPopularPrograms(limit = 8): Promise<Program[]> {
+  if (!hasSupabaseEnv()) {
+    return [];
+  }
+
+  try {
+    const programs = await getPopularProgramsFromDataCache();
+    return programs.slice(0, Math.max(0, limit));
+  } catch (error) {
+    console.error(
+      "Failed to load popular programs from Supabase:",
+      error instanceof Error ? error.message : String(error),
+    );
+    return [];
+  }
 }
 
 export async function getLocationSlugs(): Promise<string[]> {
