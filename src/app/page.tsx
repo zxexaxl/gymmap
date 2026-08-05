@@ -3,23 +3,16 @@ import Link from "next/link";
 
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
-import { getBrands, getLocations, getPopularPrograms, getSearchResults } from "@/lib/data";
+import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
 import { buildProgramPath } from "@/lib/site";
 
 export const revalidate = 900;
 
 export default async function HomePage() {
-  const [brands, locations, searchResults, featuredPrograms] = await Promise.all([
+  const [brands, locations, lessonIndex, featuredPrograms] = await Promise.all([
     getBrands(),
     getLocations(),
-    getSearchResults({
-      q: "",
-      weekday: "",
-      timeRange: "",
-      durationRange: "",
-      brand: "",
-      area: "",
-    }),
+    getMapLessonSearchIndex(),
     getPopularPrograms(8),
   ]);
 
@@ -62,7 +55,7 @@ export default async function HomePage() {
         </section>
       ) : null}
 
-      <LocationMapSection locations={locations} searchResults={searchResults} />
+      <LocationMapSection locations={locations} lessonIndex={lessonIndex} />
     </div>
   );
 }

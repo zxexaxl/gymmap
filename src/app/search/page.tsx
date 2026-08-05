@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
 import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
-import { getBrands, getSearchResults } from "@/lib/data";
+import { getBrands, getSearchResultPage } from "@/lib/data";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import { siteDescription } from "@/lib/site";
 import { normalizeSearchFilters } from "@/lib/utils";
@@ -33,7 +33,8 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const currentPage = Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1;
   const debugEnabled = resolvedSearchParams.debug === "1";
   const hasActiveFilters = Object.values(filters).some(Boolean);
-  const [brands, results] = await Promise.all([getBrands(), getSearchResults(filters)]);
+  const [brands, resultPage] = await Promise.all([getBrands(), getSearchResultPage(filters, currentPage)]);
+  const { results } = resultPage;
   const weekdayLabel = weekdayOptions.find((option) => option.value === filters.weekday)?.label ?? "指定なし";
   const timeRangeLabel = timeRangeOptions.find((option) => option.value === filters.timeRange)?.label ?? "指定なし";
   const durationRangeLabel = durationRangeOptions.find((option) => option.value === filters.durationRange)?.label ?? "指定なし";
@@ -66,7 +67,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         {
           stage: "ui_render_input",
           filters,
-          resultCount: results.length,
+          resultCount: resultPage.totalResults,
           trackedRecords: results
             .filter(
               (item) =>
@@ -128,10 +129,12 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       </section>
       <ResultsList
         results={results}
+        totalResults={resultPage.totalResults}
+        latestScheduleUpdate={resultPage.latestScheduleUpdate}
         hasActiveFilters={hasActiveFilters}
         query={filters.q}
         debugEnabled={debugEnabled}
-        currentPage={currentPage}
+        currentPage={resultPage.currentPage}
         searchParams={resolvedSearchParams}
       />
     </div>

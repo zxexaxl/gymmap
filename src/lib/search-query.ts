@@ -1,5 +1,5 @@
 import { getProgramBrandAliases, getProgramSearchAliases } from "@/lib/program-master";
-import type { SearchResult } from "@/lib/types";
+import type { MapLessonSearchItem, SearchResult } from "@/lib/types";
 
 export type ProgramQueryHit = {
   field: "raw_program_name" | "canonical_program_name" | "program_brand" | "searchAliases" | "brandAliases";
@@ -105,12 +105,24 @@ export function getProgramQueryDebug(item: SearchResult, query: string): Program
 }
 
 export function scoreProgramQueryMatch(item: SearchResult, query: string) {
-  const hits = getProgramQueryDebug(item, query);
-  const rawScore = hits.find((hit) => hit.field === "raw_program_name")?.score ?? 0;
-  const canonicalScore = hits.find((hit) => hit.field === "canonical_program_name")?.score ?? 0;
-  const brandScore = hits.find((hit) => hit.field === "program_brand")?.score ?? 0;
-  const aliasScore = Math.max(...hits.filter((hit) => hit.field === "searchAliases").map((hit) => hit.score), 0);
-  const brandAliasScore = Math.max(...hits.filter((hit) => hit.field === "brandAliases").map((hit) => hit.score), 0);
+  return scoreProgramTextQueryMatch(
+    {
+      rawProgramName: item.schedule.raw_program_name,
+      canonicalProgramName: item.schedule.canonical_program_name ?? null,
+      programBrand: item.schedule.program_brand ?? null,
+    },
+    query,
+  );
+}
+
+export function scoreProgramTextQueryMatch(item: MapLessonSearchItem, query: string) {
+  const aliases = getProgramSearchAliases(item.canonicalProgramName);
+  const brandAliases = getProgramBrandAliases(item.programBrand);
+  const rawScore = getMatchScore(query, item.rawProgramName) * 100;
+  const canonicalScore = getMatchScore(query, item.canonicalProgramName) * 90;
+  const brandScore = getMatchScore(query, item.programBrand) * 85;
+  const aliasScore = Math.max(...aliases.map((alias) => getMatchScore(query, alias) * 80), 0);
+  const brandAliasScore = Math.max(...brandAliases.map((alias) => getMatchScore(query, alias) * 82), 0);
 
   if (rawScore > 0) {
     return rawScore;

@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
-import { scoreProgramQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
-import type { GymLocation, SearchResult } from "@/lib/types";
+import { scoreProgramTextQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
+import type { GymLocation, MapLessonSearchItem, MapLocationLessonIndex } from "@/lib/types";
 import { buildSearchQuery, getLocationAddress } from "@/lib/utils";
 
 const LeafletGymMap = dynamic(
@@ -27,7 +27,7 @@ const AppleGymMap = dynamic(
 
 type LocationMapSectionProps = {
   locations: GymLocation[];
-  searchResults: SearchResult[];
+  lessonIndex: MapLocationLessonIndex[];
 };
 
 type Coordinates = {
@@ -69,7 +69,7 @@ function formatDistanceLabel(distanceKm: number | null) {
   return `約${distanceKm.toFixed(1)}km`;
 }
 
-export function LocationMapSection({ locations, searchResults }: LocationMapSectionProps) {
+export function LocationMapSection({ locations, lessonIndex }: LocationMapSectionProps) {
   const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
   const [programQuery, setProgramQuery] = useState("");
@@ -145,17 +145,21 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
   }, []);
 
   const normalizedQuery = normalizeSearchKeyword(programQuery);
-  const matchedResults = normalizedQuery
-    ? searchResults.filter((result) => scoreProgramQueryMatch(result, normalizedQuery) > 0)
-    : searchResults;
-  const matchedLocationIds = new Set(matchedResults.map((result) => result.location.id));
-  const matchesByLocationId = new Map<string, SearchResult[]>();
+  const matchesByLocationId = new Map<string, MapLessonSearchItem[]>();
+  let matchedLessonCount = 0;
 
-  matchedResults.forEach((result) => {
-    const matches = matchesByLocationId.get(result.location.id) ?? [];
-    matches.push(result);
-    matchesByLocationId.set(result.location.id, matches);
+  lessonIndex.forEach((locationEntry) => {
+    const matches = normalizedQuery
+      ? locationEntry.lessons.filter((lesson) => scoreProgramTextQueryMatch(lesson, normalizedQuery) > 0)
+      : locationEntry.lessons;
+
+    if (matches.length) {
+      matchesByLocationId.set(locationEntry.locationId, matches);
+      matchedLessonCount += matches.length;
+    }
   });
+
+  const matchedLocationIds = new Set(matchesByLocationId.keys());
   const fallbackCenter = currentPosition ?? TOKYO_CENTER;
   const filteredLocations = locations
     .filter((location) => location.latitude && location.longitude)
@@ -202,7 +206,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
       return null;
     }
 
-    const uniqueNames = Array.from(new Set(matches.map((item) => item.schedule.raw_program_name)));
+    const uniqueNames = Array.from(new Set(matches.map((item) => item.rawProgramName)));
     const preview = uniqueNames.slice(0, 3);
     const restCount = uniqueNames.length - preview.length;
 
@@ -246,7 +250,7 @@ export function LocationMapSection({ locations, searchResults }: LocationMapSect
             ? "現在地を取得中"
             : "現在地は未取得です";
   const resultSummary = normalizedQuery
-    ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedResults.length}レッスンを表示中`
+    ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedLessonCount}レッスンを表示中`
     : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
   const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
 

@@ -18,6 +18,8 @@ const staleScheduleDays = 45;
 
 type ResultsListProps = {
   results: SearchResult[];
+  totalResults?: number;
+  latestScheduleUpdate?: string | null;
   hasActiveFilters?: boolean;
   query?: string;
   debugEnabled?: boolean;
@@ -49,13 +51,15 @@ function buildPageHref(searchParams: ResultsListProps["searchParams"], page: num
 
 export function ResultsList({
   results,
+  totalResults = results.length,
+  latestScheduleUpdate,
   hasActiveFilters = false,
   query = "",
   debugEnabled = false,
   currentPage = 1,
   searchParams,
 }: ResultsListProps) {
-  if (!results.length) {
+  if (!totalResults) {
     return (
       <section className="panel empty-state">
         <div className="section-heading">
@@ -73,14 +77,10 @@ export function ResultsList({
   }
 
   const normalizedQuery = normalizeSearchKeyword(query);
-  const totalPages = Math.ceil(results.length / resultsPerPage);
+  const totalPages = Math.ceil(totalResults / resultsPerPage);
   const safeCurrentPage = Math.min(Math.max(currentPage, 1), totalPages);
   const firstResultIndex = (safeCurrentPage - 1) * resultsPerPage;
-  const visibleResults = results.slice(firstResultIndex, firstResultIndex + resultsPerPage);
-  const latestScheduleUpdate = results
-    .map((item) => getScheduleUpdatedAt(item.schedule))
-    .filter((value): value is string => Boolean(value))
-    .sort((left, right) => new Date(right).getTime() - new Date(left).getTime())[0];
+  const visibleResults = results;
   const hasStaleSchedules = isDateOlderThan(latestScheduleUpdate, staleScheduleDays);
   const pageCandidates = [1, safeCurrentPage - 1, safeCurrentPage, safeCurrentPage + 1, totalPages]
     .filter((page) => page >= 1 && page <= totalPages)
@@ -91,12 +91,12 @@ export function ResultsList({
     <section id="search-results" className="panel page-anchor-section">
       <div className="section-heading">
         <div>
-          <h2>検索結果 {results.length}件</h2>
+          <h2>検索結果 {totalResults}件</h2>
           <p className="muted">
             {hasActiveFilters ? "条件に合うクラスを開始時刻順で表示しています。" : "登録されているクラスを開始時刻順で表示しています。"}
           </p>
           <p className="result-range">
-            {firstResultIndex + 1}〜{Math.min(firstResultIndex + resultsPerPage, results.length)}件を表示
+            {firstResultIndex + 1}〜{Math.min(firstResultIndex + visibleResults.length, totalResults)}件を表示
           </p>
         </div>
       </div>

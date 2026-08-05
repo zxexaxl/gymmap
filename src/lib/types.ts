@@ -153,6 +153,25 @@ export type SearchResult = {
   program: Program;
 };
 
+export type SearchResultPage = {
+  results: SearchResult[];
+  totalResults: number;
+  currentPage: number;
+  pageSize: number;
+  latestScheduleUpdate: string | null;
+};
+
+export type MapLessonSearchItem = {
+  rawProgramName: string;
+  canonicalProgramName: string | null;
+  programBrand: string | null;
+};
+
+export type MapLocationLessonIndex = {
+  locationId: string;
+  lessons: MapLessonSearchItem[];
+};
+
 export type LocationDetail = {
   location: GymLocation;
   brand: GymBrand;
