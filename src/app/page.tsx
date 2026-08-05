@@ -6,7 +6,7 @@ import { SearchForm } from "@/components/search/search-form";
 import { getBrands, getLocations, getProgramLandingPages, getSearchResults } from "@/lib/data";
 import { buildProgramPath } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 900;
 
 export default async function HomePage() {
   const [brands, locations, searchResults, featuredPrograms] = await Promise.all([
