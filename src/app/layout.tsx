@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Header } from "@/components/layout/header";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
@@ -66,6 +67,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             data-cf-beacon={JSON.stringify({ token: cloudflareWebAnalyticsToken })}
           />
         ) : null}
+
+        <SpeedInsights />
       </body>
     </html>
   );
