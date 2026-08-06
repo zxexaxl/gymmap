@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
+import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd } from "@/lib/structured-data";
 import { formatTime, formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
 
 type ProgramLandingPageProps = {
@@ -60,9 +62,25 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
 
   const featuredAreas = page.areaNames.slice(0, 8);
   const featuredSchedules = page.schedules.slice(0, 12);
+  const pagePath = buildProgramPath(page.program.slug);
+  const pageDescription = `${page.program.name}を受けられるジム・フィットネスクラブをまとめた一覧ページです。${page.locationCount}店舗・${page.schedules.length}件のレッスンから比較できます。`;
+  const collectionJsonLd = buildCollectionPageJsonLd({
+    name: `${page.program.name}が受けられるジム一覧`,
+    description: pageDescription,
+    path: pagePath,
+    items: featuredSchedules.map((item) => ({
+      name: item.location.name,
+      path: `/locations/${item.location.slug}`,
+    })),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "GymMap", path: "/" },
+    { name: page.program.name, path: pagePath },
+  ]);
 
   return (
     <div className="page-stack">
+      <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">プログラム別ガイド</p>
         <h1>{page.program.name}が受けられるジム一覧</h1>

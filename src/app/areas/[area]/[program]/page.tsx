@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { getAreaProgramLandingByParams } from "@/lib/data";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
+import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd } from "@/lib/structured-data";
 import { formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
 
 type AreaProgramPageProps = {
@@ -59,8 +61,27 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
     notFound();
   }
 
+  const programPath = buildProgramPath(page.program.slug);
+  const pagePath = buildAreaProgramPath(page.areaName, page.program.slug);
+  const pageDescription = `${page.areaName}で${page.program.name}が受けられるジム・フィットネスクラブの一覧です。${page.locationCount}店舗・${page.schedules.length}件のレッスンを比較できます。`;
+  const collectionJsonLd = buildCollectionPageJsonLd({
+    name: `${page.areaName}で${page.program.name}が受けられるジム一覧`,
+    description: pageDescription,
+    path: pagePath,
+    items: page.schedules.map((item) => ({
+      name: item.location.name,
+      path: `/locations/${item.location.slug}`,
+    })),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "GymMap", path: "/" },
+    { name: page.program.name, path: programPath },
+    { name: page.areaName, path: pagePath },
+  ]);
+
   return (
     <div className="page-stack">
+      <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">エリア別ガイド</p>
         <h1>{page.areaName}で{page.program.name}が受けられるジム一覧</h1>
@@ -70,7 +91,7 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
         </p>
         <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
         <div className="link-row">
-          <Link href={buildProgramPath(page.program.slug)}>{page.program.name}の全国一覧</Link>
+          <Link href={programPath}>{page.program.name}の全国一覧</Link>
           <Link href={`/search?q=${encodeURIComponent(page.program.name)}&area=${encodeURIComponent(page.areaName)}`}>この条件で検索する</Link>
         </div>
       </section>

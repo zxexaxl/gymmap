@@ -3,8 +3,9 @@ import Link from "next/link";
 
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
-import { buildProgramPath } from "@/lib/site";
+import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
 export const revalidate = 900;
 
@@ -15,9 +16,20 @@ export default async function HomePage() {
     getMapLessonSearchIndex(),
     getPopularPrograms(8),
   ]);
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${buildCanonicalPath("/")}#website`,
+    url: buildCanonicalPath("/"),
+    name: siteName,
+    alternateName: "ジムマップ",
+    description: siteDescription,
+    inLanguage: "ja-JP",
+  };
 
   return (
     <div className="page-stack">
+      <JsonLd data={websiteJsonLd} />
       <section id="search-section" className="hero panel page-anchor-section">
         <div className="hero-copy">
           <h1>受けたいレッスンを探す</h1>

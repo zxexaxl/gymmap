@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getLocationBySlug } from "@/lib/data";
 import { buildCanonicalPath } from "@/lib/site";
+import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { formatDate, formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
 
 type LocationPageProps = {
@@ -73,6 +75,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationJsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
+    "@id": `${buildCanonicalPath(`/locations/${location.slug}`)}#health-club`,
     name: location.name,
     description: `${brand.name} ${location.name}のスタジオレッスン情報ページ`,
     url: buildCanonicalPath(`/locations/${location.slug}`),
@@ -88,21 +91,27 @@ export default async function LocationPage({ params }: LocationPageProps) {
         }
       : undefined,
     geo:
-      location.latitude && location.longitude
+      location.latitude !== null && location.longitude !== null
         ? {
             "@type": "GeoCoordinates",
             latitude: location.latitude,
             longitude: location.longitude,
           }
         : undefined,
+    parentOrganization: {
+      "@type": "Organization",
+      name: brand.name,
+      url: brand.official_url || undefined,
+    },
   };
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "GymMap", path: "/" },
+    { name: location.name, path: `/locations/${location.slug}` },
+  ]);
 
   return (
     <div className="page-stack">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationJsonLd) }}
-      />
+      <JsonLd data={[locationJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">{brand.name}</p>
         <h1>{location.name}</h1>
