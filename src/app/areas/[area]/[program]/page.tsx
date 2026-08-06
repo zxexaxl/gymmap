@@ -10,6 +10,10 @@ type AreaProgramPageProps = {
   params: Promise<{ area: string; program: string }>;
 };
 
+export function generateStaticParams() {
+  return [];
+}
+
 export const dynamicParams = true;
 export const revalidate = 86400;
 

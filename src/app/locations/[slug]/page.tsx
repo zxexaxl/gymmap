@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
-import { getLocationBySlug, getLocationSlugs } from "@/lib/data";
+import { getLocationBySlug } from "@/lib/data";
 import { buildCanonicalPath } from "@/lib/site";
 import { formatDate, formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
 
@@ -11,11 +11,12 @@ type LocationPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const slugs = await getLocationSlugs();
-
-  return slugs.map((slug) => ({ slug }));
+export function generateStaticParams() {
+  return [];
 }
+
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
   const { slug } = await params;

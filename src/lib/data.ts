@@ -64,7 +64,6 @@ const emptySearchFilters: SearchFilters = {
   brand: "",
   area: "",
 };
-
 function isTrackedSearch(filters: SearchFilters) {
   const value = [filters.q, filters.area, filters.brand].join(" ").toLowerCase();
   return trackedSearchMarkers.some((marker) => value.includes(marker.toLowerCase()));
@@ -291,7 +290,10 @@ type CachedLocationLessonIndex = {
   x: CachedLessonSearchItem[];
 };
 
-type ScheduleQueryVariant = { kind: "all" } | { kind: "ids"; values: string[] };
+type ScheduleQueryVariant =
+  | { kind: "all" }
+  | { kind: "ids"; values: string[] }
+  | { kind: "programId"; value: string };
 
 async function getScheduleQueryVariants(filters?: SearchFilters): Promise<ScheduleQueryVariant[]> {
   const query = normalizeSearchKeyword(filters?.q ?? "");
@@ -370,6 +372,8 @@ async function fetchJoinedSchedulesForVariant(
 
     if (variant.kind === "ids") {
       query = query.in("id", variant.values);
+    } else if (variant.kind === "programId") {
+      query = query.eq("program_id", variant.value);
     }
 
     const { data, error } = await query.order("start_time", { ascending: true }).range(from, to);
@@ -541,8 +545,6 @@ export async function getSearchResultPage(
     return { results: [], totalResults: 0, currentPage: 1, pageSize, latestScheduleUpdate: null };
   }
 }
-
-const getAllSearchResultsCached = cache(async () => getSearchResults(emptySearchFilters));
 
 type MapLessonRow = {
   id: string;
@@ -800,109 +802,136 @@ export async function getLocationSlugs(): Promise<string[]> {
   return data.map((row) => row.slug).filter((slug): slug is string => Boolean(slug));
 }
 
-export async function getLocationBySlug(slug: string): Promise<LocationDetail | null> {
-  const results = await getAllSearchResultsCached();
+export const getLocationBySlug = cache(async (slug: string): Promise<LocationDetail | null> => {
+  const locations = await getLocations();
+  const location = locations.find((item) => item.slug === slug);
 
-  const schedules = results.filter((item) => item.location.slug === slug);
-  const first = schedules[0];
-
-  if (!first) {
+  if (!location?.brand) {
     return null;
   }
 
-  return {
-    location: first.location,
-    brand: first.brand,
-    schedules: schedules.sort((a, b) => {
-      if (a.schedule.weekday === b.schedule.weekday) {
-        return a.schedule.start_time.localeCompare(b.schedule.start_time);
+  try {
+    const rows = await fetchJoinedSchedulesForVariant(undefined, [location.id], { kind: "all" });
+    const schedules = rows.map(mapJoinedSchedule).sort((left, right) => {
+      if (left.schedule.weekday === right.schedule.weekday) {
+        return left.schedule.start_time.localeCompare(right.schedule.start_time);
       }
 
-      return a.schedule.weekday.localeCompare(b.schedule.weekday);
-    }),
-  };
-}
+      return left.schedule.weekday.localeCompare(right.schedule.weekday);
+    });
 
-export async function getProgramLandingSlugs(limit = staticProgramLandingPageLimit): Promise<string[]> {
-  const pages = await getProgramLandingPages(limit);
-  return pages.map((page) => page.program.slug);
-}
-
-export async function getProgramLandingPages(limit?: number): Promise<ProgramLandingPage[]> {
-  const results = await getAllSearchResultsCached();
-  const pagesByProgramSlug = new Map<string, ProgramLandingPage>();
-
-  results.forEach((item) => {
-    if (!seoProgramNameSet.has(item.program.name)) {
-      return;
+    if (!schedules.length) {
+      return null;
     }
 
-    const existing = pagesByProgramSlug.get(item.program.slug);
-
-    if (!existing) {
-      pagesByProgramSlug.set(item.program.slug, {
-        program: item.program,
-        schedules: [item],
-        locationCount: 1,
-        areaNames: Array.from(new Set([getAreaName(item.location.prefecture, item.location.city)].filter(Boolean))),
-        brandNames: [item.brand.name],
-      });
-      return;
-    }
-
-    existing.schedules.push(item);
-    existing.locationCount = new Set(existing.schedules.map((entry) => entry.location.id)).size;
-    existing.areaNames = Array.from(
-      new Set([...existing.areaNames, getAreaName(item.location.prefecture, item.location.city)].filter(Boolean)),
+    return { location, brand: location.brand, schedules };
+  } catch (error) {
+    console.error(
+      `Failed to load schedules for location ${slug}:`,
+      error instanceof Error ? error.message : String(error),
     );
-    existing.brandNames = Array.from(new Set([...existing.brandNames, item.brand.name]));
-  });
+    return null;
+  }
+});
 
-  const pages = Array.from(pagesByProgramSlug.values()).sort((left, right) => right.schedules.length - left.schedules.length);
-
-  return typeof limit === "number" ? pages.slice(0, limit) : pages;
-}
-
-export async function getProgramLandingBySlug(slug: string): Promise<ProgramLandingPage | null> {
-  const pages = await getProgramLandingPages();
+async function resolveLandingProgram(slug: string): Promise<Program | null> {
   const normalizedSlug = normalizeLandingSlug(slug);
+  const programs = await getPopularPrograms(Number.MAX_SAFE_INTEGER);
 
   return (
-    pages.find(
-      (page) =>
-        page.program.slug === slug ||
-        normalizeLandingSlug(page.program.slug) === normalizedSlug ||
-        normalizeLandingSlug(page.program.name) === normalizedSlug,
+    programs.find(
+      (program) =>
+        normalizeLandingSlug(program.slug) === normalizedSlug ||
+        normalizeLandingSlug(program.name) === normalizedSlug,
     ) ?? null
   );
 }
 
-export async function getAreaProgramLandingByParams(area: string, programSlug: string): Promise<AreaProgramLandingPage | null> {
-  const results = await getAllSearchResultsCached();
-  const normalizedSlug = normalizeLandingSlug(programSlug);
-  const schedules = results.filter((item) => {
-    const areaName = getAreaName(item.location.prefecture, item.location.city);
-    return (
-      areaName === area &&
-      seoProgramNameSet.has(item.program.name) &&
-      (item.program.slug === programSlug ||
-        normalizeLandingSlug(item.program.slug) === normalizedSlug ||
-        normalizeLandingSlug(item.program.name) === normalizedSlug)
-    );
-  });
+export async function getProgramLandingSlugs(limit = staticProgramLandingPageLimit): Promise<string[]> {
+  const programs = await getPopularPrograms(limit);
+  return programs.map((program) => program.slug);
+}
 
-  if (!schedules.length) {
+export const getProgramLandingBySlug = cache(async (slug: string): Promise<ProgramLandingPage | null> => {
+  const program = await resolveLandingProgram(slug);
+
+  if (!program || !seoProgramNameSet.has(program.name)) {
     return null;
   }
 
-  return {
-    areaName: area,
-    program: schedules[0].program,
-    schedules,
-    locationCount: new Set(schedules.map((item) => item.location.id)).size,
-    brandNames: Array.from(new Set(schedules.map((item) => item.brand.name))),
-  };
-}
+  try {
+    const rows = await fetchJoinedSchedulesForVariant(undefined, null, {
+      kind: "programId",
+      value: program.id,
+    });
+    const schedules = filterResults(rows.map(mapJoinedSchedule), emptySearchFilters);
+
+    if (!schedules.length) {
+      return null;
+    }
+
+    return {
+      program,
+      schedules,
+      locationCount: new Set(schedules.map((item) => item.location.id)).size,
+      areaNames: Array.from(
+        new Set(schedules.map((item) => getAreaName(item.location.prefecture, item.location.city)).filter(Boolean)),
+      ),
+      brandNames: Array.from(new Set(schedules.map((item) => item.brand.name))),
+    };
+  } catch (error) {
+    console.error(
+      `Failed to load schedules for program ${slug}:`,
+      error instanceof Error ? error.message : String(error),
+    );
+    return null;
+  }
+});
+
+export const getAreaProgramLandingByParams = cache(
+  async (area: string, programSlug: string): Promise<AreaProgramLandingPage | null> => {
+    const decodedArea = decodeURIComponent(area);
+    const [program, locations] = await Promise.all([resolveLandingProgram(programSlug), getLocations()]);
+
+    if (!program || !seoProgramNameSet.has(program.name)) {
+      return null;
+    }
+
+    const locationIds = locations
+      .filter((location) => getAreaName(location.prefecture, location.city) === decodedArea)
+      .map((location) => location.id);
+
+    if (!locationIds.length) {
+      return null;
+    }
+
+    try {
+      const rows = await fetchJoinedSchedulesForVariant(undefined, locationIds, {
+        kind: "programId",
+        value: program.id,
+      });
+      const schedules = filterResults(rows.map(mapJoinedSchedule), emptySearchFilters);
+
+      if (!schedules.length) {
+        return null;
+      }
+
+      return {
+        areaName: decodedArea,
+        program,
+        schedules,
+        locationCount: new Set(schedules.map((item) => item.location.id)).size,
+        brandNames: Array.from(new Set(schedules.map((item) => item.brand.name))),
+      };
+    } catch (error) {
+      console.error(
+        `Failed to load schedules for ${decodedArea}/${programSlug}:`,
+        error instanceof Error ? error.message : String(error),
+      );
+      return null;
+    }
+  },
+);
 
 async function fetchTable<T>(table: string): Promise<T[]> {
   if (!hasSupabaseEnv()) {

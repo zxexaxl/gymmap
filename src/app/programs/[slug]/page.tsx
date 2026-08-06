@@ -11,7 +11,7 @@ type ProgramLandingPageProps = {
 };
 
 export async function generateStaticParams() {
-  const slugs = await getProgramLandingSlugs();
+  const slugs = await getProgramLandingSlugs(12);
   return slugs.map((slug) => ({ slug }));
 }
 
