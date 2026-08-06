@@ -182,6 +182,7 @@ async function main() {
     join(publicDir, "sitemap.xml"),
     buildSitemapIndex([
       `${siteUrl}/sitemap-core.xml`,
+      `${siteUrl}/sitemap-locations.xml`,
       `${siteUrl}/sitemap-programs.xml`,
     ]),
     "utf8",
