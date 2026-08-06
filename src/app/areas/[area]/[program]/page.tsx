@@ -10,12 +10,10 @@ type AreaProgramPageProps = {
   params: Promise<{ area: string; program: string }>;
 };
 
-export function generateStaticParams() {
-  return [];
-}
-
-export const dynamicParams = true;
-export const revalidate = 86400;
+// Vercel rejects Next.js cache-tag headers containing decoded Japanese route
+// segments, so area pages render dynamically instead of using full-route ISR.
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function generateMetadata({ params }: AreaProgramPageProps): Promise<Metadata> {
   const { area, program } = await params;

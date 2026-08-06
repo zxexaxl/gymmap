@@ -847,6 +847,28 @@ async function resolveLandingProgram(slug: string): Promise<Program | null> {
   );
 }
 
+async function resolveLandingProgramWithoutDataCache(slug: string): Promise<Program | null> {
+  if (!hasSupabaseEnv()) {
+    return null;
+  }
+
+  const normalizedSlug = normalizeLandingSlug(slug);
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase.from("programs").select("*");
+
+  if (error) {
+    throw error;
+  }
+
+  return (
+    ((data as Program[]) ?? []).find(
+      (program) =>
+        normalizeLandingSlug(program.slug) === normalizedSlug ||
+        normalizeLandingSlug(program.name) === normalizedSlug,
+    ) ?? null
+  );
+}
+
 export async function getProgramLandingSlugs(limit = staticProgramLandingPageLimit): Promise<string[]> {
   const programs = await getPopularPrograms(limit);
   return programs.map((program) => program.slug);
@@ -891,21 +913,28 @@ export const getProgramLandingBySlug = cache(async (slug: string): Promise<Progr
 export const getAreaProgramLandingByParams = cache(
   async (area: string, programSlug: string): Promise<AreaProgramLandingPage | null> => {
     const decodedArea = decodeURIComponent(area);
-    const [program, locations] = await Promise.all([resolveLandingProgram(programSlug), getLocations()]);
-
-    if (!program || !seoProgramNameSet.has(program.name)) {
-      return null;
-    }
-
-    const locationIds = locations
-      .filter((location) => getAreaName(location.prefecture, location.city) === decodedArea)
-      .map((location) => location.id);
-
-    if (!locationIds.length) {
-      return null;
-    }
 
     try {
+      // Unicode path segments become implicit Next.js cache tags. Vercel serializes
+      // those tags into an ASCII-only response header, so this route must avoid
+      // the shared Next.js data cache and load its small lookup sets directly.
+      const [program, locations] = await Promise.all([
+        resolveLandingProgramWithoutDataCache(programSlug),
+        fetchLocations(),
+      ]);
+
+      if (!program || !seoProgramNameSet.has(program.name)) {
+        return null;
+      }
+
+      const locationIds = locations
+        .filter((location) => getAreaName(location.prefecture, location.city) === decodedArea)
+        .map((location) => location.id);
+
+      if (!locationIds.length) {
+        return null;
+      }
+
       const rows = await fetchJoinedSchedulesForVariant(undefined, locationIds, {
         kind: "programId",
         value: program.id,
