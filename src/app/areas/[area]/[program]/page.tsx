@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { getAreaProgramLandingByParams } from "@/lib/data";
+import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd } from "@/lib/structured-data";
 import { formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
@@ -32,12 +33,16 @@ export async function generateMetadata({ params }: AreaProgramPageProps): Promis
   }
 
   const description = `${page.areaName}で${page.program.name}が受けられるジム・フィットネスクラブの一覧です。${page.locationCount}店舗・${page.schedules.length}件のレッスンを比較できます。`;
+  const isIndexable = shouldIndexAreaProgramPage({
+    locationCount: page.locationCount,
+    scheduleCount: page.schedules.length,
+  });
 
   return {
     title: `${page.areaName}で${page.program.name}が受けられるジム一覧`,
     description,
     robots: {
-      index: false,
+      index: isIndexable,
       follow: true,
     },
     alternates: {

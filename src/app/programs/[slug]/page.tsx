@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
+import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd } from "@/lib/structured-data";
 import { formatTime, formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
@@ -60,7 +61,18 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
     notFound();
   }
 
-  const featuredAreas = page.areaNames.slice(0, 8);
+  const featuredAreas = page.areaNames
+    .filter((areaName) => {
+      const areaSchedules = page.schedules.filter(
+        (item) => getAreaName(item.location.prefecture, item.location.city) === areaName,
+      );
+
+      return shouldIndexAreaProgramPage({
+        locationCount: new Set(areaSchedules.map((item) => item.location.id)).size,
+        scheduleCount: areaSchedules.length,
+      });
+    })
+    .slice(0, 8);
   const featuredSchedules = page.schedules.slice(0, 12);
   const pagePath = buildProgramPath(page.program.slug);
   const pageDescription = `${page.program.name}を受けられるジム・フィットネスクラブをまとめた一覧ページです。${page.locationCount}店舗・${page.schedules.length}件のレッスンから比較できます。`;
