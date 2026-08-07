@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "golds-gym-20210924",
+    "latitude": 35.449142,
+    "longitude": 139.637439,
+    "sourceUrl": "https://maps.app.goo.gl/c111UrgVQjUMMunbA",
+    "note": "Official Gold's Gym Yokohama Bashamichi map link."
+  },
+  {
+    "slug": "sports-club-nas-fujisawa-index",
+    "latitude": 35.340285,
+    "longitude": 139.485338,
+    "sourceUrl": "https://goo.gl/maps/V2uhz9C3xU72",
+    "note": "Official NAS Fujisawa map link."
+  },
+  {
+    "slug": "sports-club-nas-store-fujisawa-index",
+    "latitude": 35.340285,
+    "longitude": 139.485338,
+    "sourceUrl": "http://www.bion-yoga.jp/store/fujisawa/index.html",
+    "note": "Bion Fujisawa is located inside Sports Club NAS Fujisawa."
+  },
+  {
+    "slug": "sports-club-nas-totsuka-index",
+    "latitude": 35.4021509,
+    "longitude": 139.5351217,
+    "sourceUrl": "https://goo.gl/maps/Qp2kXdKaoBx",
+    "note": "Official NAS Totsuka map link."
+  },
+  {
+    "slug": "jexer-todakoen",
+    "latitude": 35.806149,
+    "longitude": 139.680344,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.jexer.jp/fitness/toda/index.html",
+    "note": "Official JEXER Toda-koen address geocoded with GSI address search."
+  },
+  {
+    "slug": "jexer-flat-kashiwa",
+    "latitude": 35.852562,
+    "longitude": 139.9599,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.jexer.jp/flat/kashiwa/index.html",
+    "note": "Official JEXER Gym Flat Kashiwa address geocoded with GSI address search."
+  },
+  {
+    "slug": "jexer-lightgym-ichikawa",
+    "latitude": 35.72897,
+    "longitude": 139.907639,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://jexer.jp/lightgym/ichikawa/",
+    "note": "Official JEXER Light Gym Ichikawa address geocoded with GSI address search."
+  },
+  {
+    "slug": "jexer-pilates-yokohama",
+    "latitude": 35.467613,
+    "longitude": 139.622757,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://jexer.jp/fitnessstudio/pilates.yokohama/index.html",
+    "note": "Official JEXER Pilates Studio Yokohama address geocoded with GSI address search."
+  },
+  {
+    "slug": "jexer-lightgym-omiya",
+    "latitude": 35.904289,
+    "longitude": 139.624069,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.jexer.jp/lightgym/omiya/",
+    "note": "Official JEXER Light Gym Omiya address geocoded with GSI address search."
+  },
+  {
+    "slug": "konami-sports-000355",
+    "latitude": 35.90699,
+    "longitude": 139.621796,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000355/access.html",
+    "note": "Official Konami Tennis School Omiya address geocoded with GSI address search."
+  },
+  {
+    "slug": "sports-club-nas-shibaura-index",
+    "latitude": 35.639462,
+    "longitude": 139.751404,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.nas-club.co.jp/shibaura/access/",
+    "note": "Official NAS Shibaura address geocoded with GSI address search."
+  },
+  {
+    "slug": "sports-club-nas-mizonokuchi-index",
+    "latitude": 35.600491,
+    "longitude": 139.612717,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/index.html",
+    "note": "Official NAS Mizonokuchi address geocoded with GSI address search."
+  },
+  {
+    "slug": "sports-club-nas-ginza-index",
+    "latitude": 35.674328,
+    "longitude": 139.766403,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://www.nas-club.co.jp/ginza/access/index.html",
+    "note": "Official NAS Ginza address geocoded with GSI address search."
+  },
+  {
+    "slug": "megalos-azabujuban-reflet",
+    "latitude": 35.654858,
+    "longitude": 139.735077,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://megalos.co.jp/azabujuban_reflet/",
+    "note": "Official Megalos Reflet Azabujuban address geocoded with GSI address search."
+  },
+  {
+    "slug": "megalos-minatomirai-reflet",
+    "latitude": 35.459259,
+    "longitude": 139.626877,
+    "coordinateSource": "gsi_address_search",
+    "sourceUrl": "https://megalos.co.jp/minatomirai_reflet/",
+    "note": "Official Megalos Reflet Minatomirai address geocoded with GSI address search."
+  }
+]

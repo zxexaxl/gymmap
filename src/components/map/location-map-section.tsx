@@ -387,6 +387,13 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           ))}
         </div>
       </div>
+      <p className="muted">
+        一部の住所座標は
+        <a href="https://maps.gsi.go.jp/" target="_blank" rel="noreferrer">
+          国土地理院「地理院地図」
+        </a>
+        の検索結果を利用しています。
+      </p>
     </section>
   );
 }
