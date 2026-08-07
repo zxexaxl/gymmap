@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
+import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
 import { scoreProgramTextQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
 import type { GymLocation, MapLessonSearchItem, MapLocationLessonIndex } from "@/lib/types";
@@ -69,10 +70,28 @@ function formatDistanceLabel(distanceKm: number | null) {
   return `約${distanceKm.toFixed(1)}km`;
 }
 
+function isLocationInsideBounds(location: GymLocation, bounds: MapBounds | null) {
+  if (!bounds || location.latitude === null || location.longitude === null) {
+    return true;
+  }
+
+  return (
+    location.latitude <= bounds.north &&
+    location.latitude >= bounds.south &&
+    location.longitude <= bounds.east &&
+    location.longitude >= bounds.west
+  );
+}
+
 export function LocationMapSection({ locations, lessonIndex }: LocationMapSectionProps) {
   const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
   const [programQuery, setProgramQuery] = useState("");
+  const [brandFilter, setBrandFilter] = useState("");
+  const [prefectureFilter, setPrefectureFilter] = useState("");
+  const [distanceFilter, setDistanceFilter] = useState("");
+  const [listScope, setListScope] = useState<"nearby" | "map">("nearby");
+  const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [geolocationStatus, setGeolocationStatus] = useState<"idle" | "loading" | "granted" | "denied" | "fallback" | "error">("idle");
   const [permissionState, setPermissionState] = useState<GeolocationPermissionState>("unknown");
@@ -161,9 +180,8 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
   const matchedLocationIds = new Set(matchesByLocationId.keys());
   const fallbackCenter = currentPosition ?? TOKYO_CENTER;
-  const filteredLocations = locations
+  const mappableLocations = locations
     .filter((location) => location.latitude && location.longitude)
-    .filter((location) => (normalizedQuery ? matchedLocationIds.has(location.id) : true))
     .map((location) => ({
       ...location,
       distanceKm:
@@ -189,9 +207,35 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
       return left.distanceKm - right.distanceKm;
     });
-  const visibleLocations = filteredLocations;
+  const availableBrands = Array.from(
+    new Set(mappableLocations.map((location) => location.brand?.name).filter((name): name is string => Boolean(name))),
+  ).sort((left, right) => left.localeCompare(right, "ja"));
+  const availablePrefectures = Array.from(
+    new Set(mappableLocations.map((location) => location.prefecture).filter((name): name is string => Boolean(name))),
+  ).sort((left, right) => left.localeCompare(right, "ja"));
+  const maximumDistanceKm = distanceFilter ? Number(distanceFilter) : null;
+  const listCandidates = mappableLocations.filter((location) => {
+    if (normalizedQuery && !matchedLocationIds.has(location.id)) {
+      return false;
+    }
+
+    if (brandFilter && location.brand?.name !== brandFilter) {
+      return false;
+    }
+
+    if (prefectureFilter && location.prefecture !== prefectureFilter) {
+      return false;
+    }
+
+    if (maximumDistanceKm !== null && (location.distanceKm === null || location.distanceKm > maximumDistanceKm)) {
+      return false;
+    }
+
+    return listScope !== "map" || isLocationInsideBounds(location, mapBounds);
+  });
+  const nearbyLocations = listCandidates.slice(0, 10);
   const selectedLocation =
-    visibleLocations.find((location) => location.id === selectedLocationId) ?? visibleLocations[0] ?? null;
+    mappableLocations.find((location) => location.id === selectedLocationId) ?? mappableLocations[0] ?? null;
   const mapCenter =
     selectedLocation && selectedLocation.latitude && selectedLocation.longitude
       ? {
@@ -227,31 +271,25 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   }
 
   useEffect(() => {
-    if (!visibleLocations.length) {
+    if (!mappableLocations.length) {
       setSelectedLocationId(null);
       return;
     }
 
-    if (!selectedLocationId || !visibleLocations.some((location) => location.id === selectedLocationId)) {
-      setSelectedLocationId(visibleLocations[0].id);
+    if (!selectedLocationId || !mappableLocations.some((location) => location.id === selectedLocationId)) {
+      setSelectedLocationId(mappableLocations[0].id);
     }
-  }, [selectedLocationId, visibleLocations]);
+  }, [selectedLocationId, mappableLocations]);
 
   const statusLabel =
     geolocationStatus === "granted"
-      ? "現在地に近い順で表示中"
-      : geolocationStatus === "denied"
-        ? "位置情報が使えないため、東京中心で表示中"
-        : geolocationStatus === "error"
-          ? "位置情報を取得できなかったため、東京中心で表示中"
-        : geolocationStatus === "fallback"
-          ? "位置情報未対応のため、東京中心で表示中"
-          : geolocationStatus === "loading"
-            ? "現在地を取得中"
-            : "現在地は未取得です";
+      ? "現在地を基準に近い順"
+      : geolocationStatus === "loading"
+        ? "現在地を取得中"
+        : "東京駅を基準に近い順";
   const resultSummary = normalizedQuery
-    ? `「${programQuery.trim()}」に一致するレッスンがある${visibleLocations.length}店舗・${matchedLessonCount}レッスンを表示中`
-    : `${visibleLocations.length}店舗を現在地に近い順で表示中`;
+    ? `「${programQuery.trim()}」に一致する${listCandidates.length}店舗・${matchedLessonCount}レッスンから近い10店舗を表示`
+    : `${mappableLocations.length}店舗を地図に表示 / 条件に合う${listCandidates.length}店舗から近い10店舗を表示`;
   const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
 
   return (
@@ -264,7 +302,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         <Link href="/search">一覧から探す</Link>
       </div>
       <div className="map-toolbar">
-        <label className="map-search-field">
+        <label className="map-search-field map-search-field-wide">
           <span>レッスン名で絞り込む</span>
           <input
             type="search"
@@ -273,17 +311,59 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             placeholder="BODYCOMBAT / ヨガ / ピラティス など"
           />
         </label>
+        <div className="map-filter-grid">
+          <label className="map-search-field">
+            <span>ブランド</span>
+            <select value={brandFilter} onChange={(event) => setBrandFilter(event.target.value)}>
+              <option value="">すべて</option>
+              {availableBrands.map((brand) => (
+                <option key={brand} value={brand}>
+                  {brand}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="map-search-field">
+            <span>都道府県</span>
+            <select value={prefectureFilter} onChange={(event) => setPrefectureFilter(event.target.value)}>
+              <option value="">すべて</option>
+              {availablePrefectures.map((prefecture) => (
+                <option key={prefecture} value={prefecture}>
+                  {prefecture}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="map-search-field">
+            <span>基準地点からの距離</span>
+            <select value={distanceFilter} onChange={(event) => setDistanceFilter(event.target.value)}>
+              <option value="">指定なし</option>
+              <option value="1">1km以内</option>
+              <option value="3">3km以内</option>
+              <option value="5">5km以内</option>
+              <option value="10">10km以内</option>
+            </select>
+          </label>
+        </div>
+        <div className="map-scope-actions" aria-label="店舗一覧の表示範囲">
+          <button
+            type="button"
+            className={listScope === "nearby" ? "is-active" : ""}
+            onClick={() => setListScope("nearby")}
+          >
+            近い店舗から探す
+          </button>
+          <button
+            type="button"
+            className={listScope === "map" ? "is-active" : ""}
+            onClick={() => setListScope("map")}
+            disabled={!mapBounds}
+          >
+            この地図範囲から探す
+          </button>
+        </div>
         <p className="map-status muted">
           {statusLabel} / {resultSummary}
-        </p>
-        <p className="map-status-detail muted">
-          {permissionState === "prompt"
-            ? "現在地の利用は未許可です。ボタンを押すとブラウザの許可確認が表示されます。"
-            : permissionState === "denied"
-              ? "このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。"
-              : permissionState === "granted"
-                ? "現在地が使えるため、近い順で一覧を更新しています。"
-                : geolocationMessage}
         </p>
         {geolocationStatus !== "granted" ? (
           <div className="map-geolocation-help">
@@ -306,7 +386,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
       <div className="map-layout">
         <div className="map-canvas" aria-label="ジム位置マップ">
           <MapComponent
-            locations={visibleLocations.map((location) => ({
+            locations={mappableLocations.map((location) => ({
               id: location.id,
               name: location.name,
               brandName: location.brand?.name,
@@ -317,6 +397,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             center={mapCenter}
             currentPosition={currentPosition}
             onSelectLocation={setSelectedLocationId}
+            onBoundsChange={setMapBounds}
             onProviderError={() => {
               if (activeMapProvider !== "osm") {
                 setActiveMapProvider("osm");
@@ -325,66 +406,65 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           />
         </div>
 
-        <div className="map-location-list">
-          {visibleLocations.length === 0 ? (
-            <article className="map-location-item">
-              <h3>該当する店舗がありません</h3>
-              <p className="muted">レッスン名を変えるか、検索語を空にして近くのジム一覧へ戻してください。</p>
-            </article>
-          ) : null}
-          {visibleLocations.map((location) => (
-            <article
-              key={location.id}
-              className={`map-location-item${selectedLocation?.id === location.id ? " is-active" : ""}`}
-              role="button"
-              tabIndex={0}
-              onClick={() => setSelectedLocationId(location.id)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  setSelectedLocationId(location.id);
-                }
-              }}
-            >
-              <p className="map-location-brand">{location.brand?.name ?? "-"}</p>
-              <h3>{location.name}</h3>
-              <p className="muted">{getLocationAddress(location.prefecture, location.city, location.address_line)}</p>
-              <p className="muted">{formatDistanceLabel(location.distanceKm ?? null)}</p>
-              {normalizedQuery && formatMatchedLessonSummary(location.id) ? (
-                <p className="muted">一致レッスン: {formatMatchedLessonSummary(location.id)}</p>
+        <div className="map-sidebar">
+          {selectedLocation ? (
+            <article className="map-location-item map-selected-location is-active" aria-live="polite">
+              <p className="map-list-label">選択中の店舗</p>
+              <p className="map-location-brand">{selectedLocation.brand?.name ?? "-"}</p>
+              <h3>{selectedLocation.name}</h3>
+              <p className="muted">
+                {getLocationAddress(selectedLocation.prefecture, selectedLocation.city, selectedLocation.address_line)}
+              </p>
+              <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
+              {normalizedQuery && formatMatchedLessonSummary(selectedLocation.id) ? (
+                <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
               ) : null}
-              <button
-                type="button"
-                className="map-select-button"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setSelectedLocationId(location.id);
-                }}
-              >
-                地図で見る
-              </button>
               <div className="map-link-row">
-                {normalizedQuery ? (
-                  <Link
-                    href={buildLessonDetailHref(location)}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                    }}
-                  >
-                    レッスン詳細を見る
-                  </Link>
-                ) : null}
-                <Link
-                  href={`/locations/${location.slug}`}
-                  onClick={(event) => {
-                    event.stopPropagation();
-                  }}
-                >
-                  店舗詳細を見る
-                </Link>
+                {normalizedQuery ? <Link href={buildLessonDetailHref(selectedLocation)}>レッスン詳細を見る</Link> : null}
+                <Link href={`/locations/${selectedLocation.slug}`}>店舗詳細を見る</Link>
               </div>
             </article>
-          ))}
+          ) : null}
+
+          <div className="map-nearby-section">
+            <div className="map-list-heading">
+              <h3>{listScope === "map" ? "地図範囲内の近い10店舗" : "近い10店舗"}</h3>
+              <span>{listCandidates.length}件中</span>
+            </div>
+            <div className="map-location-list">
+              {nearbyLocations.length === 0 ? (
+                <article className="map-location-item">
+                  <h3>該当する店舗がありません</h3>
+                  <p className="muted">条件を変更するか、「近い店舗から探す」に戻してください。</p>
+                </article>
+              ) : null}
+              {nearbyLocations.map((location, index) => (
+                <article
+                  key={location.id}
+                  className={`map-location-item map-location-item-compact${selectedLocation?.id === location.id ? " is-active" : ""}`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setSelectedLocationId(location.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelectedLocationId(location.id);
+                    }
+                  }}
+                >
+                  <span className="map-location-rank">{index + 1}</span>
+                  <div>
+                    <p className="map-location-brand">{location.brand?.name ?? "-"}</p>
+                    <h3>{location.name}</h3>
+                    <p className="muted">
+                      {getLocationAddress(location.prefecture, location.city, location.address_line)} ・{" "}
+                      {formatDistanceLabel(location.distanceKm ?? null)}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <p className="muted">

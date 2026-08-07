@@ -1,10 +1,26 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap } from "react-leaflet";
+import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
 import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
 
-import type { Coordinates, MapComponentProps } from "@/components/map/map-types";
+import type { Coordinates, MapBounds, MapComponentProps } from "@/components/map/map-types";
+
+function MapBoundsReporter({ onBoundsChange }: { onBoundsChange?: (bounds: MapBounds) => void }) {
+  useMapEvents({
+    moveend(event) {
+      const bounds = event.target.getBounds();
+      onBoundsChange?.({
+        north: bounds.getNorth(),
+        south: bounds.getSouth(),
+        east: bounds.getEast(),
+        west: bounds.getWest(),
+      });
+    },
+  });
+
+  return null;
+}
 
 function MapController({
   center,
@@ -49,7 +65,14 @@ function MapController({
   return null;
 }
 
-export function LeafletGymMap({ locations, selectedLocationId, center, currentPosition, onSelectLocation }: MapComponentProps) {
+export function LeafletGymMap({
+  locations,
+  selectedLocationId,
+  center,
+  currentPosition,
+  onSelectLocation,
+  onBoundsChange,
+}: MapComponentProps) {
   const [tileError, setTileError] = useState<string | null>(null);
 
   const selectedLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
@@ -93,6 +116,7 @@ export function LeafletGymMap({ locations, selectedLocationId, center, currentPo
           });
         }}
       >
+        <MapBoundsReporter onBoundsChange={onBoundsChange} />
         <MapController center={center} bounds={bounds} hasSelectedLocation={Boolean(selectedLocation)} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

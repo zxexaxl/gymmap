@@ -3,6 +3,13 @@ export type Coordinates = {
   longitude: number;
 };
 
+export type MapBounds = {
+  north: number;
+  south: number;
+  east: number;
+  west: number;
+};
+
 export type MapLocation = {
   id: string;
   name: string;
@@ -17,6 +24,6 @@ export type MapComponentProps = {
   center: Coordinates;
   currentPosition: Coordinates | null;
   onSelectLocation: (id: string) => void;
+  onBoundsChange?: (bounds: MapBounds) => void;
   onProviderError?: (message: string) => void;
 };
-

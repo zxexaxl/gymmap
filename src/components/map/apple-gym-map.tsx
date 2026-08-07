@@ -84,6 +84,7 @@ export function AppleGymMap({
   center,
   currentPosition,
   onSelectLocation,
+  onBoundsChange,
   onProviderError,
 }: MapComponentProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -230,6 +231,36 @@ export function AppleGymMap({
       map.region = new mapkitState.CoordinateRegion(nextCoordinate, new mapkitState.CoordinateSpan(0.08, 0.08));
     }
   }, [mapkitState, selectedCenter.latitude, selectedCenter.longitude]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+
+    if (!map || !onBoundsChange) {
+      return;
+    }
+
+    const reportBounds = () => {
+      const region = map.region;
+
+      if (!region?.center || !region?.span) {
+        return;
+      }
+
+      onBoundsChange({
+        north: region.center.latitude + region.span.latitudeDelta / 2,
+        south: region.center.latitude - region.span.latitudeDelta / 2,
+        east: region.center.longitude + region.span.longitudeDelta / 2,
+        west: region.center.longitude - region.span.longitudeDelta / 2,
+      });
+    };
+
+    map.addEventListener?.("region-change-end", reportBounds);
+    reportBounds();
+
+    return () => {
+      map.removeEventListener?.("region-change-end", reportBounds);
+    };
+  }, [mapkitState, onBoundsChange]);
 
   return (
     <div className="apple-map-root">
