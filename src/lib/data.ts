@@ -6,6 +6,7 @@ import { normalizeProgramName } from "@/lib/normalizeProgramName";
 import { normalizeSearchKeyword, scoreProgramQueryMatch, scoreProgramTextQueryMatch } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
+import { filterLatestSchedulePeriods, getLatestSchedulePeriodByLocation } from "@/lib/latest-schedule-period";
 import type {
   AdminDataset,
   AreaProgramLandingPage,
@@ -295,6 +296,36 @@ type ScheduleQueryVariant =
   | { kind: "ids"; values: string[] }
   | { kind: "programId"; value: string };
 
+async function fetchLatestSchedulePeriodEntries() {
+  const supabase = getSupabaseClient();
+  const pageSize = 1000;
+  const rows: Array<{ location_id: string; valid_from: string | null }> = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("class_schedules")
+      .select("location_id, valid_from")
+      .not("valid_from", "is", null)
+      .order("id", { ascending: true })
+      .range(from, from + pageSize - 1);
+
+    if (error) throw error;
+    const batch = data ?? [];
+    rows.push(...batch);
+    if (batch.length < pageSize) break;
+    from += pageSize;
+  }
+
+  return Array.from(getLatestSchedulePeriodByLocation(rows).entries());
+}
+
+const getLatestSchedulePeriodEntriesFromDataCache = unstable_cache(
+  fetchLatestSchedulePeriodEntries,
+  ["latest-schedule-period-by-location-v1"],
+  { revalidate: sharedDataRevalidateSeconds, tags: ["class-schedules"] },
+);
+
 async function getScheduleQueryVariants(filters?: SearchFilters): Promise<ScheduleQueryVariant[]> {
   const query = normalizeSearchKeyword(filters?.q ?? "");
 
@@ -392,7 +423,8 @@ async function fetchJoinedSchedulesForVariant(
     from += pageSize;
   }
 
-  return rows;
+  const latestPeriods = new Map(await getLatestSchedulePeriodEntriesFromDataCache());
+  return filterLatestSchedulePeriods(rows, latestPeriods);
 }
 
 async function fetchAllJoinedSchedules(filters?: SearchFilters) {
@@ -554,6 +586,7 @@ type MapLessonRow = {
   start_time: string;
   end_time: string;
   duration_minutes: number | null;
+  valid_from: string | null;
   extracted_at: string | null;
   updated_at: string;
   gym_locations: { name: string } | Array<{ name: string }>;
@@ -565,11 +598,13 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
   const locationsById = new Map<string, CachedLocationLessonIndex>();
   let from = 0;
 
+  const rows: MapLessonRow[] = [];
+
   while (true) {
     const { data, error } = await supabase
       .from("class_schedules")
       .select(
-        "id, location_id, raw_program_name, weekday, start_time, end_time, duration_minutes, extracted_at, updated_at, gym_locations(name)",
+        "id, location_id, raw_program_name, weekday, start_time, end_time, duration_minutes, valid_from, extracted_at, updated_at, gym_locations(name)",
       )
       .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
@@ -580,7 +615,16 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
 
     const batch = (data as MapLessonRow[]) ?? [];
 
-    batch.forEach((row) => {
+    rows.push(...batch);
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    from += pageSize;
+  }
+
+  filterLatestSchedulePeriods(rows).forEach((row) => {
       const locationName = Array.isArray(row.gym_locations)
         ? row.gym_locations[0]?.name
         : row.gym_locations.name;
@@ -611,21 +655,14 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
         u: row.extracted_at || row.updated_at || null,
       });
       locationsById.set(row.location_id, locationEntry);
-    });
-
-    if (batch.length < pageSize) {
-      break;
-    }
-
-    from += pageSize;
-  }
+  });
 
   return Array.from(locationsById.values());
 }
 
 const getLessonSearchIndexFromDataCache = unstable_cache(
   fetchLessonSearchIndex,
-  ["lesson-search-index-v4"],
+  ["lesson-search-index-v5-latest-period"],
   {
     revalidate: sharedDataRevalidateSeconds,
     tags: ["map-lesson-search-index", "class-schedules"],
@@ -724,13 +761,13 @@ export async function getLocations(): Promise<GymLocation[]> {
 async function fetchPopularPrograms(): Promise<Program[]> {
   const supabase = getSupabaseClient();
   const pageSize = 1000;
-  const scheduleCounts = new Map<string, number>();
+  const scheduleRows: Array<{ location_id: string; program_id: string; valid_from: string | null }> = [];
   let from = 0;
 
   while (true) {
     const { data, error } = await supabase
       .from("class_schedules")
-      .select("program_id")
+      .select("location_id, program_id, valid_from")
       .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
 
@@ -740,9 +777,7 @@ async function fetchPopularPrograms(): Promise<Program[]> {
 
     const batch = data ?? [];
 
-    batch.forEach(({ program_id }) => {
-      scheduleCounts.set(program_id, (scheduleCounts.get(program_id) ?? 0) + 1);
-    });
+    scheduleRows.push(...batch);
 
     if (batch.length < pageSize) {
       break;
@@ -750,6 +785,11 @@ async function fetchPopularPrograms(): Promise<Program[]> {
 
     from += pageSize;
   }
+
+  const scheduleCounts = new Map<string, number>();
+  filterLatestSchedulePeriods(scheduleRows).forEach(({ program_id }) => {
+    scheduleCounts.set(program_id, (scheduleCounts.get(program_id) ?? 0) + 1);
+  });
 
   const { data: programs, error: programsError } = await supabase.from("programs").select("*");
 
@@ -765,7 +805,7 @@ async function fetchPopularPrograms(): Promise<Program[]> {
     });
 }
 
-const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v1"], {
+const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v2-latest-period"], {
   revalidate: sharedDataRevalidateSeconds,
   tags: ["popular-programs", "class-schedules", "programs"],
 });
