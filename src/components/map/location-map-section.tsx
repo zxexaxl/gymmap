@@ -83,6 +83,29 @@ function isLocationInsideBounds(location: GymLocation, bounds: MapBounds | null)
   );
 }
 
+function findNearestLocationId(locations: GymLocation[], position: Coordinates) {
+  let nearestLocationId: string | null = null;
+  let nearestDistanceKm = Number.POSITIVE_INFINITY;
+
+  locations.forEach((location) => {
+    if (location.latitude === null || location.longitude === null) {
+      return;
+    }
+
+    const distanceKm = haversineDistanceKm(position, {
+      latitude: location.latitude,
+      longitude: location.longitude,
+    });
+
+    if (distanceKm < nearestDistanceKm) {
+      nearestDistanceKm = distanceKm;
+      nearestLocationId = location.id;
+    }
+  });
+
+  return nearestLocationId;
+}
+
 export function LocationMapSection({ locations, lessonIndex }: LocationMapSectionProps) {
   const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
@@ -93,6 +116,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const [listScope, setListScope] = useState<"nearby" | "map">("nearby");
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
+  const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
   const [geolocationStatus, setGeolocationStatus] = useState<"idle" | "loading" | "granted" | "denied" | "fallback" | "error">("idle");
   const [permissionState, setPermissionState] = useState<GeolocationPermissionState>("unknown");
   const [geolocationMessage, setGeolocationMessage] = useState("現在地を確認すると、近くのジムを優先して表示できます。");
@@ -134,10 +158,15 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     setGeolocationMessage("現在地を取得しています…");
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setCurrentPosition({
+        const nextPosition = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-        });
+        };
+
+        setCurrentPosition(nextPosition);
+        setMapFocusCenter(nextPosition);
+        setSelectedLocationId(findNearestLocationId(locations, nextPosition));
+        setListScope("nearby");
         setGeolocationStatus("granted");
         setPermissionState("granted");
         setGeolocationMessage("現在地を取得しました。近い順で表示しています。");
@@ -253,14 +282,19 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     mappableLocations.find((location) => location.id === selectedLocationId) ?? mappableLocations[0] ?? null;
   const mapCenter = useMemo(
     () =>
-      selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
+      mapFocusCenter ??
+      (selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
         ? {
             latitude: selectedLocation.latitude,
             longitude: selectedLocation.longitude,
           }
-        : fallbackCenter,
-    [fallbackCenter, selectedLocation],
+        : fallbackCenter),
+    [fallbackCenter, mapFocusCenter, selectedLocation],
   );
+  const handleSelectLocation = useCallback((locationId: string) => {
+    setMapFocusCenter(null);
+    setSelectedLocationId(locationId);
+  }, []);
   const handleMapProviderError = useCallback(() => {
     setActiveMapProvider((provider) => (provider === "osm" ? provider : "osm"));
   }, []);
@@ -370,7 +404,14 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           <button
             type="button"
             className={listScope === "nearby" ? "is-active" : ""}
-            onClick={() => setListScope("nearby")}
+            onClick={() => {
+              setListScope("nearby");
+
+              if (currentPosition) {
+                setMapFocusCenter(currentPosition);
+                setSelectedLocationId(mappableLocations[0]?.id ?? null);
+              }
+            }}
           >
             近い店舗から探す
           </button>
@@ -411,7 +452,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             selectedLocationId={selectedLocation?.id ?? null}
             center={mapCenter}
             currentPosition={currentPosition}
-            onSelectLocation={setSelectedLocationId}
+            onSelectLocation={handleSelectLocation}
             onBoundsChange={setMapBounds}
             onProviderError={handleMapProviderError}
           />
@@ -455,11 +496,11 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
                   className={`map-location-item map-location-item-compact${selectedLocation?.id === location.id ? " is-active" : ""}`}
                   role="button"
                   tabIndex={0}
-                  onClick={() => setSelectedLocationId(location.id)}
+                  onClick={() => handleSelectLocation(location.id)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
                       event.preventDefault();
-                      setSelectedLocationId(location.id);
+                      handleSelectLocation(location.id);
                     }
                   }}
                 >
