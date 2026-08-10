@@ -209,10 +209,6 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
       <section className="panel program-landing-hero">
         <p className="eyebrow">プログラム別ガイド</p>
         <h1>{page.program.name}が受けられるジム・最新スケジュール</h1>
-        <p className="muted">
-          {page.program.name}を開催している店舗を、エリア・曜日・開始時間から比較できます。
-          気になる店舗を選ぶと、詳しい週間タイムテーブルを確認できます。
-        </p>
         <div className="program-landing-stats" aria-label="掲載状況">
           <div>
             <strong>{page.locationCount}</strong>
@@ -283,7 +279,6 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         <section className="panel program-area-section">
           <p className="eyebrow">地域から探す</p>
           <h2>{page.program.name}を都道府県から探す</h2>
-          <p className="muted">掲載店舗が複数ある都道府県を、店舗数の多い順に表示しています。</p>
           <div className="program-filter-links">
             {featuredPrefectures.map((area) => (
               <Link
@@ -320,7 +315,6 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
           <div>
             <p className="eyebrow">開催店舗</p>
             <h2>{page.program.name}が受けられるジム</h2>
-            <p className="muted">週間の開催枠が多い店舗から表示しています。</p>
           </div>
           <Link
             className="program-all-locations-link"
@@ -329,9 +323,6 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
             全{page.locationCount}店舗を見る
           </Link>
         </div>
-        <p className="program-mobile-location-note muted">
-          開催枠の多い5店舗を表示しています。ほかの店舗は「全店舗を見る」から確認できます。
-        </p>
         <div className="result-list program-location-list">
           {featuredLocations.map(({ locationId, first, schedules }) => (
             <article key={locationId} className="result-card">
@@ -373,24 +364,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         </div>
       </section>
 
-      <section className="panel program-faq-section">
-        <p className="eyebrow">よくある探し方</p>
-        <h2>{page.program.name}のジム・スケジュールについて</h2>
-        <div className="program-faq-list">
-          <div>
-            <h3>{page.program.name}はどこのジムで受けられますか？</h3>
-            <p className="muted">
-              GymMapでは現在{page.locationCount}店舗を掲載しています。上のエリア・曜日・時間帯から、通いやすい店舗を絞り込めます。
-            </p>
-          </div>
-          <div>
-            <h3>最新の開催時間はどこで確認できますか？</h3>
-            <p className="muted">
-              各店舗の詳細ページで曜日別タイムテーブルと更新日を確認できます。休館日や代行情報は、参加前に各ジムの公式サイトもご確認ください。
-            </p>
-          </div>
-        </div>
-      </section>
+      <p className="muted">開催内容は変更される場合があります。参加前に各ジムの公式サイトをご確認ください。</p>
     </div>
   );
 }

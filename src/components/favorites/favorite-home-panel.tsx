@@ -25,9 +25,6 @@ export function FavoriteHomePanel() {
       <div>
         <p className="eyebrow">MY PROGRAMS</p>
         <h2>お気に入りの今週をチェック</h2>
-        <p className="muted">
-          {favorites.length}件のお気に入りを保存中です。今週の開催をまとめて確認できます。
-        </p>
       </div>
       <div className="favorite-home-programs" aria-label="お気に入りプログラム">
         {favorites.map((program) => (

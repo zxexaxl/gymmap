@@ -93,9 +93,6 @@ export function ResultsList({
       <div className="section-heading">
         <div>
           <h2>検索結果 {totalResults}件</h2>
-          <p className="muted">
-            {hasActiveFilters ? "条件に合うクラスを開始時刻順で表示しています。" : "登録されているクラスを開始時刻順で表示しています。"}
-          </p>
           <p className="result-range">
             {firstResultIndex + 1}〜{Math.min(firstResultIndex + visibleResults.length, totalResults)}件を表示
           </p>

@@ -103,11 +103,6 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         <div className="section-heading">
           <div>
             <h1>検索結果</h1>
-            <p className="muted">
-              {hasActiveFilters
-                ? "条件に合うクラスを確認できます。条件を調整しながらそのまま再検索できます。"
-                : "検索条件が未指定のため、登録されているクラスを一覧表示しています。"}
-            </p>
           </div>
           <div className="link-row">
             <Link href="/">検索トップへ戻る</Link>

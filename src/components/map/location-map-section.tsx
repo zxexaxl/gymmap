@@ -352,7 +352,6 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
       <div className="section-heading">
         <div>
           <h2>近くのジムを地図から探す</h2>
-          <p className="muted">現在地に近い店舗を見ながら、気になるレッスンがあるジムだけを地図と一覧で絞り込めます。</p>
         </div>
         <Link href="/search">一覧から探す</Link>
       </div>

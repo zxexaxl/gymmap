@@ -24,7 +24,6 @@ export function SearchForm({
             <p className="eyebrow">LESSON SEARCH</p>
             <h2>希望の条件から探す</h2>
           </div>
-          <p>レッスン名がわからなくても、エリアや曜日だけで検索できます。</p>
         </div>
       ) : null}
       <div className="field-grid">
@@ -79,7 +78,6 @@ export function SearchForm({
       <div className="search-actions">
         <button type="submit">検索する</button>
       </div>
-      <p className="form-help">BODYCOMBAT、ヨガ、ピラティス、ZUMBA などのレッスン検索に対応しています。</p>
     </Form>
   );
 }

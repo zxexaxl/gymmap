@@ -313,14 +313,6 @@ p {
   color: #ff987c;
 }
 
-.home-hero-copy > p:not(.home-hero-kicker) {
-  max-width: 640px;
-  margin-bottom: 24px;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 1.02rem;
-  line-height: 1.9;
-}
-
 .home-hero-facts {
   display: flex;
   flex-wrap: wrap;
@@ -425,14 +417,6 @@ p {
 .hero-search-heading h2 {
   margin-bottom: 0;
   font-size: clamp(1.35rem, 2.6vw, 1.85rem);
-}
-
-.hero-search-heading > p {
-  max-width: 390px;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.65;
 }
 
 .hero-search-form .field-grid {
@@ -705,33 +689,6 @@ p {
   content: "•";
   margin-right: 6px;
   color: var(--accent);
-}
-
-.program-faq-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.program-faq-list > div {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--panel-strong);
-}
-
-.program-faq-list h3 {
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-.program-faq-list p {
-  margin: 0;
-}
-
-.program-mobile-location-note {
-  display: none;
 }
 
 .result-program-heading {
@@ -1193,12 +1150,6 @@ p {
   margin-top: 16px;
   display: flex;
   justify-content: flex-end;
-}
-
-.form-help {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .quick-links,
@@ -1926,10 +1877,6 @@ p {
     width: min(100% - 20px, 1120px);
   }
 
-  .program-faq-list {
-    grid-template-columns: 1fr;
-  }
-
   .program-landing-page .program-landing-hero {
     order: 1;
   }
@@ -1946,10 +1893,6 @@ p {
     order: 4;
   }
 
-  .program-landing-page .program-faq-section {
-    order: 5;
-  }
-
   .program-location-jump,
   .program-all-locations-link {
     width: 100%;
@@ -1964,12 +1907,6 @@ p {
     border-radius: 999px;
     background: var(--accent-soft);
     font-weight: 800;
-  }
-
-  .program-mobile-location-note {
-    display: block;
-    margin-bottom: 14px;
-    font-size: 0.82rem;
   }
 
   .program-location-list .result-card:nth-child(n + 6),
@@ -2143,11 +2080,6 @@ p {
 
   .home-hero-title-lead > span {
     display: block;
-  }
-
-  .home-hero-copy > p:not(.home-hero-kicker) {
-    font-size: 0.92rem;
-    line-height: 1.75;
   }
 
   .home-hero-facts span {

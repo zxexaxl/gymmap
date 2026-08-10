@@ -147,11 +147,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <section className="panel">
         <p className="eyebrow">{brand.name}</p>
         <h1>{hasSchedules ? `${location.name}のスタジオスケジュール` : location.name}</h1>
-        <p className="muted">
-          {hasSchedules
-            ? "曜日別のタイムテーブルから、レッスン名・開始時間・担当インストラクターをまとめて確認できます。"
-            : "住所や公式サイトなど、この店舗の基本情報を確認できます。"}
-        </p>
         <dl className="detail-list">
           <div>
             <dt>住所</dt>
@@ -199,9 +194,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <div className="section-heading">
               <div>
                 <h2>この店舗で受けられる主なプログラム</h2>
-                <p className="muted">
-                  全{availablePrograms.length}種類。開催枠の多いプログラムから表示しています。
-                </p>
+                <p className="muted">{availablePrograms.length}種類</p>
               </div>
             </div>
             <div className="location-program-chips">

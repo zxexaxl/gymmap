@@ -127,10 +127,7 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
       <section className="panel">
         <p className="eyebrow">エリア別ガイド</p>
         <h1>{page.areaName}で{page.program.name}が受けられるジム・最新スケジュール</h1>
-        <p className="muted">
-          {page.areaName}で {page.program.name} を開催している {page.locationCount} 店舗・{page.schedules.length} 件のレッスンを掲載しています。
-          通いやすい店舗や曜日の違いを見ながら比較できます。
-        </p>
+        <p className="muted">{page.locationCount}店舗・{page.schedules.length}レッスン掲載</p>
         <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
         <div className="link-row">
           <Link href={programPath}>{page.program.name}の全国一覧</Link>

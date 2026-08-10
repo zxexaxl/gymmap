@@ -129,9 +129,6 @@ export default async function HomePage() {
               </span>
               <span className="home-hero-title-accent">すぐ見つかる。</span>
             </h1>
-            <p>
-              ジムを一つずつ調べなくても大丈夫。受けたいプログラムと通いやすい条件から、いま参加できるスタジオレッスンをまとめて探せます。
-            </p>
             <div className="home-hero-facts" aria-label="GymMapの掲載情報">
               <span><strong>{locations.length}</strong>店舗を掲載</span>
               <span><strong>{brands.length}</strong>ブランドに対応</span>
@@ -163,7 +160,6 @@ export default async function HomePage() {
             <div>
               <p className="eyebrow">FEATURED BRANDS</p>
               <h2><span>ブランドプログラム</span><span>から探す</span></h2>
-              <p className="muted">LES MILLSやRadical Fitnessなど、支持されているプログラムをブランド別に選びました。</p>
             </div>
             <Link className="section-text-link" href="/search">すべてのレッスンを検索</Link>
           </div>
