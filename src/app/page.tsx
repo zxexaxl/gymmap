@@ -7,7 +7,8 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
 import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
-import { programMaster, type ProgramBrand } from "@/lib/program-master";
+import { getFeaturedProgramBrand } from "@/lib/featured-programs";
+import type { ProgramBrand } from "@/lib/program-master";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
 export const revalidate = 900;
@@ -29,13 +30,8 @@ export default async function HomePage() {
     getMapLessonSearchIndex(),
     getPopularPrograms(48),
   ]);
-  const brandByProgramName = new Map(
-    programMaster.flatMap((program) =>
-      program.programBrand ? [[program.canonicalProgramName, program.programBrand] as const] : [],
-    ),
-  );
   const brandedPrograms = popularPrograms.flatMap((program) => {
-    const programBrand = brandByProgramName.get(program.name);
+    const programBrand = getFeaturedProgramBrand(program.name);
     return programBrand ? [{ ...program, programBrand }] : [];
   });
   const selectedProgramIds = new Set<string>();

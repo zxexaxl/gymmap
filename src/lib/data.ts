@@ -2,6 +2,7 @@ import { cache } from "react";
 import { unstable_cache } from "next/cache";
 
 import { programMaster } from "@/lib/program-master";
+import { supplementalLandingProgramNames } from "@/lib/featured-programs";
 import { normalizeProgramName } from "@/lib/normalizeProgramName";
 import {
   expandProgramSearchKeyword,
@@ -62,7 +63,10 @@ const weekdaySortOrder: Record<ClassSchedule["weekday"], number> = {
 const trackedSearchMarkers = ["oimachi", "大井町", "bodypump", "bodycombat"];
 const staticProgramLandingPageLimit = 48;
 const sharedDataRevalidateSeconds = 60 * 60;
-const seoProgramNameSet = new Set(programMaster.map((entry) => entry.canonicalProgramName));
+const seoProgramNameSet = new Set([
+  ...programMaster.map((entry) => entry.canonicalProgramName),
+  ...supplementalLandingProgramNames,
+]);
 const emptySearchFilters: SearchFilters = {
   q: "",
   weekday: "",
