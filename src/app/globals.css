@@ -1731,6 +1731,16 @@ p {
   gap: 20px;
 }
 
+.schedule-groups .section-heading {
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+
+.schedule-groups .section-heading h2,
+.schedule-groups .section-heading p {
+  margin-bottom: 0;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
@@ -1927,6 +1937,11 @@ p {
 
   .schedule-groups {
     gap: 14px;
+  }
+
+  .schedule-groups .section-heading {
+    display: flex;
+    gap: 12px;
   }
 
   .schedule-groups .table-wrap {
