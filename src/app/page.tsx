@@ -5,6 +5,7 @@ import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
+import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
@@ -79,11 +80,14 @@ export default async function HomePage() {
           </div>
           <div className="program-card-grid">
             {featuredPrograms.map((program, index) => (
-              <Link className="program-card-link" key={program.slug} href={buildProgramPath(program.slug)}>
-                <span className="program-card-number">{String(index + 1).padStart(2, "0")}</span>
-                <strong>{program.name}</strong>
-                <span className="program-card-arrow" aria-hidden="true">→</span>
-              </Link>
+              <article className="program-card" key={program.slug}>
+                <Link className="program-card-link" href={buildProgramPath(program.slug)}>
+                  <span className="program-card-number">{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{program.name}</strong>
+                  <span className="program-card-arrow" aria-hidden="true">→</span>
+                </Link>
+                <FavoriteProgramButton id={program.id} slug={program.slug} name={program.name} iconOnly />
+              </article>
             ))}
           </div>
         </section>
