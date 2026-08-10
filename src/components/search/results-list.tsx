@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { buildAreaProgramPath, buildProgramPath } from "@/lib/site";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import type { SearchResult } from "@/lib/types";
@@ -112,7 +113,15 @@ export function ResultsList({
               <p className="result-time">
                 {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} - {formatTime(item.schedule.end_time)}
               </p>
-              <h3>{item.schedule.raw_program_name}</h3>
+              <div className="result-program-heading">
+                <h3>{item.schedule.raw_program_name}</h3>
+                <FavoriteProgramButton
+                  id={item.program.id}
+                  slug={item.program.slug}
+                  name={item.program.name}
+                  compact
+                />
+              </div>
               {item.schedule.canonical_program_name && item.schedule.canonical_program_name !== item.schedule.raw_program_name ? (
                 <p className="muted">正規名: {item.schedule.canonical_program_name}</p>
               ) : null}

@@ -25,6 +25,7 @@ import type {
   SearchFilters,
   SearchResult,
   SearchResultPage,
+  FavoriteScheduleWeek,
   SourcePage,
   IngestionItem,
   IngestionRun,
@@ -658,6 +659,48 @@ async function fetchJoinedSchedulesByIds(scheduleIds: string[]) {
     const row = rowsById.get(id);
     return row ? [row] : [];
   });
+}
+
+type FavoriteScheduleWeekRpcRow = {
+  schedule_id: string | null;
+  result_order: number | string;
+  total_count: number | string;
+  latest_schedule_update: string | null;
+};
+
+export async function getFavoriteScheduleWeek(
+  programIds: string[],
+  area = "",
+  startWeekday = 0,
+  limit = 120,
+): Promise<FavoriteScheduleWeek> {
+  if (!hasSupabaseEnv() || !programIds.length) {
+    return { results: [], totalResults: 0, latestScheduleUpdate: null };
+  }
+
+  const uniqueProgramIds = Array.from(new Set(programIds)).slice(0, 8);
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase.rpc("favorite_class_schedule_week", {
+    p_program_ids: uniqueProgramIds,
+    p_area: area.trim().slice(0, 80),
+    p_start_weekday: Math.min(Math.max(Math.trunc(startWeekday), 0), 6),
+    p_limit: Math.min(Math.max(Math.trunc(limit), 1), 200),
+  });
+
+  if (error) {
+    throw error;
+  }
+
+  const rpcRows = (data as FavoriteScheduleWeekRpcRow[] | null) ?? [];
+  const metadata = rpcRows[0] ?? null;
+  const scheduleIds = rpcRows.flatMap((row) => (row.schedule_id ? [row.schedule_id] : []));
+  const rows = await fetchJoinedSchedulesByIds(scheduleIds);
+
+  return {
+    results: rows.map(mapJoinedSchedule),
+    totalResults: metadata ? Number(metadata.total_count) : 0,
+    latestScheduleUpdate: metadata?.latest_schedule_update ?? null,
+  };
 }
 
 export async function getSearchResultPage(

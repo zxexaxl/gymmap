@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
 import { JsonLd } from "@/components/seo/json-ld";
+import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
@@ -63,6 +64,8 @@ export default async function HomePage() {
         </div>
         <SearchForm brands={brands} variant="hero" />
       </section>
+
+      <FavoriteHomePanel />
 
       {featuredPrograms.length ? (
         <section id="popular-programs" className="panel home-program-section page-anchor-section">

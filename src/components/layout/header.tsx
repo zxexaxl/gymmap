@@ -20,6 +20,10 @@ export function Header() {
           <Link href="/#search-section">条件検索</Link>
           <Link href="/#popular-programs">人気</Link>
           <Link href="/#map-section">地図</Link>
+          <Link className="header-favorite-link" href="/favorites">
+            <span aria-hidden="true">☆</span>
+            <span className="header-favorite-label">お気に入り</span>
+          </Link>
         </nav>
       </div>
     </header>

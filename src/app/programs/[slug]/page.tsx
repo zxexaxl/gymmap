@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
@@ -101,9 +102,12 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
           曜日、時間帯、ブランド、通いやすいエリアを見比べながら探せます。
         </p>
         <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
-        <div className="link-row">
-          <Link href={`/search?q=${encodeURIComponent(page.program.name)}`}>この条件で検索する</Link>
-          <Link href="/">検索トップへ戻る</Link>
+        <div className="program-page-actions">
+          <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
+          <div className="link-row">
+            <Link href={`/search?q=${encodeURIComponent(page.program.name)}`}>この条件で検索する</Link>
+            <Link href="/">検索トップへ戻る</Link>
+          </div>
         </div>
       </section>
 

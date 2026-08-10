@@ -161,6 +161,12 @@ export type SearchResultPage = {
   latestScheduleUpdate: string | null;
 };
 
+export type FavoriteScheduleWeek = {
+  results: SearchResult[];
+  totalResults: number;
+  latestScheduleUpdate: string | null;
+};
+
 export type MapLessonSearchItem = {
   rawProgramName: string;
   canonicalProgramName: string | null;
