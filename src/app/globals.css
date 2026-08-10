@@ -1323,12 +1323,15 @@ p {
   }
 
   .program-card-link strong {
-    font-size: 0.92rem;
+    max-width: 100%;
+    font-size: 0.9rem;
+    letter-spacing: -0.02em;
   }
 
   .program-card-arrow {
+    top: 12px;
     right: 12px;
-    bottom: 12px;
+    bottom: auto;
     width: 25px;
     height: 25px;
   }
