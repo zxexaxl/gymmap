@@ -27,23 +27,29 @@ export function LocationScheduleTable({ schedules }: LocationScheduleTableProps)
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>開始</th>
-                  <th>終了</th>
-                  <th>プログラム</th>
-                  <th>所要時間</th>
-                  <th>スタジオ</th>
-                  <th>インストラクター</th>
+                  <th scope="col">開始</th>
+                  <th scope="col">終了</th>
+                  <th scope="col">プログラム</th>
+                  <th scope="col">所要時間</th>
+                  <th scope="col">スタジオ</th>
+                  <th scope="col">インストラクター</th>
                 </tr>
               </thead>
               <tbody>
                 {group.items.map((item) => (
                   <tr key={item.schedule.id}>
-                    <td>{formatTime(item.schedule.start_time)}</td>
-                    <td>{formatTime(item.schedule.end_time)}</td>
-                    <td>{item.program.name}</td>
-                    <td>{item.schedule.duration_minutes ? `${item.schedule.duration_minutes}分` : "-"}</td>
-                    <td>{item.schedule.studio_name ?? "-"}</td>
-                    <td>{item.schedule.instructor_name ?? "-"}</td>
+                    <td data-label="開始">{formatTime(item.schedule.start_time)}</td>
+                    <td data-label="終了">{formatTime(item.schedule.end_time)}</td>
+                    <td className="schedule-program-cell" data-label="プログラム">
+                      {item.program.name}
+                    </td>
+                    <td data-label="所要時間">
+                      {item.schedule.duration_minutes ? `${item.schedule.duration_minutes}分` : "-"}
+                    </td>
+                    <td data-label="スタジオ">{item.schedule.studio_name ?? "-"}</td>
+                    <td className="schedule-instructor-cell" data-label="インストラクター">
+                      {item.schedule.instructor_name ?? "-"}
+                    </td>
                   </tr>
                 ))}
               </tbody>

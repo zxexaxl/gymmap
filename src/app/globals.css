@@ -1925,6 +1925,74 @@ p {
     padding: 7px 11px;
   }
 
+  .schedule-groups {
+    gap: 14px;
+  }
+
+  .schedule-groups .table-wrap {
+    overflow: visible;
+  }
+
+  .schedule-groups .data-table {
+    display: block;
+    min-width: 0;
+  }
+
+  .schedule-groups .data-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .schedule-groups .data-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .schedule-groups .data-table tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--panel-strong);
+  }
+
+  .schedule-groups .data-table td {
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .schedule-groups .data-table td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .schedule-groups .data-table .schedule-program-cell,
+  .schedule-groups .data-table .schedule-instructor-cell {
+    grid-column: 1 / -1;
+  }
+
+  .schedule-groups .data-table .schedule-program-cell {
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
   .header-inner {
     min-height: 64px;
   }
