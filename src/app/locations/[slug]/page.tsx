@@ -43,10 +43,15 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   const { location, schedules } = detail;
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
   const programNames = Array.from(new Set(schedules.map((item) => item.program.name))).slice(0, 5);
-  const pageTitle = `${location.name}のスタジオスケジュール`;
+  const hasSchedules = schedules.length > 0;
+  const pageTitle = hasSchedules
+    ? `${location.name}のスタジオスケジュール`
+    : `${location.name}の店舗情報`;
   const descriptionParts = [
     address ? `${address}にある` : "",
-    `${location.name}の最新スタジオスケジュール・タイムテーブルです。`,
+    hasSchedules
+      ? `${location.name}の最新スタジオスケジュール・タイムテーブルです。`
+      : `${location.name}の店舗情報ページです。住所や公式サイトを確認できます。`,
     programNames.length ? `${programNames.join("、")}などの曜日・時間を確認できます。` : "",
   ].filter(Boolean);
 
@@ -76,6 +81,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
   const { brand, location, schedules } = detail;
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
+  const hasSchedules = schedules.length > 0;
   const latestScheduleUpdatedAt = getLatestScheduleUpdatedAt(schedules.map((item) => item.schedule));
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address || location.name,
@@ -85,7 +91,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
     "@type": "HealthClub",
     "@id": `${buildCanonicalPath(`/locations/${location.slug}`)}#health-club`,
     name: location.name,
-    description: `${location.name}のスタジオスケジュール・タイムテーブル情報ページ`,
+    description: hasSchedules
+      ? `${location.name}のスタジオスケジュール・タイムテーブル情報ページ`
+      : `${location.name}の住所・公式サイトなどを確認できる店舗情報ページ`,
     url: buildCanonicalPath(`/locations/${location.slug}`),
     sameAs: location.official_url || undefined,
     address: address
@@ -122,9 +130,11 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <JsonLd data={[locationJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">{brand.name}</p>
-        <h1>{location.name}のスタジオスケジュール</h1>
+        <h1>{hasSchedules ? `${location.name}のスタジオスケジュール` : location.name}</h1>
         <p className="muted">
-          曜日別のタイムテーブルから、レッスン名・開始時間・担当インストラクターをまとめて確認できます。
+          {hasSchedules
+            ? "曜日別のタイムテーブルから、レッスン名・開始時間・担当インストラクターをまとめて確認できます。"
+            : "住所や公式サイトなど、この店舗の基本情報を確認できます。"}
         </p>
         <dl className="detail-list">
           <div>
@@ -143,10 +153,12 @@ export default async function LocationPage({ params }: LocationPageProps) {
               )}
             </dd>
           </div>
-          <div>
-            <dt>スケジュール更新日</dt>
-            <dd>{formatDate(latestScheduleUpdatedAt)}</dd>
-          </div>
+          {hasSchedules ? (
+            <div>
+              <dt>スケジュール更新日</dt>
+              <dd>{formatDate(latestScheduleUpdatedAt)}</dd>
+            </div>
+          ) : null}
           <div>
             <dt>店舗情報確認日</dt>
             <dd>{formatDate(location.last_verified_at)}</dd>
@@ -165,19 +177,34 @@ export default async function LocationPage({ params }: LocationPageProps) {
         </div>
       </section>
 
-      <section className="panel">
-        <h2>{location.name}のレッスン一覧</h2>
-        <ul className="plain-list">
-          {schedules.map((item) => (
-            <li key={item.schedule.id}>
-              {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} - {formatTime(item.schedule.end_time)} / {item.program.name} /{" "}
-              {item.schedule.studio_name ?? "スタジオ未設定"}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {hasSchedules ? (
+        <>
+          <section className="panel">
+            <h2>{location.name}のレッスン一覧</h2>
+            <ul className="plain-list">
+              {schedules.map((item) => (
+                <li key={item.schedule.id}>
+                  {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} -{" "}
+                  {formatTime(item.schedule.end_time)} / {item.program.name} /{" "}
+                  {item.schedule.studio_name ?? "スタジオ未設定"}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-      <LocationScheduleTable schedules={schedules} />
+          <LocationScheduleTable schedules={schedules} />
+        </>
+      ) : (
+        <section className="panel">
+          <h2>スタジオスケジュール</h2>
+          <p className="muted">この店舗のレッスンスケジュールは、現在GymMapに登録されていません。</p>
+          {location.official_url ? (
+            <a href={location.official_url} target="_blank" rel="noreferrer">
+              公式サイトでスケジュールを確認する
+            </a>
+          ) : null}
+        </section>
+      )}
     </div>
   );
 }

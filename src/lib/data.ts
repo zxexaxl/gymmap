@@ -1011,8 +1011,9 @@ export async function getLocationSlugs(): Promise<string[]> {
 export const getLocationBySlug = cache(async (slug: string): Promise<LocationDetail | null> => {
   const locations = await getLocations();
   const location = locations.find((item) => item.slug === slug);
+  const brand = location?.brand;
 
-  if (!location?.brand) {
+  if (!location || !brand) {
     return null;
   }
 
@@ -1026,17 +1027,13 @@ export const getLocationBySlug = cache(async (slug: string): Promise<LocationDet
       return left.schedule.weekday.localeCompare(right.schedule.weekday);
     });
 
-    if (!schedules.length) {
-      return null;
-    }
-
-    return { location, brand: location.brand, schedules };
+    return { location, brand, schedules };
   } catch (error) {
     console.error(
       `Failed to load schedules for location ${slug}:`,
       error instanceof Error ? error.message : String(error),
     );
-    return null;
+    return { location, brand, schedules: [] };
   }
 });
 
