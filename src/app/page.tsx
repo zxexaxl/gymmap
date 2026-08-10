@@ -37,8 +37,10 @@ export default async function HomePage() {
           <div className="home-hero-copy">
             <p className="home-hero-kicker">FIND YOUR NEXT CLASS</p>
             <h1>
-              行きたいレッスンが、
-              <span>すぐ見つかる。</span>
+              <span className="home-hero-title-lead">
+                <span>行きたい</span><span>レッスンが、</span>
+              </span>
+              <span className="home-hero-title-accent">すぐ見つかる。</span>
             </h1>
             <p>
               ジムを一つずつ調べなくても大丈夫。受けたいプログラムと通いやすい条件から、いま参加できるスタジオレッスンをまとめて探せます。

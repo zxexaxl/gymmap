@@ -277,7 +277,7 @@ p {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
   align-items: center;
   gap: clamp(28px, 5vw, 58px);
 }
@@ -297,12 +297,19 @@ p {
 .home-hero-copy h1 {
   max-width: 660px;
   margin-bottom: 20px;
-  font-size: clamp(2.4rem, 4.9vw, 4.35rem);
+  font-size: clamp(2.4rem, 4.4vw, 3.55rem);
   line-height: 1.08;
   letter-spacing: -0.055em;
 }
 
-.home-hero-copy h1 span {
+.home-hero-copy h1 > span {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.home-hero-copy h1 .home-hero-title-accent {
   color: #ff987c;
 }
 
@@ -1689,6 +1696,15 @@ p {
   .home-hero-copy h1 {
     margin-bottom: 16px;
     font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+
+  .home-hero-copy h1 > span {
+    width: auto;
+    white-space: normal;
+  }
+
+  .home-hero-title-lead > span {
+    display: block;
   }
 
   .home-hero-copy > p:not(.home-hero-kicker) {
