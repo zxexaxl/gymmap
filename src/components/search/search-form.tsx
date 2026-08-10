@@ -1,3 +1,5 @@
+import Form from "next/form";
+
 import { defaultSearchFilters, durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
 import type { GymBrand, SearchFilters } from "@/lib/types";
 
@@ -9,7 +11,7 @@ type SearchFormProps = {
 
 export function SearchForm({ brands, initialValues = defaultSearchFilters, action = "/search" }: SearchFormProps) {
   return (
-    <form className="panel search-form" action={action}>
+    <Form className="panel search-form" action={action}>
       <div className="field-grid">
         <label className="field">
           <span>レッスン名</span>
@@ -63,6 +65,6 @@ export function SearchForm({ brands, initialValues = defaultSearchFilters, actio
         <button type="submit">検索する</button>
       </div>
       <p className="form-help">BODYCOMBAT、ヨガ、ピラティス、ZUMBA などのレッスン検索に対応しています。</p>
-    </form>
+    </Form>
   );
 }

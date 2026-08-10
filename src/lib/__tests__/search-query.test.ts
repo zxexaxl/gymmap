@@ -1,7 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { getProgramQueryDebug, scoreProgramQueryMatch, normalizeSearchKeyword } from "../search-query";
+import {
+  expandProgramSearchKeyword,
+  getProgramQueryDebug,
+  scoreProgramQueryMatch,
+  normalizeSearchKeyword,
+} from "../search-query";
 import type { SearchResult } from "../types";
 
 const baseResult = (overrides: Partial<SearchResult["schedule"]>): SearchResult => ({
@@ -173,4 +178,14 @@ test("query debug lists only the actual matching fields", () => {
     hits.map((hit) => hit.value),
     ["BODYCOMBAT 45", "BODYCOMBAT", "body combat", "bodycombat"],
   );
+});
+
+test("database search expansion preserves program aliases", () => {
+  assert.ok(expandProgramSearchKeyword("ボディコンバット").canonicalNames.includes("BODYCOMBAT"));
+  assert.ok(expandProgramSearchKeyword("ホットヨガ").canonicalNames.includes("ヨガ"));
+});
+
+test("database search expansion preserves brand aliases", () => {
+  assert.deepEqual(expandProgramSearchKeyword("レズミルズ").programBrands, ["Les Mills"]);
+  assert.deepEqual(expandProgramSearchKeyword("ラディカル").programBrands, ["Radical Fitness"]);
 });

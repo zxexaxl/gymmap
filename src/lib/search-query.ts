@@ -1,4 +1,4 @@
-import { getProgramBrandAliases, getProgramSearchAliases } from "@/lib/program-master";
+import { getProgramBrandAliases, getProgramSearchAliases, programMaster } from "@/lib/program-master";
 import type { MapLessonSearchItem, SearchResult } from "@/lib/types";
 
 export type ProgramQueryHit = {
@@ -43,6 +43,28 @@ function getMatchScore(query: string, candidate?: string | null) {
   }
 
   return 0;
+}
+
+export function expandProgramSearchKeyword(value: string) {
+  const query = normalizeSearchKeyword(value);
+
+  if (!query) {
+    return { canonicalNames: [], programBrands: [] };
+  }
+
+  const canonicalNames = programMaster
+    .filter((entry) =>
+      [entry.canonicalProgramName, ...entry.searchAliases].some((candidate) => getMatchScore(query, candidate) > 0),
+    )
+    .map((entry) => entry.canonicalProgramName);
+  const programBrands = Array.from(
+    new Set(programMaster.map((entry) => entry.programBrand).filter((brand): brand is NonNullable<typeof brand> => Boolean(brand))),
+  ).filter((brand) => getProgramBrandAliases(brand).some((candidate) => getMatchScore(query, candidate) > 0));
+
+  return {
+    canonicalNames: Array.from(new Set(canonicalNames)),
+    programBrands,
+  };
 }
 
 export function getProgramQueryDebug(item: SearchResult, query: string): ProgramQueryHit[] {

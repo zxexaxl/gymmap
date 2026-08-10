@@ -3,7 +3,12 @@ import { unstable_cache } from "next/cache";
 
 import { programMaster } from "@/lib/program-master";
 import { normalizeProgramName } from "@/lib/normalizeProgramName";
-import { normalizeSearchKeyword, scoreProgramQueryMatch, scoreProgramTextQueryMatch } from "@/lib/search-query";
+import {
+  expandProgramSearchKeyword,
+  normalizeSearchKeyword,
+  scoreProgramQueryMatch,
+  scoreProgramTextQueryMatch,
+} from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
 import { filterLatestSchedulePeriods, getLatestSchedulePeriodByLocation } from "@/lib/latest-schedule-period";
@@ -489,7 +494,7 @@ export async function getSearchResults(filters: SearchFilters): Promise<SearchRe
   return filterResults(mappedResults, filters);
 }
 
-export async function getSearchResultPage(
+async function getSearchResultPageLegacy(
   filters: SearchFilters,
   requestedPage = 1,
   pageSize = 20,
@@ -575,6 +580,120 @@ export async function getSearchResultPage(
       error instanceof Error ? error.message : String(error),
     );
     return { results: [], totalResults: 0, currentPage: 1, pageSize, latestScheduleUpdate: null };
+  }
+}
+
+type SearchSchedulePageRpcRow = {
+  schedule_id: string | null;
+  result_order: number | string;
+  total_count: number | string;
+  latest_schedule_update: string | null;
+};
+
+async function fetchSearchSchedulePageRpc(
+  filters: SearchFilters,
+  requestedPage: number,
+  pageSize: number,
+) {
+  const supabase = getSupabaseClient();
+  const query = normalizeSearchKeyword(filters.q);
+  const queryCompact = query.replace(/\s+/g, "");
+  const expansions = expandProgramSearchKeyword(filters.q);
+  const offset = (Math.max(requestedPage, 1) - 1) * pageSize;
+  const { data, error } = await supabase.rpc("search_class_schedule_page", {
+    p_query: query,
+    p_query_compact: queryCompact,
+    p_canonical_names: expansions.canonicalNames,
+    p_program_brands: expansions.programBrands,
+    p_weekday: filters.weekday,
+    p_time_range: filters.timeRange,
+    p_duration_range: filters.durationRange,
+    p_brand: filters.brand,
+    p_area: filters.area,
+    p_offset: offset,
+    p_limit: pageSize,
+  });
+
+  if (error) {
+    throw error;
+  }
+
+  const rpcRows = (data as SearchSchedulePageRpcRow[] | null) ?? [];
+  const metadata = rpcRows[0] ?? null;
+
+  return {
+    scheduleIds: rpcRows.flatMap((row) => (row.schedule_id ? [row.schedule_id] : [])),
+    totalResults: metadata ? Number(metadata.total_count) : 0,
+    latestScheduleUpdate: metadata?.latest_schedule_update ?? null,
+  };
+}
+
+async function fetchJoinedSchedulesByIds(scheduleIds: string[]) {
+  if (!scheduleIds.length) {
+    return [];
+  }
+
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase
+    .from("class_schedules")
+    .select(
+      `
+        *,
+        gym_locations (
+          *,
+          gym_brands (*)
+        ),
+        programs (*)
+      `,
+    )
+    .in("id", scheduleIds);
+
+  if (error) {
+    throw error;
+  }
+
+  const rows = (data as SupabaseJoinedSchedule[] | null) ?? [];
+  const rowsById = new Map(rows.map((row) => [row.id, row]));
+  return scheduleIds.flatMap((id) => {
+    const row = rowsById.get(id);
+    return row ? [row] : [];
+  });
+}
+
+export async function getSearchResultPage(
+  filters: SearchFilters,
+  requestedPage = 1,
+  pageSize = 20,
+): Promise<SearchResultPage> {
+  if (!hasSupabaseEnv()) {
+    return { results: [], totalResults: 0, currentPage: 1, pageSize, latestScheduleUpdate: null };
+  }
+
+  try {
+    let page = await fetchSearchSchedulePageRpc(filters, requestedPage, pageSize);
+    const totalPages = Math.max(1, Math.ceil(page.totalResults / pageSize));
+    const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);
+
+    if (currentPage !== requestedPage) {
+      page = await fetchSearchSchedulePageRpc(filters, currentPage, pageSize);
+    }
+
+    const rows = await fetchJoinedSchedulesByIds(page.scheduleIds);
+    const results = filterResults(rows.map(mapJoinedSchedule), filters);
+
+    return {
+      results,
+      totalResults: page.totalResults,
+      currentPage,
+      pageSize,
+      latestScheduleUpdate: page.latestScheduleUpdate,
+    };
+  } catch (error) {
+    console.error(
+      "Failed to use database-backed paginated search; falling back to the legacy search:",
+      error instanceof Error ? error.message : String(error),
+    );
+    return getSearchResultPageLegacy(filters, requestedPage, pageSize);
   }
 }
 
