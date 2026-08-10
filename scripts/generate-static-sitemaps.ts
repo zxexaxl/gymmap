@@ -196,10 +196,22 @@ async function main() {
     }
   >();
 
-  filterLatestSchedulePeriods(scheduleRows).forEach((schedule) => {
+  const latestScheduleRows = filterLatestSchedulePeriods(scheduleRows);
+  const scheduledLocationIds = new Set<string>();
+  const scheduledSeoProgramIds = new Set<string>();
+
+  latestScheduleRows.forEach((schedule) => {
     const location = activeLocations.get(schedule.location_id);
     const program = seoPrograms.get(schedule.program_id);
     const areaName = getAreaName(location?.prefecture, location?.city);
+
+    if (location) {
+      scheduledLocationIds.add(location.id);
+    }
+
+    if (program) {
+      scheduledSeoProgramIds.add(program.id);
+    }
 
     if (!location || !program || !areaName) {
       return;
@@ -224,19 +236,23 @@ async function main() {
     areaGroups.set(key, group);
   });
 
-  const locationEntries = ((locations as GymLocationRow[] | null) ?? []).map((location) => ({
-    loc: `${siteUrl}/locations/${location.slug}`,
-    lastmod: location.last_verified_at || location.updated_at,
-    changefreq: "weekly" as const,
-    priority: 0.8,
-  }));
+  const locationEntries = ((locations as GymLocationRow[] | null) ?? [])
+    .filter((location) => scheduledLocationIds.has(location.id))
+    .map((location) => ({
+      loc: `${siteUrl}/locations/${location.slug}`,
+      lastmod: location.last_verified_at || location.updated_at,
+      changefreq: "weekly" as const,
+      priority: 0.8,
+    }));
 
-  const programEntries = ((programs as ProgramRow[] | null) ?? []).map((program) => ({
-    loc: `${siteUrl}${buildProgramPath(program.slug)}`,
-    lastmod: now,
-    changefreq: "weekly" as const,
-    priority: 0.8,
-  }));
+  const programEntries = ((programs as ProgramRow[] | null) ?? [])
+    .filter((program) => scheduledSeoProgramIds.has(program.id))
+    .map((program) => ({
+      loc: `${siteUrl}${buildProgramPath(program.slug)}`,
+      lastmod: now,
+      changefreq: "weekly" as const,
+      priority: 0.8,
+    }));
   const areaEntries = Array.from(areaGroups.values())
     .filter((group) =>
       shouldIndexAreaProgramPage({

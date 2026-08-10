@@ -2,505 +2,559 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gymmap.vercel.app/locations/central-aoto</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:16.155739+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-centerminami</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cf-higashimatsuyama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-cf-iidabashi</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:16.772492+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/central-csg24-kanamachi</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/central-cf-kotesashi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cf-mobara</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cf-motoyawata</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cf-sodegaura</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cf-yatsu</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-chiba-f</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-chiba-newtown</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-csp-fujigaoka</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-csp-hakkei</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-csp-shinmatsudo</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-csp-tsurumi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-csp-wako</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-cw-hiyoshi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-cw-kasai</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:17.5026+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-cw-keiseikoiwa</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:17.695728+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-fuchu</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:17.888497+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-fujisawa</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-fussa</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:18.074984+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-futamatagawa</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-gc24-kameari</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:18.256438+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-gs-higashiomiya</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-gs-musashishinjo</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-gs-saitamachuo</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-gs-shinurayasu</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-hachioji</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:18.442953+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-higashijujo</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:18.633919+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-higashitotsuka-f</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-higashitotsuka-s</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-hiratsuka</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-ichigao</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-ichikawa</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-inagekaigan</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-iwatsuki</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-jiyugaoka</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-kameari</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:18.913307+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-kashiwa</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-kitamoto</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-kiyose</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:19.095592+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-koshigaya-lt</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-kunitachi</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:19.282412+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-lavie-kamata</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:19.471065+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-meguro</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-minamiaoyama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-minamioizumi</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:19.654091+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-minamisenjyu</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:19.836348+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/central-nishidai</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/central-misato</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-mizonokuchi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-musashikosugi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-naganuma</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-nagareyama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-nissay-matsudo</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-noukendai</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-ome</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:20.032026+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-omiyamiyahara</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-omori</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:20.224158+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-ootakanomori</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-p-yachiyo</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-premier</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-ryokuentoshi</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-seijo</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:20.477529+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-setagaya-rec</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:20.659447+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-shiki</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-shimokitazawa</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:20.854077+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-shinkawasaki</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-shintoshin-saitama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-shinurayasu</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-shonanlt</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-soga</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-soya</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-takenotsuka</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:21.046638+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-tateyama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-tennozu</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:21.229166+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-toa-asagaya</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:21.413398+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-tokiwadai</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:21.60279+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-totsuka</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-tsukuda</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:21.827149+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-w-abiko</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-w-kamiikebukuro</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:22.055458+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-w-koshigaya</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-w-nagatsuta</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-w-naruse</loc>
+    <lastmod>2026-08-09T12:29:34.76+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-w-nishiarai</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:22.240853+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-w-ookurayama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-yachiyodai</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-yoga</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:22.428952+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-yogapis-inagekaigan</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/central-yogapis-koshigaya</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/central-yogapis-omori</loc>
-    <lastmod>2026-05-07T00:12:54.875215+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:22.617312+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-10210</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-11100</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-11110</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-1112</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-11130</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12100</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12110</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12120</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12130</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12131</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12140</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12150</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12160</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12170</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-12180</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13100</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13110</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13120</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13121</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13130</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13140</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13150</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13160</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13170</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13180</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13190</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13191</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13200</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13205</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13210</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13220</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13230</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13240</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13250</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-13260</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14110</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14130</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14140</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14150</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14160</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-14170</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-180914</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-18116</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-191002</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20200508</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20201101</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20210924</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20211026</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20220509</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-20220627</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-2222</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-71221</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/golds-gym-9999</loc>
-    <lastmod>2026-05-12T12:01:41.334588+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/central-yokohama</loc>
+    <lastmod>2026-08-09T12:29:34.761+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -511,20 +565,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-bodymake-kohoku</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-flat-kashiwa</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gymmap.vercel.app/locations/jexer-higashi-kanagawa</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:35.862545+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -548,25 +590,7 @@
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-kawasaki</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-lightgym-hodogaya</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-lightgym-ichikawa</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-lightgym-omiya</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:36.050849+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -578,19 +602,13 @@
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-omiya-saitama</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:36.433438+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-otsuka</loc>
     <lastmod>2026-04-14T05:34:31.732803+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-pilates-yokohama</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -602,7 +620,7 @@
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-shinkawasaki-kanagawa</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:36.640316+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -613,14 +631,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/jexer-sopra-funabashi</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gymmap.vercel.app/locations/jexer-todakoen</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:43:53.075097+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -632,13 +644,13 @@
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-urawa</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:37.052062+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/jexer-yokohama</loc>
-    <lastmod>2026-04-14T05:49:06.609786+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:37.264776+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -649,1112 +661,506 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-000355</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-000401</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:37.458909+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-000584</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:37.65581+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-000589</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-000590</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:37.840686+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-000643</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:38.363174+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-003930</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:38.569677+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-003932</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:38.830394+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-003964</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004033</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:39.020656+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004039</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004041</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004043</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004046</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:39.400216+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004048</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:40.156058+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004053</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:40.402613+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004054</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:40.582399+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004060</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004062</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:40.775724+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004067</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:41.139054+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004070</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:41.330934+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004071</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:41.520006+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004079</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:41.70838+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004081</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:41.969551+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004085</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:42.157606+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004089</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:42.347823+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004103</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:42.543825+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004112</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:42.736042+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004404</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:42.91902+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004409</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:43.108651+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004411</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:43.300662+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004414</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:43.546862+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004423</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:43.731086+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004442</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:43.91852+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004446</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:44.112113+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004447</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:44.293672+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004461</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:44.474442+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004462</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:44.663682+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004464</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:44.851642+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004469</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:45.115904+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004475</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:45.296417+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004479</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:45.490043+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004483</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:45.673374+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004486</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-004488</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:45.856556+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004498</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.042358+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-004501</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.227543+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006022</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.407891+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006023</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.589466+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006024</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.78139+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006026</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:46.965075+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006027</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:47.231519+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006028</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:47.424744+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006029</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:47.621803+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006033</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:47.802182+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-006034</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-007701</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/konami-sports-007804</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:47.986938+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007833</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:48.550666+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007851</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:48.797054+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007871</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:48.988173+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007876</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:49.175582+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007877</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:49.36747+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/konami-sports-007879</loc>
-    <lastmod>2026-05-12T11:02:46.003261+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-azabujuban-reflet</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-chofu</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-ebisu</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-ebisu-reflet</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-hachiouji</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-hibiya</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-hiyoshi</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-ichigao</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kaminagaya</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kanagawa</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kashiwa</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-katsushika</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kichijoji</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kinshicho</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-kodaira</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:49.551655+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/megalos-koiwa</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-machida</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-megalos-wp-higashikoganei</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-minamisunamachi</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-minatomirai-reflet</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-mitaka</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-motoyawata</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-musashi</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-musashi-reflet</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-nakanobu</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-nishishinjuku</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-sagamiono</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-saginuma</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-shirokanedai</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-souka</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tabata</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tachikawa-kita</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tachikawa-kita-2</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tachikawa-reflet</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tamagawa</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-tsunashima</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-yamato</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/megalos-yokohama</loc>
-    <lastmod>2026-05-16T10:08:28.453236+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-bodyup-higashiomiya</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-bodyup-nishikasai</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:52.509792+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-fujisawa-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:40:10.610876+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-ginza-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-higashiomiya-newbuild-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-hikarigaoka-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-hiratsuka-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:57.181372+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-kichijoji-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:57.370825+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-machiya-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:57.567098+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-matsudo-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:57.752076+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-minamirinkan-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:57.942746+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-mizonokuchi-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:43:54.368466+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-musashiurawa-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-nagayama-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:58.125915+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-nakayama-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:58.320009+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-nas-pilates</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-nishikasai-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-nishinippori-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:58.760074+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-np-onthego-nishikasai</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-np-onthego-osaki</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-np-onthego-rivercity21</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-np-onthego-shinkawasaki</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-np-onthego-shinozaki</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-osaki-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-oyumino-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:33:59.877692+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-rivercity21-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:00.060162+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-rokakoen-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-seisekisakuragaoka-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-seya-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:00.323483+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-shibaura-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:43:54.570806+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-shinkamagaya-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:00.50915+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-shinkawasaki-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:00.70901+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gymmap.vercel.app/locations/sports-club-nas-shinozaki-index</loc>
+    <lastmod>2026-08-08T14:25:32.33694+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-shonandai-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-fujisawa-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-mitaka-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-mizonokuchi-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-musashiurawa-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-operacity-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-osaki-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-rokakouen-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-shinkamagaya-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-shinozaki</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-takao-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-store-warabi</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:00.887608+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-takao-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-tennis_hikarigaoka-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/sports-club-nas-tennis_koshigaya-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:03.002248+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-totsuka-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:40:11.340638+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-wakabadai-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:03.562692+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gymmap.vercel.app/locations/sports-club-nas-warabi-index</loc>
-    <lastmod>2026-05-16T09:54:26.999395+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp001</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp004</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp005</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp007</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp008</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp010</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp013</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp023</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp025</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp026</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp027</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp028</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp029</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp031</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp032</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp034</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp035</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp036</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp037</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp041</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp046</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp048</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp049</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp051</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp052</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp056</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp060</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp062</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp063</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp065</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp067</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp069</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp070</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp074</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp076</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp082</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp084</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp096</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp099</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gymmap.vercel.app/locations/tipness-shp100</loc>
-    <lastmod>2026-05-12T12:22:35.883412+00:00</lastmod>
+    <lastmod>2026-08-07T16:34:03.775486+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
