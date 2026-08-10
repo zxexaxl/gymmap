@@ -204,9 +204,9 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
   ]);
 
   return (
-    <div className="page-stack">
+    <div className="page-stack program-landing-page">
       <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
-      <section className="panel">
+      <section className="panel program-landing-hero">
         <p className="eyebrow">プログラム別ガイド</p>
         <h1>{page.program.name}が受けられるジム・最新スケジュール</h1>
         <p className="muted">
@@ -235,13 +235,16 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         <div className="program-page-actions">
           <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
           <div className="link-row">
+            <Link className="primary-link-button program-location-jump" href="#program-locations">
+              受けられるジムを見る
+            </Link>
             <Link href={buildProgramSearchPath(page.program.name)}>すべての条件で検索する</Link>
             <Link href="/">検索トップへ戻る</Link>
           </div>
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel program-condition-section">
         <div className="section-heading">
           <div>
             <p className="eyebrow">曜日・時間から探す</p>
@@ -277,7 +280,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
       </section>
 
       {featuredPrefectures.length ? (
-        <section className="panel">
+        <section className="panel program-area-section">
           <p className="eyebrow">地域から探す</p>
           <h2>{page.program.name}を都道府県から探す</h2>
           <p className="muted">掲載店舗が複数ある都道府県を、店舗数の多い順に表示しています。</p>
@@ -309,16 +312,27 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         </section>
       ) : null}
 
-      <section className="panel">
+      <section
+        className="panel page-anchor-section program-location-section"
+        id="program-locations"
+      >
         <div className="section-heading">
           <div>
             <p className="eyebrow">開催店舗</p>
             <h2>{page.program.name}が受けられるジム</h2>
             <p className="muted">週間の開催枠が多い店舗から表示しています。</p>
           </div>
-          <Link href={buildProgramSearchPath(page.program.name)}>全{page.locationCount}店舗を見る</Link>
+          <Link
+            className="program-all-locations-link"
+            href={buildProgramSearchPath(page.program.name)}
+          >
+            全{page.locationCount}店舗を見る
+          </Link>
         </div>
-        <div className="result-list">
+        <p className="program-mobile-location-note muted">
+          開催枠の多い5店舗を表示しています。ほかの店舗は「全店舗を見る」から確認できます。
+        </p>
+        <div className="result-list program-location-list">
           {featuredLocations.map(({ locationId, first, schedules }) => (
             <article key={locationId} className="result-card">
               <div className="result-card-main">
@@ -359,7 +373,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel program-faq-section">
         <p className="eyebrow">よくある探し方</p>
         <h2>{page.program.name}のジム・スケジュールについて</h2>
         <div className="program-faq-list">

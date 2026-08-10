@@ -730,6 +730,10 @@ p {
   margin: 0;
 }
 
+.program-mobile-location-note {
+  display: none;
+}
+
 .result-program-heading {
   display: flex;
   align-items: flex-start;
@@ -1924,6 +1928,53 @@ p {
 
   .program-faq-list {
     grid-template-columns: 1fr;
+  }
+
+  .program-landing-page .program-landing-hero {
+    order: 1;
+  }
+
+  .program-landing-page .program-location-section {
+    order: 2;
+  }
+
+  .program-landing-page .program-condition-section {
+    order: 3;
+  }
+
+  .program-landing-page .program-area-section {
+    order: 4;
+  }
+
+  .program-landing-page .program-faq-section {
+    order: 5;
+  }
+
+  .program-location-jump,
+  .program-all-locations-link {
+    width: 100%;
+  }
+
+  .program-all-locations-link {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    font-weight: 800;
+  }
+
+  .program-mobile-location-note {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.82rem;
+  }
+
+  .program-location-list .result-card:nth-child(n + 6),
+  .program-location-times li:nth-child(n + 3) {
+    display: none;
   }
 
   .program-filter-links {
