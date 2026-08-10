@@ -5,15 +5,9 @@ import { notFound } from "next/navigation";
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getLocationBySlug } from "@/lib/data";
-import { buildCanonicalPath } from "@/lib/site";
+import { buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
-import {
-  formatDate,
-  formatTime,
-  formatWeekday,
-  getLatestScheduleUpdatedAt,
-  getLocationAddress,
-} from "@/lib/utils";
+import { formatDate, getLatestScheduleUpdatedAt, getLocationAddress } from "@/lib/utils";
 
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
@@ -83,6 +77,28 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
   const hasSchedules = schedules.length > 0;
   const latestScheduleUpdatedAt = getLatestScheduleUpdatedAt(schedules.map((item) => item.schedule));
+  const programCounts = new Map<
+    string,
+    { id: string; name: string; slug: string; scheduleCount: number }
+  >();
+
+  schedules.forEach(({ program }) => {
+    const existing = programCounts.get(program.id);
+
+    programCounts.set(program.id, {
+      id: program.id,
+      name: program.name,
+      slug: program.slug,
+      scheduleCount: (existing?.scheduleCount ?? 0) + 1,
+    });
+  });
+
+  const availablePrograms = Array.from(programCounts.values()).sort(
+    (left, right) =>
+      right.scheduleCount - left.scheduleCount || left.name.localeCompare(right.name, "ja"),
+  );
+  const featuredPrograms = availablePrograms.slice(0, 12);
+  const remainingPrograms = availablePrograms.slice(12);
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address || location.name,
   )}`;
@@ -180,16 +196,43 @@ export default async function LocationPage({ params }: LocationPageProps) {
       {hasSchedules ? (
         <>
           <section className="panel">
-            <h2>{location.name}のレッスン一覧</h2>
-            <ul className="plain-list">
-              {schedules.map((item) => (
-                <li key={item.schedule.id}>
-                  {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} -{" "}
-                  {formatTime(item.schedule.end_time)} / {item.program.name} /{" "}
-                  {item.schedule.studio_name ?? "スタジオ未設定"}
-                </li>
+            <div className="section-heading">
+              <div>
+                <h2>この店舗で受けられる主なプログラム</h2>
+                <p className="muted">
+                  全{availablePrograms.length}種類。開催枠の多いプログラムから表示しています。
+                </p>
+              </div>
+            </div>
+            <div className="location-program-chips">
+              {featuredPrograms.map((program) => (
+                <Link
+                  className="location-program-chip"
+                  href={buildProgramPath(program.slug)}
+                  key={program.id}
+                >
+                  <span>{program.name}</span>
+                  <small>{program.scheduleCount}件</small>
+                </Link>
               ))}
-            </ul>
+            </div>
+            {remainingPrograms.length ? (
+              <details className="location-program-more">
+                <summary>ほか{remainingPrograms.length}種類をすべて見る</summary>
+                <div className="location-program-chips">
+                  {remainingPrograms.map((program) => (
+                    <Link
+                      className="location-program-chip"
+                      href={buildProgramPath(program.slug)}
+                      key={program.id}
+                    >
+                      <span>{program.name}</span>
+                      <small>{program.scheduleCount}件</small>
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            ) : null}
           </section>
 
           <LocationScheduleTable schedules={schedules} />
