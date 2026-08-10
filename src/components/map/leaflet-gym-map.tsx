@@ -1,21 +1,37 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
 import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
 
 import type { Coordinates, MapBounds, MapComponentProps } from "@/components/map/map-types";
 
 function MapBoundsReporter({ onBoundsChange }: { onBoundsChange?: (bounds: MapBounds) => void }) {
+  const lastBoundsRef = useRef<MapBounds | null>(null);
+
   useMapEvents({
     moveend(event) {
       const bounds = event.target.getBounds();
-      onBoundsChange?.({
+      const nextBounds = {
         north: bounds.getNorth(),
         south: bounds.getSouth(),
         east: bounds.getEast(),
         west: bounds.getWest(),
-      });
+      };
+      const previousBounds = lastBoundsRef.current;
+      const isUnchanged =
+        previousBounds !== null &&
+        Math.abs(previousBounds.north - nextBounds.north) < 0.000001 &&
+        Math.abs(previousBounds.south - nextBounds.south) < 0.000001 &&
+        Math.abs(previousBounds.east - nextBounds.east) < 0.000001 &&
+        Math.abs(previousBounds.west - nextBounds.west) < 0.000001;
+
+      if (isUnchanged) {
+        return;
+      }
+
+      lastBoundsRef.current = nextBounds;
+      onBoundsChange?.(nextBounds);
     },
   });
 
@@ -32,35 +48,59 @@ function MapController({
   hasSelectedLocation: boolean;
 }) {
   const map = useMap();
+  const hasPositionedRef = useRef(false);
 
   useEffect(() => {
-    const handle = window.setTimeout(() => {
-      map.invalidateSize();
+    if (hasSelectedLocation || !bounds) {
+      const nextCenter: LatLngExpression = [center.latitude, center.longitude];
+      const isAlreadyAtTarget =
+        map.distance(map.getCenter(), nextCenter) < 1 && Math.abs(map.getZoom() - 13) < 0.01;
 
-      if (hasSelectedLocation || !bounds) {
-        map.flyTo([center.latitude, center.longitude], 13, {
-          animate: true,
-          duration: 0.6,
-        });
-      } else if (bounds) {
-        map.fitBounds(bounds, {
-          padding: [28, 28],
-          maxZoom: 14,
-        });
+      if (!isAlreadyAtTarget) {
+        if (hasPositionedRef.current) {
+          map.flyTo(nextCenter, 13, {
+            animate: true,
+            duration: 0.35,
+          });
+        } else {
+          map.setView(nextCenter, 13, { animate: false });
+        }
       }
-    }, 120);
+    } else {
+      map.fitBounds(bounds, {
+        animate: hasPositionedRef.current,
+        padding: [28, 28],
+        maxZoom: 14,
+      });
+    }
+
+    hasPositionedRef.current = true;
+  }, [bounds, center.latitude, center.longitude, hasSelectedLocation, map]);
+
+  useEffect(() => {
+    const container = map.getContainer();
+    let previousWidth = container.clientWidth;
+    let previousHeight = container.clientHeight;
 
     const resizeObserver = new ResizeObserver(() => {
-      map.invalidateSize();
+      const nextWidth = container.clientWidth;
+      const nextHeight = container.clientHeight;
+
+      if (nextWidth === previousWidth && nextHeight === previousHeight) {
+        return;
+      }
+
+      previousWidth = nextWidth;
+      previousHeight = nextHeight;
+      map.invalidateSize({ animate: false, debounceMoveend: true, pan: false });
     });
 
-    resizeObserver.observe(map.getContainer());
+    resizeObserver.observe(container);
 
     return () => {
-      window.clearTimeout(handle);
       resizeObserver.disconnect();
     };
-  }, [bounds, center.latitude, center.longitude, hasSelectedLocation, map]);
+  }, [map]);
 
   return null;
 }
@@ -78,12 +118,12 @@ export function LeafletGymMap({
   const selectedLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
 
   const mapCenter: LatLngExpression = useMemo(() => {
-    if (selectedLocation?.latitude && selectedLocation?.longitude) {
+    if (selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null) {
       return [selectedLocation.latitude, selectedLocation.longitude];
     }
 
     return [center.latitude, center.longitude];
-  }, [center.latitude, center.longitude, selectedLocation?.latitude, selectedLocation?.longitude]);
+  }, [center, selectedLocation]);
 
   const bounds = useMemo<LatLngBoundsExpression | null>(() => {
     const points = locations
@@ -105,7 +145,7 @@ export function LeafletGymMap({
     <div className="leaflet-map-root">
       <MapContainer
         center={mapCenter}
-        zoom={12}
+        zoom={selectedLocation ? 13 : 12}
         scrollWheelZoom={true}
         className="leaflet-map"
         whenReady={() => {

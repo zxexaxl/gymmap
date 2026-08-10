@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { appleMapsToken } from "@/lib/map-provider";
-import type { MapComponentProps } from "@/components/map/map-types";
+import type { MapBounds, MapComponentProps } from "@/components/map/map-types";
 
 const APPLE_MAPKIT_SCRIPT_URL = "https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js";
 const MAPKIT_FALLBACK_MESSAGE = "Apple Maps を読み込めなかったため、OpenStreetMap に切り替えます。";
@@ -90,6 +90,8 @@ export function AppleGymMap({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<any>(null);
   const annotationsRef = useRef<any[]>([]);
+  const lastCenterKeyRef = useRef<string | null>(null);
+  const lastBoundsRef = useRef<MapBounds | null>(null);
   const [mapkitState, setMapkitState] = useState<any>(null);
   const [mapError, setMapError] = useState<string | null>(null);
 
@@ -97,13 +99,13 @@ export function AppleGymMap({
 
   const selectedCenter = useMemo(
     () =>
-      selectedLocation?.latitude && selectedLocation?.longitude
+      selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
         ? {
             latitude: selectedLocation.latitude,
             longitude: selectedLocation.longitude,
           }
-        : center,
-    [center, selectedLocation?.latitude, selectedLocation?.longitude],
+        : { latitude: center.latitude, longitude: center.longitude },
+    [center, selectedLocation],
   );
 
   useEffect(() => {
@@ -146,7 +148,13 @@ export function AppleGymMap({
         showsMapTypeControl: false,
       });
 
-      map.center = new mapkitState.Coordinate(center.latitude, center.longitude);
+      const initialCoordinate = new mapkitState.Coordinate(selectedCenter.latitude, selectedCenter.longitude);
+      if (mapkitState.CoordinateRegion && mapkitState.CoordinateSpan) {
+        map.region = new mapkitState.CoordinateRegion(initialCoordinate, new mapkitState.CoordinateSpan(0.08, 0.08));
+      } else {
+        map.center = initialCoordinate;
+      }
+      lastCenterKeyRef.current = `${selectedCenter.latitude}:${selectedCenter.longitude}`;
       mapRef.current = map;
 
       console.info("[map] Apple Maps initialized", {
@@ -159,7 +167,7 @@ export function AppleGymMap({
       setMapError(MAPKIT_FALLBACK_MESSAGE);
       onProviderError?.(MAPKIT_FALLBACK_MESSAGE);
     }
-  }, [center, locations.length, mapkitState, onProviderError, selectedLocationId]);
+  }, [center, locations.length, mapkitState, onProviderError, selectedCenter.latitude, selectedCenter.longitude, selectedLocationId]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -219,17 +227,27 @@ export function AppleGymMap({
       return;
     }
 
+    const nextCenterKey = `${selectedCenter.latitude}:${selectedCenter.longitude}`;
+    if (lastCenterKeyRef.current === nextCenterKey) {
+      return;
+    }
+
     const nextCoordinate = new mapkitState.Coordinate(selectedCenter.latitude, selectedCenter.longitude);
 
-    if (typeof map.setCenterAnimated === "function") {
+    if (mapkitState.CoordinateRegion && mapkitState.CoordinateSpan) {
+      const nextRegion = new mapkitState.CoordinateRegion(nextCoordinate, new mapkitState.CoordinateSpan(0.08, 0.08));
+      if (typeof map.setRegionAnimated === "function") {
+        map.setRegionAnimated(nextRegion);
+      } else {
+        map.region = nextRegion;
+      }
+    } else if (typeof map.setCenterAnimated === "function") {
       map.setCenterAnimated(nextCoordinate);
     } else {
       map.center = nextCoordinate;
     }
 
-    if ("region" in map && mapkitState.CoordinateRegion && mapkitState.CoordinateSpan) {
-      map.region = new mapkitState.CoordinateRegion(nextCoordinate, new mapkitState.CoordinateSpan(0.08, 0.08));
-    }
+    lastCenterKeyRef.current = nextCenterKey;
   }, [mapkitState, selectedCenter.latitude, selectedCenter.longitude]);
 
   useEffect(() => {
@@ -246,12 +264,26 @@ export function AppleGymMap({
         return;
       }
 
-      onBoundsChange({
+      const nextBounds = {
         north: region.center.latitude + region.span.latitudeDelta / 2,
         south: region.center.latitude - region.span.latitudeDelta / 2,
         east: region.center.longitude + region.span.longitudeDelta / 2,
         west: region.center.longitude - region.span.longitudeDelta / 2,
-      });
+      };
+      const previousBounds = lastBoundsRef.current;
+      const isUnchanged =
+        previousBounds !== null &&
+        Math.abs(previousBounds.north - nextBounds.north) < 0.000001 &&
+        Math.abs(previousBounds.south - nextBounds.south) < 0.000001 &&
+        Math.abs(previousBounds.east - nextBounds.east) < 0.000001 &&
+        Math.abs(previousBounds.west - nextBounds.west) < 0.000001;
+
+      if (isUnchanged) {
+        return;
+      }
+
+      lastBoundsRef.current = nextBounds;
+      onBoundsChange(nextBounds);
     };
 
     map.addEventListener?.("region-change-end", reportBounds);

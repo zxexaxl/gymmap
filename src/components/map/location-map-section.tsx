@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
@@ -180,33 +180,48 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
   const matchedLocationIds = new Set(matchesByLocationId.keys());
   const fallbackCenter = currentPosition ?? TOKYO_CENTER;
-  const mappableLocations = locations
-    .filter((location) => location.latitude && location.longitude)
-    .map((location) => ({
-      ...location,
-      distanceKm:
-        location.latitude && location.longitude
-          ? haversineDistanceKm(fallbackCenter, {
-              latitude: location.latitude,
-              longitude: location.longitude,
-            })
-          : null,
-    }))
-    .sort((left, right) => {
-      if (left.distanceKm === null && right.distanceKm === null) {
-        return left.name.localeCompare(right.name);
-      }
+  const mappableLocations = useMemo(
+    () =>
+      locations
+        .filter((location) => location.latitude !== null && location.longitude !== null)
+        .map((location) => ({
+          ...location,
+          distanceKm:
+            location.latitude !== null && location.longitude !== null
+              ? haversineDistanceKm(fallbackCenter, {
+                  latitude: location.latitude,
+                  longitude: location.longitude,
+                })
+              : null,
+        }))
+        .sort((left, right) => {
+          if (left.distanceKm === null && right.distanceKm === null) {
+            return left.name.localeCompare(right.name);
+          }
 
-      if (left.distanceKm === null) {
-        return 1;
-      }
+          if (left.distanceKm === null) {
+            return 1;
+          }
 
-      if (right.distanceKm === null) {
-        return -1;
-      }
+          if (right.distanceKm === null) {
+            return -1;
+          }
 
-      return left.distanceKm - right.distanceKm;
-    });
+          return left.distanceKm - right.distanceKm;
+        }),
+    [fallbackCenter, locations],
+  );
+  const mapLocations = useMemo(
+    () =>
+      mappableLocations.map((location) => ({
+        id: location.id,
+        name: location.name,
+        brandName: location.brand?.name,
+        latitude: location.latitude,
+        longitude: location.longitude,
+      })),
+    [mappableLocations],
+  );
   const availableBrands = Array.from(
     new Set(mappableLocations.map((location) => location.brand?.name).filter((name): name is string => Boolean(name))),
   ).sort((left, right) => left.localeCompare(right, "ja"));
@@ -236,13 +251,19 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const nearbyLocations = listCandidates.slice(0, 10);
   const selectedLocation =
     mappableLocations.find((location) => location.id === selectedLocationId) ?? mappableLocations[0] ?? null;
-  const mapCenter =
-    selectedLocation && selectedLocation.latitude && selectedLocation.longitude
-      ? {
-          latitude: selectedLocation.latitude,
-          longitude: selectedLocation.longitude,
-        }
-      : fallbackCenter;
+  const mapCenter = useMemo(
+    () =>
+      selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
+        ? {
+            latitude: selectedLocation.latitude,
+            longitude: selectedLocation.longitude,
+          }
+        : fallbackCenter,
+    [fallbackCenter, selectedLocation],
+  );
+  const handleMapProviderError = useCallback(() => {
+    setActiveMapProvider((provider) => (provider === "osm" ? provider : "osm"));
+  }, []);
   function formatMatchedLessonSummary(locationId: string) {
     const matches = matchesByLocationId.get(locationId) ?? [];
 
@@ -386,23 +407,13 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
       <div className="map-layout">
         <div className="map-canvas" aria-label="ジム位置マップ">
           <MapComponent
-            locations={mappableLocations.map((location) => ({
-              id: location.id,
-              name: location.name,
-              brandName: location.brand?.name,
-              latitude: location.latitude,
-              longitude: location.longitude,
-            }))}
+            locations={mapLocations}
             selectedLocationId={selectedLocation?.id ?? null}
             center={mapCenter}
             currentPosition={currentPosition}
             onSelectLocation={setSelectedLocationId}
             onBoundsChange={setMapBounds}
-            onProviderError={() => {
-              if (activeMapProvider !== "osm") {
-                setActiveMapProvider("osm");
-              }
-            }}
+            onProviderError={handleMapProviderError}
           />
         </div>
 
