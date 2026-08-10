@@ -7,11 +7,26 @@ type SearchFormProps = {
   brands: GymBrand[];
   initialValues?: SearchFilters;
   action?: string;
+  variant?: "default" | "hero";
 };
 
-export function SearchForm({ brands, initialValues = defaultSearchFilters, action = "/search" }: SearchFormProps) {
+export function SearchForm({
+  brands,
+  initialValues = defaultSearchFilters,
+  action = "/search",
+  variant = "default",
+}: SearchFormProps) {
   return (
-    <Form className="panel search-form" action={action}>
+    <Form className={`panel search-form ${variant === "hero" ? "hero-search-form" : ""}`} action={action}>
+      {variant === "hero" ? (
+        <div className="hero-search-heading">
+          <div>
+            <p className="eyebrow">LESSON SEARCH</p>
+            <h2>希望の条件から探す</h2>
+          </div>
+          <p>レッスン名がわからなくても、エリアや曜日だけで検索できます。</p>
+        </div>
+      ) : null}
       <div className="field-grid">
         <label className="field">
           <span>レッスン名</span>

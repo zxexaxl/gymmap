@@ -28,39 +28,58 @@ export default async function HomePage() {
   };
 
   return (
-    <div className="page-stack">
+    <div className="page-stack home-page">
       <JsonLd data={websiteJsonLd} />
-      <section id="search-section" className="hero panel page-anchor-section">
-        <div className="hero-copy">
-          <h1>受けたいレッスンを探す</h1>
-          <p>
-            受けたいレッスン名から、近くのジム・フィットネスクラブのスタジオレッスンを探せます。曜日・開始時間・エリア・店舗で絞り込みできます。
-          </p>
+      <section id="search-section" className="home-hero page-anchor-section">
+        <div className="home-hero-intro">
+          <div className="home-hero-copy">
+            <p className="home-hero-kicker">FIND YOUR NEXT CLASS</p>
+            <h1>
+              行きたいレッスンが、
+              <span>すぐ見つかる。</span>
+            </h1>
+            <p>
+              ジムを一つずつ調べなくても大丈夫。受けたいプログラムと通いやすい条件から、いま参加できるスタジオレッスンをまとめて探せます。
+            </p>
+            <div className="home-hero-facts" aria-label="GymMapの掲載情報">
+              <span><strong>{locations.length}</strong>店舗を掲載</span>
+              <span><strong>{brands.length}</strong>ブランドに対応</span>
+              <span>曜日・時間で絞り込み</span>
+            </div>
+          </div>
+          <div className="hero-photo">
+            <Image
+              src="/images/hero-studio-program.png"
+              alt="格闘系スタジオレッスンでパンチ動作をしている様子"
+              fill
+              priority
+              sizes="(max-width: 760px) calc(100vw - 40px), 48vw"
+            />
+            <div className="hero-photo-caption">
+              <span>今日の運動を、ここから。</span>
+              <strong>スタジオプログラムを横断検索</strong>
+            </div>
+          </div>
         </div>
-        <div className="hero-photo">
-          <Image
-            src="/images/hero-studio-program.png"
-            alt="格闘系スタジオレッスンでパンチ動作をしている様子"
-            fill
-            priority
-            sizes="(max-width: 640px) 100vw, (max-width: 1120px) calc(100vw - 80px), 1072px"
-          />
-        </div>
-        <SearchForm brands={brands} />
+        <SearchForm brands={brands} variant="hero" />
       </section>
 
       {featuredPrograms.length ? (
-        <section className="panel">
+        <section id="popular-programs" className="panel home-program-section page-anchor-section">
           <div className="section-heading">
             <div>
+              <p className="eyebrow">POPULAR PROGRAMS</p>
               <h2>人気のレッスンから探す</h2>
-              <p className="muted">検索されやすいプログラムごとに、受けられる店舗をまとめています。</p>
+              <p className="muted">気になるプログラムを選ぶだけで、開催中の店舗とスケジュールを確認できます。</p>
             </div>
+            <Link className="section-text-link" href="/search">すべてのレッスンを検索</Link>
           </div>
-          <div className="link-row">
-            {featuredPrograms.map((program) => (
-              <Link key={program.slug} href={buildProgramPath(program.slug)}>
-                {program.name}
+          <div className="program-card-grid">
+            {featuredPrograms.map((program, index) => (
+              <Link className="program-card-link" key={program.slug} href={buildProgramPath(program.slug)}>
+                <span className="program-card-number">{String(index + 1).padStart(2, "0")}</span>
+                <strong>{program.name}</strong>
+                <span className="program-card-arrow" aria-hidden="true">→</span>
               </Link>
             ))}
           </div>
