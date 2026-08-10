@@ -667,6 +667,65 @@ p {
   font-size: 0.76rem;
 }
 
+.pending-filter-link-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+}
+
+.program-filter-links a:has(.pending-filter-link-label.is-pending) {
+  pointer-events: none;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  min-width: 126px;
+}
+
+.link-loading-spinner,
+.route-loading-spinner {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(176, 80, 45, 0.25);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: route-loading-spin 0.75s linear infinite;
+}
+
+.route-loading-panel {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: left;
+}
+
+.route-loading-panel h1 {
+  margin-bottom: 0;
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+}
+
+.route-loading-spinner {
+  width: 28px;
+  height: 28px;
+  border-width: 3px;
+}
+
+@keyframes route-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-loading-spinner,
+  .route-loading-spinner {
+    animation-duration: 1.5s;
+  }
+}
+
 .program-filter-links a:hover {
   border-color: var(--accent);
   background: var(--accent-soft);

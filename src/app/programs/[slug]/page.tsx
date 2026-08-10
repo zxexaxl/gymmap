@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
+import { PendingFilterLinkLabel } from "@/components/navigation/pending-filter-link-label";
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
@@ -285,7 +286,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
                 key={area.areaName}
                 href={buildAreaProgramPath(area.areaName, page.program.slug)}
               >
-                {area.areaName} <span>{area.locationCount}店舗</span>
+                <PendingFilterLinkLabel label={area.areaName} countLabel={`${area.locationCount}店舗`} />
               </Link>
             ))}
           </div>
@@ -298,7 +299,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
                     key={area.areaName}
                     href={buildAreaProgramPath(area.areaName, page.program.slug)}
                   >
-                    {area.areaName} <span>{area.locationCount}店舗</span>
+                    <PendingFilterLinkLabel label={area.areaName} countLabel={`${area.locationCount}店舗`} />
                   </Link>
                 ))}
               </div>

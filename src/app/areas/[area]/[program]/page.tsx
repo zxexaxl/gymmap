@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { PendingFilterLinkLabel } from "@/components/navigation/pending-filter-link-label";
 import { getAreaProgramLandingByParams } from "@/lib/data";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
@@ -150,7 +151,7 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
                 href={buildAreaProgramPath(city.cityName, page.program.slug)}
                 key={city.cityName}
               >
-                {city.cityName} <span>{city.locationCount}店舗</span>
+                <PendingFilterLinkLabel label={city.cityName} countLabel={`${city.locationCount}店舗`} />
               </Link>
             ))}
           </div>
