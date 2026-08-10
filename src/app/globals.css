@@ -608,6 +608,122 @@ p {
   margin-top: 18px;
 }
 
+.program-landing-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 22px 0 14px;
+}
+
+.program-landing-stats > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fff 0%, #fff8f5 100%);
+}
+
+.program-landing-stats strong {
+  color: var(--navy);
+  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  line-height: 1.2;
+}
+
+.program-landing-stats span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.program-filter-group + .program-filter-group {
+  margin-top: 22px;
+}
+
+.program-filter-group h3 {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.program-filter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.program-filter-group .program-filter-links {
+  margin-top: 0;
+}
+
+.program-filter-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 800;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.program-filter-links a span {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.program-filter-links a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.program-location-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  list-style: none;
+}
+
+.program-location-times li::before {
+  content: "•";
+  margin-right: 6px;
+  color: var(--accent);
+}
+
+.program-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.program-faq-list > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel-strong);
+}
+
+.program-faq-list h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.program-faq-list p {
+  margin: 0;
+}
+
 .result-program-heading {
   display: flex;
   align-items: flex-start;
@@ -1755,6 +1871,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .program-landing-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .field-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1784,6 +1904,19 @@ p {
 @media (max-width: 640px) {
   .container {
     width: min(100% - 20px, 1120px);
+  }
+
+  .program-faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .program-filter-links {
+    gap: 8px;
+  }
+
+  .program-filter-links a {
+    min-height: 38px;
+    padding: 7px 11px;
   }
 
   .header-inner {

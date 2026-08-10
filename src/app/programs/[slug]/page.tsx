@@ -8,11 +8,52 @@ import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd } from "@/lib/structured-data";
-import { formatTime, formatWeekday, getAreaName, getLocationAddress } from "@/lib/utils";
+import type { Weekday } from "@/lib/types";
+import {
+  buildSearchQuery,
+  formatDate,
+  formatTime,
+  formatWeekday,
+  getAreaName,
+  getLatestScheduleUpdatedAt,
+  getLocationAddress,
+} from "@/lib/utils";
 
 type ProgramLandingPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+const weekdayOrder: Weekday[] = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+];
+
+const timeRangeDefinitions = [
+  { value: "morning", label: "午前", from: 6, to: 12 },
+  { value: "afternoon", label: "午後", from: 12, to: 17 },
+  { value: "evening", label: "夜", from: 17, to: 23 },
+];
+
+function buildProgramSearchPath(
+  programName: string,
+  filters: { weekday?: string; timeRange?: string; area?: string } = {},
+) {
+  const query = buildSearchQuery({
+    q: programName,
+    weekday: filters.weekday ?? "",
+    timeRange: filters.timeRange ?? "",
+    durationRange: "",
+    brand: "",
+    area: filters.area ?? "",
+  });
+
+  return `/search?${query}`;
+}
 
 export async function generateStaticParams() {
   const slugs = await getProgramLandingSlugs(12);
@@ -36,16 +77,17 @@ export async function generateMetadata({ params }: ProgramLandingPageProps): Pro
     };
   }
 
-  const description = `${page.program.name}を受けられるジム・フィットネスクラブをまとめた一覧ページです。${page.locationCount}店舗・${page.schedules.length}件のレッスンから比較できます。`;
+  const pageTitle = `${page.program.name}が受けられるジム・最新スケジュール`;
+  const description = `${page.program.name}を受けられるジムを${page.locationCount}店舗・${page.schedules.length}件掲載。地域・曜日・時間帯から、通いやすい開催店舗とタイムテーブルを比較できます。`;
 
   return {
-    title: `${page.program.name}が受けられるジム一覧`,
+    title: pageTitle,
     description,
     alternates: {
       canonical: buildProgramPath(page.program.slug),
     },
     openGraph: {
-      title: `${page.program.name}が受けられるジム一覧 | GymMap`,
+      title: `${pageTitle} | GymMap`,
       description,
       url: buildCanonicalPath(buildProgramPath(page.program.slug)),
       locale: "ja_JP",
@@ -63,27 +105,76 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
   }
 
   const featuredAreas = page.areaNames
-    .filter((areaName) => {
+    .map((areaName) => {
       const areaSchedules = page.schedules.filter(
         (item) => getAreaName(item.location.prefecture, item.location.city) === areaName,
       );
+      const locationCount = new Set(areaSchedules.map((item) => item.location.id)).size;
 
-      return shouldIndexAreaProgramPage({
-        locationCount: new Set(areaSchedules.map((item) => item.location.id)).size,
+      return {
+        areaName,
+        locationCount,
         scheduleCount: areaSchedules.length,
-      });
+      };
     })
+    .filter((area) => shouldIndexAreaProgramPage(area))
+    .sort(
+      (left, right) =>
+        right.locationCount - left.locationCount ||
+        right.scheduleCount - left.scheduleCount ||
+        left.areaName.localeCompare(right.areaName, "ja"),
+    )
     .slice(0, 8);
-  const featuredSchedules = page.schedules.slice(0, 12);
+  const locationGroups = page.schedules.reduce((groups, item) => {
+    const existing = groups.get(item.location.id);
+
+    if (existing) {
+      existing.push(item);
+    } else {
+      groups.set(item.location.id, [item]);
+    }
+
+    return groups;
+  }, new Map<string, typeof page.schedules>());
+  const locationSummaries = Array.from(locationGroups.entries())
+    .map(([locationId, schedules]) => ({
+      locationId,
+      first: schedules[0]!,
+      schedules,
+    }))
+    .sort(
+      (left, right) =>
+        right.schedules.length - left.schedules.length ||
+        left.first.location.name.localeCompare(right.first.location.name, "ja"),
+    );
+  const featuredLocations = locationSummaries.slice(0, 12);
+  const weekdaySummaries = weekdayOrder
+    .map((weekday) => ({
+      weekday,
+      count: page.schedules.filter((item) => item.schedule.weekday === weekday).length,
+    }))
+    .filter((item) => item.count > 0);
+  const timeRangeSummaries = timeRangeDefinitions
+    .map((range) => ({
+      ...range,
+      count: page.schedules.filter((item) => {
+        const startHour = Number.parseInt(item.schedule.start_time.split(":")[0] ?? "", 10);
+        return startHour >= range.from && startHour < range.to;
+      }).length,
+    }))
+    .filter((item) => item.count > 0);
+  const latestScheduleUpdatedAt = getLatestScheduleUpdatedAt(
+    page.schedules.map((item) => item.schedule),
+  );
   const pagePath = buildProgramPath(page.program.slug);
-  const pageDescription = `${page.program.name}を受けられるジム・フィットネスクラブをまとめた一覧ページです。${page.locationCount}店舗・${page.schedules.length}件のレッスンから比較できます。`;
+  const pageDescription = `${page.program.name}を受けられるジムを${page.locationCount}店舗・${page.schedules.length}件掲載。地域・曜日・時間帯から、通いやすい開催店舗とタイムテーブルを比較できます。`;
   const collectionJsonLd = buildCollectionPageJsonLd({
-    name: `${page.program.name}が受けられるジム一覧`,
+    name: `${page.program.name}が受けられるジム・最新スケジュール`,
     description: pageDescription,
     path: pagePath,
-    items: featuredSchedules.map((item) => ({
-      name: item.location.name,
-      path: `/locations/${item.location.slug}`,
+    items: featuredLocations.map(({ first }) => ({
+      name: first.location.name,
+      path: `/locations/${first.location.slug}`,
     })),
   });
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -96,17 +187,70 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
       <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">プログラム別ガイド</p>
-        <h1>{page.program.name}が受けられるジム一覧</h1>
+        <h1>{page.program.name}が受けられるジム・最新スケジュール</h1>
         <p className="muted">
-          {page.program.name}を開催している {page.locationCount} 店舗・{page.schedules.length} 件のレッスンをまとめています。
-          曜日、時間帯、ブランド、通いやすいエリアを見比べながら探せます。
+          {page.program.name}を開催している店舗を、エリア・曜日・開始時間から比較できます。
+          気になる店舗を選ぶと、詳しい週間タイムテーブルを確認できます。
         </p>
+        <div className="program-landing-stats" aria-label="掲載状況">
+          <div>
+            <strong>{page.locationCount}</strong>
+            <span>掲載店舗</span>
+          </div>
+          <div>
+            <strong>{page.schedules.length}</strong>
+            <span>週間レッスン</span>
+          </div>
+          <div>
+            <strong>{page.areaNames.length}</strong>
+            <span>掲載エリア</span>
+          </div>
+          <div>
+            <strong>{formatDate(latestScheduleUpdatedAt)}</strong>
+            <span>スケジュール更新日</span>
+          </div>
+        </div>
         <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
         <div className="program-page-actions">
           <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
           <div className="link-row">
-            <Link href={`/search?q=${encodeURIComponent(page.program.name)}`}>この条件で検索する</Link>
+            <Link href={buildProgramSearchPath(page.program.name)}>すべての条件で検索する</Link>
             <Link href="/">検索トップへ戻る</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="panel">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">曜日・時間から探す</p>
+            <h2>{page.program.name}の開催条件を絞り込む</h2>
+          </div>
+        </div>
+        <div className="program-filter-group">
+          <h3>曜日</h3>
+          <div className="program-filter-links">
+            {weekdaySummaries.map(({ weekday, count }) => (
+              <Link
+                href={buildProgramSearchPath(page.program.name, { weekday })}
+                key={weekday}
+              >
+                {formatWeekday(weekday)} <span>{count}件</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="program-filter-group">
+          <h3>開始時間帯</h3>
+          <div className="program-filter-links">
+            {timeRangeSummaries.map(({ value, label, count }) => (
+              <Link
+                href={buildProgramSearchPath(page.program.name, { timeRange: value })}
+                key={value}
+              >
+                {label} <span>{count}件</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -114,10 +258,14 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
       {featuredAreas.length ? (
         <section className="panel">
           <h2>{page.program.name}をエリア別に探す</h2>
-          <div className="link-row">
-            {featuredAreas.map((areaName) => (
-              <Link key={areaName} href={buildAreaProgramPath(areaName, page.program.slug)}>
-                {areaName}の{page.program.name}
+          <p className="muted">掲載店舗が複数あるエリアを、店舗数の多い順に表示しています。</p>
+          <div className="program-filter-links">
+            {featuredAreas.map((area) => (
+              <Link
+                key={area.areaName}
+                href={buildAreaProgramPath(area.areaName, page.program.slug)}
+              >
+                {area.areaName} <span>{area.locationCount}店舗</span>
               </Link>
             ))}
           </div>
@@ -125,32 +273,71 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
       ) : null}
 
       <section className="panel">
-        <h2>{page.program.name}の掲載レッスン</h2>
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">開催店舗</p>
+            <h2>{page.program.name}が受けられるジム</h2>
+            <p className="muted">週間の開催枠が多い店舗から表示しています。</p>
+          </div>
+          <Link href={buildProgramSearchPath(page.program.name)}>全{page.locationCount}店舗を見る</Link>
+        </div>
         <div className="result-list">
-          {featuredSchedules.map((item) => (
-            <article key={item.schedule.id} className="result-card">
+          {featuredLocations.map(({ locationId, first, schedules }) => (
+            <article key={locationId} className="result-card">
               <div className="result-card-main">
-                <p className="result-time">
-                  {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} - {formatTime(item.schedule.end_time)}
+                <h3>
+                  <Link href={`/locations/${first.location.slug}`}>{first.location.name}</Link>
+                </h3>
+                <p className="muted">{first.brand.name}</p>
+                <p className="muted">
+                  {getLocationAddress(
+                    first.location.prefecture,
+                    first.location.city,
+                    first.location.address_line,
+                  )}
                 </p>
-                <h3>{item.location.name}</h3>
-                <p className="muted">{item.brand.name}</p>
-                <p className="muted">{getLocationAddress(item.location.prefecture, item.location.city, item.location.address_line)}</p>
+                <ul className="program-location-times">
+                  {schedules.slice(0, 3).map((item) => (
+                    <li key={item.schedule.id}>
+                      {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} -{" "}
+                      {formatTime(item.schedule.end_time)}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <dl className="result-meta">
                 <div>
-                  <dt>エリア</dt>
-                  <dd>{getAreaName(item.location.prefecture, item.location.city) || "-"}</dd>
+                  <dt>週間開催</dt>
+                  <dd>{schedules.length}件</dd>
                 </div>
                 <div>
                   <dt>店舗詳細</dt>
                   <dd>
-                    <Link href={`/locations/${item.location.slug}`}>詳細を見る</Link>
+                    <Link href={`/locations/${first.location.slug}`}>タイムテーブルを見る</Link>
                   </dd>
                 </div>
               </dl>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <p className="eyebrow">よくある探し方</p>
+        <h2>{page.program.name}のジム・スケジュールについて</h2>
+        <div className="program-faq-list">
+          <div>
+            <h3>{page.program.name}はどこのジムで受けられますか？</h3>
+            <p className="muted">
+              GymMapでは現在{page.locationCount}店舗を掲載しています。上のエリア・曜日・時間帯から、通いやすい店舗を絞り込めます。
+            </p>
+          </div>
+          <div>
+            <h3>最新の開催時間はどこで確認できますか？</h3>
+            <p className="muted">
+              各店舗の詳細ページで曜日別タイムテーブルと更新日を確認できます。休館日や代行情報は、参加前に各ジムの公式サイトもご確認ください。
+            </p>
+          </div>
         </div>
       </section>
     </div>
