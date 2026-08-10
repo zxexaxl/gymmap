@@ -1,7 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { formatDate, formatTime, getScheduleUpdatedAt, isDateOlderThan } from "../utils";
+import {
+  formatDate,
+  formatTime,
+  getLatestScheduleUpdatedAt,
+  getScheduleUpdatedAt,
+  isDateOlderThan,
+} from "../utils";
 import type { ClassSchedule } from "../types";
 
 test("formatTime removes database seconds without changing hours and minutes", () => {
@@ -22,6 +28,16 @@ test("getScheduleUpdatedAt prefers the source extraction time", () => {
   } as ClassSchedule;
 
   assert.equal(getScheduleUpdatedAt(schedule), "2026-08-01T10:00:00.000Z");
+});
+
+test("getLatestScheduleUpdatedAt returns the newest valid schedule timestamp", () => {
+  const schedules = [
+    { extracted_at: null, updated_at: "2026-07-01T10:00:00.000Z" },
+    { extracted_at: "2026-08-01T10:00:00.000Z", updated_at: "2026-06-01T10:00:00.000Z" },
+    { extracted_at: "not-a-date", updated_at: "2026-08-02T10:00:00.000Z" },
+  ] as ClassSchedule[];
+
+  assert.equal(getLatestScheduleUpdatedAt(schedules), "2026-08-01T10:00:00.000Z");
 });
 
 test("isDateOlderThan detects stale schedule information", () => {

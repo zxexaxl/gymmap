@@ -7,7 +7,13 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { getLocationBySlug } from "@/lib/data";
 import { buildCanonicalPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
-import { formatDate, formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
+import {
+  formatDate,
+  formatTime,
+  formatWeekday,
+  getLatestScheduleUpdatedAt,
+  getLocationAddress,
+} from "@/lib/utils";
 
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
@@ -34,23 +40,24 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     };
   }
 
-  const { brand, location, schedules } = detail;
+  const { location, schedules } = detail;
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
   const programNames = Array.from(new Set(schedules.map((item) => item.program.name))).slice(0, 5);
+  const pageTitle = `${location.name}のスタジオスケジュール`;
   const descriptionParts = [
     address ? `${address}にある` : "",
-    `${brand.name} ${location.name}のスタジオレッスン一覧ページです。`,
-    programNames.length ? `${programNames.join("、")}などの開催スケジュールを確認できます。` : "",
+    `${location.name}の最新スタジオスケジュール・タイムテーブルです。`,
+    programNames.length ? `${programNames.join("、")}などの曜日・時間を確認できます。` : "",
   ].filter(Boolean);
 
   return {
-    title: `${location.name}のスタジオレッスン一覧`,
+    title: pageTitle,
     description: descriptionParts.join(" "),
     alternates: {
       canonical: `/locations/${slug}`,
     },
     openGraph: {
-      title: `${location.name}のスタジオレッスン一覧 | GymMap`,
+      title: `${pageTitle} | GymMap`,
       description: descriptionParts.join(" "),
       url: buildCanonicalPath(`/locations/${slug}`),
       locale: "ja_JP",
@@ -69,6 +76,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
   const { brand, location, schedules } = detail;
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
+  const latestScheduleUpdatedAt = getLatestScheduleUpdatedAt(schedules.map((item) => item.schedule));
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address || location.name,
   )}`;
@@ -77,7 +85,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
     "@type": "HealthClub",
     "@id": `${buildCanonicalPath(`/locations/${location.slug}`)}#health-club`,
     name: location.name,
-    description: `${brand.name} ${location.name}のスタジオレッスン情報ページ`,
+    description: `${location.name}のスタジオスケジュール・タイムテーブル情報ページ`,
     url: buildCanonicalPath(`/locations/${location.slug}`),
     sameAs: location.official_url || undefined,
     address: address
@@ -114,8 +122,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <JsonLd data={[locationJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">{brand.name}</p>
-        <h1>{location.name}</h1>
-        <p className="muted">住所や公式サイトを確認しながら、この店舗の曜日別スケジュールをまとめて見られます。</p>
+        <h1>{location.name}のスタジオスケジュール</h1>
+        <p className="muted">
+          曜日別のタイムテーブルから、レッスン名・開始時間・担当インストラクターをまとめて確認できます。
+        </p>
         <dl className="detail-list">
           <div>
             <dt>住所</dt>
@@ -132,6 +142,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 "-"
               )}
             </dd>
+          </div>
+          <div>
+            <dt>スケジュール更新日</dt>
+            <dd>{formatDate(latestScheduleUpdatedAt)}</dd>
           </div>
           <div>
             <dt>店舗情報確認日</dt>
@@ -152,7 +166,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
       </section>
 
       <section className="panel">
-        <h2>この店舗で開催されるクラス</h2>
+        <h2>{location.name}のレッスン一覧</h2>
         <ul className="plain-list">
           {schedules.map((item) => (
             <li key={item.schedule.id}>

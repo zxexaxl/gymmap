@@ -48,6 +48,25 @@ export function getScheduleUpdatedAt(schedule: ClassSchedule) {
   return schedule.extracted_at || schedule.updated_at || null;
 }
 
+export function getLatestScheduleUpdatedAt(schedules: ClassSchedule[]) {
+  return schedules.reduce<string | null>((latest, schedule) => {
+    const candidate = getScheduleUpdatedAt(schedule);
+
+    if (!candidate) {
+      return latest;
+    }
+
+    const candidateTime = new Date(candidate).getTime();
+    const latestTime = latest ? new Date(latest).getTime() : Number.NEGATIVE_INFINITY;
+
+    if (Number.isNaN(candidateTime) || candidateTime <= latestTime) {
+      return latest;
+    }
+
+    return candidate;
+  }, null);
+}
+
 export function isDateOlderThan(value: string | null | undefined, days: number, now = new Date()) {
   if (!value) {
     return false;
