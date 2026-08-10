@@ -104,7 +104,7 @@ export function FavoriteScheduleView() {
       <section className="panel favorite-empty-state">
         <p className="eyebrow">MY PROGRAMS</p>
         <h1>お気に入りはまだありません</h1>
-        <p className="muted">人気のレッスンやプログラムページで☆を押すと、今週の開催をまとめて確認できます。</p>
+        <p className="muted">ブランドプログラムやプログラムページで☆を押すと、今週の開催をまとめて確認できます。</p>
         <Link className="primary-link-button" href="/#popular-programs">レッスンを選ぶ</Link>
       </section>
     );

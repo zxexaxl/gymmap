@@ -14,7 +14,7 @@ export function FavoriteHomePanel() {
         <span className="favorite-empty-icon" aria-hidden="true">☆</span>
         <div>
           <h2>気になるレッスンを保存できます</h2>
-          <p className="muted">人気カードの☆を押すと、今週の開催をまとめて確認できます。</p>
+          <p className="muted">ブランドプログラムの☆を押すと、今週の開催をまとめて確認できます。</p>
         </div>
       </aside>
     );

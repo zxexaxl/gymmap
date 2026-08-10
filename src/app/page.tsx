@@ -7,17 +7,58 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
 import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
+import { programMaster, type ProgramBrand } from "@/lib/program-master";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
 export const revalidate = 900;
 
+const featuredBrandLimits: Array<[ProgramBrand, number]> = [
+  ["Les Mills", 3],
+  ["Radical Fitness", 2],
+  ["MOSSA", 1],
+  ["ZUMBA", 1],
+  ["BAILA BAILA", 1],
+];
+
+const standardGenreNames = ["ヨガ", "ピラティス", "エアロビクス", "ステップ"];
+
 export default async function HomePage() {
-  const [brands, locations, lessonIndex, featuredPrograms] = await Promise.all([
+  const [brands, locations, lessonIndex, popularPrograms] = await Promise.all([
     getBrands(),
     getLocations(),
     getMapLessonSearchIndex(),
-    getPopularPrograms(8),
+    getPopularPrograms(48),
   ]);
+  const brandByProgramName = new Map(
+    programMaster.flatMap((program) =>
+      program.programBrand ? [[program.canonicalProgramName, program.programBrand] as const] : [],
+    ),
+  );
+  const brandedPrograms = popularPrograms.flatMap((program) => {
+    const programBrand = brandByProgramName.get(program.name);
+    return programBrand ? [{ ...program, programBrand }] : [];
+  });
+  const selectedProgramIds = new Set<string>();
+  const featuredPrograms = featuredBrandLimits.flatMap(([brand, limit]) =>
+    brandedPrograms
+      .filter((program) => program.programBrand === brand)
+      .slice(0, limit)
+      .filter((program) => {
+        selectedProgramIds.add(program.id);
+        return true;
+      }),
+  );
+
+  for (const program of brandedPrograms) {
+    if (featuredPrograms.length >= 8) break;
+    if (selectedProgramIds.has(program.id)) continue;
+    featuredPrograms.push(program);
+    selectedProgramIds.add(program.id);
+  }
+
+  const standardGenrePrograms = standardGenreNames
+    .map((name) => popularPrograms.find((program) => program.name === name))
+    .filter((program): program is (typeof popularPrograms)[number] => Boolean(program));
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -74,17 +115,17 @@ export default async function HomePage() {
         <section id="popular-programs" className="panel home-program-section page-anchor-section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">POPULAR PROGRAMS</p>
-              <h2>人気のレッスンから探す</h2>
-              <p className="muted">気になるプログラムを選ぶだけで、開催中の店舗とスケジュールを確認できます。</p>
+              <p className="eyebrow">FEATURED BRANDS</p>
+              <h2><span>ブランドプログラム</span><span>から探す</span></h2>
+              <p className="muted">LES MILLSやRadical Fitnessなど、支持されているプログラムをブランド別に選びました。</p>
             </div>
             <Link className="section-text-link" href="/search">すべてのレッスンを検索</Link>
           </div>
           <div className="program-card-grid">
-            {featuredPrograms.map((program, index) => (
+            {featuredPrograms.map((program) => (
               <article className="program-card" key={program.slug}>
                 <Link className="program-card-link" href={buildProgramPath(program.slug)}>
-                  <span className="program-card-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="program-card-brand">{program.programBrand}</span>
                   <strong>{program.name}</strong>
                   <span className="program-card-arrow" aria-hidden="true">→</span>
                 </Link>
@@ -92,6 +133,16 @@ export default async function HomePage() {
               </article>
             ))}
           </div>
+          {standardGenrePrograms.length ? (
+            <div className="standard-genre-strip">
+              <p>定番ジャンルから探す</p>
+              <div>
+                {standardGenrePrograms.map((program) => (
+                  <Link key={program.slug} href={buildProgramPath(program.slug)}>{program.name}<span aria-hidden="true">→</span></Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </section>
       ) : null}
 

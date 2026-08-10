@@ -18,7 +18,7 @@ export function Header() {
         </Link>
         <nav className="header-nav">
           <Link href="/#search-section">条件検索</Link>
-          <Link href="/#popular-programs">人気</Link>
+          <Link href="/#popular-programs">ブランド</Link>
           <Link href="/#map-section">地図</Link>
           <Link className="header-favorite-link" href="/favorites">
             <span aria-hidden="true">☆</span>

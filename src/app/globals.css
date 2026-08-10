@@ -840,7 +840,7 @@ p {
 
 .program-card-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -895,6 +895,15 @@ p {
   letter-spacing: 0.1em;
 }
 
+.program-card-brand {
+  max-width: calc(100% - 42px);
+  color: var(--accent-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .program-card-link strong {
   max-width: 100%;
   font-size: 1.05rem;
@@ -919,6 +928,49 @@ p {
   border-radius: 999px;
   background: var(--navy);
   color: #fff;
+}
+
+.standard-genre-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e3e7ec;
+}
+
+.standard-genre-strip > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.standard-genre-strip > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.standard-genre-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #dde3e9;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.standard-genre-strip a:hover {
+  border-color: rgba(232, 93, 63, 0.45);
+  color: var(--accent-dark);
+  text-decoration: none;
 }
 
 .home-page .map-section {
@@ -1847,9 +1899,23 @@ p {
     margin-bottom: 18px;
   }
 
+  .home-program-section .section-heading h2 span {
+    display: block;
+  }
+
   .program-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+  }
+
+  .standard-genre-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .standard-genre-strip > div {
+    justify-content: flex-start;
   }
 
   .program-card-link {
