@@ -13,6 +13,12 @@ export function getAreaName(prefecture?: string | null, city?: string | null) {
   return city || prefecture || "";
 }
 
+export function getLocationAreaNames(prefecture?: string | null, city?: string | null) {
+  return Array.from(
+    new Set([prefecture, city].filter((value): value is string => Boolean(value))),
+  );
+}
+
 export function formatWeekday(weekday: Weekday) {
   return weekdayLabels[weekday];
 }

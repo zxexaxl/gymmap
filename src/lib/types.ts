@@ -188,12 +188,15 @@ export type ProgramLandingPage = {
   program: Program;
   schedules: SearchResult[];
   locationCount: number;
+  prefectureNames: string[];
   areaNames: string[];
   brandNames: string[];
 };
 
 export type AreaProgramLandingPage = {
   areaName: string;
+  areaType: "prefecture" | "city";
+  prefectureName: string | null;
   program: Program;
   schedules: SearchResult[];
   locationCount: number;

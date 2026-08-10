@@ -31,7 +31,13 @@ import type {
   IngestionItem,
   IngestionRun,
 } from "@/lib/types";
-import { getAreaName, getLocationAddress, isDurationInRange, isTimeInRange } from "@/lib/utils";
+import {
+  getAreaName,
+  getLocationAddress,
+  getLocationAreaNames,
+  isDurationInRange,
+  isTimeInRange,
+} from "@/lib/utils";
 
 type SupabaseJoinedSchedule = ClassSchedule & {
   gym_locations: GymLocation & {
@@ -1099,6 +1105,13 @@ export const getProgramLandingBySlug = cache(async (slug: string): Promise<Progr
       program,
       schedules,
       locationCount: new Set(schedules.map((item) => item.location.id)).size,
+      prefectureNames: Array.from(
+        new Set(
+          schedules
+            .map((item) => item.location.prefecture)
+            .filter((name): name is string => Boolean(name)),
+        ),
+      ),
       areaNames: Array.from(
         new Set(schedules.map((item) => getAreaName(item.location.prefecture, item.location.city)).filter(Boolean)),
       ),
@@ -1131,7 +1144,9 @@ export const getAreaProgramLandingByParams = cache(
       }
 
       const locationIds = locations
-        .filter((location) => getAreaName(location.prefecture, location.city) === decodedArea)
+        .filter((location) =>
+          getLocationAreaNames(location.prefecture, location.city).includes(decodedArea),
+        )
         .map((location) => location.id);
 
       if (!locationIds.length) {
@@ -1150,6 +1165,10 @@ export const getAreaProgramLandingByParams = cache(
 
       return {
         areaName: decodedArea,
+        areaType: locations.some((location) => location.prefecture === decodedArea)
+          ? "prefecture"
+          : "city",
+        prefectureName: schedules[0]?.location.prefecture ?? null,
         program,
         schedules,
         locationCount: new Set(schedules.map((item) => item.location.id)).size,

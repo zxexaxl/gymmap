@@ -32,14 +32,15 @@ export async function generateMetadata({ params }: AreaProgramPageProps): Promis
     };
   }
 
-  const description = `${page.areaName}で${page.program.name}が受けられるジム・フィットネスクラブの一覧です。${page.locationCount}店舗・${page.schedules.length}件のレッスンを比較できます。`;
+  const pageTitle = `${page.areaName}で${page.program.name}が受けられるジム・最新スケジュール`;
+  const description = `${page.areaName}で${page.program.name}を受けられるジムを${page.locationCount}店舗・${page.schedules.length}件掲載。曜日・時間帯・店舗ごとのタイムテーブルを比較できます。`;
   const isIndexable = shouldIndexAreaProgramPage({
     locationCount: page.locationCount,
     scheduleCount: page.schedules.length,
   });
 
   return {
-    title: `${page.areaName}で${page.program.name}が受けられるジム一覧`,
+    title: pageTitle,
     description,
     robots: {
       index: isIndexable,
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }: AreaProgramPageProps): Promis
       canonical: buildAreaProgramPath(page.areaName, page.program.slug),
     },
     openGraph: {
-      title: `${page.areaName}で${page.program.name}が受けられるジム一覧 | GymMap`,
+      title: `${pageTitle} | GymMap`,
       description,
       url: buildCanonicalPath(buildAreaProgramPath(page.areaName, page.program.slug)),
       locale: "ja_JP",
@@ -68,7 +69,35 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
 
   const programPath = buildProgramPath(page.program.slug);
   const pagePath = buildAreaProgramPath(page.areaName, page.program.slug);
-  const pageDescription = `${page.areaName}で${page.program.name}が受けられるジム・フィットネスクラブの一覧です。${page.locationCount}店舗・${page.schedules.length}件のレッスンを比較できます。`;
+  const pageDescription = `${page.areaName}で${page.program.name}を受けられるジムを${page.locationCount}店舗・${page.schedules.length}件掲載。曜日・時間帯・店舗ごとのタイムテーブルを比較できます。`;
+  const cityAreas =
+    page.areaType === "prefecture"
+      ? Array.from(
+          new Set(
+            page.schedules
+              .map((item) => item.location.city)
+              .filter((name): name is string => Boolean(name)),
+          ),
+        )
+          .map((cityName) => {
+            const citySchedules = page.schedules.filter(
+              (item) => item.location.city === cityName,
+            );
+
+            return {
+              cityName,
+              locationCount: new Set(citySchedules.map((item) => item.location.id)).size,
+              scheduleCount: citySchedules.length,
+            };
+          })
+          .filter((city) => shouldIndexAreaProgramPage(city))
+          .sort(
+            (left, right) =>
+              right.locationCount - left.locationCount ||
+              right.scheduleCount - left.scheduleCount ||
+              left.cityName.localeCompare(right.cityName, "ja"),
+          )
+      : [];
   const collectionJsonLd = buildCollectionPageJsonLd({
     name: `${page.areaName}で${page.program.name}が受けられるジム一覧`,
     description: pageDescription,
@@ -81,6 +110,14 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "GymMap", path: "/" },
     { name: page.program.name, path: programPath },
+    ...(page.areaType === "city" && page.prefectureName
+      ? [
+          {
+            name: page.prefectureName,
+            path: buildAreaProgramPath(page.prefectureName, page.program.slug),
+          },
+        ]
+      : []),
     { name: page.areaName, path: pagePath },
   ]);
 
@@ -89,7 +126,7 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
       <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
       <section className="panel">
         <p className="eyebrow">エリア別ガイド</p>
-        <h1>{page.areaName}で{page.program.name}が受けられるジム一覧</h1>
+        <h1>{page.areaName}で{page.program.name}が受けられるジム・最新スケジュール</h1>
         <p className="muted">
           {page.areaName}で {page.program.name} を開催している {page.locationCount} 店舗・{page.schedules.length} 件のレッスンを掲載しています。
           通いやすい店舗や曜日の違いを見ながら比較できます。
@@ -97,9 +134,31 @@ export default async function AreaProgramPage({ params }: AreaProgramPageProps) 
         <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
         <div className="link-row">
           <Link href={programPath}>{page.program.name}の全国一覧</Link>
+          {page.areaType === "city" && page.prefectureName ? (
+            <Link href={buildAreaProgramPath(page.prefectureName, page.program.slug)}>
+              {page.prefectureName}の{page.program.name}
+            </Link>
+          ) : null}
           <Link href={`/search?q=${encodeURIComponent(page.program.name)}&area=${encodeURIComponent(page.areaName)}`}>この条件で検索する</Link>
         </div>
       </section>
+
+      {cityAreas.length ? (
+        <section className="panel">
+          <p className="eyebrow">市区町村から探す</p>
+          <h2>{page.areaName}の{page.program.name}をさらに絞り込む</h2>
+          <div className="program-filter-links">
+            {cityAreas.map((city) => (
+              <Link
+                href={buildAreaProgramPath(city.cityName, page.program.slug)}
+                key={city.cityName}
+              >
+                {city.cityName} <span>{city.locationCount}店舗</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="panel">
         <h2>{page.areaName}の{page.program.name}掲載店舗</h2>

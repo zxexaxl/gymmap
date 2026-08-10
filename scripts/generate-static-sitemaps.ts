@@ -7,7 +7,7 @@ import { programMaster } from "@/lib/program-master";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildProgramPath, getSiteUrl } from "@/lib/site";
-import { getAreaName } from "@/lib/utils";
+import { getLocationAreaNames } from "@/lib/utils";
 
 type GymLocationRow = {
   id: string;
@@ -203,7 +203,6 @@ async function main() {
   latestScheduleRows.forEach((schedule) => {
     const location = activeLocations.get(schedule.location_id);
     const program = seoPrograms.get(schedule.program_id);
-    const areaName = getAreaName(location?.prefecture, location?.city);
 
     if (location) {
       scheduledLocationIds.add(location.id);
@@ -213,27 +212,29 @@ async function main() {
       scheduledSeoProgramIds.add(program.id);
     }
 
-    if (!location || !program || !areaName) {
+    if (!location || !program) {
       return;
     }
 
-    const key = `${program.id}\u0000${areaName}`;
-    const group = areaGroups.get(key) ?? {
-      areaName,
-      program,
-      scheduleCount: 0,
-      locationIds: new Set<string>(),
-      lastmod: schedule.updated_at,
-    };
+    getLocationAreaNames(location.prefecture, location.city).forEach((areaName) => {
+      const key = `${program.id}\u0000${areaName}`;
+      const group = areaGroups.get(key) ?? {
+        areaName,
+        program,
+        scheduleCount: 0,
+        locationIds: new Set<string>(),
+        lastmod: schedule.updated_at,
+      };
 
-    group.scheduleCount += 1;
-    group.locationIds.add(location.id);
+      group.scheduleCount += 1;
+      group.locationIds.add(location.id);
 
-    if (new Date(schedule.updated_at).getTime() > new Date(group.lastmod).getTime()) {
-      group.lastmod = schedule.updated_at;
-    }
+      if (new Date(schedule.updated_at).getTime() > new Date(group.lastmod).getTime()) {
+        group.lastmod = schedule.updated_at;
+      }
 
-    areaGroups.set(key, group);
+      areaGroups.set(key, group);
+    });
   });
 
   const locationEntries = ((locations as GymLocationRow[] | null) ?? [])

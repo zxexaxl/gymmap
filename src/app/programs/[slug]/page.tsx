@@ -104,7 +104,28 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
     notFound();
   }
 
-  const featuredAreas = page.areaNames
+  const featuredPrefectures = page.prefectureNames
+    .map((areaName) => {
+      const areaSchedules = page.schedules.filter(
+        (item) => item.location.prefecture === areaName,
+      );
+      const locationCount = new Set(areaSchedules.map((item) => item.location.id)).size;
+
+      return {
+        areaName,
+        locationCount,
+        scheduleCount: areaSchedules.length,
+      };
+    })
+    .filter((area) => shouldIndexAreaProgramPage(area))
+    .sort(
+      (left, right) =>
+        right.locationCount - left.locationCount ||
+        right.scheduleCount - left.scheduleCount ||
+        left.areaName.localeCompare(right.areaName, "ja"),
+    );
+  const featuredCities = page.areaNames
+    .filter((areaName) => !page.prefectureNames.includes(areaName))
     .map((areaName) => {
       const areaSchedules = page.schedules.filter(
         (item) => getAreaName(item.location.prefecture, item.location.city) === areaName,
@@ -202,8 +223,8 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
             <span>週間レッスン</span>
           </div>
           <div>
-            <strong>{page.areaNames.length}</strong>
-            <span>掲載エリア</span>
+            <strong>{page.prefectureNames.length}</strong>
+            <span>都道府県</span>
           </div>
           <div>
             <strong>{formatDate(latestScheduleUpdatedAt)}</strong>
@@ -255,12 +276,13 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         </div>
       </section>
 
-      {featuredAreas.length ? (
+      {featuredPrefectures.length ? (
         <section className="panel">
-          <h2>{page.program.name}をエリア別に探す</h2>
-          <p className="muted">掲載店舗が複数あるエリアを、店舗数の多い順に表示しています。</p>
+          <p className="eyebrow">地域から探す</p>
+          <h2>{page.program.name}を都道府県から探す</h2>
+          <p className="muted">掲載店舗が複数ある都道府県を、店舗数の多い順に表示しています。</p>
           <div className="program-filter-links">
-            {featuredAreas.map((area) => (
+            {featuredPrefectures.map((area) => (
               <Link
                 key={area.areaName}
                 href={buildAreaProgramPath(area.areaName, page.program.slug)}
@@ -269,6 +291,21 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
               </Link>
             ))}
           </div>
+          {featuredCities.length ? (
+            <div className="program-filter-group program-city-filter-group">
+              <h3>市区町村から絞り込む</h3>
+              <div className="program-filter-links">
+                {featuredCities.map((area) => (
+                  <Link
+                    key={area.areaName}
+                    href={buildAreaProgramPath(area.areaName, page.program.slug)}
+                  >
+                    {area.areaName} <span>{area.locationCount}店舗</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </section>
       ) : null}
 

@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   formatDate,
   formatTime,
+  getLocationAreaNames,
   getLatestScheduleUpdatedAt,
   getScheduleUpdatedAt,
   isDateOlderThan,
@@ -19,6 +20,12 @@ test("formatTime removes database seconds without changing hours and minutes", (
 test("formatDate safely handles missing and invalid values", () => {
   assert.equal(formatDate(null), "-");
   assert.equal(formatDate("not-a-date"), "-");
+});
+
+test("getLocationAreaNames returns prefecture and city without duplicates", () => {
+  assert.deepEqual(getLocationAreaNames("東京都", "新宿区"), ["東京都", "新宿区"]);
+  assert.deepEqual(getLocationAreaNames("東京都", null), ["東京都"]);
+  assert.deepEqual(getLocationAreaNames("東京都", "東京都"), ["東京都"]);
 });
 
 test("getScheduleUpdatedAt prefers the source extraction time", () => {
