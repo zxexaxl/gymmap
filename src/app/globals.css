@@ -844,6 +844,53 @@ p {
   gap: 12px;
 }
 
+.featured-program-browser {
+  display: grid;
+  gap: 16px;
+}
+
+.featured-program-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.featured-program-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #dce2e8;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 0.82rem;
+}
+
+.featured-program-tabs button:hover,
+.featured-program-tabs button[aria-selected="true"] {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+}
+
+.featured-program-tabs small {
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: rgba(20, 33, 61, 0.08);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.featured-program-tabs button[aria-selected="true"] small {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .program-card {
   position: relative;
   min-width: 0;
@@ -915,6 +962,20 @@ p {
   z-index: 2;
   top: 12px;
   right: 12px;
+}
+
+.program-card-search-badge {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 12px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--accent-dark);
+  box-shadow: 0 6px 16px rgba(20, 33, 61, 0.08);
+  font-size: 0.66rem;
+  font-weight: 800;
 }
 
 .program-card-arrow {

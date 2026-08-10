@@ -5,9 +5,9 @@ import { LocationMapSection } from "@/components/map/location-map-section";
 import { SearchForm } from "@/components/search/search-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
-import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
+import { FeaturedProgramTabs, type FeaturedProgramTab } from "@/components/programs/featured-program-tabs";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
-import { getFeaturedProgramBrand } from "@/lib/featured-programs";
+import { featuredProgramShortcuts, getFeaturedProgramBrand } from "@/lib/featured-programs";
 import type { ProgramBrand } from "@/lib/program-master";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
@@ -22,6 +22,19 @@ const featuredBrandLimits: Array<[ProgramBrand, number]> = [
 ];
 
 const standardGenreNames = ["ヨガ", "ピラティス", "エアロビクス", "ステップ"];
+
+const programPriority = [
+  "BODYCOMBAT", "BODYPUMP", "BODYATTACK", "BODYJAM", "BODYBALANCE", "BODYSTEP",
+  "FIGHT DO", "UBOUND", "メガダンス", "リトモス", "X55", "OXIGENO",
+  "Group Fight", "Group Power", "Group Groove", "ZUMBA", "バイラバイラ",
+];
+
+const brandTabDefinitions: Array<{ id: string; label: string; brands: ProgramBrand[] }> = [
+  { id: "les-mills", label: "LES MILLS", brands: ["Les Mills"] },
+  { id: "radical", label: "Radical", brands: ["Radical Fitness"] },
+  { id: "mossa", label: "MOSSA", brands: ["MOSSA"] },
+  { id: "other", label: "その他", brands: ["ZUMBA", "BAILA BAILA"] },
+];
 
 export default async function HomePage() {
   const [brands, locations, lessonIndex, popularPrograms] = await Promise.all([
@@ -55,6 +68,43 @@ export default async function HomePage() {
   const standardGenrePrograms = standardGenreNames
     .map((name) => popularPrograms.find((program) => program.name === name))
     .filter((program): program is (typeof popularPrograms)[number] => Boolean(program));
+  const canonicalProgramNames = new Set(brandedPrograms.map((program) => program.name));
+  const allBrandItems: FeaturedProgramTab["items"] = [
+    ...brandedPrograms.map((program) => ({
+      kind: "program" as const,
+      id: program.id,
+      slug: program.slug,
+      name: program.name,
+      brand: program.programBrand,
+    })),
+    ...featuredProgramShortcuts
+      .filter((shortcut) => !canonicalProgramNames.has(shortcut.name))
+      .map((shortcut) => ({ kind: "shortcut" as const, ...shortcut })),
+  ].sort((left, right) => {
+    const leftPriority = programPriority.indexOf(left.name);
+    const rightPriority = programPriority.indexOf(right.name);
+    return (leftPriority < 0 ? Number.MAX_SAFE_INTEGER : leftPriority)
+      - (rightPriority < 0 ? Number.MAX_SAFE_INTEGER : rightPriority)
+      || left.name.localeCompare(right.name, "ja");
+  });
+  const featuredTabs: FeaturedProgramTab[] = [
+    {
+      id: "featured",
+      label: "注目",
+      items: featuredPrograms.map((program) => ({
+        kind: "program" as const,
+        id: program.id,
+        slug: program.slug,
+        name: program.name,
+        brand: program.programBrand,
+      })),
+    },
+    ...brandTabDefinitions.map((tab) => ({
+      id: tab.id,
+      label: tab.label,
+      items: allBrandItems.filter((item) => tab.brands.includes(item.brand as ProgramBrand)).slice(0, 8),
+    })),
+  ].filter((tab) => tab.items.length);
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -117,18 +167,7 @@ export default async function HomePage() {
             </div>
             <Link className="section-text-link" href="/search">すべてのレッスンを検索</Link>
           </div>
-          <div className="program-card-grid">
-            {featuredPrograms.map((program) => (
-              <article className="program-card" key={program.slug}>
-                <Link className="program-card-link" href={buildProgramPath(program.slug)}>
-                  <span className="program-card-brand">{program.programBrand}</span>
-                  <strong>{program.name}</strong>
-                  <span className="program-card-arrow" aria-hidden="true">→</span>
-                </Link>
-                <FavoriteProgramButton id={program.id} slug={program.slug} name={program.name} iconOnly />
-              </article>
-            ))}
-          </div>
+          <FeaturedProgramTabs tabs={featuredTabs} />
           {standardGenrePrograms.length ? (
             <div className="standard-genre-strip">
               <p>定番ジャンルから探す</p>
