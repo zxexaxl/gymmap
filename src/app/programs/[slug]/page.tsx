@@ -57,7 +57,9 @@ function buildProgramSearchPath(
 }
 
 export async function generateStaticParams() {
-  const slugs = await getProgramLandingSlugs(12);
+  // Pre-render every SEO landing page. On-demand ISR for decoded Japanese
+  // route segments can fail on Vercel before the fallback page is cached.
+  const slugs = await getProgramLandingSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
