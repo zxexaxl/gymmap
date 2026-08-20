@@ -63,7 +63,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export const dynamicParams = true;
+// The complete SEO program set is generated above. Unknown slugs should be a
+// router-level 404 rather than an on-demand render (often caused by crawlers).
+export const dynamicParams = false;
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }: ProgramLandingPageProps): Promise<Metadata> {

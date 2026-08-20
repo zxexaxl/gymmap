@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getLocationBySlug } from "@/lib/data";
+import { getLocationBySlug, getLocationSlugs } from "@/lib/data";
 import { buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { formatDate, getLatestScheduleUpdatedAt, getLocationAddress } from "@/lib/utils";
@@ -13,11 +13,14 @@ type LocationPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  return [];
+export async function generateStaticParams() {
+  const slugs = await getLocationSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export const dynamicParams = true;
+// Every public location URL is included in the deployment sitemap. Reject
+// arbitrary slugs at the router so crawlers cannot trigger on-demand ISR.
+export const dynamicParams = false;
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {

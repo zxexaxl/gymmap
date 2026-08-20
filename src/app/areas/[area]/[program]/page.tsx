@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -14,10 +16,31 @@ type AreaProgramPageProps = {
   params: Promise<{ area: string; program: string }>;
 };
 
-// Vercel rejects Next.js cache-tag headers containing decoded Japanese route
-// segments, so area pages render dynamically instead of using full-route ISR.
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+type AreaProgramStaticParam = {
+  area: string;
+  program: string;
+};
+
+export async function generateStaticParams(): Promise<AreaProgramStaticParam[]> {
+  // `prebuild` creates this sitemap from the same active data set. Reading it
+  // here keeps the public, indexable route set static without adding a second
+  // large Supabase traversal during the build.
+  const sitemap = await readFile(join(process.cwd(), "public", "sitemap-areas.xml"), "utf8");
+  const matches = sitemap.matchAll(/<loc>[^<]*\/areas\/([^/]+)\/([^<]+)<\/loc>/g);
+
+  return Array.from(matches, ([, area, program]) => ({
+    area: decodeURIComponent(area),
+    program: decodeURIComponent(program),
+  }));
+}
+
+// Area pages formerly used force-dynamic because Unicode route values could
+// not be placed in Next's data-cache tags on Vercel. Pre-rendering the sitemap
+// set avoids that response-header path; unknown combinations become a cheap
+// router-level 404 instead of invoking Supabase on every crawler request.
+export const dynamic = "force-static";
+export const dynamicParams = false;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: AreaProgramPageProps): Promise<Metadata> {
   const { area, program } = await params;
