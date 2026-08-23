@@ -12,7 +12,13 @@ import {
 } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
-import { filterLatestSchedulePeriods, getLatestSchedulePeriodByLocation } from "@/lib/latest-schedule-period";
+import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
+import {
+  latestSchedulePeriodEntriesFromSummary,
+  popularProgramsFromSummary,
+  type LatestSchedulePeriodSummaryRow,
+  type PopularProgramSummaryRow,
+} from "@/lib/schedule-summary";
 import type {
   AdminDataset,
   AreaProgramLandingPage,
@@ -314,26 +320,13 @@ type ScheduleQueryVariant =
 
 async function fetchLatestSchedulePeriodEntries() {
   const supabase = getSupabaseClient();
-  const pageSize = 1000;
-  const rows: Array<{ location_id: string; valid_from: string | null }> = [];
-  let from = 0;
+  const { data, error } = await supabase.rpc("get_latest_schedule_periods_by_location");
 
-  while (true) {
-    const { data, error } = await supabase
-      .from("class_schedules")
-      .select("location_id, valid_from")
-      .not("valid_from", "is", null)
-      .order("id", { ascending: true })
-      .range(from, from + pageSize - 1);
-
-    if (error) throw error;
-    const batch = data ?? [];
-    rows.push(...batch);
-    if (batch.length < pageSize) break;
-    from += pageSize;
+  if (error) {
+    throw error;
   }
 
-  return Array.from(getLatestSchedulePeriodByLocation(rows).entries());
+  return latestSchedulePeriodEntriesFromSummary((data as LatestSchedulePeriodSummaryRow[] | null) ?? []);
 }
 
 const getLatestSchedulePeriodEntriesFromDataCache = unstable_cache(
@@ -932,49 +925,13 @@ export async function getLocations(): Promise<GymLocation[]> {
 
 async function fetchPopularPrograms(): Promise<Program[]> {
   const supabase = getSupabaseClient();
-  const pageSize = 1000;
-  const scheduleRows: Array<{ location_id: string; program_id: string; valid_from: string | null }> = [];
-  let from = 0;
+  const { data, error } = await supabase.rpc("get_popular_program_summary");
 
-  while (true) {
-    const { data, error } = await supabase
-      .from("class_schedules")
-      .select("location_id, program_id, valid_from")
-      .order("id", { ascending: true })
-      .range(from, from + pageSize - 1);
-
-    if (error) {
-      throw error;
-    }
-
-    const batch = data ?? [];
-
-    scheduleRows.push(...batch);
-
-    if (batch.length < pageSize) {
-      break;
-    }
-
-    from += pageSize;
+  if (error) {
+    throw error;
   }
 
-  const scheduleCounts = new Map<string, number>();
-  filterLatestSchedulePeriods(scheduleRows).forEach(({ program_id }) => {
-    scheduleCounts.set(program_id, (scheduleCounts.get(program_id) ?? 0) + 1);
-  });
-
-  const { data: programs, error: programsError } = await supabase.from("programs").select("*");
-
-  if (programsError) {
-    throw programsError;
-  }
-
-  return ((programs as Program[]) ?? [])
-    .filter((program) => seoProgramNameSet.has(program.name) && scheduleCounts.has(program.id))
-    .sort((left, right) => {
-      const countDiff = (scheduleCounts.get(right.id) ?? 0) - (scheduleCounts.get(left.id) ?? 0);
-      return countDiff || left.name.localeCompare(right.name, "ja");
-    });
+  return popularProgramsFromSummary((data as PopularProgramSummaryRow[] | null) ?? [], seoProgramNameSet);
 }
 
 const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v2-latest-period"], {
