@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "preview_only": true,
+  "no_database_writes": true,
+  "observed_at": "2026-08-28T17:26:12.761Z",
+  "semantics": {
+    "affiliation": "An active listing in the HYROX governing-body Training Finder supports Official Training Club affiliation.",
+    "discipline": "Official Training Club affiliation supports HYROX discipline availability, but does not imply equipment, open training, coaching, or classes."
+  },
+  "training_sources": [
+    {
+      "source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "facility_url": null
+      }
+    },
+    {
+      "source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "facility_url": null
+      }
+    },
+    {
+      "source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "facility_url": null
+      }
+    },
+    {
+      "source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "facility_url": null
+      }
+    },
+    {
+      "source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "facility_url": "https://www.goldsgym.jp/shop/toyocho-super-center/"
+      }
+    },
+    {
+      "source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "source_kind": "finder",
+      "publisher_authority": "governing_body",
+      "availability_state": "available",
+      "review_required": false,
+      "last_checked_at": "2026-08-28T17:26:12.761Z",
+      "metadata_json": {
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "facility_url": "https://www.goldsgym.jp/shop/13210"
+      }
+    }
+  ],
+  "location_external_identifiers": [
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "verification_status": "confirmed",
+      "verified_at": "2026-08-28T17:26:12.761Z"
+    }
+  ],
+  "training_affiliations": [
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "discipline_slug": "hyrox",
+      "affiliation_type": "training_club",
+      "awarding_organization": "HYROX",
+      "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "affiliation_state": "active",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    }
+  ],
+  "location_training_disciplines": [
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "discipline_slug": "hyrox",
+      "support_state": "available",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z"
+    }
+  ],
+  "training_evidence": [
+    {
+      "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "target_type": "training_affiliation",
+      "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "target_type": "location_training_discipline",
+      "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "target_type": "training_affiliation",
+      "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "target_type": "location_training_discipline",
+      "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "target_type": "training_affiliation",
+      "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "target_type": "location_training_discipline",
+      "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "target_type": "training_affiliation",
+      "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "target_type": "location_training_discipline",
+      "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "target_type": "training_affiliation",
+      "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "target_type": "location_training_discipline",
+      "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "target_type": "training_affiliation",
+      "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox:training_club:HYROX",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    },
+    {
+      "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "target_type": "location_training_discipline",
+      "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "reviewed_at": "2026-08-28T17:26:12.761Z"
+    }
+  ]
+}
