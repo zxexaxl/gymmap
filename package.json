@@ -13,6 +13,7 @@
     "hyrox:discover": "tsx scripts/hyrox/discover-official-training-clubs.ts",
     "hyrox:export-locations": "tsx scripts/hyrox/export-gymmap-location-inventory.ts",
     "hyrox:resolve": "tsx scripts/hyrox/resolve-training-club-identities.ts",
+    "hyrox:build-import-candidate": "tsx scripts/hyrox/build-official-training-club-import.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",
     "lint": "eslint .",

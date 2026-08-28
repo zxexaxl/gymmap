@@ -1,0 +1,668 @@
+{
+  "schema_version": 2,
+  "phase": "H2-2",
+  "preview_only": true,
+  "no_database_writes": true,
+  "generated_from": {
+    "resolution": "official-training-club-resolution.json",
+    "discovery": "official-training-clubs-japan.json",
+    "inventory": "gymmap-location-inventory.json"
+  },
+  "observed_at": "2026-08-28T17:26:12.761Z",
+  "reviewed_at": "2026-08-28T17:26:12.761Z",
+  "stale_policy_days": 90,
+  "validation": {
+    "confirmed_input_count": 6,
+    "included_count": 6,
+    "excluded": [],
+    "duplicate_external_ids": [],
+    "duplicate_location_ids": []
+  },
+  "counts": {
+    "training_sources": 6,
+    "location_external_identifiers": 6,
+    "location_training_disciplines": 6,
+    "training_affiliations": 6,
+    "training_evidence": 12
+  },
+  "import_policy": {
+    "serialization": "Acquire a transaction-scoped advisory lock before conflict checks and writes.",
+    "source_reuse": "Reuse one governing-body finder source by canonical_url; block duplicates or incompatible identity.",
+    "freshness": "Update confirmation fields only when incoming observed_at is newer; older observations never regress state.",
+    "identity_conflict": "Block when namespace/external_identifier belongs to another location.",
+    "affiliation_conflict": "Block external-ID or canonical affiliation conflicts; never overwrite a different authority identity.",
+    "evidence_dedupe": "Insert only when the deterministic SHA-256 content_hash does not already exist for the resolved source and target."
+  },
+  "records": [
+    {
+      "official_name": "ゴールドジム千葉ニュータウン",
+      "official_external_id": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "matched_location": {
+        "id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+        "slug": "golds-gym-chiba-newtown",
+        "name": "千葉ニュータウン",
+        "is_active": true
+      },
+      "match_method": "name-and-postal-supported",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "487145a500744223d292705752d44737dabd5924695f433e5e5f3402aee05616",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+          "official_name": "ゴールドジム千葉ニュータウン"
+        }
+      },
+      "external_identifier": {
+        "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "ゴールドジム千葉ニュータウン"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox",
+        "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox:training_club:HYROX",
+        "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:a5827701c1c2c7ebebd83e705288382272ac65e5b6d053f930e8a4aeafef52ac",
+          "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+          "target_type": "training_affiliation",
+          "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+            "official_name": "ゴールドジム千葉ニュータウン"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "a5827701c1c2c7ebebd83e705288382272ac65e5b6d053f930e8a4aeafef52ac"
+        },
+        {
+          "evidence_ref": "sha256:b3374bcb683b2df1e84447ee02e9d8c1b5e8fd5d83e6169e926da3ab72e01290",
+          "training_source_ref": "hyrox-finder:HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+          "target_type": "location_training_discipline",
+          "target_ref": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+            "official_name": "ゴールドジム千葉ニュータウン"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "b3374bcb683b2df1e84447ee02e9d8c1b5e8fd5d83e6169e926da3ab72e01290"
+        }
+      ]
+    },
+    {
+      "official_name": "株式会社THINKフィットネス ゴールドジム浜松町東京",
+      "official_external_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "matched_location": {
+        "id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "slug": "golds-gym-13210",
+        "name": "浜松町東京",
+        "is_active": true
+      },
+      "match_method": "brand-address-postal-coordinate-exact",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "26b7005edea3935d27564cc6937b01d58061f5af91ec616a1c6ce26a3db72339",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+          "official_name": "株式会社THINKフィットネス ゴールドジム浜松町東京"
+        }
+      },
+      "external_identifier": {
+        "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "株式会社THINKフィットネス ゴールドジム浜松町東京"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox",
+        "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox:training_club:HYROX",
+        "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:f1f8c58190fed1e1dee034ef793a3598b3ee68b26a88ec754914e75cd46a7ca2",
+          "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+          "target_type": "training_affiliation",
+          "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+            "official_name": "株式会社THINKフィットネス ゴールドジム浜松町東京"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "f1f8c58190fed1e1dee034ef793a3598b3ee68b26a88ec754914e75cd46a7ca2"
+        },
+        {
+          "evidence_ref": "sha256:fd638791bb81960420c080d6fade4be52d3d64170cff5afcade3ac8de6f11804",
+          "training_source_ref": "hyrox-finder:HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+          "target_type": "location_training_discipline",
+          "target_ref": "569aecf8-aa02-41da-b37a-7e2e20f160fb:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+            "official_name": "株式会社THINKフィットネス ゴールドジム浜松町東京"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "fd638791bb81960420c080d6fade4be52d3d64170cff5afcade3ac8de6f11804"
+        }
+      ]
+    },
+    {
+      "official_name": "ゴールドジム東陽町スーパーセンター",
+      "official_external_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "matched_location": {
+        "id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "slug": "golds-gym-71221",
+        "name": "東陽町スーパーセンター",
+        "is_active": true
+      },
+      "match_method": "official-url-exact",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "a06dafd86055fbfaa63af234ae41c7eb82fb7a9da79d43fd63e40b0826f97550",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+          "official_name": "ゴールドジム東陽町スーパーセンター"
+        }
+      },
+      "external_identifier": {
+        "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "ゴールドジム東陽町スーパーセンター"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox",
+        "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox:training_club:HYROX",
+        "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:0a3f3293625396942eff00f16ce1466ddb3cba3288c7acb5ff34d4c9466736cc",
+          "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+          "target_type": "training_affiliation",
+          "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+            "official_name": "ゴールドジム東陽町スーパーセンター"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "0a3f3293625396942eff00f16ce1466ddb3cba3288c7acb5ff34d4c9466736cc"
+        },
+        {
+          "evidence_ref": "sha256:0d93db9f9f6c26afc6ad205a6bc481a8f4475351012c4502e8a96bf3fac81ace",
+          "training_source_ref": "hyrox-finder:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+          "target_type": "location_training_discipline",
+          "target_ref": "d75c411f-2b58-476d-aa68-f7bde9000002:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+            "official_name": "ゴールドジム東陽町スーパーセンター"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "0d93db9f9f6c26afc6ad205a6bc481a8f4475351012c4502e8a96bf3fac81ace"
+        }
+      ]
+    },
+    {
+      "official_name": "ゴールドジム原宿ANNEX",
+      "official_external_id": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "matched_location": {
+        "id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+        "slug": "golds-gym-9999",
+        "name": "原宿ANNEX",
+        "is_active": true
+      },
+      "match_method": "name-and-postal-supported",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "b6ec6bde1ac432b82920dfb6f32e48ca6f8ecde1c09b283ef5c77efd43e1c046",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+          "official_name": "ゴールドジム原宿ANNEX"
+        }
+      },
+      "external_identifier": {
+        "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "ゴールドジム原宿ANNEX"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox",
+        "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox:training_club:HYROX",
+        "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:27e0b4317dd8dd7593215bc25aa5e77291f1219fbed12f4262182902f56973d1",
+          "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+          "target_type": "training_affiliation",
+          "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+            "official_name": "ゴールドジム原宿ANNEX"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "27e0b4317dd8dd7593215bc25aa5e77291f1219fbed12f4262182902f56973d1"
+        },
+        {
+          "evidence_ref": "sha256:a4d46e58d28d29f4efc96dea131949ebd225802e647a57c7adbff844d56fa8f7",
+          "training_source_ref": "hyrox-finder:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+          "target_type": "location_training_discipline",
+          "target_ref": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+            "official_name": "ゴールドジム原宿ANNEX"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "a4d46e58d28d29f4efc96dea131949ebd225802e647a57c7adbff844d56fa8f7"
+        }
+      ]
+    },
+    {
+      "official_name": "ゴールドジムハラジュクトウキョウ",
+      "official_external_id": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "matched_location": {
+        "id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+        "slug": "golds-gym-13150",
+        "name": "原宿東京",
+        "is_active": true
+      },
+      "match_method": "brand-address-postal-coordinate-exact",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "3b4644916fab76fd308962e158aebe25681db3bf9ecb258d17755a607bcc221c",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+          "official_name": "ゴールドジムハラジュクトウキョウ"
+        }
+      },
+      "external_identifier": {
+        "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "ゴールドジムハラジュクトウキョウ"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox",
+        "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox:training_club:HYROX",
+        "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:610279df6b1965fa11bc1a1d15db17e8f9665febd355068fbf6d68ca09bc4830",
+          "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+          "target_type": "training_affiliation",
+          "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+            "official_name": "ゴールドジムハラジュクトウキョウ"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "610279df6b1965fa11bc1a1d15db17e8f9665febd355068fbf6d68ca09bc4830"
+        },
+        {
+          "evidence_ref": "sha256:0f65c5bb177075234cc4e5cda45f11d546182786e1ddb04f59d82aa64b2771a5",
+          "training_source_ref": "hyrox-finder:HGY_QPyi483gAfTjVXv2QoNn5d55m",
+          "target_type": "location_training_discipline",
+          "target_ref": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+            "official_name": "ゴールドジムハラジュクトウキョウ"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "0f65c5bb177075234cc4e5cda45f11d546182786e1ddb04f59d82aa64b2771a5"
+        }
+      ]
+    },
+    {
+      "official_name": "ゴールドジム浦安千葉",
+      "official_external_id": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "matched_location": {
+        "id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+        "slug": "golds-gym-12160",
+        "name": "浦安千葉",
+        "is_active": true
+      },
+      "match_method": "name-and-postal-supported",
+      "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "observed_at": "2026-08-28T17:26:12.761Z",
+      "stale_at": "2026-11-26T17:26:12.761Z",
+      "conflict_status": "clear",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-28T17:26:12.761Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "a6c627e31621d10a4490707426cb457ec245c08d3f62b72e4f098ef7ce792032",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+          "official_name": "ゴールドジム浦安千葉"
+        }
+      },
+      "external_identifier": {
+        "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-28T17:26:12.761Z",
+        "metadata_json": {
+          "official_name": "ゴールドジム浦安千葉"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox",
+        "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox:training_club:HYROX",
+        "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-28T17:26:12.761Z",
+        "stale_at": "2026-11-26T17:26:12.761Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:f7a2bbf1613252ce9ab15ab170ed7dc912543ced119817e1bda754a7e51cd41c",
+          "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+          "target_type": "training_affiliation",
+          "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+            "official_name": "ゴールドジム浦安千葉"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "f7a2bbf1613252ce9ab15ab170ed7dc912543ced119817e1bda754a7e51cd41c"
+        },
+        {
+          "evidence_ref": "sha256:b655563951d4c29780433113a692ee3c0081ddb6918bcc9227d14cb127fa8f33",
+          "training_source_ref": "hyrox-finder:HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+          "target_type": "location_training_discipline",
+          "target_ref": "e84c2ea2-bc63-4788-b050-590cfefebe42:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+            "official_name": "ゴールドジム浦安千葉"
+          },
+          "observed_at": "2026-08-28T17:26:12.761Z",
+          "reviewed_at": "2026-08-28T17:26:12.761Z",
+          "content_hash": "b655563951d4c29780433113a692ee3c0081ddb6918bcc9227d14cb127fa8f33"
+        }
+      ]
+    }
+  ]
+}
