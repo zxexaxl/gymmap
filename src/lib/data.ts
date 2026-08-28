@@ -12,6 +12,7 @@ import {
 } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
+import type { Database } from "@/lib/database.types";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import {
   latestSchedulePeriodEntriesFromSummary,
@@ -1141,7 +1142,18 @@ export const getAreaProgramLandingByParams = cache(
   },
 );
 
-async function fetchTable<T>(table: string): Promise<T[]> {
+type AdminDatasetTable = Extract<
+  keyof Database["public"]["Tables"],
+  | "gym_brands"
+  | "gym_locations"
+  | "programs"
+  | "class_schedules"
+  | "source_pages"
+  | "ingestion_runs"
+  | "ingestion_items"
+>;
+
+async function fetchTable<T>(table: AdminDatasetTable): Promise<T[]> {
   if (!hasSupabaseEnv()) {
     return [] as T[];
   }
