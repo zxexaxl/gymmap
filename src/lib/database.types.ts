@@ -383,6 +383,237 @@ export type Database = {
         }
         Relationships: []
       }
+      location_equipment: {
+        Row: {
+          access_mode: string
+          availability_state: string
+          created_at: string
+          equipment_type_id: string
+          id: string
+          last_confirmed_at: string | null
+          location_id: string
+          notes: string | null
+          quantity: number | null
+          reservation_requirement: string
+          stale_at: string | null
+          updated_at: string
+          verification_status: string
+        }
+        Insert: {
+          access_mode?: string
+          availability_state?: string
+          created_at?: string
+          equipment_type_id: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_id: string
+          notes?: string | null
+          quantity?: number | null
+          reservation_requirement?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Update: {
+          access_mode?: string
+          availability_state?: string
+          created_at?: string
+          equipment_type_id?: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_id?: string
+          notes?: string | null
+          quantity?: number | null
+          reservation_requirement?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_equipment_equipment_type_id_fkey"
+            columns: ["equipment_type_id"]
+            isOneToOne: false
+            referencedRelation: "equipment_types"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_equipment_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      location_external_identifiers: {
+        Row: {
+          created_at: string
+          external_identifier: string
+          id: string
+          location_id: string
+          metadata_json: Json
+          namespace: string
+          training_source_id: string | null
+          updated_at: string
+          verification_status: string
+          verified_at: string | null
+        }
+        Insert: {
+          created_at?: string
+          external_identifier: string
+          id?: string
+          location_id: string
+          metadata_json?: Json
+          namespace: string
+          training_source_id?: string | null
+          updated_at?: string
+          verification_status?: string
+          verified_at?: string | null
+        }
+        Update: {
+          created_at?: string
+          external_identifier?: string
+          id?: string
+          location_id?: string
+          metadata_json?: Json
+          namespace?: string
+          training_source_id?: string | null
+          updated_at?: string
+          verification_status?: string
+          verified_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_external_identifiers_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_external_identifiers_training_source_id_fkey"
+            columns: ["training_source_id"]
+            isOneToOne: false
+            referencedRelation: "training_sources"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      location_training_capabilities: {
+        Row: {
+          access_mode: string
+          availability_state: string
+          capability_type_id: string
+          created_at: string
+          id: string
+          last_confirmed_at: string | null
+          location_training_discipline_id: string
+          notes: string | null
+          reservation_requirement: string
+          stale_at: string | null
+          updated_at: string
+          verification_status: string
+        }
+        Insert: {
+          access_mode?: string
+          availability_state?: string
+          capability_type_id: string
+          created_at?: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_training_discipline_id: string
+          notes?: string | null
+          reservation_requirement?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Update: {
+          access_mode?: string
+          availability_state?: string
+          capability_type_id?: string
+          created_at?: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_training_discipline_id?: string
+          notes?: string | null
+          reservation_requirement?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_training_capabilitie_location_training_discipline_fkey"
+            columns: ["location_training_discipline_id"]
+            isOneToOne: false
+            referencedRelation: "location_training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_training_capabilities_capability_type_id_fkey"
+            columns: ["capability_type_id"]
+            isOneToOne: false
+            referencedRelation: "training_capability_types"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      location_training_disciplines: {
+        Row: {
+          created_at: string
+          discipline_id: string
+          id: string
+          last_confirmed_at: string | null
+          location_id: string
+          notes: string | null
+          stale_at: string | null
+          support_state: string
+          updated_at: string
+          verification_status: string
+        }
+        Insert: {
+          created_at?: string
+          discipline_id: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_id: string
+          notes?: string | null
+          stale_at?: string | null
+          support_state?: string
+          updated_at?: string
+          verification_status?: string
+        }
+        Update: {
+          created_at?: string
+          discipline_id?: string
+          id?: string
+          last_confirmed_at?: string | null
+          location_id?: string
+          notes?: string | null
+          stale_at?: string | null
+          support_state?: string
+          updated_at?: string
+          verification_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       program_aliases: {
         Row: {
           alias_name: string
@@ -405,6 +636,57 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "program_aliases_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      program_training_disciplines: {
+        Row: {
+          created_at: string
+          discipline_id: string
+          last_confirmed_at: string | null
+          notes: string | null
+          program_id: string
+          relation_type: string
+          stale_at: string | null
+          updated_at: string
+          verification_status: string
+        }
+        Insert: {
+          created_at?: string
+          discipline_id: string
+          last_confirmed_at?: string | null
+          notes?: string | null
+          program_id: string
+          relation_type?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Update: {
+          created_at?: string
+          discipline_id?: string
+          last_confirmed_at?: string | null
+          notes?: string | null
+          program_id?: string
+          relation_type?: string
+          stale_at?: string | null
+          updated_at?: string
+          verification_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "program_training_disciplines_program_id_fkey"
             columns: ["program_id"]
             isOneToOne: false
             referencedRelation: "programs"
@@ -507,6 +789,75 @@ export type Database = {
           },
         ]
       }
+      training_affiliations: {
+        Row: {
+          affiliation_state: string
+          affiliation_type: string
+          awarding_organization: string
+          created_at: string
+          discipline_id: string
+          external_identifier: string | null
+          id: string
+          last_confirmed_at: string | null
+          location_id: string
+          notes: string | null
+          stale_at: string | null
+          updated_at: string
+          valid_from: string | null
+          valid_to: string | null
+          verification_status: string
+        }
+        Insert: {
+          affiliation_state?: string
+          affiliation_type: string
+          awarding_organization: string
+          created_at?: string
+          discipline_id: string
+          external_identifier?: string | null
+          id?: string
+          last_confirmed_at?: string | null
+          location_id: string
+          notes?: string | null
+          stale_at?: string | null
+          updated_at?: string
+          valid_from?: string | null
+          valid_to?: string | null
+          verification_status?: string
+        }
+        Update: {
+          affiliation_state?: string
+          affiliation_type?: string
+          awarding_organization?: string
+          created_at?: string
+          discipline_id?: string
+          external_identifier?: string | null
+          id?: string
+          last_confirmed_at?: string | null
+          location_id?: string
+          notes?: string | null
+          stale_at?: string | null
+          updated_at?: string
+          valid_from?: string | null
+          valid_to?: string | null
+          verification_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_affiliations_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_affiliations_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       training_capability_types: {
         Row: {
           created_at: string
@@ -569,6 +920,112 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      training_evidence: {
+        Row: {
+          assertion: string
+          content_hash: string | null
+          created_at: string
+          evidence_text: string | null
+          id: string
+          location_equipment_id: string | null
+          location_training_capability_id: string | null
+          location_training_discipline_id: string | null
+          observed_at: string
+          program_training_discipline_discipline_id: string | null
+          program_training_discipline_program_id: string | null
+          review_status: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          structured_evidence: Json
+          training_affiliation_id: string | null
+          training_source_id: string
+        }
+        Insert: {
+          assertion: string
+          content_hash?: string | null
+          created_at?: string
+          evidence_text?: string | null
+          id?: string
+          location_equipment_id?: string | null
+          location_training_capability_id?: string | null
+          location_training_discipline_id?: string | null
+          observed_at: string
+          program_training_discipline_discipline_id?: string | null
+          program_training_discipline_program_id?: string | null
+          review_status?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          structured_evidence?: Json
+          training_affiliation_id?: string | null
+          training_source_id: string
+        }
+        Update: {
+          assertion?: string
+          content_hash?: string | null
+          created_at?: string
+          evidence_text?: string | null
+          id?: string
+          location_equipment_id?: string | null
+          location_training_capability_id?: string | null
+          location_training_discipline_id?: string | null
+          observed_at?: string
+          program_training_discipline_discipline_id?: string | null
+          program_training_discipline_program_id?: string | null
+          review_status?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          structured_evidence?: Json
+          training_affiliation_id?: string | null
+          training_source_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_evidence_location_equipment_id_fkey"
+            columns: ["location_equipment_id"]
+            isOneToOne: false
+            referencedRelation: "location_equipment"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_evidence_location_training_capability_id_fkey"
+            columns: ["location_training_capability_id"]
+            isOneToOne: false
+            referencedRelation: "location_training_capabilities"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_evidence_location_training_discipline_id_fkey"
+            columns: ["location_training_discipline_id"]
+            isOneToOne: false
+            referencedRelation: "location_training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_evidence_program_target_fk"
+            columns: [
+              "program_training_discipline_program_id",
+              "program_training_discipline_discipline_id",
+            ]
+            isOneToOne: false
+            referencedRelation: "program_training_disciplines"
+            referencedColumns: ["program_id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_evidence_training_affiliation_id_fkey"
+            columns: ["training_affiliation_id"]
+            isOneToOne: false
+            referencedRelation: "training_affiliations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_evidence_training_source_id_fkey"
+            columns: ["training_source_id"]
+            isOneToOne: false
+            referencedRelation: "training_sources"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       training_sources: {
         Row: {
