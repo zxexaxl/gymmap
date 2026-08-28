@@ -144,6 +144,13 @@ export type Database = {
             foreignKeyName: "discipline_equipment_requirements_discipline_id_fkey"
             columns: ["discipline_id"]
             isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "discipline_equipment_requirements_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
             referencedRelation: "training_disciplines"
             referencedColumns: ["id"]
           },
@@ -602,6 +609,13 @@ export type Database = {
             foreignKeyName: "location_training_disciplines_discipline_id_fkey"
             columns: ["discipline_id"]
             isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
             referencedRelation: "training_disciplines"
             referencedColumns: ["id"]
           },
@@ -678,6 +692,13 @@ export type Database = {
           verification_status?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "program_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
           {
             foreignKeyName: "program_training_disciplines_discipline_id_fkey"
             columns: ["discipline_id"]
@@ -842,6 +863,13 @@ export type Database = {
           verification_status?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "training_affiliations_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
           {
             foreignKeyName: "training_affiliations_discipline_id_fkey"
             columns: ["discipline_id"]
@@ -1012,6 +1040,16 @@ export type Database = {
             referencedColumns: ["program_id", "discipline_id"]
           },
           {
+            foreignKeyName: "training_evidence_program_target_fk"
+            columns: [
+              "program_training_discipline_program_id",
+              "program_training_discipline_discipline_id",
+            ]
+            isOneToOne: false
+            referencedRelation: "published_program_training_disciplines"
+            referencedColumns: ["program_id", "discipline_id"]
+          },
+          {
             foreignKeyName: "training_evidence_training_affiliation_id_fkey"
             columns: ["training_affiliation_id"]
             isOneToOne: false
@@ -1091,7 +1129,238 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      current_class_schedules: {
+        Row: {
+          canonical_program_name: string | null
+          category_primary: string | null
+          comparison_key: string | null
+          confidence: number | null
+          created_at: string | null
+          duration_minutes: number | null
+          end_time: string | null
+          extracted_at: string | null
+          id: string | null
+          instructor_name: string | null
+          location_id: string | null
+          match_method: string | null
+          needs_review: boolean | null
+          normalized_text: string | null
+          program_brand: string | null
+          program_id: string | null
+          raw_program_name: string | null
+          source_page_url: string | null
+          source_snapshot_id: string | null
+          start_time: string | null
+          studio_name: string | null
+          tags: string[] | null
+          updated_at: string | null
+          valid_from: string | null
+          valid_to: string | null
+          weekday: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "class_schedules_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "class_schedules_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_location_equipment: {
+        Row: {
+          access_mode: string | null
+          equipment_slug: string | null
+          equipment_type_id: string | null
+          last_confirmed_at: string | null
+          location_id: string | null
+          quantity: number | null
+          reservation_requirement: string | null
+          stale_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_equipment_equipment_type_id_fkey"
+            columns: ["equipment_type_id"]
+            isOneToOne: false
+            referencedRelation: "equipment_types"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_equipment_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_location_training_capabilities: {
+        Row: {
+          access_mode: string | null
+          availability_state: string | null
+          capability_slug: string | null
+          capability_type_id: string | null
+          discipline_id: string | null
+          last_confirmed_at: string | null
+          location_id: string | null
+          reservation_requirement: string | null
+          stale_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_training_capabilities_capability_type_id_fkey"
+            columns: ["capability_type_id"]
+            isOneToOne: false
+            referencedRelation: "training_capability_types"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_location_training_disciplines: {
+        Row: {
+          discipline_id: string | null
+          discipline_slug: string | null
+          last_confirmed_at: string | null
+          location_id: string | null
+          stale_at: string | null
+          updated_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_training_disciplines_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_program_training_disciplines: {
+        Row: {
+          discipline_id: string | null
+          discipline_slug: string | null
+          last_confirmed_at: string | null
+          program_id: string | null
+          relation_type: string | null
+          stale_at: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "program_training_disciplines_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "program_training_disciplines_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_training_affiliations: {
+        Row: {
+          affiliation_type: string | null
+          awarding_organization: string | null
+          discipline_id: string | null
+          discipline_slug: string | null
+          external_identifier: string | null
+          is_official: boolean | null
+          last_confirmed_at: string | null
+          location_id: string | null
+          stale_at: string | null
+          valid_from: string | null
+          valid_to: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_affiliations_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "published_training_discipline_summary"
+            referencedColumns: ["discipline_id"]
+          },
+          {
+            foreignKeyName: "training_affiliations_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_affiliations_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      published_training_discipline_summary: {
+        Row: {
+          discipline_id: string | null
+          last_modified_at: string | null
+          name: string | null
+          official_location_count: number | null
+          published_location_count: number | null
+          slug: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       favorite_class_schedule_week: {
@@ -1149,6 +1418,38 @@ export type Database = {
           latest_schedule_update: string
           result_order: number
           schedule_id: string
+          total_count: number
+        }[]
+      }
+      search_training_locations: {
+        Args: {
+          p_capability_slugs?: string[]
+          p_city?: string
+          p_discipline_slug: string
+          p_equipment_slugs?: string[]
+          p_has_class?: boolean
+          p_limit?: number
+          p_official_only?: boolean
+          p_offset?: number
+          p_prefecture?: string
+        }
+        Returns: {
+          address: string
+          brand_id: string
+          brand_name: string
+          capability_slugs: string[]
+          city: string
+          class_available: boolean
+          equipment_slugs: string[]
+          last_confirmed_at: string
+          latitude: number
+          location_id: string
+          location_name: string
+          location_slug: string
+          longitude: number
+          official: boolean
+          open_training_available: boolean
+          prefecture: string
           total_count: number
         }[]
       }
