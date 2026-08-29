@@ -14,7 +14,7 @@
   "reviewed_at": "2026-08-29T15:50:00.000Z",
   "inventory_observed_at": "2026-08-29T15:40:00.000Z",
   "production_training_observed_at": "2026-08-29T15:40:00.000Z",
-  "deterministic_contract_sha256": "80c8714779aa16d9d6aa1901f4ca94f2cc70b3c5263b98914534e1a15d4575e6",
+  "deterministic_contract_sha256": "2f7c725e0dd81428115a815d7f79a1e2b30776764d94b5a973283cdcaec206aa",
   "classification_counts": {
     "NEW_LOCATION_READY": 58,
     "EXISTING_LOCATION_CONFIRMED_MATCH": 0,
@@ -102,6 +102,9 @@
     "hgy_external_ids": [],
     "canonical_facility_urls": [
       "orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita"
+    ],
+    "shared_brand_locator_urls": [
+      "gym-field.com/studio"
     ],
     "normalized_addresses": [],
     "proposed_slugs": [],
@@ -1398,10 +1401,28 @@
       "original_blocker": "MISSING_OFFICIAL_URL",
       "governing_body_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
       "governing_body_revalidated": true,
-      "facility_authority_url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+      "facility_authority_url": "https://www.gym-field.com/studio/",
       "facility_authority_kind": "brand_locator",
       "facility_authority_strength": "FIRST_PARTY_STRONG",
-      "facility_observation": null,
+      "facility_observation": {
+        "external_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+        "requested_url": "https://www.gym-field.com/studio/",
+        "final_url": "https://www.gym-field.com/studio/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "title": "スタジオ - ジムフィールド",
+        "canonical_url": "https://www.gym-field.com/studio/",
+        "fetched_at": "2026-08-29T23:00:36.000Z",
+        "official_name_match": true,
+        "postal_code_match": true,
+        "address_token_match": true,
+        "page_postal_codes": [
+          "3590023"
+        ],
+        "error": null,
+        "site_kind": "facility_site",
+        "source_url_kind": "structured_authority_reconciliation"
+      },
       "postal_authority": {
         "status": "POSTAL_AUTHORITY_CONFIRMED",
         "postal_code": "3590023",
@@ -1416,7 +1437,7 @@
         "authority_url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip"
       },
       "canonical_name": "ジムフィールド 所沢スタジオ",
-      "canonical_name_authority": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+      "canonical_name_authority": "https://www.gym-field.com/studio/",
       "canonical_address": "3590023, 所沢市, 東所沢和田３丁目３１−３",
       "address_authority": "https://hyrox-training-finder.hyrox.com/gym/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
       "postal_code": "3590023",
@@ -1438,7 +1459,7 @@
       "match_score": null,
       "coordinate_distance_meters": null,
       "final_classification": "NEW_LOCATION_READY",
-      "resolution_reason": "Official studio page confirms 所沢 and 東所沢和田3-31-3; official locator confirms the shared ジムフィールド brand.",
+      "resolution_reason": "The reviewed facility-specific URL is retired (direct HTTP 404); the current Gym Field first-party studio locator explicitly lists Tokorozawa Studio (HYROX) and the unchanged physical address.",
       "unresolved_gaps": [],
       "sources_checked": [
         {
@@ -1447,8 +1468,13 @@
           "result": "revalidated"
         },
         {
-          "authority": "facility/brand first-party",
+          "authority": "retired facility-specific first-party URL",
           "url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+          "result": "retired/unavailable: HTTP 404"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.gym-field.com/studio/",
           "result": "FIRST_PARTY_STRONG"
         },
         {
@@ -1461,7 +1487,7 @@
         "\"ジムフィールド所沢スタジオ\" official 所沢市",
         "\"ジムフィールド所沢スタジオ\" 3590023"
       ],
-      "reviewed_at": "2026-08-29T15:50:00.000Z",
+      "reviewed_at": "2026-08-29T23:00:36.000Z",
       "observed_at": "2026-08-29T15:42:00.000Z"
     },
     {

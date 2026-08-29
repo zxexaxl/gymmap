@@ -3656,6 +3656,25 @@
       "source_url_kind": "h2_4_reviewed"
     },
     {
+      "external_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+      "requested_url": "https://www.gym-field.com/studio/",
+      "final_url": "https://www.gym-field.com/studio/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "スタジオ - ジムフィールド",
+      "canonical_url": "https://www.gym-field.com/studio/",
+      "fetched_at": "2026-08-29T23:00:36.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "3590023"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "structured_authority_reconciliation"
+    },
+    {
       "external_id": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
       "requested_url": "https://vita-e.jp/",
       "final_url": "https://vita-e.jp/",

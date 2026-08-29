@@ -18,6 +18,8 @@
     "hyrox:review-unmatched": "tsx scripts/hyrox/review-unmatched-training-clubs.ts",
     "hyrox:h2-9:observe": "tsx scripts/hyrox/observe-location-authority-gaps.ts",
     "hyrox:h2-9:resolve": "tsx scripts/hyrox/resolve-location-authority-gaps.ts",
+    "hyrox:h2-10r:reconcile": "tsx scripts/hyrox/reconcile-authority-drift.ts",
+    "hyrox:h2-10r:revalidate": "tsx scripts/hyrox/revalidate-reconciled-ready-set.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",
     "lint": "eslint .",

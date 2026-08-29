@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "phase": "H2-10R",
+  "target_hgy_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+  "observed_at": "2026-08-29T23:00:36.000Z",
+  "old_h2_9_contract_sha256": "80c8714779aa16d9d6aa1901f4ca94f2cc70b3c5263b98914534e1a15d4575e6",
+  "governing_body": {
+    "url": "https://onefiit-api.platform.onefiit.com/hyrox365/v1/gyms/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+    "checks": {
+      "external_id_unchanged": true,
+      "country_jp": true,
+      "name_unchanged": true,
+      "address_unchanged": true,
+      "postal_unchanged": true,
+      "coordinates_unchanged": true
+    },
+    "coordinate_distance_meters": 0
+  },
+  "old_authority": {
+    "url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+    "status": 404,
+    "final_url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+    "canonical_url": "https://www.gym-field.com/not-found/"
+  },
+  "replacement_authority": {
+    "url": "https://www.gym-field.com/studio/",
+    "status": 200,
+    "final_url": "https://www.gym-field.com/studio/",
+    "canonical_url": "https://www.gym-field.com/studio/",
+    "title": "スタジオ - ジムフィールド",
+    "checks": {
+      "gym_field_first_party": true,
+      "tokorozawa_hyrox_listed": true,
+      "postal_listed": true,
+      "address_listed": true
+    }
+  },
+  "reconciliation": {
+    "classification": "FACILITY_SPECIFIC_URL_RETIRED",
+    "replacement_classification": "CURRENT_OFFICIAL_LOCATOR_AUTHORITY_CONFIRMED",
+    "old_authority_url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+    "old_authority_state": "unavailable",
+    "old_http_status": 404,
+    "old_redirect_url": null,
+    "old_canonical_url": "https://www.gym-field.com/not-found/",
+    "new_authority_url": "https://www.gym-field.com/studio/",
+    "new_authority_type": "brand_locator",
+    "identity_continuity": "confirmed",
+    "user_facing_url_decision": "use_current_official_locator",
+    "replacement_reason": "The reviewed facility-specific URL is retired (direct HTTP 404); the current Gym Field first-party studio locator explicitly lists Tokorozawa Studio (HYROX) and the unchanged physical address.",
+    "observed_at": "2026-08-29T23:00:36.000Z",
+    "reviewer_decision": "approved"
+  },
+  "semantic_fields_unchanged": [
+    "canonical_name",
+    "canonical_address",
+    "postal_code",
+    "prefecture",
+    "city",
+    "latitude",
+    "longitude",
+    "brand_resolution",
+    "proposed_brand_name",
+    "proposed_brand_slug",
+    "proposed_location_type",
+    "proposed_slug"
+  ]
+}

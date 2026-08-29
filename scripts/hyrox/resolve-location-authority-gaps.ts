@@ -78,8 +78,23 @@ function stableResolutionRecord(record: H29ResolutionRecord): Partial<H29Resolut
   return stable;
 }
 
+function duplicateUrlAudit(records: H29ResolutionRecord[]): { material: string[]; shared_brand_locators: string[] } {
+  const groups = new Map<string, H29ResolutionRecord[]>();
+  for (const record of records) {
+    const key = normalizedUrlKey(record.facility_authority_url);
+    if (key) groups.set(key, [...(groups.get(key) ?? []), record]);
+  }
+  const duplicated = [...groups.entries()].filter(([, group]) => group.length > 1);
+  return {
+    material: duplicated.filter(([, group]) => !group.every((record) => record.facility_authority_kind === "brand_locator"))
+      .map(([url]) => url).sort(),
+    shared_brand_locators: duplicated.filter(([, group]) => group.every((record) => record.facility_authority_kind === "brand_locator"))
+      .map(([url]) => url).sort(),
+  };
+}
+
 function applyDuplicateConflicts(records: H29ResolutionRecord[]): void {
-  const duplicateUrls = new Set(duplicateValues(records.map((record) => normalizedUrlKey(record.facility_authority_url))));
+  const duplicateUrls = new Set(duplicateUrlAudit(records).material);
   const duplicateAddresses = new Set(duplicateValues(records.map((record) => normalizedAddressKey(record.canonical_address))));
   const duplicateSlugs = new Set(duplicateValues(records.map((record) => record.proposed_slug)));
   const duplicateCoordinates = new Set(duplicateValues(records.map(coordinateKey)));
@@ -155,9 +170,11 @@ async function main(): Promise<void> {
   for (const blocker of blockerKeys) if (blockerCounts[blocker] !== EXPECTED_BLOCKERS[blocker]) {
     throw new Error(`Blocker count drift for ${blocker}: ${blockerCounts[blocker]} != ${EXPECTED_BLOCKERS[blocker]}`);
   }
+  const urlAudit = duplicateUrlAudit(records);
   const duplicateAudit = {
     hgy_external_ids: duplicateValues(records.map((record) => record.hgy_external_id)),
-    canonical_facility_urls: duplicateValues(records.map((record) => normalizedUrlKey(record.facility_authority_url))),
+    canonical_facility_urls: urlAudit.material,
+    shared_brand_locator_urls: urlAudit.shared_brand_locators,
     normalized_addresses: duplicateValues(records.map((record) => normalizedAddressKey(record.canonical_address))),
     proposed_slugs: duplicateValues(records.map((record) => record.proposed_slug)),
     rounded_coordinates: duplicateValues(records.map(coordinateKey)),

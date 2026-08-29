@@ -72,7 +72,24 @@ export type GoverningBodyObservation = {
 
 export type H29WebsiteObservation = WebsiteObservation & {
   site_kind: "facility_site" | "social" | "booking" | "hosted_landing";
-  source_url_kind: "governing_body_current" | "h2_4_reviewed";
+  source_url_kind: "governing_body_current" | "h2_4_reviewed" | "structured_authority_reconciliation";
+};
+
+export type AuthorityReconciliation = {
+  classification: "FACILITY_SPECIFIC_URL_RETIRED";
+  replacement_classification: "CURRENT_OFFICIAL_LOCATOR_AUTHORITY_CONFIRMED";
+  old_authority_url: string;
+  old_authority_state: "unavailable";
+  old_http_status: number;
+  old_redirect_url: string | null;
+  old_canonical_url: string | null;
+  new_authority_url: string;
+  new_authority_type: "brand_locator";
+  identity_continuity: "confirmed";
+  user_facing_url_decision: "use_current_official_locator";
+  replacement_reason: string;
+  observed_at: string;
+  reviewer_decision: "approved";
 };
 
 export type H29Override = {
@@ -89,6 +106,7 @@ export type H29Override = {
   reason: string;
   authority_url: string;
   reviewed_at: string;
+  authority_reconciliation?: AuthorityReconciliation;
 };
 
 export type H29ResolutionRecord = {
@@ -360,11 +378,12 @@ export function resolveAuthorityRecord(input: {
     unresolved_gaps: [...new Set(unresolved)].sort(),
     sources_checked: [
       { authority: "HYROX governing-body Training Finder", url: record.hyrox_source_url, result: governing.found ? "revalidated" : `unavailable: ${governing.error}` },
+      ...(override?.authority_reconciliation ? [{ authority: "retired facility-specific first-party URL", url: override.authority_reconciliation.old_authority_url, result: `retired/unavailable: HTTP ${override.authority_reconciliation.old_http_status}` }] : []),
       ...(finalUrl ? [{ authority: ["facility_site", "brand_locator"].includes(facilityKind ?? "") ? "facility/brand first-party" : "official facility-controlled secondary", url: finalUrl, result: strength }] : []),
       { authority: "Japan Post official postal data", url: JAPAN_POST_UTF_DATA_URL, result: postal.status },
     ],
     discovery_queries: governing.discovery_queries,
-    reviewed_at: input.reviewedAt,
+    reviewed_at: override?.reviewed_at ?? input.reviewedAt,
     observed_at: governing.fetched_at,
   };
 }

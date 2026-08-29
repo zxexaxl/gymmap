@@ -27,7 +27,7 @@ Scope: 144 H2-4 NEW_LOCATION_NEEDS_REVIEW records
 - Missing-URL first-party facility pages found: 8
 - Missing-URL official brand locator pages found: 12
 - Missing-URL records left without reliable first-party URL: 50
-- Deterministic contract SHA-256: 80c8714779aa16d9d6aa1901f4ca94f2cc70b3c5263b98914534e1a15d4575e6
+- Deterministic contract SHA-256: 2f7c725e0dd81428115a815d7f79a1e2b30776764d94b5a973283cdcaec206aa
 
 ## Import boundary
 

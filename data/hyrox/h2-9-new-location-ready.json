@@ -410,7 +410,7 @@
       "city": "所沢市",
       "latitude": 35.7970394,
       "longitude": 139.5070773,
-      "official_url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+      "official_url": "https://www.gym-field.com/studio/",
       "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
       "is_active": true,
       "import_preview": {
@@ -432,8 +432,13 @@
           "result": "revalidated"
         },
         {
-          "authority": "facility/brand first-party",
+          "authority": "retired facility-specific first-party URL",
           "url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+          "result": "retired/unavailable: HTTP 404"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.gym-field.com/studio/",
           "result": "FIRST_PARTY_STRONG"
         },
         {
