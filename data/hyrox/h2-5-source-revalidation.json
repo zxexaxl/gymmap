@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "phase": "H2-5",
+  "source_authority": "HYROX governing-body official detail endpoint plus reviewed facility official URL",
+  "observed_at": "2026-08-29T13:50:28.000Z",
+  "input_count": 17,
+  "pass_count": 17,
+  "blocked_count": 0,
+  "records": [
+    {
+      "hgy_external_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "official_name": "g-zone PARK",
+        "country": "JP",
+        "address": "615-0933, 京都府, 京都市右京区梅津後藤町1-3",
+        "postal_code": "615-0933",
+        "latitude": 35.0032571,
+        "longitude": 135.7020504,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "facility_url": "https://g-zone.co.jp/park/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://g-zone.co.jp/park/",
+        "final_url": "https://g-zone.co.jp/park/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+        "official_name": "Takamatsu CrossFit",
+        "country": "JP",
+        "address": "7618056, 高松市, 上天神町634",
+        "postal_code": "7618056",
+        "latitude": 34.3111792,
+        "longitude": 134.0363775,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_c816ru6QeTv14At3O51pjK8au",
+        "facility_url": "https://takamatsu-crossfit.jp/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://takamatsu-crossfit.jp/",
+        "final_url": "https://takamatsu-crossfit.jp/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "official_name": "CrossFit Ashiya",
+        "country": "JP",
+        "address": "659-0013, Ashiya,HYOGO, 7-5 Iwazono-cho",
+        "postal_code": "659-0013",
+        "latitude": 34.7413476,
+        "longitude": 135.3114397,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "facility_url": "https://crossfitashiya.com/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://crossfitashiya.com/",
+        "final_url": "https://crossfitashiya.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "official_name": "Beequick Fitness　Sanda",
+        "country": "JP",
+        "address": "669-1321, Hyogo-ken Sanda-shi, keyakidai 1-6-2",
+        "postal_code": "669-1321",
+        "latitude": 34.908318,
+        "longitude": 135.1865807,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "facility_url": "https://www.beequick.jp/location/sanda/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.beequick.jp/location/sanda/",
+        "final_url": "https://www.beequick.jp/location/sanda/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "official_name": "STANCE FITNESS ２ND",
+        "country": "JP",
+        "address": "6008387, 京 都 市, 下 京 区 高 辻 大 宮 町 1 0 3 大 宮 高 辻 ビ ル 2 階",
+        "postal_code": "6008387",
+        "latitude": 35.0001186,
+        "longitude": 135.7491414,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "facility_url": "https://stance-design.jp/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://stance-design.jp/",
+        "final_url": "https://stance-design.jp/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "official_name": "Improve KYOTO",
+        "country": "JP",
+        "address": "6048221, 京都, B1F, 280 Tenjinyama-cho, Nishikikoji-dori Muromachi Nishi-iru, Nakagyo-ku",
+        "postal_code": "6048221",
+        "latitude": 35.005198,
+        "longitude": 135.7572444,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "facility_url": "https://improve-hyrox.com",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://improve-hyrox.com/",
+        "final_url": "https://improve-hyrox.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "official_name": "CrossFit Rakuhoku",
+        "country": "JP",
+        "address": "606-8004, Kyoto, 7-1 Yamabanakawabatacho",
+        "postal_code": "606-8004",
+        "latitude": 35.0511036,
+        "longitude": 135.7898774,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "facility_url": "https://crossfitrakuhoku.com",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://crossfitrakuhoku.com/",
+        "final_url": "https://crossfitrakuhoku.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "official_name": "ANYTIME FITNESS NAGAOKAKYO",
+        "country": "JP",
+        "address": "6170826, 長岡京市, 開田4-22-5",
+        "postal_code": "6170826",
+        "latitude": 34.92221970000001,
+        "longitude": 135.6935862,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "facility_url": "https://www.anytimefitness.co.jp/nagaokakyo/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.anytimefitness.co.jp/nagaokakyo/",
+        "final_url": "https://www.anytimefitness.co.jp/nagaokakyo/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "official_name": "CrossFit Kumamoto",
+        "country": "JP",
+        "address": "8600822, Kumamoto, 331-1 Motoyamamachi Chuo-ku",
+        "postal_code": "8600822",
+        "latitude": 32.7877427,
+        "longitude": 130.6964067,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "facility_url": "https://www.crossfitkumamoto.com",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.crossfitkumamoto.com/",
+        "final_url": "https://www.crossfitkumamoto.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "official_name": "CrossFit Otoyo Strength",
+        "country": "JP",
+        "address": "7890166, Kochi, 317-1 Higashidoi, Otoyo-cho, Nagaoka-gun",
+        "postal_code": "7890166",
+        "latitude": 33.7937737,
+        "longitude": 133.7574224,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "facility_url": "https://www.otoyostrength.com",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.otoyostrength.com/",
+        "final_url": "https://www.otoyostrength.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "official_name": "CrossFit Takarazuka",
+        "country": "JP",
+        "address": "665-0822, Takarazuka, 1-13-18 Akuranaka",
+        "postal_code": "665-0822",
+        "latitude": 34.8032594,
+        "longitude": 135.3718761,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "facility_url": "https://crossfittakarazuka.com/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://crossfittakarazuka.com/",
+        "final_url": "https://crossfittakarazuka.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "official_name": "ＸＴＲＹ",
+        "country": "JP",
+        "address": "7000973, 岡山市, 岡山県岡山市北区下中野377-1",
+        "postal_code": "7000973",
+        "latitude": 34.6383425,
+        "longitude": 133.9051427,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "facility_url": "https://www.xtry.jp",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.xtry.jp/",
+        "final_url": "https://www.xtry.jp/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "official_name": "H-Field Sports Performance Center",
+        "country": "JP",
+        "address": "980-0023, Sendai, 青葉区北目町2番40号",
+        "postal_code": "980-0023",
+        "latitude": 38.2551376,
+        "longitude": 140.8763012,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "facility_url": "https://www.h-fieldsendai.com/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.h-fieldsendai.com/",
+        "final_url": "https://www.h-fieldsendai.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "official_name": "Beequick Kyotango",
+        "country": "JP",
+        "address": "627-0005, Kyoto-fu kyotango-shi, mineyamachoshinmachi 1981-1",
+        "postal_code": "627-0005",
+        "latitude": 35.613771,
+        "longitude": 135.0987115,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "facility_url": "https://www.beequick.jp/location/kyotango/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.beequick.jp/location/kyotango/",
+        "final_url": "https://www.beequick.jp/location/kyotango/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "official_name": "crossfitokayama",
+        "country": "JP",
+        "address": "702-8011, Okayama-shi, Crossfitokayama 2978-8 Kori Minami-ku",
+        "postal_code": "702-8011",
+        "latitude": 34.5843808,
+        "longitude": 133.9566847,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "facility_url": "https://www.crossfitokayama.com",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.crossfitokayama.com/",
+        "final_url": "https://www.crossfitokayama.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "official_name": "NOTA GYM 西京極店",
+        "country": "JP",
+        "address": "615-0851, 京都市, 京都市右京区西京極西池田町9番地4 コスミック西京極2階",
+        "postal_code": "615-0851",
+        "latitude": 34.9925695,
+        "longitude": 135.7195654,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "facility_url": "https://nota-gym.com/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://nota-gym.com/",
+        "final_url": "https://nota-gym.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    },
+    {
+      "hgy_external_id": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+      "status": "PASS",
+      "observed_at": "2026-08-29T13:50:28.000Z",
+      "governing_body": {
+        "external_id": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "official_name": "CrossFit Hakata Shingu",
+        "country": "JP",
+        "address": "8110101, Fukuoka, 1793-7 harugami  Oaza Shingumachi kasuyagun",
+        "postal_code": "8110101",
+        "latitude": 33.6950473,
+        "longitude": 130.4501025,
+        "official_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "facility_url": "https://www.crossfit-hakata-shingu.com/",
+        "coordinate_distance_meters": 0
+      },
+      "facility_site": {
+        "requested_url": "https://www.crossfit-hakata-shingu.com/",
+        "final_url": "https://www.crossfit-hakata-shingu.com/",
+        "status": 200,
+        "error": null
+      },
+      "api_error": null,
+      "blockers": []
+    }
+  ]
+}

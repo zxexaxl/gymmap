@@ -1,0 +1,2257 @@
+{
+  "schema_version": 1,
+  "phase": "H2-5",
+  "preview_only": true,
+  "no_database_writes": true,
+  "authority": {
+    "h2_4_commit": "d711265918387058159c09b3417a258090d6a8e8",
+    "production_observed_at": "2026-08-29T13:50:28.000Z",
+    "source_revalidated_at": "2026-08-29T13:50:28.000Z"
+  },
+  "stale_policy_days": 90,
+  "validation": {
+    "ready_input_count": 17,
+    "included_count": 17,
+    "excluded_counts": {
+      "EXISTING_LOCATION_CONFIRMED_MATCH": 1,
+      "NEW_LOCATION_NEEDS_REVIEW": 144,
+      "NEW_LOCATION_READY": 0,
+      "NON_STANDARD_LOCATION": 1
+    },
+    "duplicate_hgy_ids": [],
+    "duplicate_location_slugs": [],
+    "collisions": []
+  },
+  "counts": {
+    "gym_brands": 16,
+    "gym_locations": 17,
+    "training_sources": 17,
+    "location_external_identifiers": 17,
+    "location_training_disciplines": 17,
+    "training_affiliations": 17,
+    "training_evidence": 34
+  },
+  "import_order": [
+    "gym_brands",
+    "gym_locations",
+    "training_sources",
+    "location_external_identifiers",
+    "location_training_disciplines",
+    "training_affiliations",
+    "training_evidence"
+  ],
+  "import_policy": {
+    "serialization": "One atomic transaction protected by a transaction-scoped advisory lock.",
+    "brands": "Reuse only an exact semantic name+slug identity; any name or slug mismatch blocks the whole set.",
+    "locations": "Reuse only an exact reviewed slug identity; URL, normalized-address, proximity, or semantic mismatch blocks.",
+    "sources": "Reuse one governing-body finder source by canonical URL only when location and authority match.",
+    "external_identifiers": "The namespace+HGY identity may belong to exactly one location; different-location ownership blocks.",
+    "affiliations": "Reuse the canonical location+HYROX+training_club+HYROX relation only when external identity matches.",
+    "evidence": "Deterministic SHA-256 content hash deduplicates source+target+assertion+observation evidence.",
+    "freshness": "Only a strictly newer authoritative observation may advance confirmation fields; older input never regresses them."
+  },
+  "production_baseline": {
+    "gym_brands": 7,
+    "gym_locations": 369,
+    "training_disciplines_hyrox": 1,
+    "training_sources": 6,
+    "location_external_identifiers_hyrox": 6,
+    "location_training_disciplines": 6,
+    "training_affiliations_hyrox": 6,
+    "training_evidence": 12,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "program_training_disciplines": 0
+  },
+  "publication_impact": {
+    "gym_locations": "RLS currently permits public SELECT; is_active=true locations become eligible for existing location pages, map/data loaders, and static params immediately.",
+    "schedule_search": "No class_schedules are imported, so the 17 locations do not become schedule-search result rows; the 16 public brands do become available as brand-filter options after cache refresh.",
+    "sitemap": "Existing sitemap generation selects active gym locations, so the 17 slugs become sitemap entries on the next build.",
+    "gym_brands": "RLS currently permits public SELECT; brand rows are publicly readable immediately, though no standalone brand route was found.",
+    "atomicity": "Brand/location identity and the HYROX publication graph must be inserted in the same production transaction to avoid partial public exposure."
+  },
+  "brands": [
+    {
+      "brand_ref": "brand:anytime-fitness",
+      "name": "Anytime Fitness",
+      "slug": "anytime-fitness",
+      "official_url": "https://www.anytimefitness.co.jp/",
+      "description": null,
+      "semantic": "chain",
+      "location_refs": [
+        "location:anytime-fitness-nagaokakyo"
+      ],
+      "source_authority_urls": [
+        "https://www.anytimefitness.co.jp/nagaokakyo/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "0b8f4af39ceb49c557236e739ea74f6ae438028338bd54ad2088e94c767c583d"
+    },
+    {
+      "brand_ref": "brand:beequick-fitness",
+      "name": "BeeQuick Fitness",
+      "slug": "beequick-fitness",
+      "official_url": "https://www.beequick.jp/",
+      "description": null,
+      "semantic": "chain",
+      "location_refs": [
+        "location:beequick-fitness-sanda",
+        "location:beequick-kyotango"
+      ],
+      "source_authority_urls": [
+        "https://www.beequick.jp/location/kyotango/",
+        "https://www.beequick.jp/location/sanda/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "b12b0131b31f8993ae0c4f3c9a9e0163a3bbf5342b27a5c762935cee5a7a3a02"
+    },
+    {
+      "brand_ref": "brand:crossfit-ashiya",
+      "name": "CrossFit Ashiya",
+      "slug": "crossfit-ashiya",
+      "official_url": "https://crossfitashiya.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-ashiya"
+      ],
+      "source_authority_urls": [
+        "https://crossfitashiya.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "9924498498ffe33d6bc18f3f2cbc5f52eb0e6c36120a37fefc4ec16e76d3e4ed"
+    },
+    {
+      "brand_ref": "brand:crossfit-hakata-shingu",
+      "name": "CrossFit Hakata Shingu",
+      "slug": "crossfit-hakata-shingu",
+      "official_url": "https://www.crossfit-hakata-shingu.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-hakata-shingu"
+      ],
+      "source_authority_urls": [
+        "https://www.crossfit-hakata-shingu.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "1a0e74e88b924c4adbb721156a10c38666c28398fd5852f534501bb9316542d8"
+    },
+    {
+      "brand_ref": "brand:crossfit-kumamoto",
+      "name": "CrossFit Kumamoto",
+      "slug": "crossfit-kumamoto",
+      "official_url": "https://www.crossfitkumamoto.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-kumamoto"
+      ],
+      "source_authority_urls": [
+        "https://www.crossfitkumamoto.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "2bb1d1e957e72c412db495759acfe721cc5f7479378bc4151f0fe656670cfa07"
+    },
+    {
+      "brand_ref": "brand:crossfit-otoyo-strength",
+      "name": "CrossFit Otoyo Strength",
+      "slug": "crossfit-otoyo-strength",
+      "official_url": "https://www.otoyostrength.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-otoyo-strength"
+      ],
+      "source_authority_urls": [
+        "https://www.otoyostrength.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "bdd72e5b3d5fad5bb4608500c22ac5a533f02cfebf5682867819678433fc80c1"
+    },
+    {
+      "brand_ref": "brand:crossfit-rakuhoku",
+      "name": "CrossFit Rakuhoku",
+      "slug": "crossfit-rakuhoku",
+      "official_url": "https://crossfitrakuhoku.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-rakuhoku"
+      ],
+      "source_authority_urls": [
+        "https://crossfitrakuhoku.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "3f62608e26b12d3eca6d682532b9350a5d6bf23eeb54864b11f0461bb52fe2c3"
+    },
+    {
+      "brand_ref": "brand:crossfit-takarazuka",
+      "name": "CrossFit Takarazuka",
+      "slug": "crossfit-takarazuka",
+      "official_url": "https://crossfittakarazuka.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfit-takarazuka"
+      ],
+      "source_authority_urls": [
+        "https://crossfittakarazuka.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "5a71378da1149fd773fb19b8592b89fe30ddcbcdafa1b7e33f22bd1a7e773781"
+    },
+    {
+      "brand_ref": "brand:crossfitokayama",
+      "name": "crossfitokayama",
+      "slug": "crossfitokayama",
+      "official_url": "https://www.crossfitokayama.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:crossfitokayama"
+      ],
+      "source_authority_urls": [
+        "https://www.crossfitokayama.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "b5e2b1fea2fccee6c09e1571a688f8a6c131dc11dd6969a825cfcd7d9af0b2a8"
+    },
+    {
+      "brand_ref": "brand:g-zone",
+      "name": "g-zone",
+      "slug": "g-zone",
+      "official_url": "https://g-zone.co.jp/",
+      "description": null,
+      "semantic": "chain",
+      "location_refs": [
+        "location:g-zone-park"
+      ],
+      "source_authority_urls": [
+        "https://g-zone.co.jp/park/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "905f212f5bbeb6bf9a0c960e9009db158a93c4b4ab4441460c6bec697c4777f3"
+    },
+    {
+      "brand_ref": "brand:h-field-sports-performance-center",
+      "name": "H-Field Sports Performance Center",
+      "slug": "h-field-sports-performance-center",
+      "official_url": "https://www.h-fieldsendai.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:h-field-sports-performance-center"
+      ],
+      "source_authority_urls": [
+        "https://www.h-fieldsendai.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "18f6ae97ecfe318649d613cd64f2ef7a76629415ed2669bf21e73ffc68843855"
+    },
+    {
+      "brand_ref": "brand:improve-kyoto",
+      "name": "Improve KYOTO",
+      "slug": "improve-kyoto",
+      "official_url": "https://improve-hyrox.com/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:improve-kyoto"
+      ],
+      "source_authority_urls": [
+        "https://improve-hyrox.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "4da98b916a13cda25cb2db561b0b6395c30123418b7002ffa799f7b81f8b8ee5"
+    },
+    {
+      "brand_ref": "brand:nota-gym",
+      "name": "NOTA GYM",
+      "slug": "nota-gym",
+      "official_url": "https://nota-gym.com/",
+      "description": null,
+      "semantic": "chain",
+      "location_refs": [
+        "location:nota-gym-6150851"
+      ],
+      "source_authority_urls": [
+        "https://nota-gym.com/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "7b37a29fcea2ce326f232bf9f7a220b7b36604634d846a55f166d7d8a16ab0cc"
+    },
+    {
+      "brand_ref": "brand:stance-fitness",
+      "name": "STANCE FITNESS",
+      "slug": "stance-fitness",
+      "official_url": "https://stance-design.jp/",
+      "description": null,
+      "semantic": "chain",
+      "location_refs": [
+        "location:stance-fitness-2nd"
+      ],
+      "source_authority_urls": [
+        "https://stance-design.jp/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "5e010d63c5628895ec9a41416e1137fba5b89ee5803e8d2ba644fe65c17196d6"
+    },
+    {
+      "brand_ref": "brand:takamatsu-crossfit",
+      "name": "Takamatsu CrossFit",
+      "slug": "takamatsu-crossfit",
+      "official_url": "https://takamatsu-crossfit.jp/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:takamatsu-crossfit"
+      ],
+      "source_authority_urls": [
+        "https://takamatsu-crossfit.jp/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "2b488f1f32b9a0ecc98ac65b987050f9b347bdc2f94f52fa49081371b859d79f"
+    },
+    {
+      "brand_ref": "brand:xtry",
+      "name": "ＸＴＲＹ",
+      "slug": "xtry",
+      "official_url": "https://www.xtry.jp/",
+      "description": null,
+      "semantic": "single_location_brand",
+      "location_refs": [
+        "location:xtry"
+      ],
+      "source_authority_urls": [
+        "https://www.xtry.jp/"
+      ],
+      "collision_status": "clear",
+      "candidate_hash": "9fa61cc1241558feefcf25d465c2824f0e952146d96af67e76abd84df67e3a7a"
+    }
+  ],
+  "locations": [
+    {
+      "location_ref": "location:g-zone-park",
+      "hgy_external_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "hyrox_official_name": "g-zone PARK",
+      "name": "g-zone PARK",
+      "slug": "g-zone-park",
+      "brand_ref": "brand:g-zone",
+      "postal_code": "6150933",
+      "prefecture": "京都府",
+      "city": "京都市右京区",
+      "address_line": "615-0933, 京都府, 京都市右京区梅津後藤町1-3",
+      "latitude": 35.0032571,
+      "longitude": 135.7020504,
+      "nearest_station": null,
+      "official_url": "https://g-zone.co.jp/park/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "73ff9a6f29e80f853da1c209d8e5ffa022ab83874b3b7000de0fb4d71b68a581",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "location_ref": "location:g-zone-park",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "7d816bd2de9103ff26b1f03a3de05de017e56db86d5b78f09fe6421577482f2a",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+          "official_name": "g-zone PARK"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:g-zone-park",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "training_source_ref": "hyrox-finder:HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "g-zone PARK"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:g-zone-park:hyrox",
+        "location_ref": "location:g-zone-park",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:g-zone-park:hyrox:training_club:HYROX",
+        "location_ref": "location:g-zone-park",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:c81a31ad62fdf55ba3e1d05863dec0f5042a259d786f199d3a553cc57442d006",
+          "training_source_ref": "hyrox-finder:HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+          "target_type": "training_affiliation",
+          "target_ref": "location:g-zone-park:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+            "official_name": "g-zone PARK"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "c81a31ad62fdf55ba3e1d05863dec0f5042a259d786f199d3a553cc57442d006"
+        },
+        {
+          "evidence_ref": "sha256:ea1264b0aabd9034cda5462137928346b966e451a41f990869033b384e1c8eec",
+          "training_source_ref": "hyrox-finder:HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:g-zone-park:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+            "official_name": "g-zone PARK"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "ea1264b0aabd9034cda5462137928346b966e451a41f990869033b384e1c8eec"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:takamatsu-crossfit",
+      "hgy_external_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "hyrox_official_name": "Takamatsu CrossFit",
+      "name": "Takamatsu CrossFit",
+      "slug": "takamatsu-crossfit",
+      "brand_ref": "brand:takamatsu-crossfit",
+      "postal_code": "7618056",
+      "prefecture": "香川県",
+      "city": "高松市",
+      "address_line": "7618056, 高松市, 上天神町634",
+      "latitude": 34.3111792,
+      "longitude": 134.0363775,
+      "nearest_station": null,
+      "official_url": "https://takamatsu-crossfit.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_c816ru6QeTv14At3O51pjK8au",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "8e7845813a75a7624ae730cdb62aa941fa07608a6c827ce1fef32bca001f212b",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_c816ru6QeTv14At3O51pjK8au",
+        "location_ref": "location:takamatsu-crossfit",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_c816ru6QeTv14At3O51pjK8au",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_c816ru6QeTv14At3O51pjK8au",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "60441bbfc88abe4786f7325aef25f6850a8a13b4d69172db18e286ed035169bb",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_c816ru6QeTv14At3O51pjK8au",
+          "official_name": "Takamatsu CrossFit"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:takamatsu-crossfit",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_c816ru6QeTv14At3O51pjK8au",
+        "training_source_ref": "hyrox-finder:HGY_c816ru6QeTv14At3O51pjK8au",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "Takamatsu CrossFit"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:takamatsu-crossfit:hyrox",
+        "location_ref": "location:takamatsu-crossfit",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:takamatsu-crossfit:hyrox:training_club:HYROX",
+        "location_ref": "location:takamatsu-crossfit",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_c816ru6QeTv14At3O51pjK8au",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:6b3e5849f172d306bef317de9545c63d3420ea1b5ece82e61c8e3e3ba6003b8e",
+          "training_source_ref": "hyrox-finder:HGY_c816ru6QeTv14At3O51pjK8au",
+          "target_type": "training_affiliation",
+          "target_ref": "location:takamatsu-crossfit:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+            "official_name": "Takamatsu CrossFit"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "6b3e5849f172d306bef317de9545c63d3420ea1b5ece82e61c8e3e3ba6003b8e"
+        },
+        {
+          "evidence_ref": "sha256:bd35dc253dccc87a05492654f47655020966329944343d8b435d0951f29b9e00",
+          "training_source_ref": "hyrox-finder:HGY_c816ru6QeTv14At3O51pjK8au",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:takamatsu-crossfit:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+            "official_name": "Takamatsu CrossFit"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "bd35dc253dccc87a05492654f47655020966329944343d8b435d0951f29b9e00"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-ashiya",
+      "hgy_external_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "hyrox_official_name": "CrossFit Ashiya",
+      "name": "CrossFit Ashiya",
+      "slug": "crossfit-ashiya",
+      "brand_ref": "brand:crossfit-ashiya",
+      "postal_code": "6590013",
+      "prefecture": "兵庫県",
+      "city": "芦屋市",
+      "address_line": "659-0013, Ashiya,HYOGO, 7-5 Iwazono-cho",
+      "latitude": 34.7413476,
+      "longitude": 135.3114397,
+      "nearest_station": null,
+      "official_url": "https://crossfitashiya.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "29ff6219f10449156a5584d9f691b10637e578ca65b9f42ddc9c53428be4eea4",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "location_ref": "location:crossfit-ashiya",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "24d4eaa958d1249bd73455f09de3d8c8555afaae8b363fc160501d5c9a084ec1",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+          "official_name": "CrossFit Ashiya"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-ashiya",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "training_source_ref": "hyrox-finder:HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Ashiya"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-ashiya:hyrox",
+        "location_ref": "location:crossfit-ashiya",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-ashiya:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-ashiya",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:6f5a408e2858eab98c963024e6731ba7425e139934ae069709887be1556138de",
+          "training_source_ref": "hyrox-finder:HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-ashiya:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+            "official_name": "CrossFit Ashiya"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "6f5a408e2858eab98c963024e6731ba7425e139934ae069709887be1556138de"
+        },
+        {
+          "evidence_ref": "sha256:c673eac24536e4937af0596244b66f9341b454d32e567b47ac4bcb8ad52b2fea",
+          "training_source_ref": "hyrox-finder:HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-ashiya:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+            "official_name": "CrossFit Ashiya"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "c673eac24536e4937af0596244b66f9341b454d32e567b47ac4bcb8ad52b2fea"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:beequick-fitness-sanda",
+      "hgy_external_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "hyrox_official_name": "Beequick Fitness　Sanda",
+      "name": "Beequick Fitness　Sanda",
+      "slug": "beequick-fitness-sanda",
+      "brand_ref": "brand:beequick-fitness",
+      "postal_code": "6691321",
+      "prefecture": "兵庫県",
+      "city": "三田市",
+      "address_line": "669-1321, Hyogo-ken Sanda-shi, keyakidai 1-6-2",
+      "latitude": 34.908318,
+      "longitude": 135.1865807,
+      "nearest_station": null,
+      "official_url": "https://www.beequick.jp/location/sanda/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "location_type": "fitness_club",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "55c85def1e1b16a8299003b4596dec8bdefb9c83378b71b1322a3d85585cb8a3",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "location_ref": "location:beequick-fitness-sanda",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "0364b7fb77ac564358827f71259f64292953f8ac1bd4d28a398bdddb799bdf8b",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+          "official_name": "Beequick Fitness　Sanda"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:beequick-fitness-sanda",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "training_source_ref": "hyrox-finder:HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "Beequick Fitness　Sanda"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:beequick-fitness-sanda:hyrox",
+        "location_ref": "location:beequick-fitness-sanda",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:beequick-fitness-sanda:hyrox:training_club:HYROX",
+        "location_ref": "location:beequick-fitness-sanda",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:a3c97797981728e1d7bea3ce4b3d04be05c772193466d8954516e0cee93d46d0",
+          "training_source_ref": "hyrox-finder:HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+          "target_type": "training_affiliation",
+          "target_ref": "location:beequick-fitness-sanda:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+            "official_name": "Beequick Fitness　Sanda"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "a3c97797981728e1d7bea3ce4b3d04be05c772193466d8954516e0cee93d46d0"
+        },
+        {
+          "evidence_ref": "sha256:54a296136444beb5ea57fb4f222330d05b47e5479a1fb4207629b2c7cdeb6248",
+          "training_source_ref": "hyrox-finder:HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:beequick-fitness-sanda:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+            "official_name": "Beequick Fitness　Sanda"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "54a296136444beb5ea57fb4f222330d05b47e5479a1fb4207629b2c7cdeb6248"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:stance-fitness-2nd",
+      "hgy_external_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "hyrox_official_name": "STANCE FITNESS ２ND",
+      "name": "STANCE FITNESS ２ND",
+      "slug": "stance-fitness-2nd",
+      "brand_ref": "brand:stance-fitness",
+      "postal_code": "6008387",
+      "prefecture": "京都府",
+      "city": "京都市下京区",
+      "address_line": "6008387, 京 都 市, 下 京 区 高 辻 大 宮 町 1 0 3 大 宮 高 辻 ビ ル 2 階",
+      "latitude": 35.0001186,
+      "longitude": 135.7491414,
+      "nearest_station": null,
+      "official_url": "https://stance-design.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "cd3b480deb826b0a2dc4f7fb703361fb1d8e68db72b7f67005d87f974fdf6245",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "location_ref": "location:stance-fitness-2nd",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "268c6559a58d42655644a4f8bf37b96cf78cc21fe0a1b682a8c0f4e86aca6e20",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+          "official_name": "STANCE FITNESS ２ND"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:stance-fitness-2nd",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "training_source_ref": "hyrox-finder:HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "STANCE FITNESS ２ND"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:stance-fitness-2nd:hyrox",
+        "location_ref": "location:stance-fitness-2nd",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:stance-fitness-2nd:hyrox:training_club:HYROX",
+        "location_ref": "location:stance-fitness-2nd",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:2206ffc9654c42cbe0bd72a915d263afae2404437bc2486ef8ec2d48cd530b31",
+          "training_source_ref": "hyrox-finder:HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+          "target_type": "training_affiliation",
+          "target_ref": "location:stance-fitness-2nd:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+            "official_name": "STANCE FITNESS ２ND"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "2206ffc9654c42cbe0bd72a915d263afae2404437bc2486ef8ec2d48cd530b31"
+        },
+        {
+          "evidence_ref": "sha256:cf8cd354fa64693b16af4e2892b7af9685d33123825a689493b89e9bc658af4c",
+          "training_source_ref": "hyrox-finder:HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:stance-fitness-2nd:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+            "official_name": "STANCE FITNESS ２ND"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "cf8cd354fa64693b16af4e2892b7af9685d33123825a689493b89e9bc658af4c"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:improve-kyoto",
+      "hgy_external_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "hyrox_official_name": "Improve KYOTO",
+      "name": "Improve KYOTO",
+      "slug": "improve-kyoto",
+      "brand_ref": "brand:improve-kyoto",
+      "postal_code": "6048221",
+      "prefecture": "京都府",
+      "city": "京都市中京区",
+      "address_line": "6048221, 京都, B1F, 280 Tenjinyama-cho, Nishikikoji-dori Muromachi Nishi-iru, Nakagyo-ku",
+      "latitude": 35.005198,
+      "longitude": 135.7572444,
+      "nearest_station": null,
+      "official_url": "https://improve-hyrox.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "2d21a15973de40d29a945764602265a28f480e7a8d40802259f84b4b04b1a55f",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "location_ref": "location:improve-kyoto",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "ccb85cc542b849b749e95ce195d5be7b680c1863d089dca6bc23a79075676555",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+          "official_name": "Improve KYOTO"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:improve-kyoto",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "training_source_ref": "hyrox-finder:HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "Improve KYOTO"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:improve-kyoto:hyrox",
+        "location_ref": "location:improve-kyoto",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:improve-kyoto:hyrox:training_club:HYROX",
+        "location_ref": "location:improve-kyoto",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:ab3424dcdadf115d5cc1b3ffa4ce8b5a72927d35d93b290b64eb9cd2843d287f",
+          "training_source_ref": "hyrox-finder:HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+          "target_type": "training_affiliation",
+          "target_ref": "location:improve-kyoto:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+            "official_name": "Improve KYOTO"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "ab3424dcdadf115d5cc1b3ffa4ce8b5a72927d35d93b290b64eb9cd2843d287f"
+        },
+        {
+          "evidence_ref": "sha256:5753a07eec0098ce2dd46039f33faf8500ed108552a061418ca1a4e740bf7c48",
+          "training_source_ref": "hyrox-finder:HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:improve-kyoto:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+            "official_name": "Improve KYOTO"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "5753a07eec0098ce2dd46039f33faf8500ed108552a061418ca1a4e740bf7c48"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-rakuhoku",
+      "hgy_external_id": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+      "hyrox_official_name": "CrossFit Rakuhoku",
+      "name": "CrossFit Rakuhoku",
+      "slug": "crossfit-rakuhoku",
+      "brand_ref": "brand:crossfit-rakuhoku",
+      "postal_code": "6068004",
+      "prefecture": "京都府",
+      "city": "京都市左京区",
+      "address_line": "606-8004, Kyoto, 7-1 Yamabanakawabatacho",
+      "latitude": 35.0511036,
+      "longitude": 135.7898774,
+      "nearest_station": null,
+      "official_url": "https://crossfitrakuhoku.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "76171377e437f157e6d282dca94ecb8b169b4fc321a49884bf90fd60af5eb060",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "location_ref": "location:crossfit-rakuhoku",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "5d71c8b716cea028c30885496690ab0cf5877be4c44a323c057b76a3df284ccd",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+          "official_name": "CrossFit Rakuhoku"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-rakuhoku",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "training_source_ref": "hyrox-finder:HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Rakuhoku"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-rakuhoku:hyrox",
+        "location_ref": "location:crossfit-rakuhoku",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-rakuhoku:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-rakuhoku",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:d70f5731ce5d74bc5452bceb633232939fc023ebc7051e19805a94ab9ead6d43",
+          "training_source_ref": "hyrox-finder:HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-rakuhoku:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+            "official_name": "CrossFit Rakuhoku"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "d70f5731ce5d74bc5452bceb633232939fc023ebc7051e19805a94ab9ead6d43"
+        },
+        {
+          "evidence_ref": "sha256:5b1c481a948fbaab06f538a6d0f2b5fe2f468c33f560c4aa5956125a8597be91",
+          "training_source_ref": "hyrox-finder:HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-rakuhoku:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+            "official_name": "CrossFit Rakuhoku"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "5b1c481a948fbaab06f538a6d0f2b5fe2f468c33f560c4aa5956125a8597be91"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:anytime-fitness-nagaokakyo",
+      "hgy_external_id": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+      "hyrox_official_name": "ANYTIME FITNESS NAGAOKAKYO",
+      "name": "ANYTIME FITNESS NAGAOKAKYO",
+      "slug": "anytime-fitness-nagaokakyo",
+      "brand_ref": "brand:anytime-fitness",
+      "postal_code": "6170826",
+      "prefecture": "京都府",
+      "city": "長岡京市",
+      "address_line": "6170826, 長岡京市, 開田4-22-5",
+      "latitude": 34.92221970000001,
+      "longitude": 135.6935862,
+      "nearest_station": null,
+      "official_url": "https://www.anytimefitness.co.jp/nagaokakyo/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+      "location_type": "fitness_club",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "58caf12aa57d48cb920fdce8facab1ac8e000aab1b07f485855be1be62a18e50",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "location_ref": "location:anytime-fitness-nagaokakyo",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "54fd731dde007c4ed226c8c17891716506917cf91e935c31d63bafa51df00e7f",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+          "official_name": "ANYTIME FITNESS NAGAOKAKYO"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:anytime-fitness-nagaokakyo",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "training_source_ref": "hyrox-finder:HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "ANYTIME FITNESS NAGAOKAKYO"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:anytime-fitness-nagaokakyo:hyrox",
+        "location_ref": "location:anytime-fitness-nagaokakyo",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:anytime-fitness-nagaokakyo:hyrox:training_club:HYROX",
+        "location_ref": "location:anytime-fitness-nagaokakyo",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:38ddeb8cdbbadff9dba102b076dc00f1f5aa217e10b750c1c9f3450605708772",
+          "training_source_ref": "hyrox-finder:HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+          "target_type": "training_affiliation",
+          "target_ref": "location:anytime-fitness-nagaokakyo:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+            "official_name": "ANYTIME FITNESS NAGAOKAKYO"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "38ddeb8cdbbadff9dba102b076dc00f1f5aa217e10b750c1c9f3450605708772"
+        },
+        {
+          "evidence_ref": "sha256:2c497facd81a5e82f082a3953cbebefc621c839db71ca137102cce97b8560471",
+          "training_source_ref": "hyrox-finder:HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:anytime-fitness-nagaokakyo:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+            "official_name": "ANYTIME FITNESS NAGAOKAKYO"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "2c497facd81a5e82f082a3953cbebefc621c839db71ca137102cce97b8560471"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-kumamoto",
+      "hgy_external_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "hyrox_official_name": "CrossFit Kumamoto",
+      "name": "CrossFit Kumamoto",
+      "slug": "crossfit-kumamoto",
+      "brand_ref": "brand:crossfit-kumamoto",
+      "postal_code": "8600822",
+      "prefecture": "熊本県",
+      "city": "熊本市中央区",
+      "address_line": "8600822, Kumamoto, 331-1 Motoyamamachi Chuo-ku",
+      "latitude": 32.7877427,
+      "longitude": 130.6964067,
+      "nearest_station": null,
+      "official_url": "https://www.crossfitkumamoto.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "4cba7c274b9c72bd3efaf61d3a5c3d394e229ee4eaf4834967e6639f3a29a2d9",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "location_ref": "location:crossfit-kumamoto",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "5333106fe78520fcd7b986446dd3fa8030fbd40dfaaf3d118313f7dbeaaf192f",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+          "official_name": "CrossFit Kumamoto"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-kumamoto",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "training_source_ref": "hyrox-finder:HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Kumamoto"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-kumamoto:hyrox",
+        "location_ref": "location:crossfit-kumamoto",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-kumamoto:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-kumamoto",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:accc9917f4b98c2fd34270fdf4d53f62c181c1f6f4f9d7e584b45c9bad14aa6d",
+          "training_source_ref": "hyrox-finder:HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-kumamoto:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+            "official_name": "CrossFit Kumamoto"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "accc9917f4b98c2fd34270fdf4d53f62c181c1f6f4f9d7e584b45c9bad14aa6d"
+        },
+        {
+          "evidence_ref": "sha256:e03a7239719472fd3330535cdc190c4edc2308a79283d173f84034fa65bd5bac",
+          "training_source_ref": "hyrox-finder:HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-kumamoto:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+            "official_name": "CrossFit Kumamoto"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "e03a7239719472fd3330535cdc190c4edc2308a79283d173f84034fa65bd5bac"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-otoyo-strength",
+      "hgy_external_id": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+      "hyrox_official_name": "CrossFit Otoyo Strength",
+      "name": "CrossFit Otoyo Strength",
+      "slug": "crossfit-otoyo-strength",
+      "brand_ref": "brand:crossfit-otoyo-strength",
+      "postal_code": "7890166",
+      "prefecture": "高知県",
+      "city": "長岡郡大豊町",
+      "address_line": "7890166, Kochi, 317-1 Higashidoi, Otoyo-cho, Nagaoka-gun",
+      "latitude": 33.7937737,
+      "longitude": 133.7574224,
+      "nearest_station": null,
+      "official_url": "https://www.otoyostrength.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Kg433w73iQIbSdY97CXEbzUk9",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "fbb1b3b5145bd5c0de96db1f9f7cded8ddd4cb18b0bdde1f1c58f8a92403eb77",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "location_ref": "location:crossfit-otoyo-strength",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "26eea70895fb121a8fcf2ac5b869ba7349437dbff4218dd38e8730aa36a99322",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+          "official_name": "CrossFit Otoyo Strength"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-otoyo-strength",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "training_source_ref": "hyrox-finder:HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Otoyo Strength"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-otoyo-strength:hyrox",
+        "location_ref": "location:crossfit-otoyo-strength",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-otoyo-strength:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-otoyo-strength",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:11c71a3fa5f84be2c7164dc2dde86acc6a17189573c80e3a1ec7bccb20e842f1",
+          "training_source_ref": "hyrox-finder:HGY_Kg433w73iQIbSdY97CXEbzUk9",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-otoyo-strength:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+            "official_name": "CrossFit Otoyo Strength"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "11c71a3fa5f84be2c7164dc2dde86acc6a17189573c80e3a1ec7bccb20e842f1"
+        },
+        {
+          "evidence_ref": "sha256:62de6d21612646883cb2ced5471db9785bfc27d2d0eb4c7f4f7786e6f1ff1a25",
+          "training_source_ref": "hyrox-finder:HGY_Kg433w73iQIbSdY97CXEbzUk9",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-otoyo-strength:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+            "official_name": "CrossFit Otoyo Strength"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "62de6d21612646883cb2ced5471db9785bfc27d2d0eb4c7f4f7786e6f1ff1a25"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-takarazuka",
+      "hgy_external_id": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+      "hyrox_official_name": "CrossFit Takarazuka",
+      "name": "CrossFit Takarazuka",
+      "slug": "crossfit-takarazuka",
+      "brand_ref": "brand:crossfit-takarazuka",
+      "postal_code": "6650822",
+      "prefecture": "兵庫県",
+      "city": "宝塚市",
+      "address_line": "665-0822, Takarazuka, 1-13-18 Akuranaka",
+      "latitude": 34.8032594,
+      "longitude": 135.3718761,
+      "nearest_station": null,
+      "official_url": "https://crossfittakarazuka.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "8bc4e851af7489126c3cb012e4008249fdc6af562dc13686ccfc8f88b1f025f0",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "location_ref": "location:crossfit-takarazuka",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "3c528fefc9667b627dd3a9226858709782ea48713865206ef53814b3d1dd0991",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+          "official_name": "CrossFit Takarazuka"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-takarazuka",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "training_source_ref": "hyrox-finder:HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Takarazuka"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-takarazuka:hyrox",
+        "location_ref": "location:crossfit-takarazuka",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-takarazuka:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-takarazuka",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:e1631592e33847740225f84106f6280720860ef857163e52f888d254a8621c43",
+          "training_source_ref": "hyrox-finder:HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-takarazuka:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+            "official_name": "CrossFit Takarazuka"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "e1631592e33847740225f84106f6280720860ef857163e52f888d254a8621c43"
+        },
+        {
+          "evidence_ref": "sha256:c34fc0d3ddbaadde67be1a7319cbf1cdd94c3e37b89730eb356ee4b1b1624f6c",
+          "training_source_ref": "hyrox-finder:HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-takarazuka:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+            "official_name": "CrossFit Takarazuka"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "c34fc0d3ddbaadde67be1a7319cbf1cdd94c3e37b89730eb356ee4b1b1624f6c"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:xtry",
+      "hgy_external_id": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+      "hyrox_official_name": "ＸＴＲＹ",
+      "name": "ＸＴＲＹ",
+      "slug": "xtry",
+      "brand_ref": "brand:xtry",
+      "postal_code": "7000973",
+      "prefecture": "岡山県",
+      "city": "岡山市北区",
+      "address_line": "7000973, 岡山市, 岡山県岡山市北区下中野377-1",
+      "latitude": 34.6383425,
+      "longitude": 133.9051427,
+      "nearest_station": null,
+      "official_url": "https://www.xtry.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "7b3fc166dcff22b2e13c610645cdf9da115feb3f1244afbbdadeb31bb760dd76",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "location_ref": "location:xtry",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "dcd12c7b7983be79075e26ffd9aa780fdaa83fd43f446de5bfc0acba68033e58",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+          "official_name": "ＸＴＲＹ"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:xtry",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "training_source_ref": "hyrox-finder:HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "ＸＴＲＹ"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:xtry:hyrox",
+        "location_ref": "location:xtry",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:xtry:hyrox:training_club:HYROX",
+        "location_ref": "location:xtry",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:f688d3a4542148abc6eb8ba709439c17d490d956d498cf6532c9c87b5fb302b7",
+          "training_source_ref": "hyrox-finder:HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+          "target_type": "training_affiliation",
+          "target_ref": "location:xtry:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+            "official_name": "ＸＴＲＹ"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "f688d3a4542148abc6eb8ba709439c17d490d956d498cf6532c9c87b5fb302b7"
+        },
+        {
+          "evidence_ref": "sha256:a028582b5b4a7a4bd4ca43019512687745e5405cba9bade009664497e303c781",
+          "training_source_ref": "hyrox-finder:HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:xtry:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+            "official_name": "ＸＴＲＹ"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "a028582b5b4a7a4bd4ca43019512687745e5405cba9bade009664497e303c781"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:h-field-sports-performance-center",
+      "hgy_external_id": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+      "hyrox_official_name": "H-Field Sports Performance Center",
+      "name": "H-Field Sports Performance Center",
+      "slug": "h-field-sports-performance-center",
+      "brand_ref": "brand:h-field-sports-performance-center",
+      "postal_code": "9800023",
+      "prefecture": "宮城県",
+      "city": "仙台市青葉区",
+      "address_line": "980-0023, Sendai, 青葉区北目町2番40号",
+      "latitude": 38.2551376,
+      "longitude": 140.8763012,
+      "nearest_station": null,
+      "official_url": "https://www.h-fieldsendai.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "f78222c8db283388d9f2c6b9c326ef2dce33f2a697109fa4bd28cb082b54ec33",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "location_ref": "location:h-field-sports-performance-center",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "59c486fbc288f567c2fa60bfa31fa5a73b6c474b3be2ec0d3e4a5f802c1587b6",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+          "official_name": "H-Field Sports Performance Center"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:h-field-sports-performance-center",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "training_source_ref": "hyrox-finder:HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "H-Field Sports Performance Center"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:h-field-sports-performance-center:hyrox",
+        "location_ref": "location:h-field-sports-performance-center",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:h-field-sports-performance-center:hyrox:training_club:HYROX",
+        "location_ref": "location:h-field-sports-performance-center",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:de232e5aa337b4d97da8e90b68f3940aca172afe57a9980cd0486e4c2cd35f71",
+          "training_source_ref": "hyrox-finder:HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+          "target_type": "training_affiliation",
+          "target_ref": "location:h-field-sports-performance-center:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+            "official_name": "H-Field Sports Performance Center"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "de232e5aa337b4d97da8e90b68f3940aca172afe57a9980cd0486e4c2cd35f71"
+        },
+        {
+          "evidence_ref": "sha256:ee5a376144541a710f3f62b6734cba57b83e48d7f607defa31f4eb0f1c1505ba",
+          "training_source_ref": "hyrox-finder:HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:h-field-sports-performance-center:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+            "official_name": "H-Field Sports Performance Center"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "ee5a376144541a710f3f62b6734cba57b83e48d7f607defa31f4eb0f1c1505ba"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:beequick-kyotango",
+      "hgy_external_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "hyrox_official_name": "Beequick Kyotango",
+      "name": "Beequick Kyotango",
+      "slug": "beequick-kyotango",
+      "brand_ref": "brand:beequick-fitness",
+      "postal_code": "6270005",
+      "prefecture": "京都府",
+      "city": "京丹後市",
+      "address_line": "627-0005, Kyoto-fu kyotango-shi, mineyamachoshinmachi 1981-1",
+      "latitude": 35.613771,
+      "longitude": 135.0987115,
+      "nearest_station": null,
+      "official_url": "https://www.beequick.jp/location/kyotango/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "location_type": "fitness_club",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "23c9d18bba6f6aca4fb375b389f0ec859979fb986710dd189efbbdea2eff3daa",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "location_ref": "location:beequick-kyotango",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "2a09cb3f75fb90acd87a731b1b99a3e14407a026c5c09542b1a560747f0639b3",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+          "official_name": "Beequick Kyotango"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:beequick-kyotango",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "training_source_ref": "hyrox-finder:HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "Beequick Kyotango"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:beequick-kyotango:hyrox",
+        "location_ref": "location:beequick-kyotango",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:beequick-kyotango:hyrox:training_club:HYROX",
+        "location_ref": "location:beequick-kyotango",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:658fe44d7ddb803bd9dd271d26adbfa268e64c1169c9a23bf2097c9d75014f3c",
+          "training_source_ref": "hyrox-finder:HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+          "target_type": "training_affiliation",
+          "target_ref": "location:beequick-kyotango:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+            "official_name": "Beequick Kyotango"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "658fe44d7ddb803bd9dd271d26adbfa268e64c1169c9a23bf2097c9d75014f3c"
+        },
+        {
+          "evidence_ref": "sha256:757280c7e92789e385a8d4a9d33a0f3032bf073ee85bc7d69faa5ee1291c54ed",
+          "training_source_ref": "hyrox-finder:HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:beequick-kyotango:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+            "official_name": "Beequick Kyotango"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "757280c7e92789e385a8d4a9d33a0f3032bf073ee85bc7d69faa5ee1291c54ed"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfitokayama",
+      "hgy_external_id": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+      "hyrox_official_name": "crossfitokayama",
+      "name": "crossfitokayama",
+      "slug": "crossfitokayama",
+      "brand_ref": "brand:crossfitokayama",
+      "postal_code": "7028011",
+      "prefecture": "岡山県",
+      "city": "岡山市南区",
+      "address_line": "702-8011, Okayama-shi, Crossfitokayama 2978-8 Kori Minami-ku",
+      "latitude": 34.5843808,
+      "longitude": 133.9566847,
+      "nearest_station": null,
+      "official_url": "https://www.crossfitokayama.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w0fsND7jBYlmRipHytS9TFkH8",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "bfe98863601469451ee7fe2dfa4e349fae22950aea451df35b0af554f603508f",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "location_ref": "location:crossfitokayama",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "f374ca98902ef029bb5e43b799657c27bbc307224e6286b654ee345db4ec7a0c",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+          "official_name": "crossfitokayama"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfitokayama",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "training_source_ref": "hyrox-finder:HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "crossfitokayama"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfitokayama:hyrox",
+        "location_ref": "location:crossfitokayama",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfitokayama:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfitokayama",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:d429672d2c7633218bb124597dfba4c7331bde4d1dfff907929c2067e7db55f6",
+          "training_source_ref": "hyrox-finder:HGY_w0fsND7jBYlmRipHytS9TFkH8",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfitokayama:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+            "official_name": "crossfitokayama"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "d429672d2c7633218bb124597dfba4c7331bde4d1dfff907929c2067e7db55f6"
+        },
+        {
+          "evidence_ref": "sha256:c1b295df3f891ad674ec08a3845b62125995b4d9c35be4d88cb31d5e2b06b4a3",
+          "training_source_ref": "hyrox-finder:HGY_w0fsND7jBYlmRipHytS9TFkH8",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfitokayama:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+            "official_name": "crossfitokayama"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "c1b295df3f891ad674ec08a3845b62125995b4d9c35be4d88cb31d5e2b06b4a3"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:nota-gym-6150851",
+      "hgy_external_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "hyrox_official_name": "NOTA GYM 西京極店",
+      "name": "NOTA GYM 西京極店",
+      "slug": "nota-gym-6150851",
+      "brand_ref": "brand:nota-gym",
+      "postal_code": "6150851",
+      "prefecture": "京都府",
+      "city": "京都市右京区",
+      "address_line": "615-0851, 京都市, 京都市右京区西京極西池田町9番地4 コスミック西京極2階",
+      "latitude": 34.9925695,
+      "longitude": 135.7195654,
+      "nearest_station": null,
+      "official_url": "https://nota-gym.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "95e1d0e1b17522d05934582366e458dde38b4b550dd7ddbee7c09c74d4b95f1d",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "location_ref": "location:nota-gym-6150851",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "1850e9301cfc9e12db94c8ea46dc7500f4f2f8ae15fc833be0871bc5fe5957e5",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+          "official_name": "NOTA GYM 西京極店"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:nota-gym-6150851",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "training_source_ref": "hyrox-finder:HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "NOTA GYM 西京極店"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:nota-gym-6150851:hyrox",
+        "location_ref": "location:nota-gym-6150851",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:nota-gym-6150851:hyrox:training_club:HYROX",
+        "location_ref": "location:nota-gym-6150851",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:ccec488210886ede5d08bc36f885682ca06ae52f28de06e6cde2fcf2d0f899cf",
+          "training_source_ref": "hyrox-finder:HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+          "target_type": "training_affiliation",
+          "target_ref": "location:nota-gym-6150851:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+            "official_name": "NOTA GYM 西京極店"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "ccec488210886ede5d08bc36f885682ca06ae52f28de06e6cde2fcf2d0f899cf"
+        },
+        {
+          "evidence_ref": "sha256:572c0d8cfd09e393167e174916600df166382cb3b94b92743534d1e476fada31",
+          "training_source_ref": "hyrox-finder:HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:nota-gym-6150851:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+            "official_name": "NOTA GYM 西京極店"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "572c0d8cfd09e393167e174916600df166382cb3b94b92743534d1e476fada31"
+        }
+      ]
+    },
+    {
+      "location_ref": "location:crossfit-hakata-shingu",
+      "hgy_external_id": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+      "hyrox_official_name": "CrossFit Hakata Shingu",
+      "name": "CrossFit Hakata Shingu",
+      "slug": "crossfit-hakata-shingu",
+      "brand_ref": "brand:crossfit-hakata-shingu",
+      "postal_code": "8110101",
+      "prefecture": "福岡県",
+      "city": "糟屋郡新宮町",
+      "address_line": "8110101, Fukuoka, 1793-7 harugami  Oaza Shingumachi kasuyagun",
+      "latitude": 33.6950473,
+      "longitude": 130.4501025,
+      "nearest_station": null,
+      "official_url": "https://www.crossfit-hakata-shingu.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wKwr756BgwTwHLwcICNji4PJx",
+      "location_type": "fitness_studio",
+      "is_active": true,
+      "last_verified_at": "2026-08-29T13:50:28.000Z",
+      "coordinate_source": "hyrox-governing-body-finder",
+      "collision_status": "clear",
+      "candidate_hash": "7923558e4e523f3ee3e06ebbe209506f2d2420264e33eb3f0c02a0042dab9ded",
+      "training_source": {
+        "source_ref": "hyrox-finder:HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "location_ref": "location:crossfit-hakata-shingu",
+        "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "canonical_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "source_kind": "finder",
+        "publisher_authority": "governing_body",
+        "availability_state": "available",
+        "last_checked_at": "2026-08-29T13:50:28.000Z",
+        "unavailable_since": null,
+        "review_required": false,
+        "content_hash": "cfecd623243002178127260523287851ebeef7224ecfc56f550b4c25cf51d90c",
+        "metadata_json": {
+          "namespace": "hyrox-training-club",
+          "external_identifier": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+          "official_name": "CrossFit Hakata Shingu"
+        }
+      },
+      "external_identifier": {
+        "location_ref": "location:crossfit-hakata-shingu",
+        "namespace": "hyrox-training-club",
+        "external_identifier": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "training_source_ref": "hyrox-finder:HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "verification_status": "confirmed",
+        "verified_at": "2026-08-29T13:50:28.000Z",
+        "metadata_json": {
+          "official_name": "CrossFit Hakata Shingu"
+        }
+      },
+      "location_training_discipline": {
+        "target_ref": "location:crossfit-hakata-shingu:hyrox",
+        "location_ref": "location:crossfit-hakata-shingu",
+        "discipline_slug": "hyrox",
+        "support_state": "available",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "training_affiliation": {
+        "target_ref": "location:crossfit-hakata-shingu:hyrox:training_club:HYROX",
+        "location_ref": "location:crossfit-hakata-shingu",
+        "discipline_slug": "hyrox",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "external_identifier": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+        "affiliation_state": "active",
+        "verification_status": "confirmed",
+        "valid_from": null,
+        "valid_to": null,
+        "last_confirmed_at": "2026-08-29T13:50:28.000Z",
+        "stale_at": "2026-11-27T13:50:28.000Z",
+        "notes": null
+      },
+      "evidence": [
+        {
+          "evidence_ref": "sha256:e823071e3d53800deece95421764fd2009b0e1d860cf1b2d971faacac858c14c",
+          "training_source_ref": "hyrox-finder:HGY_wKwr756BgwTwHLwcICNji4PJx",
+          "target_type": "training_affiliation",
+          "target_ref": "location:crossfit-hakata-shingu:hyrox:training_club:HYROX",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+            "official_name": "CrossFit Hakata Shingu"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "e823071e3d53800deece95421764fd2009b0e1d860cf1b2d971faacac858c14c"
+        },
+        {
+          "evidence_ref": "sha256:f81a58d8e5594b8e0eed1a9b7a6736759e2700b0aecbb57375241ac7f78b7900",
+          "training_source_ref": "hyrox-finder:HGY_wKwr756BgwTwHLwcICNji4PJx",
+          "target_type": "location_training_discipline",
+          "target_ref": "location:crossfit-hakata-shingu:hyrox",
+          "assertion": "supports",
+          "review_status": "accepted",
+          "evidence_text": null,
+          "structured_evidence": {
+            "finder_listing": true,
+            "official_external_id": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+            "official_name": "CrossFit Hakata Shingu"
+          },
+          "observed_at": "2026-08-29T13:50:28.000Z",
+          "reviewed_at": "2026-08-29T13:50:28.000Z",
+          "content_hash": "f81a58d8e5594b8e0eed1a9b7a6736759e2700b0aecbb57375241ac7f78b7900"
+        }
+      ]
+    }
+  ],
+  "candidate_hash": "7a80e196c89c594a601ac1446c49534a7a64fc33d50050489c809974db346f5a"
+}
