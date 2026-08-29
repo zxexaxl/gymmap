@@ -1,0 +1,1077 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-29T13:12:05.000Z",
+  "records": [
+    {
+      "postal_code": "0630062",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "0640801",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "0640805",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1020074",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1040054",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1050013",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060031",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060032",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060041",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060045",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060046",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1060047",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1070062",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1160002",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1310031",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1340088",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1410031",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1420062",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1450064",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1460082",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1500011",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1500012",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1500033",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1520004",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1520035",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1530042",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1530064",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1540023",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1550032",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1550033",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1560032",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1580094",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1580096",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1600013",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1670051",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1700004",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1740076",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1770051",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1800002",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1810013",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1840004",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1850012",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1900023",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1920083",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "1940022",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2030014",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2100023",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2130001",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2160042",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2200012",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2200073",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2210054",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2240001",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2240036",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2270062",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2310011",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2310015",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2310806",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2310862",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2320027",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2380021",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2420007",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2470056",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2480033",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2510032",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2510037",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2610014",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2720021",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2940047",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "2991151",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3020006",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3113115",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3300062",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3300803",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3300843",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3300845",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3360932",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3430812",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3501103",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3590023",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3700001",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "3990036",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4000053",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4100022",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4170001",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4300924",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4380071",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4440858",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4500003",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4560057",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4600002",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4600007",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4640075",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4640841",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4660834",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4750021",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4860967",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "4870005",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5180820",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5203015",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5340025",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5400008",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5410051",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5410054",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5410056",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5410059",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5420085",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5500002",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5500005",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5530003",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5580043",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5610807",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5610873",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5640027",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5640073",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5691121",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5770002",
+      "prefecture": null,
+      "city": null,
+      "town": null,
+      "status": "unavailable"
+    },
+    {
+      "postal_code": "5900076",
+      "prefecture": "大阪府",
+      "city": "堺市堺区",
+      "town": "北瓦町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "5918032",
+      "prefecture": "大阪府",
+      "city": "堺市北区",
+      "town": "百舌鳥梅町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "5998236",
+      "prefecture": "大阪府",
+      "city": "堺市中区",
+      "town": "深井沢町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6008387",
+      "prefecture": "京都府",
+      "city": "京都市下京区",
+      "town": "高辻大宮町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6048221",
+      "prefecture": "京都府",
+      "city": "京都市中京区",
+      "town": "天神山町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6068004",
+      "prefecture": "京都府",
+      "city": "京都市左京区",
+      "town": "山端川端町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6150851",
+      "prefecture": "京都府",
+      "city": "京都市右京区",
+      "town": "西京極西池田町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6150933",
+      "prefecture": "京都府",
+      "city": "京都市右京区",
+      "town": "梅津後藤町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6170826",
+      "prefecture": "京都府",
+      "city": "長岡京市",
+      "town": "開田",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6270005",
+      "prefecture": "京都府",
+      "city": "京丹後市",
+      "town": "峰山町新町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6340008",
+      "prefecture": "奈良県",
+      "city": "橿原市",
+      "town": "十市町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6500003",
+      "prefecture": "兵庫県",
+      "city": "神戸市中央区",
+      "town": "山本通",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6500011",
+      "prefecture": "兵庫県",
+      "city": "神戸市中央区",
+      "town": "下山手通",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6500022",
+      "prefecture": "兵庫県",
+      "city": "神戸市中央区",
+      "town": "元町通",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6510086",
+      "prefecture": "兵庫県",
+      "city": "神戸市中央区",
+      "town": "磯上通",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6590013",
+      "prefecture": "兵庫県",
+      "city": "芦屋市",
+      "town": "岩園町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6600807",
+      "prefecture": "兵庫県",
+      "city": "尼崎市",
+      "town": "長洲西通",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6650822",
+      "prefecture": "兵庫県",
+      "city": "宝塚市",
+      "town": "安倉中",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "6691321",
+      "prefecture": "兵庫県",
+      "city": "三田市",
+      "town": "けやき台",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7000953",
+      "prefecture": "岡山県",
+      "city": "岡山市北区",
+      "town": "西市",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7000973",
+      "prefecture": "岡山県",
+      "city": "岡山市北区",
+      "town": "下中野",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7028011",
+      "prefecture": "岡山県",
+      "city": "岡山市南区",
+      "town": "郡",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7618056",
+      "prefecture": "香川県",
+      "city": "高松市",
+      "town": "上天神町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7700023",
+      "prefecture": "徳島県",
+      "city": "徳島市",
+      "town": "佐古三番町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7890166",
+      "prefecture": "高知県",
+      "city": "長岡郡大豊町",
+      "town": "東土居",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7900813",
+      "prefecture": "愛媛県",
+      "city": "松山市",
+      "town": "萱町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "7918015",
+      "prefecture": "愛媛県",
+      "city": "松山市",
+      "town": "中央",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "8110101",
+      "prefecture": "福岡県",
+      "city": "糟屋郡新宮町",
+      "town": "原上",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "8600822",
+      "prefecture": "熊本県",
+      "city": "熊本市中央区",
+      "town": "本山町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "8800925",
+      "prefecture": "宮崎県",
+      "city": "宮崎市",
+      "town": "本郷北方",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9010416",
+      "prefecture": "沖縄県",
+      "city": "島尻郡八重瀬町",
+      "town": "宜次",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9012401",
+      "prefecture": "沖縄県",
+      "city": "中頭郡中城村",
+      "town": "久場",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9500912",
+      "prefecture": "新潟県",
+      "city": "新潟市中央区",
+      "town": "南笹口",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9800023",
+      "prefecture": "宮城県",
+      "city": "仙台市青葉区",
+      "town": "北目町",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9840033",
+      "prefecture": "宮城県",
+      "city": "仙台市若林区",
+      "town": "荒浜",
+      "status": "resolved"
+    },
+    {
+      "postal_code": "9900054",
+      "prefecture": "山形県",
+      "city": "山形市",
+      "town": "六日町",
+      "status": "resolved"
+    }
+  ]
+}

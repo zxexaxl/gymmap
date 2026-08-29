@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "count": 16,
+  "records": [
+    {
+      "name": "Anytime Fitness",
+      "slug": "anytime-fitness",
+      "resolution": "NEW_BRAND_CANDIDATE"
+    },
+    {
+      "name": "BeeQuick Fitness",
+      "slug": "beequick-fitness",
+      "resolution": "NEW_BRAND_CANDIDATE"
+    },
+    {
+      "name": "CrossFit Ashiya",
+      "slug": "crossfit-ashiya",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "CrossFit Hakata Shingu",
+      "slug": "crossfit-hakata-shingu",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "CrossFit Kumamoto",
+      "slug": "crossfit-kumamoto",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "CrossFit Otoyo Strength",
+      "slug": "crossfit-otoyo-strength",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "CrossFit Rakuhoku",
+      "slug": "crossfit-rakuhoku",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "CrossFit Takarazuka",
+      "slug": "crossfit-takarazuka",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "crossfitokayama",
+      "slug": "crossfitokayama",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "g-zone",
+      "slug": "g-zone",
+      "resolution": "NEW_BRAND_CANDIDATE"
+    },
+    {
+      "name": "H-Field Sports Performance Center",
+      "slug": "h-field-sports-performance-center",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "Improve KYOTO",
+      "slug": "improve-kyoto",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "NOTA GYM",
+      "slug": "nota-gym",
+      "resolution": "NEW_BRAND_CANDIDATE"
+    },
+    {
+      "name": "STANCE FITNESS",
+      "slug": "stance-fitness",
+      "resolution": "NEW_BRAND_CANDIDATE"
+    },
+    {
+      "name": "Takamatsu CrossFit",
+      "slug": "takamatsu-crossfit",
+      "resolution": "INDEPENDENT_FACILITY"
+    },
+    {
+      "name": "ＸＴＲＹ",
+      "slug": "xtry",
+      "resolution": "INDEPENDENT_FACILITY"
+    }
+  ]
+}

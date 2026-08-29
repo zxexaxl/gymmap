@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "count": 1,
+  "records": [
+    {
+      "hgy_external_id": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "hyrox_official_name": "Gold's Gym Makuhari Bay-Park Arena",
+      "hyrox_source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "final_classification": "EXISTING_LOCATION_CONFIRMED_MATCH",
+      "matched_location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "matched_location_slug": "golds-gym-12131",
+      "matched_location_name": "幕張ベイパークアリーナ",
+      "canonical_facility_url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "official_site_status": "verified",
+      "canonical_name": "幕張ベイパークアリーナ",
+      "address": "2610014, Chiba-Shi, Makuhari Bay-Park Wellness Center 3-1-37 ｗakaba,Mihama-ku",
+      "postal_code": "2610014",
+      "prefecture": "千葉県",
+      "city": "Chiba-Shi",
+      "address_verification_status": "source_only",
+      "latitude": 35.6447842,
+      "longitude": 140.0495934,
+      "coordinate_source": "hyrox-governing-body-finder",
+      "coordinate_confidence": "high",
+      "brand_resolution": "EXISTING_BRAND_MATCH",
+      "proposed_brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "proposed_brand_name": "Gold's Gym",
+      "proposed_brand_slug": "golds-gym",
+      "proposed_slug": null,
+      "proposed_location_type": "fitness_club",
+      "is_active_candidate": false,
+      "match_method": "official-facility-final-url-exact",
+      "reasons": [
+        "HYROX governing-body Training Finder record has a stable HGY identity",
+        "Official facility URL redirects to the existing GymMap location URL"
+      ],
+      "conflicts": [],
+      "source_authorities": [
+        "HYROX governing-body Training Finder",
+        "facility official website"
+      ],
+      "manual_review_required": false
+    }
+  ]
+}

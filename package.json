@@ -14,6 +14,8 @@
     "hyrox:export-locations": "tsx scripts/hyrox/export-gymmap-location-inventory.ts",
     "hyrox:resolve": "tsx scripts/hyrox/resolve-training-club-identities.ts",
     "hyrox:build-import-candidate": "tsx scripts/hyrox/build-official-training-club-import.ts",
+    "hyrox:export-h2-4-inventory": "tsx scripts/hyrox/export-h2-4-inventory.ts",
+    "hyrox:review-unmatched": "tsx scripts/hyrox/review-unmatched-training-clubs.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",
     "lint": "eslint .",
