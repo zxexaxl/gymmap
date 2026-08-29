@@ -1,0 +1,2827 @@
+{
+  "schema_version": 1,
+  "preview_only": true,
+  "records": [
+    {
+      "hgy_external_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "canonical_name": "Yoshiyuki Hirano 善之 平野",
+      "slug": "yoshiyuki-hirano-5770002",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Yoshiyuki Hirano 善之 平野",
+        "slug": "yoshiyuki-hirano"
+      },
+      "location_type": "fitness_studio",
+      "address": "577-0002, osaka, higashiosakashi, 1-3-25, inadauemachi",
+      "postal_code": "5770002",
+      "prefecture": "大阪府",
+      "city": "東大阪市",
+      "latitude": 34.692082,
+      "longitude": 135.5818466,
+      "official_url": "https://www.field-gym.com/higashiosaka/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.field-gym.com/higashiosaka/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "canonical_name": "RESTORE BASE",
+      "slug": "restore-base-2310806",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "RESTORE BASE",
+        "slug": "restore-base"
+      },
+      "location_type": "fitness_studio",
+      "address": "2310806, Yokohama, Naka-ward honmoku 2-325",
+      "postal_code": "2310806",
+      "prefecture": "神奈川県",
+      "city": "横浜市中区",
+      "latitude": 35.4299757,
+      "longitude": 139.6611923,
+      "official_url": "https://restorebase.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://restorebase.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "canonical_name": "CLUB 360",
+      "slug": "club-360-1060046",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CLUB 360",
+        "slug": "club-360"
+      },
+      "location_type": "fitness_studio",
+      "address": "106-0046, Minato City, Vort Building B1",
+      "postal_code": "1060046",
+      "prefecture": "東京都",
+      "city": "港区",
+      "latitude": 35.6580259,
+      "longitude": 139.7275425,
+      "official_url": "https://www.club360.jp/hyrox",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.club360.jp/hyrox",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "canonical_name": "UBX 学芸大学",
+      "slug": "ubx-1520004",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "UBX",
+        "slug": "ubx"
+      },
+      "location_type": "fitness_studio",
+      "address": "1520004, Meguro-ku, Tokyo, Mansion Takaban BF, 2-4-7 Takaban",
+      "postal_code": "1520004",
+      "prefecture": "東京都",
+      "city": "目黒区",
+      "latitude": 35.6288146,
+      "longitude": 139.6894208,
+      "official_url": "https://www.provanet.co.jp/business/ubx/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.provanet.co.jp/business/ubx/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "canonical_name": "FITONE SHIBUYA",
+      "slug": "fitone-shibuya-1500011",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "FITONE SHIBUYA",
+        "slug": "fitone-shibuya"
+      },
+      "location_type": "fitness_studio",
+      "address": "150-0011, Shibuya, 2-17-9 Higashi, Shibuya-ku",
+      "postal_code": "1500011",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "latitude": 35.6523533,
+      "longitude": 139.7091351,
+      "official_url": "https://fitone-club.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://fitone-club.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "canonical_name": "SamiFitness",
+      "slug": "samifitness-1060047",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "SamiFitness",
+        "slug": "samifitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "1060047, Tokyo, Minami Azabu 5-2-9",
+      "postal_code": "1060047",
+      "prefecture": "東京都",
+      "city": "港区",
+      "latitude": 35.6551108,
+      "longitude": 139.7248078,
+      "official_url": "https://samifitnesstokyo.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_6okPO396AJbISj7LTMTlrkEPD",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://samifitnesstokyo.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "canonical_name": "LUAANA CLUB 蒲田池上店",
+      "slug": "luaana-club-1460082",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "LUAANA CLUB 蒲田池上店",
+        "slug": "luaana-club"
+      },
+      "location_type": "fitness_studio",
+      "address": "1460082, Ota-ku, 7-10-10 Ikegami",
+      "postal_code": "1460082",
+      "prefecture": "東京都",
+      "city": "大田区",
+      "latitude": 35.5715997,
+      "longitude": 139.7018007,
+      "official_url": "https://www.luaanaclub.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.luaanaclub.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+      "canonical_name": "Good Habit daikanyama",
+      "slug": "good-habit-daikanyama-1500033",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Good Habit daikanyama",
+        "slug": "good-habit-daikanyama"
+      },
+      "location_type": "fitness_studio",
+      "address": "1500033, shibuyaku, 9-2 レ・ミストラルdaikanyamaB1F",
+      "postal_code": "1500033",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "latitude": 35.650957,
+      "longitude": 139.7033232,
+      "official_url": "https://g-habit.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://g-habit.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+      "canonical_name": "ジムフィールド 所沢スタジオ",
+      "slug": "hyrox-training-club-3590023",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "ジムフィールド",
+        "slug": "gym-field"
+      },
+      "location_type": "fitness_studio",
+      "address": "3590023, 所沢市, 東所沢和田３丁目３１−３",
+      "postal_code": "3590023",
+      "prefecture": "埼玉県",
+      "city": "所沢市",
+      "latitude": 35.7970394,
+      "longitude": 139.5070773,
+      "official_url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.gym-field.com/studio/%E6%89%80%E6%B2%A2/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+      "canonical_name": "Personalgym VITA",
+      "slug": "personalgym-vita-4440858",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Personalgym VITA",
+        "slug": "personalgym-vita"
+      },
+      "location_type": "bodymake_gym",
+      "address": "4440858, Okazaki-shi, 2F,2-7-16,kamimutsuna",
+      "postal_code": "4440858",
+      "prefecture": "愛知県",
+      "city": "岡崎市",
+      "latitude": 34.9499922,
+      "longitude": 137.1544904,
+      "official_url": "https://vita-e.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://vita-e.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+      "canonical_name": "CrossFit Machiya",
+      "slug": "crossfit-machiya-1160002",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Machiya",
+        "slug": "crossfit-machiya"
+      },
+      "location_type": "fitness_studio",
+      "address": "116-0002, Arakawa City, 荒川区荒川6－6－1",
+      "postal_code": "1160002",
+      "prefecture": "東京都",
+      "city": "荒川区",
+      "latitude": 35.7427073,
+      "longitude": 139.7801508,
+      "official_url": "https://www.crossfitmachiya.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.crossfitmachiya.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "canonical_name": "BEYOND 浜松店",
+      "slug": "beyond-4300924",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "BEYOND",
+        "slug": "beyond"
+      },
+      "location_type": "fitness_studio",
+      "address": "4300924, 静岡県浜松市, 中央区龍禅寺町７４−１ フジビル 101",
+      "postal_code": "4300924",
+      "prefecture": "静岡県",
+      "city": "浜松市中央区",
+      "latitude": 34.69808080000001,
+      "longitude": 137.7394271,
+      "official_url": "https://beyond-gym.com/gym/gym-hamamatsu/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://beyond-gym.com/gym/gym-hamamatsu/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "canonical_name": "オレンジセオリーフィットネス三鷹",
+      "slug": "hyrox-training-club-1810013",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "181-0013, Mitaka, 2nd Ninotaka Bldg. 2F, 3-34-4 Shimorenjaku",
+      "postal_code": "1810013",
+      "prefecture": "東京都",
+      "city": "三鷹市",
+      "latitude": 35.7004412,
+      "longitude": 139.5608489,
+      "official_url": "https://www.orangetheoryfitness.co.jp/mitaka/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/mitaka/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "canonical_name": "オレンジセオリーフィットネス下北沢",
+      "slug": "hyrox-training-club-1550032",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "155-0032, Setagaya, No.R Shimokitazawa B1F, 5-31-8 Daizawa",
+      "postal_code": "1550032",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "latitude": 35.6586747,
+      "longitude": 139.6675649,
+      "official_url": "https://www.orangetheoryfitness.co.jp/shimokitazawa/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/shimokitazawa/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+      "canonical_name": "ELEMENT 池尻大橋店",
+      "slug": "element-1530042",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "ELEMENT 池尻大橋店",
+        "slug": "element"
+      },
+      "location_type": "fitness_studio",
+      "address": "153-0042, 東京都, 目黒区青葉台３丁目１２−７ モアリッシェル代官山青葉台 B1",
+      "postal_code": "1530042",
+      "prefecture": "東京都",
+      "city": "目黒区",
+      "latitude": 35.6514508,
+      "longitude": 139.6911215,
+      "official_url": "https://element-gym.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://element-gym.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "canonical_name": "VAMOS",
+      "slug": "vamos-1500011",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "VAMOS",
+        "slug": "vamos"
+      },
+      "location_type": "fitness_studio",
+      "address": "1500011, 3-20-2 KIビル, Tokyo Shibuya-ku Higashi",
+      "postal_code": "1500011",
+      "prefecture": "東京都",
+      "city": "渋谷区",
+      "latitude": 35.65026200000001,
+      "longitude": 139.7089814,
+      "official_url": "https://vamos-training.com/ja",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://vamos-training.com/ja",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+      "canonical_name": "BEYOND 山形店",
+      "slug": "beyond-9900054",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "BEYOND",
+        "slug": "beyond"
+      },
+      "location_type": "fitness_studio",
+      "address": "9900054, 山形市, 六日町６－４０　スペースYOU１F",
+      "postal_code": "9900054",
+      "prefecture": "山形県",
+      "city": "山形市",
+      "latitude": 38.2596403,
+      "longitude": 140.3438732,
+      "official_url": "https://beyond-gym.com/gym/gym-yamagata/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://beyond-gym.com/gym/gym-yamagata/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "canonical_name": "ゴールドジム 橿原奈良",
+      "slug": "hyrox-training-club-6340008",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "6340008, Toichicho, Kashihara-shi, 2F Twin Gate Kashihara,1222-1",
+      "postal_code": "6340008",
+      "prefecture": "奈良県",
+      "city": "橿原市",
+      "latitude": 34.5292832,
+      "longitude": 135.7965551,
+      "official_url": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.goldsgym.jp/shop/kashihara-nara/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+      "canonical_name": "F45 Training Hamamatsucho",
+      "slug": "f45-training-hamamatsucho",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "F45 Training",
+        "slug": "f45-training"
+      },
+      "location_type": "fitness_studio",
+      "address": "105-0013, Tokyo, Tokyo, Hamamatsucho 2-2-15 2F Minato-ku",
+      "postal_code": "1050013",
+      "prefecture": "東京都",
+      "city": "港区",
+      "latitude": 35.6552284,
+      "longitude": 139.7548466,
+      "official_url": "https://f45training.com/jp/studio/hamamatsucho/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://f45training.com/jp/studio/hamamatsucho/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "canonical_name": "UFC Gym 用賀",
+      "slug": "ufc-gym-1580096",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "UFC GYM",
+        "slug": "ufc-gym"
+      },
+      "location_type": "fitness_studio",
+      "address": "158-0096, Tokyo, Setagaya Tamagawadai 2-22-20",
+      "postal_code": "1580096",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "latitude": 35.6248625,
+      "longitude": 139.6325772,
+      "official_url": "https://yoga.ufcgym.co.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://yoga.ufcgym.co.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+      "canonical_name": "株式会社INSPA",
+      "slug": "inspa-2210054",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "株式会社INSPA",
+        "slug": "inspa"
+      },
+      "location_type": "fitness_studio",
+      "address": "221-0054, 横浜市, 神奈川区山内町15-2",
+      "postal_code": "2210054",
+      "prefecture": "神奈川県",
+      "city": "横浜市神奈川区",
+      "latitude": 35.4687914,
+      "longitude": 139.6392231,
+      "official_url": "https://www.inspa.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.inspa.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "canonical_name": "オレンジセオリーフィットネス東久留米",
+      "slug": "hyrox-training-club-2030014",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "2030014, Higashikurume, 1-15-2F, HIgashi-honcho",
+      "postal_code": "2030014",
+      "prefecture": "東京都",
+      "city": "東久留米市",
+      "latitude": 35.7625971,
+      "longitude": 139.5337272,
+      "official_url": "https://www.orangetheoryfitness.co.jp/higashikurume/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_fd08dzI687maGklD0PMhGHHZ7",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/higashikurume/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+      "canonical_name": "CrossFit Kamuy",
+      "slug": "crossfit-kamuy-2200073",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Kamuy",
+        "slug": "crossfit-kamuy"
+      },
+      "location_type": "fitness_studio",
+      "address": "220-0073, Yokohama, 2-11-9 Okano Nishiku",
+      "postal_code": "2200073",
+      "prefecture": "神奈川県",
+      "city": "横浜市西区",
+      "latitude": 35.4597779,
+      "longitude": 139.6113729,
+      "official_url": "https://crossfitkamuy.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://crossfitkamuy.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "canonical_name": "オレンジセオリーフィットネス 八王子オーパ",
+      "slug": "hyrox-training-club-1920083",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "192-0083, Hachioji, Hachioji OPA 6F, 1-12 Asahi-cho",
+      "postal_code": "1920083",
+      "prefecture": "東京都",
+      "city": "八王子市",
+      "latitude": 35.6550919,
+      "longitude": 139.3380743,
+      "official_url": "https://www.orangetheoryfitness.co.jp/hachioji/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/hachioji/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "canonical_name": "オレンジセオリーフィットネス青葉台",
+      "slug": "hyrox-training-club-2270062",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "2270062, Yokohama, 2-8-20-2F, Aobadai, Aoba",
+      "postal_code": "2270062",
+      "prefecture": "神奈川県",
+      "city": "横浜市青葉区",
+      "latitude": 35.5436262,
+      "longitude": 139.5149577,
+      "official_url": "https://www.orangetheoryfitness.co.jp/aobadai/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/aobadai/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "canonical_name": "オレンジセオリーフィットネス 町田",
+      "slug": "hyrox-training-club-1940022",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "194-0022, Machida-shi, Morino 1-19-20, Odakyu Bus Machida Bldg. B1F",
+      "postal_code": "1940022",
+      "prefecture": "東京都",
+      "city": "町田市",
+      "latitude": 35.5445815,
+      "longitude": 139.4448196,
+      "official_url": "https://www.orangetheoryfitness.co.jp/machida/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/machida/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "canonical_name": "Beequick Fitness　Tateyama",
+      "slug": "beequick-fitness-tateyama",
+      "brand_id": "ca3f99f9-2725-4515-b830-ac363f57c59e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "294-0047, Chiba-ken Tateyama-shi, Yawata 545-1",
+      "postal_code": "2940047",
+      "prefecture": "千葉県",
+      "city": "館山市",
+      "latitude": 35.0073582,
+      "longitude": 139.8626973,
+      "official_url": "https://www.beequick.jp/location/tateyama/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.beequick.jp/location/tateyama/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+      "canonical_name": "エニタイムフィットネス 西町店",
+      "slug": "hyrox-training-club-0630062",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Anytime Fitness",
+        "slug": "anytime-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "0630062, 札幌市, 西区西町南2-1-16",
+      "postal_code": "0630062",
+      "prefecture": "北海道",
+      "city": "札幌市西区",
+      "latitude": 43.07721,
+      "longitude": 141.2916096,
+      "official_url": "https://www.anytimefitness.co.jp/nishimachi/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.anytimefitness.co.jp/nishimachi/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+      "canonical_name": "ジムフィールド 豊中スタジオ",
+      "slug": "hyrox-training-club-5610807",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "ジムフィールド",
+        "slug": "gym-field"
+      },
+      "location_type": "fitness_studio",
+      "address": "5610807, 大阪府豊中市, 原田中1－9－7",
+      "postal_code": "5610807",
+      "prefecture": "大阪府",
+      "city": "豊中市",
+      "latitude": 34.7711463,
+      "longitude": 135.4586142,
+      "official_url": "https://www.gym-field.com/studio/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.gym-field.com/studio/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "canonical_name": "オレンジセオリーフィットネス本八幡",
+      "slug": "hyrox-training-club-2720021",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "272-0021, Ichikawa-shi, 2-5-8-2F, Yawata",
+      "postal_code": "2720021",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "latitude": 35.7227194,
+      "longitude": 139.9267063,
+      "official_url": "https://www.orangetheoryfitness.co.jp/motoyawata/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/motoyawata/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+      "canonical_name": "ハイアルチ 下北沢スタジオ",
+      "slug": "hyrox-training-club-1550033",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "ハイアルチ",
+        "slug": "high-alti"
+      },
+      "location_type": "fitness_studio",
+      "address": "1550033, Tokyo, 1F, TOKYU REIT Shimokitazawa square, 6-6-1 Daita, Setagaya-ku,",
+      "postal_code": "1550033",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "latitude": 35.6634077,
+      "longitude": 139.6653294,
+      "official_url": "https://high-alti.jp/studio/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://high-alti.jp/studio/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+      "canonical_name": "CrossFit Mitaka",
+      "slug": "crossfit-mitaka-1810013",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Mitaka",
+        "slug": "crossfit-mitaka"
+      },
+      "location_type": "fitness_studio",
+      "address": "181-0013, Tokyo, B1F, Mitaka Center 2nd Building, 3-28-21 Shimorenjaku, Mitaka-shi",
+      "postal_code": "1810013",
+      "prefecture": "東京都",
+      "city": "三鷹市",
+      "latitude": 35.6998119,
+      "longitude": 139.5612568,
+      "official_url": "https://crossfitmitaka.tokyo/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://crossfitmitaka.tokyo/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+      "canonical_name": "CrossFit 松山",
+      "slug": "crossfit-7918015",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit 松山",
+        "slug": "crossfit"
+      },
+      "location_type": "fitness_studio",
+      "address": "791-8015, 松山市, 中央1−4−5",
+      "postal_code": "7918015",
+      "prefecture": "愛媛県",
+      "city": "松山市",
+      "latitude": 33.8539401,
+      "longitude": 132.7540009,
+      "official_url": "https://www.crossfitmatsuyama.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.crossfitmatsuyama.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "canonical_name": "HTC CHIKUSA– Human Performance Training Center –",
+      "slug": "htc-chikusa-human-performance-training-center-4600007",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "HTC CHIKUSA– Human Performance Training Center –",
+        "slug": "htc-chikusa-human-performance-training-center"
+      },
+      "location_type": "fitness_studio",
+      "address": "460-0007, Nagoya, 新栄３丁目６−３",
+      "postal_code": "4600007",
+      "prefecture": "愛知県",
+      "city": "名古屋市中区",
+      "latitude": 35.1686373,
+      "longitude": 136.9272898,
+      "official_url": "https://htc-chikusa.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://htc-chikusa.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+      "canonical_name": "CrossFit Amagasaki",
+      "slug": "crossfit-amagasaki-6600807",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Amagasaki",
+        "slug": "crossfit-amagasaki"
+      },
+      "location_type": "fitness_studio",
+      "address": "6600807, Hyogo, Amagasaki, Nagasu nishidori 1-13-7",
+      "postal_code": "6600807",
+      "prefecture": "兵庫県",
+      "city": "尼崎市",
+      "latitude": 34.7269537,
+      "longitude": 135.4285706,
+      "official_url": "https://cf-amagasaki.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://cf-amagasaki.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "canonical_name": "オレンジセオリーフィットネス武蔵小金井",
+      "slug": "hyrox-training-club-1840004",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "1840004, Koganei, 6-2-30-3F Honcho",
+      "postal_code": "1840004",
+      "prefecture": "東京都",
+      "city": "小金井市",
+      "latitude": 35.6991677,
+      "longitude": 139.5054922,
+      "official_url": "https://www.orangetheoryfitness.co.jp/musashikoganei/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/musashikoganei/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "canonical_name": "Beequick Fitness　Fuji imaizumi",
+      "slug": "beequick-fitness-fuji-imaizumi",
+      "brand_id": "ca3f99f9-2725-4515-b830-ac363f57c59e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "417-0001, Fuji-shi, imaizumi3-5-1",
+      "postal_code": "4170001",
+      "prefecture": "静岡県",
+      "city": "富士市",
+      "latitude": 35.1658296,
+      "longitude": 138.6958927,
+      "official_url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.beequick.jp/location/fujiimaizumi/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "canonical_name": "オレンジセオリーフィットネス 浦和",
+      "slug": "hyrox-training-club-3300062",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "330-0062, saitama, nakamachi 1bankan 1F  urawaku nakachou 1-3-10",
+      "postal_code": "3300062",
+      "prefecture": "埼玉県",
+      "city": "さいたま市浦和区",
+      "latitude": 35.8598225,
+      "longitude": 139.6550075,
+      "official_url": "https://orangetheoryfitness.co.jp/urawa/index.html",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://orangetheoryfitness.co.jp/urawa/index.html",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+      "canonical_name": "THE PICKLE BANG THEORY",
+      "slug": "the-pickle-bang-theory-2720021",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "THE PICKLE BANG THEORY",
+        "slug": "the-pickle-bang-theory"
+      },
+      "location_type": "fitness_studio",
+      "address": "272-0021, Ichikawa, 八幡2-16-6 6F",
+      "postal_code": "2720021",
+      "prefecture": "千葉県",
+      "city": "市川市",
+      "latitude": 35.7215231,
+      "longitude": 139.9267398,
+      "official_url": "https://www.thepicklebang.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.thepicklebang.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "canonical_name": "ゴールドジム 前橋インター",
+      "slug": "hyrox-training-club-3700001",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "370-0001, Takasaki, Gunma, 44　Nakao-machi, Akamaru A Building, 1F",
+      "postal_code": "3700001",
+      "prefecture": "群馬県",
+      "city": "高崎市",
+      "latitude": 36.37503,
+      "longitude": 139.0336953,
+      "official_url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_mAUikrooxzoDevlGFVY7yXt3l",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "canonical_name": "オレンジセオリーフィットネス麻布十番",
+      "slug": "hyrox-training-club-1060045",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "106-0045, Minato City, 1-7-5-B2 Azabujuban, Minato-ku",
+      "postal_code": "1060045",
+      "prefecture": "東京都",
+      "city": "港区",
+      "latitude": 35.6564502,
+      "longitude": 139.7348508,
+      "official_url": "https://www.orangetheoryfitness.co.jp/azabujuban/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/azabujuban/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+      "canonical_name": "CrossFit Matsumoto",
+      "slug": "crossfit-matsumoto-3990036",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Matsumoto",
+        "slug": "crossfit-matsumoto"
+      },
+      "location_type": "fitness_studio",
+      "address": "3990036, matsumoto city, muraimachi minami 4-21-3 sinkou  building 1F west",
+      "postal_code": "3990036",
+      "prefecture": "長野県",
+      "city": "松本市",
+      "latitude": 36.1717291,
+      "longitude": 137.9595967,
+      "official_url": "https://crossfitmatsumoto.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://crossfitmatsumoto.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "canonical_name": "オレンジセオリーフィットネス溝の口",
+      "slug": "hyrox-training-club-2130001",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "2130001, Kawasaki, 1-13-18-B1 Mizonokuchi, Takatsu",
+      "postal_code": "2130001",
+      "prefecture": "神奈川県",
+      "city": "川崎市高津区",
+      "latitude": 35.5996996,
+      "longitude": 139.6146255,
+      "official_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "canonical_name": "UFC Gym 荻窪",
+      "slug": "ufc-gym-1670051",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "UFC GYM",
+        "slug": "ufc-gym"
+      },
+      "location_type": "fitness_studio",
+      "address": "167-0051, 杉並区, 荻窪5-20-5 B1",
+      "postal_code": "1670051",
+      "prefecture": "東京都",
+      "city": "杉並区",
+      "latitude": 35.7025804,
+      "longitude": 139.6199521,
+      "official_url": "https://ogikubo.ufcgym.co.jp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://ogikubo.ufcgym.co.jp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+      "canonical_name": "MUSCLE GATE HOTEL GYM BOUTIQUE Powered by GOLD`S GYM",
+      "slug": "muscle-gate-hotel-gym-boutique-powered-by-golds-gym",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "542-0085, 大阪府大阪市, 中央区心斎橋筋2－5－15　クロスホテル大阪5F",
+      "postal_code": "5420085",
+      "prefecture": "大阪府",
+      "city": "大阪市中央区",
+      "latitude": 34.6699179,
+      "longitude": 135.502052,
+      "official_url": "https://www.musclegate-hotelgymboutique.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.musclegate-hotelgymboutique.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "canonical_name": "Beequick Fitness　Kasugai  oshisawadai",
+      "slug": "beequick-fitness-kasugai-oshisawadai",
+      "brand_id": "ca3f99f9-2725-4515-b830-ac363f57c59e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "487-0005, Aichi-ken Kasugai-shi, Oshisawadai 1-7-24",
+      "postal_code": "4870005",
+      "prefecture": "愛知県",
+      "city": "春日井市",
+      "latitude": 35.2858018,
+      "longitude": 137.0646056,
+      "official_url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_svy8leyzBW7DDaBLq57FWuNot",
+      "canonical_name": "BEYOND 名古屋駅前店",
+      "slug": "beyond-4500003",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "BEYOND",
+        "slug": "beyond"
+      },
+      "location_type": "fitness_studio",
+      "address": "450-0003, 名古屋市, 中村区名駅南1丁目18−11   1F",
+      "postal_code": "4500003",
+      "prefecture": "愛知県",
+      "city": "名古屋市中村区",
+      "latitude": 35.1670903,
+      "longitude": 136.8876431,
+      "official_url": "https://beyond-gym.com/gym/area/chubu/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_svy8leyzBW7DDaBLq57FWuNot",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_svy8leyzBW7DDaBLq57FWuNot",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_svy8leyzBW7DDaBLq57FWuNot",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://beyond-gym.com/gym/area/chubu/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_TG4052uDtmYS0I70ODdFi7704",
+      "canonical_name": "CrossFit Otsuka",
+      "slug": "crossfit-otsuka-1700004",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Otsuka",
+        "slug": "crossfit-otsuka"
+      },
+      "location_type": "fitness_studio",
+      "address": "1700004, Tokyo, 1-33-22 kitaotsuka,toshimaku",
+      "postal_code": "1700004",
+      "prefecture": "東京都",
+      "city": "豊島区",
+      "latitude": 35.7335729,
+      "longitude": 139.7301811,
+      "official_url": "https://crossfit-otsuka.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_TG4052uDtmYS0I70ODdFi7704",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_TG4052uDtmYS0I70ODdFi7704",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_TG4052uDtmYS0I70ODdFi7704",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://crossfit-otsuka.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+      "canonical_name": "CrossFit Kofu",
+      "slug": "crossfit-kofu-4000053",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "CrossFit Kofu",
+        "slug": "crossfit-kofu"
+      },
+      "location_type": "fitness_studio",
+      "address": "400-0053, Kofu-shi,, 1490-3 Osatocho",
+      "postal_code": "4000053",
+      "prefecture": "山梨県",
+      "city": "甲府市",
+      "latitude": 35.6190735,
+      "longitude": 138.5608099,
+      "official_url": "https://crossfitkofu.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://crossfitkofu.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "canonical_name": "Freeletics Goals",
+      "slug": "freeletics-goals-2310011",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Freeletics Goals",
+        "slug": "freeletics-goals"
+      },
+      "location_type": "fitness_studio",
+      "address": "231-0011, Yokohama, Kanagawa, SSKnot 1F  5-69 Otamachi Naka-ku",
+      "postal_code": "2310011",
+      "prefecture": "神奈川県",
+      "city": "横浜市中区",
+      "latitude": 35.4486154,
+      "longitude": 139.6353908,
+      "official_url": "https://www.freeleticsgoals.com/en/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.freeleticsgoals.com/en/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+      "canonical_name": "A Plus CrossFit Takatsuki",
+      "slug": "a-plus-crossfit-takatsuki-5691121",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "A Plus CrossFit Takatsuki",
+        "slug": "a-plus-crossfit-takatsuki"
+      },
+      "location_type": "fitness_studio",
+      "address": "5691121, Takatsuki, 1-15-22 Makamicho",
+      "postal_code": "5691121",
+      "prefecture": "大阪府",
+      "city": "高槻市",
+      "latitude": 34.8548022,
+      "longitude": 135.611727,
+      "official_url": "https://apf-takatsuki.vercel.app/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+          "result": "revalidated"
+        },
+        {
+          "authority": "official facility-controlled secondary",
+          "url": "https://apf-takatsuki.vercel.app/",
+          "result": "OFFICIAL_SECONDARY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "canonical_name": "MEIJI PARK",
+      "slug": "meiji-park-1600013",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "MEIJI PARK",
+        "slug": "meiji-park"
+      },
+      "location_type": "fitness_studio",
+      "address": "1600013, Tokyo, MEIJI PARK, 5-7 Kasumigaokamachi, Shinjuku City",
+      "postal_code": "1600013",
+      "prefecture": "東京都",
+      "city": "新宿区",
+      "latitude": 35.6752068,
+      "longitude": 139.7136655,
+      "official_url": "https://www.meiji-park.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.meiji-park.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+      "canonical_name": "Hyex吉祥寺",
+      "slug": "hyex-1800002",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "HYEX",
+        "slug": "hyex"
+      },
+      "location_type": "fitness_studio",
+      "address": "1800002, 武蔵野市, 吉祥寺東町1−17−18 三角ビルB1",
+      "postal_code": "1800002",
+      "prefecture": "東京都",
+      "city": "武蔵野市",
+      "latitude": 35.7052607,
+      "longitude": 139.584067,
+      "official_url": "https://hyex.jp/studio/lp/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://hyex.jp/studio/lp/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "canonical_name": "Port Tower CrossFit",
+      "slug": "port-tower-crossfit-6500003",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Port Tower CrossFit",
+        "slug": "port-tower-crossfit"
+      },
+      "location_type": "fitness_studio",
+      "address": "650-0003, Kobe, 6-chōme-1 Warizukadōri, Chuo-Ku",
+      "postal_code": "6500003",
+      "prefecture": "兵庫県",
+      "city": "神戸市中央区",
+      "latitude": 34.703917,
+      "longitude": 135.208011,
+      "official_url": "https://www.porttowercrossfit.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.porttowercrossfit.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "canonical_name": "TrueFitness 吹田",
+      "slug": "truefitness-5640027",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "TrueFitness 吹田",
+        "slug": "truefitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "5640027, Suita-shi , Osaka, 2F, Suita SANKUSU No.2 Building, 2-101 Asahi-cho",
+      "postal_code": "5640027",
+      "prefecture": "大阪府",
+      "city": "吹田市",
+      "latitude": 34.7630980514236,
+      "longitude": 135.52542306751053,
+      "official_url": "https://true-f.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_XsJSB4jNTUfR4otyZrmg22J81",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://true-f.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "canonical_name": "オレンジセオリーフィットネス自由が丘",
+      "slug": "hyrox-training-club-1520035",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "Orangetheory Fitness",
+        "slug": "orangetheory-fitness"
+      },
+      "location_type": "fitness_studio",
+      "address": "1520035, Tokyo, 2-17-1-B1 Jiyugaoka, Meguro",
+      "postal_code": "1520035",
+      "prefecture": "東京都",
+      "city": "目黒区",
+      "latitude": 35.610216,
+      "longitude": 139.6669928,
+      "official_url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "canonical_name": "Beequick Fitness　Iga Ninjyanosato",
+      "slug": "beequick-fitness-iga-ninjyanosato",
+      "brand_id": "ca3f99f9-2725-4515-b830-ac363f57c59e",
+      "proposed_brand": null,
+      "location_type": "fitness_club",
+      "address": "518-0820, iga-shi, hiranonishimachi63",
+      "postal_code": "5180820",
+      "prefecture": "三重県",
+      "city": "伊賀市",
+      "latitude": 34.773136,
+      "longitude": 136.1359615,
+      "official_url": "https://www.beequick.jp/location/iganinjanosato/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.beequick.jp/location/iganinjanosato/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "hgy_external_id": "HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+      "canonical_name": "KJ PERFORMANCE GYM",
+      "slug": "kj-performance-gym-1420062",
+      "brand_id": null,
+      "proposed_brand": {
+        "name": "KJ PERFORMANCE GYM",
+        "slug": "kj-performance-gym"
+      },
+      "location_type": "fitness_studio",
+      "address": "1420062, Shinagawa, Koyama 2-12-19",
+      "postal_code": "1420062",
+      "prefecture": "東京都",
+      "city": "品川区",
+      "latitude": 35.6212787,
+      "longitude": 139.7102726,
+      "official_url": "https://www.kjperformancegym.com/",
+      "source_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+      "is_active": true,
+      "import_preview": {
+        "external_identifier": "HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+        "affiliation_type": "training_club",
+        "awarding_organization": "HYROX",
+        "verification_status": "confirmed",
+        "last_confirmed_at": "2026-08-29T15:50:00.000Z",
+        "stale_at": "2026-11-27T15:50:00.000Z",
+        "evidence": [
+          "training_affiliation",
+          "location_training_discipline"
+        ]
+      },
+      "authority_trace": [
+        {
+          "authority": "HYROX governing-body Training Finder",
+          "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+          "result": "revalidated"
+        },
+        {
+          "authority": "facility/brand first-party",
+          "url": "https://www.kjperformancegym.com/",
+          "result": "FIRST_PARTY_STRONG"
+        },
+        {
+          "authority": "Japan Post official postal data",
+          "url": "https://www.post.japanpost.jp/service/search/zipcode/download/utf/zip/utf_ken_all.zip",
+          "result": "POSTAL_AUTHORITY_CONFIRMED"
+        }
+      ]
+    }
+  ]
+}

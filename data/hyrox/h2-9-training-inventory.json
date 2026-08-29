@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-29T15:40:00.000Z",
+  "access": "service role read-only SELECT",
+  "counts": {
+    "external_identifiers": 24,
+    "published_locations": 24,
+    "official_affiliations": 24
+  },
+  "external_identifiers": [
+    {
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "0285b50c-5357-4a7b-8bc8-cfa799a991db",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "ea35b1a8-7a73-4e88-a572-2ec932072502",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "90693dc2-ca66-4e9d-bd76-d7ad80d95d58",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "55b4e0d7-9708-4e12-aaea-54780ee852fa",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "4bd4cc55-6ee2-47d5-9cf8-cd109a1d241e",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "1ab147a4-2828-4fa6-a7df-5094b20691ad",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "0c231d29-3a21-49ae-968d-7d76e102d93a",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "91a88fbd-d60c-4fb1-85e9-34351e01291a",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "6f81ff21-8cfa-452a-a42c-925c7448d971",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+      "verification_status": "confirmed"
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "namespace": "hyrox-training-club",
+      "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "verification_status": "confirmed"
+    }
+  ],
+  "published_locations": [
+    {
+      "location_id": "0285b50c-5357-4a7b-8bc8-cfa799a991db",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "0c231d29-3a21-49ae-968d-7d76e102d93a",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "1ab147a4-2828-4fa6-a7df-5094b20691ad",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "4bd4cc55-6ee2-47d5-9cf8-cd109a1d241e",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "55b4e0d7-9708-4e12-aaea-54780ee852fa",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "6f81ff21-8cfa-452a-a42c-925c7448d971",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "90693dc2-ca66-4e9d-bd76-d7ad80d95d58",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "91a88fbd-d60c-4fb1-85e9-34351e01291a",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "discipline_slug": "hyrox"
+    },
+    {
+      "location_id": "ea35b1a8-7a73-4e88-a572-2ec932072502",
+      "discipline_slug": "hyrox"
+    }
+  ],
+  "official_affiliations": [
+    {
+      "location_id": "0285b50c-5357-4a7b-8bc8-cfa799a991db",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_GyudKibCcLKI0LIwxnYTcv2Te",
+      "is_official": true
+    },
+    {
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "is_official": true
+    },
+    {
+      "location_id": "0c231d29-3a21-49ae-968d-7d76e102d93a",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_QT7VhrLDp4OIr5MJDDdEFDsGs",
+      "is_official": true
+    },
+    {
+      "location_id": "1ab147a4-2828-4fa6-a7df-5094b20691ad",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_MFCsmHPD9dh968h6jJoJMVRcr",
+      "is_official": true
+    },
+    {
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "is_official": true
+    },
+    {
+      "location_id": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "is_official": true
+    },
+    {
+      "location_id": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "is_official": true
+    },
+    {
+      "location_id": "4bd4cc55-6ee2-47d5-9cf8-cd109a1d241e",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_lO4q9FsvCxkbgiBXhBLDbHDI0",
+      "is_official": true
+    },
+    {
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "is_official": true
+    },
+    {
+      "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "is_official": true
+    },
+    {
+      "location_id": "55b4e0d7-9708-4e12-aaea-54780ee852fa",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_Kg433w73iQIbSdY97CXEbzUk9",
+      "is_official": true
+    },
+    {
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "is_official": true
+    },
+    {
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "is_official": true
+    },
+    {
+      "location_id": "6f81ff21-8cfa-452a-a42c-925c7448d971",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_wKwr756BgwTwHLwcICNji4PJx",
+      "is_official": true
+    },
+    {
+      "location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "is_official": true
+    },
+    {
+      "location_id": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "is_official": true
+    },
+    {
+      "location_id": "90693dc2-ca66-4e9d-bd76-d7ad80d95d58",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "is_official": true
+    },
+    {
+      "location_id": "91a88fbd-d60c-4fb1-85e9-34351e01291a",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_w0fsND7jBYlmRipHytS9TFkH8",
+      "is_official": true
+    },
+    {
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "is_official": true
+    },
+    {
+      "location_id": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "is_official": true
+    },
+    {
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "is_official": true
+    },
+    {
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "is_official": true
+    },
+    {
+      "location_id": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "is_official": true
+    },
+    {
+      "location_id": "ea35b1a8-7a73-4e88-a572-2ec932072502",
+      "discipline_slug": "hyrox",
+      "external_identifier": "HGY_IXvBUmAfS03dK1N7KeulKnC6O",
+      "is_official": true
+    }
+  ]
+}

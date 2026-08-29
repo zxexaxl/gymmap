@@ -1,0 +1,4906 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-29T15:42:00.000Z",
+  "input_count": 144,
+  "governing_body_endpoint": "https://onefiit-api.platform.onefiit.com/hyrox365/v1/gyms/{HGY_ID}",
+  "request_policy": {
+    "concurrency": 4,
+    "governing_delay_ms": 125,
+    "website_delay_ms": 175,
+    "attempts": 2,
+    "timeout_ms": 15000
+  },
+  "governing_body_records": [
+    {
+      "external_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "official_name": "Yoshiyuki Hirano 善之 平野",
+      "facility_url": "https://www.field-gym.com/higashiosaka/",
+      "address": {
+        "country": "JP",
+        "state": "osaka",
+        "city": "higashiosakashi",
+        "street": "1-3-25, inadauemachi",
+        "postalCode": "577-0002",
+        "geoCoordinates": {
+          "lat": 34.692082,
+          "lon": 135.5818466
+        }
+      },
+      "discovery_queries": [
+        "\"Yoshiyuki Hirano 善之 平野\" official higashiosakashi",
+        "\"Yoshiyuki Hirano 善之 平野\" 577-0002"
+      ]
+    },
+    {
+      "external_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "official_name": "RESTORE BASE",
+      "facility_url": "https://restorebase.jp/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama",
+        "street": "Naka-ward honmoku 2-325",
+        "postalCode": "2310806",
+        "geoCoordinates": {
+          "lat": 35.4299757,
+          "lon": 139.6611923
+        }
+      },
+      "discovery_queries": [
+        "\"RESTORE BASE\" official Yokohama",
+        "\"RESTORE BASE\" 2310806"
+      ]
+    },
+    {
+      "external_id": "HGY_38HM0vs5mKnIfKg8sHrNzl2KU",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_38HM0vs5mKnIfKg8sHrNzl2KU",
+      "official_name": "ReXeR Osaka",
+      "facility_url": "https://rexer.style/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Osaka",
+        "street": "B1,1F,EDGE Bingomachi,Chuo Ward,Osaka",
+        "postalCode": "5410051",
+        "geoCoordinates": {
+          "lat": 34.6850975,
+          "lon": 135.5047186
+        }
+      },
+      "discovery_queries": [
+        "\"ReXeR Osaka\" official Osaka",
+        "\"ReXeR Osaka\" 5410051"
+      ]
+    },
+    {
+      "external_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "official_name": "CLUB 360",
+      "facility_url": "https://www.club360.jp/hyrox",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Minato City",
+        "street": "Vort Building B1",
+        "postalCode": "106-0046",
+        "geoCoordinates": {
+          "lat": 35.6580259,
+          "lon": 139.7275425
+        }
+      },
+      "discovery_queries": [
+        "\"CLUB 360\" official Minato City",
+        "\"CLUB 360\" 106-0046"
+      ]
+    },
+    {
+      "external_id": "HGY_4Kx194vI1vYN16zNDOfdmVGfx",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_4Kx194vI1vYN16zNDOfdmVGfx",
+      "official_name": "HYROX365 BC Michiko",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "Kanagawa",
+        "city": "Kawasaki",
+        "street": "2-20-12 Minaminogawa Miyamae",
+        "postalCode": "2160042",
+        "geoCoordinates": {
+          "lat": 35.5685573,
+          "lon": 139.6037769
+        }
+      },
+      "discovery_queries": [
+        "\"HYROX365 BC Michiko\" official Kawasaki",
+        "\"HYROX365 BC Michiko\" 2160042"
+      ]
+    },
+    {
+      "external_id": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "official_name": "UBX Gakugeidaigaku",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Meguro-ku, Tokyo",
+        "street": "Mansion Takaban BF, 2-4-7 Takaban",
+        "postalCode": "1520004",
+        "geoCoordinates": {
+          "lat": 35.6288146,
+          "lon": 139.6894208
+        }
+      },
+      "discovery_queries": [
+        "\"UBX Gakugeidaigaku\" official Meguro-ku, Tokyo",
+        "\"UBX Gakugeidaigaku\" 1520004"
+      ]
+    },
+    {
+      "external_id": "HGY_4wzLJEobhMazi7FA0AThO0VCo",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_4wzLJEobhMazi7FA0AThO0VCo",
+      "official_name": "NIG Training Club",
+      "facility_url": "https://hyrox.nigh.biz",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "宮崎市",
+        "street": "2042-12 Hongo Kitakata",
+        "postalCode": "880-0925",
+        "geoCoordinates": {
+          "lat": 31.876127091330602,
+          "lon": 131.42712866040998
+        }
+      },
+      "discovery_queries": [
+        "\"NIG Training Club\" official 宮崎市",
+        "\"NIG Training Club\" 880-0925"
+      ]
+    },
+    {
+      "external_id": "HGY_5aNZOChK8CavnIRpCdStNa0KU",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_5aNZOChK8CavnIRpCdStNa0KU",
+      "official_name": "CrossFit Uninterrupted Collective",
+      "facility_url": "https://www.crossfituninterrupted.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Setagaya City",
+        "street": "2-16-5 Tamagawa, Setagaya-ku",
+        "postalCode": "158-0094",
+        "geoCoordinates": {
+          "lat": 35.6141643,
+          "lon": 139.6293048
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Uninterrupted Collective\" official Setagaya City",
+        "\"CrossFit Uninterrupted Collective\" 158-0094"
+      ]
+    },
+    {
+      "external_id": "HGY_5Gn5GvfvOjcSrI8A5IoBZkV4I",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_5Gn5GvfvOjcSrI8A5IoBZkV4I",
+      "official_name": "HYX Gym NAGOYA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kasugai-shi Aichi Prefecture",
+        "street": "2319-4 Nishi-Honmachi Ajiyoshi",
+        "postalCode": "486-0967",
+        "geoCoordinates": {
+          "lat": 35.2355403,
+          "lon": 136.9370247
+        }
+      },
+      "discovery_queries": [
+        "\"HYX Gym NAGOYA\" official Kasugai-shi Aichi Prefecture",
+        "\"HYX Gym NAGOYA\" 486-0967"
+      ]
+    },
+    {
+      "external_id": "HGY_69jFpAIGuEf6xNAHdTpSEBIwR",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_69jFpAIGuEf6xNAHdTpSEBIwR",
+      "official_name": "TLS FITNESS MUSASHISEKI",
+      "facility_url": "https://www.instagram.com/tlsfitnesshyroxtrainingclub/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nerima Ward",
+        "street": "2-29-9-2F, Sekimachikita",
+        "postalCode": "177-0051",
+        "geoCoordinates": {
+          "lat": 35.7274851,
+          "lon": 139.5760309
+        }
+      },
+      "discovery_queries": [
+        "\"TLS FITNESS MUSASHISEKI\" official Nerima Ward",
+        "\"TLS FITNESS MUSASHISEKI\" 177-0051"
+      ]
+    },
+    {
+      "external_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "official_name": "FITONE SHIBUYA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Shibuya",
+        "street": "2-17-9 Higashi, Shibuya-ku",
+        "postalCode": "150-0011",
+        "geoCoordinates": {
+          "lat": 35.6523533,
+          "lon": 139.7091351
+        }
+      },
+      "discovery_queries": [
+        "\"FITONE SHIBUYA\" official Shibuya",
+        "\"FITONE SHIBUYA\" 150-0011"
+      ]
+    },
+    {
+      "external_id": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "official_name": "SamiFitness",
+      "facility_url": "https://www.samifitnesstokyo.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "Minami Azabu 5-2-9",
+        "postalCode": "1060047",
+        "geoCoordinates": {
+          "lat": 35.6551108,
+          "lon": 139.7248078
+        }
+      },
+      "discovery_queries": [
+        "\"SamiFitness\" official Tokyo",
+        "\"SamiFitness\" 1060047"
+      ]
+    },
+    {
+      "external_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "official_name": "LUAANA CLUB",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Ota-ku",
+        "street": "7-10-10 Ikegami",
+        "postalCode": "1460082",
+        "geoCoordinates": {
+          "lat": 35.5715997,
+          "lon": 139.7018007
+        }
+      },
+      "discovery_queries": [
+        "\"LUAANA CLUB\" official Ota-ku",
+        "\"LUAANA CLUB\" 1460082"
+      ]
+    },
+    {
+      "external_id": "HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+      "official_name": "Good Habit daikanyama",
+      "facility_url": "https://g-habit.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "shibuyaku",
+        "street": "9-2 レ・ミストラルdaikanyamaB1F",
+        "postalCode": "1500033",
+        "geoCoordinates": {
+          "lat": 35.650957,
+          "lon": 139.7033232
+        }
+      },
+      "discovery_queries": [
+        "\"Good Habit daikanyama\" official shibuyaku",
+        "\"Good Habit daikanyama\" 1500033"
+      ]
+    },
+    {
+      "external_id": "HGY_8H50Rl3LSNsoSHxOxOIoY5UYN",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_8H50Rl3LSNsoSHxOxOIoY5UYN",
+      "official_name": "Beequick Fitness　Koshigaya",
+      "facility_url": "https://www.beequick.jp/location/koshigaya/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Saitama-ken koshigaya-shi",
+        "street": "1-16-6",
+        "postalCode": "343-0812",
+        "geoCoordinates": {
+          "lat": 35.8990288,
+          "lon": 139.8209954
+        }
+      },
+      "discovery_queries": [
+        "\"Beequick Fitness　Koshigaya\" official Saitama-ken koshigaya-shi",
+        "\"Beequick Fitness　Koshigaya\" 343-0812"
+      ]
+    },
+    {
+      "external_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_8sKmKHEiaR8tARb6zZUUbaYjU",
+      "official_name": "ジムフィールド所沢スタジオ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "所沢市",
+        "street": "東所沢和田３丁目３１−３",
+        "postalCode": "3590023",
+        "geoCoordinates": {
+          "lat": 35.7970394,
+          "lon": 139.5070773
+        }
+      },
+      "discovery_queries": [
+        "\"ジムフィールド所沢スタジオ\" official 所沢市",
+        "\"ジムフィールド所沢スタジオ\" 3590023"
+      ]
+    },
+    {
+      "external_id": "HGY_90X3Qce65u8nhankG8yTJUVfT",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_90X3Qce65u8nhankG8yTJUVfT",
+      "official_name": "jirogym fitness studio",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "品川区",
+        "street": "西五反田7-22-17 TOC building B1F",
+        "postalCode": "1410031",
+        "geoCoordinates": {
+          "lat": 35.6219252,
+          "lon": 139.7190626
+        }
+      },
+      "discovery_queries": [
+        "\"jirogym fitness studio\" official 品川区",
+        "\"jirogym fitness studio\" 1410031"
+      ]
+    },
+    {
+      "external_id": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+      "official_name": "Personalgym VITA",
+      "facility_url": "https://vita-e.jp",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Okazaki-shi",
+        "street": "2F,2-7-16,kamimutsuna",
+        "postalCode": "4440858",
+        "geoCoordinates": {
+          "lat": 34.9499922,
+          "lon": 137.1544904
+        }
+      },
+      "discovery_queries": [
+        "\"Personalgym VITA\" official Okazaki-shi",
+        "\"Personalgym VITA\" 4440858"
+      ]
+    },
+    {
+      "external_id": "HGY_9j7tOa1tFNd8qcCG1Wyo5FzJ6",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_9j7tOa1tFNd8qcCG1Wyo5FzJ6",
+      "official_name": "FORGE",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Iwata-shi",
+        "street": "2-15-13 ,Imanoura",
+        "postalCode": "4380071",
+        "geoCoordinates": {
+          "lat": 34.7170979,
+          "lon": 137.8607902
+        }
+      },
+      "discovery_queries": [
+        "\"FORGE\" official Iwata-shi",
+        "\"FORGE\" 4380071"
+      ]
+    },
+    {
+      "external_id": "HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_9poyQWuldcVuaHADNMHWTPRfQ",
+      "official_name": "CrossFit Machiya",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Arakawa City",
+        "street": "荒川区荒川6－6－1",
+        "postalCode": "116-0002",
+        "geoCoordinates": {
+          "lat": 35.7427073,
+          "lon": 139.7801508
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Machiya\" official Arakawa City",
+        "\"CrossFit Machiya\" 116-0002"
+      ]
+    },
+    {
+      "external_id": "HGY_a672D4AVpogVam9W86vDdYGuj",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_a672D4AVpogVam9W86vDdYGuj",
+      "official_name": "RLIGHT24 HYROX部",
+      "facility_url": "https://www.instagram.com/hyrox_tokushima/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "徳島市",
+        "street": "佐古三番町15-22",
+        "postalCode": "7700023",
+        "geoCoordinates": {
+          "lat": 34.0799534,
+          "lon": 134.5369498
+        }
+      },
+      "discovery_queries": [
+        "\"RLIGHT24 HYROX部\" official 徳島市",
+        "\"RLIGHT24 HYROX部\" 7700023"
+      ]
+    },
+    {
+      "external_id": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "official_name": "BEYOND浜松店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "静岡県浜松市",
+        "street": "中央区龍禅寺町７４−１ フジビル 101",
+        "postalCode": "4300924",
+        "geoCoordinates": {
+          "lat": 34.69808080000001,
+          "lon": 137.7394271
+        }
+      },
+      "discovery_queries": [
+        "\"BEYOND浜松店\" official 静岡県浜松市",
+        "\"BEYOND浜松店\" 4300924"
+      ]
+    },
+    {
+      "external_id": "HGY_AcmNmQZowUS3ehpJBjGOvQgRe",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_AcmNmQZowUS3ehpJBjGOvQgRe",
+      "official_name": "FANTREPOT",
+      "facility_url": "https://fantrepot-fitness.com/HYROX/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "札幌市",
+        "street": "中央区南５条西８丁目９−１ 3F",
+        "postalCode": "064-0805",
+        "geoCoordinates": {
+          "lat": 43.0536581,
+          "lon": 141.3466028
+        }
+      },
+      "discovery_queries": [
+        "\"FANTREPOT\" official 札幌市",
+        "\"FANTREPOT\" 064-0805"
+      ]
+    },
+    {
+      "external_id": "HGY_AHoCtS3to66qSTwkomuID9Bf3",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_AHoCtS3to66qSTwkomuID9Bf3",
+      "official_name": "TLS FITNESS KAMIITABASHI",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Itabashi Ward, Tokyo",
+        "street": "2-31-11-2F, Kamiitabashi",
+        "postalCode": "174-0076",
+        "geoCoordinates": {
+          "lat": 35.7625383,
+          "lon": 139.6751574
+        }
+      },
+      "discovery_queries": [
+        "\"TLS FITNESS KAMIITABASHI\" official Itabashi Ward, Tokyo",
+        "\"TLS FITNESS KAMIITABASHI\" 174-0076"
+      ]
+    },
+    {
+      "external_id": "HGY_AiNQvbz5TpUUyIPPCXIneECQU",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_AiNQvbz5TpUUyIPPCXIneECQU",
+      "official_name": "LEAN BODY STORE",
+      "facility_url": "https://leanbodystore.my.canva.site/private-gym",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "ritto-shi",
+        "street": "#102 silkroom6 1-12-2 anyouji",
+        "postalCode": "5203015",
+        "geoCoordinates": {
+          "lat": 35.0166174,
+          "lon": 136.0010694
+        }
+      },
+      "discovery_queries": [
+        "\"LEAN BODY STORE\" official ritto-shi",
+        "\"LEAN BODY STORE\" 5203015"
+      ]
+    },
+    {
+      "external_id": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "official_name": "オレンジセオリーフィットネス三鷹",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/mitaka/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Mitaka",
+        "street": "2nd Ninotaka Bldg. 2F, 3-34-4 Shimorenjaku",
+        "postalCode": "181-0013",
+        "geoCoordinates": {
+          "lat": 35.7004412,
+          "lon": 139.5608489
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス三鷹\" official Mitaka",
+        "\"オレンジセオリーフィットネス三鷹\" 181-0013"
+      ]
+    },
+    {
+      "external_id": "HGY_AtvMure1xIvHhFKf1bEcOksKK",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_AtvMure1xIvHhFKf1bEcOksKK",
+      "official_name": "ARQ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "Kudanshita Minami 2-3-23",
+        "postalCode": "1020074 ",
+        "geoCoordinates": {
+          "lat": 35.694056,
+          "lon": 139.7462529
+        }
+      },
+      "discovery_queries": [
+        "\"ARQ\" official Tokyo",
+        "\"ARQ\" 1020074"
+      ]
+    },
+    {
+      "external_id": "HGY_az9UDrEFxvUWQKCA02UiR5GVY",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_az9UDrEFxvUWQKCA02UiR5GVY",
+      "official_name": "UBX Aobadai",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama",
+        "street": "Hikobe Building 1F, 1-29-1 Aobadai, Aoba-ku,",
+        "postalCode": "2270062",
+        "geoCoordinates": {
+          "lat": 35.5489624,
+          "lon": 139.5165005
+        }
+      },
+      "discovery_queries": [
+        "\"UBX Aobadai\" official Yokohama",
+        "\"UBX Aobadai\" 2270062"
+      ]
+    },
+    {
+      "external_id": "HGY_azt9tOadi7pmSggVQmQJ6hWZ3",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_azt9tOadi7pmSggVQmQJ6hWZ3",
+      "official_name": "オレンジセオリーフィットネス関内",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/kannai/",
+      "address": {
+        "country": "JP",
+        "state": "",
+        "city": "Yokohama",
+        "street": "4-52 Onoe-cho, Naka-ku",
+        "postalCode": "231-0015",
+        "geoCoordinates": {
+          "lat": 35.4457634,
+          "lon": 139.6358047
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス関内\" official Yokohama",
+        "\"オレンジセオリーフィットネス関内\" 231-0015"
+      ]
+    },
+    {
+      "external_id": "HGY_B3b9UhAHRpfS8gfh1UXY6UF35",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_B3b9UhAHRpfS8gfh1UXY6UF35",
+      "official_name": "G2FITNESS",
+      "facility_url": "https://g2-fitness.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Numazu",
+        "street": "1960-1 Ooka",
+        "postalCode": "410-0022",
+        "geoCoordinates": {
+          "lat": 35.114621,
+          "lon": 138.8685116
+        }
+      },
+      "discovery_queries": [
+        "\"G2FITNESS\" official Numazu",
+        "\"G2FITNESS\" 410-0022"
+      ]
+    },
+    {
+      "external_id": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "official_name": "オレンジセオリーフィットネス下北沢",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/shimokitazawa/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Setagaya",
+        "street": "No.R Shimokitazawa B1F, 5-31-8 Daizawa",
+        "postalCode": "155-0032",
+        "geoCoordinates": {
+          "lat": 35.6586747,
+          "lon": 139.6675649
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス下北沢\" official Setagaya",
+        "\"オレンジセオリーフィットネス下北沢\" 155-0032"
+      ]
+    },
+    {
+      "external_id": "HGY_bflglCfjg61ogQkThSd1y80Jn",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_bflglCfjg61ogQkThSd1y80Jn",
+      "official_name": "CrossFit HAYATE",
+      "facility_url": "https://crossfithayate.com/",
+      "address": {
+        "country": "JP",
+        "state": "Aichi",
+        "city": "Nagoya",
+        "street": "C204 9 goban-cho Atsuta-ku",
+        "postalCode": "4560057",
+        "geoCoordinates": {
+          "lat": 35.1158448,
+          "lon": 136.8899976
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit HAYATE\" official Nagoya",
+        "\"CrossFit HAYATE\" 4560057"
+      ]
+    },
+    {
+      "external_id": "HGY_BJ47rrRIRrDxsxXY3zuNW9imJ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_BJ47rrRIRrDxsxXY3zuNW9imJ",
+      "official_name": "LIVERIC",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Osaka-city",
+        "street": "tyuo-ku , bakuroumachi , 4-3-4 3F",
+        "postalCode": "5410059",
+        "geoCoordinates": {
+          "lat": 34.6782352,
+          "lon": 135.4991792
+        }
+      },
+      "discovery_queries": [
+        "\"LIVERIC\" official Osaka-city",
+        "\"LIVERIC\" 5410059"
+      ]
+    },
+    {
+      "external_id": "HGY_BxeyXbrPQJ0gqrRx5fQBEe5hC",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_BxeyXbrPQJ0gqrRx5fQBEe5hC",
+      "official_name": "TLS FITNESS NAGAHARA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Ota City",
+        "street": "1-11-2, Kamiikedai",
+        "postalCode": "145-0064",
+        "geoCoordinates": {
+          "lat": 35.6022617,
+          "lon": 139.6974101
+        }
+      },
+      "discovery_queries": [
+        "\"TLS FITNESS NAGAHARA\" official Ota City",
+        "\"TLS FITNESS NAGAHARA\" 145-0064"
+      ]
+    },
+    {
+      "external_id": "HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+      "official_name": "ELEMENT 池尻大橋店",
+      "facility_url": "https://element-gym.com/",
+      "address": {
+        "country": "JP",
+        "state": "",
+        "city": "東京都",
+        "street": "目黒区青葉台３丁目１２−７ モアリッシェル代官山青葉台 B1",
+        "postalCode": "153-0042",
+        "geoCoordinates": {
+          "lat": 35.6514508,
+          "lon": 139.6911215
+        }
+      },
+      "discovery_queries": [
+        "\"ELEMENT 池尻大橋店\" official 東京都",
+        "\"ELEMENT 池尻大橋店\" 153-0042"
+      ]
+    },
+    {
+      "external_id": "HGY_cBVz2QE1ud5Vy3MNNptUi0O9o",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_cBVz2QE1ud5Vy3MNNptUi0O9o",
+      "official_name": "Redmond",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "kanagawa",
+        "city": "yokosuka",
+        "street": "2-24-3 fujimicho",
+        "postalCode": "2380021",
+        "geoCoordinates": {
+          "lat": 35.2675558,
+          "lon": 139.6751044
+        }
+      },
+      "discovery_queries": [
+        "\"Redmond\" official yokosuka",
+        "\"Redmond\" 2380021"
+      ]
+    },
+    {
+      "external_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "official_name": "VAMOS",
+      "facility_url": "https://vamos-training.com/ja",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "3-20-2 KIビル　",
+        "street": "Tokyo Shibuya-ku Higashi",
+        "postalCode": "1500011",
+        "geoCoordinates": {
+          "lat": 35.65026200000001,
+          "lon": 139.7089814
+        }
+      },
+      "discovery_queries": [
+        "\"VAMOS\" official 3-20-2 KIビル",
+        "\"VAMOS\" 1500011"
+      ]
+    },
+    {
+      "external_id": "HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_Ct7U9fHhZ9namSPnoClvfxBCd",
+      "official_name": "BEYOND山形店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "山形市",
+        "street": "六日町６－４０　スペースYOU１F",
+        "postalCode": "9900054",
+        "geoCoordinates": {
+          "lat": 38.2596403,
+          "lon": 140.3438732
+        }
+      },
+      "discovery_queries": [
+        "\"BEYOND山形店\" official 山形市",
+        "\"BEYOND山形店\" 9900054"
+      ]
+    },
+    {
+      "external_id": "HGY_cu0qxn1IsExMf7hzxplXEr5ox",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_cu0qxn1IsExMf7hzxplXEr5ox",
+      "official_name": "MotomachiBay Fitness",
+      "facility_url": "https://www.motomachibayfitness.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama",
+        "street": "27-5 Yamatecho, Naka-ku",
+        "postalCode": "231-0862",
+        "geoCoordinates": {
+          "lat": 35.4374645,
+          "lon": 139.6456476
+        }
+      },
+      "discovery_queries": [
+        "\"MotomachiBay Fitness\" official Yokohama",
+        "\"MotomachiBay Fitness\" 231-0862"
+      ]
+    },
+    {
+      "external_id": "HGY_diFBy7oXAn6GUnOvyW556WTVW",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_diFBy7oXAn6GUnOvyW556WTVW",
+      "official_name": "ジムフィールド堺東スタジオ",
+      "facility_url": "https://www.gym-field.com/sakaihigashi/hyrox/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "sakai",
+        "street": "El Place Sakaihigashi 4F,2-1-9 Kitakawaramachi,Sakai-ku",
+        "postalCode": "590-0076",
+        "geoCoordinates": {
+          "lat": 34.5753661,
+          "lon": 135.4837233
+        }
+      },
+      "discovery_queries": [
+        "\"ジムフィールド堺東スタジオ\" official 堺市堺区",
+        "\"ジムフィールド堺東スタジオ\" 590-0076"
+      ]
+    },
+    {
+      "external_id": "HGY_DLjUhhRwnLvdG4hC8cXKSPzCq",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_DLjUhhRwnLvdG4hC8cXKSPzCq",
+      "official_name": "CrossFit MACHIDA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "1-25-21 MORINO",
+        "postalCode": "1940022",
+        "geoCoordinates": {
+          "lat": 35.5458915,
+          "lon": 139.4438579
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit MACHIDA\" official Tokyo",
+        "\"CrossFit MACHIDA\" 1940022"
+      ]
+    },
+    {
+      "external_id": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "official_name": "Gold’s Gym Kashihara Nara",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Toichicho, Kashihara-shi",
+        "street": "2F Twin Gate Kashihara,1222-1",
+        "postalCode": "6340008",
+        "geoCoordinates": {
+          "lat": 34.5292832,
+          "lon": 135.7965551
+        }
+      },
+      "discovery_queries": [
+        "\"Gold’s Gym Kashihara Nara\" official 橿原市",
+        "\"Gold’s Gym Kashihara Nara\" 6340008"
+      ]
+    },
+    {
+      "external_id": "HGY_DUga56vMn8fhpPz2dd0ZYSL8A",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_DUga56vMn8fhpPz2dd0ZYSL8A",
+      "official_name": "オレンジセオリーフィットネス八事",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nagoya",
+        "street": "1-1 Umezono, Hiroji-cho, Showa-ku",
+        "postalCode": "4660834",
+        "geoCoordinates": {
+          "lat": 35.136032,
+          "lon": 136.9582388
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス八事\" official Nagoya",
+        "\"オレンジセオリーフィットネス八事\" 4660834"
+      ]
+    },
+    {
+      "external_id": "HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+      "official_name": "F45 Training Hamamatsucho",
+      "facility_url": "https://f45training.com/jp/studio/hamamatsucho/",
+      "address": {
+        "country": "JP",
+        "state": "Tokyo",
+        "city": "Tokyo",
+        "street": "Hamamatsucho 2-2-15 2F Minato-ku",
+        "postalCode": "105-0013",
+        "geoCoordinates": {
+          "lat": 35.6552284,
+          "lon": 139.7548466
+        }
+      },
+      "discovery_queries": [
+        "\"F45 Training Hamamatsucho\" official Tokyo",
+        "\"F45 Training Hamamatsucho\" 105-0013"
+      ]
+    },
+    {
+      "external_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "official_name": "UFC Gym YOGA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "Setagaya Tamagawadai 2-22-20",
+        "postalCode": "158-0096",
+        "geoCoordinates": {
+          "lat": 35.6248625,
+          "lon": 139.6325772
+        }
+      },
+      "discovery_queries": [
+        "\"UFC Gym YOGA\" official Tokyo",
+        "\"UFC Gym YOGA\" 158-0096"
+      ]
+    },
+    {
+      "external_id": "HGY_EixPsvYrIifAztmXBj8p1XAyw",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_EixPsvYrIifAztmXBj8p1XAyw",
+      "official_name": "Urban Heroes Tokyo",
+      "facility_url": "Urbanheroestokyo.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Minatoku",
+        "street": "3-5-35 Nishiazabu #403",
+        "postalCode": "1060031",
+        "geoCoordinates": {
+          "lat": 35.656815,
+          "lon": 139.7260442
+        }
+      },
+      "discovery_queries": [
+        "\"Urban Heroes Tokyo\" official Minatoku",
+        "\"Urban Heroes Tokyo\" 1060031"
+      ]
+    },
+    {
+      "external_id": "HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+      "official_name": "株式会社INSPA",
+      "facility_url": "https://www.inspa.jp/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "横浜市",
+        "street": "神奈川区山内町15-2",
+        "postalCode": "221-0054",
+        "geoCoordinates": {
+          "lat": 35.4687914,
+          "lon": 139.6392231
+        }
+      },
+      "discovery_queries": [
+        "\"株式会社INSPA\" official 横浜市",
+        "\"株式会社INSPA\" 221-0054"
+      ]
+    },
+    {
+      "external_id": "HGY_f8sZVaVktoc9eBl6vRaTzBDWe",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_f8sZVaVktoc9eBl6vRaTzBDWe",
+      "official_name": "パーソナルジムハクト",
+      "facility_url": "https://hackt-upsetworkout.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama,Kanagawa",
+        "street": "#102,2-4-27 Shinkawacho,Minamiku",
+        "postalCode": "2320027",
+        "geoCoordinates": {
+          "lat": 35.435488,
+          "lon": 139.6212877
+        }
+      },
+      "discovery_queries": [
+        "\"パーソナルジムハクト\" official Yokohama,Kanagawa",
+        "\"パーソナルジムハクト\" 2320027"
+      ]
+    },
+    {
+      "external_id": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "official_name": "オレンジセオリーフィットネス東久留米",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/higashikurume/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Higashikurume",
+        "street": "1-15-2F, HIgashi-honcho",
+        "postalCode": "2030014",
+        "geoCoordinates": {
+          "lat": 35.7625971,
+          "lon": 139.5337272
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス東久留米\" official Higashikurume",
+        "\"オレンジセオリーフィットネス東久留米\" 2030014"
+      ]
+    },
+    {
+      "external_id": "HGY_FiCZhKUENG3Vf6prJVC8KhpOK",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_FiCZhKUENG3Vf6prJVC8KhpOK",
+      "official_name": "FITNESS CLUB EXE GYM HYROX",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪市",
+        "street": "西区江戸堀1-10-8",
+        "postalCode": "5500002",
+        "geoCoordinates": {
+          "lat": 34.6894715,
+          "lon": 135.4962494
+        }
+      },
+      "discovery_queries": [
+        "\"FITNESS CLUB EXE GYM HYROX\" official 大阪市",
+        "\"FITNESS CLUB EXE GYM HYROX\" 5500002"
+      ]
+    },
+    {
+      "external_id": "HGY_fQVwlHEYY1obNCVUUJSvk4Efc",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_fQVwlHEYY1obNCVUUJSvk4Efc",
+      "official_name": "イージートゥアップ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "miyakojimaku",
+        "street": "2Fmiyoshibuilding",
+        "postalCode": "1-5-3 Zengenjicho",
+        "geoCoordinates": {
+          "lat": 34.711338,
+          "lon": 135.5250324
+        }
+      },
+      "discovery_queries": [
+        "\"イージートゥアップ\" official miyakojimaku",
+        "\"イージートゥアップ\" 1-5-3 Zengenjicho"
+      ]
+    },
+    {
+      "external_id": "HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+      "official_name": "CrossFit Kamuy",
+      "facility_url": "https://crossfitkamuy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnXQctOxmmwdvXYNKA9wG3Pwt4KLowOgqAQDMfyZKiynuDzFFvOazvs_q9w1k_aem_iK6UYMg5TsRunNoXX9eITQ",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama",
+        "street": "2-11-9 Okano Nishiku",
+        "postalCode": "220-0073",
+        "geoCoordinates": {
+          "lat": 35.4597779,
+          "lon": 139.6113729
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Kamuy\" official Yokohama",
+        "\"CrossFit Kamuy\" 220-0073"
+      ]
+    },
+    {
+      "external_id": "HGY_GpxyO4qXkplkOv85yJTN590Q3",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_GpxyO4qXkplkOv85yJTN590Q3",
+      "official_name": "K.K. CrossFitness",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "Tokyo-to",
+        "city": "Tokyo",
+        "street": "East Roppongi Bldg. 501, Roppongi 3-16-35 MInato-ku",
+        "postalCode": "106-0032",
+        "geoCoordinates": {
+          "lat": 35.6626506,
+          "lon": 139.7367049
+        }
+      },
+      "discovery_queries": [
+        "\"K.K. CrossFitness\" official Tokyo",
+        "\"K.K. CrossFitness\" 106-0032"
+      ]
+    },
+    {
+      "external_id": "HGY_GrguErmIvNituRVHMp4XMrzhZ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_GrguErmIvNituRVHMp4XMrzhZ",
+      "official_name": "P.U LAB",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪市都島区",
+        "street": "片町2-6-11-602",
+        "postalCode": "534-0025",
+        "geoCoordinates": {
+          "lat": 34.6959761,
+          "lon": 135.5311486
+        }
+      },
+      "discovery_queries": [
+        "\"P.U LAB\" official 大阪市都島区",
+        "\"P.U LAB\" 534-0025"
+      ]
+    },
+    {
+      "external_id": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "official_name": "オレンジセオリーフィットネス 八王子オーパ",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/hachioji/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Hachioji",
+        "street": "Hachioji OPA 6F, 1-12 Asahi-cho",
+        "postalCode": "192-0083",
+        "geoCoordinates": {
+          "lat": 35.6550919,
+          "lon": 139.3380743
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス 八王子オーパ\" official Hachioji",
+        "\"オレンジセオリーフィットネス 八王子オーパ\" 192-0083"
+      ]
+    },
+    {
+      "external_id": "HGY_gxp3RxDXjGnAXoHd4NDNwGxXP",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_gxp3RxDXjGnAXoHd4NDNwGxXP",
+      "official_name": "Hyex大宮",
+      "facility_url": "https://hyex.jp",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "埼玉県さいたま市大宮区",
+        "street": "吉敷町1-54-1 ",
+        "postalCode": "330-0843",
+        "geoCoordinates": {
+          "lat": 35.9010308,
+          "lon": 139.6286864
+        }
+      },
+      "discovery_queries": [
+        "\"Hyex大宮\" official 埼玉県さいたま市大宮区",
+        "\"Hyex大宮\" 330-0843"
+      ]
+    },
+    {
+      "external_id": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "official_name": "オレンジセオリーフィットネス青葉台",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/aobadai/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama",
+        "street": "2-8-20-2F, Aobadai, Aoba",
+        "postalCode": "2270062",
+        "geoCoordinates": {
+          "lat": 35.5436262,
+          "lon": 139.5149577
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス青葉台\" official Yokohama",
+        "\"オレンジセオリーフィットネス青葉台\" 2270062"
+      ]
+    },
+    {
+      "external_id": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "official_name": "OTF MACHIDA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Machida-shi",
+        "street": "Morino 1-19-20, Odakyu Bus Machida Bldg. B1F",
+        "postalCode": "194-0022",
+        "geoCoordinates": {
+          "lat": 35.5445815,
+          "lon": 139.4448196
+        }
+      },
+      "discovery_queries": [
+        "\"OTF MACHIDA\" official Machida-shi",
+        "\"OTF MACHIDA\" 194-0022"
+      ]
+    },
+    {
+      "external_id": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "official_name": "Beequick Fitness　Tateyama",
+      "facility_url": "https://www.beequick.jp/location/tateyama/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Chiba-ken Tateyama-shi",
+        "street": "Yawata 545-1 ",
+        "postalCode": "294-0047",
+        "geoCoordinates": {
+          "lat": 35.0073582,
+          "lon": 139.8626973
+        }
+      },
+      "discovery_queries": [
+        "\"Beequick Fitness　Tateyama\" official Chiba-ken Tateyama-shi",
+        "\"Beequick Fitness　Tateyama\" 294-0047"
+      ]
+    },
+    {
+      "external_id": "HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_hh8OAkaxSb7jABGYdA8MH6mgA",
+      "official_name": "エニタイムフィットネス西町店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "札幌市",
+        "street": "西区西町南2-1-16",
+        "postalCode": "0630062",
+        "geoCoordinates": {
+          "lat": 43.07721,
+          "lon": 141.2916096
+        }
+      },
+      "discovery_queries": [
+        "\"エニタイムフィットネス西町店\" official 札幌市",
+        "\"エニタイムフィットネス西町店\" 0630062"
+      ]
+    },
+    {
+      "external_id": "HGY_HjNdQDAfuWv7EMnLQgF19CxlE",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_HjNdQDAfuWv7EMnLQgF19CxlE",
+      "official_name": "CONDITIONNING LAB SYNE",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tachikawashi",
+        "street": "Shjisbasakichou2-7-9 Shibasakibiru 1F",
+        "postalCode": "1900023",
+        "geoCoordinates": {
+          "lat": 35.6913016,
+          "lon": 139.4072136
+        }
+      },
+      "discovery_queries": [
+        "\"CONDITIONNING LAB SYNE\" official Tachikawashi",
+        "\"CONDITIONNING LAB SYNE\" 1900023"
+      ]
+    },
+    {
+      "external_id": "HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_HxEZO63b6wj0lpmQE74SHJiW7",
+      "official_name": "ジムフィールド豊中スタジオ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪府豊中市",
+        "street": "原田中1－9－7",
+        "postalCode": "5610807",
+        "geoCoordinates": {
+          "lat": 34.7711463,
+          "lon": 135.4586142
+        }
+      },
+      "discovery_queries": [
+        "\"ジムフィールド豊中スタジオ\" official 大阪府豊中市",
+        "\"ジムフィールド豊中スタジオ\" 5610807"
+      ]
+    },
+    {
+      "external_id": "HGY_hxrks6HbdDFZBBpodBKZJ7Gb4",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_hxrks6HbdDFZBBpodBKZJ7Gb4",
+      "official_name": "きん肉こまつ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪府堺市中区",
+        "street": "深井沢町307-9",
+        "postalCode": "5998236",
+        "geoCoordinates": {
+          "lat": 34.5286712,
+          "lon": 135.5029852
+        }
+      },
+      "discovery_queries": [
+        "\"きん肉こまつ\" official 堺市中区",
+        "\"きん肉こまつ\" 5998236"
+      ]
+    },
+    {
+      "external_id": "HGY_HyOiWuqQnPyPOR4J3eI86EztG",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_HyOiWuqQnPyPOR4J3eI86EztG",
+      "official_name": "VAMOS FIELD KamiIkebukuro",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Toshimaku",
+        "street": "3-10-4 kita otsuka",
+        "postalCode": "1700004",
+        "geoCoordinates": {
+          "lat": 35.7342878,
+          "lon": 139.7220283
+        }
+      },
+      "discovery_queries": [
+        "\"VAMOS FIELD KamiIkebukuro\" official Toshimaku",
+        "\"VAMOS FIELD KamiIkebukuro\" 1700004"
+      ]
+    },
+    {
+      "external_id": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "official_name": "オレンジセオリーフィットネス本八幡",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/motoyawata/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Ichikawa-shi",
+        "street": "2-5-8-2F, Yawata",
+        "postalCode": "272-0021",
+        "geoCoordinates": {
+          "lat": 35.7227194,
+          "lon": 139.9267063
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス本八幡\" official Ichikawa-shi",
+        "\"オレンジセオリーフィットネス本八幡\" 272-0021"
+      ]
+    },
+    {
+      "external_id": "HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_I5QXnm7FEYFTEAvXmWjgmeNA3",
+      "official_name": "ハイアルチ下北沢スタジオ",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "1F, TOKYU REIT Shimokitazawa square, 6-6-1 Daita, Setagaya-ku,",
+        "postalCode": "1550033",
+        "geoCoordinates": {
+          "lat": 35.6634077,
+          "lon": 139.6653294
+        }
+      },
+      "discovery_queries": [
+        "\"ハイアルチ下北沢スタジオ\" official Tokyo",
+        "\"ハイアルチ下北沢スタジオ\" 1550033"
+      ]
+    },
+    {
+      "external_id": "HGY_i69hHLLmM3NSGkdz0T1eWSTAL",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_i69hHLLmM3NSGkdz0T1eWSTAL",
+      "official_name": "CrossFit ILF",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Shimajiri",
+        "street": "Shimajiri Gun Yaese Cho Gishi 578-1",
+        "postalCode": "901-0416",
+        "geoCoordinates": {
+          "lat": 26.1725877,
+          "lon": 127.7104431
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit ILF\" official 島尻郡八重瀬町",
+        "\"CrossFit ILF\" 901-0416"
+      ]
+    },
+    {
+      "external_id": "HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+      "official_name": "CrossFit Mitaka",
+      "facility_url": "http://crossfitmitaka.tokyo",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "B1F, Mitaka Center 2nd Building, 3-28-21 Shimorenjaku, Mitaka-shi",
+        "postalCode": "181-0013",
+        "geoCoordinates": {
+          "lat": 35.6998119,
+          "lon": 139.5612568
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Mitaka\" official Tokyo",
+        "\"CrossFit Mitaka\" 181-0013"
+      ]
+    },
+    {
+      "external_id": "HGY_ieFxGEcXDTIJbIkfnlyMiXSkG",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_ieFxGEcXDTIJbIkfnlyMiXSkG",
+      "official_name": "Square fitness kasumigaseki.S",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Saitama",
+        "street": "1-3-8 Kasumigaseki Higashi Kawagoe-shi, Saitama",
+        "postalCode": "3501103",
+        "geoCoordinates": {
+          "lat": 35.9245263,
+          "lon": 139.4417717
+        }
+      },
+      "discovery_queries": [
+        "\"Square fitness kasumigaseki.S\" official Saitama",
+        "\"Square fitness kasumigaseki.S\" 3501103"
+      ]
+    },
+    {
+      "external_id": "HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_ilpB5BY0mpBU4wTEZgBbmetS7",
+      "official_name": "CrossFit 松山",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "松山市",
+        "street": "中央1−4−5",
+        "postalCode": "791-8015",
+        "geoCoordinates": {
+          "lat": 33.8539401,
+          "lon": 132.7540009
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit 松山\" official 松山市",
+        "\"CrossFit 松山\" 791-8015"
+      ]
+    },
+    {
+      "external_id": "HGY_In33itcmu8v93rkwKZy42O3U6",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_In33itcmu8v93rkwKZy42O3U6",
+      "official_name": "TRIVE",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪市中央区",
+        "street": "久太郎町3-4-23 林和ビル5F",
+        "postalCode": "5410056",
+        "geoCoordinates": {
+          "lat": 34.6815026,
+          "lon": 135.5016961
+        }
+      },
+      "discovery_queries": [
+        "\"TRIVE\" official 大阪市中央区",
+        "\"TRIVE\" 5410056"
+      ]
+    },
+    {
+      "external_id": "HGY_iZUzR5DRBK3M09AkhPf9nIWcF",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_iZUzR5DRBK3M09AkhPf9nIWcF",
+      "official_name": "ableize+",
+      "facility_url": "https://www.instagram.com/ableize_plus?igsh=MWlqdWdmNjl0bTFheg%3D%3D&utm_source=qr",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "名古屋市",
+        "street": "中区丸の内2-15-11 ",
+        "postalCode": "460-0002",
+        "geoCoordinates": {
+          "lat": 35.1748287,
+          "lon": 136.8989643
+        }
+      },
+      "discovery_queries": [
+        "\"ableize+\" official 名古屋市",
+        "\"ableize+\" 460-0002"
+      ]
+    },
+    {
+      "external_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "official_name": "HTC CHIKUSA– Human Performance Training Center –",
+      "facility_url": "https://htc-chikusa.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nagoya",
+        "street": "新栄３丁目６−３",
+        "postalCode": "460-0007",
+        "geoCoordinates": {
+          "lat": 35.1686373,
+          "lon": 136.9272898
+        }
+      },
+      "discovery_queries": [
+        "\"HTC CHIKUSA– Human Performance Training Center –\" official Nagoya",
+        "\"HTC CHIKUSA– Human Performance Training Center –\" 460-0007"
+      ]
+    },
+    {
+      "external_id": "HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_JCa2wmnnXSkHcguScx2Fg9XC8",
+      "official_name": "CrossFit Amagasaki",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "Hyogo",
+        "city": "Amagasaki",
+        "street": "Nagasu nishidori 1-13-7",
+        "postalCode": "6600807",
+        "geoCoordinates": {
+          "lat": 34.7269537,
+          "lon": 135.4285706
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Amagasaki\" official 尼崎市",
+        "\"CrossFit Amagasaki\" 6600807"
+      ]
+    },
+    {
+      "external_id": "HGY_JIrzMHO2rP2Len2KG3ZOew0ot",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_JIrzMHO2rP2Len2KG3ZOew0ot",
+      "official_name": "GymFit Build Run Core",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "川崎市",
+        "street": "神奈川県川崎市高津区溝口2-14-6",
+        "postalCode": "213-0001",
+        "geoCoordinates": {
+          "lat": 35.6017833,
+          "lon": 139.6117762
+        }
+      },
+      "discovery_queries": [
+        "\"GymFit Build Run Core\" official 川崎市",
+        "\"GymFit Build Run Core\" 213-0001"
+      ]
+    },
+    {
+      "external_id": "HGY_JvN4Z8dSYs9ca9kzgNl28kWVL",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_JvN4Z8dSYs9ca9kzgNl28kWVL",
+      "official_name": "CrossFit Nakamozu",
+      "facility_url": "https://www.instagram.com/crossfit_nakamozu/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "堺市",
+        "street": "3-24-2,Mozuumemachi,Higashi-ward",
+        "postalCode": "591-8032",
+        "geoCoordinates": {
+          "lat": 34.55249425661171,
+          "lon": 135.50165190857564
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Nakamozu\" official 堺市北区",
+        "\"CrossFit Nakamozu\" 591-8032"
+      ]
+    },
+    {
+      "external_id": "HGY_KaZs1vtKjZL5y93x84bg7nOEf",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_KaZs1vtKjZL5y93x84bg7nOEf",
+      "official_name": "ジムフィールド梅田スタジオ",
+      "facility_url": "https://www.gym-field.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Osaka",
+        "street": "福島区福島6-17-5",
+        "postalCode": "553-0003",
+        "geoCoordinates": {
+          "lat": 34.700488,
+          "lon": 135.489267
+        }
+      },
+      "discovery_queries": [
+        "\"ジムフィールド梅田スタジオ\" official Osaka",
+        "\"ジムフィールド梅田スタジオ\" 553-0003"
+      ]
+    },
+    {
+      "external_id": "HGY_KfmsGVY1O0Uo5HUJvnNoeyQvc",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_KfmsGVY1O0Uo5HUJvnNoeyQvc",
+      "official_name": "BRC Hyrox Training Club",
+      "facility_url": "https://personal-gymfit.com/lp/brc-light/suita/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "吹田市",
+        "street": "山手町2-7-7 ドミニオン豊津Ⅱ",
+        "postalCode": "5640073",
+        "geoCoordinates": {
+          "lat": 34.7645181,
+          "lon": 135.509457
+        }
+      },
+      "discovery_queries": [
+        "\"BRC Hyrox Training Club\" official 吹田市",
+        "\"BRC Hyrox Training Club\" 5640073"
+      ]
+    },
+    {
+      "external_id": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "official_name": "オレンジセオリーフィットネス武蔵小金井",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/musashikoganei/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Koganei",
+        "street": "6-2-30-3F Honcho",
+        "postalCode": "1840004",
+        "geoCoordinates": {
+          "lat": 35.6991677,
+          "lon": 139.5054922
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス武蔵小金井\" official Koganei",
+        "\"オレンジセオリーフィットネス武蔵小金井\" 1840004"
+      ]
+    },
+    {
+      "external_id": "HGY_KqtNHNJuS9bxAfH4mTf5V0Ojz",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_KqtNHNJuS9bxAfH4mTf5V0Ojz",
+      "official_name": "ZENITH FITNESS",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Toride",
+        "street": "356-5 Aoyanagi",
+        "postalCode": "3020006",
+        "geoCoordinates": {
+          "lat": 35.8929164,
+          "lon": 140.0798161
+        }
+      },
+      "discovery_queries": [
+        "\"ZENITH FITNESS\" official Toride",
+        "\"ZENITH FITNESS\" 3020006"
+      ]
+    },
+    {
+      "external_id": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "official_name": "Beequick Fitness　Fuji imaizumi",
+      "facility_url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Fuji-shi",
+        "street": "imaizumi3-5-1",
+        "postalCode": "417-0001",
+        "geoCoordinates": {
+          "lat": 35.1658296,
+          "lon": 138.6958927
+        }
+      },
+      "discovery_queries": [
+        "\"Beequick Fitness　Fuji imaizumi\" official Fuji-shi",
+        "\"Beequick Fitness　Fuji imaizumi\" 417-0001"
+      ]
+    },
+    {
+      "external_id": "HGY_L3VAddWv1SmZCR2GoXzjkXvDi",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_L3VAddWv1SmZCR2GoXzjkXvDi",
+      "official_name": "KAMAKURA TRAINING GARAGE",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kamakura",
+        "street": "3F, Kanno Building, 1-3-12 Ofuna, Kamakura-shi, ",
+        "postalCode": "247-0056",
+        "geoCoordinates": {
+          "lat": 35.3498287,
+          "lon": 139.530734
+        }
+      },
+      "discovery_queries": [
+        "\"KAMAKURA TRAINING GARAGE\" official Kamakura",
+        "\"KAMAKURA TRAINING GARAGE\" 247-0056"
+      ]
+    },
+    {
+      "external_id": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "official_name": "OTF URAWA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "saitama",
+        "street": "nakamachi 1bankan 1F  urawaku nakachou 1-3-10 ",
+        "postalCode": "330-0062 ",
+        "geoCoordinates": {
+          "lat": 35.8598225,
+          "lon": 139.6550075
+        }
+      },
+      "discovery_queries": [
+        "\"OTF URAWA\" official saitama",
+        "\"OTF URAWA\" 330-0062"
+      ]
+    },
+    {
+      "external_id": "HGY_lpqlTA67YHaPgwogB58Qkb8tz",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_lpqlTA67YHaPgwogB58Qkb8tz",
+      "official_name": "POTRERO",
+      "facility_url": "https://www.instagram.com/potrero202310/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "東京都",
+        "street": "国分寺市本町2-15-7",
+        "postalCode": "185-0012",
+        "geoCoordinates": {
+          "lat": 35.702117,
+          "lon": 139.4822642
+        }
+      },
+      "discovery_queries": [
+        "\"POTRERO\" official 東京都",
+        "\"POTRERO\" 185-0012"
+      ]
+    },
+    {
+      "external_id": "HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+      "official_name": "THE PICKLE BANG THEORY",
+      "facility_url": "https://www.thepicklebang.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Ichikawa",
+        "street": "八幡2-16-6 6F",
+        "postalCode": "272-0021",
+        "geoCoordinates": {
+          "lat": 35.7215231,
+          "lon": 139.9267398
+        }
+      },
+      "discovery_queries": [
+        "\"THE PICKLE BANG THEORY\" official Ichikawa",
+        "\"THE PICKLE BANG THEORY\" 272-0021"
+      ]
+    },
+    {
+      "external_id": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "official_name": "Gold‘s Gym Maebashi Inter",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Takasaki, Gunma",
+        "street": "44　Nakao-machi, Akamaru A Building, 1F",
+        "postalCode": "370-0001",
+        "geoCoordinates": {
+          "lat": 36.37503,
+          "lon": 139.0336953
+        }
+      },
+      "discovery_queries": [
+        "\"Gold‘s Gym Maebashi Inter\" official Takasaki, Gunma",
+        "\"Gold‘s Gym Maebashi Inter\" 370-0001"
+      ]
+    },
+    {
+      "external_id": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "official_name": "オレンジセオリーフィットネス麻布十番",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/azabujuban/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Minato City",
+        "street": "1-7-5-B2 Azabujuban, Minato-ku",
+        "postalCode": "106-0045",
+        "geoCoordinates": {
+          "lat": 35.6564502,
+          "lon": 139.7348508
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス麻布十番\" official Minato City",
+        "\"オレンジセオリーフィットネス麻布十番\" 106-0045"
+      ]
+    },
+    {
+      "external_id": "HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+      "official_name": "CrossFit Matsumoto",
+      "facility_url": "https://crossfitmatsumoto.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "matsumoto city",
+        "street": "muraimachi minami 4-21-3 sinkou  building 1F west",
+        "postalCode": "3990036",
+        "geoCoordinates": {
+          "lat": 36.1717291,
+          "lon": 137.9595967
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Matsumoto\" official matsumoto city",
+        "\"CrossFit Matsumoto\" 3990036"
+      ]
+    },
+    {
+      "external_id": "HGY_mSkoLyCWJwPT39x02V3w0hu0t",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_mSkoLyCWJwPT39x02V3w0hu0t",
+      "official_name": "ELITEGYM",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Osaka",
+        "street": "CEnishihonmachibuilding#102,1-7-7,Nishihonnmachi,Nishiku",
+        "postalCode": "5500005",
+        "geoCoordinates": {
+          "lat": 34.6832815,
+          "lon": 135.4964928
+        }
+      },
+      "discovery_queries": [
+        "\"ELITEGYM\" official Osaka",
+        "\"ELITEGYM\" 5500005"
+      ]
+    },
+    {
+      "external_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "official_name": "オレンジセオリーフィットネス溝の口",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kawasaki",
+        "street": "1-13-18-B1 Mizonokuchi, Takatsu",
+        "postalCode": "2130001",
+        "geoCoordinates": {
+          "lat": 35.5996996,
+          "lon": 139.6146255
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス溝の口\" official Kawasaki",
+        "\"オレンジセオリーフィットネス溝の口\" 2130001"
+      ]
+    },
+    {
+      "external_id": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "official_name": "UFC Gym Ogikubo",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "杉並区",
+        "street": "荻窪5-20-5 B1",
+        "postalCode": "167-0051",
+        "geoCoordinates": {
+          "lat": 35.7025804,
+          "lon": 139.6199521
+        }
+      },
+      "discovery_queries": [
+        "\"UFC Gym Ogikubo\" official 杉並区",
+        "\"UFC Gym Ogikubo\" 167-0051"
+      ]
+    },
+    {
+      "external_id": "HGY_nrmk6sTnBrGkV8zdarIrCOxa6",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_nrmk6sTnBrGkV8zdarIrCOxa6",
+      "official_name": "UBX Nishikasai",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Edogawa-ku, Tokyo",
+        "street": "COCO House Nishikasai 2F, 5-1-11 Nishikasai",
+        "postalCode": "1340088",
+        "geoCoordinates": {
+          "lat": 35.665312,
+          "lon": 139.8595176
+        }
+      },
+      "discovery_queries": [
+        "\"UBX Nishikasai\" official Edogawa-ku, Tokyo",
+        "\"UBX Nishikasai\" 1340088"
+      ]
+    },
+    {
+      "external_id": "HGY_oDeEhxzojI1lC8iPahxfmqnB3",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_oDeEhxzojI1lC8iPahxfmqnB3",
+      "official_name": "Triangle Co., Ltd.",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "Osaka Prefecture",
+        "city": "Osaka City",
+        "street": "Sumie 2-chome 1-4",
+        "postalCode": "558-0043",
+        "geoCoordinates": {
+          "lat": 34.6091287,
+          "lon": 135.4966636
+        }
+      },
+      "discovery_queries": [
+        "\"Triangle Co., Ltd.\" official Osaka City",
+        "\"Triangle Co., Ltd.\" 558-0043"
+      ]
+    },
+    {
+      "external_id": "HGY_odlnWDpLf7vstauEn9OOylTjB",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_odlnWDpLf7vstauEn9OOylTjB",
+      "official_name": "Deportare Club",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "東京都港区",
+        "street": "麻布台一丁目3番1号 麻布台ヒルズ森JPタワー4階",
+        "postalCode": "1060041",
+        "geoCoordinates": {
+          "lat": 35.6612155,
+          "lon": 139.740616
+        }
+      },
+      "discovery_queries": [
+        "\"Deportare Club\" official 東京都港区",
+        "\"Deportare Club\" 1060041"
+      ]
+    },
+    {
+      "external_id": "HGY_OFeOcuxCgnvAFZl5IgUk1XUd0",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_OFeOcuxCgnvAFZl5IgUk1XUd0",
+      "official_name": "Hybrid Beast Sapporo",
+      "facility_url": "https://hybridbeast.hacomono.jp/home",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "札幌市",
+        "street": "札幌市中央区南1条西22丁目1 Build裏参道2F",
+        "postalCode": "0640801",
+        "geoCoordinates": {
+          "lat": 43.0559451,
+          "lon": 141.3233041
+        }
+      },
+      "discovery_queries": [
+        "\"Hybrid Beast Sapporo\" official 札幌市",
+        "\"Hybrid Beast Sapporo\" 0640801"
+      ]
+    },
+    {
+      "external_id": "HGY_OU7kGXxVCornn7wzKRPPXbxCF",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_OU7kGXxVCornn7wzKRPPXbxCF",
+      "official_name": "セミパーソナルジムLAULE'A50Fitness 本町店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪市",
+        "street": "大阪府大阪市中央区南本町3丁目3-17 丸松ビル5階",
+        "postalCode": "541-0054",
+        "geoCoordinates": {
+          "lat": 34.682578,
+          "lon": 135.5016602
+        }
+      },
+      "discovery_queries": [
+        "\"セミパーソナルジムLAULE'A50Fitness 本町店\" official 大阪市",
+        "\"セミパーソナルジムLAULE'A50Fitness 本町店\" 541-0054"
+      ]
+    },
+    {
+      "external_id": "HGY_oY9C1ywaWlEhDuOstuuQngXDg",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_oY9C1ywaWlEhDuOstuuQngXDg",
+      "official_name": "ENZA HYROX TRAINING CLUB",
+      "facility_url": "https://enza.stores.jp/reserve/hyrox",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "神奈川県横浜市",
+        "street": "都筑区葛が谷１４－７クレール関　B",
+        "postalCode": "2240036",
+        "geoCoordinates": {
+          "lat": 35.5354457,
+          "lon": 139.56311
+        }
+      },
+      "discovery_queries": [
+        "\"ENZA HYROX TRAINING CLUB\" official 神奈川県横浜市",
+        "\"ENZA HYROX TRAINING CLUB\" 2240036"
+      ]
+    },
+    {
+      "external_id": "HGY_P4QYjZgyjnKMV2GYc2blZggsY",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_P4QYjZgyjnKMV2GYc2blZggsY",
+      "official_name": "Red Circle Crossfit Nakagawa",
+      "facility_url": "https://www.instagram.com/redcircle_crossfit?igsh=MW9zam8zeWk2NWxpZQ%3D%3D&utm_source=qr",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kanagawa",
+        "street": "2-6-23 Nakagawa, Tsuzuki ku , Yokohama",
+        "postalCode": "2240001",
+        "geoCoordinates": {
+          "lat": 35.5561195,
+          "lon": 139.575747
+        }
+      },
+      "discovery_queries": [
+        "\"Red Circle Crossfit Nakagawa\" official Kanagawa",
+        "\"Red Circle Crossfit Nakagawa\" 2240001"
+      ]
+    },
+    {
+      "external_id": "HGY_PHT5uoCZZO2tEyxMU4ImHO4EL",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_PHT5uoCZZO2tEyxMU4ImHO4EL",
+      "official_name": "CrossFit Motomachi",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kobe",
+        "street": "Motomachi Plaza B1F-C, 2-9-1 Motomachi-dori, Chuo-ku,",
+        "postalCode": "6500022",
+        "geoCoordinates": {
+          "lat": 34.6890517,
+          "lon": 135.1869352
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Motomachi\" official 神戸市中央区",
+        "\"CrossFit Motomachi\" 6500022"
+      ]
+    },
+    {
+      "external_id": "HGY_qaUKe9XHM4Dt1rhd2sHFQEumQ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_qaUKe9XHM4Dt1rhd2sHFQEumQ",
+      "official_name": "BANYAN ROOTS Fitness",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "中頭郡中城村",
+        "street": "久場1955",
+        "postalCode": "9012401",
+        "geoCoordinates": {
+          "lat": 26.2853566,
+          "lon": 127.8160502
+        }
+      },
+      "discovery_queries": [
+        "\"BANYAN ROOTS Fitness\" official 中頭郡中城村",
+        "\"BANYAN ROOTS Fitness\" 9012401"
+      ]
+    },
+    {
+      "external_id": "HGY_QFXRcpJLiJTC7URRjjI95KhmK",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_QFXRcpJLiJTC7URRjjI95KhmK",
+      "official_name": "セミパーソナルジムLAULE'A50Fitness 天満橋店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪市",
+        "street": "大阪府大阪市中央区大手前１丁目４−２ 都住創大手前 1階",
+        "postalCode": "5400008",
+        "geoCoordinates": {
+          "lat": 34.69026270000001,
+          "lon": 135.5201458
+        }
+      },
+      "discovery_queries": [
+        "\"セミパーソナルジムLAULE'A50Fitness 天満橋店\" official 大阪市",
+        "\"セミパーソナルジムLAULE'A50Fitness 天満橋店\" 5400008"
+      ]
+    },
+    {
+      "external_id": "HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+      "official_name": "MUSCLE GATE HOTEL GYM BOUTIQUE Powered by GOLD`S GYM",
+      "facility_url": "https://www.musclegate-hotelgymboutique.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪府大阪市",
+        "street": "中央区心斎橋筋2－5－15　クロスホテル大阪5F",
+        "postalCode": "542-0085",
+        "geoCoordinates": {
+          "lat": 34.6699179,
+          "lon": 135.502052
+        }
+      },
+      "discovery_queries": [
+        "\"MUSCLE GATE HOTEL GYM BOUTIQUE Powered by GOLD`S GYM\" official 大阪府大阪市",
+        "\"MUSCLE GATE HOTEL GYM BOUTIQUE Powered by GOLD`S GYM\" 542-0085"
+      ]
+    },
+    {
+      "external_id": "HGY_qOcqK0E94UdIHKuNFcMIRpvhf",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_qOcqK0E94UdIHKuNFcMIRpvhf",
+      "official_name": "FREESTYLE FITNESS",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "KOBE",
+        "street": "1F, Tofuku Building, 3-4-1 Shimoyamate-dori, Chuo-ku",
+        "postalCode": "650-0011",
+        "geoCoordinates": {
+          "lat": 34.6924724,
+          "lon": 135.1847676
+        }
+      },
+      "discovery_queries": [
+        "\"FREESTYLE FITNESS\" official 神戸市中央区",
+        "\"FREESTYLE FITNESS\" 650-0011"
+      ]
+    },
+    {
+      "external_id": "HGY_RFVnw99mAdpSM2kA6DzbK0fwO",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_RFVnw99mAdpSM2kA6DzbK0fwO",
+      "official_name": "CrossFit  SETAGAYA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "",
+        "city": "TOKYO",
+        "street": "Setagaya-ku Wakabayashi1-18-10 Keihann setagaya bld.1FB",
+        "postalCode": "154-0023",
+        "geoCoordinates": {
+          "lat": 35.643349,
+          "lon": 139.66366
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit  SETAGAYA\" official TOKYO",
+        "\"CrossFit  SETAGAYA\" 154-0023"
+      ]
+    },
+    {
+      "external_id": "HGY_Sb90tuf5xROH384KcSvEVpVhk",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_Sb90tuf5xROH384KcSvEVpVhk",
+      "official_name": "Bright Enoshima | HYROX",
+      "facility_url": "https://www.instagram.com/bright_enoshima?igsh=MTBlNDg2a2d2b3lubA==",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kamakura",
+        "street": "鎌倉市腰越3-14-4",
+        "postalCode": "248-0033",
+        "geoCoordinates": {
+          "lat": 35.3101615,
+          "lon": 139.4900833
+        }
+      },
+      "discovery_queries": [
+        "\"Bright Enoshima | HYROX\" official Kamakura",
+        "\"Bright Enoshima | HYROX\" 248-0033"
+      ]
+    },
+    {
+      "external_id": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "official_name": "Beequick Fitness　Kasugai  oshisawadai",
+      "facility_url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Aichi-ken Kasugai-shi",
+        "street": "Oshisawadai 1-7-24",
+        "postalCode": "487-0005",
+        "geoCoordinates": {
+          "lat": 35.2858018,
+          "lon": 137.0646056
+        }
+      },
+      "discovery_queries": [
+        "\"Beequick Fitness　Kasugai  oshisawadai\" official Aichi-ken Kasugai-shi",
+        "\"Beequick Fitness　Kasugai  oshisawadai\" 487-0005"
+      ]
+    },
+    {
+      "external_id": "HGY_sIzr19G0LhmZpHzUhEJpv2QLx",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_sIzr19G0LhmZpHzUhEJpv2QLx",
+      "official_name": "ReXeR Tokyo",
+      "facility_url": "https://rexer-tokyo.style/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "2-14-14 Minami-Aoyama, Minato-ku",
+        "postalCode": "1070062",
+        "geoCoordinates": {
+          "lat": 35.6700211,
+          "lon": 139.7208252
+        }
+      },
+      "discovery_queries": [
+        "\"ReXeR Tokyo\" official Tokyo",
+        "\"ReXeR Tokyo\" 1070062"
+      ]
+    },
+    {
+      "external_id": "HGY_sm5NKgjNHsZ3iblInhUUK5sXp",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_sm5NKgjNHsZ3iblInhUUK5sXp",
+      "official_name": "B-fitPrime服部緑地",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "大阪府",
+        "street": "大阪府豊中市服部緑地1番68号SPA&SAUNA水春服部緑地1F",
+        "postalCode": "561-0873",
+        "geoCoordinates": {
+          "lat": 34.7776971,
+          "lon": 135.4932183
+        }
+      },
+      "discovery_queries": [
+        "\"B-fitPrime服部緑地\" official 大阪府",
+        "\"B-fitPrime服部緑地\" 561-0873"
+      ]
+    },
+    {
+      "external_id": "HGY_SuW4zEnJyABlIoQuB6Vhcb55a",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_SuW4zEnJyABlIoQuB6Vhcb55a",
+      "official_name": "J-BOX岡山",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Minami-ku",
+        "street": "Nishiiti,623-6,Kurozumibuilding,1F",
+        "postalCode": "7000953",
+        "geoCoordinates": {
+          "lat": 34.6216168,
+          "lon": 133.9082387
+        }
+      },
+      "discovery_queries": [
+        "\"J-BOX岡山\" official 岡山市北区",
+        "\"J-BOX岡山\" 7000953"
+      ]
+    },
+    {
+      "external_id": "HGY_svy8leyzBW7DDaBLq57FWuNot",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_svy8leyzBW7DDaBLq57FWuNot",
+      "official_name": "BEYOND名古屋駅前店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "名古屋市",
+        "street": "中村区名駅南1丁目18−11   1F",
+        "postalCode": "450-0003",
+        "geoCoordinates": {
+          "lat": 35.1670903,
+          "lon": 136.8876431
+        }
+      },
+      "discovery_queries": [
+        "\"BEYOND名古屋駅前店\" official 名古屋市",
+        "\"BEYOND名古屋駅前店\" 450-0003"
+      ]
+    },
+    {
+      "external_id": "HGY_TG4052uDtmYS0I70ODdFi7704",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_TG4052uDtmYS0I70ODdFi7704",
+      "official_name": "CrossFit Otsuka",
+      "facility_url": "https://crossfit-otsuka.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "1-33-22 kitaotsuka,toshimaku",
+        "postalCode": "1700004",
+        "geoCoordinates": {
+          "lat": 35.7335729,
+          "lon": 139.7301811
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Otsuka\" official Tokyo",
+        "\"CrossFit Otsuka\" 1700004"
+      ]
+    },
+    {
+      "external_id": "HGY_THuICnaU3oVt3DAY6FgPgQspb",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_THuICnaU3oVt3DAY6FgPgQspb",
+      "official_name": "オレンジセオリーフィットネス池下",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nagoya",
+        "street": "8-70-1 Kakuozantori, Chikusa",
+        "postalCode": "4640841",
+        "geoCoordinates": {
+          "lat": 35.1673225,
+          "lon": 136.9468931
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス池下\" official Nagoya",
+        "\"オレンジセオリーフィットネス池下\" 4640841"
+      ]
+    },
+    {
+      "external_id": "HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+      "official_name": "CrossFit Kofu",
+      "facility_url": "https://crossfitkofu.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kofu-shi,",
+        "street": "1490-3 Osatocho",
+        "postalCode": "400-0053",
+        "geoCoordinates": {
+          "lat": 35.6190735,
+          "lon": 138.5608099
+        }
+      },
+      "discovery_queries": [
+        "\"CrossFit Kofu\" official Kofu-shi,",
+        "\"CrossFit Kofu\" 400-0053"
+      ]
+    },
+    {
+      "external_id": "HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "official_name": "TOMMY WORKOUT GYM",
+      "facility_url": "https://tommyworkout.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "3-4-2 Shimomeguro, Meguro-ku,",
+        "postalCode": "1530064",
+        "geoCoordinates": {
+          "lat": 35.6309342,
+          "lon": 139.7092413
+        }
+      },
+      "discovery_queries": [
+        "\"TOMMY WORKOUT GYM\" official Tokyo",
+        "\"TOMMY WORKOUT GYM\" 1530064"
+      ]
+    },
+    {
+      "external_id": "HGY_tvAvxxWuvtyhwO9dVyMWgnozo",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_tvAvxxWuvtyhwO9dVyMWgnozo",
+      "official_name": "Anytimefitness Urawanakao",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nakao, Midori-ku, Saitama-shi,Saitama",
+        "street": "524-1",
+        "postalCode": "336-0932",
+        "geoCoordinates": {
+          "lat": 35.8778307,
+          "lon": 139.6775239
+        }
+      },
+      "discovery_queries": [
+        "\"Anytimefitness Urawanakao\" official Nakao, Midori-ku, Saitama-shi,Saitama",
+        "\"Anytimefitness Urawanakao\" 336-0932"
+      ]
+    },
+    {
+      "external_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "official_name": "Freeletics Goals",
+      "facility_url": "https://www.freeleticsgoals.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yokohama, Kanagawa",
+        "street": "SSKnot 1F  5-69 Otamachi Naka-ku",
+        "postalCode": "231-0011",
+        "geoCoordinates": {
+          "lat": 35.4486154,
+          "lon": 139.6353908
+        }
+      },
+      "discovery_queries": [
+        "\"Freeletics Goals\" official Yokohama, Kanagawa",
+        "\"Freeletics Goals\" 231-0011"
+      ]
+    },
+    {
+      "external_id": "HGY_u1jEfMUhWzm4UY0kr23bbloXw",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_u1jEfMUhWzm4UY0kr23bbloXw",
+      "official_name": "MYFITNESSアスリートハウス",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "愛媛県松山市",
+        "street": "萱町3丁目4-9",
+        "postalCode": "790-0813",
+        "geoCoordinates": {
+          "lat": 33.8472143,
+          "lon": 132.7568405
+        }
+      },
+      "discovery_queries": [
+        "\"MYFITNESSアスリートハウス\" official 松山市",
+        "\"MYFITNESSアスリートハウス\" 790-0813"
+      ]
+    },
+    {
+      "external_id": "HGY_ubYkZjWhnTcLhpmaPlOYYfzRe",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_ubYkZjWhnTcLhpmaPlOYYfzRe",
+      "official_name": "Buddytraining",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "tokyo",
+        "street": "広尾５丁目1-43 広尾ZERO 402号室",
+        "postalCode": "1500012",
+        "geoCoordinates": {
+          "lat": 35.6489469,
+          "lon": 139.7174277
+        }
+      },
+      "discovery_queries": [
+        "\"Buddytraining\" official tokyo",
+        "\"Buddytraining\" 1500012"
+      ]
+    },
+    {
+      "external_id": "HGY_uKdKtwcICbq2c8iwKmwqdpxhJ",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_uKdKtwcICbq2c8iwKmwqdpxhJ",
+      "official_name": "THEパーソナルトレーニング新潟",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "新潟市",
+        "street": "中央区南笹口1-9-29",
+        "postalCode": "9500912",
+        "geoCoordinates": {
+          "lat": 37.9098265,
+          "lon": 139.0672611
+        }
+      },
+      "discovery_queries": [
+        "\"THEパーソナルトレーニング新潟\" official 新潟市中央区",
+        "\"THEパーソナルトレーニング新潟\" 9500912"
+      ]
+    },
+    {
+      "external_id": "HGY_vexROb0W8GM2zgqdqdysd1LYz",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_vexROb0W8GM2zgqdqdysd1LYz",
+      "official_name": "Fitness Studio YOU'phoria",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Nagoya-shi Aichi",
+        "street": "3-10-22 Uchiyama Chikusa-ku YAMATO Building 2F",
+        "postalCode": "4640075",
+        "geoCoordinates": {
+          "lat": 35.1702619,
+          "lon": 136.9361566
+        }
+      },
+      "discovery_queries": [
+        "\"Fitness Studio YOU'phoria\" official Nagoya-shi Aichi",
+        "\"Fitness Studio YOU'phoria\" 4640075"
+      ]
+    },
+    {
+      "external_id": "HGY_vKVViER7spGFVzDED6QfEMuP5",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_vKVViER7spGFVzDED6QfEMuP5",
+      "official_name": "PATRIOT MOTION CLUB",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Ibaraki-machi, Higashiibaraki-gun, Ibaraki",
+        "street": "1680-6 Maeda",
+        "postalCode": "311-3115",
+        "geoCoordinates": {
+          "lat": 36.312346,
+          "lon": 140.4377523
+        }
+      },
+      "discovery_queries": [
+        "\"PATRIOT MOTION CLUB\" official Ibaraki-machi, Higashiibaraki-gun, Ibaraki",
+        "\"PATRIOT MOTION CLUB\" 311-3115"
+      ]
+    },
+    {
+      "external_id": "HGY_VtlzLZmJraDc0Q1rWUvkktOkD",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_VtlzLZmJraDc0Q1rWUvkktOkD",
+      "official_name": "SureGym（シュアジム）君津店",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Chiba",
+        "street": "3-10-16 Nakano, Kimitsu-shi",
+        "postalCode": "299-1151",
+        "geoCoordinates": {
+          "lat": 35.3308826,
+          "lon": 139.890779
+        }
+      },
+      "discovery_queries": [
+        "\"SureGym（シュアジム）君津店\" official Chiba",
+        "\"SureGym（シュアジム）君津店\" 299-1151"
+      ]
+    },
+    {
+      "external_id": "HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+      "official_name": "A Plus CrossFit Takatsuki",
+      "facility_url": "https://apf-takatsuki.vercel.app/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Takatsuki",
+        "street": "1-15-22 Makamicho",
+        "postalCode": "5691121",
+        "geoCoordinates": {
+          "lat": 34.8548022,
+          "lon": 135.611727
+        }
+      },
+      "discovery_queries": [
+        "\"A Plus CrossFit Takatsuki\" official Takatsuki",
+        "\"A Plus CrossFit Takatsuki\" 5691121"
+      ]
+    },
+    {
+      "external_id": "HGY_vxpsLHHaOUkkrFxB7welZply6",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_vxpsLHHaOUkkrFxB7welZply6",
+      "official_name": "TRANSIT GYM",
+      "facility_url": "https://www.instagram.com/transitgym_shonan?igsh=dmZ2dmp2cWd1b3Jj&utm_source=qr",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Fujisawa",
+        "street": "Katase,2-16-21",
+        "postalCode": "251-0032",
+        "geoCoordinates": {
+          "lat": 35.3172623,
+          "lon": 139.4858351
+        }
+      },
+      "discovery_queries": [
+        "\"TRANSIT GYM\" official Fujisawa",
+        "\"TRANSIT GYM\" 251-0032"
+      ]
+    },
+    {
+      "external_id": "HGY_w1kFjCWRyoM7EmvP3I9DYLtEt",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_w1kFjCWRyoM7EmvP3I9DYLtEt",
+      "official_name": "Anim Movement Club",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Setagaya",
+        "street": "Daizawa2-40-10",
+        "postalCode": "1560032",
+        "geoCoordinates": {
+          "lat": 35.6468095,
+          "lon": 139.653582
+        }
+      },
+      "discovery_queries": [
+        "\"Anim Movement Club\" official Setagaya",
+        "\"Anim Movement Club\" 1560032"
+      ]
+    },
+    {
+      "external_id": "HGY_w8bQvi3oZi0Uan43p91ImN3MP",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_w8bQvi3oZi0Uan43p91ImN3MP",
+      "official_name": "エスティフィットネスクラブ",
+      "facility_url": "https://estyfitness.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "半田市",
+        "street": "州の崎町2丁目36番地",
+        "postalCode": "4750021",
+        "geoCoordinates": {
+          "lat": 34.9199122,
+          "lon": 136.9727719
+        }
+      },
+      "discovery_queries": [
+        "\"エスティフィットネスクラブ\" official 半田市",
+        "\"エスティフィットネスクラブ\" 4750021"
+      ]
+    },
+    {
+      "external_id": "HGY_wre6YfUPBNkfwFN4kIJmeR5gk",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_wre6YfUPBNkfwFN4kIJmeR5gk",
+      "official_name": "B-Revolution×溝の口整体院",
+      "facility_url": "https://mizonoguchi-chiro.com/",
+      "address": {
+        "country": "JP",
+        "state": "神奈川県",
+        "city": "川崎市",
+        "street": "高津区溝の口 3-9-3佐保田ビルB1",
+        "postalCode": "213-0001",
+        "geoCoordinates": {
+          "lat": 35.6036072,
+          "lon": 139.6145092
+        }
+      },
+      "discovery_queries": [
+        "\"B-Revolution×溝の口整体院\" official 川崎市",
+        "\"B-Revolution×溝の口整体院\" 213-0001"
+      ]
+    },
+    {
+      "external_id": "HGY_WwI5XjqwNQ9fVt0tFLF0Y5pTi",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_WwI5XjqwNQ9fVt0tFLF0Y5pTi",
+      "official_name": "GRANDSTONE SKY ATHLETICS",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "kobe-shi,hyogo-ken",
+        "street": "9F-1-1-18hamabedori,chuo-ku",
+        "postalCode": "6510086",
+        "geoCoordinates": {
+          "lat": 34.6928631,
+          "lon": 135.2000581
+        }
+      },
+      "discovery_queries": [
+        "\"GRANDSTONE SKY ATHLETICS\" official 神戸市中央区",
+        "\"GRANDSTONE SKY ATHLETICS\" 6510086"
+      ]
+    },
+    {
+      "external_id": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "official_name": "MEIJI PARK",
+      "facility_url": "https://www.meiji-park.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "MEIJI PARK, 5-7 Kasumigaokamachi, Shinjuku City",
+        "postalCode": "1600013",
+        "geoCoordinates": {
+          "lat": 35.6752068,
+          "lon": 139.7136655
+        }
+      },
+      "discovery_queries": [
+        "\"MEIJI PARK\" official Tokyo",
+        "\"MEIJI PARK\" 1600013"
+      ]
+    },
+    {
+      "external_id": "HGY_x5BzXBk4iDcdWkMsTrZyZ2l4f",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_x5BzXBk4iDcdWkMsTrZyZ2l4f",
+      "official_name": "Shoji Ueda　GYM  dammy",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "fujisawa",
+        "street": "kugenuma7",
+        "postalCode": "2510037",
+        "geoCoordinates": {
+          "lat": 35.3192618,
+          "lon": 139.468211
+        }
+      },
+      "discovery_queries": [
+        "\"Shoji Ueda　GYM  dammy\" official fujisawa",
+        "\"Shoji Ueda　GYM  dammy\" 2510037"
+      ]
+    },
+    {
+      "external_id": "HGY_xC6UC9Za5P4gAkSZBNF8JEHOh",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_xC6UC9Za5P4gAkSZBNF8JEHOh",
+      "official_name": "Nack 5 Stadium",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Saitama",
+        "street": "4 Chome Takahanacho, Omiya Ward, ",
+        "postalCode": "3300803",
+        "geoCoordinates": {
+          "lat": 35.9189126,
+          "lon": 139.6318202
+        }
+      },
+      "discovery_queries": [
+        "\"Nack 5 Stadium\" official Saitama",
+        "\"Nack 5 Stadium\" 3300803"
+      ]
+    },
+    {
+      "external_id": "HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+      "official_name": "Hyex吉祥寺",
+      "facility_url": "https://hyex.jp/studio/lp/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "武蔵野市",
+        "street": "吉祥寺東町1−17−18 三角ビルB1",
+        "postalCode": "1800002",
+        "geoCoordinates": {
+          "lat": 35.7052607,
+          "lon": 139.584067
+        }
+      },
+      "discovery_queries": [
+        "\"Hyex吉祥寺\" official 武蔵野市",
+        "\"Hyex吉祥寺\" 1800002"
+      ]
+    },
+    {
+      "external_id": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "official_name": "Port Tower CrossFit",
+      "facility_url": "porttowercrossfit.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kobe",
+        "street": "6-chōme-1 Warizukadōri, Chuo-Ku",
+        "postalCode": "650-0003",
+        "geoCoordinates": {
+          "lat": 34.703917,
+          "lon": 135.208011
+        }
+      },
+      "discovery_queries": [
+        "\"Port Tower CrossFit\" official 神戸市中央区",
+        "\"Port Tower CrossFit\" 650-0003"
+      ]
+    },
+    {
+      "external_id": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "official_name": "TrueFitness 吹田 HYROX",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": "",
+        "city": "Suita-shi , Osaka",
+        "street": "2F, Suita SANKUSU No.2 Building, 2-101 Asahi-cho",
+        "postalCode": "5640027",
+        "geoCoordinates": {
+          "lat": 34.7630980514236,
+          "lon": 135.52542306751053
+        }
+      },
+      "discovery_queries": [
+        "\"TrueFitness 吹田 HYROX\" official Suita-shi , Osaka",
+        "\"TrueFitness 吹田 HYROX\" 5640027"
+      ]
+    },
+    {
+      "external_id": "HGY_XtsKlmBFCkXJcX8703QafobrI",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_XtsKlmBFCkXJcX8703QafobrI",
+      "official_name": "Yunami Fitness",
+      "facility_url": "https://yunamifitness.com",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Sumida-ku",
+        "street": "2-29-14, Sumida",
+        "postalCode": "1310031",
+        "geoCoordinates": {
+          "lat": 35.7288243,
+          "lon": 139.8180561
+        }
+      },
+      "discovery_queries": [
+        "\"Yunami Fitness\" official Sumida-ku",
+        "\"Yunami Fitness\" 1310031"
+      ]
+    },
+    {
+      "external_id": "HGY_xyAU0lT9Vs7V3PVl1H9RJ5g1r",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_xyAU0lT9Vs7V3PVl1H9RJ5g1r",
+      "official_name": "EastCoastPark",
+      "facility_url": "https://www.instagram.com/eastcoastpark_sendai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Sendai",
+        "street": "Arahama Shinhoribata 1-3",
+        "postalCode": "9840033",
+        "geoCoordinates": {
+          "lat": 38.22610299999999,
+          "lon": 140.9735548
+        }
+      },
+      "discovery_queries": [
+        "\"EastCoastPark\" official 仙台市若林区",
+        "\"EastCoastPark\" 9840033"
+      ]
+    },
+    {
+      "external_id": "HGY_yeaRUcBgLaGGSgJ0FWDMnVgd8",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_yeaRUcBgLaGGSgJ0FWDMnVgd8",
+      "official_name": "UBX Chuorinkan",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Yamato-shi, Kanagawa",
+        "street": "LAPLA Chuo-Rinkan 2F, 8-25-8 Chuo-Rinkan",
+        "postalCode": "2420007",
+        "geoCoordinates": {
+          "lat": 35.5092715,
+          "lon": 139.4490642
+        }
+      },
+      "discovery_queries": [
+        "\"UBX Chuorinkan\" official Yamato-shi, Kanagawa",
+        "\"UBX Chuorinkan\" 2420007"
+      ]
+    },
+    {
+      "external_id": "HGY_ygO9mHhu9Hbmoszq4sn4Z1Zw0",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_ygO9mHhu9Hbmoszq4sn4Z1Zw0",
+      "official_name": "Crossfit Uninterrupted",
+      "facility_url": "https://en.crossfituninterrupted.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Kanagawa",
+        "street": "Pryme Coast Minatomirai 2K, 6-3-4 Minatomirai, Nishi-ku, Yokohama",
+        "postalCode": "220-0012",
+        "geoCoordinates": {
+          "lat": 35.463547,
+          "lon": 139.6328459
+        }
+      },
+      "discovery_queries": [
+        "\"Crossfit Uninterrupted\" official Kanagawa",
+        "\"Crossfit Uninterrupted\" 220-0012"
+      ]
+    },
+    {
+      "external_id": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "official_name": "オレンジセオリーフィットネス自由が丘",
+      "facility_url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Tokyo",
+        "street": "2-17-1-B1 Jiyugaoka, Meguro",
+        "postalCode": "1520035",
+        "geoCoordinates": {
+          "lat": 35.610216,
+          "lon": 139.6669928
+        }
+      },
+      "discovery_queries": [
+        "\"オレンジセオリーフィットネス自由が丘\" official Tokyo",
+        "\"オレンジセオリーフィットネス自由が丘\" 1520035"
+      ]
+    },
+    {
+      "external_id": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "official_name": "Beequick Fitness　Iga Ninjyanosato",
+      "facility_url": "https://www.beequick.jp/location/iganinjanosato/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "iga-shi",
+        "street": "hiranonishimachi63",
+        "postalCode": "518-0820",
+        "geoCoordinates": {
+          "lat": 34.773136,
+          "lon": 136.1359615
+        }
+      },
+      "discovery_queries": [
+        "\"Beequick Fitness　Iga Ninjyanosato\" official iga-shi",
+        "\"Beequick Fitness　Iga Ninjyanosato\" 518-0820"
+      ]
+    },
+    {
+      "external_id": "HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+      "official_name": "KJ PERFORMANCE GYM",
+      "facility_url": "https://www.kjperformancegym.com/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Shinagawa",
+        "street": "Koyama 2-12-19",
+        "postalCode": "1420062",
+        "geoCoordinates": {
+          "lat": 35.6212787,
+          "lon": 139.7102726
+        }
+      },
+      "discovery_queries": [
+        "\"KJ PERFORMANCE GYM\" official Shinagawa",
+        "\"KJ PERFORMANCE GYM\" 1420062"
+      ]
+    },
+    {
+      "external_id": "HGY_ZNrEPR3JKwl8MjuiitlbezA4t",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_ZNrEPR3JKwl8MjuiitlbezA4t",
+      "official_name": "WELL KNOT OSAKA",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Miyakojima-ku, Osaka-shi",
+        "street": "2-7-23 Katamachi",
+        "postalCode": "5340025",
+        "geoCoordinates": {
+          "lat": 34.6949506,
+          "lon": 135.5297484
+        }
+      },
+      "discovery_queries": [
+        "\"WELL KNOT OSAKA\" official Miyakojima-ku, Osaka-shi",
+        "\"WELL KNOT OSAKA\" 5340025"
+      ]
+    },
+    {
+      "external_id": "HGY_zsBreyuNEeHdShUZ5TNS4IqCd",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_zsBreyuNEeHdShUZ5TNS4IqCd",
+      "official_name": "BLUE FITNESS 24 ＋studio KACHIDOKI",
+      "facility_url": null,
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Chuo-ku",
+        "street": "1-13-1 Kachidoki",
+        "postalCode": "104-0054",
+        "geoCoordinates": {
+          "lat": 35.6607192,
+          "lon": 139.7751922
+        }
+      },
+      "discovery_queries": [
+        "\"BLUE FITNESS 24 ＋studio KACHIDOKI\" official Chuo-ku",
+        "\"BLUE FITNESS 24 ＋studio KACHIDOKI\" 104-0054"
+      ]
+    },
+    {
+      "external_id": "HGY_zT38XocZWjN6x2A45PNSfsasN",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "found": true,
+      "error": null,
+      "hyrox_entity_id": "HGY_zT38XocZWjN6x2A45PNSfsasN",
+      "official_name": "Coone Fitness",
+      "facility_url": "https://coonecamp.jp/",
+      "address": {
+        "country": "JP",
+        "state": null,
+        "city": "Omiya-ku, Saitama",
+        "street": "3-48-2 Nakacho",
+        "postalCode": "3300845",
+        "geoCoordinates": {
+          "lat": 35.9049653,
+          "lon": 139.6299679
+        }
+      },
+      "discovery_queries": [
+        "\"Coone Fitness\" official Omiya-ku, Saitama",
+        "\"Coone Fitness\" 3300845"
+      ]
+    }
+  ],
+  "website_observations": [
+    {
+      "external_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "requested_url": "https://www.field-gym.com/higashiosaka/",
+      "final_url": "https://www.field-gym.com/higashiosaka/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "東大阪のパーソナルトレーニングジム【遊ぶように鍛える®︎】 - ジムフィールド",
+      "canonical_url": "https://www.field-gym.com/higashiosaka/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "5400003",
+        "5500014",
+        "5530003",
+        "5560011",
+        "5610807",
+        "5670002",
+        "5740037",
+        "5770002",
+        "5900076"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "requested_url": "https://restorebase.jp/",
+      "final_url": "https://restorebase.jp/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "RESTORE BASE｜横浜本牧エリアの24時間ジム",
+      "canonical_url": "https://restorebase.jp/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2310806"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_38HM0vs5mKnIfKg8sHrNzl2KU",
+      "requested_url": "https://rexer.style/",
+      "final_url": null,
+      "status": null,
+      "content_type": null,
+      "title": null,
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": "TypeError: fetch failed",
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "requested_url": "https://www.club360.jp/hyrox",
+      "final_url": "https://www.club360.jp/hyrox",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "HYROX SERVICES | Club 360",
+      "canonical_url": "https://www.club360.jp/hyrox",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_4wzLJEobhMazi7FA0AThO0VCo",
+      "requested_url": "https://hyrox.nigh.biz/",
+      "final_url": null,
+      "status": null,
+      "content_type": null,
+      "title": null,
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": "TypeError: fetch failed",
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_5aNZOChK8CavnIRpCdStNa0KU",
+      "requested_url": "https://www.crossfituninterrupted.com/",
+      "final_url": "https://www.crossfituninterrupted.com/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "UFIT（ユーフィット）｜途切れない強さを、ここから。",
+      "canonical_url": "https://www.crossfituninterrupted.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_69jFpAIGuEf6xNAHdTpSEBIwR",
+      "requested_url": "https://www.instagram.com/tlsfitnesshyroxtrainingclub/",
+      "final_url": "https://www.instagram.com/tlsfitnesshyroxtrainingclub/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "TLS FITNESS HYROX TRAINING CLUB (&#064;tlsfitnesshyroxtrainingclub) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/tlsfitnesshyroxtrainingclub/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "requested_url": "https://www.samifitnesstokyo.com/",
+      "final_url": "https://www.samifitnesstokyo.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Sami TRX Tokyo &#8211; CONCEPT | サミーフィットネス | Sami Fitness",
+      "canonical_url": "https://samifitnesstokyo.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_7MJZO3Hp7vJJplWi30g6yPwIZ",
+      "requested_url": "https://g-habit.com/",
+      "final_url": "https://g-habit.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "代官山駅から徒歩3分のパーソナルトレーニングジム、 Good Habit代官山 | 無料体験、入会金半額キャンペーン",
+      "canonical_url": "https://g-habit.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": false,
+      "page_postal_codes": [
+        "1500033"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_8H50Rl3LSNsoSHxOxOIoY5UYN",
+      "requested_url": "https://www.beequick.jp/location/koshigaya/",
+      "final_url": "https://www.beequick.jp/location/koshigaya/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "越谷店 | スポーツジム＆フィットネスクラブ【ビークイック】越谷駅前すぐ！",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "3430813"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_9IKMUsTNBlBvTvkWFddMxqsEg",
+      "requested_url": "https://vita-e.jp/",
+      "final_url": "https://vita-e.jp/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "岡崎のパーソナルジムVITA「人×AIが寄りそう日本初のハイブリッド型ジム」",
+      "canonical_url": "https://vita-e.jp/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4440858"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_a672D4AVpogVam9W86vDdYGuj",
+      "requested_url": "https://www.instagram.com/hyrox_tokushima/",
+      "final_url": "https://www.instagram.com/hyrox_tokushima/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "【徳島】RLIGHT24 HYROX部 (&#064;hyrox_tokushima) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/hyrox_tokushima/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_AcmNmQZowUS3ehpJBjGOvQgRe",
+      "requested_url": "https://fantrepot-fitness.com/HYROX/",
+      "final_url": "https://fantrepot-fitness.com/HYROX/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "FANTREPOT HYROX｜札幌のHYROXトレーニングクラブ",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_AiNQvbz5TpUUyIPPCXIneECQU",
+      "requested_url": "https://leanbodystore.my.canva.site/private-gym",
+      "final_url": "https://leanbodystore.my.canva.site/private-gym",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "LEAN BODY STORE",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "hosted_landing",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/mitaka/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/mitaka/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【三鷹】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2770005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_azt9tOadi7pmSggVQmQJ6hWZ3",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/kannai/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/kannai/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【関内】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [
+        "2770005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_B3b9UhAHRpfS8gfh1UXY6UF35",
+      "requested_url": "https://g2-fitness.com/",
+      "final_url": "https://g2-fitness.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "G2FITNESSは沼津市の24時間営業フィットネスジム。無料で受けられるセミパーソナルサポート付き。",
+      "canonical_url": "https://g2-fitness.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4100807"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/shimokitazawa/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/shimokitazawa/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "下北沢｜オレンジセオリーフィットネス｜Orangetheory Fitness",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1020074"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_bflglCfjg61ogQkThSd1y80Jn",
+      "requested_url": "https://crossfithayate.com/",
+      "final_url": "https://crossfithayate.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "CrossFit Hayate | クロスフィット疾風のホームページです！",
+      "canonical_url": "https://crossfithayate.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [
+        "4540806"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_C71sb4HIOLDnsHEpGiA3caMOJ",
+      "requested_url": "https://element-gym.com/",
+      "final_url": "https://element-gym.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "パーソナルジムELEMENT｜東京で通い放題・完全マンツーマン月額制",
+      "canonical_url": "https://element-gym.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1030006",
+        "1030007",
+        "1040052",
+        "1080073",
+        "1110042",
+        "1120011",
+        "1130033",
+        "1140023",
+        "1150055",
+        "1160014",
+        "1300003",
+        "1300026",
+        "1350061",
+        "1420051",
+        "1440052",
+        "1450063",
+        "1500042",
+        "1510053",
+        "1510073",
+        "1520002",
+        "1530042",
+        "1540002",
+        "1540003",
+        "1540004",
+        "1560052",
+        "1580038",
+        "1580082",
+        "1620815",
+        "1650026",
+        "1660015",
+        "1690075",
+        "1700003",
+        "1700005",
+        "1760012",
+        "1800022",
+        "2110006",
+        "2110025",
+        "2130002",
+        "2200011",
+        "2220032",
+        "2250024",
+        "2300051",
+        "2770843",
+        "3200851",
+        "3300062",
+        "3320017",
+        "3400034",
+        "3700826",
+        "4640075",
+        "4670066",
+        "5250059",
+        "6590094",
+        "6730892"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "requested_url": "https://vamos-training.com/ja",
+      "final_url": "https://vamos-training.com/ja",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "VAMOS — HYROX Training in Ebisu, Tokyo",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1500011"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_cu0qxn1IsExMf7hzxplXEr5ox",
+      "requested_url": "https://www.motomachibayfitness.com/",
+      "final_url": "https://www.motomachibayfitness.com/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Motomachi Bay Fitness - Gym",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_diFBy7oXAn6GUnOvyW556WTVW",
+      "requested_url": "https://www.gym-field.com/sakaihigashi/hyrox/",
+      "final_url": "https://www.gym-field.com/sakaihigashi/hyrox/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "堺東でHYROX（ハイロックス）トレーニングをするなら - ジムフィールド",
+      "canonical_url": "https://www.gym-field.com/sakaihigashi/hyrox/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1900011",
+        "2210065",
+        "2210841",
+        "2510025",
+        "3590023",
+        "5260037",
+        "5400003",
+        "5500014",
+        "5530003",
+        "5560011",
+        "5610807",
+        "5670002",
+        "5740037",
+        "5770002",
+        "6620073",
+        "7000824",
+        "8910013"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_DUga56vMn8fhpPz2dd0ZYSL8A",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【名古屋（八事・池下）】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1006611"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_DWTQ6FfFIG3fDJP1helxDpfmL",
+      "requested_url": "https://f45training.com/jp/studio/hamamatsucho/",
+      "final_url": "https://f45training.com/jp/studio/hamamatsucho/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "F45 Training Hamamatsucho | Group Fitness & HIIT Classes",
+      "canonical_url": "https://f45training.com/jp/studio/hamamatsucho/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_EixPsvYrIifAztmXBj8p1XAyw",
+      "requested_url": "https://urbanheroestokyo.com/",
+      "final_url": "https://www.urbanheroestokyo.com/",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "title": "Urban Heroes Tokyo | Join Tokyo's Fitness Community Today",
+      "canonical_url": "https://www.urbanheroestokyo.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_Em6Ykdm6hSAiCWilyjc9Wdiqk",
+      "requested_url": "https://www.inspa.jp/",
+      "final_url": "https://www.inspa.jp/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "INSPA横浜｜フィットネスジム×ハイロックス365×天然温泉スパが融合した大人の総合リゾート",
+      "canonical_url": "https://www.inspa.jp/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_f8sZVaVktoc9eBl6vRaTzBDWe",
+      "requested_url": "https://hackt-upsetworkout.com/",
+      "final_url": "https://hackt-upsetworkout.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "横浜市のパーソナルジムならPersonal Gym HACKT | 楽しく続けられる環境の提供",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2320027"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/higashikurume/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/higashikurume/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【東久留米】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_GjdVGIybcOjSedJ9IQ6fDsZPv",
+      "requested_url": "https://crossfitkamuy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnXQctOxmmwdvXYNKA9wG3Pwt4KLowOgqAQDMfyZKiynuDzFFvOazvs_q9w1k_aem_iK6UYMg5TsRunNoXX9eITQ",
+      "final_url": "https://crossfitkamuy.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnXQctOxmmwdvXYNKA9wG3Pwt4KLowOgqAQDMfyZKiynuDzFFvOazvs_q9w1k_aem_iK6UYMg5TsRunNoXX9eITQ",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "CrossFit Kamuy &#8211; 少人数制セミパーソナルジム",
+      "canonical_url": "https://crossfitkamuy.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2200073"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/hachioji/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/hachioji/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【八王子オーパ】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_gxp3RxDXjGnAXoHd4NDNwGxXP",
+      "requested_url": "https://hyex.jp/",
+      "final_url": "https://hyex.jp/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Hyex 街かど高地トレーニング | 低酸素ジム",
+      "canonical_url": "https://hyex.jp/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/aobadai/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/aobadai/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【青葉台】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "requested_url": "https://www.beequick.jp/location/tateyama/",
+      "final_url": "https://www.beequick.jp/location/tateyama/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "イオンタウン館山店 | スポーツジム＆フィットネスクラブBeeQuick（ビークイック）",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2940047"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/motoyawata/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/motoyawata/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【本八幡】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1006611"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_i9WQU37U4iMwhDulqaXJLnA2v",
+      "requested_url": "http://crossfitmitaka.tokyo/",
+      "final_url": "https://crossfitmitaka.tokyo/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "東京 三鷹にあるクロスフィットジムならCrossFit Mitaka",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1810013"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_iZUzR5DRBK3M09AkhPf9nIWcF",
+      "requested_url": "https://www.instagram.com/ableize_plus?igsh=MWlqdWdmNjl0bTFheg%3D%3D&utm_source=qr",
+      "final_url": "https://www.instagram.com/ableize_plus?igsh=MWlqdWdmNjl0bTFheg%3D%3D&utm_source=qr",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "名古屋HYROX TRAINING CLUB / ableize+ (&#064;ableize_plus) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/ableize_plus/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "requested_url": "https://htc-chikusa.com/",
+      "final_url": "https://htc-chikusa.com/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "HTC CHIKUSA｜千種駅徒歩5分のジム・HYROX TRAINING CLUB（名古屋）",
+      "canonical_url": "https://htc-chikusa.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4600007"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_JvN4Z8dSYs9ca9kzgNl28kWVL",
+      "requested_url": "https://www.instagram.com/crossfit_nakamozu/",
+      "final_url": "https://www.instagram.com/crossfit_nakamozu/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "クロスフィットなかもず CrossFit Nakamozu (&#064;crossfit_nakamozu) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/crossfit_nakamozu/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_KaZs1vtKjZL5y93x84bg7nOEf",
+      "requested_url": "https://www.gym-field.com/",
+      "final_url": "https://www.gym-field.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "【遊ぶように鍛える®︎】新感覚のパーソナルトレーニング - ジムフィールド",
+      "canonical_url": "https://www.gym-field.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1900011",
+        "2210065",
+        "2210841",
+        "2510025",
+        "3590023",
+        "5260037",
+        "5400003",
+        "5500014",
+        "5530003",
+        "5560011",
+        "5610807",
+        "5670002",
+        "5740037",
+        "5770002",
+        "6620073",
+        "7000824",
+        "8910013"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_KfmsGVY1O0Uo5HUJvnNoeyQvc",
+      "requested_url": "https://personal-gymfit.com/lp/brc-light/suita/",
+      "final_url": "https://personal-gymfit.com/lp/brc-light/suita/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "GYMFIT -BRC- 吹田店 | HYROXトレーニング特化のコミュニティ型スタジオ",
+      "canonical_url": "https://personal-gymfit.com/lp/brc-light/suita/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/musashikoganei/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/musashikoganei/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【武蔵小金井】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2770005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "requested_url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "final_url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "富士今泉店 | スポーツジム＆フィットネスクラブBeeQuick（ビークイック）",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": false,
+      "page_postal_codes": [
+        "4170001"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_lpqlTA67YHaPgwogB58Qkb8tz",
+      "requested_url": "https://www.instagram.com/potrero202310/",
+      "final_url": "https://www.instagram.com/potrero202310/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "POTRERO(ポトレロ) (&#064;potrero202310) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/potrero202310/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_LUMiZByOSjT9LQQgyPQdvMSCE",
+      "requested_url": "https://www.thepicklebang.com/",
+      "final_url": "https://www.thepicklebang.com/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "市川・本八幡駅徒歩1分の屋内ピックルボールコート|THE PICKLE BANG THEORY",
+      "canonical_url": "https://www.thepicklebang.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2720021"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/azabujuban/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/azabujuban/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "麻布十番｜オレンジセオリーフィットネス｜Orangetheory Fitness",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1006611"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_minG8KdzMB6B4YLlOLzHWcOKn",
+      "requested_url": "https://crossfitmatsumoto.com/",
+      "final_url": "https://crossfitmatsumoto.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "【公式】CrossFit松本 | クロスフィット松本",
+      "canonical_url": "https://crossfitmatsumoto.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "3990036"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "溝の口｜オレンジセオリーフィットネス｜Orangetheory Fitness",
+      "canonical_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2770005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_OFeOcuxCgnvAFZl5IgUk1XUd0",
+      "requested_url": "https://hybridbeast.hacomono.jp/home",
+      "final_url": "https://hybridbeast.hacomono.jp/home",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Hybrid Beast Sapporo",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "booking",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_oY9C1ywaWlEhDuOstuuQngXDg",
+      "requested_url": "https://enza.stores.jp/reserve/hyrox",
+      "final_url": "https://enza.stores.jp/reserve/hyrox",
+      "status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "Captcha Challenge - STORES",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": "HTTP 403",
+      "site_kind": "booking",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_P4QYjZgyjnKMV2GYc2blZggsY",
+      "requested_url": "https://www.instagram.com/redcircle_crossfit?igsh=MW9zam8zeWk2NWxpZQ%3D%3D&utm_source=qr",
+      "final_url": "https://www.instagram.com/redcircle_crossfit?igsh=MW9zam8zeWk2NWxpZQ%3D%3D&utm_source=qr",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "RED CIRCLE CrossFit Nakagawa | HYROX Training Club (&#064;redcircle_crossfit) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/redcircle_crossfit/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_QK799RP2OcY1gOAl2xwpkHa4b",
+      "requested_url": "https://www.musclegate-hotelgymboutique.com/",
+      "final_url": "https://www.musclegate-hotelgymboutique.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "MUSCLE GATE HOTEL GYM BOUTIQUE powered by GOLD'S GYM",
+      "canonical_url": "https://www.musclegate-hotelgymboutique.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "5420085"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_Sb90tuf5xROH384KcSvEVpVhk",
+      "requested_url": "https://www.instagram.com/bright_enoshima?igsh=MTBlNDg2a2d2b3lubA==",
+      "final_url": "https://www.instagram.com/bright_enoshima?igsh=MTBlNDg2a2d2b3lubA==",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "Bright江ノ島|セミパーソナル (&#064;bright_enoshima) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/bright_enoshima/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "requested_url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "final_url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "春日井押沢台店 | スポーツジム＆フィットネスクラブBeeQuick（ビークイック）",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4870005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_sIzr19G0LhmZpHzUhEJpv2QLx",
+      "requested_url": "https://rexer-tokyo.style/",
+      "final_url": null,
+      "status": null,
+      "content_type": null,
+      "title": null,
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": "TypeError: fetch failed",
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_TG4052uDtmYS0I70ODdFi7704",
+      "requested_url": "https://crossfit-otsuka.com/",
+      "final_url": "https://crossfit-otsuka.com/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "CrossFit大塚 ／ vamos field 上池袋 — 初心者から始める CrossFit & HYROX スタジオ",
+      "canonical_url": "https://crossfit-otsuka.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1700004"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_THuICnaU3oVt3DAY6FgPgQspb",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/nagoya-yagoto-ikeshita/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "【名古屋（八事・池下）】オレンジセオリーフィットネス",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1006611"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_TKMAq3PiVcrsYG5AUGSG5qZEN",
+      "requested_url": "https://crossfitkofu.com/",
+      "final_url": "https://crossfitkofu.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "クロスフィット甲府 | 山梨県初のCrossFit公認ジム",
+      "canonical_url": "https://crossfitkofu.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4000053"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "requested_url": "https://tommyworkout.com/",
+      "final_url": "https://tommyworkout.com/",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "title": "目黒パーソナルジム|美姿勢×パーソナルトレーニング【TOMMY WORKOUT GYM】",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "requested_url": "https://www.freeleticsgoals.com/",
+      "final_url": "https://www.freeleticsgoals.com/en/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "Overseas-style Hybrid Gym in Minatomirai, Yokohama | HYROX, Calisthenics, Jiu-Jitsu, Pilates",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "2310011"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_vVcITNYTt6vBwAbMaLQj58wcw",
+      "requested_url": "https://apf-takatsuki.vercel.app/",
+      "final_url": "https://apf-takatsuki.vercel.app/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "高槻のクロスフィットジムならCrossFit Takatsuki | 初心者歓迎・ダイエット",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "5691121"
+      ],
+      "error": null,
+      "site_kind": "hosted_landing",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_vxpsLHHaOUkkrFxB7welZply6",
+      "requested_url": "https://www.instagram.com/transitgym_shonan?igsh=dmZ2dmp2cWd1b3Jj&utm_source=qr",
+      "final_url": "https://www.instagram.com/transitgym_shonan?igsh=dmZ2dmp2cWd1b3Jj&utm_source=qr",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "TRANSIT GYM ｜Secret Base (&#064;transitgym_shonan) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/transitgym_shonan/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_w8bQvi3oZi0Uan43p91ImN3MP",
+      "requested_url": "https://estyfitness.com/",
+      "final_url": "https://estyfitness.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "半田｜エスティフィットネス｜ジム｜高浜・碧南",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "4750021"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_wre6YfUPBNkfwFN4kIJmeR5gk",
+      "requested_url": "https://mizonoguchi-chiro.com/",
+      "final_url": "https://mizonoguchi-chiro.com/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "B-Revolution�~�a�̌����̉@",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "requested_url": "https://www.meiji-park.com/",
+      "final_url": "https://www.meiji-park.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": null,
+      "canonical_url": "https://www.meiji-park.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_XotZqvZQHBEFn2JSD3GmfJOy8",
+      "requested_url": "https://hyex.jp/studio/lp/",
+      "final_url": "https://hyex.jp/studio/lp/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "",
+      "canonical_url": "https://hyex.jp/studio/lp/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1540004",
+        "1800002",
+        "3300843"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "requested_url": "https://porttowercrossfit.com/",
+      "final_url": "https://www.porttowercrossfit.com/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "【公式】Port Tower CrossFit | 神戸のクロスフィットジム | CrossFit Kobe",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "6510065"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_XtsKlmBFCkXJcX8703QafobrI",
+      "requested_url": "https://yunamifitness.com/",
+      "final_url": "https://www.yunamifitness.com/",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "title": "YUNAMI FITNESS",
+      "canonical_url": "https://www.yunamifitness.com",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "governing_body_current"
+    },
+    {
+      "external_id": "HGY_xyAU0lT9Vs7V3PVl1H9RJ5g1r",
+      "requested_url": "https://www.instagram.com/eastcoastpark_sendai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      "final_url": "https://www.instagram.com/eastcoastpark_sendai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "title": "EastCoastPark (&#064;eastcoastpark_sendai) • Instagram photos and videos",
+      "canonical_url": "https://www.instagram.com/eastcoastpark_sendai/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": true,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "social",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_ygO9mHhu9Hbmoszq4sn4Z1Zw0",
+      "requested_url": "https://en.crossfituninterrupted.com/",
+      "final_url": null,
+      "status": null,
+      "content_type": null,
+      "title": null,
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": "TypeError: fetch failed",
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "requested_url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+      "status": 200,
+      "content_type": "text/html",
+      "title": "自由が丘｜オレンジセオリーフィットネス｜Orangetheory Fitness",
+      "canonical_url": "https://www.orangetheoryfitness.co.jp/jiyugaoka/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1520035",
+        "2770005"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "requested_url": "https://www.beequick.jp/location/iganinjanosato/",
+      "final_url": "https://www.beequick.jp/location/iganinjanosato/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "伊賀忍者の里店 | スポーツジム＆フィットネスクラブBeeQuick（ビークイック）",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": false,
+      "postal_code_match": true,
+      "address_token_match": false,
+      "page_postal_codes": [
+        "5180820"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_zCI5QN1QMpQrhFiHusfxjG91Z",
+      "requested_url": "https://www.kjperformancegym.com/",
+      "final_url": "https://www.kjperformancegym.com/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "title": "日本で唯一アメリカの専門資格を持つトレーナーが指導する - kjperformancegymtwo ページ！",
+      "canonical_url": "https://www.kjperformancegym.com/",
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": true,
+      "address_token_match": true,
+      "page_postal_codes": [
+        "1420062"
+      ],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    },
+    {
+      "external_id": "HGY_zT38XocZWjN6x2A45PNSfsasN",
+      "requested_url": "https://coonecamp.jp/",
+      "final_url": "https://coonecamp.jp/",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "title": "埼玉・大宮の少人数フィットネスジム｜初心者歓迎・HYROX対応｜Coone Fitness",
+      "canonical_url": null,
+      "fetched_at": "2026-08-29T15:42:00.000Z",
+      "official_name_match": true,
+      "postal_code_match": false,
+      "address_token_match": false,
+      "page_postal_codes": [],
+      "error": null,
+      "site_kind": "facility_site",
+      "source_url_kind": "h2_4_reviewed"
+    }
+  ]
+}

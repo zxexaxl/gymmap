@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "preview_only": true,
+  "records": [
+    {
+      "name": "A Plus CrossFit Takatsuki",
+      "slug": "a-plus-crossfit-takatsuki"
+    },
+    {
+      "name": "Anytime Fitness",
+      "slug": "anytime-fitness"
+    },
+    {
+      "name": "BEYOND",
+      "slug": "beyond"
+    },
+    {
+      "name": "CLUB 360",
+      "slug": "club-360"
+    },
+    {
+      "name": "CrossFit 松山",
+      "slug": "crossfit"
+    },
+    {
+      "name": "CrossFit Amagasaki",
+      "slug": "crossfit-amagasaki"
+    },
+    {
+      "name": "CrossFit Kamuy",
+      "slug": "crossfit-kamuy"
+    },
+    {
+      "name": "CrossFit Kofu",
+      "slug": "crossfit-kofu"
+    },
+    {
+      "name": "CrossFit Machiya",
+      "slug": "crossfit-machiya"
+    },
+    {
+      "name": "CrossFit Matsumoto",
+      "slug": "crossfit-matsumoto"
+    },
+    {
+      "name": "CrossFit Mitaka",
+      "slug": "crossfit-mitaka"
+    },
+    {
+      "name": "CrossFit Otsuka",
+      "slug": "crossfit-otsuka"
+    },
+    {
+      "name": "ELEMENT 池尻大橋店",
+      "slug": "element"
+    },
+    {
+      "name": "F45 Training",
+      "slug": "f45-training"
+    },
+    {
+      "name": "FITONE SHIBUYA",
+      "slug": "fitone-shibuya"
+    },
+    {
+      "name": "Freeletics Goals",
+      "slug": "freeletics-goals"
+    },
+    {
+      "name": "Good Habit daikanyama",
+      "slug": "good-habit-daikanyama"
+    },
+    {
+      "name": "ジムフィールド",
+      "slug": "gym-field"
+    },
+    {
+      "name": "ハイアルチ",
+      "slug": "high-alti"
+    },
+    {
+      "name": "HTC CHIKUSA– Human Performance Training Center –",
+      "slug": "htc-chikusa-human-performance-training-center"
+    },
+    {
+      "name": "HYEX",
+      "slug": "hyex"
+    },
+    {
+      "name": "株式会社INSPA",
+      "slug": "inspa"
+    },
+    {
+      "name": "KJ PERFORMANCE GYM",
+      "slug": "kj-performance-gym"
+    },
+    {
+      "name": "LUAANA CLUB 蒲田池上店",
+      "slug": "luaana-club"
+    },
+    {
+      "name": "MEIJI PARK",
+      "slug": "meiji-park"
+    },
+    {
+      "name": "Orangetheory Fitness",
+      "slug": "orangetheory-fitness"
+    },
+    {
+      "name": "Personalgym VITA",
+      "slug": "personalgym-vita"
+    },
+    {
+      "name": "Port Tower CrossFit",
+      "slug": "port-tower-crossfit"
+    },
+    {
+      "name": "RESTORE BASE",
+      "slug": "restore-base"
+    },
+    {
+      "name": "SamiFitness",
+      "slug": "samifitness"
+    },
+    {
+      "name": "THE PICKLE BANG THEORY",
+      "slug": "the-pickle-bang-theory"
+    },
+    {
+      "name": "TrueFitness 吹田",
+      "slug": "truefitness"
+    },
+    {
+      "name": "UBX",
+      "slug": "ubx"
+    },
+    {
+      "name": "UFC GYM",
+      "slug": "ufc-gym"
+    },
+    {
+      "name": "VAMOS",
+      "slug": "vamos"
+    },
+    {
+      "name": "Yoshiyuki Hirano 善之 平野",
+      "slug": "yoshiyuki-hirano"
+    }
+  ]
+}
