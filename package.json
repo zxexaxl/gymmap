@@ -20,6 +20,8 @@
     "hyrox:h2-9:resolve": "tsx scripts/hyrox/resolve-location-authority-gaps.ts",
     "hyrox:h2-10r:reconcile": "tsx scripts/hyrox/reconcile-authority-drift.ts",
     "hyrox:h2-10r:revalidate": "tsx scripts/hyrox/revalidate-reconciled-ready-set.ts",
+    "hyrox:h2-10:preflight": "tsx scripts/hyrox/export-h2-10-production-preflight.ts",
+    "hyrox:h2-10:build-candidate": "tsx scripts/hyrox/build-h2-10-import-candidate.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "start": "next start",
     "lint": "eslint .",

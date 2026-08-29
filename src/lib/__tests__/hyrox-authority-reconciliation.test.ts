@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import type { H29Override, H29ResolutionRecord } from "../hyrox-location-authority-resolution";
 
@@ -107,7 +107,7 @@ test("passes all 58 governing-body, facility-authority, and production-collision
   assert.ok(artifact.records.every((record) => record.blockers.length === 0));
 });
 
-test("H2-10R is read-only and does not generate the import graph", () => {
+test("H2-10R tooling remains read-only and does not itself generate the H2-10 import graph", () => {
   const scripts = [
     "scripts/hyrox/reconcile-authority-drift.ts",
     "scripts/hyrox/revalidate-reconciled-ready-set.ts",
@@ -116,6 +116,5 @@ test("H2-10R is read-only and does not generate the import graph", () => {
   assert.doesNotMatch(scripts, /\b(?:insert|update|delete)\s+(?:into|from|public\.)/i);
   assert.doesNotMatch(scripts, /supabase\s+(?:db push|migration repair)/i);
   assert.doesNotMatch(scripts, /location_(?:equipment|training_capabilities)|class_schedules|program_training_disciplines/);
-  assert.equal(existsSync("data/hyrox/h2-10-reviewed-new-location-import-candidate.json"), false);
-  assert.equal(existsSync("data/hyrox/h2-10-reviewed-new-location-import-candidate.rehearsal.sql"), false);
+  assert.doesNotMatch(scripts, /h2-10-reviewed-new-location-import-candidate/);
 });
