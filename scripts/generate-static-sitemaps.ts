@@ -5,6 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 
 import { programMaster } from "@/lib/program-master";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
+import { buildLocationSitemapEntries } from "@/lib/location-sitemap";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildProgramPath, getSiteUrl } from "@/lib/site";
 import { getLocationAreaNames } from "@/lib/utils";
@@ -197,16 +198,11 @@ async function main() {
   >();
 
   const latestScheduleRows = filterLatestSchedulePeriods(scheduleRows);
-  const scheduledLocationIds = new Set<string>();
   const scheduledSeoProgramIds = new Set<string>();
 
   latestScheduleRows.forEach((schedule) => {
     const location = activeLocations.get(schedule.location_id);
     const program = seoPrograms.get(schedule.program_id);
-
-    if (location) {
-      scheduledLocationIds.add(location.id);
-    }
 
     if (program) {
       scheduledSeoProgramIds.add(program.id);
@@ -237,14 +233,10 @@ async function main() {
     });
   });
 
-  const locationEntries = ((locations as GymLocationRow[] | null) ?? [])
-    .filter((location) => scheduledLocationIds.has(location.id))
-    .map((location) => ({
-      loc: `${siteUrl}/locations/${location.slug}`,
-      lastmod: location.last_verified_at || location.updated_at,
-      changefreq: "weekly" as const,
-      priority: 0.8,
-    }));
+  const locationEntries = buildLocationSitemapEntries(
+    (locations as GymLocationRow[] | null) ?? [],
+    siteUrl,
+  );
 
   const programEntries = ((programs as ProgramRow[] | null) ?? [])
     .filter((program) => scheduledSeoProgramIds.has(program.id))
