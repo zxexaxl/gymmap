@@ -13,7 +13,7 @@ import {
 import { observeEnrichmentSources } from "../hyrox-enrichment-monitor-source";
 
 const manifestPath = new URL("../../../data/hyrox/h3-5a-enrichment-monitor-authority.json", import.meta.url);
-const checkedAt = "2026-08-30T10:30:00.000Z";
+const checkedAt = "2026-08-30T12:51:32.225Z";
 
 async function loadManifest() {
   return validateEnrichmentManifest(JSON.parse(await readFile(manifestPath, "utf8")) as EnrichmentAuthorityManifest);
@@ -61,21 +61,22 @@ function run(manifest: EnrichmentAuthorityManifest, overrides: {
   });
 }
 
-test("authority manifest freezes the exact H3-5 graph and canonical hash", async () => {
+test("authority manifest freezes the exact H3-8 release graph and canonical hash", async () => {
   const manifest = await loadManifest();
-  assert.deepEqual(manifest.counts, { sources: 10, equipment: 36, capabilities: 16, claims: 52, enrichedLocations: 9 });
+  assert.deepEqual(manifest.counts, { sources: 26, uniqueExternalUrls: 15, equipment: 109, capabilities: 41, claims: 150, enrichedLocations: 25 });
   assert.equal(enrichmentManifestHash(manifest), manifest.manifestHash);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 52);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 10);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 150);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 26);
+  assert.equal(new Set(manifest.sources.map((source) => source.url)).size, 15);
 });
 
-test("initial frozen time produces 50 fresh and two due-soon competition claims", async () => {
+test("initial frozen time produces 137 fresh and thirteen due-soon competition claims", async () => {
   const result = run(await loadManifest());
-  assert.equal(result.records.length, 52);
-  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 50);
-  assert.equal(result.records.filter((record) => record.freshness.status === "DUE_SOON").length, 2);
-  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 50);
-  assert.equal(result.reviewQueue.length, 2);
+  assert.equal(result.records.length, 150);
+  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 137);
+  assert.equal(result.records.filter((record) => record.freshness.status === "DUE_SOON").length, 13);
+  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 137);
+  assert.equal(result.reviewQueue.length, 13);
   assert.ok(result.reviewQueue.every((record) => record.slug === "competition-simulation"));
   assert.ok(result.reviewQueue.every((record) => record.classifications.includes("DUE_SOON_RECONFIRMATION")));
 });
@@ -83,17 +84,18 @@ test("initial frozen time produces 50 fresh and two due-soon competition claims"
 test("freshness boundaries preserve category horizons and UTC instants", async () => {
   const manifest = await loadManifest();
   const claim = manifest.claims.find((item) => item.slug === "competition-simulation")!;
+  const stale = Date.parse(claim.staleAt);
   for (const [at, expected] of [
-    ["2026-08-30T09:20:04.000Z", "DUE_SOON"],
-    ["2026-09-15T09:20:04.000Z", "URGENT"],
-    ["2026-09-29T09:20:04.000Z", "STALE"],
+    [new Date(stale - 30 * 86_400_000 + 1_000).toISOString(), "DUE_SOON"],
+    [new Date(stale - 14 * 86_400_000 + 1_000).toISOString(), "URGENT"],
+    [claim.staleAt, "STALE"],
   ] as const) {
     const record = run(manifest, { checkedAt: at }).records.find((item) => item.claimKey === claim.claimKey)!;
     assert.equal(record.freshness.status, expected);
   }
-  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 36);
-  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 14);
-  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 30).length, 2);
+  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 109);
+  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 28);
+  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 30).length, 13);
 });
 
 test("support matcher tolerates harmless markup/reordering but rejects unrelated keywords", async () => {
@@ -157,9 +159,9 @@ test("global outage creates one run-level root cause instead of disappearance al
   const result = run(manifest, { observations });
   assert.deepEqual(result.runIssues.map((issue) => issue.code), ["MONITOR_SOURCE_OUTAGE"]);
   assert.equal(result.records.filter((record) => record.classifications.includes("SOURCE_UNAVAILABLE")).length, 0);
-  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 52);
-  assert.equal(result.sourceIssues.length, 10);
-  assert.equal(result.reviewQueue.length, 2, "freshness queue remains visible while outage noise is grouped");
+  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 150);
+  assert.equal(result.sourceIssues.length, 26);
+  assert.equal(result.reviewQueue.length, 13, "freshness queue remains visible while outage noise is grouped");
 });
 
 test("source collector fetches each unique source once and retries a transient 500", async () => {

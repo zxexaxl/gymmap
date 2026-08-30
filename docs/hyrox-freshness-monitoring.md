@@ -72,3 +72,5 @@ The frozen horizons are:
 `DUE_SOON` enters the review queue but does not fail the workflow. `URGENT`, `STALE`, material source/support drift, publication mismatch, and run-level failure require attention under the workflow policy. A healthy source observation still does not update `last_confirmed_at` or `stale_at`.
 
 Reviewed reconfirmation belongs in H3-5B. Operators should trigger it when any claim becomes `URGENT`, a source/support review signal appears, or sufficiently before the stale deadline. Future H3-6 imports must append their reviewed natural claim identities, source authority, timestamps, and compact support matchers to the manifest in the same import release; production insertion without monitoring enrollment is incomplete.
+
+H3-8 onboards 98 targeted positive claims under release coherence hash `dc97df4fd675d29e71425c7720ede609234c749da305aa5249f8dcfc3c32c255`. The operational inventory becomes 150 claims, 26 location-scoped source relations, and 15 unique external URLs. The manifest must be activated only after the matching production transaction commits; activating it first would create false publication-mismatch alerts.

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "h3_7Commit": "864b049107e6a3535fa4d0b17e47ef216f39487b",
+  "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e",
+  "monitorDeltaHash": "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a",
+  "projectedManifestHash": "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2",
+  "releaseCoherenceHash": "dc97df4fd675d29e71425c7720ede609234c749da305aa5249f8dcfc3c32c255",
+  "claims": 150,
+  "sourceRelations": 26,
+  "uniqueExternalUrls": 15
+}

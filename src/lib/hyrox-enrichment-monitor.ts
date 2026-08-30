@@ -41,14 +41,17 @@ export type EnrichmentMonitorClaim = {
 };
 
 export type EnrichmentAuthorityManifest = {
-  schemaVersion: 1;
+  schemaVersion: 1 | 2;
   authority: {
-    h3_4Commit: string;
-    h3_5Commit: string;
-    h3_4CandidateHash: string;
-    h3_4CandidateFileSha256: string;
-    h3_5ReceiptSha256: string;
-    importedAt: string;
+    h3_4Commit?: string;
+    h3_5Commit?: string;
+    h3_4CandidateHash?: string;
+    h3_4CandidateFileSha256?: string;
+    h3_5ReceiptSha256?: string;
+    importedAt?: string;
+    currentManifestHash?: string;
+    deltaHash?: string;
+    dbCandidateHash?: string;
   };
   counts: { sources: number; equipment: number; capabilities: number; claims: number; enrichedLocations: number };
   sources: EnrichmentMonitorSource[];
@@ -114,15 +117,17 @@ export type EnrichmentMonitorRun = {
   requestStats: { sources: number; retries: number; concurrency: number };
 };
 
-function canonicalize(value: unknown): unknown {
-  if (Array.isArray(value)) return value.map(canonicalize);
+function canonicalize(value: unknown, releaseAuthority = false): unknown {
+  if (Array.isArray(value)) return value.map((item) => canonicalize(item, releaseAuthority));
   if (value && typeof value === "object") return Object.fromEntries(Object.entries(value as Record<string, unknown>)
-    .filter(([key]) => key !== "manifestHash").sort(([a], [b]) => a.localeCompare(b)).map(([key, item]) => [key, canonicalize(item)]));
+    .filter(([key]) => key !== "manifestHash" && (!releaseAuthority || !["candidateHash", "deltaHash", "releaseHash", "liveVerification"].includes(key)))
+    .sort(([a], [b]) => a.localeCompare(b)).map(([key, item]) => [key, canonicalize(item, releaseAuthority)]));
   return value;
 }
 
 export function enrichmentManifestHash(value: Omit<EnrichmentAuthorityManifest, "manifestHash"> | EnrichmentAuthorityManifest) {
-  return createHash("sha256").update(JSON.stringify(canonicalize(value))).digest("hex");
+  const releaseAuthority = (value as EnrichmentAuthorityManifest).schemaVersion === 2;
+  return createHash("sha256").update(JSON.stringify(canonicalize(value, releaseAuthority))).digest("hex");
 }
 
 export function enrichmentClaimKey(kind: EnrichmentClaimKind, locationId: string, slug: string) {
@@ -130,14 +135,22 @@ export function enrichmentClaimKey(kind: EnrichmentClaimKind, locationId: string
 }
 
 export function validateEnrichmentManifest(manifest: EnrichmentAuthorityManifest): EnrichmentAuthorityManifest {
-  if (manifest.counts.sources !== 10 || manifest.sources.length !== 10 || manifest.counts.equipment !== 36 ||
-      manifest.counts.capabilities !== 16 || manifest.counts.claims !== 52 || manifest.claims.length !== 52 ||
-      manifest.counts.enrichedLocations !== 9) throw new Error("H3-5 enrichment manifest count mismatch");
-  if (manifest.authority.h3_4CandidateHash !== "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8" ||
-      manifest.authority.h3_5Commit !== "1e220e091c0e4f47af06ee8c4b3a77bf26a883db") throw new Error("H3-5 authority mismatch");
+  const h35 = manifest.schemaVersion === 1 && manifest.counts.sources === 10 && manifest.sources.length === 10 &&
+    manifest.counts.equipment === 36 && manifest.counts.capabilities === 16 && manifest.counts.claims === 52 &&
+    manifest.claims.length === 52 && manifest.counts.enrichedLocations === 9 &&
+    manifest.authority.h3_4CandidateHash === "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8" &&
+    manifest.authority.h3_5Commit === "1e220e091c0e4f47af06ee8c4b3a77bf26a883db";
+  const h38 = manifest.schemaVersion === 2 && manifest.counts.sources === 26 && manifest.sources.length === 26 &&
+    manifest.counts.equipment === 109 && manifest.counts.capabilities === 41 && manifest.counts.claims === 150 &&
+    manifest.claims.length === 150 && manifest.counts.enrichedLocations === 25 &&
+    manifest.authority.currentManifestHash === "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299" &&
+    manifest.authority.deltaHash === "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a" &&
+    manifest.authority.dbCandidateHash === "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e";
+  if (!h35 && !h38) throw new Error("HYROX enrichment manifest authority/count mismatch");
   if (enrichmentManifestHash(manifest) !== manifest.manifestHash) throw new Error("Enrichment manifest hash mismatch");
   const sourceKeys = new Set(manifest.sources.map((item) => item.sourceKey));
-  if (sourceKeys.size !== 10 || new Set(manifest.claims.map((item) => item.claimKey)).size !== 52 ||
+  if (sourceKeys.size !== manifest.counts.sources || new Set(manifest.sources.map((item) => item.url)).size !== (h38 ? 15 : 10) ||
+      new Set(manifest.claims.map((item) => item.claimKey)).size !== manifest.counts.claims ||
       manifest.claims.some((item) => !sourceKeys.has(item.sourceKey) || item.claimKey !== enrichmentClaimKey(item.kind, item.locationId, item.slug) ||
         item.supportPatternGroups.length === 0 || item.supportPatternGroups.some((group) => group.length === 0))) throw new Error("Enrichment manifest natural identity/support mismatch");
   return manifest;

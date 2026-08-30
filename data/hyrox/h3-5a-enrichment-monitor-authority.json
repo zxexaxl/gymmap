@@ -1,19 +1,17 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "authority": {
-    "h3_4Commit": "0d7dde26dbf14122f2e38d27acf2790bebbc98e3",
-    "h3_5Commit": "1e220e091c0e4f47af06ee8c4b3a77bf26a883db",
-    "h3_4CandidateHash": "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8",
-    "h3_4CandidateFileSha256": "d6943303c304926317e4d8d9ae945c8e45556b415554915f70b8349a9f3a4128",
-    "h3_5ReceiptSha256": "514c4c0a4162e51279b0b967a8a5157f9e73ee344cfccc0585ad998a34ad63bb",
-    "importedAt": "2026-08-30T10:28:42Z"
+    "currentManifestHash": "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299",
+    "deltaHash": "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a",
+    "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e"
   },
   "counts": {
-    "sources": 10,
-    "equipment": 36,
-    "capabilities": 16,
-    "claims": 52,
-    "enrichedLocations": 9
+    "sources": 26,
+    "uniqueExternalUrls": 15,
+    "equipment": 109,
+    "capabilities": 41,
+    "claims": 150,
+    "enrichedLocations": 25
   },
   "sources": [
     {
@@ -53,6 +51,24 @@
       "publisherAuthority": "facility_official"
     },
     {
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
       "sourceKey": "source:HGY_c816ru6QeTv14At3O51pjK8au:takamatsu-hyrox",
       "locationId": "5326a371-18d2-4c51-9109-e59242521f16",
       "hgyId": "HGY_c816ru6QeTv14At3O51pjK8au",
@@ -80,11 +96,101 @@
       "publisherAuthority": "facility_official"
     },
     {
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
       "sourceKey": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
       "locationId": "d75c411f-2b58-476d-aa68-f7bde9000002",
       "hgyId": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
       "url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
       "canonicalUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD:golds-shop",
+      "locationId": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "hgyId": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "url": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
       "quality": "Q2",
       "publisherAuthority": "facility_official"
     },
@@ -98,6 +204,24 @@
       "publisherAuthority": "facility_official"
     },
     {
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+      "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+      "quality": "Q1",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
       "sourceKey": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
       "locationId": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
       "hgyId": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
@@ -105,9 +229,80 @@
       "canonicalUrl": "https://www.freeleticsgoals.com/ja/hyrox/",
       "quality": "Q1",
       "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_x72wxyNcqCoMCbZxzQkr7nHAk:golds-shop",
+      "locationId": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "hgyId": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "url": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
     }
   ],
   "claims": [
+    {
+      "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:competition-simulation",
+      "kind": "capability",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "afd7bb8853589c789641899143af8b0610bce1a25a0fb270d40d447c0a09ecb7",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:discipline-coaching",
+      "kind": "capability",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "931dab974679775bbc786ace8d2ffcd4eae86ee5221d4b437ac191b809b76873",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
     {
       "claimKey": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
       "kind": "capability",
@@ -153,6 +348,112 @@
       ]
     },
     {
+      "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:competition-simulation",
+      "kind": "capability",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "361d2b8cada7c2b1f29513c670e499c2534323ebd7aa53a5e4979e6889f2da7f",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:discipline-coaching",
+      "kind": "capability",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "3c07eea49acc56eb963222c3023d4d843e0475ba94b01bb85329ebd2feca55f1",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:competition-simulation",
+      "kind": "capability",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "9c856f38d3baba37c5db20f463e1c667a0a746e20762b2501e523f6a183d2d1c",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:discipline-coaching",
+      "kind": "capability",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "1527d191f057db57639802b237697a028de4d065603c675fb646236199b8913e",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
       "claimKey": "capability:4a0b9292-1283-49ac-a3b2-c7bd38133a31:discipline-coaching",
       "kind": "capability",
       "locationId": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
@@ -172,6 +473,112 @@
         [
           "トレーニング",
           "training"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:competition-simulation",
+      "kind": "capability",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "276517ed9f31422fd4969cca9ee45878e3be77969dcb37f35f208d2dce2777f0",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:discipline-coaching",
+      "kind": "capability",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "0a16f0aae946d1add6a237226e5a4215da311fcf6445e5538819e31d2b3da9f6",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:competition-simulation",
+      "kind": "capability",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "b4a91d3eca00ebc7dd314c4400a6fbe9203b915988b0c24828896f6d8b43626f",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:discipline-coaching",
+      "kind": "capability",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "650b2e106a407613509b53db7686213aeb6f69346e4ad228b6586f615f9dc97b",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
         ]
       ]
     },
@@ -217,6 +624,165 @@
       ]
     },
     {
+      "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:competition-simulation",
+      "kind": "capability",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "ad7372e278e6cb3ad701b34de51c005b2f99db1d267e0c9cb6805f231e0fb958",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:discipline-coaching",
+      "kind": "capability",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "ce7a2f313c973a7df1c8816d44d0526cbbdfc0ac3342d75ee7b8eb2cfae7d496",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:competition-simulation",
+      "kind": "capability",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "2872c7119cea9828de933559155ea9a73045da0a0ed329723e741be6d80059e2",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:discipline-coaching",
+      "kind": "capability",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "651f1211632127ce9d673953359cbc70f5dcf5c8b7ae37b875b17abfda84ea95",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:competition-simulation",
+      "kind": "capability",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "cf43fb885cb9efe941f1d7c0d1a06c68ea5aaa8f55712640038e795158fb444d",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:discipline-coaching",
+      "kind": "capability",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "be59310b3e8cffe0e93f39eb3b54b6fad76b5a9aa7b2f519aacfbe5d662e5476",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
       "claimKey": "capability:99abe458-52ae-44a4-8f1a-3f747ff9bfb8:discipline-coaching",
       "kind": "capability",
       "locationId": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
@@ -254,6 +820,72 @@
         ],
         [
           "施設の設備を自由に使い"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:acd6dae7-fefc-497d-9ae2-dd308f2247db:discipline-coaching",
+      "kind": "capability",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "1e73928086cf7d86c734255709abaa2df81cd4a718cc53cb6e2bce3576dfbc3e",
+      "supportPatternGroups": [
+        [
+          "HYROXクラス"
+        ],
+        [
+          "週間トレーニングスケジュール"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:acd6dae7-fefc-497d-9ae2-dd308f2247db:open-training",
+      "kind": "capability",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "open-training",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "fa50376ebdf79cd4ec3ecf5a251e97fb8d7bb751b14ab2213e9e972aecb70fb7",
+      "supportPatternGroups": [
+        [
+          "自主トレーニング"
+        ],
+        [
+          "マシン利用が可能"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:acd6dae7-fefc-497d-9ae2-dd308f2247db:sled-push-pull-space",
+      "kind": "capability",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "sled-push-pull-space",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "3ea3532b50cd7e893cee35e137ebcdb8bd7f25a096fe2961802f4d27887a7917",
+      "supportPatternGroups": [
+        [
+          "SLED PUSH"
+        ],
+        [
+          "フラットトレーニングレーン"
         ]
       ]
     },
@@ -347,6 +979,59 @@
       ]
     },
     {
+      "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:competition-simulation",
+      "kind": "capability",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "67b654cbe36c683de8a7002469bb191b1aa85195865becbecb02430761903a7c",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:discipline-coaching",
+      "kind": "capability",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "daf4cb6a359f3aaaa55d67669a9f60074d5057a5ccc58f18e04f97e5a1412e8e",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
       "claimKey": "capability:d75c411f-2b58-476d-aa68-f7bde9000002:open-training",
       "kind": "capability",
       "locationId": "d75c411f-2b58-476d-aa68-f7bde9000002",
@@ -384,6 +1069,59 @@
         ],
         [
           "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:competition-simulation",
+      "kind": "capability",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "58310e66cc8a1c03f5d72f3e826e08754a8053e9772ae771afe096b7d73a000d",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:discipline-coaching",
+      "kind": "capability",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "4ed720054995617bfc9c8fe07d1be758f4dfbad64bdf9f06fb47de3c7150b603",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
         ]
       ]
     },
@@ -444,6 +1182,291 @@
         [
           "フラットトレーニングレーン",
           "flat training lane"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:competition-simulation",
+      "kind": "capability",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "competition-simulation",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-09-29T11:49:02.406Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "a7608cc33ae477a14bd50aa2ba48baafa936ab239d3a59db5b49f113c14521de",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:discipline-coaching",
+      "kind": "capability",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "discipline-coaching",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2026-11-28T11:49:02.406Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "ff0379dbdd11b9929e1531d5138ebdda367a6a99c57a3aff1334235a6cdd9913",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "認定コーチが指導"
+        ],
+        [
+          "各店舗"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0b573034-d71b-4176-a3b3-82e9355d123e:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "db21d92e2d8d09d805694b812db2ac68dd97e307ce064c6f70912f70b2ac0ad6",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0b573034-d71b-4176-a3b3-82e9355d123e:row-erg",
+      "kind": "equipment",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f2c6f174cd895854708238f6e297e04577d2c9880a2ae82cee7ab25759ff5db3",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0b573034-d71b-4176-a3b3-82e9355d123e:sandbag",
+      "kind": "equipment",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "26811d9c4a5cb14ab8628d10694d7d9526fef0ff614acb0ee0d3725c5f365604",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0b573034-d71b-4176-a3b3-82e9355d123e:treadmill",
+      "kind": "equipment",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "02371a660a2a7750af7536213d66641b5b802168df306b6f714dd3e7566f9d17",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0b573034-d71b-4176-a3b3-82e9355d123e:weighted-sled",
+      "kind": "equipment",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a567b76a46e3fa39770bc92de2ec7dac63fcdd7183f3609c067e171ec74ce580",
+      "supportPatternGroups": [
+        [
+          "麻布十番"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:1e1dc6eb-ec16-4850-978a-ac3c513f55ab:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "locationName": "原宿東京",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1b3ddbbeb9b60fda171956f7e77c2fdb132823f576e4b50abe7370d7b05eaf89",
+      "supportPatternGroups": [
+        [
+          "原宿東京店"
+        ],
+        [
+          "CENTR ケトルベル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:1e1dc6eb-ec16-4850-978a-ac3c513f55ab:row-erg",
+      "kind": "equipment",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "locationName": "原宿東京",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1c4baf2a9750c45e0cc6cc9482b9df1ebb495d500bf824c583bf6ebf81e76d2e",
+      "supportPatternGroups": [
+        [
+          "原宿東京店"
+        ],
+        [
+          "CENTR ローワー"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:1e1dc6eb-ec16-4850-978a-ac3c513f55ab:ski-erg",
+      "kind": "equipment",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "locationName": "原宿東京",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "slug": "ski-erg",
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3bebb172ae688b4ae29102654bb461be393574a5ed731b3cf85b929bcd929d35",
+      "supportPatternGroups": [
+        [
+          "原宿東京店"
+        ],
+        [
+          "CENTR スキーエルゴ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:1e1dc6eb-ec16-4850-978a-ac3c513f55ab:treadmill",
+      "kind": "equipment",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "locationName": "原宿東京",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d51f012d080e7fb1dd60fb8e275446c47e1815bae101dcd6a62b8bbff3503f75",
+      "supportPatternGroups": [
+        [
+          "トレッドミル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:1e1dc6eb-ec16-4850-978a-ac3c513f55ab:wall-ball-target",
+      "kind": "equipment",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "locationName": "原宿東京",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "slug": "wall-ball-target",
+      "sourceKey": "source:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3c29939d62159e745740b910b0a740d8d83497faa6c83655d5d6d4c6e86d7309",
+      "supportPatternGroups": [
+        [
+          "原宿東京店"
+        ],
+        [
+          "ウォールボールボード"
         ]
       ]
     },
@@ -570,6 +1593,256 @@
       ]
     },
     {
+      "claimKey": "equipment:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "90bac091ea10258f64f1888a60bc862ab3153a9c819e8f3f0ee0745286653059",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:row-erg",
+      "kind": "equipment",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "0e7235e0be46e4684daa170fe6bd3471df0aaa67ad174e30966b401c65a786a0",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:sandbag",
+      "kind": "equipment",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a6930406f9eac611aa1bdc57ef681526f0f4aaf24a1d645bc1aedcefca0813c5",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:treadmill",
+      "kind": "equipment",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "fe58dc0e8c55236e3f9e8a964abdc537e05ada3e601a4e29edb856f8e787e8b6",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:weighted-sled",
+      "kind": "equipment",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f44c6e8fdea8beefbccc2ee5cec3640afffab5e2189e97942b7fc54c470a954b",
+      "supportPatternGroups": [
+        [
+          "町田"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "85be3915a77a0e229d40a71d879753d70b328d9ef9216e7404762ef74f020891",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:row-erg",
+      "kind": "equipment",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f30e486085482f21f20e3fa8cf49c99d94adcac35b16b0ad1142b8c5735164c2",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:sandbag",
+      "kind": "equipment",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c5af05c94c862ac36d2bea9ad3268a9bcc3c8d377ca8bb0c764acc7a2803a199",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:treadmill",
+      "kind": "equipment",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a9d06f357f7d55101a25876c921867f8b7de467e803673053329a90055dada50",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:weighted-sled",
+      "kind": "equipment",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f3f10612c9be45e8b115eab15e22c7822a5865c55a5d629b744adf81eff80401",
+      "supportPatternGroups": [
+        [
+          "下北沢"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
       "claimKey": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:farmers-carry-implements",
       "kind": "equipment",
       "locationId": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
@@ -672,6 +1945,256 @@
       "supportPatternGroups": [
         [
           "Sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4bb064be-730c-4f17-9849-12078fcea96b:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "2ebaddfbe51f8b093f2e4352b8b26f8a3ae714e395dad1ec8f3a04b7eb266667",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4bb064be-730c-4f17-9849-12078fcea96b:row-erg",
+      "kind": "equipment",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "50d94b9c550135fcb81149326b40aea95c8a8751a818acd89bc91dd8e6fa6bf3",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4bb064be-730c-4f17-9849-12078fcea96b:sandbag",
+      "kind": "equipment",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "ffc7518beceefd7d83d602a64e06364ecbf984bb1636334bf762022ea88fdf64",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4bb064be-730c-4f17-9849-12078fcea96b:treadmill",
+      "kind": "equipment",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "33cc27a0d4239501f3d50dbf5bd52dec1eb936849134e3915551cdd9cab862cb",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4bb064be-730c-4f17-9849-12078fcea96b:weighted-sled",
+      "kind": "equipment",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "dce884a77ade33abd4b1765860fc1343c7b2d52a29cc48f2ebb8f1af2dd82113",
+      "supportPatternGroups": [
+        [
+          "本八幡"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f110e0e6f6a7924f53a52d3a541a49af47380b6069efa3fea7d4fcf2b995ca9c",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:row-erg",
+      "kind": "equipment",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5c6cd8d21e601fc2ee337567b2e7b0ee4c983fb95e4d8811d2af8101b3859280",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:sandbag",
+      "kind": "equipment",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c026de6affc8655498ef40b194655767bbf33ff949baa2496068604db683985b",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:treadmill",
+      "kind": "equipment",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c2e06d9dd4b999bdc2d16204b8d512dac79ab150ee89bd3037d1251ec9c70781",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:weighted-sled",
+      "kind": "equipment",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "193fd68f88d54e1b3a7662256c767a08dd98ada056d02acde979cd3a9e68989c",
+      "supportPatternGroups": [
+        [
+          "浦和"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
           "スレッド"
         ]
       ]
@@ -800,6 +2323,642 @@
       "supportPatternGroups": [
         [
           "Sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:58746bc6-200d-49c5-a0ff-9e4601dbea86:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5d1e98d1892427d9f08afc8fe9fcf564191da0bda439bb09efc17756dcaee6d2",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:58746bc6-200d-49c5-a0ff-9e4601dbea86:row-erg",
+      "kind": "equipment",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "9076229792a46d561102e4beafaad03f696173cf2db2757632b0715656a0ff7b",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:58746bc6-200d-49c5-a0ff-9e4601dbea86:sandbag",
+      "kind": "equipment",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "4c8081659d5a8d8cbe892d9f68c635dcb4dcece5bdef608256136bef494b4331",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:58746bc6-200d-49c5-a0ff-9e4601dbea86:treadmill",
+      "kind": "equipment",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "6f4635a6d1d3593482398edadff8c08d34d2fddc75a120d6d6f21e5d7289086b",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:58746bc6-200d-49c5-a0ff-9e4601dbea86:weighted-sled",
+      "kind": "equipment",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "2722097c80f0e89fb3b0d9fe8b11487c54114e4e9feca2a80d1ef59660ccc565",
+      "supportPatternGroups": [
+        [
+          "青葉台"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "aa454c8c935152d9f660eb246d92de5c151ae606b88e6a4bacb5d802b9f4f3fe",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:row-erg",
+      "kind": "equipment",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d10e770058a064ca721049df330c768fd2b58205ef2d5bc69b3e0d0c01e439df",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:sandbag",
+      "kind": "equipment",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7b3b8f21f351f925ca77afec73374877e767b17840806b88e1741f350186a014",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:treadmill",
+      "kind": "equipment",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "446bacc6be664c53711f7506633cca67b12f7bf4fd643550d44447724bff9901",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:weighted-sled",
+      "kind": "equipment",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "66f1d5a6d6862e6beb5af59cbbe01e413635847762582cf21aeeccbf50ddbced",
+      "supportPatternGroups": [
+        [
+          "東久留米"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:7d7216d0-692e-45dd-ad3c-6c4980fdc50a:treadmill",
+      "kind": "equipment",
+      "locationId": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "locationSlug": "golds-gym-9999",
+      "locationName": "原宿ANNEX",
+      "hgyId": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5d37323d4d197dedb8725d4d82f8344cc7d991705140f69e3fb039aafe2ed7b9",
+      "supportPatternGroups": [
+        [
+          "原宿ANNEX店"
+        ],
+        [
+          "3種類のトレッドミル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:867ece36-497f-4cbc-aae8-03e850e6514e:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "locationName": "ゴールドジム 前橋インター",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f84d582aed2e7a01606bef89c9c51e43841be7e3f76e0f350addc5c37a49293b",
+      "supportPatternGroups": [
+        [
+          "前橋インター店"
+        ],
+        [
+          "ファーマーズキャリー"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:867ece36-497f-4cbc-aae8-03e850e6514e:sandbag",
+      "kind": "equipment",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "locationName": "ゴールドジム 前橋インター",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5d02b7cbbb2eac8fe2fa73966c6d4cdf7b9d7e22a13329f4e31369517dea2e00",
+      "supportPatternGroups": [
+        [
+          "前橋インター店"
+        ],
+        [
+          "サンドバッグランジ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:867ece36-497f-4cbc-aae8-03e850e6514e:treadmill",
+      "kind": "equipment",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "locationName": "ゴールドジム 前橋インター",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "afaa96a74b58f4b7d7d42b3bb647894af7042ba0b334cdc5a81fb97b93037d95",
+      "supportPatternGroups": [
+        [
+          "トレッドミル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:867ece36-497f-4cbc-aae8-03e850e6514e:wall-ball-target",
+      "kind": "equipment",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "locationName": "ゴールドジム 前橋インター",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "slug": "wall-ball-target",
+      "sourceKey": "source:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "fc7bc5629a5e7f94b3005dc3d9456a13573c7e1390cc3fd554c37cf77f7f5355",
+      "supportPatternGroups": [
+        [
+          "前橋インター店"
+        ],
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:87ee5b5a-431c-4eae-9c70-7a7bed0287de:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "6cdf83f17bd75ab17a551a26bcfab72cd59f61b12063a74bd4a7967f343cfc3f",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:87ee5b5a-431c-4eae-9c70-7a7bed0287de:row-erg",
+      "kind": "equipment",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7ae936d83d9f69f975d79d41915f9303464456b5a741b5b6657eed2dc09d65a4",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:87ee5b5a-431c-4eae-9c70-7a7bed0287de:sandbag",
+      "kind": "equipment",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d78ab222be94595fdc33b0854d11389cc2c5f0fa24daf815f14e8d864741e5ef",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:87ee5b5a-431c-4eae-9c70-7a7bed0287de:treadmill",
+      "kind": "equipment",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "48186b2c9e9ec65e190b5989a092f3aa5c34473d796528833aa5ac7b85753c8f",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:87ee5b5a-431c-4eae-9c70-7a7bed0287de:weighted-sled",
+      "kind": "equipment",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f56971190f69197cefc30f00785ce3f434fada22fe96e4ab1baa8a950b763513",
+      "supportPatternGroups": [
+        [
+          "自由が丘"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "8acca13c168eec84253501e8f19cf33cae843ee69a5fd348091295859dc92a1b",
+      "supportPatternGroups": [
+        [
+          "FARMERS CARRY"
+        ],
+        [
+          "ケトルベル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:functional-training-lane",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "functional-training-lane",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "97a69f861d503470677a5ae07b33bdaebbb50f0127323ecdef7c631c7410eb7e",
+      "supportPatternGroups": [
+        [
+          "BURPEE BROAD JUMPS"
+        ],
+        [
+          "フラットトレーニングレーン"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:row-erg",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "de37c0d74a559b5654edf351ac608419b330cb6bebdb99af559bf0d9af09aeac",
+      "supportPatternGroups": [
+        [
+          "使用設備"
+        ],
+        [
+          "HIIT ROWER"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:sandbag",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1a47d3d575f55b9e543317683fa334b48ca03ee18df63bf77ba3540b750c3fbc",
+      "supportPatternGroups": [
+        [
+          "SANDBAG LUNGES"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:ski-erg",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "ski-erg",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c3d87944edd6cb30a97bb5d41a9de1574e68e4427319baa90d8fd5e6f3825032",
+      "supportPatternGroups": [
+        [
+          "使用設備"
+        ],
+        [
+          "Concept2 SkiErg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:wall-ball-target",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "wall-ball-target",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "b93ff5d237b42879eee83abf6df196a18ef8884611f53b0c6ce9a7cacd46dd0a",
+      "supportPatternGroups": [
+        [
+          "WALL BALLS"
+        ],
+        [
+          "ターゲット"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:acd6dae7-fefc-497d-9ae2-dd308f2247db:weighted-sled",
+      "kind": "equipment",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "locationName": "UFC Gym 荻窪",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "719a2cc0810acbe0d21074f00aa72ab98a746b5424faa0c652e78415e422b918",
+      "supportPatternGroups": [
+        [
+          "SLED PUSH"
+        ],
+        [
           "スレッド"
         ]
       ]
@@ -945,6 +3104,131 @@
         ],
         [
           "Sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:d5e17f12-a158-4988-aa00-e6626225f8c0:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c821b9fc9fca1ffa954837a78d02ec263d172f3b0f3565a66723c5e956f156c6",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:d5e17f12-a158-4988-aa00-e6626225f8c0:row-erg",
+      "kind": "equipment",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "29fe8166245254c1f8bb9bba5e7037886ec2f52c4a4865aeb02b4f65a2ba2f21",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:d5e17f12-a158-4988-aa00-e6626225f8c0:sandbag",
+      "kind": "equipment",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "44ca3a6cf0c64245cc0f7a334ec07b6636eabd0422f111aa880192bbf20df717",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:d5e17f12-a158-4988-aa00-e6626225f8c0:treadmill",
+      "kind": "equipment",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a02cfe23b73831f4971acaf46ef57c6a972a7cd6152b1f968eaaaaaa9124894d",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:d5e17f12-a158-4988-aa00-e6626225f8c0:weighted-sled",
+      "kind": "equipment",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1c11b1890bfe629b390f601630143c26d5ad4a2e0517b1c595c81da5ebf59b4d",
+      "supportPatternGroups": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
           "スレッド"
         ]
       ]
@@ -1098,6 +3382,153 @@
       ]
     },
     {
+      "claimKey": "equipment:e77b1201-a8d8-428c-910f-f48edbca71ba:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a779ed7ddcebfceb671f294eb164cf4013382f9632e6d2b7a132ed8fc49cfdbc",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:e77b1201-a8d8-428c-910f-f48edbca71ba:row-erg",
+      "kind": "equipment",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "01b5c6a5f1fa12a45174ecb273a6319de66aaee637178bb03cd5eeceda249502",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:e77b1201-a8d8-428c-910f-f48edbca71ba:sandbag",
+      "kind": "equipment",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d87283e6a835bd6097a71b2427d5ecee326e993012d3a51ea29a60be83d95cfe",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:e77b1201-a8d8-428c-910f-f48edbca71ba:treadmill",
+      "kind": "equipment",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7e9dba9171769cca1c290d20cf9483b571721395ab9ab9c7c337edffa88bd62f",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:e77b1201-a8d8-428c-910f-f48edbca71ba:weighted-sled",
+      "kind": "equipment",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "21e3d8ec3fbab80c114601e5663fe18ba38158d5e3198f9b9813c2fd4ed15014",
+      "supportPatternGroups": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:e84c2ea2-bc63-4788-b050-590cfefebe42:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "locationSlug": "golds-gym-12160",
+      "locationName": "浦安千葉",
+      "hgyId": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_x72wxyNcqCoMCbZxzQkr7nHAk:golds-shop",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "09fccbc1ba3d4ede9d72da9c236c889d0d28362c5513db5fe9f8e32c8a660edb",
+      "supportPatternGroups": [
+        [
+          "浦安店"
+        ],
+        [
+          "ケトルベル"
+        ]
+      ]
+    },
+    {
       "claimKey": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:farmers-carry-implements",
       "kind": "equipment",
       "locationId": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
@@ -1244,7 +3675,132 @@
           "スレッド"
         ]
       ]
+    },
+    {
+      "claimKey": "equipment:f6b82f46-09dc-4b5e-abe6-df477665d6fb:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d89a7061dac32cdf111f68a33fd1c29e2d52d3f38d034b872ad8760c195402d3",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:f6b82f46-09dc-4b5e-abe6-df477665d6fb:row-erg",
+      "kind": "equipment",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "row-erg",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7a65510d08094110b1c35f3e8dbffd4893e82b7b494741317c363fc7c0c95aa4",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "ローイングマシン"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:f6b82f46-09dc-4b5e-abe6-df477665d6fb:sandbag",
+      "kind": "equipment",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "sandbag",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "e1fc9ee581ceae321b8734eddd5931fe163f60a403628a9b7681497b1b5cd8f7",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:f6b82f46-09dc-4b5e-abe6-df477665d6fb:treadmill",
+      "kind": "equipment",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "treadmill",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f5c6b7934f744a0737e65f3b96676d3d7b11c5ac45a09c2befd40aec717f4b73",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "トレッドミル"
+        ],
+        [
+          "クラスで行うトレーニング内容"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:f6b82f46-09dc-4b5e-abe6-df477665d6fb:weighted-sled",
+      "kind": "equipment",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "slug": "weighted-sled",
+      "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "lastConfirmedAt": "2026-08-30T11:49:02.406Z",
+      "staleAt": "2027-02-26T11:49:02.406Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "545e9a2b47f8f1e912b9b8935727f0d82e0d155270e8b3d88575f8992a26eea4",
+      "supportPatternGroups": [
+        [
+          "三鷹"
+        ],
+        [
+          "公式器具を完備"
+        ],
+        [
+          "スレッド"
+        ]
+      ]
     }
   ],
-  "manifestHash": "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299"
+  "manifestHash": "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2"
 }
