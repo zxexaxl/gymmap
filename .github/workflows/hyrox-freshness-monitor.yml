@@ -1,0 +1,46 @@
+name: HYROX freshness monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * 2"
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: monitor
+        continue-on-error: true
+        run: npm run hyrox:monitor -- --ci --output-dir=.artifacts/hyrox-monitoring
+      - name: Add run summary
+        if: always()
+        run: |
+          if [ -f .artifacts/hyrox-monitoring/hyrox-freshness-monitor-latest.md ]; then
+            cat .artifacts/hyrox-monitoring/hyrox-freshness-monitor-latest.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "HYROX monitor did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload monitor report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyrox-freshness-monitor-${{ github.run_id }}
+          path: .artifacts/hyrox-monitoring/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Enforce attention policy
+        if: steps.monitor.outcome == 'failure'
+        run: exit 1
