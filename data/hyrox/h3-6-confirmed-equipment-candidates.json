@@ -1,0 +1,2195 @@
+{
+  "schemaVersion": 1,
+  "cohortHash": "1cb18ad83aba8a0c71898780995856c2ba8bd49b61eb00b6874184637e1d9c0f",
+  "productionWrite": false,
+  "candidates": [
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e8e0ba5337f135f8dd8ab1e30cc65662a3a07ce0d68ad203487d1c74c00273f8"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "261b583af825e255b1a70a4439dc5d796720ff08040d7448c6d6e4e119ff0c92"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "104846260aa43f1dfb13f61929e4b3e0eec26fe722d52dc2180bdf6b22a6e8f8"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "34d02dd28b9295beb82ca153ce175baaca5b226d625af56bbbbf1ea410d0cebc"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f075ddabf509849f09739fce24b2146669528ebf47eda8a063adc32318f2a6f0"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "c85daafc61ed69acc61de637b3c4c767702e01edc09a159aaff370583ae5ef16"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "39d1c5081050904b9c9f7d45abeacd8cd4593edafac51803e84f52dbf8946006"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "c4ab8d617c1ab6131c13c5d99a6342d688ffa6afebf694c82f73d5e901c8cd4f"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b7f9dd25f25b43075652b372900d604cce4a9c5f6ec2ed474f30c300664274b3"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "c9d808fc383b08bd50b6ee1ed0609d22037f17021dce163adb1866228781f762"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "80dc00ffe02dd586be8682d04aacfe26eb356d3a69ff2f61c4adeb48780c82a9"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "0297add9ec26aa5918144c8632a8fad5ad9bbb58cd12656816a5120706f4ad23"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "2ff8b2f1cbddac321f452bfee51eac5b02b8800530176a828fa68c4f60a85223"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "142dd1b08b3e6d7e2d389e02341b1ba92e1d1f52200a2a020e24136240c5cb91"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "36d656f0b4e4db34e641fac2d1dbf4cbd86232cda1043c19f692e77923ee5a4c"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f7424d1a7c2384b42bdbd423ac333e61dfae9b3afbd6e8611253d9b60d9e4595"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b64d0d9ca46002e47ed9e4853341ea02bb2f57fff25c50ee06b8910da0a9003b"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "766ecf633703154d0d3a2b1d12cbf32ea1387d625e92af16b2214b37d660f3c7"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b85b0f41e9991de0099706dadce0c457905706a55abd344450c0961b44df8f60"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b6bd777bef7246e57fac7824047df7220d7b74c9306775b13794d2e514111892"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "603d6b462f709ca8462976d0c459c5b37eae7fdaf7d2a0c4d9f672df5bb780d4"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "29038d9ecadb6925416e700acbb8aeb2615d0fd34a22fa646010c9af495856db"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "29eddda39889197b5e784b71b4d34a5b23b8ef3d8f97de825d6ae0ed2bfac88c"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "cd813716e534e3144462fece2619e76955c086d1ca5c053ba9ce973347dbbf4b"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "d059d9b1cbc3bbb83c9663d7857c46e32c76fca6a0715da56531045742e7a784"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "665524aee74d224b1122d7716d22068a395496ca040625a65d5881da04ed3edd"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "ae4cbf2f68d1c65841b986fea92f7fd7e2dcb958017008f2df962a886f3d7c4c"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "4700ce626bbebdb2bf5a45ee18bff6af5134202d58ffa2724dbe5a889f2991c9"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "29baecbfd0c85fde1a28902123a2af13fd52e8f005f36c7de24ea7ea0840f447"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e96620fcb5b81dfd3f943bf57130e0ca25d2c7b0eefb1a55b961cc066e8b7afe"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "969b1490ab2aeaf16998fbbf146079238ab644c8aba181e1b05ffb45426e3cc7"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "1f0f05c4849ec30b6a6a8eaf674e92c23e3cb43425899cf3dc23ecc22228144e"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f232a248cc5aab0be22260da34286a67796b48debb1324ac294e42fe141a1902"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "018f4e52690f6da0e16db0f38e0f0aa324f5336856253f48f0d9329ea7bced14"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "fe08cd86c1d59fb16c7d57b691876bb28560ce06d4c9ea10101aad5da374903f"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "locationSlug": "golds-gym-9999",
+      "hgyId": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "locationName": "原宿ANNEX",
+      "brandName": "Gold's Gym",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_IyVQTdTdvlkUGVmcaAvVV5BHD:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+        "title": "原宿ANNEX | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "原宿ANNEX店では3種類のトレッドミル",
+        "structuredFact": "Branch-specific equipment statement.",
+        "supportFingerprint": [
+          "原宿ANNEX店",
+          "3種類のトレッドミル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "18b9ad0b7a390731a17d68c0bfcc0b6e2161de15bae44fa689cde34cacf411ee"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "d2ba2fe5ea9077c4efbcb10152480d70458660b92108740aea56a6291703e00e"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a5f020f823f3e1b9ba6c021d736937e339d20870ad2f54fef008a5b9583eb07c"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "61939bfea391b56e2af29f6757038c04100cd69b9a67337a471ebd58ad214838"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "58d9fc880d5b0520382759abe581a36744ecf62e0586a1b0be685e768b63e512"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "2a761604e9b69e5687a11d41c3185687fae66f8330dcb1c8fd151ce8091623eb"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "cd02787d1cf598a58be6b6066fbf245a7c424fcd72bf3a6f3c550920520116d7"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f2195c2cff67a0d4a88d3e9d5e3668acb9f5e55fc9113ab8620bf8d182d01530"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "36398f8c067b7c27d8c5852d7d25ca7e9eb6147843838226e641ad6e1ec66f98"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "3404d6a9cf51c98d97fdf083f69592d6b73e1e5da1187873972ba1a74e3ab19f"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "0108e8b69e6a0a55817916700bff814011581f827d8177ef295fc45838b59d42"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "locationName": "ゴールドジム 前橋インター",
+      "brandName": "Gold's Gym",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "title": "前橋インター | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "CENTR器具:ファーマーズキャリーを実施可能",
+        "structuredFact": "Branch-specific HYROX equipment statement.",
+        "supportFingerprint": [
+          "前橋インター店",
+          "ファーマーズキャリー"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a57c00fa1cb0e1aa773185e092295ee3adf5b6a31923494f5e0633f4c33fb55e"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "locationName": "ゴールドジム 前橋インター",
+      "brandName": "Gold's Gym",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "title": "前橋インター | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "CENTR器具:サンドバッグランジを実施可能",
+        "structuredFact": "Branch-specific HYROX equipment statement.",
+        "supportFingerprint": [
+          "前橋インター店",
+          "サンドバッグランジ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "fc3d154a619dfbdf0bf19373dd179e7e6b359d440bafa6537088e2440828fd2d"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "locationName": "ゴールドジム 前橋インター",
+      "brandName": "Gold's Gym",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "title": "前橋インター | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ゴールドジムではトレッドミルを多数設置",
+        "structuredFact": "The page's facility section explicitly describes the available treadmill category.",
+        "supportFingerprint": [
+          "トレッドミル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "fb2d5afd91d578afb3804a352019497b909e5e4123d6d578c707430230fd93fb"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "locationSlug": "hyrox-training-club-3700001",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "locationName": "ゴールドジム 前橋インター",
+      "brandName": "Gold's Gym",
+      "targetSlug": "wall-ball-target",
+      "source": {
+        "sourceKey": "h3-6:HGY_mAUikrooxzoDevlGFVY7yXt3l:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+        "title": "前橋インター | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "CENTR器具:ウォールボールを実施可能",
+        "structuredFact": "Branch-specific HYROX equipment statement.",
+        "supportFingerprint": [
+          "前橋インター店",
+          "ウォールボール"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "d589e7384f0ddf897668f0f1a72d0814893e44200a76f5e204ee7c003df557fb"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e97987bbbec671ead4ff540ab747471204327fe354a6633680b9268efff51e07"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "2c1e31985ba03f9d5a58363b4db987a9c0807cc5e634667e572c0fba849e7ffd"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "526943cb884825419905c02939441ebff2f7f8f7ba3645629c7cb2fadf277e7b"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "d0a6a3f96009973a32cca270d6782952c771fa542cc521d66bce424fb5ba8028"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f85fc53a4f1b507d3c9a83cbe6262edc1247c04685f3e3cfb004b0107f1dbd78"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 ケトルベル",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "FARMERS CARRY",
+          "ケトルベル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b76c2c4c7c3770dbf1f79870418e7af9b99380bdb0b167415476273829f644bd"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "functional-training-lane",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 フラットトレーニングレーン",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "BURPEE BROAD JUMPS",
+          "フラットトレーニングレーン"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "3aaa3c3ea6fd449eb63a367ad347d3f74fac3b9d296946291f37d19077b758d9"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 StairMaster HIIT ROWER",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "使用設備",
+          "HIIT ROWER"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "64990ac1436c268b76e32c44c4b79e7b24dd3f81acce22183d6f16125fde8ebe"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 サンドバッグ",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "SANDBAG LUNGES",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a34aa745b16838a35f9f7135c2c088a0287a3b0aca1b4d0dd0cdb8e0b663c98f"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "ski-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 Concept2 SkiErg",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "使用設備",
+          "Concept2 SkiErg"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a7c10739944168174bdade7ab5f567816f0d125130c39a0093b8ef70ede13aa3"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "wall-ball-target",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 ウォールボールとターゲット",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "WALL BALLS",
+          "ターゲット"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "8a006dc2f77fae4d9dd15814b4ac5ce78c3c1640b89fdd0442d1b9b8266379a2"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "使用設備 スレッドとウエイトプレート",
+        "structuredFact": "The facility page directly enumerates the equipment.",
+        "supportFingerprint": [
+          "SLED PUSH",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "c19aa9e92f36753d41eee6d029354574f243ef5e2bcb19d9328bfe733bae24eb"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "locationName": "原宿東京",
+      "brandName": "Gold's Gym",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "title": "原宿東京 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "新たにCENTR ケトルベルを導入",
+        "structuredFact": "Kettlebells are explicit farmer's-carry implements under the reviewed taxonomy contract.",
+        "supportFingerprint": [
+          "原宿東京店",
+          "CENTR ケトルベル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "422a8cef6231c1fedc00c49a9b730d3369c4e76d2fc7ff4cfb9c7fa5484d5ceb"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "locationName": "原宿東京",
+      "brandName": "Gold's Gym",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "title": "原宿東京 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "新たにCENTR ローワーを導入",
+        "structuredFact": "Branch-specific new equipment statement.",
+        "supportFingerprint": [
+          "原宿東京店",
+          "CENTR ローワー"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "06c9dd99ed2d08a85d5396d5e23775e3e85a0d08716d01ca8fcc17d6e2de1f18"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "locationName": "原宿東京",
+      "brandName": "Gold's Gym",
+      "targetSlug": "ski-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "title": "原宿東京 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "新たにCENTR スキーエルゴを導入",
+        "structuredFact": "Branch-specific new equipment statement.",
+        "supportFingerprint": [
+          "原宿東京店",
+          "CENTR スキーエルゴ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a5fea7b80d51f7f92633f9c2245e32a26cf954a3ac6049c58f41affaf6dc258d"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "locationName": "原宿東京",
+      "brandName": "Gold's Gym",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "title": "原宿東京 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "カーディオエリアにトレッドミル",
+        "structuredFact": "Branch-specific facility equipment statement.",
+        "supportFingerprint": [
+          "トレッドミル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "0a66e9210e33eead0ced89e3c51ccb02d996afd6c7a2515be00abccd107112b4"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "locationSlug": "golds-gym-13150",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "locationName": "原宿東京",
+      "brandName": "Gold's Gym",
+      "targetSlug": "wall-ball-target",
+      "source": {
+        "sourceKey": "h3-6:HGY_QPyi483gAfTjVXv2QoNn5d55m:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+        "title": "原宿東京 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "新たにCENTR ウォールボールボードを導入",
+        "structuredFact": "The target board is explicitly named.",
+        "supportFingerprint": [
+          "原宿東京店",
+          "ウォールボールボード"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "45d99a205b87df9522198a223db2c05a5b9dcd4df47b164a111e475b828583f7"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "locationSlug": "golds-gym-12160",
+      "hgyId": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "locationName": "浦安千葉",
+      "brandName": "Gold's Gym",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_x72wxyNcqCoMCbZxzQkr7nHAk:golds-shop",
+        "url": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+        "canonicalUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+        "title": "浦安千葉 | ゴールドジム 公式サイト ( GOLD&#039;S GYM OFFICIAL SITE )",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "浦安店にケトルベルを設置",
+        "structuredFact": "Kettlebells are explicit farmer's-carry implements under the reviewed taxonomy contract.",
+        "supportFingerprint": [
+          "浦安店",
+          "ケトルベル"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "0ed0b357b16476550699a67a1d1052e3fbdb213a06e0306208d19cfe9f4f3735"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "farmers-carry-implements",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ファーマーズキャリーを使ったトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ファーマーズキャリー",
+          "トレーニング"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "d0c16aaaab4f5911c2550a8b303672d28e25876373f02481778d7bac6e6ee503"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "row-erg",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "ローイングマシンでの持久力&パワートレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "ローイングマシン",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e9f6f6e976210c676800d6af2a47ad77d4a0eb9a4b7d9603871035cc91f2463c"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "sandbag",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてサンドバッグを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "サンドバッグ"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "13cd3ce339a5a3345bace52de248965ad3e043022fb99ff1dac9a751829e42fa"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "treadmill",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "トレッドミルによる持久力&スピードトレーニング",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "トレッドミル",
+          "クラスで行うトレーニング内容"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f019714a2ee9cbd1e93093413871c5ca1b4ddcef5cb155454f602b23e8b02944"
+      },
+      "proposedFreshnessDays": 180
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "weighted-sled",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "公式器具としてスレッドを完備",
+        "structuredFact": "The brand page explicitly scopes its HYROX equipment/class content to this listed branch.",
+        "supportFingerprint": [
+          "公式器具を完備",
+          "スレッド"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e0acba13e15f412f0deb6f372188379fcd9ca34ea4b5673296a2bab9f87e8c15"
+      },
+      "proposedFreshnessDays": 180
+    }
+  ]
+}

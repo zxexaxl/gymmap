@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "cohortHash": "1cb18ad83aba8a0c71898780995856c2ba8bd49b61eb00b6874184637e1d9c0f",
+  "productionWrite": false,
+  "currentProduction": {
+    "trainingSources": 92,
+    "equipment": 36,
+    "capabilities": 16,
+    "evidence": 216,
+    "hyroxLocations": 82
+  },
+  "additions": {
+    "trainingSources": 16,
+    "equipment": 73,
+    "capabilities": 25,
+    "evidence": 98,
+    "monitorManifestClaims": 98
+  },
+  "projectedPublication": {
+    "equipment": 109,
+    "capabilities": 41,
+    "equipmentPositiveFacilities": 22,
+    "capabilityPositiveFacilities": 21,
+    "hyroxLocations": 82,
+    "officialLocations": 82,
+    "negativeClaims": 0
+  },
+  "freshness": {
+    "equipment180Days": 73,
+    "capability90Days": 14,
+    "simulation30Days": 11,
+    "earliestProposedStaleAt": "2026-09-29T11:49:02.406Z"
+  },
+  "sources": [
+    {
+      "naturalKey": "0b573034-d71b-4176-a3b3-82e9355d123e:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab:https://www.goldsgym.jp/shop/harajuku-tokyo/",
+      "locationId": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "url": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "4bb064be-730c-4f17-9849-12078fcea96b:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "58746bc6-200d-49c5-a0ff-9e4601dbea86:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a:https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+      "locationId": "7d7216d0-692e-45dd-ad3c-6c4980fdc50a",
+      "hgyId": "HGY_IyVQTdTdvlkUGVmcaAvVV5BHD",
+      "url": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "867ece36-497f-4cbc-aae8-03e850e6514e:https://www.goldsgym.jp/shop/maebashi-inter/",
+      "locationId": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "url": "https://www.goldsgym.jp/shop/maebashi-inter/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/maebashi-inter/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "87ee5b5a-431c-4eae-9c70-7a7bed0287de:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "acd6dae7-fefc-497d-9ae2-dd308f2247db:https://ogikubo.ufcgym.co.jp/hyrox/",
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+      "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+      "quality": "Q1",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "naturalKey": "d5e17f12-a158-4988-aa00-e6626225f8c0:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "e77b1201-a8d8-428c-910f-f48edbca71ba:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "e84c2ea2-bc63-4788-b050-590cfefebe42:https://www.goldsgym.jp/shop/urayasu-chiba/",
+      "locationId": "e84c2ea2-bc63-4788-b050-590cfefebe42",
+      "hgyId": "HGY_x72wxyNcqCoMCbZxzQkr7nHAk",
+      "url": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    },
+    {
+      "naturalKey": "f6b82f46-09dc-4b5e-abe6-df477665d6fb:https://www.orangetheoryfitness.co.jp/hyrox/",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "brand_official"
+    }
+  ]
+}

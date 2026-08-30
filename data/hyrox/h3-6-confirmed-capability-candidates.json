@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 1,
+  "cohortHash": "1cb18ad83aba8a0c71898780995856c2ba8bd49b61eb00b6874184637e1d9c0f",
+  "productionWrite": false,
+  "candidates": [
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a0d814b67e61d12756a62180d25a13b023ddd805399f746ec4a019997c43c958"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "1bf33d762947646eb91df5dc73e2f664025da0b2677bd3cb75a247993742878b"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "765106c4b043b27acb912efc90ea590054ac89baa73c781aa49f674257ec5e3b"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f277a57e3e4c3fbc86de0adb89b62be76e46d2049b4645cd5dc60cb3fdd60fe2"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "9c5b7f328eb656e045f4fdfdf7be385155467bc83f38a7196c24ec3ac6da88e1"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "48dc789e6031434ad8de11af21a1a65a3d23149fb2c74ad5ab64cb7ae441d5d2"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "f16ec4b70b7e96c4cda893cd8a6b9acf38fdda68034b29fa4ea12390e30f8c75"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "68b30300a7956e0b8281e333925b4716c01417d267b42bc4b76ddd2b17da299c"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "dbadba739b5d57b272f3b8d4fe63799b10593b7d3b09ef1214a0b02b49145875"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "a8889216f6a44fa1e5eac5ebf7a807c2ef6f1276cc15ef56c7de3e85c947fdbe"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "052e022c84cc57763a09dab22a11eda0e58b3f6b418644a44c274614dc970a28"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "89accef40548aab043e175feaa00ee16b69d0b894bc3494047cc06a622d3451b"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "3891a4ba5e95fc8a40ed231d0db3384b53d3ce51b1d3a92a4899c9b20368242f"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "b60b17d6615ddaafdb870d624ecec38fbdb136e1fc6bc9870f6b0c21d81a5e4e"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "747aa9fec0e192fd1d7c6eab189c99a9259b7cb3d56d463866dae4d2f558e383"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "137b48a98d027226b4876fa35fd67e4725d9d8ed08e2197b30bbd966b6367a7b"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "c707ce558dacc9904d4b61a260639cbd9631f4c8a55fe534441e30badb5c436a"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "556703920945e0e41b269825e3571750dc5c4218865b4d358f45b9fde2fef8d2"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "fc4105f51a62c0cad16af3c5e8a406db56bccee5fcecec30e0d58e4d41a0a4fd"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "4e435af72238d030fff29acd8eb3113e24e856bc7f043cadc8d0d873cfed66ab"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "週間スケジュールにHYROXクラス",
+        "structuredFact": "An ongoing coach-led HYROX class schedule is explicit.",
+        "supportFingerprint": [
+          "HYROXクラス",
+          "週間トレーニングスケジュール"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "e22b6bb152999b7e40c7996213e627f6b0a9d3490d12242141fb8439d2fcedaa"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "open-training",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "その他の営業時間は自主トレーニング・マシン利用が可能",
+        "structuredFact": "Independent use is explicit.",
+        "supportFingerprint": [
+          "自主トレーニング",
+          "マシン利用が可能"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "537fac5aae5ff0b9f353ed1f2551d548cb7d5f8b20aadd4c7bb3b48617c786b5"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "locationSlug": "ufc-gym-1670051",
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "locationName": "UFC Gym 荻窪",
+      "brandName": "UFC GYM",
+      "targetSlug": "sled-push-pull-space",
+      "source": {
+        "sourceKey": "h3-6:HGY_NGStYUdZn1ur6ZXx2gNf1MPCo:ufc-hyrox",
+        "url": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "canonicalUrl": "https://ogikubo.ufcgym.co.jp/hyrox/",
+        "title": "HYROX TRAINING | UFC Gym 荻窪",
+        "quality": "Q1",
+        "facilitySpecific": true,
+        "publisherAuthority": "facility_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "スレッド設備とフラットトレーニングレーンを完備",
+        "structuredFact": "The reviewed UFC facility contract directly enumerates both sled equipment and its functional lane.",
+        "supportFingerprint": [
+          "SLED PUSH",
+          "フラットトレーニングレーン"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "2ac7a2b0eb216bf8b8c97623e24f7d92eaf7852c28528358ccf4ad28b1b28811"
+      },
+      "proposedFreshnessDays": 90
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "competition-simulation",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "全15店舗にて本番さながらのトレーニングクラスを開催",
+        "structuredFact": "The page states an ongoing class across all listed stores, not a dated one-off event.",
+        "supportFingerprint": [
+          "全15店舗",
+          "本番さながら",
+          "クラスを開催"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "6d75d1475087c7325dd0e9f587f941ca4912693f847b44c3e78c54f6a66bca52"
+      },
+      "proposedFreshnessDays": 30
+    },
+    {
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "targetSlug": "discipline-coaching",
+      "source": {
+        "sourceKey": "h3-6:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "title": "HYROX(ハイロックス) とは 東京、千葉、神奈川、埼玉、愛知の公式認定トレーニングジム|オレンジセオリーフィットネス",
+        "quality": "Q2",
+        "facilitySpecific": true,
+        "publisherAuthority": "brand_official",
+        "observedAt": "2026-08-30T11:49:02.406Z"
+      },
+      "evidence": {
+        "excerpt": "認定コーチが一人ひとりのレベルに合わせて指導",
+        "structuredFact": "The listed branch is covered by an ongoing coach-led HYROX class contract.",
+        "supportFingerprint": [
+          "認定コーチが指導",
+          "各店舗"
+        ],
+        "observedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-08-30T11:50:27Z",
+        "evidenceHash": "acfa020279e00f448159c5d5ee49b9e26db3aa5852f1838e77943c686de09b93"
+      },
+      "proposedFreshnessDays": 90
+    }
+  ]
+}

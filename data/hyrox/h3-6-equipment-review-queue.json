@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "cohortHash": "1cb18ad83aba8a0c71898780995856c2ba8bd49b61eb00b6874184637e1d9c0f",
+  "productionWrite": false,
+  "records": [
+    {
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationName": "オレンジセオリーフィットネス三鷹",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationName": "オレンジセオリーフィットネス下北沢",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationName": "千葉ニュータウン",
+      "brandName": "Gold's Gym",
+      "kind": "capability",
+      "slug": "discipline-coaching",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/",
+      "excerpt": "HYROX Circuit Trainingも実施中",
+      "reason": "Coaching remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationName": "オレンジセオリーフィットネス東久留米",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationName": "オレンジセオリーフィットネス 八王子オーパ",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationName": "オレンジセオリーフィットネス青葉台",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationName": "オレンジセオリーフィットネス 町田",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationName": "オレンジセオリーフィットネス本八幡",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationName": "オレンジセオリーフィットネス武蔵小金井",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationName": "オレンジセオリーフィットネス 浦和",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationName": "オレンジセオリーフィットネス麻布十番",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    },
+    {
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationName": "オレンジセオリーフィットネス自由が丘",
+      "brandName": "Orangetheory Fitness",
+      "kind": "equipment",
+      "slug": "wall-ball-target",
+      "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "excerpt": "ウォールボールを使ったトレーニング",
+      "reason": "Target component remains ambiguous.",
+      "reviewedAt": "2026-08-30T11:50:27Z"
+    }
+  ]
+}
