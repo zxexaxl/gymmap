@@ -13,19 +13,36 @@ export function Header() {
           </span>
           <span className="brand-wording">
             <strong>GymMap</strong>
-            <small>スタジオレッスン検索</small>
           </span>
         </Link>
-        <nav className="header-nav">
-          <Link href="/training/hyrox">HYROX</Link>
-          <Link href="/#search-section">条件検索</Link>
-          <Link href="/#popular-programs">ブランド</Link>
-          <Link href="/#map-section">地図</Link>
-          <Link className="header-favorite-link" href="/favorites">
-            <span aria-hidden="true">☆</span>
-            <span className="header-favorite-label">お気に入り</span>
-          </Link>
-        </nav>
+        <div className="header-navigation">
+          <nav className="header-nav header-nav--lesson-context" aria-label="GymMapのドメインナビゲーション">
+            <Link className="header-domain-link is-active" href="/" aria-current="page">
+              <span className="header-lesson-label header-lesson-label--desktop">レッスンを探す</span>
+              <span className="header-lesson-label header-lesson-label--mobile">レッスン</span>
+            </Link>
+            <Link className="header-domain-link" href="/training/hyrox">HYROX</Link>
+          </nav>
+          <nav className="header-nav header-nav--hyrox-context" aria-label="GymMapのドメインナビゲーション">
+            <Link className="header-domain-link" href="/">
+              <span className="header-lesson-label header-lesson-label--desktop">レッスンを探す</span>
+              <span className="header-lesson-label header-lesson-label--mobile">レッスン</span>
+            </Link>
+            <Link className="header-domain-link is-active" href="/training/hyrox" aria-current="page">HYROX</Link>
+          </nav>
+          <details className="header-lesson-menu">
+            <summary>メニュー</summary>
+            <nav aria-label="レッスン内のナビゲーション">
+              <Link href="/#search-section">条件検索</Link>
+              <Link href="/#popular-programs">ブランド</Link>
+              <Link href="/#map-section">地図</Link>
+              <Link className="header-favorite-link" href="/favorites">
+                <span aria-hidden="true">☆</span>
+                <span>お気に入り</span>
+              </Link>
+            </nav>
+          </details>
+        </div>
       </div>
     </header>
   );

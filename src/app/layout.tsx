@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { Header } from "@/components/layout/header";
+import { AppShell } from "@/components/layout/app-shell";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
@@ -39,8 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ja">
       <body>
-        <Header />
-        <main className="container page-shell">{children}</main>
+        <AppShell>{children}</AppShell>
 
         {clarityProjectId ? (
           <Script
