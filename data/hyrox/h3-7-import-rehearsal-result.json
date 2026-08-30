@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "executedAt": "2026-08-30T12:45:00.000Z",
+  "environment": {
+    "kind": "isolated-local-postgresql",
+    "databaseGuard": "^gymmap_h3_7_rehearsal",
+    "postgresVersion": "17.11",
+    "productionWrite": false
+  },
+  "authority": {
+    "h3_6Commit": "160b5593093e89273c1142954c42fafbfff8196f",
+    "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e",
+    "monitorDeltaHash": "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a",
+    "releaseHash": "dc97df4fd675d29e71425c7720ede609234c749da305aa5249f8dcfc3c32c255"
+  },
+  "baseline": {
+    "trainingSources": 92,
+    "equipment": 36,
+    "capabilities": 16,
+    "evidence": 216,
+    "publishedEquipment": 36,
+    "publishedCapabilities": 16,
+    "hyroxLocations": 82
+  },
+  "inserted": {
+    "trainingSources": 16,
+    "equipment": 73,
+    "capabilities": 25,
+    "evidence": 98
+  },
+  "projected": {
+    "trainingSources": 108,
+    "equipment": 109,
+    "capabilities": 41,
+    "evidence": 314,
+    "publishedEquipment": 109,
+    "equipmentPositiveFacilities": 22,
+    "publishedCapabilities": 41,
+    "capabilityPositiveFacilities": 21,
+    "anyEnrichedFacilities": 25,
+    "openTrainingPositiveFacilities": 5,
+    "competitionSimulationPositiveFacilities": 13,
+    "hyroxLocations": 82,
+    "officialLocations": 82,
+    "searchLocations": 82,
+    "negativeClaims": 0
+  },
+  "checks": {
+    "atomicTransaction": "PASS",
+    "publication": "PASS",
+    "searchProjection": "PASS",
+    "secondPassIdempotency": "PASS",
+    "semanticConflictsFailClosed": "PASS",
+    "rollback": "PASS"
+  },
+  "postRollback": {
+    "trainingSources": 92,
+    "equipment": 36,
+    "capabilities": 16,
+    "evidence": 216,
+    "publishedEquipment": 36,
+    "publishedCapabilities": 16
+  }
+}

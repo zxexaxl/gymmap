@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-08-30T12:27:20.837Z",
+  "readOnly": true,
+  "access": "public_anon_only",
+  "authority": {
+    "originMain": "8a54e393842dd0d467381add27b0c1f9010d9bf7",
+    "h3_5Commit": "1e220e091c0e4f47af06ee8c4b3a77bf26a883db",
+    "h3_5ReceiptSha256": "514c4c0a4162e51279b0b967a8a5157f9e73ee344cfccc0585ad998a34ad63bb"
+  },
+  "counts": {
+    "publishedHyrox": 82,
+    "officialHyrox": 82,
+    "searchHyrox": 82,
+    "trainingSources": 92,
+    "locationEquipment": 36,
+    "locationTrainingCapabilities": 16,
+    "trainingEvidence": 216,
+    "monitoredClaims": 52,
+    "programMappings": 0,
+    "hyroxClasses": 0
+  },
+  "taxonomy": {
+    "equipment": [
+      "farmers-carry-implements",
+      "functional-training-lane",
+      "row-erg",
+      "running-track",
+      "sandbag",
+      "ski-erg",
+      "treadmill",
+      "wall-ball-target",
+      "weighted-sled"
+    ],
+    "capabilities": [
+      "competition-simulation",
+      "discipline-coaching",
+      "open-training",
+      "outdoor-running-access",
+      "sled-push-pull-space"
+    ]
+  },
+  "candidateTargets": {
+    "locations": 16,
+    "hgyIdentities": 16,
+    "currentOfficialMatches": 16,
+    "existingPublishedClaimRelations": 0
+  },
+  "collisions": {
+    "equipmentRelations": 0,
+    "capabilityRelations": 0,
+    "sourceNaturalRelations": 0,
+    "evidenceHashes": 0
+  },
+  "privateRawCountAuthority": "H3-5 receipt plus current public projection; private tables were not accessed"
+}
