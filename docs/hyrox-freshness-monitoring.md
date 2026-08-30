@@ -48,3 +48,27 @@ Reviewed representation differences are stored as exact, per-HGY entries in `dat
 Configure repository Actions variables named `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` before the first scheduled or manual run. Do not add a service-role key. The schedule runs Tuesdays at 02:17 UTC (11:17 JST); `workflow_dispatch` remains available for an operator-triggered run.
 
 Because the fail-closed publication views stop returning a claim after it becomes stale, operators must act on `DUE_SOON` and `URGENT` before the deadline. The 30-day workflow artifacts provide operational history, but are not a durable monitoring database.
+
+## Equipment and capability enrichment
+
+The same weekly workflow also runs the claim-level enrichment monitor:
+
+```sh
+npm run hyrox:monitor:enrichment
+```
+
+Its outputs are written to `.artifacts/hyrox-enrichment-monitoring/` and use the same full-report, Markdown-summary, and review-queue pattern. The monitor reads only public publication views and the committed reviewed authority manifest at `data/hyrox/h3-5a-enrichment-monitor-authority.json`; it never needs a service-role key.
+
+The manifest remembers the exact H3-5 reviewed graph—36 equipment claims, 16 capability claims, ten first-party sources, and nine locations. This historical authority is intentional: a stale claim can disappear from a fail-closed public view, but the monitor must still classify it as `STALE_RECONFIRMATION_REQUIRED` rather than forget it. The public views are a current-publication cross-check, not the sole inventory.
+
+Each unique source is fetched once and reused across all supported claims. Source availability, redirect/canonical changes, support continuity, publication presence, and freshness are separate dimensions. Missing support, a 404, or staleness is a review signal and never becomes a negative equipment or capability fact.
+
+The frozen horizons are:
+
+- physical equipment: 180 days
+- open training, discipline coaching, and sled space: 90 days
+- competition simulation: 30 days
+
+`DUE_SOON` enters the review queue but does not fail the workflow. `URGENT`, `STALE`, material source/support drift, publication mismatch, and run-level failure require attention under the workflow policy. A healthy source observation still does not update `last_confirmed_at` or `stale_at`.
+
+Reviewed reconfirmation belongs in H3-5B. Operators should trigger it when any claim becomes `URGENT`, a source/support review signal appears, or sufficiently before the stale deadline. Future H3-6 imports must append their reviewed natural claim identities, source authority, timestamps, and compact support matchers to the manifest in the same import release; production insertion without monitoring enrollment is incomplete.
