@@ -16,16 +16,24 @@ export function Header() {
             <small>スタジオレッスン検索</small>
           </span>
         </Link>
-        <nav className="header-nav">
-          <Link href="/training/hyrox">HYROX</Link>
-          <Link href="/#search-section">条件検索</Link>
-          <Link href="/#popular-programs">ブランド</Link>
-          <Link href="/#map-section">地図</Link>
-          <Link className="header-favorite-link" href="/favorites">
-            <span aria-hidden="true">☆</span>
-            <span className="header-favorite-label">お気に入り</span>
-          </Link>
-        </nav>
+        <div className="header-navigation">
+          <nav className="header-nav" aria-label="GymMapの主要ナビゲーション">
+            <Link href="/">Lesson</Link>
+            <Link className="header-domain-link" href="/training/hyrox">HYROX</Link>
+          </nav>
+          <details className="header-lesson-menu">
+            <summary>Lesson メニュー</summary>
+            <nav aria-label="Lessonのナビゲーション">
+              <Link href="/#search-section">条件検索</Link>
+              <Link href="/#popular-programs">ブランド</Link>
+              <Link href="/#map-section">Lesson 地図</Link>
+              <Link className="header-favorite-link" href="/favorites">
+                <span aria-hidden="true">☆</span>
+                <span>Lesson お気に入り</span>
+              </Link>
+            </nav>
+          </details>
+        </div>
       </div>
     </header>
   );
