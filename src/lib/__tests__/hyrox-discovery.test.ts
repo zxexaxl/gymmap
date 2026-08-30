@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
-  HYROX_UNKNOWN_DATA_NOTICE,
+  HYROX_EQUIPMENT_LABELS,
+  HYROX_POSITIVE_EVIDENCE_DISCLOSURE,
   filterHyroxLocations,
   getHyroxPrefectureOptions,
   loadCompleteHyroxDiscoveryData,
@@ -10,7 +11,11 @@ import {
   type HyroxSearchRow,
 } from "@/lib/hyrox-discovery";
 
-function buildSearchRow(index: number, totalCount: number): HyroxSearchRow {
+function buildSearchRow(
+  index: number,
+  totalCount: number,
+  overrides: Partial<HyroxSearchRow> = {},
+): HyroxSearchRow {
   return {
     address: `東京都テスト区${index}`,
     brand_id: `brand-${index}`,
@@ -29,6 +34,7 @@ function buildSearchRow(index: number, totalCount: number): HyroxSearchRow {
     open_training_available: false,
     prefecture: index % 2 === 0 ? "東京都" : "京都府",
     total_count: totalCount,
+    ...overrides,
   };
 }
 
@@ -133,7 +139,55 @@ test("prefecture options and filtering use the same location dataset", async () 
   assert.equal(filterHyroxLocations(result.locations, "").length, 3);
 });
 
-test("unknown publication fields are not described as negative facts", () => {
-  assert.doesNotMatch(HYROX_UNKNOWN_DATA_NOTICE, /設備なし|自主練不可|クラスなし/);
-  assert.match(HYROX_UNKNOWN_DATA_NOTICE, /未確認/);
+test("maps only reviewed equipment taxonomy into a deterministic public DTO", async () => {
+  const row = buildSearchRow(0, 1, {
+    equipment_slugs: ["treadmill", "row-erg", "row-erg", "ski-erg"],
+    capability_slugs: ["discipline-coaching"],
+    open_training_available: true,
+    class_available: true,
+  });
+  const result = await loadCompleteHyroxDiscoveryData({
+    async searchPage() {
+      return [row];
+    },
+    async loadOfficialUrls() {
+      return [];
+    },
+  });
+
+  assert.deepEqual(result.locations[0].confirmedEquipment, ["ski-erg", "row-erg", "treadmill"]);
+  assert.equal("capabilitySlugs" in result.locations[0], false);
+  assert.equal("openTrainingAvailable" in result.locations[0], false);
+  assert.equal("classAvailable" in result.locations[0], false);
+  assert.deepEqual(Object.values(HYROX_EQUIPMENT_LABELS), [
+    "SkiErg",
+    "RowErg",
+    "ウェイトスレッド",
+    "ウォールボールターゲット",
+    "ファーマーズキャリー用器具",
+    "サンドバッグ",
+    "ファンクショナルトレーニングレーン",
+    "トレッドミル",
+    "ランニングトラック",
+  ]);
+});
+
+test("fails closed when publication contains an unmapped equipment slug", async () => {
+  await assert.rejects(
+    loadCompleteHyroxDiscoveryData({
+      async searchPage() {
+        return [buildSearchRow(0, 1, { equipment_slugs: ["future-internal-slug"] })];
+      },
+      async loadOfficialUrls() {
+        return [];
+      },
+    }),
+    /unmapped taxonomy/,
+  );
+});
+
+test("positive-evidence disclosure preserves unknown rather than negative semantics", () => {
+  assert.match(HYROX_POSITIVE_EVIDENCE_DISCLOSURE, /公式情報で確認できた内容のみ/);
+  assert.match(HYROX_POSITIVE_EVIDENCE_DISCLOSURE, /ないことを示すものではありません/);
+  assert.doesNotMatch(HYROX_POSITIVE_EVIDENCE_DISCLOSURE, /設備なし|自主練不可|クラスなし|現在確認中/);
 });

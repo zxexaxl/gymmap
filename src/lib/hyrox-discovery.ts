@@ -3,8 +3,34 @@ import type { Database } from "@/lib/database.types";
 export const HYROX_DISCIPLINE_SLUG = "hyrox";
 export const HYROX_PAGE_SIZE = 100;
 export const HYROX_URL_BATCH_SIZE = 100;
-export const HYROX_UNKNOWN_DATA_NOTICE =
-  "掲載がない設備・自主練・クラスについて、未確認であることを「なし」や「利用不可」とは判定していません。";
+export const HYROX_POSITIVE_EVIDENCE_DISCLOSURE =
+  "設備・トレーニング情報は、施設やブランドの公式情報で確認できた内容のみ掲載しています。表示がない施設や項目に、その設備・対応がないことを示すものではありません。利用条件は施設公式情報をご確認ください。";
+
+export const HYROX_EQUIPMENT_ORDER = [
+  "ski-erg",
+  "row-erg",
+  "weighted-sled",
+  "wall-ball-target",
+  "farmers-carry-implements",
+  "sandbag",
+  "functional-training-lane",
+  "treadmill",
+  "running-track",
+] as const;
+
+export type HyroxEquipmentSlug = (typeof HYROX_EQUIPMENT_ORDER)[number];
+
+export const HYROX_EQUIPMENT_LABELS: Readonly<Record<HyroxEquipmentSlug, string>> = {
+  "ski-erg": "SkiErg",
+  "row-erg": "RowErg",
+  "weighted-sled": "ウェイトスレッド",
+  "wall-ball-target": "ウォールボールターゲット",
+  "farmers-carry-implements": "ファーマーズキャリー用器具",
+  sandbag: "サンドバッグ",
+  "functional-training-lane": "ファンクショナルトレーニングレーン",
+  treadmill: "トレッドミル",
+  "running-track": "ランニングトラック",
+};
 
 export type HyroxSearchRow =
   Database["public"]["Functions"]["search_training_locations"]["Returns"][number];
@@ -28,6 +54,7 @@ export type HyroxDiscoveryLocation = {
   official: true;
   officialUrl: string | null;
   lastConfirmedAt: string;
+  confirmedEquipment: HyroxEquipmentSlug[];
 };
 
 export type HyroxDiscoveryData = {
@@ -135,6 +162,26 @@ function splitIntoBatches<T>(items: T[], batchSize: number) {
   return batches;
 }
 
+const knownEquipmentSlugs = new Set<string>(HYROX_EQUIPMENT_ORDER);
+
+export function normalizeHyroxEquipment(
+  equipmentSlugs: readonly string[],
+  locationId: string,
+): HyroxEquipmentSlug[] {
+  const unknownSlugs = Array.from(new Set(equipmentSlugs)).filter(
+    (slug) => !knownEquipmentSlugs.has(slug),
+  );
+
+  if (unknownSlugs.length > 0) {
+    throw new HyroxDiscoveryDataError(
+      `HYROX equipment publication contains unmapped taxonomy for ${locationId}.`,
+    );
+  }
+
+  const publishedSlugs = new Set(equipmentSlugs);
+  return HYROX_EQUIPMENT_ORDER.filter((slug) => publishedSlugs.has(slug));
+}
+
 export async function loadCompleteHyroxDiscoveryData(
   gateway: HyroxDiscoveryGateway,
 ): Promise<HyroxDiscoveryData> {
@@ -213,6 +260,7 @@ export async function loadCompleteHyroxDiscoveryData(
       official: true,
       officialUrl: officialUrls.get(row.location_id) ?? null,
       lastConfirmedAt: row.last_confirmed_at,
+      confirmedEquipment: normalizeHyroxEquipment(row.equipment_slugs, row.location_id),
     }))
     .sort(
       (left, right) =>
