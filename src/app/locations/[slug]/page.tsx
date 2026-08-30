@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { LocationScheduleTable } from "@/components/location/location-schedule-table";
 import { JsonLd } from "@/components/seo/json-ld";
+import { CardSurface, FreshnessIndicator } from "@/components/ui";
 import { getLocationBySlug, getLocationSlugs } from "@/lib/data";
 import { buildCanonicalPath, buildProgramPath } from "@/lib/site";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
-import { formatDate, getLatestScheduleUpdatedAt, getLocationAddress } from "@/lib/utils";
+import {
+  buildSearchQuery,
+  formatDate,
+  getLatestScheduleUpdatedAt,
+  getLocationAddress,
+} from "@/lib/utils";
+
+import styles from "./location-detail.module.css";
 
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
@@ -105,6 +114,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address || location.name,
   )}`;
+  const brandSearchPath = `/search?${buildSearchQuery({
+    q: "",
+    area: "",
+    weekday: "",
+    timeRange: "",
+    durationRange: "",
+    brand: brand.name,
+  })}`;
   const locationJsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
@@ -145,104 +162,113 @@ export default async function LocationPage({ params }: LocationPageProps) {
   ]);
 
   return (
-    <div className="page-stack">
+    <div className={`page-stack ${styles.page}`}>
       <JsonLd data={[locationJsonLd, breadcrumbJsonLd]} />
-      <section className="panel">
-        <p className="eyebrow">{brand.name}</p>
-        <h1>{hasSchedules ? `${location.name}のスタジオスケジュール` : location.name}</h1>
-        <dl className="detail-list">
-          <div>
-            <dt>住所</dt>
-            <dd>{address}</dd>
+      <nav className={styles.breadcrumb} aria-label="パンくずリスト">
+        <Link href="/search">レッスン検索</Link>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">店舗詳細</span>
+      </nav>
+
+      <CardSurface as="section" className={styles.hero}>
+        <div className={styles.heroMain}>
+          <div className={styles.identity}>
+            <Link className={styles.brandLink} href={brandSearchPath}>
+              {brand.name}
+            </Link>
+            <h1>{location.name}</h1>
+            <p className={styles.address}>{address || "住所情報は現在掲載されていません。"}</p>
+            {hasSchedules && latestScheduleUpdatedAt ? (
+              <FreshnessIndicator
+                status="neutral"
+                label={`スケジュール確認 ${formatDate(latestScheduleUpdatedAt)}`}
+              />
+            ) : null}
           </div>
-          <div>
-            <dt>公式サイト</dt>
-            <dd>
-              {location.official_url ? (
-                <a href={location.official_url} target="_blank" rel="noreferrer">
-                  公式ページを開く
-                </a>
-              ) : (
-                "-"
-              )}
-            </dd>
-          </div>
-          {hasSchedules ? (
+
+          <dl className={styles.summary} aria-label="店舗の掲載情報">
             <div>
-              <dt>スケジュール更新日</dt>
-              <dd>{formatDate(latestScheduleUpdatedAt)}</dd>
+              <strong>{schedules.length}</strong>
+              <span>週間レッスン</span>
             </div>
-          ) : null}
-          <div>
-            <dt>店舗情報確認日</dt>
-            <dd>{formatDate(location.last_verified_at)}</dd>
-          </div>
-        </dl>
-        <div className="link-row">
+            <div>
+              <strong>{availablePrograms.length}</strong>
+              <span>プログラム</span>
+            </div>
+            <div>
+              <strong>{formatDate(location.last_verified_at)}</strong>
+              <span>店舗情報確認日</span>
+            </div>
+          </dl>
+        </div>
+
+        <div className={styles.actions}>
+          <Link className={styles.primaryAction} href={hasSchedules ? "#location-schedule" : "/search"}>
+            {hasSchedules ? "週間スケジュールを見る" : "レッスンを探す"}
+          </Link>
           <Link href="/search">検索に戻る</Link>
           <a href={googleMapsUrl} target="_blank" rel="noreferrer">
-            Google Mapsで見る
+            Google Mapsで見る ↗
           </a>
           {location.official_url ? (
             <a href={location.official_url} target="_blank" rel="noreferrer">
-              公式サイトを見る
+              施設公式サイト ↗
             </a>
           ) : null}
         </div>
-      </section>
+      </CardSurface>
 
       {hasSchedules ? (
         <>
-          <section className="panel">
-            <div className="section-heading">
+          <CardSurface as="section" className={styles.programSection}>
+            <div className={styles.sectionHeading}>
               <div>
-                <h2>この店舗で受けられる主なプログラム</h2>
-                <p className="muted">{availablePrograms.length}種類</p>
+                <p>PROGRAMS</p>
+                <h2>この店舗で受けられるプログラム</h2>
               </div>
+              <span>{availablePrograms.length}種類</span>
             </div>
-            <div className="location-program-chips">
+            <div className={styles.programGrid}>
               {featuredPrograms.map((program) => (
-                <Link
-                  className="location-program-chip"
-                  href={buildProgramPath(program.slug)}
-                  key={program.id}
-                >
-                  <span>{program.name}</span>
-                  <small>{program.scheduleCount}件</small>
-                </Link>
+                <article className={styles.programItem} key={program.id}>
+                  <Link href={buildProgramPath(program.slug)}>
+                    <strong>{program.name}</strong>
+                    <span>{program.scheduleCount}件の開催を見る</span>
+                  </Link>
+                  <FavoriteProgramButton {...program} compact iconOnly />
+                </article>
               ))}
             </div>
             {remainingPrograms.length ? (
-              <details className="location-program-more">
+              <details className={styles.morePrograms}>
                 <summary>ほか{remainingPrograms.length}種類をすべて見る</summary>
-                <div className="location-program-chips">
+                <div className={styles.programGrid}>
                   {remainingPrograms.map((program) => (
-                    <Link
-                      className="location-program-chip"
-                      href={buildProgramPath(program.slug)}
-                      key={program.id}
-                    >
-                      <span>{program.name}</span>
-                      <small>{program.scheduleCount}件</small>
-                    </Link>
+                    <article className={styles.programItem} key={program.id}>
+                      <Link href={buildProgramPath(program.slug)}>
+                        <strong>{program.name}</strong>
+                        <span>{program.scheduleCount}件の開催を見る</span>
+                      </Link>
+                      <FavoriteProgramButton {...program} compact iconOnly />
+                    </article>
                   ))}
                 </div>
               </details>
             ) : null}
-          </section>
+          </CardSurface>
 
           <LocationScheduleTable schedules={schedules} />
         </>
       ) : (
-        <section className="panel">
+        <CardSurface as="section" className={styles.emptySchedule}>
           <h2>スタジオスケジュール</h2>
-          <p className="muted">この店舗のレッスンスケジュールは、現在GymMapに登録されていません。</p>
+          <p>この店舗のレッスンスケジュールは、現在GymMapに登録されていません。</p>
           {location.official_url ? (
             <a href={location.official_url} target="_blank" rel="noreferrer">
-              公式サイトでスケジュールを確認する
+              施設公式サイトで確認する ↗
             </a>
           ) : null}
-        </section>
+        </CardSurface>
       )}
     </div>
   );

@@ -5,10 +5,13 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 
 import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { useFavoritePrograms } from "@/components/favorites/use-favorite-programs";
+import { Button, CardSurface, FreshnessIndicator, Input } from "@/components/ui";
 import type { FavoriteScheduleItem, FavoriteScheduleResponse } from "@/lib/favorite-programs";
 import { buildProgramPath } from "@/lib/site";
 import type { Weekday } from "@/lib/types";
 import { formatDate, formatTime, formatWeekday, getLocationAddress } from "@/lib/utils";
+
+import styles from "./favorite-schedule-view.module.css";
 
 const weekdayIndexes: Record<Weekday, number> = {
   monday: 0,
@@ -101,101 +104,118 @@ export function FavoriteScheduleView() {
 
   if (!favorites.length) {
     return (
-      <section className="panel favorite-empty-state">
-        <p className="eyebrow">MY PROGRAMS</p>
+      <CardSurface as="section" className={styles.emptyState}>
+        <div className={styles.emptyIcon} aria-hidden="true">☆</div>
+        <p className={styles.kicker}>お気に入り</p>
         <h1>お気に入りはまだありません</h1>
-        <p className="muted">ブランドプログラムやプログラムページで☆を押すと、今週の開催をまとめて確認できます。</p>
-        <Link className="primary-link-button" href="/#popular-programs">レッスンを選ぶ</Link>
-      </section>
+        <p>気になるレッスンプログラムを保存すると、今日から7日間の開催予定をここで確認できます。</p>
+        <div className={styles.emptyActions}>
+          <Link className={styles.primaryLink} href="/#popular-programs">人気プログラムから選ぶ</Link>
+          <Link href="/search">条件からレッスンを探す</Link>
+        </div>
+      </CardSurface>
     );
   }
 
   const isLoading = response.requestKey !== requestKey;
 
   return (
-    <div className="page-stack favorite-schedule-page">
-      <section className="panel favorite-schedule-header">
-        <div className="section-heading">
+    <div className={`page-stack ${styles.page}`}>
+      <CardSurface as="section" className={styles.header}>
+        <div className={styles.heading}>
           <div>
-            <p className="eyebrow">MY PROGRAMS</p>
+            <p className={styles.kicker}>お気に入り</p>
             <h1>お気に入りの今週</h1>
-            <p className="muted">今日から7日間の登録スケジュールを、開催が近い順にまとめています。</p>
+            <p>保存した{favorites.length}件のプログラムを、今日から7日間の開催順に確認できます。</p>
           </div>
-          <Link href="/">トップへ戻る</Link>
+          <Link href="/search">レッスンを探す</Link>
         </div>
-        <div className="favorite-program-controls">
+        <div className={styles.programs} aria-label={`保存したプログラム ${favorites.length}件`}>
           {favorites.map((program) => (
-            <div className="favorite-program-chip" key={program.id}>
-              <Link href={buildProgramPath(program.slug)}>{program.name}</Link>
+            <div className={styles.program} key={program.id}>
+              <div>
+                <span>保存したプログラム</span>
+                <Link href={buildProgramPath(program.slug)}>{program.name}</Link>
+              </div>
               <FavoriteProgramButton {...program} compact />
             </div>
           ))}
         </div>
-        <form className="favorite-area-filter" onSubmit={applyAreaFilter}>
-          <label className="field">
-            <span>通いやすいエリア・店舗で絞り込む</span>
-            <input
-              value={areaInput}
-              onChange={(event) => setAreaInput(event.target.value)}
-              placeholder="新宿 / 渋谷 / 川崎 / 店舗名など"
-            />
-          </label>
-          <button type="submit">絞り込む</button>
-          {appliedArea ? <button className="secondary-button" type="button" onClick={() => { setAreaInput(""); setAppliedArea(""); }}>解除</button> : null}
+        <form className={styles.filter} onSubmit={applyAreaFilter}>
+          <Input
+            id="favorite-area-filter"
+            label="通いやすいエリア・店舗で絞り込む"
+            value={areaInput}
+            onChange={(event) => setAreaInput(event.target.value)}
+            placeholder="新宿 / 渋谷 / 川崎 / 店舗名など"
+          />
+          <Button type="submit">絞り込む</Button>
+          {appliedArea ? (
+            <Button variant="secondary" type="button" onClick={() => { setAreaInput(""); setAppliedArea(""); }}>
+              解除
+            </Button>
+          ) : null}
         </form>
-      </section>
+      </CardSurface>
 
       {isLoading ? (
-        <section className="panel favorite-loading" aria-live="polite">
+        <CardSurface as="section" className={styles.status} aria-live="polite">
           <p>今週の開催を読み込んでいます…</p>
-        </section>
+        </CardSurface>
       ) : response.error ? (
-        <section className="panel favorite-empty-state">
+        <CardSurface as="section" className={styles.status} role="alert">
           <h2>読み込みに失敗しました</h2>
-          <p className="muted">{response.error}</p>
-        </section>
+          <p>{response.error}</p>
+        </CardSurface>
       ) : groupedItems.length ? (
-        <section className="favorite-week-results">
-          <div className="favorite-week-summary">
+        <section className={styles.weekResults} aria-labelledby="favorite-week-heading">
+          <div className={styles.weekSummary}>
             <p><strong>{response.data?.totalResults ?? 0}件</strong>の登録スケジュール</p>
             {appliedArea ? <span>「{appliedArea}」で絞り込み中</span> : <span>最大120件を表示</span>}
           </div>
+          <h2 className={styles.visuallyHidden} id="favorite-week-heading">今日から7日間の開催予定</h2>
           {groupedItems.map(([weekday, items]) => (
-            <section className="panel favorite-day-group" key={weekday}>
-              <div className="favorite-day-heading">
+            <CardSurface as="section" className={styles.dayGroup} key={weekday}>
+              <div className={styles.dayHeading}>
                 <h2>{getDayHeading(weekday, startWeekday)}</h2>
                 <span>{items.length}件</span>
               </div>
-              <div className="favorite-schedule-list">
+              <div className={styles.scheduleList}>
                 {items.map((item) => (
-                  <article className="favorite-schedule-card" key={item.scheduleId}>
-                    <div className="favorite-schedule-time">
+                  <article className={styles.scheduleCard} key={item.scheduleId}>
+                    <div className={styles.scheduleTime}>
                       <strong>{formatTime(item.startTime)}</strong>
                       <span>{formatTime(item.endTime)}まで</span>
                     </div>
-                    <div className="favorite-schedule-main">
-                      <p className="favorite-schedule-program">{item.rawProgramName}</p>
+                    <div className={styles.scheduleMain}>
+                      <p>{item.rawProgramName}</p>
                       <h3>{item.location.name}</h3>
-                      <p className="muted">{item.brandName}・{getLocationAddress(item.location.prefecture, item.location.city)}</p>
+                      <span>{item.brandName}・{getLocationAddress(item.location.prefecture, item.location.city)}</span>
                     </div>
-                    <div className="favorite-schedule-actions">
+                    <div className={styles.scheduleActions}>
                       {item.durationMinutes ? <span>{item.durationMinutes}分</span> : null}
-                      <Link href={`/locations/${item.location.slug}`}>店舗を見る</Link>
+                      <Link href={`/locations/${item.location.slug}`}>詳細とタイムテーブル</Link>
                     </div>
                   </article>
                 ))}
               </div>
-            </section>
+            </CardSurface>
           ))}
-          <p className="favorite-schedule-note">
-            掲載内容は変更される場合があります。来館・予約前に各店舗の公式情報をご確認ください。最新確認日: {formatDate(response.data?.latestScheduleUpdate)}
-          </p>
+          <div className={styles.note}>
+            <FreshnessIndicator status="neutral" label={`スケジュール確認 ${formatDate(response.data?.latestScheduleUpdate)}`} />
+            <p>掲載内容は変更される場合があります。来館・予約前に各店舗の公式情報をご確認ください。</p>
+          </div>
         </section>
       ) : (
-        <section className="panel favorite-empty-state">
+        <CardSurface as="section" className={styles.status}>
           <h2>条件に合う開催が見つかりませんでした</h2>
-          <p className="muted">エリアを広げるか、絞り込みを解除してもう一度確認してください。</p>
-        </section>
+          <p>エリアを広げるか、絞り込みを解除してもう一度確認してください。</p>
+          {appliedArea ? (
+            <Button variant="secondary" type="button" onClick={() => { setAreaInput(""); setAppliedArea(""); }}>
+              絞り込みを解除
+            </Button>
+          ) : null}
+        </CardSurface>
       )}
     </div>
   );

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/json-ld";
 import { FavoriteProgramButton } from "@/components/favorites/favorite-program-button";
 import { PendingFilterLinkLabel } from "@/components/navigation/pending-filter-link-label";
+import { CardSurface, FreshnessIndicator } from "@/components/ui";
 import { getProgramLandingBySlug, getProgramLandingSlugs } from "@/lib/data";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildCanonicalPath, buildProgramPath } from "@/lib/site";
@@ -19,6 +20,8 @@ import {
   getLatestScheduleUpdatedAt,
   getLocationAddress,
 } from "@/lib/utils";
+
+import styles from "./program.module.css";
 
 type ProgramLandingPageProps = {
   params: Promise<{ slug: string }>;
@@ -54,6 +57,17 @@ function buildProgramSearchPath(
   });
 
   return `/search?${query}`;
+}
+
+function buildBrandSearchPath(brandName: string) {
+  return `/search?${buildSearchQuery({
+    q: "",
+    area: "",
+    weekday: "",
+    timeRange: "",
+    durationRange: "",
+    brand: brandName,
+  })}`;
 }
 
 export async function generateStaticParams() {
@@ -209,82 +223,132 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
   ]);
 
   return (
-    <div className="page-stack program-landing-page">
+    <div className={`page-stack ${styles.page}`}>
       <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
-      <section className="panel program-landing-hero">
-        <p className="eyebrow">プログラム別ガイド</p>
-        <h1>{page.program.name}が受けられるジム・最新スケジュール</h1>
-        <div className="program-landing-stats" aria-label="掲載状況">
-          <div>
-            <strong>{page.locationCount}</strong>
-            <span>掲載店舗</span>
+      <nav className={styles.breadcrumb} aria-label="パンくずリスト">
+        <Link href="/">レッスンを探す</Link>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">プログラム</span>
+      </nav>
+
+      <CardSurface as="section" className={styles.hero}>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <p>プログラムから探す</p>
+            <h1>{page.program.name}</h1>
+            <span>受けられる店舗と今週の開催時間を、地域や曜日から探せます。</span>
+            <div className={styles.heroActions}>
+              <Link className={styles.primaryAction} href="#program-locations">
+                受けられるジムを見る
+              </Link>
+              <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
+              <Link href={buildProgramSearchPath(page.program.name)}>条件を追加して検索</Link>
+            </div>
           </div>
-          <div>
-            <strong>{page.schedules.length}</strong>
-            <span>週間レッスン</span>
-          </div>
-          <div>
-            <strong>{page.prefectureNames.length}</strong>
-            <span>都道府県</span>
-          </div>
-          <div>
-            <strong>{formatDate(latestScheduleUpdatedAt)}</strong>
-            <span>スケジュール更新日</span>
+          <dl className={styles.stats} aria-label="掲載状況">
+            <div>
+              <strong>{page.locationCount}</strong>
+              <span>掲載店舗</span>
+            </div>
+            <div>
+              <strong>{page.schedules.length}</strong>
+              <span>週間レッスン</span>
+            </div>
+            <div>
+              <strong>{page.prefectureNames.length}</strong>
+              <span>都道府県</span>
+            </div>
+          </dl>
+        </div>
+        <div className={styles.heroFooter}>
+          <FreshnessIndicator
+            status="neutral"
+            label={`スケジュール確認 ${formatDate(latestScheduleUpdatedAt)}`}
+          />
+          <div className={styles.brandLinks} aria-label="掲載ブランド">
+            <span>掲載ブランド</span>
+            {page.brandNames.map((brandName) => (
+              <Link href={buildBrandSearchPath(brandName)} key={brandName}>
+                {brandName}
+              </Link>
+            ))}
           </div>
         </div>
-        <p className="muted">掲載ブランド: {page.brandNames.join(" / ")}</p>
-        <div className="program-page-actions">
-          <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
-          <div className="link-row">
-            <Link className="primary-link-button program-location-jump" href="#program-locations">
-              受けられるジムを見る
-            </Link>
-            <Link href={buildProgramSearchPath(page.program.name)}>すべての条件で検索する</Link>
-            <Link href="/">検索トップへ戻る</Link>
+      </CardSurface>
+
+      <section className={styles.locationSection} id="program-locations" aria-labelledby="program-locations-heading">
+        <div className={styles.sectionHeading}>
+          <div>
+            <p>開催店舗</p>
+            <h2 id="program-locations-heading">{page.program.name}が受けられるジム</h2>
           </div>
+          <Link href={buildProgramSearchPath(page.program.name)}>全{page.locationCount}店舗を検索</Link>
+        </div>
+        <div className={styles.locationList}>
+          {featuredLocations.map(({ locationId, first, schedules }) => (
+            <CardSurface className={styles.locationCard} key={locationId}>
+              <div className={styles.locationIdentity}>
+                <p>{first.brand.name}</p>
+                <h3>{first.location.name}</h3>
+                <span>
+                  {getLocationAddress(
+                    first.location.prefecture,
+                    first.location.city,
+                    first.location.address_line,
+                  )}
+                </span>
+              </div>
+              <ul className={styles.times} aria-label={`${first.location.name}の主な開催時間`}>
+                {schedules.slice(0, 3).map((item) => (
+                  <li key={item.schedule.id}>
+                    <strong>{formatWeekday(item.schedule.weekday)}</strong>
+                    <span>{formatTime(item.schedule.start_time)}–{formatTime(item.schedule.end_time)}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className={styles.locationAction}>
+                <span>週間{schedules.length}件</span>
+                <Link href={`/locations/${first.location.slug}`}>店舗のタイムテーブルを見る</Link>
+              </div>
+            </CardSurface>
+          ))}
         </div>
       </section>
 
-      <section className="panel program-condition-section">
-        <div className="section-heading">
+      <CardSurface as="section" className={styles.conditionSection}>
+        <div className={styles.sectionHeading}>
           <div>
-            <p className="eyebrow">曜日・時間から探す</p>
-            <h2>{page.program.name}の開催条件を絞り込む</h2>
+            <p>絞り込み</p>
+            <h2>{page.program.name}を曜日・時間から探す</h2>
           </div>
         </div>
-        <div className="program-filter-group">
+        <div className={styles.filterGroup}>
           <h3>曜日</h3>
-          <div className="program-filter-links">
+          <div className={styles.filterLinks}>
             {weekdaySummaries.map(({ weekday, count }) => (
-              <Link
-                href={buildProgramSearchPath(page.program.name, { weekday })}
-                key={weekday}
-              >
+              <Link href={buildProgramSearchPath(page.program.name, { weekday })} key={weekday}>
                 {formatWeekday(weekday)} <span>{count}件</span>
               </Link>
             ))}
           </div>
         </div>
-        <div className="program-filter-group">
+        <div className={styles.filterGroup}>
           <h3>開始時間帯</h3>
-          <div className="program-filter-links">
+          <div className={styles.filterLinks}>
             {timeRangeSummaries.map(({ value, label, count }) => (
-              <Link
-                href={buildProgramSearchPath(page.program.name, { timeRange: value })}
-                key={value}
-              >
+              <Link href={buildProgramSearchPath(page.program.name, { timeRange: value })} key={value}>
                 {label} <span>{count}件</span>
               </Link>
             ))}
           </div>
         </div>
-      </section>
+      </CardSurface>
 
       {featuredPrefectures.length ? (
-        <section className="panel program-area-section">
-          <p className="eyebrow">地域から探す</p>
-          <h2>{page.program.name}を都道府県から探す</h2>
-          <div className="program-filter-links">
+        <CardSurface as="section" className={styles.areaSection}>
+          <p>地域</p>
+          <h2>{page.program.name}を地域から探す</h2>
+          <div className={styles.filterLinks}>
             {featuredPrefectures.map((area) => (
               <Link
                 key={area.areaName}
@@ -295,9 +359,9 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
             ))}
           </div>
           {featuredCities.length ? (
-            <div className="program-filter-group program-city-filter-group">
+            <div className={styles.cityGroup}>
               <h3>市区町村から絞り込む</h3>
-              <div className="program-filter-links">
+              <div className={styles.filterLinks}>
                 {featuredCities.map((area) => (
                   <Link
                     key={area.areaName}
@@ -309,67 +373,9 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
               </div>
             </div>
           ) : null}
-        </section>
+        </CardSurface>
       ) : null}
-
-      <section
-        className="panel page-anchor-section program-location-section"
-        id="program-locations"
-      >
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">開催店舗</p>
-            <h2>{page.program.name}が受けられるジム</h2>
-          </div>
-          <Link
-            className="program-all-locations-link"
-            href={buildProgramSearchPath(page.program.name)}
-          >
-            全{page.locationCount}店舗を見る
-          </Link>
-        </div>
-        <div className="result-list program-location-list">
-          {featuredLocations.map(({ locationId, first, schedules }) => (
-            <article key={locationId} className="result-card">
-              <div className="result-card-main">
-                <h3>
-                  <Link href={`/locations/${first.location.slug}`}>{first.location.name}</Link>
-                </h3>
-                <p className="muted">{first.brand.name}</p>
-                <p className="muted">
-                  {getLocationAddress(
-                    first.location.prefecture,
-                    first.location.city,
-                    first.location.address_line,
-                  )}
-                </p>
-                <ul className="program-location-times">
-                  {schedules.slice(0, 3).map((item) => (
-                    <li key={item.schedule.id}>
-                      {formatWeekday(item.schedule.weekday)} {formatTime(item.schedule.start_time)} -{" "}
-                      {formatTime(item.schedule.end_time)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <dl className="result-meta">
-                <div>
-                  <dt>週間開催</dt>
-                  <dd>{schedules.length}件</dd>
-                </div>
-                <div>
-                  <dt>店舗詳細</dt>
-                  <dd>
-                    <Link href={`/locations/${first.location.slug}`}>タイムテーブルを見る</Link>
-                  </dd>
-                </div>
-              </dl>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <p className="muted">開催内容は変更される場合があります。参加前に各ジムの公式サイトをご確認ください。</p>
+      <p className={styles.note}>開催内容は変更される場合があります。参加前に各ジムの公式サイトをご確認ください。</p>
     </div>
   );
 }
