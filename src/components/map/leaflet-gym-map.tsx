@@ -112,6 +112,7 @@ export function LeafletGymMap({
   currentPosition,
   onSelectLocation,
   onBoundsChange,
+  unselectedCaption,
 }: MapComponentProps) {
   const [tileError, setTileError] = useState<string | null>(null);
 
@@ -210,7 +211,7 @@ export function LeafletGymMap({
           ? `${selectedLocation.name} を中心に表示`
           : currentPosition
             ? "現在地周辺のジムを地図表示中"
-            : "東京中心のフォールバック地図を表示中"}
+            : (unselectedCaption ?? "東京中心のフォールバック地図を表示中")}
       </div>
       {tileError ? <div className="map-overlay-message">{tileError}</div> : null}
       {locations.length === 0 ? <div className="map-overlay-message">表示できる店舗がないため、東京中心の地図だけを表示しています。</div> : null}

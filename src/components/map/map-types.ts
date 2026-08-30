@@ -26,4 +26,5 @@ export type MapComponentProps = {
   onSelectLocation: (id: string) => void;
   onBoundsChange?: (bounds: MapBounds) => void;
   onProviderError?: (message: string) => void;
+  unselectedCaption?: string;
 };

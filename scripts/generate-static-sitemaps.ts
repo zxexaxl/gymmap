@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
 import { programMaster } from "@/lib/program-master";
+import { buildCoreSitemapEntries } from "@/lib/core-sitemap";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import { buildLocationSitemapEntries } from "@/lib/location-sitemap";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
@@ -260,26 +261,7 @@ async function main() {
       priority: 0.7,
     }));
 
-  const coreEntries = [
-    {
-      loc: `${siteUrl}/`,
-      lastmod: now,
-      changefreq: "daily" as const,
-      priority: 1,
-    },
-    {
-      loc: `${siteUrl}/programs/bodycombat`,
-      lastmod: now,
-      changefreq: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      loc: `${siteUrl}/locations/jexer-shinjuku`,
-      lastmod: now,
-      changefreq: "weekly" as const,
-      priority: 0.8,
-    },
-  ];
+  const coreEntries = buildCoreSitemapEntries(siteUrl, now);
 
   writeFileSync(join(publicDir, "sitemap-core.xml"), buildUrlSet(coreEntries), "utf8");
   writeFileSync(join(publicDir, "sitemap-locations.xml"), buildUrlSet(locationEntries), "utf8");

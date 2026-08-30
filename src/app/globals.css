@@ -214,6 +214,234 @@ p {
   scroll-margin-top: 92px;
 }
 
+.hyrox-page {
+  gap: 24px;
+}
+
+.hyrox-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hyrox-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 54px);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(232, 93, 63, 0.18), transparent 35%),
+    linear-gradient(135deg, #fffaf4 0%, #ffffff 72%);
+}
+
+.hyrox-hero h1 {
+  max-width: 760px;
+  margin-bottom: 18px;
+  color: var(--navy);
+  font-size: clamp(2rem, 4.8vw, 3.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.hyrox-eyebrow {
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.hyrox-hero-copy {
+  max-width: 700px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.85;
+}
+
+.hyrox-hero-stats {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.hyrox-hero-stats strong {
+  font-size: 1.8rem;
+}
+
+.hyrox-hero-stats span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hyrox-unknown-note,
+.hyrox-data-notice {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 18px;
+  border: 1px solid #d8a73d;
+  border-radius: 16px;
+  background: #fff7dd;
+  color: #684b0c;
+  line-height: 1.7;
+}
+
+.hyrox-unknown-note span {
+  font-size: 0.92rem;
+}
+
+.hyrox-data-notice {
+  margin: 0;
+}
+
+.hyrox-filter-panel {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hyrox-filter-panel h2,
+.hyrox-section-heading h2 {
+  margin: 0;
+}
+
+.hyrox-prefecture-filter {
+  width: min(100%, 320px);
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hyrox-prefecture-filter select {
+  background: #fffaf0;
+  border-color: #c9b79d;
+}
+
+.hyrox-section-heading {
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.hyrox-section-heading > p {
+  margin: 0;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.hyrox-map-canvas {
+  position: relative;
+  min-height: 480px;
+  height: min(62vw, 620px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #efe3cf;
+}
+
+.hyrox-map-selection {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid rgba(176, 80, 45, 0.28);
+  border-radius: 18px;
+  background: #fffaf4;
+}
+
+.hyrox-map-selection p,
+.hyrox-map-selection h3 {
+  margin-bottom: 6px;
+}
+
+.hyrox-location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hyrox-location-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel-strong);
+}
+
+.hyrox-location-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+}
+
+.hyrox-location-card p {
+  overflow-wrap: anywhere;
+}
+
+.hyrox-official-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 5px 9px;
+  border: 1px solid rgba(176, 80, 45, 0.28);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.hyrox-location-brand,
+.hyrox-location-area {
+  margin-bottom: 6px;
+  color: var(--accent-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.hyrox-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.hyrox-map-focus-button {
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+}
+
+.hyrox-map-focus-button:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+
+.hyrox-methodology-note p,
+.hyrox-error-state p,
+.hyrox-empty-state p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .panel {
   background: var(--panel);
   border: 1px solid rgba(220, 225, 232, 0.94);
@@ -1929,6 +2157,11 @@ p {
     min-height: 520px;
     height: min(620px, 75vh);
   }
+
+  .hyrox-map-canvas {
+    height: 58vw;
+    min-height: 420px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2084,11 +2317,12 @@ p {
 
   .header-nav {
     gap: 0;
+    flex-wrap: nowrap;
   }
 
   .header-nav a {
-    padding: 7px 6px;
-    font-size: 0.76rem;
+    padding: 7px 2px;
+    font-size: 0.72rem;
   }
 
   .header-favorite-link {
@@ -2361,5 +2595,46 @@ p {
 
   .map-geolocation-help {
     align-items: stretch;
+  }
+
+  .hyrox-page {
+    gap: 16px;
+  }
+
+  .hyrox-hero,
+  .hyrox-filter-panel,
+  .hyrox-map-panel,
+  .hyrox-page > .panel {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .hyrox-hero h1 {
+    font-size: clamp(2rem, 10.5vw, 2.75rem);
+  }
+
+  .hyrox-unknown-note,
+  .hyrox-filter-panel,
+  .hyrox-map-selection {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hyrox-prefecture-filter {
+    width: 100%;
+  }
+
+  .hyrox-map-canvas {
+    min-height: 380px;
+    height: 68vh;
+    max-height: 540px;
+  }
+
+  .hyrox-location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hyrox-location-card {
+    padding: 16px;
   }
 }
