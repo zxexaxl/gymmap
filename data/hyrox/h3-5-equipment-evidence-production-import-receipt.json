@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "phase": "H3-5",
+  "verdict": "HYROX EQUIPMENT EVIDENCE PRODUCTION IMPORT COMPLETE",
+  "committed_at": "2026-08-30T10:28:42Z",
+  "authority": {
+    "origin_main": "f1f503ec8e028fb219a1065b0e4e0a1a237522ee",
+    "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+    "h3_4_commit": "0d7dde26dbf14122f2e38d27acf2790bebbc98e3",
+    "h3_3_sample_sha256": "d58b83b254e32a564443bbae46d832e1d5a74ae56f6e24dcf3a2ac854733e9ce",
+    "candidate_logical_sha256": "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8",
+    "candidate_file_sha256": "d6943303c304926317e4d8d9ae945c8e45556b415554915f70b8349a9f3a4128",
+    "remote_migration_head": "0010"
+  },
+  "recovery": {
+    "managed_backup": false,
+    "pitr": false,
+    "path": "/Users/te/GymMapBackups/gymmap-pre-h3-5-prod.dump",
+    "size_bytes": 1736781,
+    "sha256": "ee4a8c77cd7a43f11c15e73ef81dcd9e8471ecee59448c0a5a6411559bf99d36",
+    "pg_restore_list": "PASS",
+    "clean_restore_rehearsal": "PASS",
+    "retained": true
+  },
+  "source_gate": {
+    "target": 10,
+    "revalidated": 10,
+    "drift": 0,
+    "competition_simulation_sources": 2,
+    "competition_simulation_semantics": "ongoing_or_repeatable"
+  },
+  "transaction": {
+    "invocations": 1,
+    "advisory_lock": "gymmap:hyrox:h3-4:equipment-evidence-import",
+    "result": "COMMIT",
+    "fixup_mutations": 0,
+    "inserted": {
+      "training_sources": 10,
+      "location_equipment": 36,
+      "location_training_capabilities": 16,
+      "training_evidence": 52
+    }
+  },
+  "before": {
+    "training_sources": 82,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "training_evidence": 164,
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "hyrox_search": 82
+  },
+  "after": {
+    "training_sources": 92,
+    "location_equipment": 36,
+    "location_training_capabilities": 16,
+    "training_evidence": 216,
+    "published_equipment": 36,
+    "equipment_positive_facilities": 6,
+    "published_capabilities": 16,
+    "capability_positive_facilities": 9,
+    "open_training_positive_facilities": 4,
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "hyrox_search": 82
+  },
+  "verification": {
+    "candidate_semantic_match": "10/36/16/52",
+    "deterministic_regeneration": "PASS",
+    "full_unit_tests": "110/110 PASS",
+    "typecheck": "PASS",
+    "scoped_lint": "PASS",
+    "private_anon_select": false,
+    "private_authenticated_select": false,
+    "public_views_anon": true,
+    "schedule_rpc_smoke": "4/4 PASS",
+    "hyrox_page_http": 200,
+    "hyrox_page_negative_assertions": 0
+  },
+  "freshness": {
+    "last_confirmed_at": "2026-08-30T09:20:04Z",
+    "physical_equipment_stale_at": "2027-02-26T09:20:04Z",
+    "open_training_coaching_sled_space_stale_at": "2026-11-28T09:20:04Z",
+    "competition_simulation_stale_at": "2026-09-29T09:20:04Z",
+    "import_time_extension": false
+  },
+  "safety": {
+    "negative_claims": 0,
+    "review_required_promoted": 0,
+    "new_discovery": false,
+    "migration": false,
+    "ui_change": false,
+    "vercel_deploy": false,
+    "main_merge": false,
+    "secrets_in_receipt": false
+  }
+}

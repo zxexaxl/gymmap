@@ -16,6 +16,7 @@
     "hyrox:equipment-poc:verify": "tsx scripts/hyrox/collect-equipment-evidence-poc.ts",
     "hyrox:equipment-candidate": "tsx scripts/hyrox/build-h3-4-equipment-import-candidate.ts",
     "hyrox:equipment-candidate:revalidate": "tsx scripts/hyrox/revalidate-h3-4-equipment-sources.ts",
+    "hyrox:equipment-import:prepare": "tsx scripts/hyrox/build-h3-5-equipment-production-import.ts",
     "start": "next start",
     "lint": "eslint .",
     "test": "tsx --test src/lib/__tests__/*.test.ts",
