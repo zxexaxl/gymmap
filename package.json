@@ -21,6 +21,7 @@
     "hyrox:targeted:candidate:preflight": "tsx scripts/hyrox/build-h3-7-production-preflight.ts",
     "hyrox:targeted:candidate:build": "tsx scripts/hyrox/build-h3-7-targeted-import-candidate.ts",
     "hyrox:targeted:candidate:rehearsal-sql": "tsx scripts/hyrox/render-h3-7-rehearsal.ts",
+    "hyrox:targeted:release:sql": "tsx scripts/hyrox/render-h3-8-production-release.ts",
     "start": "next start",
     "lint": "eslint .",
     "test": "tsx --test src/lib/__tests__/*.test.ts",

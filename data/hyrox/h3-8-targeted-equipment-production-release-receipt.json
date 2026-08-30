@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "verdict": "H3-8 — TARGETED EQUIPMENT EVIDENCE PRODUCTION RELEASE COMPLETE",
+  "authority": {
+    "h3_6Commit": "160b5593093e89273c1142954c42fafbfff8196f",
+    "h3_7Commit": "864b049107e6a3535fa4d0b17e47ef216f39487b",
+    "cohortHash": "1cb18ad83aba8a0c71898780995856c2ba8bd49b61eb00b6874184637e1d9c0f",
+    "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e",
+    "monitorDeltaHash": "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a",
+    "projectedManifestHash": "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2",
+    "releaseCoherenceHash": "dc97df4fd675d29e71425c7720ede609234c749da305aa5249f8dcfc3c32c255",
+    "originMainBefore": "8a54e393842dd0d467381add27b0c1f9010d9bf7",
+    "originMainAfter": "17cb5a567bf4293afdf62642eb321bca07d92c26",
+    "remoteMigrationHead": "0010"
+  },
+  "recovery": {
+    "managedBackup": false,
+    "pitr": false,
+    "path": "/Users/te/GymMapBackups/gymmap-pre-h3-8-prod.dump",
+    "sizeBytes": 1803813,
+    "sha256": "d5ba1b2dcbe467144f4a4779dae8623a5d876327712bf1e5f189e67d8e1d7130",
+    "archiveList": "PASS",
+    "cleanRestoreRehearsal": "PASS",
+    "restoredBaseline": { "trainingSources": 92, "equipment": 36, "capabilities": 16, "evidence": 216, "hyrox": 82 },
+    "retained": true
+  },
+  "sourceGate": { "relations": 16, "uniqueUrls": 6, "checked": 6, "available": 6, "supportContinuity": 6, "drift": 0 },
+  "freshnessGate": {
+    "existingCompetitionSimulation": { "claims": 2, "state": "DUE_SOON", "staleAt": "2026-09-29T09:20:04Z", "daysRemainingAtActionsRun": 29.838, "supportHealthy": true },
+    "newCompetitionSimulation": { "claims": 11, "state": "DUE_SOON", "staleAt": "2026-09-29T11:49:02.406Z", "daysRemainingAtActionsRun": 29.942, "supportHealthy": true },
+    "importTimeExtension": false,
+    "h3_5bRequiredNow": false
+  },
+  "database": {
+    "transactionInvocations": 1,
+    "advisoryLock": true,
+    "result": "COMMIT",
+    "fixupMutations": 0,
+    "before": { "trainingSources": 92, "equipment": 36, "capabilities": 16, "evidence": 216 },
+    "inserted": { "trainingSources": 16, "equipment": 73, "capabilities": 25, "evidence": 98 },
+    "updated": { "trainingSources": 0, "equipment": 0, "capabilities": 0, "evidence": 0 },
+    "after": { "trainingSources": 108, "equipment": 109, "capabilities": 41, "evidence": 314 },
+    "semanticMatch": { "sources": 16, "equipment": 73, "capabilities": 25, "evidence": 98 },
+    "existingH3_5RowsChanged": 0,
+    "negativeClaims": 0
+  },
+  "publication": {
+    "equipment": 109,
+    "equipmentPositiveFacilities": 22,
+    "capabilities": 41,
+    "capabilityPositiveFacilities": 21,
+    "anyEnrichedFacilities": 25,
+    "openTraining": 5,
+    "competitionSimulation": 13,
+    "hyrox": 82,
+    "official": 82,
+    "search": 82
+  },
+  "monitor": {
+    "candidateCommit": "17cb5a567bf4293afdf62642eb321bca07d92c26",
+    "integratedMain": "17cb5a567bf4293afdf62642eb321bca07d92c26",
+    "claimsBefore": 52,
+    "claimsAdded": 98,
+    "claimsAfter": 150,
+    "sourceRelations": 26,
+    "uniqueExternalUrls": 15,
+    "manifestHash": "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2",
+    "live": { "fresh": 137, "dueSoon": 13, "urgent": 0, "stale": 0, "sourceReview": 0, "supportReview": 0, "publicationMismatch": 0, "errors": 0 },
+    "locationMonitor": { "monitored": 82, "noChange": 82, "reviewQueue": 0, "errors": 0 }
+  },
+  "githubActions": {
+    "workflow": "hyrox-freshness-monitor.yml",
+    "runId": 33313519753,
+    "headSha": "17cb5a567bf4293afdf62642eb321bca07d92c26",
+    "result": "success",
+    "artifacts": ["hyrox-freshness-monitor-33313519753", "hyrox-enrichment-freshness-monitor-33313519753"],
+    "scheduledReady": true,
+    "serviceRole": false
+  },
+  "verification": {
+    "focusedTests": "PASS",
+    "fullUnitTests": "97/97 PASS",
+    "typecheck": "PASS",
+    "scopedLint": "PASS",
+    "privateAnonSelect": false,
+    "publicEquipmentCount": 109,
+    "publicCapabilityCount": 41,
+    "hyroxPageHttp": 200,
+    "hyroxPageCards": 82
+  },
+  "scope": {
+    "newDiscovery": false,
+    "reviewRequiredPromoted": 0,
+    "observedOnlyPromoted": 0,
+    "taxonomyChange": false,
+    "migration": false,
+    "locationOrBrandChange": false,
+    "programOrClassChange": false,
+    "h3_5bMutation": false,
+    "uiChange": false,
+    "vercelDeploy": false,
+    "serviceRoleIntroduction": false,
+    "secretsIncluded": false
+  }
+}
