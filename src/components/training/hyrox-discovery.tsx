@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 
+import { HyroxFacilityCard } from "@/components/training/hyrox-facility-card";
 import {
   filterHyroxLocations,
   getHyroxPrefectureOptions,
@@ -132,40 +133,14 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         {filteredLocations.length ? (
           <div className="hyrox-location-grid">
             {filteredLocations.map((location) => (
-              <article className="hyrox-location-card" key={location.id}>
-                <div>
-                  <span className="hyrox-official-badge">Official Training Club</span>
-                  <p className="hyrox-location-brand">{location.brandName}</p>
-                  <h3>{location.name}</h3>
-                  <p className="hyrox-location-area">
-                    {location.prefecture} {location.city}
-                  </p>
-                  <p className="muted">{location.address}</p>
-                </div>
-                <div className="hyrox-card-actions">
-                  <button
-                    type="button"
-                    className="hyrox-map-focus-button"
-                    onClick={() => {
-                      setSelectedLocationId(location.id);
-                      document.getElementById("hyrox-map-heading")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    地図で見る
-                  </button>
-                  <Link href={`/locations/${location.slug}`}>GymMapで詳細を見る</Link>
-                  {location.officialUrl ? (
-                    <a
-                      href={location.officialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${location.name}の公式サイトを新しいタブで開く`}
-                    >
-                      施設公式サイト ↗
-                    </a>
-                  ) : null}
-                </div>
-              </article>
+              <HyroxFacilityCard
+                key={location.id}
+                location={location}
+                onMapFocus={(locationId) => {
+                  setSelectedLocationId(locationId);
+                  document.getElementById("hyrox-map-heading")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              />
             ))}
           </div>
         ) : (

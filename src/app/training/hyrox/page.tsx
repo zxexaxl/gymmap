@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { HyroxDiscovery } from "@/components/training/hyrox-discovery";
+import { CardSurface } from "@/components/ui";
 import { loadHyroxDiscoveryData } from "@/lib/hyrox-discovery-server";
-import { HYROX_UNKNOWN_DATA_NOTICE } from "@/lib/hyrox-discovery";
+import { HYROX_POSITIVE_EVIDENCE_DISCLOSURE } from "@/lib/hyrox-discovery";
 import { buildCanonicalPath } from "@/lib/site";
 
 const pathname = "/training/hyrox";
@@ -82,10 +83,14 @@ export default async function HyroxTrainingPage() {
           </div>
         </section>
 
-        <aside className="hyrox-unknown-note" aria-label="設備とクラス情報について">
-          <strong>設備やクラス情報は現在確認中です。</strong>
-          <span>{HYROX_UNKNOWN_DATA_NOTICE}</span>
-        </aside>
+        <CardSurface
+          as="section"
+          className="hyrox-evidence-disclosure"
+          aria-labelledby="hyrox-evidence-disclosure-heading"
+        >
+          <h2 id="hyrox-evidence-disclosure-heading">設備・トレーニング情報について</h2>
+          <p>{HYROX_POSITIVE_EVIDENCE_DISCLOSURE}</p>
+        </CardSurface>
 
         {data.missingOfficialUrlCount ? (
           <p className="hyrox-data-notice">
