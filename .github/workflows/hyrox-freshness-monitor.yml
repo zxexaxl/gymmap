@@ -25,6 +25,9 @@ jobs:
       - id: monitor
         continue-on-error: true
         run: npm run hyrox:monitor -- --ci --output-dir=.artifacts/hyrox-monitoring
+      - id: enrichment
+        continue-on-error: true
+        run: npm run hyrox:monitor:enrichment -- --ci --output-dir=.artifacts/hyrox-enrichment-monitoring
       - name: Add run summary
         if: always()
         run: |
@@ -32,6 +35,11 @@ jobs:
             cat .artifacts/hyrox-monitoring/hyrox-freshness-monitor-latest.md >> "$GITHUB_STEP_SUMMARY"
           else
             echo "HYROX monitor did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f .artifacts/hyrox-enrichment-monitoring/hyrox-enrichment-freshness-monitor-latest.md ]; then
+            cat .artifacts/hyrox-enrichment-monitoring/hyrox-enrichment-freshness-monitor-latest.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "HYROX enrichment monitor did not produce a report." >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload monitor report
         if: always()
@@ -41,6 +49,14 @@ jobs:
           path: .artifacts/hyrox-monitoring/
           if-no-files-found: warn
           retention-days: 30
+      - name: Upload enrichment monitor report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyrox-enrichment-freshness-monitor-${{ github.run_id }}
+          path: .artifacts/hyrox-enrichment-monitoring/
+          if-no-files-found: warn
+          retention-days: 30
       - name: Enforce attention policy
-        if: steps.monitor.outcome == 'failure'
+        if: steps.monitor.outcome == 'failure' || steps.enrichment.outcome == 'failure'
         run: exit 1
