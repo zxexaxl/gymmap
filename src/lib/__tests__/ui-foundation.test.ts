@@ -59,14 +59,31 @@ test("FreshnessIndicator renders only domain-provided presentation state and lab
   assert.doesNotMatch(source, /updatedAt|ageDays|Date\(|Date\.now|difference/);
 });
 
-test("Header preserves global and explicit Lesson-local route targets", () => {
+test("Header separates Japanese domain navigation from Lesson-local destinations", () => {
   const markup = renderToStaticMarkup(createElement(Header));
   for (const href of ["/", "/training/hyrox", "/#search-section", "/#popular-programs", "/#map-section", "/favorites"]) {
     assert.match(markup, new RegExp(`href="${href.replace("/", "\\/")}"`));
   }
-  assert.match(markup, /GymMapの主要ナビゲーション/);
-  assert.match(markup, /Lessonのナビゲーション/);
-  assert.match(markup, /Lesson お気に入り/);
+  assert.match(markup, /GymMapのドメインナビゲーション/);
+  assert.match(markup, /レッスンを探す/);
+  assert.match(markup, /レッスン/);
+  assert.match(markup, />HYROX</);
+  assert.match(markup, /レッスン内のナビゲーション/);
+  assert.match(markup, /<summary>メニュー<\/summary>/);
+  assert.match(markup, /aria-current="page"/);
+  assert.doesNotMatch(markup, /スタジオレッスン検索/);
+  assert.doesNotMatch(markup, />Lesson(?: メニュー)?</);
+  assert.doesNotMatch(markup, /Lesson お気に入り|Lesson 地図/);
+});
+
+test("Header CSS hides Lesson-local navigation in HYROX context without clientification", () => {
+  const css = fs.readFileSync("src/app/globals.css", "utf8");
+  const headerSource = fs.readFileSync("src/components/layout/header.tsx", "utf8");
+
+  assert.match(css, /\.app-shell:has\(main \.hyrox-page\) \.header-lesson-menu\s*\{/);
+  assert.match(css, /\.app-shell:has\(main \.hyrox-page\) \.header-nav--hyrox-context\s*\{/);
+  assert.match(css, /\.header-nav--hyrox-context\s*\{\s*display: none;/);
+  assert.doesNotMatch(headerSource, /"use client"|usePathname|useState|useEffect/);
 });
 
 test("Lesson reference composition keeps its hierarchy outside CardSurface", () => {

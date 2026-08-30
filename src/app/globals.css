@@ -154,6 +154,7 @@ p {
 
 .brand-mark {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   gap: 10px;
   font-weight: 800;
@@ -195,20 +196,12 @@ p {
 }
 
 .brand-wording {
-  display: grid;
-  gap: 1px;
+  display: block;
 }
 
 .brand-wording strong {
   font-size: 1.2rem;
   letter-spacing: -0.02em;
-}
-
-.brand-wording small {
-  color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
 }
 
 .header-navigation,
@@ -226,6 +219,19 @@ p {
   gap: var(--space-1);
 }
 
+.header-nav--hyrox-context {
+  display: none;
+}
+
+.app-shell:has(main .hyrox-page) .header-nav--lesson-context,
+.app-shell:has(main .hyrox-page) .header-lesson-menu {
+  display: none;
+}
+
+.app-shell:has(main .hyrox-page) .header-nav--hyrox-context {
+  display: flex;
+}
+
 .header-nav a {
   display: inline-flex;
   min-height: 44px;
@@ -238,9 +244,13 @@ p {
   font-weight: 700;
 }
 
-.header-nav .header-domain-link {
+.header-nav .header-domain-link.is-active {
   background: var(--navy);
   color: #fff;
+}
+
+.header-lesson-label--mobile {
+  display: none;
 }
 
 .header-favorite-link {
@@ -260,7 +270,7 @@ p {
   color: var(--accent-dark);
 }
 
-.header-nav .header-domain-link:hover {
+.header-nav .header-domain-link.is-active:hover {
   background: #243456;
   color: #fff;
 }
@@ -275,9 +285,9 @@ p {
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  background: var(--panel-strong);
+  background: transparent;
   color: var(--text);
   cursor: pointer;
   font-size: 0.86rem;
@@ -297,7 +307,7 @@ p {
 
 .header-lesson-menu[open] summary,
 .header-lesson-menu summary:hover {
-  border-color: var(--accent);
+  border-color: transparent;
   background: var(--accent-soft);
 }
 
@@ -2821,10 +2831,6 @@ p {
     font-size: 1rem;
   }
 
-  .brand-wording small {
-    display: none;
-  }
-
   .header-nav {
     gap: 2px;
     flex-wrap: nowrap;
@@ -2838,6 +2844,14 @@ p {
 
   .header-navigation {
     gap: 3px;
+  }
+
+  .header-lesson-label--desktop {
+    display: none;
+  }
+
+  .header-lesson-label--mobile {
+    display: inline;
   }
 
   .header-lesson-menu summary {
@@ -3154,17 +3168,19 @@ p {
 }
 
 @media (max-width: 420px) {
-  .brand-wording {
-    display: none;
+  .brand-symbol {
+    width: 32px;
+    height: 32px;
   }
 
+  .brand-wording strong {
+    font-size: 0.95rem;
+  }
+
+  .header-nav a,
   .header-lesson-menu summary {
-    font-size: 0;
-  }
-
-  .header-lesson-menu summary::before {
-    content: "Lesson";
-    font-size: 0.74rem;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 }
 
