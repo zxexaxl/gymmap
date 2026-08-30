@@ -66,3 +66,38 @@ test("U3-LB keeps brand discovery on the existing Search query rather than addin
   assert.equal(fs.existsSync("src/app/brands"), false);
   assert.equal(fs.existsSync("src/app/brand"), false);
 });
+
+test("U3-LC preserves the Lesson favorites storage key, identifier format, limit, and event contract", () => {
+  const favoritePrograms = read("src/lib/favorite-programs.ts");
+  const subscription = read("src/components/favorites/use-favorite-programs.ts");
+
+  assert.match(favoritePrograms, /gymmap:favorite-programs:v1/);
+  assert.match(favoritePrograms, /id: string/);
+  assert.match(favoritePrograms, /slug: string/);
+  assert.match(favoritePrograms, /name: string/);
+  assert.match(favoritePrograms, /maximumFavoritePrograms = 8/);
+  assert.match(favoritePrograms, /window\.localStorage\.setItem/);
+  assert.match(favoritePrograms, /favorites\.filter\(\(item\) => item\.id !== program\.id\)/);
+  assert.match(favoritePrograms, /\[\.\.\.favorites, program\]/);
+  assert.match(subscription, /addEventListener\("storage", callback\)/);
+  assert.match(subscription, /favoriteProgramsChangedEvent/);
+});
+
+test("U3-LC keeps weekly schedule API and provides accessible populated and empty continuations", () => {
+  const view = read("src/components/favorites/favorite-schedule-view.tsx");
+  const route = read("src/app/api/favorites/schedules/route.ts");
+  const button = read("src/components/favorites/favorite-program-button.tsx");
+
+  assert.match(view, /programId/);
+  assert.match(view, /startWeekday/);
+  assert.match(view, /params\.set\("area", appliedArea\)/);
+  assert.match(view, /href="\/#popular-programs"/);
+  assert.match(view, /href="\/search"/);
+  assert.match(view, /buildProgramPath\(program\.slug\)/);
+  assert.match(view, /href=\{`\/locations\/\$\{item\.location\.slug\}`\}/);
+  assert.match(route, /getFavoriteScheduleWeek\(programIds, area, startWeekday\)/);
+  assert.match(route, /\.slice\(0, 8\)/);
+  assert.match(route, /"Cache-Control": "private, no-store"/);
+  assert.match(button, /aria-pressed=\{isFavorite\}/);
+  assert.match(button, /aria-label=\{`\$\{name\}を\$\{isFavorite/);
+});
