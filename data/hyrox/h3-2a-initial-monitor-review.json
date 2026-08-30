@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-08-30T07:52:55Z",
+  "initial_artifact_sha256": "0968a221c8eb80f45956fae991338860595953e3a59da74a527e1387baedd70d",
+  "scope": {
+    "unique_records": 13,
+    "name_signals": 9,
+    "source_url_signals": 5,
+    "overlap": 1
+  },
+  "decision_summary": {
+    "expected_equivalent_name": 9,
+    "expected_equivalent_url": 5,
+    "material_name_drift": 0,
+    "material_source_url_drift": 0,
+    "multi_signal_material_drift": 0,
+    "unresolved": 0,
+    "monitor_rule_defect": "The initial monitor compared presentation-layer canonical names and URLs with Finder raw representations as if they had identical semantic roles. Exact reviewed equivalences are required."
+  },
+  "records": [
+    {
+      "hgy_id": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "location_id": "97215ab3-37fc-49a1-9d63-e02d730e87b7",
+      "location_slug": "ubx-1520004",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_4wRU1wOwpCjXj6RwKZq46kVfA", "https://www.provanet.co.jp/business/ubx/"],
+      "reason": "Japanese and romanized branch labels; exact address and coordinates match."
+    },
+    {
+      "hgy_id": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "location_id": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "location_slug": "hyrox-training-club-6340008",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G", "https://www.goldsgym.jp/shop/kashihara-nara/"],
+      "reason": "Official Gold's Gym page presents Kashihara Nara in Japanese and English."
+    },
+    {
+      "hgy_id": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "location_id": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "location_slug": "hyrox-training-club-3300062",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_LofMB67LwXKWbb4m2xQmqsqMD", "https://orangetheoryfitness.co.jp/urawa/index.html"],
+      "reason": "OTF abbreviation and Japanese brand label identify the same Urawa branch."
+    },
+    {
+      "hgy_id": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "location_id": "acd6dae7-fefc-497d-9ae2-dd308f2247db",
+      "location_slug": "ufc-gym-1670051",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_NGStYUdZn1ur6ZXx2gNf1MPCo", "https://ogikubo.ufcgym.co.jp/"],
+      "reason": "荻窪 and Ogikubo are the same official branch label; exact address and coordinates match."
+    },
+    {
+      "hgy_id": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "location_id": "1e1dc6eb-ec16-4850-978a-ac3c513f55ab",
+      "location_slug": "golds-gym-13150",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m", "https://www.goldsgym.jp/shop/harajuku-tokyo/"],
+      "reason": "Finder's katakana brand-prefixed label and GymMap's canonical branch name identify Harajuku Tokyo."
+    },
+    {
+      "hgy_id": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "location_id": "cd239ca3-1921-47d3-ba87-71925ec34616",
+      "location_slug": "port-tower-crossfit-6500003",
+      "original_signals": ["REVIEW_REQUIRED_SOURCE_URL"],
+      "name_review": null,
+      "url_review": "EXPECTED_EQUIVALENT_URL",
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg", "https://www.porttowercrossfit.com/"],
+      "reason": "Finder omits the URL scheme; the host resolves to the active reviewed first-party page."
+    },
+    {
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_e0rqkrg7L4ataPZD4gGoOL0W9", "https://yoga.ufcgym.co.jp/"],
+      "reason": "用賀 and YOGA are Japanese and romanized forms for the same UFC Gym branch."
+    },
+    {
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "original_signals": ["REVIEW_REQUIRED_SOURCE_URL"],
+      "name_review": null,
+      "url_review": "EXPECTED_EQUIVALENT_URL",
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis", "https://www.goldsgym.jp/shop/13210", "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/"],
+      "reason": "The official numeric route redirects to the active Hamamatsucho Tokyo canonical route."
+    },
+    {
+      "hgy_id": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "location_id": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "location_slug": "hyrox-training-club-1940022",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_h8B3zjgLhoVELa3YhExLIEuxq", "https://www.orangetheoryfitness.co.jp/machida/"],
+      "reason": "OTF abbreviation and Japanese brand label identify the same Machida branch."
+    },
+    {
+      "hgy_id": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "location_id": "90693dc2-ca66-4e9d-bd76-d7ad80d95d58",
+      "location_slug": "crossfit-kumamoto",
+      "original_signals": ["REVIEW_REQUIRED_SOURCE_URL"],
+      "name_review": null,
+      "url_review": "EXPECTED_EQUIVALENT_URL",
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg", "https://www.crossfitkumamoto.com/", "https://www.crossfitkumamoto.com/en"],
+      "reason": "The root and English-language route are the same active first-party facility authority."
+    },
+    {
+      "hgy_id": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "location_id": "867ece36-497f-4cbc-aae8-03e850e6514e",
+      "location_slug": "hyrox-training-club-3700001",
+      "original_signals": ["REVIEW_REQUIRED_NAME"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": null,
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_mAUikrooxzoDevlGFVY7yXt3l", "https://www.goldsgym.jp/shop/maebashi-inter/"],
+      "reason": "Japanese and English branch labels identify the same Gold's Gym Maebashi Inter facility."
+    },
+    {
+      "hgy_id": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "location_slug": "golds-gym-12131",
+      "original_signals": ["REVIEW_REQUIRED_NAME", "REVIEW_REQUIRED_SOURCE_URL"],
+      "name_review": "EXPECTED_EQUIVALENT_NAME",
+      "url_review": "EXPECTED_EQUIVALENT_URL",
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv", "https://www.goldsgym.jp/shop/12131", "https://www.goldsgym.jp/shop/makuhari-baypark-arena/"],
+      "reason": "English/Japanese names and numeric/canonical Gold's Gym routes identify the same branch and postal address."
+    },
+    {
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "original_signals": ["REVIEW_REQUIRED_SOURCE_URL"],
+      "name_review": null,
+      "url_review": "EXPECTED_EQUIVALENT_URL",
+      "material_drift": false,
+      "authority_evidence_urls": ["https://hyrox-training-finder.hyrox.com/gym/HGY_u1B3yXynkPyPxOuTQPXyjceFr", "https://www.freeleticsgoals.com/", "https://www.freeleticsgoals.com/en/"],
+      "reason": "The first-party root resolves to the active English-language facility route."
+    }
+  ]
+}

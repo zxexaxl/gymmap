@@ -15,6 +15,7 @@ Outputs are written to `.artifacts/hyrox-monitoring/`:
 - `hyrox-freshness-monitor-latest.json` — full baseline, observation, diff, and freshness result
 - `hyrox-freshness-monitor-latest.md` — concise human summary
 - `hyrox-freshness-review-queue.json` — records requiring human review only
+- `hyrox-freshness-reconfirmation-candidate.json` — current eligibility only; it must never be applied later without a new live observation and review
 
 Use `--output-dir=...` or `--checked-at=<ISO timestamp>` when a controlled output location or deterministic observation time is needed. Fixture runs use `--fixture=<path>` and do not contact production or external sources.
 
@@ -41,6 +42,8 @@ Coordinate changes become material at more than 1,000 metres. This deliberately 
 5. Escalate `HIGH` promptly and `CRITICAL` immediately. Retry transient source failures on a later run before inferring a business-state change.
 
 The weekly GitHub workflow uses only the public Supabase URL/key, performs GET/read-only queries, uploads a 30-day report artifact, and writes the Markdown summary to the Actions run summary. It creates no issues and performs no database mutations.
+
+Reviewed representation differences are stored as exact, per-HGY entries in `data/hyrox/h3-2a-monitor-authority-equivalences.json`. An entry applies only when its HGY ID, dimension, production baseline value, and observed value all match. A new name, URL, redirect target, or production baseline therefore alerts again; there are no wildcard aliases.
 
 Configure repository Actions variables named `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` before the first scheduled or manual run. Do not add a service-role key. The schedule runs Tuesdays at 02:17 UTC (11:17 JST); `workflow_dispatch` remains available for an operator-triggered run.
 
