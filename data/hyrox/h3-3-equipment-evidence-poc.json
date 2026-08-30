@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-08-30T08:21:49Z",
+  "sampleSha256": "d58b83b254e32a564443bbae46d832e1d5a74ae56f6e24dcf3a2ac854733e9ce",
+  "productionAuthority": {
+    "publishedOfficial": 82,
+    "publishedEquipment": 0,
+    "publishedCapabilities": 0
+  },
+  "facilities": [
+    {
+      "locationId": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "slug": "yoshiyuki-hirano-5770002",
+      "hgyId": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "name": "Yoshiyuki Hirano 善之 平野",
+      "brand": "Yoshiyuki Hirano 善之 平野",
+      "prefecture": "大阪府",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 10,
+      "sources": [
+        {
+          "ref": "field-hyrox",
+          "url": "https://www.field-gym.com/hyrox/",
+          "title": "大阪でHYROXをするなら",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q2",
+          "facilitySpecific": true,
+          "excerpt": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "field-hyrox",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "wall-ball-target", "farmers-carry-implements", "sandbag"],
+          "capabilities": ["discipline-coaching", "competition-simulation"],
+          "reason": "Brand first-party page ties East Osaka to the described HYROX equipment, performance coaching, and mock-race practice."
+        }
+      ],
+      "notes": "The brand page is branch-specific through its explicit East Osaka eligible-studio list; no dedicated lane claim was inferred."
+    },
+    {
+      "locationId": "c629c669-807e-4467-b638-cb1f97df8975",
+      "slug": "restore-base-2310806",
+      "hgyId": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "name": "RESTORE BASE",
+      "brand": "RESTORE BASE",
+      "prefecture": "神奈川県",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 3,
+      "reviewActions": 10,
+      "sources": [
+        {
+          "ref": "restore-class",
+          "url": "https://restorebase.jp/hyrox-class/",
+          "title": "RESTORE HYROXクラスについて",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "初心者向け基礎クラスと競技者向けアドバンスクラスを毎週開催。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        },
+        {
+          "ref": "restore-dropin",
+          "url": "https://restorebase.jp/appointment_trial/",
+          "title": "見学・無料体験予約について",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "HYROX用ファンクショナルエリアはドロップインで利用可能と案内。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        },
+        {
+          "ref": "restore-hyrox",
+          "url": "https://restorebase.jp/hyrox/",
+          "title": "HYROX",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "HYROX種目を説明し、施設でランニングとファンクショナルトレーニングの練習が可能と案内。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "restore-class",
+          "classification": "CONFIRMED_CANDIDATE",
+          "capabilities": ["discipline-coaching"],
+          "reason": "Facility-specific coached HYROX classes are explicit."
+        },
+        {
+          "sourceRef": "restore-dropin",
+          "classification": "CONFIRMED_CANDIDATE",
+          "capabilities": ["open-training"],
+          "reason": "The facility explicitly permits independent use of its HYROX functional area through drop-in access."
+        },
+        {
+          "sourceRef": "restore-hyrox",
+          "classification": "REVIEW_REQUIRED",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "wall-ball-target", "farmers-carry-implements", "sandbag"],
+          "reason": "The page lists race stations before describing facility practice, but does not unambiguously state that every named item is installed."
+        }
+      ],
+      "notes": "Capability evidence is direct; the equipment list remains deliberately ambiguous."
+    },
+    {
+      "locationId": "23d0e430-6eda-44d8-aef6-f8a3aa99f06c",
+      "slug": "samifitness-1060047",
+      "hgyId": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "name": "SamiFitness",
+      "brand": "SamiFitness",
+      "prefecture": "東京都",
+      "sourceSurface": "partial_first_party",
+      "automationClass": "SEMI_AUTOMATED",
+      "pagesInspected": 1,
+      "reviewActions": 2,
+      "sources": [
+        {
+          "ref": "sami-home",
+          "url": "https://samifitnesstokyo.com/",
+          "title": "Sami TRX Tokyo",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "Personal training may use a row machine, TRX and functional movement training.",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "sami-home",
+          "classification": "REVIEW_REQUIRED",
+          "equipment": ["row-erg"],
+          "reason": "A row machine is explicit, but the source does not establish the current RowErg-compatible equipment identity."
+        }
+      ],
+      "notes": "No HYROX-specific equipment access or capability statement was found within the budget."
+    },
+    {
+      "locationId": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "slug": "luaana-club-1460082",
+      "hgyId": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "name": "LUAANA CLUB 蒲田池上店",
+      "brand": "LUAANA CLUB 蒲田池上店",
+      "prefecture": "東京都",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 4,
+      "sources": [
+        {
+          "ref": "luaana-home",
+          "url": "https://www.luaanaclub.com/",
+          "title": "LUAANA CLUB 蒲田池上店",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "HYROXクラスと、施設設備を自由に使えるOPEN GYMを明記。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "luaana-home",
+          "classification": "CONFIRMED_CANDIDATE",
+          "capabilities": ["open-training", "discipline-coaching"],
+          "reason": "Facility-specific HYROX coaching and independent equipment use are both explicit."
+        }
+      ],
+      "notes": "The page does not name current taxonomy equipment, so none was inferred."
+    },
+    {
+      "locationId": "83a8de7f-36e4-4ece-bd31-a0e98b295ff8",
+      "slug": "beyond-4300924",
+      "hgyId": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "name": "BEYOND 浜松店",
+      "brand": "BEYOND",
+      "prefecture": "静岡県",
+      "sourceSurface": "no_useful_source",
+      "automationClass": "MANUAL_HEAVY",
+      "pagesInspected": 1,
+      "reviewActions": 1,
+      "sources": [],
+      "claimGroups": [],
+      "notes": "The first-party branch page exposes customer-review HYROX mentions but no facility-authored explicit equipment or capability claim."
+    },
+    {
+      "locationId": "5326a371-18d2-4c51-9109-e59242521f16",
+      "slug": "takamatsu-crossfit",
+      "hgyId": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "name": "Takamatsu CrossFit",
+      "brand": "Takamatsu CrossFit",
+      "prefecture": "香川県",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 8,
+      "sources": [
+        {
+          "ref": "takamatsu-hyrox",
+          "url": "https://takamatsu-crossfit.jp/hyrox/",
+          "title": "HYROXクラス",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "HYROXクラスで各ワークアウト動作とフォームを指導すると説明。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "takamatsu-hyrox",
+          "classification": "CONFIRMED_CANDIDATE",
+          "capabilities": ["discipline-coaching"],
+          "reason": "Facility-specific coached HYROX class is explicit."
+        },
+        {
+          "sourceRef": "takamatsu-hyrox",
+          "classification": "REVIEW_REQUIRED",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "wall-ball-target", "farmers-carry-implements"],
+          "reason": "The page introduces HYROX stations and coached movements but does not clearly assert permanent installation of every named item."
+        }
+      ],
+      "notes": "No equipment candidate is promoted solely from the class description."
+    },
+    {
+      "locationId": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "slug": "ufc-gym-1580096",
+      "hgyId": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "name": "UFC Gym 用賀",
+      "brand": "UFC GYM",
+      "prefecture": "東京都",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 1,
+      "reviewActions": 11,
+      "sources": [
+        {
+          "ref": "ufc-yoga-hyrox",
+          "url": "https://yoga.ufcgym.co.jp/hyrox/",
+          "title": "HYROX TRAINING | UFC Gym 用賀",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "ufc-yoga-hyrox",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "wall-ball-target", "farmers-carry-implements", "sandbag", "functional-training-lane"],
+          "capabilities": ["open-training", "discipline-coaching", "sled-push-pull-space"],
+          "reason": "The facility page directly enumerates equipment, lane, coached class, and self-training access."
+        }
+      ],
+      "notes": "No treadmill or running-track claim was inferred."
+    },
+    {
+      "locationId": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "slug": "golds-gym-13210",
+      "hgyId": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "name": "浜松町東京",
+      "brand": "Gold's Gym",
+      "prefecture": "東京都",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 9,
+      "sources": [
+        {
+          "ref": "golds-hamamatsucho",
+          "url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+          "title": "浜松町東京",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q2",
+          "facilitySpecific": true,
+          "excerpt": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "golds-hamamatsucho",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "farmers-carry-implements", "sandbag", "treadmill"],
+          "capabilities": ["discipline-coaching"],
+          "reason": "Branch-specific official page directly enumerates equipment and coached HYROX workouts."
+        }
+      ],
+      "notes": "Wall balls are named, but a wall-ball target is not explicit, so that taxonomy claim is omitted."
+    },
+    {
+      "locationId": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "slug": "stance-fitness-2nd",
+      "hgyId": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "name": "STANCE FITNESS ２ND",
+      "brand": "STANCE FITNESS",
+      "prefecture": "京都府",
+      "sourceSurface": "no_useful_source",
+      "automationClass": "MANUAL_HEAVY",
+      "pagesInspected": 1,
+      "reviewActions": 1,
+      "sources": [],
+      "claimGroups": [],
+      "notes": "The first-party site describes 24-hour fitness and personal training but no explicit HYROX equipment or capability."
+    },
+    {
+      "locationId": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "slug": "golds-gym-71221",
+      "hgyId": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "name": "東陽町スーパーセンター",
+      "brand": "Gold's Gym",
+      "prefecture": "東京都",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 11,
+      "sources": [
+        {
+          "ref": "golds-toyocho",
+          "url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+          "title": "東陽町スーパーセンター",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q2",
+          "facilitySpecific": true,
+          "excerpt": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "golds-toyocho",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["row-erg", "weighted-sled", "farmers-carry-implements", "sandbag", "functional-training-lane", "treadmill", "running-track"],
+          "capabilities": ["open-training", "sled-push-pull-space"],
+          "reason": "Branch page enumerates installed items and dedicated turf; scheduled exclusive periods imply ordinary member use outside reservations."
+        }
+      ],
+      "notes": "SkiErg and wall-ball-target are not inferred from the phrase 'all eight stations'."
+    },
+    {
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "slug": "golds-gym-12131",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "name": "幕張ベイパークアリーナ",
+      "brand": "Gold's Gym",
+      "prefecture": "千葉県",
+      "sourceSurface": "official_secondary_only",
+      "automationClass": "SEMI_AUTOMATED",
+      "pagesInspected": 1,
+      "reviewActions": 2,
+      "sources": [
+        {
+          "ref": "golds-makuhari-social",
+          "url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+          "title": "幕張ベイパークアリーナ",
+          "sourceKind": "social_post",
+          "publisherAuthority": "official_social",
+          "quality": "Q3",
+          "facilitySpecific": true,
+          "excerpt": "店舗公式social feedでHYROX farmers carryの導入重量を紹介。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "golds-makuhari-social",
+          "classification": "REVIEW_REQUIRED",
+          "equipment": ["farmers-carry-implements"],
+          "reason": "The facility-specific official social signal is strong but remains Q3 and requires production review."
+        }
+      ],
+      "notes": "No social-only claim is auto-promoted."
+    },
+    {
+      "locationId": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "slug": "hyrox-training-club-2130001",
+      "hgyId": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "name": "オレンジセオリーフィットネス溝の口",
+      "brand": "Orangetheory Fitness",
+      "prefecture": "神奈川県",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 9,
+      "sources": [
+        {
+          "ref": "otf-hyrox",
+          "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+          "title": "オレンジセオリー HYROX",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q2",
+          "facilitySpecific": true,
+          "excerpt": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "otf-hyrox",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["row-erg", "weighted-sled", "farmers-carry-implements", "sandbag", "treadmill"],
+          "capabilities": ["discipline-coaching", "competition-simulation"],
+          "reason": "Brand first-party page covers its HYROX branches, and the Mizonokuchi page independently confirms its HYROX class."
+        }
+      ],
+      "notes": "Wall balls are named, but the target itself is not explicit."
+    },
+    {
+      "locationId": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "slug": "freeletics-goals-2310011",
+      "hgyId": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "name": "Freeletics Goals",
+      "brand": "Freeletics Goals",
+      "prefecture": "神奈川県",
+      "sourceSurface": "rich_first_party",
+      "automationClass": "AUTOMATABLE",
+      "pagesInspected": 2,
+      "reviewActions": 7,
+      "sources": [
+        {
+          "ref": "freeletics-hyrox",
+          "url": "https://www.freeleticsgoals.com/ja/hyrox/",
+          "title": "横浜のHYROXジム",
+          "sourceKind": "facility_page",
+          "publisherAuthority": "facility_official",
+          "quality": "Q1",
+          "facilitySpecific": true,
+          "excerpt": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "freeletics-hyrox",
+          "classification": "CONFIRMED_CANDIDATE",
+          "equipment": ["ski-erg", "row-erg", "weighted-sled", "farmers-carry-implements", "sandbag"],
+          "capabilities": ["discipline-coaching"],
+          "reason": "Facility first-party page ties the listed workouts and trial class to this gym."
+        }
+      ],
+      "notes": "Wall balls are named, but a wall-ball target is not explicit."
+    },
+    {
+      "locationId": "611fbcc9-2fa4-46cb-9963-e03c2a414ae3",
+      "slug": "meiji-park-1600013",
+      "hgyId": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "name": "MEIJI PARK",
+      "brand": "MEIJI PARK",
+      "prefecture": "東京都",
+      "sourceSurface": "no_useful_source",
+      "automationClass": "MANUAL_HEAVY",
+      "pagesInspected": 2,
+      "reviewActions": 2,
+      "sources": [],
+      "claimGroups": [],
+      "notes": "The official park site shows time-limited hybrid-training events but no persistent facility equipment or access claim."
+    },
+    {
+      "locationId": "dbeed152-b421-4f15-acf8-8586a5a85aa7",
+      "slug": "truefitness-5640027",
+      "hgyId": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "name": "TrueFitness 吹田",
+      "brand": "TrueFitness 吹田",
+      "prefecture": "大阪府",
+      "sourceSurface": "partial_first_party",
+      "automationClass": "SEMI_AUTOMATED",
+      "pagesInspected": 2,
+      "reviewActions": 3,
+      "sources": [
+        {
+          "ref": "true-hyrox-social",
+          "url": "https://true-f.com/",
+          "title": "TrueFitness",
+          "sourceKind": "social_post",
+          "publisherAuthority": "official_social",
+          "quality": "Q3",
+          "facilitySpecific": true,
+          "excerpt": "公式site topicと埋込み公式socialが2026年7月開始のHYROXクラスを案内。",
+          "observedAt": "2026-08-30T08:21:49Z"
+        }
+      ],
+      "claimGroups": [
+        {
+          "sourceRef": "true-hyrox-social",
+          "classification": "REVIEW_REQUIRED",
+          "capabilities": ["discipline-coaching"],
+          "reason": "The signal is facility-controlled but details are social/topic based and remain Q3 review-required."
+        }
+      ],
+      "notes": "No equipment claim is inferred from a class announcement."
+    }
+  ]
+}

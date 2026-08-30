@@ -12,6 +12,8 @@
     "import:central": "tsx scripts/experimental/import-central-extraction.ts",
     "summary:jexer": "tsx scripts/experimental/summarize-jexer-extraction.ts",
     "hyrox:monitor": "tsx scripts/hyrox/monitor-freshness.ts",
+    "hyrox:equipment-poc": "tsx scripts/hyrox/build-equipment-evidence-poc.ts",
+    "hyrox:equipment-poc:verify": "tsx scripts/hyrox/collect-equipment-evidence-poc.ts",
     "start": "next start",
     "lint": "eslint .",
     "test": "tsx --test src/lib/__tests__/*.test.ts",

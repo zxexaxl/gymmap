@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "selectedAt": "2026-08-30T08:17:20Z",
+  "sourceAuthority": {
+    "originMain": "f1f503ec8e028fb219a1065b0e4e0a1a237522ee",
+    "publishedOfficialCount": 82,
+    "selectionSeed": "h3-3-equipment-evidence-poc-v1"
+  },
+  "selectionMethod": {
+    "description": "SHA-256 rank of selectionSeed:HGY_ID within four frozen strata",
+    "strata": [
+      { "geography": "tokyo", "organization": "multi-location-chain", "count": 3 },
+      { "geography": "tokyo", "organization": "independent-single-location", "count": 3 },
+      { "geography": "non-tokyo", "organization": "multi-location-chain", "count": 3 },
+      { "geography": "non-tokyo", "organization": "independent-single-location", "count": 6 }
+    ]
+  },
+  "locations": [
+    {
+      "locationId": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "slug": "yoshiyuki-hirano-5770002",
+      "hgyId": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "name": "Yoshiyuki Hirano 善之 平野",
+      "brand": "Yoshiyuki Hirano 善之 平野",
+      "prefecture": "大阪府",
+      "officialUrl": "https://www.field-gym.com/higashiosaka/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "0016239b0322550c4d2cec14887fc200feafe6644adc8513ce2d7561e2cc9988"
+    },
+    {
+      "locationId": "c629c669-807e-4467-b638-cb1f97df8975",
+      "slug": "restore-base-2310806",
+      "hgyId": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "name": "RESTORE BASE",
+      "brand": "RESTORE BASE",
+      "prefecture": "神奈川県",
+      "officialUrl": "https://restorebase.jp/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "1d7a9becee0d50ff1ecdb108f31737793ebd52ce298f008b00d95e5b5aec7559"
+    },
+    {
+      "locationId": "23d0e430-6eda-44d8-aef6-f8a3aa99f06c",
+      "slug": "samifitness-1060047",
+      "hgyId": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "name": "SamiFitness",
+      "brand": "SamiFitness",
+      "prefecture": "東京都",
+      "officialUrl": "https://samifitnesstokyo.com/",
+      "selectionStrata": ["tokyo", "independent-single-location"],
+      "selectionRank": "290382a6d889e27f368cd03eeb4143c950bf1b4ca45424b0af35f4e13111a774"
+    },
+    {
+      "locationId": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "slug": "luaana-club-1460082",
+      "hgyId": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "name": "LUAANA CLUB 蒲田池上店",
+      "brand": "LUAANA CLUB 蒲田池上店",
+      "prefecture": "東京都",
+      "officialUrl": "https://www.luaanaclub.com/",
+      "selectionStrata": ["tokyo", "independent-single-location"],
+      "selectionRank": "192c964fe137ba47de448071d99aed2f0a1c6c41a17d52fc35e0b6a591845e12"
+    },
+    {
+      "locationId": "83a8de7f-36e4-4ece-bd31-a0e98b295ff8",
+      "slug": "beyond-4300924",
+      "hgyId": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "name": "BEYOND 浜松店",
+      "brand": "BEYOND",
+      "prefecture": "静岡県",
+      "officialUrl": "https://beyond-gym.com/gym/gym-hamamatsu/",
+      "selectionStrata": ["non-tokyo", "multi-location-chain"],
+      "selectionRank": "0b095eadbc5f09f08e2c4496337eab2a92bbc9ca2c9aef33270d1692bc211173"
+    },
+    {
+      "locationId": "5326a371-18d2-4c51-9109-e59242521f16",
+      "slug": "takamatsu-crossfit",
+      "hgyId": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "name": "Takamatsu CrossFit",
+      "brand": "Takamatsu CrossFit",
+      "prefecture": "香川県",
+      "officialUrl": "https://takamatsu-crossfit.jp/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "17a823e574ece5f57b9dbe6e6649b45fad325c9d229f33ddb7b37a31e10c228d"
+    },
+    {
+      "locationId": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "slug": "ufc-gym-1580096",
+      "hgyId": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "name": "UFC Gym 用賀",
+      "brand": "UFC GYM",
+      "prefecture": "東京都",
+      "officialUrl": "https://yoga.ufcgym.co.jp/",
+      "selectionStrata": ["tokyo", "multi-location-chain"],
+      "selectionRank": "2433c749399382f5c5f7a3c5993fcd184ca75d21dfe522dbb4656b184457e426"
+    },
+    {
+      "locationId": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "slug": "golds-gym-13210",
+      "hgyId": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "name": "浜松町東京",
+      "brand": "Gold's Gym",
+      "prefecture": "東京都",
+      "officialUrl": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "selectionStrata": ["tokyo", "multi-location-chain"],
+      "selectionRank": "391b830fcb04de951ca2e7640a213ea4ba0cc370ce9259b851d9ce3c6548f928"
+    },
+    {
+      "locationId": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "slug": "stance-fitness-2nd",
+      "hgyId": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "name": "STANCE FITNESS ２ND",
+      "brand": "STANCE FITNESS",
+      "prefecture": "京都府",
+      "officialUrl": "https://stance-design.jp/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "172c8dbb8b8a781e1745de56a13b8071b6d04bfad928696531b2824b4617a1d5"
+    },
+    {
+      "locationId": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "slug": "golds-gym-71221",
+      "hgyId": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "name": "東陽町スーパーセンター",
+      "brand": "Gold's Gym",
+      "prefecture": "東京都",
+      "officialUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "selectionStrata": ["tokyo", "multi-location-chain"],
+      "selectionRank": "08c44a7e609180399dd2c9eb0b4edaadc63d43d8839ce237a5fe0b77da1c115c"
+    },
+    {
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "slug": "golds-gym-12131",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "name": "幕張ベイパークアリーナ",
+      "brand": "Gold's Gym",
+      "prefecture": "千葉県",
+      "officialUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "selectionStrata": ["non-tokyo", "multi-location-chain"],
+      "selectionRank": "133e535e6825f44cb5abf3391b6de11a75a94cafb0df4016bebba16a42880ea0"
+    },
+    {
+      "locationId": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "slug": "hyrox-training-club-2130001",
+      "hgyId": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "name": "オレンジセオリーフィットネス溝の口",
+      "brand": "Orangetheory Fitness",
+      "prefecture": "神奈川県",
+      "officialUrl": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "selectionStrata": ["non-tokyo", "multi-location-chain"],
+      "selectionRank": "07aa01d8f4783a538e19ce94256d2bfd035a43b456b1be5e3bcae414559441d4"
+    },
+    {
+      "locationId": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "slug": "freeletics-goals-2310011",
+      "hgyId": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "name": "Freeletics Goals",
+      "brand": "Freeletics Goals",
+      "prefecture": "神奈川県",
+      "officialUrl": "https://www.freeleticsgoals.com/en/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "211b40bd29c820b8fe7c222662a826a8773076e6ea9e76f3d9031d930eb3e1be"
+    },
+    {
+      "locationId": "611fbcc9-2fa4-46cb-9963-e03c2a414ae3",
+      "slug": "meiji-park-1600013",
+      "hgyId": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "name": "MEIJI PARK",
+      "brand": "MEIJI PARK",
+      "prefecture": "東京都",
+      "officialUrl": "https://www.meiji-park.com/",
+      "selectionStrata": ["tokyo", "independent-single-location"],
+      "selectionRank": "28ec40d0bf610a2d3eb8e3284c228b09862fd9b38e4f03cde60d6c77fbba3808"
+    },
+    {
+      "locationId": "dbeed152-b421-4f15-acf8-8586a5a85aa7",
+      "slug": "truefitness-5640027",
+      "hgyId": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "name": "TrueFitness 吹田",
+      "brand": "TrueFitness 吹田",
+      "prefecture": "大阪府",
+      "officialUrl": "https://true-f.com/",
+      "selectionStrata": ["non-tokyo", "independent-single-location"],
+      "selectionRank": "0b5b3b6a9916c18e1ebae88ce5a0b5fab72be0adde1a4f243642e295f34516ab"
+    }
+  ]
+}
