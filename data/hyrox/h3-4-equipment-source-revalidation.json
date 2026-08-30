@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-30T09:20:04Z",
+  "method": "Bounded read-only GET of the exact ten H3-3 confirmed source URLs, followed by facility-context and evidence-marker review.",
+  "source_drift_count": 0,
+  "sources": [
+    {
+      "source_ref": "field-hyrox",
+      "url": "https://www.field-gym.com/hyrox/",
+      "final_url": "https://www.field-gym.com/hyrox/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["東大阪スタジオ"],
+        ["スレッドプッシュ"],
+        ["ローイング"],
+        ["模擬レース形式"],
+        ["HYROXパフォーマンスコーチ"]
+      ]
+    },
+    {
+      "source_ref": "restore-class",
+      "url": "https://restorebase.jp/hyrox-class/",
+      "final_url": "https://restorebase.jp/hyrox-class/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [["HYROXクラス"], ["初心者"], ["参加"]]
+    },
+    {
+      "source_ref": "restore-dropin",
+      "url": "https://restorebase.jp/appointment_trial/",
+      "final_url": "https://restorebase.jp/appointment_trial/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [["ファンクショナルエリア（HYROXエリア）"], ["ドロップイン"]]
+    },
+    {
+      "source_ref": "luaana-home",
+      "url": "https://www.luaanaclub.com/",
+      "final_url": "https://www.luaanaclub.com/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [["HYROX Class"], ["OPEN GYM"], ["施設の設備を自由に使い"]]
+    },
+    {
+      "source_ref": "takamatsu-hyrox",
+      "url": "https://takamatsu-crossfit.jp/hyrox/",
+      "final_url": "https://takamatsu-crossfit.jp/hyrox/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [["HYROXクラス"], ["各ワークアウトの動作"], ["フォーム"]]
+    },
+    {
+      "source_ref": "ufc-yoga-hyrox",
+      "url": "https://yoga.ufcgym.co.jp/hyrox/",
+      "final_url": "https://yoga.ufcgym.co.jp/hyrox/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["Concept2 SkiErg"],
+        ["Sled / weight plates"],
+        ["StairMaster HIIT ROWER"],
+        ["フラットトレーニングレーン", "flat training lane"],
+        ["自主トレーニング", "SELF TRAINING"]
+      ]
+    },
+    {
+      "source_ref": "golds-hamamatsucho",
+      "url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "final_url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["SkiErg"],
+        ["RowErg"],
+        ["スレッド"],
+        ["ファーマーズキャリー"],
+        ["サンドバッグ"],
+        ["HYROX START"]
+      ]
+    },
+    {
+      "source_ref": "golds-toyocho",
+      "url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "final_url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["HYROX専用ターフ"],
+        ["スレッド"],
+        ["ローイングマシン"],
+        ["ケトルベル"],
+        ["サンドバック", "サンドバッグ"],
+        ["ウォールボール"]
+      ]
+    },
+    {
+      "source_ref": "otf-hyrox",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "final_url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["溝の口スタジオ"],
+        ["本番さながら"],
+        ["認定コーチ"],
+        ["SLED PUSH"],
+        ["ROWING"],
+        ["FARMERS CARRY", "FARMER’S CARRY", "FARMER'S CARRY", "ファーマーズキャリー"]
+      ]
+    },
+    {
+      "source_ref": "freeletics-hyrox",
+      "url": "https://www.freeleticsgoals.com/ja/hyrox/",
+      "final_url": "https://www.freeleticsgoals.com/ja/hyrox/",
+      "http_status": 200,
+      "authority_match": true,
+      "content_basis_present": true,
+      "marker_groups": [
+        ["SkiErg"],
+        ["Sled Push"],
+        ["Rowing"],
+        ["Farmers Carry"],
+        ["Sandbag Lunges"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "executed_at": "2026-08-30T09:31:40Z",
+  "environment": "isolated local PostgreSQL",
+  "postgresql_version": "17.6",
+  "database_guard": "^gymmap_h3_4_rehearsal",
+  "migrations": "0001-0010",
+  "candidate_hash": "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8",
+  "production_write": false,
+  "baseline": {
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "training_sources": 82,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "training_evidence": 164
+  },
+  "first_pass_delta": {
+    "training_sources": 10,
+    "location_equipment": 36,
+    "location_training_capabilities": 16,
+    "training_evidence": 52
+  },
+  "publication": {
+    "published_equipment": 36,
+    "equipment_positive_facilities": 6,
+    "published_capabilities": 16,
+    "capability_positive_facilities": 9,
+    "open_training_positive_facilities": 4,
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "search_total": 82
+  },
+  "second_pass_delta": {
+    "training_sources": 0,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "training_evidence": 0,
+    "freshness_changes": 0
+  },
+  "conflict_fixtures": {
+    "source_wrong_location": "PASS_FAIL_CLOSED",
+    "equipment_semantic_conflict": "PASS_FAIL_CLOSED",
+    "capability_semantic_conflict": "PASS_FAIL_CLOSED",
+    "evidence_target_collision": "PASS_FAIL_CLOSED",
+    "freshness_regression": "PASS_FAIL_CLOSED"
+  },
+  "rollback": {
+    "training_sources": 82,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "training_evidence": 164,
+    "published_equipment": 0,
+    "published_capabilities": 0,
+    "search_total": 82,
+    "result": "PASS"
+  },
+  "result": "PASS"
+}

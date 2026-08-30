@@ -1,0 +1,2090 @@
+{
+  "schema_version": 1,
+  "preview_only": true,
+  "authority": {
+    "origin_main": "f1f503ec8e028fb219a1065b0e4e0a1a237522ee",
+    "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+    "h3_3_sample_sha256": "d58b83b254e32a564443bbae46d832e1d5a74ae56f6e24dcf3a2ac854733e9ce",
+    "h3_4_source_observed_at": "2026-08-30T09:20:04Z",
+    "production_preflight_observed_at": "2026-08-30T09:20:04Z"
+  },
+  "counts": {
+    "sample_facilities": 15,
+    "enriched_facilities": 9,
+    "training_sources": 10,
+    "location_equipment": 36,
+    "location_training_capabilities": 16,
+    "training_evidence": 52,
+    "excluded_review_required": 14,
+    "negative_claims": 0
+  },
+  "import_policy": {
+    "advisory_lock_key": "gymmap:hyrox:h3-4:equipment-evidence-import",
+    "atomic_transaction": true,
+    "dependency_order": [
+      "training_sources",
+      "location_equipment",
+      "location_training_capabilities",
+      "training_evidence"
+    ],
+    "first_import_requires_clean_collision_preflight": true,
+    "exact_rerun_is_idempotent": true,
+    "semantic_conflict": "BLOCK"
+  },
+  "freshness_policy": {
+    "physical_equipment_days": 180,
+    "open_training_days": 90,
+    "discipline_coaching_days": 90,
+    "sled_push_pull_space_days": 90,
+    "competition_simulation_days": 30
+  },
+  "production_baseline": {
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "training_sources": 82,
+    "training_evidence": 164,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "program_training_disciplines_hyrox": 0
+  },
+  "sources": [
+    {
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "h3_3_source_ref": "field-hyrox",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "url": "https://www.field-gym.com/hyrox/",
+      "canonical_url": "https://www.field-gym.com/hyrox/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "7e248709d849a323a97b7dc8c233e9198f7520669b5de206a1f9122697b6c8d2",
+      "metadata_json": {
+        "evidence_quality": "Q2",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "field-hyrox"
+      }
+    },
+    {
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-class",
+      "h3_3_source_ref": "restore-class",
+      "location_id": "c629c669-807e-4467-b638-cb1f97df8975",
+      "hgy_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "url": "https://restorebase.jp/hyrox-class/",
+      "canonical_url": "https://restorebase.jp/hyrox-class/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "e882f00bd0b3ecd2eb992a0b663349ca3d4ea45f7e5544195dd912b53dcf1863",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "restore-class"
+      }
+    },
+    {
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-dropin",
+      "h3_3_source_ref": "restore-dropin",
+      "location_id": "c629c669-807e-4467-b638-cb1f97df8975",
+      "hgy_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "url": "https://restorebase.jp/appointment_trial/",
+      "canonical_url": "https://restorebase.jp/appointment_trial/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "57a2bd1b0d4634867573bc6521c91142d5c7d3720d314b269ab0c38f2ae7c005",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "restore-dropin"
+      }
+    },
+    {
+      "source_ref": "source:HGY_7FDA3W6p88v6evTHGBhfHFrvP:luaana-home",
+      "h3_3_source_ref": "luaana-home",
+      "location_id": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "hgy_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "url": "https://www.luaanaclub.com/",
+      "canonical_url": "https://www.luaanaclub.com/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "73870bf42dc44d97d8b3c3419b5e72c7d6a5862ac768714b23dd1feb8dbffcca",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "luaana-home"
+      }
+    },
+    {
+      "source_ref": "source:HGY_c816ru6QeTv14At3O51pjK8au:takamatsu-hyrox",
+      "h3_3_source_ref": "takamatsu-hyrox",
+      "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "hgy_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "url": "https://takamatsu-crossfit.jp/hyrox/",
+      "canonical_url": "https://takamatsu-crossfit.jp/hyrox/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "1c8872f6b7c7584cd7f44890b4109d85e77fa6e531e46ec8ede951d93f8c6e24",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "takamatsu-hyrox"
+      }
+    },
+    {
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "h3_3_source_ref": "ufc-yoga-hyrox",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "url": "https://yoga.ufcgym.co.jp/hyrox/",
+      "canonical_url": "https://yoga.ufcgym.co.jp/hyrox/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "c969f10d39694ef83c1ba570c1d56e664ba0b70ebe3ebe16030a9a3cd2b3efa6",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "ufc-yoga-hyrox"
+      }
+    },
+    {
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "h3_3_source_ref": "golds-hamamatsucho",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "canonical_url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "80e815ce4a39d70383d46dcae5efd28e4549e46ec8c2bc6981bbbf6880b147a9",
+      "metadata_json": {
+        "evidence_quality": "Q2",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "golds-hamamatsucho"
+      }
+    },
+    {
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "h3_3_source_ref": "golds-toyocho",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "canonical_url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "2977c00cbe4399b9de5e78ea2efead8b6ef78bb4021bb0314abdb9a3439da33e",
+      "metadata_json": {
+        "evidence_quality": "Q2",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "golds-toyocho"
+      }
+    },
+    {
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "h3_3_source_ref": "otf-hyrox",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "canonical_url": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "4323a94a6dcde13fc4f265fae2c11b1a3806f44999e4bf12f2833f7d62d6ab47",
+      "metadata_json": {
+        "evidence_quality": "Q2",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "otf-hyrox"
+      }
+    },
+    {
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "h3_3_source_ref": "freeletics-hyrox",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "url": "https://www.freeleticsgoals.com/ja/hyrox/",
+      "canonical_url": "https://www.freeleticsgoals.com/ja/hyrox/",
+      "source_kind": "facility_page",
+      "publisher_authority": "facility_official",
+      "availability_state": "available",
+      "last_checked_at": "2026-08-30T09:20:04Z",
+      "review_required": false,
+      "content_hash": "481f5c9db81cd1eccaa7c228605e47bc56c0b74b300896e618edc265d7f6bbcf",
+      "metadata_json": {
+        "evidence_quality": "Q1",
+        "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+        "h3_3_source_ref": "freeletics-hyrox"
+      }
+    }
+  ],
+  "equipment": [
+    {
+      "equipment_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:farmers-carry-implements",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:row-erg",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:sandbag",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:treadmill",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "equipment_slug": "treadmill",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:weighted-sled",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:farmers-carry-implements",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:row-erg",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:sandbag",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:ski-erg",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:weighted-sled",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:farmers-carry-implements",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:row-erg",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:sandbag",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:ski-erg",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:treadmill",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "treadmill",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:weighted-sled",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:farmers-carry-implements",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:row-erg",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:sandbag",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:ski-erg",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:wall-ball-target",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "wall-ball-target",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:weighted-sled",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:farmers-carry-implements",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:functional-training-lane",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "functional-training-lane",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:row-erg",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:running-track",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "running-track",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:sandbag",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:treadmill",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "treadmill",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:weighted-sled",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:farmers-carry-implements",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:functional-training-lane",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "functional-training-lane",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:row-erg",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:sandbag",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:ski-erg",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:wall-ball-target",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "wall-ball-target",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    },
+    {
+      "equipment_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:weighted-sled",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "quantity": null,
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2027-02-26T09:20:04.000Z",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox"
+    }
+  ],
+  "capabilities": [
+    {
+      "capability_ref": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "discipline_slug": "hyrox",
+      "capability_slug": "competition-simulation",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-09-29T09:20:04.000Z",
+      "freshness_horizon_days": 30,
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "semantic_basis": "Reviewed first-party source describes repeatable mock-race or race-equivalent training, not a historical one-off event."
+    },
+    {
+      "capability_ref": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:discipline-coaching",
+      "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "location_slug": "hyrox-training-club-2130001",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:4a0b9292-1283-49ac-a3b2-c7bd38133a31:discipline-coaching",
+      "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "location_slug": "freeletics-goals-2310011",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:5326a371-18d2-4c51-9109-e59242521f16:discipline-coaching",
+      "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "location_slug": "takamatsu-crossfit",
+      "hgy_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_c816ru6QeTv14At3O51pjK8au:takamatsu-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:569aecf8-aa02-41da-b37a-7e2e20f160fb:discipline-coaching",
+      "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "location_slug": "golds-gym-13210",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:99abe458-52ae-44a4-8f1a-3f747ff9bfb8:discipline-coaching",
+      "location_id": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "location_slug": "luaana-club-1460082",
+      "hgy_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_7FDA3W6p88v6evTHGBhfHFrvP:luaana-home",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:99abe458-52ae-44a4-8f1a-3f747ff9bfb8:open-training",
+      "location_id": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "location_slug": "luaana-club-1460082",
+      "hgy_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "discipline_slug": "hyrox",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_7FDA3W6p88v6evTHGBhfHFrvP:luaana-home",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:c629c669-807e-4467-b638-cb1f97df8975:discipline-coaching",
+      "location_id": "c629c669-807e-4467-b638-cb1f97df8975",
+      "location_slug": "restore-base-2310806",
+      "hgy_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-class",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:c629c669-807e-4467-b638-cb1f97df8975:open-training",
+      "location_id": "c629c669-807e-4467-b638-cb1f97df8975",
+      "location_slug": "restore-base-2310806",
+      "hgy_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "discipline_slug": "hyrox",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-dropin",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "discipline_slug": "hyrox",
+      "capability_slug": "competition-simulation",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-09-29T09:20:04.000Z",
+      "freshness_horizon_days": 30,
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "semantic_basis": "Reviewed first-party source describes repeatable mock-race or race-equivalent training, not a historical one-off event."
+    },
+    {
+      "capability_ref": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:discipline-coaching",
+      "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "location_slug": "yoshiyuki-hirano-5770002",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:d75c411f-2b58-476d-aa68-f7bde9000002:open-training",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "discipline_slug": "hyrox",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:d75c411f-2b58-476d-aa68-f7bde9000002:sled-push-pull-space",
+      "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "location_slug": "golds-gym-71221",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "discipline_slug": "hyrox",
+      "capability_slug": "sled-push-pull-space",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:discipline-coaching",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "discipline_slug": "hyrox",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:open-training",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "discipline_slug": "hyrox",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "semantic_basis": null
+    },
+    {
+      "capability_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:sled-push-pull-space",
+      "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "location_slug": "ufc-gym-1580096",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "discipline_slug": "hyrox",
+      "capability_slug": "sled-push-pull-space",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-08-30T09:20:04Z",
+      "stale_at": "2026-11-28T09:20:04.000Z",
+      "freshness_horizon_days": 90,
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "semantic_basis": null
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_ref": "evidence:013fbb8b8ed2373d5009d308604c1baa4715bd16eb8d5a319aa76dd8baf1bdc7",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:4a0b9292-1283-49ac-a3b2-c7bd38133a31:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "013fbb8b8ed2373d5009d308604c1baa4715bd16eb8d5a319aa76dd8baf1bdc7"
+    },
+    {
+      "evidence_ref": "evidence:01bf8eb17130fd936038235bd99dcecbb5f9cd1a98f7fa3f117a0a6fe707d034",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "01bf8eb17130fd936038235bd99dcecbb5f9cd1a98f7fa3f117a0a6fe707d034"
+    },
+    {
+      "evidence_ref": "evidence:0231fd4d086e5de00f2922707e40f5556b61349bf7d45e2477c1e7b15dd16e21",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "0231fd4d086e5de00f2922707e40f5556b61349bf7d45e2477c1e7b15dd16e21"
+    },
+    {
+      "evidence_ref": "evidence:02c2f4b54c4a2f660f6d33e9a3b1c7b467de37461a9152160c6838128be9270c",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "02c2f4b54c4a2f660f6d33e9a3b1c7b467de37461a9152160c6838128be9270c"
+    },
+    {
+      "evidence_ref": "evidence:1116ba5336cdfb5db24c236cacecf0b50d43b9ab19a18fd929a271a12ec9c866",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:569aecf8-aa02-41da-b37a-7e2e20f160fb:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "1116ba5336cdfb5db24c236cacecf0b50d43b9ab19a18fd929a271a12ec9c866"
+    },
+    {
+      "evidence_ref": "evidence:11f58b580037ec8ab04f3cbb55839903b30eb53eb995677f66e766535c120e32",
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-dropin",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:c629c669-807e-4467-b638-cb1f97df8975:open-training",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX用ファンクショナルエリアはドロップインで利用可能と案内。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "restore-dropin",
+        "target_slug": "open-training"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "11f58b580037ec8ab04f3cbb55839903b30eb53eb995677f66e766535c120e32"
+    },
+    {
+      "evidence_ref": "evidence:156992aec4c4e57fc9f09e9b8b999b4a1b011278de6aeb0de00f31c16c1e9d51",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:treadmill",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "treadmill"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "156992aec4c4e57fc9f09e9b8b999b4a1b011278de6aeb0de00f31c16c1e9d51"
+    },
+    {
+      "evidence_ref": "evidence:1598d5f0e040df28c9720cec6f402dd7d9965500ff1658f9b8d8bf0fada754ce",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:functional-training-lane",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "functional-training-lane"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "1598d5f0e040df28c9720cec6f402dd7d9965500ff1658f9b8d8bf0fada754ce"
+    },
+    {
+      "evidence_ref": "evidence:18ca1ff431eab71a43c22c57a0c96e6adfdd33b29734bdb58fbef6575dbeb764",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:ski-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "ski-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "18ca1ff431eab71a43c22c57a0c96e6adfdd33b29734bdb58fbef6575dbeb764"
+    },
+    {
+      "evidence_ref": "evidence:278d387c7db950ea456158e9ff551051a8172fb472f852e06db4dea9cd8951a1",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "278d387c7db950ea456158e9ff551051a8172fb472f852e06db4dea9cd8951a1"
+    },
+    {
+      "evidence_ref": "evidence:306884a3dced03bb53efb505f48fe4113f9294f8845fd33d879a912f841aab8c",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:treadmill",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "treadmill"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "306884a3dced03bb53efb505f48fe4113f9294f8845fd33d879a912f841aab8c"
+    },
+    {
+      "evidence_ref": "evidence:3a751b98a9caa9bf53831435d8e89ca9cc7678c71a2d5321e711f8ef025444e7",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:running-track",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "running-track"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "3a751b98a9caa9bf53831435d8e89ca9cc7678c71a2d5321e711f8ef025444e7"
+    },
+    {
+      "evidence_ref": "evidence:3e1951fe417d399cdfe14e9d3d36c3274edf7bd37c17dc091fc01b6d53b1d0d9",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:open-training",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "open-training"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "3e1951fe417d399cdfe14e9d3d36c3274edf7bd37c17dc091fc01b6d53b1d0d9"
+    },
+    {
+      "evidence_ref": "evidence:5345bfe08d986ddd3a5ecaac1721aa7d06d055695ec3ebbfc2978d4034d8764f",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "5345bfe08d986ddd3a5ecaac1721aa7d06d055695ec3ebbfc2978d4034d8764f"
+    },
+    {
+      "evidence_ref": "evidence:53ed979eab578a530745877a54f74264bd4974077911be463b9f37f2dc5deb40",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:wall-ball-target",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "wall-ball-target"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "53ed979eab578a530745877a54f74264bd4974077911be463b9f37f2dc5deb40"
+    },
+    {
+      "evidence_ref": "evidence:55f5a6babccf307101780d8e7686e85d8b47ae166a8494a8afb849f3aba00633",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "55f5a6babccf307101780d8e7686e85d8b47ae166a8494a8afb849f3aba00633"
+    },
+    {
+      "evidence_ref": "evidence:5c16d12acf37f02183f5ec2165ff8dd3a308927fdb0653e8c25273eca252e00e",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "5c16d12acf37f02183f5ec2165ff8dd3a308927fdb0653e8c25273eca252e00e"
+    },
+    {
+      "evidence_ref": "evidence:69208cc7b6683922d8f984b77cec5fee7fa9cf3b7c3526ace891d828b8b54c66",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:sled-push-pull-space",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "sled-push-pull-space"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "69208cc7b6683922d8f984b77cec5fee7fa9cf3b7c3526ace891d828b8b54c66"
+    },
+    {
+      "evidence_ref": "evidence:70e586116293334f86ddec5e4ea1fecd672e8585e179fbddf1d02c19a79e7d2d",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "competition-simulation"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "70e586116293334f86ddec5e4ea1fecd672e8585e179fbddf1d02c19a79e7d2d"
+    },
+    {
+      "evidence_ref": "evidence:7163d3cde6705d2ee21761ec62b181a660c3e5b32b110514779ae94486dc5b0c",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "7163d3cde6705d2ee21761ec62b181a660c3e5b32b110514779ae94486dc5b0c"
+    },
+    {
+      "evidence_ref": "evidence:8063b6b1c6d2f8958aaf1da49c8220c5dc1c1dca43e4b9bb45b79dc30fb46692",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:ski-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "ski-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "8063b6b1c6d2f8958aaf1da49c8220c5dc1c1dca43e4b9bb45b79dc30fb46692"
+    },
+    {
+      "evidence_ref": "evidence:886528fe17081b4623e8803c24748e9810603722c05c1a51856b1e4f4c2d8b33",
+      "source_ref": "source:HGY_1kQTLdyeblDc6Nbt13qiH5oib:restore-class",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:c629c669-807e-4467-b638-cb1f97df8975:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "初心者向け基礎クラスと競技者向けアドバンスクラスを毎週開催。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "restore-class",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "886528fe17081b4623e8803c24748e9810603722c05c1a51856b1e4f4c2d8b33"
+    },
+    {
+      "evidence_ref": "evidence:8b00478f20c91c157289d538c5940c12b30116193b9bb70dd660c7a87a9bcf65",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "8b00478f20c91c157289d538c5940c12b30116193b9bb70dd660c7a87a9bcf65"
+    },
+    {
+      "evidence_ref": "evidence:8cb017878430c1ca81a5127f8fd7e8258780ef745079f49fb0d79204218ae681",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "8cb017878430c1ca81a5127f8fd7e8258780ef745079f49fb0d79204218ae681"
+    },
+    {
+      "evidence_ref": "evidence:8e517f8f5274473cfbef31f63247d758a2deb40e23aa419d7e352b79328dfa7f",
+      "source_ref": "source:HGY_7FDA3W6p88v6evTHGBhfHFrvP:luaana-home",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:99abe458-52ae-44a4-8f1a-3f747ff9bfb8:open-training",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROXクラスと、施設設備を自由に使えるOPEN GYMを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "luaana-home",
+        "target_slug": "open-training"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "8e517f8f5274473cfbef31f63247d758a2deb40e23aa419d7e352b79328dfa7f"
+    },
+    {
+      "evidence_ref": "evidence:90dafff7c53926ee86899577065ad9fa7b1e3a32dd27a87817c37d59c21dbcc6",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "90dafff7c53926ee86899577065ad9fa7b1e3a32dd27a87817c37d59c21dbcc6"
+    },
+    {
+      "evidence_ref": "evidence:9557d8f3e5787b1023d2890e9878f4e3a7d2bcdab48919e3da2eb0d12276fa56",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "9557d8f3e5787b1023d2890e9878f4e3a7d2bcdab48919e3da2eb0d12276fa56"
+    },
+    {
+      "evidence_ref": "evidence:987e117466d594ba01b289758c916a2ec551aa9bba6f8c509864fe3114a133c2",
+      "source_ref": "source:HGY_7FDA3W6p88v6evTHGBhfHFrvP:luaana-home",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:99abe458-52ae-44a4-8f1a-3f747ff9bfb8:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROXクラスと、施設設備を自由に使えるOPEN GYMを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "luaana-home",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "987e117466d594ba01b289758c916a2ec551aa9bba6f8c509864fe3114a133c2"
+    },
+    {
+      "evidence_ref": "evidence:98aa35555217a3d3e50b1bd26e732c0ab5ad0361764522f1a87f0da39db1c314",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "98aa35555217a3d3e50b1bd26e732c0ab5ad0361764522f1a87f0da39db1c314"
+    },
+    {
+      "evidence_ref": "evidence:9ab8930c87bb91b8d8214fc82b115e5203690a903e89129a73005befc5d12b01",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "9ab8930c87bb91b8d8214fc82b115e5203690a903e89129a73005befc5d12b01"
+    },
+    {
+      "evidence_ref": "evidence:a3788f38f45032f5cff997fd56bbfadf0040141e82e7905c3403492bd44783d5",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "a3788f38f45032f5cff997fd56bbfadf0040141e82e7905c3403492bd44783d5"
+    },
+    {
+      "evidence_ref": "evidence:a52cef4aebe7095b8b246ece0ea137b20287927365cc1c7f98ace63ac3a40f75",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "a52cef4aebe7095b8b246ece0ea137b20287927365cc1c7f98ace63ac3a40f75"
+    },
+    {
+      "evidence_ref": "evidence:a79e21f7f34130494a5c82dc5a570a39be33e24c9a2cc254e5ea3930f6d63a87",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:ski-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "ski-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "a79e21f7f34130494a5c82dc5a570a39be33e24c9a2cc254e5ea3930f6d63a87"
+    },
+    {
+      "evidence_ref": "evidence:aaa3168108c8af1cf7a2d2ceef871c2559a500ece285c9b0d764c2d617f89d55",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "aaa3168108c8af1cf7a2d2ceef871c2559a500ece285c9b0d764c2d617f89d55"
+    },
+    {
+      "evidence_ref": "evidence:ae1d1c4ae6f8cd5cb9b3e2ee9848b18c202753e4f2b6c1a188ef60c58930781e",
+      "source_ref": "source:HGY_u1B3yXynkPyPxOuTQPXyjceFr:freeletics-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:4a0b9292-1283-49ac-a3b2-c7bd38133a31:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "施設で公式ルールに基づくtrainingを提供し、SkiErg、sled、rowing、farmers carry、sandbagを列挙。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "freeletics-hyrox",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "ae1d1c4ae6f8cd5cb9b3e2ee9848b18c202753e4f2b6c1a188ef60c58930781e"
+    },
+    {
+      "evidence_ref": "evidence:b193913d5a69878b1bcbd701f6ba394db4a346d5510ed5d711a82773acff0b36",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:eae47de3-da8a-4f5e-8cdf-444bb413b90c:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "b193913d5a69878b1bcbd701f6ba394db4a346d5510ed5d711a82773acff0b36"
+    },
+    {
+      "evidence_ref": "evidence:b4b22c462a1e70cc80a531b125db46bcc6736a5450b75ac71f1d72a7079b8b25",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:d75c411f-2b58-476d-aa68-f7bde9000002:sled-push-pull-space",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "sled-push-pull-space"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "b4b22c462a1e70cc80a531b125db46bcc6736a5450b75ac71f1d72a7079b8b25"
+    },
+    {
+      "evidence_ref": "evidence:b6c57de538121eed930c27f5b7f53e7ba7ae8ba0f0a41dc417ac3904e2f10196",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "b6c57de538121eed930c27f5b7f53e7ba7ae8ba0f0a41dc417ac3904e2f10196"
+    },
+    {
+      "evidence_ref": "evidence:bd42a013cfa66a7abc8ac2c13b9e4ac721321bc3c3108ff08ce79f5412470948",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:functional-training-lane",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "functional-training-lane"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "bd42a013cfa66a7abc8ac2c13b9e4ac721321bc3c3108ff08ce79f5412470948"
+    },
+    {
+      "evidence_ref": "evidence:c1f79edc8d2f09d2114f289a797c7f34cde4cac3826ef2fd5b2942becc701795",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:d75c411f-2b58-476d-aa68-f7bde9000002:open-training",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "open-training"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "c1f79edc8d2f09d2114f289a797c7f34cde4cac3826ef2fd5b2942becc701795"
+    },
+    {
+      "evidence_ref": "evidence:c2a5597ac3215d0bda98f4316dbb51071b6560a1bfabb89cd23e113461eda16f",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "competition-simulation"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "c2a5597ac3215d0bda98f4316dbb51071b6560a1bfabb89cd23e113461eda16f"
+    },
+    {
+      "evidence_ref": "evidence:c9c5b17db900e09953ee266a2cee2f3132a9a142abfb55a59eef41a4caccb0db",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "c9c5b17db900e09953ee266a2cee2f3132a9a142abfb55a59eef41a4caccb0db"
+    },
+    {
+      "evidence_ref": "evidence:cfbeed3e95f9f0d2a2ad6ad6e0052af5ec4421d5b34f5daf5becfeb8efc619a4",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "cfbeed3e95f9f0d2a2ad6ad6e0052af5ec4421d5b34f5daf5becfeb8efc619a4"
+    },
+    {
+      "evidence_ref": "evidence:d1230b66c2eb4f5e25b1efe61aa9c813c75e2882bd385d896a885086da58947d",
+      "source_ref": "source:HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R:golds-toyocho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:d75c411f-2b58-476d-aa68-f7bde9000002:farmers-carry-implements",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROX専用turf、sled、rowing machine、kettlebell、sandbag、自走式treadmillとrunning trackを店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-toyocho",
+        "target_slug": "farmers-carry-implements"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "d1230b66c2eb4f5e25b1efe61aa9c813c75e2882bd385d896a885086da58947d"
+    },
+    {
+      "evidence_ref": "evidence:d2d5a9b0928999ffb196abe63d4f1f01234102a3a3f35f385b0c6314988902f5",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "d2d5a9b0928999ffb196abe63d4f1f01234102a3a3f35f385b0c6314988902f5"
+    },
+    {
+      "evidence_ref": "evidence:d513731f09390652d1788103e36c67770e8e3778784cf62b8f5e91a9a6b62adc",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:row-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "row-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "d513731f09390652d1788103e36c67770e8e3778784cf62b8f5e91a9a6b62adc"
+    },
+    {
+      "evidence_ref": "evidence:d59646347c08ac36ddf3419bcfc81fa4c6e46a9cfd533e66aa6baabba7d52532",
+      "source_ref": "source:HGY_e0rqkrg7L4ataPZD4gGoOL0W9:ufc-yoga-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:eae47de3-da8a-4f5e-8cdf-444bb413b90c:wall-ball-target",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "8種目の使用設備、flat training lane、HYROXクラス、自主トレ時間を施設固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "ufc-yoga-hyrox",
+        "target_slug": "wall-ball-target"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "d59646347c08ac36ddf3419bcfc81fa4c6e46a9cfd533e66aa6baabba7d52532"
+    },
+    {
+      "evidence_ref": "evidence:da4b7e77434c89a5b96ad476834ae4fa52a240a936628c2ac4123664ad87941b",
+      "source_ref": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:sandbag",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "対象店舗でsled、sandbag、wall ball、rower、treadmill、farmers carryと認定coach、race-like trainingを明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "otf-hyrox",
+        "target_slug": "sandbag"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "da4b7e77434c89a5b96ad476834ae4fa52a240a936628c2ac4123664ad87941b"
+    },
+    {
+      "evidence_ref": "evidence:e3c40e8c2058a91711ef12b08c2eb9fa15fd1da59302af6f74eca9afa7839a1f",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:weighted-sled",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "weighted-sled"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "e3c40e8c2058a91711ef12b08c2eb9fa15fd1da59302af6f74eca9afa7839a1f"
+    },
+    {
+      "evidence_ref": "evidence:eb80c2daf993749c5156b270c385869955dbf65e166b6d4b7cd1c8a59f034548",
+      "source_ref": "source:HGY_c816ru6QeTv14At3O51pjK8au:takamatsu-hyrox",
+      "target_type": "location_training_capability",
+      "target_ref": "capability:5326a371-18d2-4c51-9109-e59242521f16:discipline-coaching",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "HYROXクラスで各ワークアウト動作とフォームを指導すると説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q1",
+        "h3_3_source_ref": "takamatsu-hyrox",
+        "target_slug": "discipline-coaching"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "eb80c2daf993749c5156b270c385869955dbf65e166b6d4b7cd1c8a59f034548"
+    },
+    {
+      "evidence_ref": "evidence:f6ff92437e948b5d874b85a06ecde432bd427d45e1a267a11665c47da836fa48",
+      "source_ref": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:ski-erg",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "東大阪を対応スタジオとして列挙し、各器具を使うHYROXトレーニングとコーチ指導、模擬練習を説明。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "field-hyrox",
+        "target_slug": "ski-erg"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "f6ff92437e948b5d874b85a06ecde432bd427d45e1a267a11665c47da836fa48"
+    },
+    {
+      "evidence_ref": "evidence:f7b71f01c8aca9c73958bf24f687ce366b6f5c6d9fc3a168b87e0a51175f4641",
+      "source_ref": "source:HGY_f2kvOaab0cCRi8pkmmU0AHBis:golds-hamamatsucho",
+      "target_type": "location_equipment",
+      "target_ref": "equipment:569aecf8-aa02-41da-b37a-7e2e20f160fb:treadmill",
+      "assertion": "supports",
+      "review_status": "accepted",
+      "evidence_text": "自走式トレッドミル、SkiErg、RowErg、sled、farmers carry、sandbagとHYROX指導を店舗固有に明記。",
+      "structured_evidence": {
+        "evidence_quality": "Q2",
+        "h3_3_source_ref": "golds-hamamatsucho",
+        "target_slug": "treadmill"
+      },
+      "observed_at": "2026-08-30T09:20:04Z",
+      "reviewed_at": "2026-08-30T09:20:04Z",
+      "content_hash": "f7b71f01c8aca9c73958bf24f687ce366b6f5c6d9fc3a168b87e0a51175f4641"
+    }
+  ],
+  "publication_rehearsal": {
+    "hyrox_before": 82,
+    "hyrox_after": 82,
+    "official_before": 82,
+    "official_after": 82,
+    "published_equipment_rows": 36,
+    "equipment_positive_facilities": 6,
+    "published_capability_rows": 16,
+    "capability_positive_facilities": 9,
+    "enriched_facilities": 9,
+    "open_training_positive_facilities": 4,
+    "locations": [
+      {
+        "location_id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "row-erg",
+          "sandbag",
+          "treadmill",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "competition-simulation",
+          "discipline-coaching"
+        ],
+        "open_training_available": false
+      },
+      {
+        "location_id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "row-erg",
+          "sandbag",
+          "ski-erg",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "discipline-coaching"
+        ],
+        "open_training_available": false
+      },
+      {
+        "location_id": "5326a371-18d2-4c51-9109-e59242521f16",
+        "equipment_slugs": [],
+        "capability_slugs": [
+          "discipline-coaching"
+        ],
+        "open_training_available": false
+      },
+      {
+        "location_id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "row-erg",
+          "sandbag",
+          "ski-erg",
+          "treadmill",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "discipline-coaching"
+        ],
+        "open_training_available": false
+      },
+      {
+        "location_id": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+        "equipment_slugs": [],
+        "capability_slugs": [
+          "discipline-coaching",
+          "open-training"
+        ],
+        "open_training_available": true
+      },
+      {
+        "location_id": "c629c669-807e-4467-b638-cb1f97df8975",
+        "equipment_slugs": [],
+        "capability_slugs": [
+          "discipline-coaching",
+          "open-training"
+        ],
+        "open_training_available": true
+      },
+      {
+        "location_id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "row-erg",
+          "sandbag",
+          "ski-erg",
+          "wall-ball-target",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "competition-simulation",
+          "discipline-coaching"
+        ],
+        "open_training_available": false
+      },
+      {
+        "location_id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "functional-training-lane",
+          "row-erg",
+          "running-track",
+          "sandbag",
+          "treadmill",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "open-training",
+          "sled-push-pull-space"
+        ],
+        "open_training_available": true
+      },
+      {
+        "location_id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+        "equipment_slugs": [
+          "farmers-carry-implements",
+          "functional-training-lane",
+          "row-erg",
+          "sandbag",
+          "ski-erg",
+          "wall-ball-target",
+          "weighted-sled"
+        ],
+        "capability_slugs": [
+          "discipline-coaching",
+          "open-training",
+          "sled-push-pull-space"
+        ],
+        "open_training_available": true
+      }
+    ],
+    "negative_claims": 0
+  },
+  "consumer_audit": {
+    "runtime_consumers": [
+      "src/lib/hyrox-discovery.ts"
+    ],
+    "equipment_or_capability_rendering": false,
+    "partial_enrichment_exposed_in_h3_1_ui": false,
+    "ui_change_required_before_import": false
+  },
+  "scale_out_strategy": "GO_TARGETED",
+  "candidate_hash": "f47f7edcb4fb63120d35e44ed2bda50c8c61e779724d4f12453a48037d280ae8"
+}

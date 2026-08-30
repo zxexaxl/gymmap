@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-08-30T09:20:04Z",
+  "read_only": true,
+  "authority": {
+    "origin_main": "f1f503ec8e028fb219a1065b0e4e0a1a237522ee",
+    "h3_3_commit": "7a90c9db0bc43039d4c02bdfe377fab5bfb34e12",
+    "project_ref": "vnedudrilywjajhjowgr"
+  },
+  "counts": {
+    "published_hyrox": 82,
+    "official_hyrox": 82,
+    "training_sources": 82,
+    "training_evidence": 164,
+    "location_equipment": 0,
+    "location_training_capabilities": 0,
+    "program_training_disciplines_hyrox": 0
+  },
+  "collisions": {
+    "candidate_source_urls": 0,
+    "candidate_source_canonical_urls": 0,
+    "candidate_equipment_relations": 0,
+    "candidate_capability_relations": 0,
+    "candidate_evidence_hashes": 0
+  },
+  "taxonomy": {
+    "equipment": [
+      "farmers-carry-implements",
+      "functional-training-lane",
+      "row-erg",
+      "running-track",
+      "sandbag",
+      "ski-erg",
+      "treadmill",
+      "wall-ball-target",
+      "weighted-sled"
+    ],
+    "capabilities": [
+      "competition-simulation",
+      "discipline-coaching",
+      "open-training",
+      "outdoor-running-access",
+      "sled-push-pull-space"
+    ]
+  },
+  "sample_locations": [
+    {
+      "id": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "slug": "yoshiyuki-hirano-5770002",
+      "name": "Yoshiyuki Hirano 善之 平野",
+      "brand_id": "d349f045-701c-4505-8439-006c2b789137",
+      "prefecture": "大阪府",
+      "city": "東大阪市",
+      "address_line": "577-0002, osaka, higashiosakashi, 1-3-25, inadauemachi",
+      "latitude": 34.692082,
+      "longitude": 135.581847,
+      "is_active": true,
+      "official_url": "https://www.field-gym.com/higashiosaka/",
+      "brand_name": "Yoshiyuki Hirano 善之 平野",
+      "hgy_id": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "c629c669-807e-4467-b638-cb1f97df8975",
+      "slug": "restore-base-2310806",
+      "name": "RESTORE BASE",
+      "brand_id": "ca37ac4b-a8a8-4f22-a211-08f174b28118",
+      "prefecture": "神奈川県",
+      "city": "横浜市中区",
+      "address_line": "2310806, Yokohama, Naka-ward honmoku 2-325",
+      "latitude": 35.429976,
+      "longitude": 139.661192,
+      "is_active": true,
+      "official_url": "https://restorebase.jp/",
+      "brand_name": "RESTORE BASE",
+      "hgy_id": "HGY_1kQTLdyeblDc6Nbt13qiH5oib",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "23d0e430-6eda-44d8-aef6-f8a3aa99f06c",
+      "slug": "samifitness-1060047",
+      "name": "SamiFitness",
+      "brand_id": "e93af020-658c-45bc-8724-378e24d7cfaf",
+      "prefecture": "東京都",
+      "city": "港区",
+      "address_line": "1060047, Tokyo, Minami Azabu 5-2-9",
+      "latitude": 35.655111,
+      "longitude": 139.724808,
+      "is_active": true,
+      "official_url": "https://samifitnesstokyo.com/",
+      "brand_name": "SamiFitness",
+      "hgy_id": "HGY_6okPO396AJbISj7LTMTlrkEPD",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "99abe458-52ae-44a4-8f1a-3f747ff9bfb8",
+      "slug": "luaana-club-1460082",
+      "name": "LUAANA CLUB 蒲田池上店",
+      "brand_id": "c89ccfb7-e8f9-42a0-9ced-b49c460d50d7",
+      "prefecture": "東京都",
+      "city": "大田区",
+      "address_line": "1460082, Ota-ku, 7-10-10 Ikegami",
+      "latitude": 35.5716,
+      "longitude": 139.701801,
+      "is_active": true,
+      "official_url": "https://www.luaanaclub.com/",
+      "brand_name": "LUAANA CLUB 蒲田池上店",
+      "hgy_id": "HGY_7FDA3W6p88v6evTHGBhfHFrvP",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "83a8de7f-36e4-4ece-bd31-a0e98b295ff8",
+      "slug": "beyond-4300924",
+      "name": "BEYOND 浜松店",
+      "brand_id": "5952b027-1ad8-412d-845e-98394ee6c1c8",
+      "prefecture": "静岡県",
+      "city": "浜松市中央区",
+      "address_line": "4300924, 静岡県浜松市, 中央区龍禅寺町７４−１ フジビル 101",
+      "latitude": 34.698081,
+      "longitude": 137.739427,
+      "is_active": true,
+      "official_url": "https://beyond-gym.com/gym/gym-hamamatsu/",
+      "brand_name": "BEYOND",
+      "hgy_id": "HGY_A6L66KJGjc8HfLRFmuyJgBMyQ",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "5326a371-18d2-4c51-9109-e59242521f16",
+      "slug": "takamatsu-crossfit",
+      "name": "Takamatsu CrossFit",
+      "brand_id": "472fc4c5-1e25-4678-af1e-f3288f6f0017",
+      "prefecture": "香川県",
+      "city": "高松市",
+      "address_line": "7618056, 高松市, 上天神町634",
+      "latitude": 34.311179,
+      "longitude": 134.036378,
+      "is_active": true,
+      "official_url": "https://takamatsu-crossfit.jp/",
+      "brand_name": "Takamatsu CrossFit",
+      "hgy_id": "HGY_c816ru6QeTv14At3O51pjK8au",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T13:50:28+00:00"
+    },
+    {
+      "id": "eae47de3-da8a-4f5e-8cdf-444bb413b90c",
+      "slug": "ufc-gym-1580096",
+      "name": "UFC Gym 用賀",
+      "brand_id": "0169c026-533a-43b4-9071-cc4ca5f4d5ad",
+      "prefecture": "東京都",
+      "city": "世田谷区",
+      "address_line": "158-0096, Tokyo, Setagaya Tamagawadai 2-22-20",
+      "latitude": 35.624863,
+      "longitude": 139.632577,
+      "is_active": true,
+      "official_url": "https://yoga.ufcgym.co.jp/",
+      "brand_name": "UFC GYM",
+      "hgy_id": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "569aecf8-aa02-41da-b37a-7e2e20f160fb",
+      "slug": "golds-gym-13210",
+      "name": "浜松町東京",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "prefecture": "東京都",
+      "city": "港区",
+      "address_line": "海岸1-2-3汐留芝離宮ビルディング 2階",
+      "latitude": 35.656849,
+      "longitude": 139.759186,
+      "is_active": true,
+      "official_url": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "brand_name": "Gold's Gym",
+      "hgy_id": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-28T17:26:12.761+00:00"
+    },
+    {
+      "id": "a6ad9646-4983-4a73-93db-89fcf2bf868c",
+      "slug": "stance-fitness-2nd",
+      "name": "STANCE FITNESS ２ND",
+      "brand_id": "d0554cc8-ceb7-4038-92c2-260dc0c81249",
+      "prefecture": "京都府",
+      "city": "京都市下京区",
+      "address_line": "6008387, 京 都 市, 下 京 区 高 辻 大 宮 町 1 0 3 大 宮 高 辻 ビ ル 2 階",
+      "latitude": 35.000119,
+      "longitude": 135.749141,
+      "is_active": true,
+      "official_url": "https://stance-design.jp/",
+      "brand_name": "STANCE FITNESS",
+      "hgy_id": "HGY_gdqY3Z5sigmQLLGmSGbjG26sR",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T13:50:28+00:00"
+    },
+    {
+      "id": "d75c411f-2b58-476d-aa68-f7bde9000002",
+      "slug": "golds-gym-71221",
+      "name": "東陽町スーパーセンター",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "prefecture": "東京都",
+      "city": "江東区",
+      "address_line": "東陽2-2-20",
+      "latitude": 35.666416,
+      "longitude": 139.816544,
+      "is_active": true,
+      "official_url": "https://www.goldsgym.jp/shop/toyocho-super-center/",
+      "brand_name": "Gold's Gym",
+      "hgy_id": "HGY_HfEQpiP2Ha2HB3HYzCFuZJA7R",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-28T17:26:12.761+00:00"
+    },
+    {
+      "id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "slug": "golds-gym-12131",
+      "name": "幕張ベイパークアリーナ",
+      "brand_id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "prefecture": "千葉県",
+      "city": "千葉市美浜区",
+      "address_line": "若葉3-1-37幕張ベイパークウェルネスセンター",
+      "latitude": 35.649914,
+      "longitude": 140.049454,
+      "is_active": true,
+      "official_url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "brand_name": "Gold's Gym",
+      "hgy_id": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T15:27:31+00:00"
+    },
+    {
+      "id": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "slug": "hyrox-training-club-2130001",
+      "name": "オレンジセオリーフィットネス溝の口",
+      "brand_id": "d7d4c609-2ed2-4b05-8784-51faf76dc838",
+      "prefecture": "神奈川県",
+      "city": "川崎市高津区",
+      "address_line": "2130001, Kawasaki, 1-13-18-B1 Mizonokuchi, Takatsu",
+      "latitude": 35.5997,
+      "longitude": 139.614626,
+      "is_active": true,
+      "official_url": "https://www.orangetheoryfitness.co.jp/mizonokuchi/",
+      "brand_name": "Orangetheory Fitness",
+      "hgy_id": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "4a0b9292-1283-49ac-a3b2-c7bd38133a31",
+      "slug": "freeletics-goals-2310011",
+      "name": "Freeletics Goals",
+      "brand_id": "00c65504-466c-4798-a576-c7e9aee2464a",
+      "prefecture": "神奈川県",
+      "city": "横浜市中区",
+      "address_line": "231-0011, Yokohama, Kanagawa, SSKnot 1F  5-69 Otamachi Naka-ku",
+      "latitude": 35.448615,
+      "longitude": 139.635391,
+      "is_active": true,
+      "official_url": "https://www.freeleticsgoals.com/en/",
+      "brand_name": "Freeletics Goals",
+      "hgy_id": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "611fbcc9-2fa4-46cb-9963-e03c2a414ae3",
+      "slug": "meiji-park-1600013",
+      "name": "MEIJI PARK",
+      "brand_id": "fecea2f9-3e4d-4367-8012-6b234025b251",
+      "prefecture": "東京都",
+      "city": "新宿区",
+      "address_line": "1600013, Tokyo, MEIJI PARK, 5-7 Kasumigaokamachi, Shinjuku City",
+      "latitude": 35.675207,
+      "longitude": 139.713666,
+      "is_active": true,
+      "official_url": "https://www.meiji-park.com/",
+      "brand_name": "MEIJI PARK",
+      "hgy_id": "HGY_wWrNDerG0IQoFDsAo4L7w3io2",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    },
+    {
+      "id": "dbeed152-b421-4f15-acf8-8586a5a85aa7",
+      "slug": "truefitness-5640027",
+      "name": "TrueFitness 吹田",
+      "brand_id": "cf0250e5-b66c-43de-b4f5-5e6e517e0055",
+      "prefecture": "大阪府",
+      "city": "吹田市",
+      "address_line": "5640027, Suita-shi , Osaka, 2F, Suita SANKUSU No.2 Building, 2-101 Asahi-cho",
+      "latitude": 34.763098,
+      "longitude": 135.525423,
+      "is_active": true,
+      "official_url": "https://true-f.com/",
+      "brand_name": "TrueFitness 吹田",
+      "hgy_id": "HGY_XsJSB4jNTUfR4otyZrmg22J81",
+      "official": true,
+      "discipline_last_confirmed_at": "2026-08-29T23:03:31+00:00"
+    }
+  ],
+  "sample_brands": [
+    {
+      "id": "5952b027-1ad8-412d-845e-98394ee6c1c8",
+      "name": "BEYOND",
+      "slug": "beyond"
+    },
+    {
+      "id": "00c65504-466c-4798-a576-c7e9aee2464a",
+      "name": "Freeletics Goals",
+      "slug": "freeletics-goals"
+    },
+    {
+      "id": "dd9e21fe-f2a1-4728-92f8-8c89fa83931e",
+      "name": "Gold's Gym",
+      "slug": "golds-gym"
+    },
+    {
+      "id": "c89ccfb7-e8f9-42a0-9ced-b49c460d50d7",
+      "name": "LUAANA CLUB 蒲田池上店",
+      "slug": "luaana-club"
+    },
+    {
+      "id": "fecea2f9-3e4d-4367-8012-6b234025b251",
+      "name": "MEIJI PARK",
+      "slug": "meiji-park"
+    },
+    {
+      "id": "d7d4c609-2ed2-4b05-8784-51faf76dc838",
+      "name": "Orangetheory Fitness",
+      "slug": "orangetheory-fitness"
+    },
+    {
+      "id": "ca37ac4b-a8a8-4f22-a211-08f174b28118",
+      "name": "RESTORE BASE",
+      "slug": "restore-base"
+    },
+    {
+      "id": "e93af020-658c-45bc-8724-378e24d7cfaf",
+      "name": "SamiFitness",
+      "slug": "samifitness"
+    },
+    {
+      "id": "d0554cc8-ceb7-4038-92c2-260dc0c81249",
+      "name": "STANCE FITNESS",
+      "slug": "stance-fitness"
+    },
+    {
+      "id": "472fc4c5-1e25-4678-af1e-f3288f6f0017",
+      "name": "Takamatsu CrossFit",
+      "slug": "takamatsu-crossfit"
+    },
+    {
+      "id": "cf0250e5-b66c-43de-b4f5-5e6e517e0055",
+      "name": "TrueFitness 吹田",
+      "slug": "truefitness"
+    },
+    {
+      "id": "0169c026-533a-43b4-9071-cc4ca5f4d5ad",
+      "name": "UFC GYM",
+      "slug": "ufc-gym"
+    },
+    {
+      "id": "d349f045-701c-4505-8439-006c2b789137",
+      "name": "Yoshiyuki Hirano 善之 平野",
+      "slug": "yoshiyuki-hirano"
+    }
+  ]
+}
