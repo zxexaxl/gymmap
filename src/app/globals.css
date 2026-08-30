@@ -427,7 +427,6 @@ p {
   font-weight: 700;
 }
 
-.hyrox-unknown-note,
 .hyrox-data-notice {
   display: flex;
   align-items: baseline;
@@ -440,8 +439,21 @@ p {
   line-height: 1.7;
 }
 
-.hyrox-unknown-note span {
-  font-size: 0.92rem;
+.hyrox-evidence-disclosure {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.hyrox-evidence-disclosure h2 {
+  margin: 0;
+  font-size: var(--font-size-card-title);
+}
+
+.hyrox-evidence-disclosure p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-small);
+  line-height: 1.75;
 }
 
 .hyrox-data-notice {
@@ -515,6 +527,7 @@ p {
 .hyrox-location-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 14px;
 }
 
@@ -524,10 +537,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   gap: 18px;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--panel-strong);
 }
 
 .hyrox-location-card h3 {
@@ -537,6 +546,11 @@ p {
 
 .hyrox-location-card p {
   overflow-wrap: anywhere;
+}
+
+.hyrox-location-card__identity {
+  display: grid;
+  justify-items: start;
 }
 
 .hyrox-official-badge {
@@ -567,6 +581,32 @@ p {
   gap: 10px 14px;
   font-size: 0.88rem;
   font-weight: 700;
+}
+
+.hyrox-card-actions .ui-button {
+  min-height: 36px;
+  padding: 0.45rem 0.7rem;
+}
+
+.hyrox-equipment {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.hyrox-equipment h4 {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-label);
+  font-weight: 800;
+}
+
+.hyrox-equipment__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  min-width: 0;
 }
 
 .hyrox-map-focus-button {
@@ -3132,7 +3172,6 @@ p {
     font-size: clamp(2rem, 10.5vw, 2.75rem);
   }
 
-  .hyrox-unknown-note,
   .hyrox-filter-panel,
   .hyrox-map-selection {
     align-items: stretch;
@@ -3151,10 +3190,6 @@ p {
 
   .hyrox-location-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hyrox-location-card {
-    padding: 16px;
   }
 
   .ui-card-surface {
