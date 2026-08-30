@@ -83,6 +83,7 @@
     "typecheck": "PASS",
     "scopedLint": "PASS",
     "privateAnonSelect": false,
+    "privateAuthenticatedSelect": false,
     "publicEquipmentCount": 109,
     "publicCapabilityCount": 41,
     "hyroxPageHttp": 200,
