@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "authority_id": "PRODUCT_UI_AUTHORITY_V1",
+  "status": "FROZEN_FOR_HUMAN_REVIEW",
+  "repository_baseline": {
+    "remote_ref": "origin/main",
+    "commit": "17cb5a567bf4293afdf62642eb321bca07d92c26",
+    "freeze_date": "2026-08-30",
+    "timezone": "Asia/Tokyo"
+  },
+  "phase_guards": {
+    "documentation_only": true,
+    "runtime_changes_allowed": false,
+    "ui_implementation_allowed": false,
+    "database_changes_allowed": false,
+    "production_mutation_allowed": false,
+    "hyrox_h3_9_executed": false,
+    "hyrox_h3_10a_executed": false
+  },
+  "product_hierarchy": {
+    "product": "GymMap",
+    "domains": ["lesson", "hyrox"],
+    "home": {
+      "primary": "lesson",
+      "strong_secondary_entry": "hyrox",
+      "symmetric_ui_required": false
+    }
+  },
+  "authorities": {
+    "product_ia": {
+      "owner": "PRODUCT_UI_MAIN",
+      "status": "frozen_by_U0B"
+    },
+    "shared_foundation": {
+      "owner": "U1",
+      "name": "Minimum Shared Design Foundation",
+      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
+    },
+    "map_behavior": {
+      "owner": "M0",
+      "name": "Shared Map Behavior Contract",
+      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
+    },
+    "map_presentation": {
+      "owner": "M1",
+      "depends_on": ["U1", "M0"]
+    },
+    "product_home": {
+      "owner": "U2-L",
+      "depends_on": ["U1", "PRODUCT_UI_AUTHORITY_V1"],
+      "domain_contributions": {
+        "lesson": "U2-L",
+        "hyrox_entry_claims_and_destination": "H3-10B"
+      }
+    },
+    "lesson": {
+      "owner": "U2-L",
+      "depends_on": ["U1", "PRODUCT_UI_AUTHORITY_V1"]
+    },
+    "lesson_map": {
+      "owner": "U2-L",
+      "depends_on": ["U1", "M0", "M1"]
+    },
+    "lesson_favorites": {
+      "owner": "U2-L",
+      "global_saved": false,
+      "saved_entity": "lesson_program"
+    },
+    "hyrox_semantics": {
+      "owner": "H3"
+    },
+    "hyrox_positive_evidence_ux": {
+      "owner": "H3-10A",
+      "gates": {
+        "A": "positive_evidence_display",
+        "B": "positive_evidence_search_or_filter",
+        "independent_release_gates": true
+      }
+    },
+    "hyrox_list_detail": {
+      "owner": "H3-10B",
+      "depends_on": ["U1", "H3-10A"]
+    },
+    "hyrox_map": {
+      "owner": "H3-10C",
+      "depends_on": ["U1", "M0", "M1", "H3-10A"]
+    },
+    "facility_detail": {
+      "owner": "PRODUCT_UI_MAIN",
+      "domain_reviews": {
+        "lesson_schedule_content": "U2-L",
+        "hyrox_semantic_content": "H3-10B"
+      }
+    }
+  },
+  "path_ownership": [
+    {
+      "path": "src/app/layout.tsx",
+      "owner": "U1",
+      "scope": "app_shell_and_global_integrations",
+      "protected": true
+    },
+    {
+      "path": "src/components/layout/header.tsx",
+      "owner": "U1",
+      "scope": "header_presentation",
+      "semantic_review": "PRODUCT_UI_MAIN",
+      "protected": true
+    },
+    {
+      "path": "src/app/page.tsx",
+      "owner": "U2-L",
+      "scope": "lesson_led_home_implementation",
+      "semantic_review": "PRODUCT_UI_MAIN",
+      "collision": "HYROX strong-secondary entry contributes cross-domain destination and claims"
+    },
+    {
+      "path": "src/app/search/**",
+      "owner": "U2-L",
+      "scope": "lesson_search_route"
+    },
+    {
+      "path": "src/components/search/**",
+      "owner": "U2-L",
+      "scope": "lesson_search_ui_and_result_semantics"
+    },
+    {
+      "path": "src/app/programs/**",
+      "owner": "U2-L",
+      "scope": "lesson_program_discovery"
+    },
+    {
+      "path": "src/app/areas/**",
+      "owner": "U2-L",
+      "scope": "lesson_area_program_discovery"
+    },
+    {
+      "path": "src/components/programs/**",
+      "owner": "U2-L",
+      "scope": "lesson_program_components"
+    },
+    {
+      "path": "src/app/favorites/**",
+      "owner": "U2-L",
+      "scope": "lesson_program_favorites"
+    },
+    {
+      "path": "src/components/favorites/**",
+      "owner": "U2-L",
+      "scope": "lesson_program_favorites"
+    },
+    {
+      "path": "src/lib/favorite-programs.ts",
+      "owner": "U2-L",
+      "scope": "lesson_program_saved_contract"
+    },
+    {
+      "path": "src/app/api/favorites/schedules/route.ts",
+      "owner": "U2-L",
+      "scope": "lesson_favorite_schedule_api"
+    },
+    {
+      "path": "src/app/training/hyrox/**",
+      "owner": "H3-10B",
+      "scope": "hyrox_list_and_discovery_route",
+      "semantic_review": "H3"
+    },
+    {
+      "path": "src/components/training/**",
+      "owner": "H3-10B",
+      "scope": "hyrox_domain_components",
+      "semantic_review": "H3"
+    },
+    {
+      "path": "src/lib/hyrox-discovery.ts",
+      "owner": "H3",
+      "scope": "hyrox_discovery_contract",
+      "protected": true
+    },
+    {
+      "path": "src/lib/hyrox-discovery-server.ts",
+      "owner": "H3",
+      "scope": "hyrox_loader_boundary",
+      "protected": true
+    },
+    {
+      "path": "src/lib/hyrox-monitor*.ts",
+      "owner": "H3",
+      "scope": "hyrox_affiliation_freshness_policy",
+      "protected": true
+    },
+    {
+      "path": "src/lib/hyrox-enrichment-monitor*.ts",
+      "owner": "H3",
+      "scope": "hyrox_equipment_and_capability_freshness_policy",
+      "protected": true
+    },
+    {
+      "path": "data/hyrox/**",
+      "owner": "H3",
+      "scope": "hyrox_reviewed_authority",
+      "protected": true
+    },
+    {
+      "path": "supabase/migrations/0008_add_training_domain_foundation.sql",
+      "owner": "H3",
+      "scope": "hyrox_training_foundation",
+      "protected": true
+    },
+    {
+      "path": "supabase/migrations/0009_add_training_location_facts_and_evidence.sql",
+      "owner": "H3",
+      "scope": "hyrox_facts_and_evidence",
+      "protected": true
+    },
+    {
+      "path": "supabase/migrations/0010_add_training_publication_layer.sql",
+      "owner": "H3",
+      "scope": "hyrox_positive_evidence_publication",
+      "protected": true
+    },
+    {
+      "path": "src/components/map/map-types.ts",
+      "owner": "M1",
+      "scope": "shared_map_presentation_contract",
+      "collision": "consumed by Lesson and HYROX"
+    },
+    {
+      "path": "src/components/map/leaflet-gym-map.tsx",
+      "owner": "M1",
+      "scope": "shared_map_presentation",
+      "collision": "consumed by Lesson and HYROX"
+    },
+    {
+      "path": "src/components/map/apple-gym-map.tsx",
+      "owner": "M1",
+      "scope": "shared_map_presentation"
+    },
+    {
+      "path": "src/lib/map-provider.ts",
+      "owner": "M1",
+      "scope": "shared_map_provider_configuration"
+    },
+    {
+      "path": "src/components/map/location-map-section.tsx",
+      "owner": "U2-L",
+      "scope": "lesson_map_data_query_and_selection"
+    },
+    {
+      "path": "src/app/locations/[slug]/page.tsx",
+      "owner": "PRODUCT_UI_MAIN",
+      "scope": "cross_domain_facility_destination",
+      "collision": "generic facility facts and Lesson schedules; linked from HYROX"
+    },
+    {
+      "path": "src/app/globals.css",
+      "owner": "COLLISION_REQUIRES_SCOPED_AUTHORITY",
+      "scope": "co_located_shared_lesson_hyrox_map_and_favorites_styles",
+      "collision": "file-level ownership is unsafe; use selector/domain authority"
+    },
+    {
+      "path": "src/lib/data.ts",
+      "owner": "U2-L",
+      "scope": "lesson_and_generic_facility_data",
+      "protected": true
+    }
+  ],
+  "protected_rules": [
+    {
+      "actor": "H3-10B",
+      "change": "HYROX domain component",
+      "decision": "ALLOW",
+      "conditions": ["within owned paths", "H3 semantics preserved", "H3-10A gates respected"]
+    },
+    {
+      "actor": "H3-10B",
+      "change": "shared AppHeader or shared foundation",
+      "decision": "BLOCK_REQUIRES_U1_AUTHORITY"
+    },
+    {
+      "actor": "H3-10C",
+      "change": "HYROX query predicate, evidence meaning, or freshness policy",
+      "decision": "BLOCK_REQUIRES_H3_REVIEW"
+    },
+    {
+      "actor": "H3-10C",
+      "change": "shared marker or provider presentation",
+      "decision": "BLOCK_REQUIRES_M1_AUTHORITY"
+    },
+    {
+      "actor": "U2-L",
+      "change": "HYROX semantics, badge meaning, loader, or evidence predicates",
+      "decision": "BLOCK"
+    },
+    {
+      "actor": "M1",
+      "change": "HYROX equipment or capability predicate",
+      "decision": "BLOCK"
+    },
+    {
+      "actor": "U1",
+      "change": "LessonResultCard or HyroxFacilityCard production semantics",
+      "decision": "BLOCK"
+    },
+    {
+      "actor": "ANY_UI_PHASE",
+      "change": "globalize Saved from current Lesson program favorites",
+      "decision": "BLOCK_REQUIRES_NEW_PRODUCT_AND_ENTITY_CONTRACT"
+    },
+    {
+      "actor": "ANY_UI_PHASE",
+      "change": "merge HYROX loader into Lesson data loader",
+      "decision": "BLOCK_REQUIRES_H3_AND_PRODUCT_ARCHITECTURE_REVIEW"
+    },
+    {
+      "actor": "ANY_UI_PHASE",
+      "change": "interpret empty HYROX equipment or capability list as absent or unavailable",
+      "decision": "BLOCK"
+    }
+  ],
+  "semantic_invariants": {
+    "hyrox": [
+      "unknown != unavailable",
+      "empty equipment list != equipment absent",
+      "empty capability list != capability absent",
+      "positive evidence only is publishable",
+      "negative conclusions require separate completeness authority",
+      "equipment and capability freshness are domain policy",
+      "HYROX loader remains separate from Lesson loaders"
+    ],
+    "saved": [
+      "current saved entity is Lesson program only",
+      "HYROX facility save is not implemented",
+      "Saved is not a global product concept in authority v1"
+    ]
+  },
+  "known_collisions": [
+    "src/app/page.tsx",
+    "src/app/globals.css",
+    "src/components/layout/header.tsx",
+    "src/components/map/map-types.ts",
+    "src/components/map/leaflet-gym-map.tsx",
+    "src/app/locations/[slug]/page.tsx"
+  ],
+  "next_gates": {
+    "U1": {
+      "status": "READY_AFTER_HUMAN_REVIEW",
+      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
+    },
+    "M0": {
+      "status": "READY_AFTER_HUMAN_REVIEW",
+      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
+    },
+    "H3-10A": {
+      "status": "PARALLEL_AUTHORITY_NOT_EXECUTED_HERE",
+      "depends_on": ["H3-9"]
+    },
+    "U2-L": {
+      "status": "BLOCKED_UNTIL_U1",
+      "depends_on": ["U1"]
+    },
+    "H3-10B": {
+      "status": "BLOCKED_UNTIL_DEPENDENCIES",
+      "depends_on": ["U1", "H3-10A"]
+    },
+    "H3-10C": {
+      "status": "BLOCKED_UNTIL_DEPENDENCIES",
+      "depends_on": ["U1", "M0", "M1", "H3-10A"]
+    }
+  }
+}
