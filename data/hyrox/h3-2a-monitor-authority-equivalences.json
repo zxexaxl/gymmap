@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-08-30T07:52:55Z",
+  "contract": "Exact HGY + dimension + production baseline + observed value; no wildcard matching.",
+  "equivalences": [
+    {
+      "hgyId": "HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+      "dimension": "name",
+      "baselineValue": "UBX 学芸大学",
+      "acceptedObservedValue": "UBX Gakugeidaigaku",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_4wRU1wOwpCjXj6RwKZq46kVfA",
+        "https://www.provanet.co.jp/business/ubx/"
+      ],
+      "reason": "The Finder romanization and GymMap Japanese canonical name resolve to the same UBX branch and exact address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "dimension": "name",
+      "baselineValue": "ゴールドジム 橿原奈良",
+      "acceptedObservedValue": "Gold’s Gym Kashihara Nara",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+        "https://www.goldsgym.jp/shop/kashihara-nara/"
+      ],
+      "reason": "The official Gold's Gym page presents the same Kashihara Nara branch in Japanese and English.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "dimension": "name",
+      "baselineValue": "オレンジセオリーフィットネス 浦和",
+      "acceptedObservedValue": "OTF URAWA",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+        "https://orangetheoryfitness.co.jp/urawa/index.html"
+      ],
+      "reason": "OTF is the brand abbreviation and both authorities identify the same Urawa branch and address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+      "dimension": "name",
+      "baselineValue": "UFC Gym 荻窪",
+      "acceptedObservedValue": "UFC Gym Ogikubo",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_NGStYUdZn1ur6ZXx2gNf1MPCo",
+        "https://ogikubo.ufcgym.co.jp/"
+      ],
+      "reason": "The Japanese and romanized branch names identify the same UFC Gym Ogikubo facility and exact address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_QPyi483gAfTjVXv2QoNn5d55m",
+      "dimension": "name",
+      "baselineValue": "原宿東京",
+      "acceptedObservedValue": "ゴールドジムハラジュクトウキョウ",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_QPyi483gAfTjVXv2QoNn5d55m",
+        "https://www.goldsgym.jp/shop/harajuku-tokyo/"
+      ],
+      "reason": "The Finder katakana brand-prefixed form and GymMap branch display name identify Gold's Gym Harajuku Tokyo.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+      "dimension": "finder_source_url",
+      "baselineValue": "https://www.porttowercrossfit.com/",
+      "acceptedObservedValue": "porttowercrossfit.com",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_XPZszMzcdWvhZx9ZIXD5Qlcvg",
+        "https://www.porttowercrossfit.com/"
+      ],
+      "reason": "The Finder value omits the scheme; normal browser resolution reaches the same active first-party facility host.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+      "dimension": "name",
+      "baselineValue": "UFC Gym 用賀",
+      "acceptedObservedValue": "UFC Gym YOGA",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_e0rqkrg7L4ataPZD4gGoOL0W9",
+        "https://yoga.ufcgym.co.jp/"
+      ],
+      "reason": "YOGA is the official site's romanized branch form for 用賀; address and coordinates are identical.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+      "dimension": "finder_source_url",
+      "baselineValue": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+      "acceptedObservedValue": "https://www.goldsgym.jp/shop/13210",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_f2kvOaab0cCRi8pkmmU0AHBis",
+        "https://www.goldsgym.jp/shop/13210",
+        "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/"
+      ],
+      "reason": "The Finder numeric Gold's Gym route redirects to the reviewed Hamamatsucho Tokyo canonical page.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "dimension": "name",
+      "baselineValue": "オレンジセオリーフィットネス 町田",
+      "acceptedObservedValue": "OTF MACHIDA",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+        "https://www.orangetheoryfitness.co.jp/machida/"
+      ],
+      "reason": "OTF is the brand abbreviation and both authorities identify the same Machida branch and address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+      "dimension": "facility_redirect",
+      "baselineValue": "https://www.crossfitkumamoto.com/",
+      "acceptedObservedValue": "https://www.crossfitkumamoto.com/en",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_kCFMRp8Q0qOkn2iMEYikZq4Kg",
+        "https://www.crossfitkumamoto.com/",
+        "https://www.crossfitkumamoto.com/en"
+      ],
+      "reason": "The active first-party root may select the English language route while retaining the same facility authority.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_mAUikrooxzoDevlGFVY7yXt3l",
+      "dimension": "name",
+      "baselineValue": "ゴールドジム 前橋インター",
+      "acceptedObservedValue": "Gold‘s Gym Maebashi Inter",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_mAUikrooxzoDevlGFVY7yXt3l",
+        "https://www.goldsgym.jp/shop/maebashi-inter/"
+      ],
+      "reason": "The official branch page and Finder use Japanese and English forms of the same Maebashi Inter branch.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "dimension": "finder_source_url",
+      "baselineValue": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "acceptedObservedValue": "https://www.goldsgym.jp/shop/12131",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+        "https://www.goldsgym.jp/shop/12131",
+        "https://www.goldsgym.jp/shop/makuhari-baypark-arena/"
+      ],
+      "reason": "The Finder numeric Gold's Gym route redirects to the reviewed Makuhari Bay-Park Arena canonical page.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "dimension": "name",
+      "baselineValue": "幕張ベイパークアリーナ",
+      "acceptedObservedValue": "Gold's Gym Makuhari Bay-Park Arena",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+        "https://www.goldsgym.jp/shop/makuhari-baypark-arena/"
+      ],
+      "reason": "The English Finder name and Japanese GymMap display name identify the same Gold's Gym branch and postal address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    },
+    {
+      "hgyId": "HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+      "dimension": "finder_source_url",
+      "baselineValue": "https://www.freeleticsgoals.com/en/",
+      "acceptedObservedValue": "https://www.freeleticsgoals.com/",
+      "authorityUrls": [
+        "https://hyrox-training-finder.hyrox.com/gym/HGY_u1B3yXynkPyPxOuTQPXyjceFr",
+        "https://www.freeleticsgoals.com/",
+        "https://www.freeleticsgoals.com/en/"
+      ],
+      "reason": "The first-party root resolves to the reviewed English facility route with the same identity and address.",
+      "reviewedAt": "2026-08-30T07:52:55Z"
+    }
+  ]
+}

@@ -2,14 +2,17 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   MATERIAL_COORDINATE_DISTANCE_METERS,
+  buildReconfirmationCandidate,
   buildMonitorRun,
   classifyFreshness,
   classifyMonitorRecord,
   normalizeAddress,
   normalizeText,
+  validateAuthorityEquivalences,
   type FacilityObservation,
   type FinderObservation,
   type HyroxMonitorBaseline,
+  type MonitorAuthorityEquivalence,
 } from "../hyrox-monitor";
 import { observeFacility, observeFinder } from "../hyrox-monitor-source";
 
@@ -69,6 +72,19 @@ function facility(overrides: Partial<FacilityObservation> = {}): FacilityObserva
   };
 }
 
+function nameEquivalence(overrides: Partial<MonitorAuthorityEquivalence> = {}): MonitorAuthorityEquivalence {
+  return {
+    hgyId: "HGY_ABC123",
+    dimension: "name",
+    baselineValue: "Example Gym Tokyo",
+    acceptedObservedValue: "Tokyo Example Athletic Club",
+    authorityUrls: ["https://example.com/tokyo", "https://hyrox-training-finder.hyrox.com/gym/HGY_ABC123"],
+    reason: "Reviewed representation difference.",
+    reviewedAt: "2026-08-30T00:00:00.000Z",
+    ...overrides,
+  };
+}
+
 test("normalization ignores punctuation, width, and Japanese address formatting", () => {
   assert.equal(normalizeText("Ｅｘａｍｐｌｅ　Ｇｙｍ！"), normalizeText("example gym"));
   assert.equal(normalizeAddress("東京都千代田区千代田1丁目1番1号"), normalizeAddress("東京都 千代田区 千代田1-1-1"));
@@ -89,6 +105,82 @@ test("material rename is queued", () => {
   const result = classifyMonitorRecord({ baseline: baseline(), finder: finder({ name: "Different Fitness Shinjuku" }), facility: facility(), checkedAt });
   assert.ok(result.changes.includes("REVIEW_REQUIRED_NAME"));
   assert.equal(result.severity, "HIGH");
+});
+
+test("reviewed per-HGY name equivalence is quiet but a new rename still alerts", () => {
+  const equivalent = classifyMonitorRecord({
+    baseline: baseline(), finder: finder({ name: "Tokyo Example Athletic Club" }), facility: facility(),
+    checkedAt, equivalences: [nameEquivalence()],
+  });
+  assert.deepEqual(equivalent.changes, ["NO_CHANGE"]);
+  assert.deepEqual(equivalent.appliedEquivalences, ["name"]);
+  const renamed = classifyMonitorRecord({
+    baseline: baseline(), finder: finder({ name: "Example Gym Shinjuku" }), facility: facility(),
+    checkedAt, equivalences: [nameEquivalence()],
+  });
+  assert.ok(renamed.changes.includes("REVIEW_REQUIRED_NAME"));
+});
+
+test("equivalence is exact-scoped and cannot leak to another HGY or changed baseline", () => {
+  const wrongHgy = classifyMonitorRecord({
+    baseline: baseline({ hgyId: "HGY_OTHER123" }),
+    finder: finder({ hgyId: "HGY_OTHER123", name: "Tokyo Example Athletic Club" }),
+    facility: facility(), checkedAt, equivalences: [nameEquivalence()],
+  });
+  assert.ok(wrongHgy.changes.includes("REVIEW_REQUIRED_NAME"));
+  const changedBaseline = classifyMonitorRecord({
+    baseline: baseline({ locationName: "Example Gym Tokyo Renamed" }),
+    finder: finder({ name: "Tokyo Example Athletic Club" }),
+    facility: facility(), checkedAt, equivalences: [nameEquivalence()],
+  });
+  assert.ok(changedBaseline.changes.includes("REVIEW_REQUIRED_NAME"));
+});
+
+test("reviewed Finder URL and facility redirect relations are exact and safe", () => {
+  const finderUrlEquivalence = nameEquivalence({
+    dimension: "finder_source_url", baselineValue: "https://example.com/tokyo",
+    acceptedObservedValue: "https://example.com/stores/123",
+  });
+  const acceptedFinderUrl = classifyMonitorRecord({
+    baseline: baseline(), finder: finder({ facilityUrl: "https://example.com/stores/123" }),
+    facility: facility(), checkedAt, equivalences: [finderUrlEquivalence],
+  });
+  assert.deepEqual(acceptedFinderUrl.changes, ["NO_CHANGE"]);
+  assert.deepEqual(acceptedFinderUrl.appliedEquivalences, ["finder_source_url"]);
+  const newFinderUrl = classifyMonitorRecord({
+    baseline: baseline(), finder: finder({ facilityUrl: "https://different.example/facility" }),
+    facility: facility(), checkedAt, equivalences: [finderUrlEquivalence],
+  });
+  assert.ok(newFinderUrl.changes.includes("REVIEW_REQUIRED_SOURCE_URL"));
+
+  const redirectEquivalence = nameEquivalence({
+    dimension: "facility_redirect", baselineValue: "https://example.com/tokyo",
+    acceptedObservedValue: "https://example.com/en/tokyo",
+  });
+  const acceptedRedirect = classifyMonitorRecord({
+    baseline: baseline(), finder: finder(), facility: facility({
+      status: "REDIRECTED_VALID", finalUrl: "https://example.com/en/tokyo",
+    }), checkedAt, equivalences: [redirectEquivalence],
+  });
+  assert.deepEqual(acceptedRedirect.changes, ["NO_CHANGE"]);
+  const unrelatedRedirect = classifyMonitorRecord({
+    baseline: baseline(), finder: finder(), facility: facility({
+      status: "REDIRECTED_VALID", finalUrl: "https://different.example/tokyo",
+    }), checkedAt, equivalences: [redirectEquivalence],
+  });
+  assert.ok(unrelatedRedirect.changes.includes("REVIEW_REQUIRED_SOURCE_URL"));
+  const retiredCanonical = classifyMonitorRecord({
+    baseline: baseline(), finder: finder(), facility: facility({ status: "NOT_FOUND", httpStatus: 404 }),
+    checkedAt, equivalences: [redirectEquivalence],
+  });
+  assert.ok(retiredCanonical.changes.includes("FACILITY_SOURCE_UNAVAILABLE"));
+});
+
+test("equivalence validation rejects wildcard-like incomplete and duplicate entries", () => {
+  assert.throws(() => validateAuthorityEquivalences([nameEquivalence({ hgyId: "*" })]), /Invalid equivalence HGY/);
+  assert.throws(() => validateAuthorityEquivalences([nameEquivalence({ dimension: "wildcard" as "name" })]), /Invalid equivalence dimension/);
+  assert.throws(() => validateAuthorityEquivalences([nameEquivalence({ baselineValue: "" })]), /non-empty/);
+  assert.throws(() => validateAuthorityEquivalences([nameEquivalence(), nameEquivalence()]), /Duplicate equivalence/);
 });
 
 test("material address and coordinate move is possible relocation", () => {
@@ -178,6 +270,10 @@ test("review queue excludes fresh NO_CHANGE, includes due-soon, and is determini
   });
   assert.deepEqual(run.records.map((item) => item.hgyId), [fresh.hgyId, due.hgyId].sort());
   assert.deepEqual(run.reviewQueue.map((item) => item.hgyId), [due.hgyId]);
+  const candidate = buildReconfirmationCandidate(run);
+  assert.equal(candidate.records.find((item) => item.hgyId === fresh.hgyId)?.reviewState, "RECONFIRMATION_ELIGIBLE");
+  assert.equal(candidate.records.find((item) => item.hgyId === due.hgyId)?.reviewState, "RECONFIRMATION_BLOCKED");
+  assert.equal(candidate.warning.includes("Re-run live monitoring"), true);
 });
 
 test("global Finder outage produces one run issue and suppresses individual missing alerts", () => {

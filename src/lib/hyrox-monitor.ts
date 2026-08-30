@@ -33,6 +33,18 @@ export type ChangeClassification =
 export type FreshnessStatus = "FRESH" | "DUE_SOON" | "URGENT" | "STALE";
 export type Severity = "INFO" | "WARNING" | "HIGH" | "CRITICAL";
 
+export type MonitorEquivalenceDimension = "name" | "finder_source_url" | "facility_redirect";
+
+export type MonitorAuthorityEquivalence = {
+  hgyId: string;
+  dimension: MonitorEquivalenceDimension;
+  baselineValue: string;
+  acceptedObservedValue: string;
+  authorityUrls: string[];
+  reason: string;
+  reviewedAt: string;
+};
+
 export type ClaimFreshness = {
   lastConfirmedAt: string;
   staleAt: string;
@@ -107,6 +119,7 @@ export type HyroxMonitorRecord = {
   reviewRequired: boolean;
   severity: Severity;
   recommendedAction: string;
+  appliedEquivalences: MonitorEquivalenceDimension[];
 };
 
 export type MonitorRunIssue = {
@@ -206,6 +219,46 @@ function stringsMateriallyDiffer(left: string | null, right: string | null): boo
   );
 }
 
+function hasExactEquivalence(args: {
+  equivalences: MonitorAuthorityEquivalence[];
+  hgyId: string;
+  dimension: MonitorEquivalenceDimension;
+  baselineValue: string | null;
+  observedValue: string | null;
+}): boolean {
+  if (args.baselineValue === null || args.observedValue === null) return false;
+  return args.equivalences.some((item) =>
+    item.hgyId === args.hgyId &&
+    item.dimension === args.dimension &&
+    item.baselineValue === args.baselineValue &&
+    item.acceptedObservedValue === args.observedValue);
+}
+
+export function validateAuthorityEquivalences(
+  input: MonitorAuthorityEquivalence[],
+): MonitorAuthorityEquivalence[] {
+  const dimensions: MonitorEquivalenceDimension[] = ["name", "finder_source_url", "facility_redirect"];
+  const seen = new Set<string>();
+  const validated = input.map((item) => {
+    if (!/^HGY_[A-Za-z0-9]+$/.test(item.hgyId)) throw new Error(`Invalid equivalence HGY ID: ${item.hgyId}`);
+    if (!dimensions.includes(item.dimension)) throw new Error(`Invalid equivalence dimension: ${item.dimension}`);
+    if (!item.baselineValue || !item.acceptedObservedValue) {
+      throw new Error(`Equivalence values must be non-empty for ${item.hgyId}/${item.dimension}`);
+    }
+    if (Number.isNaN(Date.parse(item.reviewedAt))) throw new Error(`Invalid reviewedAt for ${item.hgyId}/${item.dimension}`);
+    if (item.authorityUrls.length === 0 || item.authorityUrls.some((url) => {
+      try { new URL(url); return false; } catch { return true; }
+    })) throw new Error(`Equivalence authority URLs must be absolute for ${item.hgyId}/${item.dimension}`);
+    const key = `${item.hgyId}\u0000${item.dimension}\u0000${item.baselineValue}\u0000${item.acceptedObservedValue}`;
+    if (seen.has(key)) throw new Error(`Duplicate equivalence: ${item.hgyId}/${item.dimension}`);
+    seen.add(key);
+    return { ...item, authorityUrls: [...item.authorityUrls].sort() };
+  });
+  const compare = (left: string, right: string) => left < right ? -1 : left > right ? 1 : 0;
+  return validated.sort((left, right) =>
+    compare(left.hgyId, right.hgyId) || compare(left.dimension, right.dimension));
+}
+
 function addressesMateriallyDiffer(
   baseline: HyroxMonitorBaseline,
   observation: FinderObservation,
@@ -254,10 +307,13 @@ export function classifyMonitorRecord(args: {
   facility: FacilityObservation;
   checkedAt: string;
   finderSourceOutage?: boolean;
+  equivalences?: MonitorAuthorityEquivalence[];
 }): HyroxMonitorRecord {
   const { baseline, finder, facility, checkedAt, finderSourceOutage = false } = args;
+  const equivalences = args.equivalences ?? [];
   const changes = new Set<ChangeClassification>();
   const diffs: string[] = [];
+  const appliedEquivalences = new Set<MonitorEquivalenceDimension>();
   let distance: number | null = null;
   if (
     baseline.latitude !== null && baseline.longitude !== null &&
@@ -283,7 +339,12 @@ export function classifyMonitorRecord(args: {
         changes.add("MONITOR_ERROR");
         diffs.push(`Finder identity/country mismatch: expected ${baseline.hgyId}/JP, observed ${finder.hgyId ?? "missing"}/${finder.country ?? "missing"}`);
       }
-      if (stringsMateriallyDiffer(baseline.locationName, finder.name)) {
+      const nameEquivalent = hasExactEquivalence({
+        equivalences, hgyId: baseline.hgyId, dimension: "name",
+        baselineValue: baseline.locationName, observedValue: finder.name,
+      });
+      if (nameEquivalent) appliedEquivalences.add("name");
+      if (stringsMateriallyDiffer(baseline.locationName, finder.name) && !nameEquivalent) {
         changes.add("REVIEW_REQUIRED_NAME");
         diffs.push(`Name: ${baseline.locationName} -> ${finder.name}`);
       }
@@ -299,9 +360,15 @@ export function classifyMonitorRecord(args: {
       if (addressDiff && distance !== null && distance > MATERIAL_COORDINATE_DISTANCE_METERS) {
         changes.add("POSSIBLE_RELOCATION");
       }
+      const finderUrlEquivalent = hasExactEquivalence({
+        equivalences, hgyId: baseline.hgyId, dimension: "finder_source_url",
+        baselineValue: baseline.officialUrl, observedValue: finder.facilityUrl,
+      });
+      if (finderUrlEquivalent) appliedEquivalences.add("finder_source_url");
       if (
         finder.facilityUrl && baseline.officialUrl &&
-        normalizeUrl(finder.facilityUrl) !== normalizeUrl(baseline.officialUrl)
+        normalizeUrl(finder.facilityUrl) !== normalizeUrl(baseline.officialUrl) &&
+        !finderUrlEquivalent
       ) {
         changes.add("REVIEW_REQUIRED_SOURCE_URL");
         diffs.push(`Finder facility URL: ${baseline.officialUrl} -> ${finder.facilityUrl}`);
@@ -312,7 +379,12 @@ export function classifyMonitorRecord(args: {
   if (["TEMPORARILY_UNREACHABLE", "ACCESS_RESTRICTED", "NOT_FOUND", "UNKNOWN"].includes(facility.status)) {
     changes.add("FACILITY_SOURCE_UNAVAILABLE");
   }
-  if (facility.status === "REDIRECTED_VALID") {
+  const facilityRedirectEquivalent = hasExactEquivalence({
+    equivalences, hgyId: baseline.hgyId, dimension: "facility_redirect",
+    baselineValue: facility.requestedUrl, observedValue: facility.finalUrl,
+  });
+  if (facilityRedirectEquivalent) appliedEquivalences.add("facility_redirect");
+  if (facility.status === "REDIRECTED_VALID" && !facilityRedirectEquivalent) {
     changes.add("REVIEW_REQUIRED_SOURCE_URL");
     diffs.push(`Facility redirect: ${facility.requestedUrl} -> ${facility.finalUrl}`);
   }
@@ -358,6 +430,7 @@ export function classifyMonitorRecord(args: {
     reviewRequired,
     severity,
     recommendedAction: recommendedAction(sortedChanges, overall),
+    appliedEquivalences: [...appliedEquivalences].sort(),
   };
 }
 
@@ -380,7 +453,9 @@ export function buildMonitorRun(args: {
   finderHealthAvailable: boolean;
   requestStats?: HyroxMonitorRun["requestStats"];
   durationMs?: number;
+  equivalences?: MonitorAuthorityEquivalence[];
 }): HyroxMonitorRun {
+  const equivalences = validateAuthorityEquivalences(args.equivalences ?? []);
   const sortedBaselines = [...args.baselines].sort((a, b) => a.hgyId.localeCompare(b.hgyId));
   const hgyIds = sortedBaselines.map((item) => item.hgyId);
   const duplicateHgy = hgyIds.filter((id, index) => hgyIds.indexOf(id) !== index);
@@ -402,7 +477,9 @@ export function buildMonitorRun(args: {
       error: "Facility observation missing",
       attempts: 0,
     };
-    return classifyMonitorRecord({ baseline, finder, facility, checkedAt: args.checkedAt, finderSourceOutage });
+    return classifyMonitorRecord({
+      baseline, finder, facility, checkedAt: args.checkedAt, finderSourceOutage, equivalences,
+    });
   });
   const runIssues: MonitorRunIssue[] = finderSourceOutage ? [{
     code: "MONITOR_SOURCE_OUTAGE",
@@ -440,6 +517,7 @@ export function summarizeMonitorRun(run: HyroxMonitorRun): string {
     `Urgent: ${countFreshness("URGENT")}`,
     `Stale: ${countFreshness("STALE")}`,
     `Monitor errors: ${countChange("MONITOR_ERROR")}`,
+    `Reviewed equivalences applied: ${run.records.reduce((total, record) => total + record.appliedEquivalences.length, 0)}`,
     `Run-level issues: ${run.runIssues.length}`,
     "",
     "## Review queue",
@@ -451,4 +529,23 @@ export function summarizeMonitorRun(run: HyroxMonitorRun): string {
     "",
     "No production data was changed. Monitor observations are not reviewed reconfirmations.",
   ].join("\n");
+}
+
+export function buildReconfirmationCandidate(run: HyroxMonitorRun) {
+  return {
+    schemaVersion: 1,
+    sourceCheckedAt: run.checkedAt,
+    warning: "Eligibility is not a production update. Re-run live monitoring and human review before any future reconfirmation.",
+    records: run.records.map((record) => ({
+      hgyId: record.hgyId,
+      locationId: record.locationId,
+      locationSlug: record.locationSlug,
+      observedAt: record.checkedAt,
+      reviewState: record.reviewRequired ? "RECONFIRMATION_BLOCKED" : "RECONFIRMATION_ELIGIBLE",
+      blockReasons: record.reviewRequired
+        ? [...record.changes.filter((change) => change !== "NO_CHANGE"), ...(record.freshness.overall === "FRESH" ? [] : [record.freshness.overall])].sort()
+        : [],
+      appliedEquivalences: record.appliedEquivalences,
+    })).sort((left, right) => left.hgyId.localeCompare(right.hgyId)),
+  };
 }

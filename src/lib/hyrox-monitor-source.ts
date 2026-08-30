@@ -8,6 +8,7 @@ import {
   type FinderObservation,
   type HyroxMonitorBaseline,
   type HyroxMonitorRun,
+  type MonitorAuthorityEquivalence,
   type SourceStatus,
 } from "@/lib/hyrox-monitor";
 
@@ -372,6 +373,7 @@ export async function runLiveHyroxMonitor(args: {
   supabaseAnonKey: string;
   checkedAt: string;
   requestOptions?: MonitorRequestOptions;
+  equivalences?: MonitorAuthorityEquivalence[];
 }): Promise<HyroxMonitorRun> {
   const startedAt = Date.now();
   const baselines = await loadPublishedHyroxBaselines(args);
@@ -389,5 +391,6 @@ export async function runLiveHyroxMonitor(args: {
     finderHealthAvailable,
     requestStats: stats,
     durationMs: Date.now() - startedAt,
+    equivalences: args.equivalences,
   });
 }
