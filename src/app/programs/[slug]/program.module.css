@@ -72,6 +72,10 @@
   font-weight: 800;
 }
 
+.heroActions :global(.favorite-program-button) {
+  min-height: 44px;
+}
+
 .primaryAction {
   justify-content: center;
   padding: 0 20px;
