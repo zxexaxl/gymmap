@@ -35,3 +35,34 @@ test("U3-LA schedule presentation keeps the existing schedule fields and program
   assert.match(table, /<table/);
   assert.match(table, /scope="col"/);
 });
+
+test("U3-LB preserves program and area route, loader, canonical, and discovery contracts", () => {
+  const program = read("src/app/programs/[slug]/page.tsx");
+  const areaProgram = read("src/app/areas/[area]/[program]/page.tsx");
+
+  assert.match(program, /getProgramLandingBySlug\(slug\)/);
+  assert.match(program, /canonical: buildProgramPath\(page\.program\.slug\)/);
+  assert.match(program, /export const dynamicParams = false/);
+  assert.match(program, /id="program-locations"/);
+  assert.match(program, /buildSearchQuery\(\{/);
+  for (const parameter of ["q", "area", "weekday", "timeRange", "durationRange", "brand"]) {
+    assert.match(program, new RegExp(`${parameter}:`));
+  }
+  assert.match(program, /buildAreaProgramPath\(area\.areaName, page\.program\.slug\)/);
+  assert.match(program, /href=\{`\/locations\/\$\{first\.location\.slug\}`\}/);
+
+  assert.match(areaProgram, /getAreaProgramLandingByParams\(area, program\)/);
+  assert.match(areaProgram, /canonical: buildAreaProgramPath\(page\.areaName, page\.program\.slug\)/);
+  assert.match(areaProgram, /export const dynamicParams = false/);
+  assert.match(areaProgram, /buildAreaProgramPath\(city\.cityName, page\.program\.slug\)/);
+  assert.match(areaProgram, /href=\{`\/locations\/\$\{item\.location\.slug\}`\}/);
+});
+
+test("U3-LB keeps brand discovery on the existing Search query rather than adding a route", () => {
+  const program = read("src/app/programs/[slug]/page.tsx");
+
+  assert.match(program, /function buildBrandSearchPath\(brandName: string\)/);
+  assert.match(program, /brand: brandName/);
+  assert.equal(fs.existsSync("src/app/brands"), false);
+  assert.equal(fs.existsSync("src/app/brand"), false);
+});
