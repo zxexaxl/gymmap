@@ -6,6 +6,8 @@ Repository baseline: `origin/main` at `17cb5a567bf4293afdf62642eb321bca07d92c26`
 
 Freeze date: 2026-08-30 (Asia/Tokyo)
 
+H3-10A handoff ingested: 2026-08-30 (authority supplied by the completed HYROX workstream)
+
 Machine-readable companion: [`product-ui-ownership-v1.json`](./product-ui-ownership-v1.json)
 
 This document is the documentation-only output of U0A followed by U0B. It records the current repository contract before freezing the next product information architecture and ownership boundaries. It does not authorize or contain UI, runtime, database, migration, crawler, analytics, monitoring, or production changes.
@@ -17,7 +19,7 @@ This document is the documentation-only output of U0A followed by U0B. It record
 - Repository root used for the audit: `/private/tmp/gymmap-ui-u0-authority-freeze`.
 - Dedicated branch: `codex/ui-u0-authority-freeze`, created from local `origin/main` at the baseline above.
 - The primary checkout at `/Users/te/Documents/GymMap` was on `main`, nine commits behind `origin/main`, with extensive pre-existing tracked and untracked work. It was not stashed, cleaned, reverted, committed, or otherwise modified.
-- Relevant existing HYROX branches through H3-8 were observed. No H3-9 or H3-10A branch was present in the local branch inventory at audit time; those authorities are nevertheless treated as parallel/external dependencies, not as missing work to execute here.
+- Relevant existing HYROX branches through H3-8 were observed. No H3-9 or H3-10A branch was present in the local branch inventory at the original audit time. The subsequently supplied formal handoff records H3-10A as complete and supersedes older UI assumptions for HYROX positive-evidence UX semantics; H3-10A was not re-executed here.
 - Repository evidence is authoritative for behavior. A read-only observation of `https://gymmap.vercel.app/` and `/training/hyrox` on 2026-08-30 was used only to record dynamic counts and confirm that the deployed route matched the inspected implementation.
 
 ### 1.2 Current route and navigation inventory
@@ -85,14 +87,49 @@ There are no repository-configured rewrites or redirects in `next.config.ts`. He
 - This is a dedicated lightweight HYROX publication loader. It must not be merged into the general Lesson loader in `src/lib/data.ts`.
 - The code contains no fixed public facility-count constant. The count is dynamic publication output. The read-only production observation on 2026-08-30 showed 82 Official Training Clubs; 82 is therefore the current observed cohort, not an invariant that may override the publication layer.
 
+H3-10A production snapshot supplied at handoff on 2026-08-30. The Official count is also confirmed by the read-only public observation; enrichment totals are cross-checked against the committed reviewed authority manifest at `data/hyrox/h3-5a-enrichment-monitor-authority.json`:
+
+| Measure | Snapshot | Semantic meaning |
+| --- | ---: | --- |
+| Official HYROX facilities | 82 | Current published Official Training Club cohort. |
+| Positive equipment claims | 109 across 22 facilities | Current, publishable positive claims; not an exhaustive facility × equipment matrix. |
+| Positive capability claims | 41 across 21 facilities | Current, publishable positive claims; absence does not mean non-support. |
+| Facilities with any enrichment | 25 | Facilities with at least one current positive equipment or capability claim. |
+| Monitored positive claims | 150 | Claim-monitoring cohort at handoff. |
+
+These are H3-10A handoff-time production observations, not product invariants. H3-5B freshness reconfirmation and later scale-out can change every count without changing the semantics below.
+
 #### Publication and evidence semantics
 
 - `Official Training Club` means an active, confirmed, non-stale official affiliation with accepted governing-body supporting evidence under the fail-closed publication views. The badge is not a generic GymMap endorsement.
 - Discipline, equipment, and capability publication is positive-evidence-only: state must be available, verification confirmed, freshness current, accepted supporting evidence present, source publishable, and no accepted refuting evidence present.
 - The HYROX search RPC can return `equipment_slugs`, `capability_slugs`, class availability, and open-training availability, but the current UI loader intentionally maps none of these fields into `HyroxDiscoveryLocation` and exposes no equipment/capability/class chip or filter.
-- The current UI explicitly states that equipment and class data are being confirmed. Missing presentation is not negative evidence.
-- Frozen semantic invariant: an empty equipment/capability list is neither unavailable, absent, nor negative evidence. `unknown != unavailable`. A source failure, missing support, 404, or stale claim is a review signal and not a negative equipment/capability fact.
+- Positive equipment means GymMap confirmed existence through reviewed authority and the claim is current and publishable. Positive capability has the same positive-published-evidence meaning.
+- Frozen semantic invariant: an empty equipment/capability list is neither unavailable, absent, being researched, nor negative evidence. `unknown != unavailable`. A source failure, missing support, 404, or stale claim is a review signal and not a negative equipment/capability fact.
+- `equipment_slugs=[]` must not become `設備なし`, `未対応`, `調査中`, `確認できませんでした`, `未確認`, `利用不可`, or `対応なし`.
+- `capability_slugs=[]` must not become `対応していない`; `open_training_available=false` must not become `自主練不可`; `class_available=false` must not become `HYROX classを実施していない`. Boolean false and empty collections are not generic user-facing negative facts.
 - Freshness is domain policy. Published facts fail closed after `stale_at`. HYROX affiliation/discipline monitoring treats `FRESH`, `DUE_SOON`, `URGENT`, and `STALE` as review workflow states; a monitor observation does not extend confirmation timestamps. Equipment horizon is 180 days; open training, discipline coaching, and sled space are 90 days; competition simulation is 30 days.
+- A stale claim is not a current positive fact and must not be displayed as one. H3 produces the presentation status; shared UI may only render that supplied status.
+
+#### H3-10A release and presentation contract
+
+- Positive equipment display: **READY**, once U1 allows H3-10B implementation. Display only current published positive claims on enriched facilities, include page-level disclosure, and never imply an exhaustive inventory.
+- Positive equipment filter: **HOLD**. Display readiness does not imply filter readiness.
+- Negative filter: **PROHIBITED** without completeness/explicit-negative authority.
+- Facility × equipment matrix: **NOT READY WITHOUT COMPLETENESS CONTRACT**.
+- Facilities with no positive equipment/capability evidence omit the section. They do not render `設備情報を確認中`, `未確認`, `調査中`, or `確認できませんでした`.
+- Standard equipment heading: `公式情報で確認できた設備`. Narrow surface: `確認できた設備`. Shared UI must not weaken these into generic `設備`, `利用可能設備`, or `対応設備` labels.
+- Required page-level disclosure meaning: only equipment/training information confirmed through facility or brand official information is shown; a missing facility/item does not mean the equipment/support is absent; usage conditions must be checked with the facility official source. Styling/exact copy may evolve, but this meaning may not be weakened or reversed.
+
+Capability release gates and labels:
+
+| Capability | Gate | Required label when released |
+| --- | --- | --- |
+| `open-training` | READY | `自主練利用を確認` |
+| `discipline-coaching` | READY | `HYROXトレーニング指導を確認` |
+| `competition-simulation` | HOLD | Not released. |
+| `sled-push-pull-space` | READY | `スレッドプッシュ／プル用スペースを確認` |
+| `outdoor-running-access` | DEFER | Not released under this authority. |
 
 #### Current presentation and linkage
 
@@ -101,8 +138,9 @@ There are no repository-configured rewrites or redirects in `next.config.ts`. He
 - The HYROX map and list share the filtered cohort and selected location ID. `地図で見る` selects the facility and scrolls to the map heading. Selection is not stored in the URL.
 - Map selection and cards link to `/locations/[slug]`; when available, a separate external link opens the facility official site. Missing official URLs suppress that link and produce an aggregate notice.
 - Successful zero publication and loader failure are distinct: zero shows a valid empty publication state; failure shows an error that explicitly says it does not mean zero facilities.
+- The repository UI currently renders a page-level `設備やクラス情報は現在確認中` notice. H3-10A supersedes that legacy presentation assumption: it is recorded as implementation debt, not a preservation requirement. This ingestion does not modify the runtime UI.
 
-No repository evidence contradicts the supplied HYROX invariants. H3-9 and H3-10A were not executed, and no HYROX semantic, equipment/capability, or monitoring state was changed.
+No repository evidence creates a material contract conflict with the H3-10A handoff; the old notice is explainable as pre-authority implementation. H3-9 and H3-10A were not executed in this workstream, and no HYROX semantic, equipment/capability, or monitoring state was mutated.
 
 ### 1.5 Current favorites / Saved contract
 
@@ -188,7 +226,7 @@ Later work must preserve:
 1. Public paths, query keys, anchors, canonical behavior, and static/dynamic route failure semantics unless a separately reviewed migration is authorized.
 2. Lesson query normalization, filters, ordering, pagination, latest-period schedule semantics, confirmation-date distinction, and zero-state distinction.
 3. Program-only browser-local favorites; no implied location/HYROX save.
-4. HYROX positive-evidence publication, fail-closed freshness, official badge meaning, error-versus-zero distinction, and dedicated loader.
+4. HYROX positive-evidence publication, no-positive section omission, H3-10A release gates/labels/disclosure, fail-closed freshness, official badge meaning, error-versus-zero distinction, and dedicated loader.
 5. Domain-owned map data/query/selection semantics even when presentation primitives are shared.
 
 Explicit unknowns that do not block U0A:
@@ -198,6 +236,7 @@ Explicit unknowns that do not block U0A:
 - Exact route bundle/payload/Web Vitals baselines require an explicit measurement run.
 - A repository route does not expose an `Updates` destination; its content model, owner, and data source are undefined.
 - The public HYROX count is dynamic. 82 was observed on 2026-08-30 and must not be converted into a hard-coded product invariant.
+- The H3-10A counts (109 equipment claims, 41 capability claims, 25 enriched facilities, and 150 monitored claims) are the handoff snapshot, not completeness or permanent-count contracts.
 
 U0A verdict: `GYMMAP_UI_U0A_COMPLETE`.
 
@@ -258,6 +297,7 @@ U1 Minimum Shared Design Foundation may own only:
 - color/type/spacing/radius/shadow tokens;
 - AppShell and AppHeader presentation;
 - basic Button, Input, Chip, Badge, and base Card surfaces;
+- a visual-only FreshnessIndicator and shared map chrome;
 - focus, loading, disabled, error, responsive, and other accessibility presentation states.
 
 Lesson-owned:
@@ -273,8 +313,9 @@ HYROX-owned:
 
 - HyroxFacilityCard and HYROX filter meanings;
 - OfficialTrainingClubBadge semantics;
-- confirmed equipment/capability presentation;
-- HYROX list/detail/map selection content;
+- positive/unknown semantics, HYROX DTO, equipment/capability labels, release gates, section composition, and page-level disclosure meaning;
+- confirmed equipment/capability presentation and omission when no positive evidence exists;
+- HYROX list/detail/map panel and selected-entity content;
 - HYROX freshness/evidence policy and its conversion into presentation status.
 
 A universal semantic `GymCard` is prohibited. A shared base Card surface is allowed only when it does not decide fields, hierarchy, freshness, official status, evidence, or actions.
@@ -291,22 +332,26 @@ domain-produced presentation status
 shared FreshnessIndicator presentation
 ```
 
-U1 may later provide a presentation-only FreshnessIndicator. It must not calculate age thresholds or interpret missing timestamps. Lesson and HYROX policies remain independent. H3 retains HYROX policy authority.
+U1 may later provide a presentation-only FreshnessIndicator. It must not calculate age thresholds/date differences, inspect claim type, interpret missing timestamps, or derive fresh/stale/warning. Lesson and HYROX policies remain independent. H3 retains HYROX policy authority.
 
-### 2.6 HYROX positive-evidence dependency
+### 2.6 HYROX H3-10A handoff and release dependencies
 
-- Gate A: positive-evidence display.
-- Gate B: positive-evidence search/filter.
-- Gate A does not imply Gate B. Partial positive coverage can support a carefully governed display without proving that a public filter is complete or unbiased.
-- Negative filtering is blocked without a completeness and explicit-negative authority contract.
-- H3-10A owns the final semantic/release decision. This document records only the dependency and does not execute that authority.
+- H3-10A Positive Evidence UX Contract: **COMPLETE**. Its semantic decisions are ingested, not re-executed or reopened here.
+- Positive equipment display: **READY** under the conditions in U0A, but production implementation remains blocked by U1 through H3-10B.
+- Positive equipment filter: **HOLD**.
+- Negative filter: **PROHIBITED** without completeness and explicit-negative authority.
+- Facility × equipment matrix: **NOT READY WITHOUT COMPLETENESS CONTRACT**.
+- Gate A (positive display) does not imply Gate B (positive filter). Partial positive coverage can support governed display without proving that a public filter is complete or unbiased.
+- H3-10B List/Detail UI is **BLOCKED_BY_U1** and depends directly on H3-10A (complete) and U1.
+- H3-10C Map UI is **BLOCKED_BY_U1_AND_M1** and depends directly on H3-10A (complete), U1, and M1. M0 remains the separate shared behavior authority and is a transitive prerequisite if required by M1, not an added H3-10C direct dependency in this handoff.
+- H3-5B freshness reconfirmation is **TIME_GATED** and independent of the UI workstream.
 
 ### 2.7 Map ownership
 
 - `M0` owns the future Shared Map Behavior Contract: marker/selection states, map/list switch behavior, popup versus bottom sheet, current location, mobile behavior, loading/empty/error, URL-state responsibilities, and domain popup ownership.
 - `M1` owns Shared Map Presentation implementations and provider-level presentation.
 - Lesson owns Lesson map data, query/filtering, candidate ordering, selected entity meaning, and Lesson selection content.
-- HYROX owns HYROX map data, prefecture/query semantics, selected entity meaning, Official/evidence content, and HYROX actions.
+- HYROX owns HYROX map data/query, selected entity meaning, map panel contents, equipment/capability semantics, disclosure, freshness status, and HYROX actions.
 - M0 and M1 do not own HYROX predicates or Lesson search semantics. U0B does not implement M0 or M1.
 
 ### 2.8 Saved ownership and facility detail
@@ -325,11 +370,30 @@ Performance acceptance: no unexplained Home payload regression, no unnecessary f
 
 Analytics acceptance: before/after comparison must use real available data; named instrumentation gaps must remain explicit until separately authorized. U0B does not authorize event mutations.
 
-U1 completion means Lesson and HYROX can implement their domain UI without changing the shared foundation contract. U1 does not own production LessonResultCard or HyroxFacilityCard; at most one reference fixture per domain may be used to validate the foundation.
+U1 completion means Lesson and HYROX can implement their domain UI without changing the shared foundation contract. In particular, shared primitives must be able to express positive equipment chips/badges, positive capability presentation, omitted sections, a disclosure block, domain-provided freshness status, Official Training Club presentation, and domain-specific card hierarchy without taking ownership of their predicates or copy semantics.
+
+U1 does not own production LessonResultCard or HyroxFacilityCard; at most one reference fixture per domain may be used to validate the foundation. A HYROX reference fixture is visual compatibility evidence only, not H3-10B implementation. It must safely represent: positive equipment, positive capability, no positive evidence with the section omitted, and a domain-provided stale/non-display state. It must never generate `設備なし` from an empty array.
 
 U0B verdict: `GYMMAP_UI_U0B_COMPLETE`.
 
-## 3. Known path collisions
+## 3. HYROX H3-10A handoff state
+
+| Authority or gate | State |
+| --- | --- |
+| H3-10A | COMPLETE |
+| Positive Equipment Display | READY |
+| Positive Equipment Filter | HOLD |
+| Negative Filter | PROHIBITED |
+| H3-10B | BLOCKED_BY_U1 |
+| H3-10C | BLOCKED_BY_U1_AND_M1 |
+| HYROX freshness | DOMAIN OWNED |
+| Shared FreshnessIndicator | VISUAL ONLY |
+| H3-10B implemented here | NO |
+| H3-10C implemented here | NO |
+
+Production counts are a handoff snapshot; domain semantics are authority. No production data or UI was changed while ingesting this handoff.
+
+## 4. Known path collisions
 
 The companion manifest is normative for orchestration. The highest-risk current collisions are:
 
@@ -341,7 +405,7 @@ The companion manifest is normative for orchestration. The highest-risk current 
 
 These collisions are documented rather than silently assigned.
 
-## 4. Final freeze statement
+## 5. Final freeze statement
 
 `PRODUCT_UI_AUTHORITY_V1_FROZEN`
 

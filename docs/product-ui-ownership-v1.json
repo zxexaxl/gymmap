@@ -8,14 +8,31 @@
     "freeze_date": "2026-08-30",
     "timezone": "Asia/Tokyo"
   },
+  "hyrox_h3_10a_handoff": {
+    "status": "COMPLETE",
+    "ingested_date": "2026-08-30",
+    "executed_in_this_workstream": false,
+    "counts_are_snapshot_not_invariants": true,
+    "production_snapshot": {
+      "official_facilities": 82,
+      "positive_equipment_claims": 109,
+      "facilities_with_positive_equipment": 22,
+      "positive_capability_claims": 41,
+      "facilities_with_positive_capability": 21,
+      "facilities_with_any_enrichment": 25,
+      "monitored_positive_claims": 150
+    }
+  },
   "phase_guards": {
     "documentation_only": true,
     "runtime_changes_allowed": false,
     "ui_implementation_allowed": false,
     "database_changes_allowed": false,
     "production_mutation_allowed": false,
-    "hyrox_h3_9_executed": false,
-    "hyrox_h3_10a_executed": false
+    "hyrox_h3_9_executed_in_this_workstream": false,
+    "hyrox_h3_10a_executed_in_this_workstream": false,
+    "hyrox_h3_10b_implemented": false,
+    "hyrox_h3_10c_implemented": false
   },
   "product_hierarchy": {
     "product": "GymMap",
@@ -34,7 +51,23 @@
     "shared_foundation": {
       "owner": "U1",
       "name": "Minimum Shared Design Foundation",
-      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
+      "depends_on": ["PRODUCT_UI_AUTHORITY_V1"],
+      "hyrox_acceptance_requirements": [
+        "positive equipment chips and badges",
+        "positive capability presentation",
+        "section omission",
+        "disclosure block",
+        "domain-provided freshness status",
+        "Official Training Club presentation",
+        "domain-specific card hierarchy"
+      ],
+      "does_not_own": [
+        "positive evidence predicates",
+        "unknown inference",
+        "equipment section composition",
+        "capability release gates",
+        "HYROX copy semantics"
+      ]
     },
     "map_behavior": {
       "owner": "M0",
@@ -67,23 +100,47 @@
       "saved_entity": "lesson_program"
     },
     "hyrox_semantics": {
-      "owner": "H3"
+      "owner": "H3",
+      "owns": [
+        "positive and unknown semantics",
+        "equipment and capability labels",
+        "capability release gates",
+        "HYROX freshness status",
+        "equipment section composition",
+        "disclosure semantics",
+        "HYROX DTO",
+        "HYROX map panel contents"
+      ]
     },
     "hyrox_positive_evidence_ux": {
       "owner": "H3-10A",
+      "status": "COMPLETE",
       "gates": {
-        "A": "positive_evidence_display",
-        "B": "positive_evidence_search_or_filter",
+        "A": {
+          "name": "positive_evidence_display",
+          "status": "READY"
+        },
+        "B": {
+          "name": "positive_evidence_search_or_filter",
+          "status": "HOLD"
+        },
         "independent_release_gates": true
       }
     },
     "hyrox_list_detail": {
       "owner": "H3-10B",
-      "depends_on": ["U1", "H3-10A"]
+      "status": "BLOCKED_BY_U1",
+      "depends_on": ["H3-10A", "U1"]
     },
     "hyrox_map": {
       "owner": "H3-10C",
-      "depends_on": ["U1", "M0", "M1", "H3-10A"]
+      "status": "BLOCKED_BY_U1_AND_M1",
+      "depends_on": ["H3-10A", "U1", "M1"]
+    },
+    "hyrox_freshness_reconfirmation": {
+      "owner": "H3-5B",
+      "status": "TIME_GATED",
+      "ui_workstream_dependency": false
     },
     "facility_detail": {
       "owner": "PRODUCT_UI_MAIN",
@@ -92,6 +149,85 @@
         "hyrox_semantic_content": "H3-10B"
       }
     }
+  },
+  "hyrox_release_contract": {
+    "positive_equipment_display": {
+      "status": "READY",
+      "conditions": [
+        "current published positive claims only",
+        "display only for enriched facilities",
+        "no negative inference from missing claims",
+        "page-level disclosure present",
+        "must not imply exhaustive inventory"
+      ]
+    },
+    "positive_equipment_filter": {
+      "status": "HOLD"
+    },
+    "negative_filter": {
+      "status": "PROHIBITED",
+      "requires": ["completeness authority", "explicit negative authority"]
+    },
+    "facility_equipment_matrix": {
+      "status": "NOT_READY_WITHOUT_COMPLETENESS_CONTRACT"
+    },
+    "no_positive_evidence_presentation": {
+      "behavior": "OMIT_SECTION",
+      "prohibited_fallback_labels": [
+        "設備情報を確認中",
+        "未確認",
+        "調査中",
+        "確認できませんでした"
+      ]
+    },
+    "equipment_labels": {
+      "standard": "公式情報で確認できた設備",
+      "narrow": "確認できた設備"
+    },
+    "page_disclosure_semantics": {
+      "owner": "H3",
+      "required_meaning": [
+        "show only equipment and training information confirmed by facility or brand official information",
+        "missing facilities or items do not mean the equipment or support is absent",
+        "usage conditions must be checked with facility official information"
+      ]
+    },
+    "capabilities": {
+      "open-training": {
+        "status": "READY",
+        "label": "自主練利用を確認"
+      },
+      "discipline-coaching": {
+        "status": "READY",
+        "label": "HYROXトレーニング指導を確認"
+      },
+      "competition-simulation": {
+        "status": "HOLD"
+      },
+      "sled-push-pull-space": {
+        "status": "READY",
+        "label": "スレッドプッシュ／プル用スペースを確認"
+      },
+      "outdoor-running-access": {
+        "status": "DEFER"
+      }
+    },
+    "freshness": {
+      "owner": "H3",
+      "shared_indicator_role": "VISUAL_ONLY",
+      "stale_claim_display_as_current_positive": "PROHIBITED"
+    }
+  },
+  "u1_hyrox_reference_fixture_policy": {
+    "purpose": "visual compatibility only",
+    "is_h3_10b_production_implementation": false,
+    "required_states": [
+      "positive equipment present",
+      "positive capability present",
+      "no positive evidence with section omitted",
+      "domain-provided stale or non-display state"
+    ],
+    "prohibited": ["derive equipment absence from an empty array"]
   },
   "path_ownership": [
     {
@@ -270,12 +406,28 @@
       "actor": "H3-10B",
       "change": "HYROX domain component",
       "decision": "ALLOW",
-      "conditions": ["within owned paths", "H3 semantics preserved", "H3-10A gates respected"]
+      "conditions": ["dependencies satisfied", "within owned paths", "H3 semantics preserved", "H3-10A gates respected"]
+    },
+    {
+      "actor": "H3-10B",
+      "change": "equipment section composition",
+      "decision": "ALLOW_ONCE_DEPENDENCIES_SATISFIED",
+      "authority": "HYROX"
     },
     {
       "actor": "H3-10B",
       "change": "shared AppHeader or shared foundation",
       "decision": "BLOCK_REQUIRES_U1_AUTHORITY"
+    },
+    {
+      "actor": "H3-10B",
+      "change": "shared Card primitive",
+      "decision": "BLOCK_REQUIRES_U1_AUTHORITY"
+    },
+    {
+      "actor": "H3-10B",
+      "change": "empty equipment means unavailable",
+      "decision": "PROHIBITED_H3_10A_VIOLATION"
     },
     {
       "actor": "H3-10C",
@@ -284,7 +436,7 @@
     },
     {
       "actor": "H3-10C",
-      "change": "shared marker or provider presentation",
+      "change": "shared marker, map chrome, or provider presentation",
       "decision": "BLOCK_REQUIRES_M1_AUTHORITY"
     },
     {
@@ -296,6 +448,21 @@
       "actor": "M1",
       "change": "HYROX equipment or capability predicate",
       "decision": "BLOCK"
+    },
+    {
+      "actor": "M1",
+      "change": "HYROX equipment or capability panel semantics",
+      "decision": "BLOCK_REQUIRES_HYROX_AUTHORITY"
+    },
+    {
+      "actor": "U1",
+      "change": "positive equipment predicate",
+      "decision": "BLOCK_REQUIRES_HYROX_AUTHORITY"
+    },
+    {
+      "actor": "U1",
+      "change": "capability release gate",
+      "decision": "BLOCK_REQUIRES_HYROX_AUTHORITY"
     },
     {
       "actor": "U1",
@@ -316,6 +483,11 @@
       "actor": "ANY_UI_PHASE",
       "change": "interpret empty HYROX equipment or capability list as absent or unavailable",
       "decision": "BLOCK"
+    },
+    {
+      "actor": "SHARED_FRESHNESS_INDICATOR",
+      "change": "derive freshness from age, date difference, or claim type",
+      "decision": "BLOCK_VISUAL_ONLY"
     }
   ],
   "semantic_invariants": {
@@ -323,9 +495,13 @@
       "unknown != unavailable",
       "empty equipment list != equipment absent",
       "empty capability list != capability absent",
+      "open_training_available false != open training unavailable",
+      "class_available false != HYROX class absent",
       "positive evidence only is publishable",
       "negative conclusions require separate completeness authority",
       "equipment and capability freshness are domain policy",
+      "no positive evidence means omit the section",
+      "stale claims are not displayed as current positive facts",
       "HYROX loader remains separate from Lesson loaders"
     ],
     "saved": [
@@ -352,20 +528,24 @@
       "depends_on": ["PRODUCT_UI_AUTHORITY_V1"]
     },
     "H3-10A": {
-      "status": "PARALLEL_AUTHORITY_NOT_EXECUTED_HERE",
-      "depends_on": ["H3-9"]
+      "status": "COMPLETE",
+      "executed_in_this_workstream": false
     },
     "U2-L": {
       "status": "BLOCKED_UNTIL_U1",
       "depends_on": ["U1"]
     },
     "H3-10B": {
-      "status": "BLOCKED_UNTIL_DEPENDENCIES",
-      "depends_on": ["U1", "H3-10A"]
+      "status": "BLOCKED_BY_U1",
+      "depends_on": ["H3-10A", "U1"]
     },
     "H3-10C": {
-      "status": "BLOCKED_UNTIL_DEPENDENCIES",
-      "depends_on": ["U1", "M0", "M1", "H3-10A"]
+      "status": "BLOCKED_BY_U1_AND_M1",
+      "depends_on": ["H3-10A", "U1", "M1"]
+    },
+    "H3-5B": {
+      "status": "TIME_GATED",
+      "ui_workstream_dependency": false
     }
   }
 }
