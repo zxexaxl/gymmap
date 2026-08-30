@@ -1,34 +1,29 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
+import { HyroxHomeEntry } from "@/components/lesson/hyrox-home-entry";
 import { LocationMapSection } from "@/components/map/location-map-section";
+import { FeaturedProgramTabs, type FeaturedProgramTab } from "@/components/programs/featured-program-tabs";
 import { SearchForm } from "@/components/search/search-form";
 import { JsonLd } from "@/components/seo/json-ld";
-import { FavoriteHomePanel } from "@/components/favorites/favorite-home-panel";
-import { FeaturedProgramTabs, type FeaturedProgramTab } from "@/components/programs/featured-program-tabs";
 import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
 import { featuredProgramShortcuts, getFeaturedProgramBrand } from "@/lib/featured-programs";
 import type { ProgramBrand } from "@/lib/program-master";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
 
+import styles from "./home.module.css";
+
 export const revalidate = 900;
 
 const featuredBrandLimits: Array<[ProgramBrand, number]> = [
-  ["Les Mills", 3],
-  ["Radical Fitness", 2],
-  ["MOSSA", 1],
-  ["ZUMBA", 1],
-  ["BAILA BAILA", 1],
+  ["Les Mills", 3], ["Radical Fitness", 2], ["MOSSA", 1], ["ZUMBA", 1], ["BAILA BAILA", 1],
 ];
-
 const standardGenreNames = ["ヨガ", "ピラティス", "エアロビクス", "ステップ"];
-
 const programPriority = [
   "BODYCOMBAT", "BODYPUMP", "BODYATTACK", "BODYJAM", "BODYBALANCE", "BODYSTEP",
   "FIGHT DO", "UBOUND", "メガダンス", "リトモス", "X55", "OXIGENO",
   "Group Fight", "Group Power", "Group Groove", "ZUMBA", "バイラバイラ",
 ];
-
 const brandTabDefinitions: Array<{ id: string; label: string; brands: ProgramBrand[] }> = [
   { id: "les-mills", label: "LES MILLS", brands: ["Les Mills"] },
   { id: "radical", label: "Radical", brands: ["Radical Fitness"] },
@@ -38,10 +33,7 @@ const brandTabDefinitions: Array<{ id: string; label: string; brands: ProgramBra
 
 export default async function HomePage() {
   const [brands, locations, lessonIndex, popularPrograms] = await Promise.all([
-    getBrands(),
-    getLocations(),
-    getMapLessonSearchIndex(),
-    getPopularPrograms(48),
+    getBrands(), getLocations(), getMapLessonSearchIndex(), getPopularPrograms(48),
   ]);
   const brandedPrograms = popularPrograms.flatMap((program) => {
     const programBrand = getFeaturedProgramBrand(program.name);
@@ -49,13 +41,10 @@ export default async function HomePage() {
   });
   const selectedProgramIds = new Set<string>();
   const featuredPrograms = featuredBrandLimits.flatMap(([brand, limit]) =>
-    brandedPrograms
-      .filter((program) => program.programBrand === brand)
-      .slice(0, limit)
-      .filter((program) => {
-        selectedProgramIds.add(program.id);
-        return true;
-      }),
+    brandedPrograms.filter((program) => program.programBrand === brand).slice(0, limit).filter((program) => {
+      selectedProgramIds.add(program.id);
+      return true;
+    }),
   );
 
   for (const program of brandedPrograms) {
@@ -71,11 +60,7 @@ export default async function HomePage() {
   const canonicalProgramNames = new Set(brandedPrograms.map((program) => program.name));
   const allBrandItems: FeaturedProgramTab["items"] = [
     ...brandedPrograms.map((program) => ({
-      kind: "program" as const,
-      id: program.id,
-      slug: program.slug,
-      name: program.name,
-      brand: program.programBrand,
+      kind: "program" as const, id: program.id, slug: program.slug, name: program.name, brand: program.programBrand,
     })),
     ...featuredProgramShortcuts
       .filter((shortcut) => !canonicalProgramNames.has(shortcut.name))
@@ -92,11 +77,7 @@ export default async function HomePage() {
       id: "featured",
       label: "注目",
       items: featuredPrograms.map((program) => ({
-        kind: "program" as const,
-        id: program.id,
-        slug: program.slug,
-        name: program.name,
-        brand: program.programBrand,
+        kind: "program" as const, id: program.id, slug: program.slug, name: program.name, brand: program.programBrand,
       })),
     },
     ...brandTabDefinitions.map((tab) => ({
@@ -117,56 +98,38 @@ export default async function HomePage() {
   };
 
   return (
-    <div className="page-stack home-page">
+    <div className={`page-stack ${styles.page}`}>
       <JsonLd data={websiteJsonLd} />
-      <section id="search-section" className="home-hero page-anchor-section">
-        <div className="home-hero-intro">
-          <div className="home-hero-copy">
-            <p className="home-hero-kicker">FIND YOUR NEXT CLASS</p>
-            <h1>
-              <span className="home-hero-title-lead">
-                <span>行きたい</span><span>レッスンが、</span>
-              </span>
-              <span className="home-hero-title-accent">すぐ見つかる。</span>
-            </h1>
-            <div className="home-hero-facts" aria-label="GymMapの掲載情報">
-              <span><strong>{locations.length}</strong>店舗を掲載</span>
-              <span><strong>{brands.length}</strong>ブランドに対応</span>
-              <span>曜日・時間で絞り込み</span>
-            </div>
-          </div>
-          <div className="hero-photo">
-            <Image
-              src="/images/hero-studio-program.png"
-              alt="格闘系スタジオレッスンでパンチ動作をしている様子"
-              fill
-              priority
-              sizes="(max-width: 760px) calc(100vw - 40px), 48vw"
-            />
-            <div className="hero-photo-caption">
-              <span>今日の運動を、ここから。</span>
-              <strong>スタジオプログラムを横断検索</strong>
-            </div>
+
+      <section id="search-section" className={`page-anchor-section ${styles.hero}`}>
+        <div className={styles.intro}>
+          <p className={styles.kicker}>LESSON DISCOVERY</p>
+          <h1><span>行きたいレッスンを、</span><span>ジムをまたいで探せる。</span></h1>
+          <p className={styles.lead}>プログラム、エリア、曜日から、次に参加したいスタジオレッスンを横断検索できます。</p>
+          <div className={styles.facts} aria-label="GymMapの掲載情報">
+            <span><strong>{locations.length}</strong> 店舗</span>
+            <span><strong>{brands.length}</strong> ブランド</span>
+            <a href="#popular-programs">人気プログラムを見る</a>
           </div>
         </div>
         <SearchForm brands={brands} variant="hero" />
       </section>
 
-      <FavoriteHomePanel />
+      <div className={styles.favorite}><FavoriteHomePanel /></div>
 
       {featuredPrograms.length ? (
-        <section id="popular-programs" className="panel home-program-section page-anchor-section">
-          <div className="section-heading">
+        <section id="popular-programs" className={`page-anchor-section ${styles.programSection}`}>
+          <div className={styles.sectionHeading}>
             <div>
-              <p className="eyebrow">FEATURED BRANDS</p>
-              <h2><span>ブランドプログラム</span><span>から探す</span></h2>
+              <p>プログラムから見つける</p>
+              <h2>気になるレッスンを起点に探す</h2>
             </div>
-            <Link className="section-text-link" href="/search">すべてのレッスンを検索</Link>
+            <Link href="/search">すべてのレッスンを見る <span aria-hidden="true">→</span></Link>
           </div>
           <FeaturedProgramTabs tabs={featuredTabs} />
           {standardGenrePrograms.length ? (
             <div className="standard-genre-strip">
-              <p>定番ジャンルから探す</p>
+              <p>定番ジャンル</p>
               <div>
                 {standardGenrePrograms.map((program) => (
                   <Link key={program.slug} href={buildProgramPath(program.slug)}>{program.name}<span aria-hidden="true">→</span></Link>
@@ -177,7 +140,9 @@ export default async function HomePage() {
         </section>
       ) : null}
 
-      <LocationMapSection locations={locations} lessonIndex={lessonIndex} />
+      <HyroxHomeEntry />
+
+      <div className={styles.mapBoundary}><LocationMapSection locations={locations} lessonIndex={lessonIndex} /></div>
     </div>
   );
 }

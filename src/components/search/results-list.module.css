@@ -1,0 +1,56 @@
+.section { display: grid; gap: var(--space-4); }
+.listHeading { display: flex; align-items: end; justify-content: space-between; gap: var(--space-4); }
+.listHeading h2 { margin: 0; font-size: var(--font-size-section-title); }
+.listHeading p { margin: 0; color: var(--color-text-secondary); font-size: var(--font-size-body-small); }
+.notice { padding: 12px 14px; border-left: 3px solid var(--color-warning); background: var(--color-warning-soft); color: var(--color-warning); font-size: var(--font-size-body-small); line-height: 1.7; }
+.list { display: grid; gap: var(--space-3); }
+
+.card {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: var(--space-5);
+  padding: 0;
+  overflow: hidden;
+}
+
+.schedule { display: flex; min-height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: var(--space-4); background: #f4f6f8; color: var(--color-navy); text-align: center; }
+.schedule span { font-size: var(--font-size-body-small); font-weight: 800; }
+.schedule strong { font-size: 1.55rem; letter-spacing: -0.03em; }
+.schedule small { color: var(--color-text-secondary); font-size: 0.72rem; }
+.content { min-width: 0; padding: var(--space-5) var(--space-5) var(--space-5) 0; }
+.titleRow { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4); }
+.brand { margin: 0 0 3px; color: var(--accent-dark); font-size: var(--font-size-label); font-weight: 800; }
+.titleRow h3 { margin: 0; font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.4; overflow-wrap: anywhere; }
+.canonical, .address { margin: 5px 0 0; color: var(--color-text-secondary); font-size: var(--font-size-label); }
+.location { margin: var(--space-3) 0 0; font-size: var(--font-size-body-small); font-weight: 800; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: var(--space-3); }
+.meta > span:first-child { padding: 5px 8px; border-radius: var(--radius-control); background: #f4f6f8; color: var(--color-text-secondary); font-size: var(--font-size-label); font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: var(--space-4); font-size: var(--font-size-label); font-weight: 700; }
+.detailLink { color: var(--accent-dark); font-weight: 800; }
+
+.pagination { display: flex; align-items: center; justify-content: center; gap: var(--space-3); margin-top: var(--space-3); }
+.pagination > a, .pagination > span, .pagination div a, .current { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 10px; border: 1px solid var(--color-border); border-radius: var(--radius-control); background: var(--color-surface); font-size: var(--font-size-body-small); font-style: normal; }
+.pagination > span[aria-disabled="true"] { color: var(--color-text-muted); }
+.pagination > div { display: flex; align-items: center; gap: 5px; }
+.pageItem { display: flex; align-items: center; gap: 5px; }
+.pageItem i { color: var(--color-text-muted); font-style: normal; }
+.current { border-color: var(--color-navy); background: var(--color-navy); color: #fff; font-weight: 800; }
+
+.empty { display: grid; gap: var(--space-2); padding: clamp(28px, 5vw, 48px); text-align: center; }
+.empty p { margin: 0; color: var(--accent-dark); font-size: var(--font-size-label); font-weight: 800; }
+.empty h2 { margin: 0; }
+.empty span { color: var(--color-text-secondary); }
+
+@media (max-width: 680px) {
+  .card { grid-template-columns: 78px minmax(0, 1fr); gap: 14px; }
+  .schedule { justify-content: flex-start; padding: 18px 8px; }
+  .schedule strong { font-size: 1.2rem; }
+  .schedule small { font-size: 0.66rem; }
+  .content { padding: 16px 14px 16px 0; }
+  .titleRow { gap: 8px; }
+  .titleRow :global(.favorite-program-button) { flex: 0 0 auto; min-height: 38px; padding: 0.55rem 0.7rem; }
+  .actions { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .actions a { min-height: 32px; display: inline-flex; align-items: center; }
+  .pagination { gap: 6px; }
+  .pagination > a, .pagination > span, .pagination div a, .current { min-width: 40px; padding: 0 7px; }
+}
