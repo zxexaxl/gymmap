@@ -2098,7 +2098,11 @@ p {
   width: 100%;
   height: 100%;
   min-height: inherit;
-  background: #efe3cf;
+  background: #f4f3ef;
+}
+
+.leaflet-map .gymmap-basemap-tiles {
+  filter: saturate(0.32) contrast(0.82) brightness(1.08);
 }
 
 .leaflet-map .leaflet-control-attribution {
