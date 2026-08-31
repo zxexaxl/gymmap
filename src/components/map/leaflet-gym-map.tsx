@@ -129,13 +129,13 @@ function AccessibleLocationMarker({
       ref={markerRef}
       center={[location.latitude as number, location.longitude as number]}
       radius={presentation.radius}
+      className={presentationStyles.leafletMarkerFocusTarget}
       pathOptions={{
         color: presentation.color,
         fillColor: presentation.fillColor,
         fillOpacity: presentation.fillOpacity,
         weight: presentation.weight,
         dashArray: presentation.dashArray,
-        className: `${presentationStyles.marker}${selected ? ` ${presentationStyles.markerSelected}` : ""}`,
       }}
       eventHandlers={{
         click: onSelect,

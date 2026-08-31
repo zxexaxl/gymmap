@@ -73,12 +73,24 @@ test("selected marker is immediate, semantic, and not color-only", () => {
 test("keyboard focus keeps selected semantics and follows the marker silhouette", () => {
   assert.match(
     presentationStyles,
-    /\.marker:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: none/,
+    /\.leafletMarkerFocusTarget:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: none/,
   );
   assert.match(presentationStyles, /drop-shadow\(0 0 1px var\(--color-focus\)\)/);
   assert.doesNotMatch(
     presentationStyles,
-    /\.marker:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: 3px/,
+    /\.leafletMarkerFocusTarget:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: 3px/,
+  );
+  assert.match(
+    leafletMapSource,
+    /<CircleMarker[\s\S]*?className=\{presentationStyles\.leafletMarkerFocusTarget\}[\s\S]*?pathOptions=/,
+  );
+  assert.doesNotMatch(
+    leafletMapSource,
+    /className=\{[^}]*selected[^}]*\}/,
+  );
+  assert.doesNotMatch(
+    leafletMapSource,
+    /pathOptions=\{\{[\s\S]*?className:/,
   );
   assert.match(leafletMapSource, /aria-pressed", String\(selected\)/);
   assert.match(appleMapSource, /aria-pressed", String\(selected\)/);

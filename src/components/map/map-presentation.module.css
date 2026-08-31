@@ -131,7 +131,7 @@
   filter: drop-shadow(0 0 0.3rem rgb(127 47 22 / 38%));
 }
 
-.marker:focus-visible,
+.leafletMarkerFocusTarget:focus-visible,
 :global(.apple-gym-map-marker:focus-visible) {
   outline: none;
   filter:
