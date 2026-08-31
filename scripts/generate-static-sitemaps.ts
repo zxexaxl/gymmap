@@ -7,6 +7,7 @@ import { programMaster } from "@/lib/program-master";
 import { buildCoreSitemapEntries } from "@/lib/core-sitemap";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import { buildLocationSitemapEntries } from "@/lib/location-sitemap";
+import { getLatestPublicUpdatePublishedAt } from "@/lib/public-updates";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildProgramPath, getSiteUrl } from "@/lib/site";
 import { getLocationAreaNames } from "@/lib/utils";
@@ -261,7 +262,7 @@ async function main() {
       priority: 0.7,
     }));
 
-  const coreEntries = buildCoreSitemapEntries(siteUrl, now);
+  const coreEntries = buildCoreSitemapEntries(siteUrl, now, getLatestPublicUpdatePublishedAt());
 
   writeFileSync(join(publicDir, "sitemap-core.xml"), buildUrlSet(coreEntries), "utf8");
   writeFileSync(join(publicDir, "sitemap-locations.xml"), buildUrlSet(locationEntries), "utf8");
