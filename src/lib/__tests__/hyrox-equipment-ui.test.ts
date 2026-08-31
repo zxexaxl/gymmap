@@ -58,6 +58,7 @@ test("no-positive card omits the equipment section and every missing-state treat
   assert.doesNotMatch(markup, /設備なし|未確認|調査中|確認中|情報なし|利用不可|非対応/);
   assert.match(markup, /Example Gym/);
   assert.match(markup, /GymMapで詳細を見る/);
+  assert.match(markup, /href="\/training\/hyrox\/example-gym"/);
 });
 
 test("page replaces the legacy status notice with the H3-10A disclosure", () => {

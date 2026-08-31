@@ -68,6 +68,10 @@ export type HyroxDiscoveryGateway = {
   loadOfficialUrls: (locationIds: string[]) => Promise<HyroxOfficialUrlRow[]>;
 };
 
+export function buildHyroxDetailPath(slug: string) {
+  return `/training/hyrox/${encodeURIComponent(slug)}`;
+}
+
 export class HyroxDiscoveryDataError extends Error {
   constructor(message: string) {
     super(message);

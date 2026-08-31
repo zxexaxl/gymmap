@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Badge, Button, CardSurface, Chip } from "@/components/ui";
 import {
+  buildHyroxDetailPath,
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
@@ -41,7 +42,7 @@ export function HyroxFacilityCard({ location, onMapFocus }: HyroxFacilityCardPro
         <Button variant="ghost" onClick={() => onMapFocus(location.id)}>
           地図で見る
         </Button>
-        <Link href={`/locations/${location.slug}`}>GymMapで詳細を見る</Link>
+        <Link href={buildHyroxDetailPath(location.slug)}>GymMapで詳細を見る</Link>
         {location.officialUrl ? (
           <a
             href={location.officialUrl}
