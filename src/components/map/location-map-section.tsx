@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { buildMapSelectionHref, resolveMapSelection } from "@/components/map/map-runtime-state";
 import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
 import { scoreProgramTextQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
@@ -37,6 +38,7 @@ type Coordinates = {
 };
 
 type GeolocationPermissionState = "granted" | "prompt" | "denied" | "unsupported" | "unknown";
+type LocationLifecycleState = "not_requested" | "requesting" | "obtained" | "denied" | "unavailable" | "stale";
 
 const TOKYO_CENTER: Coordinates = {
   latitude: 35.681236,
@@ -83,29 +85,6 @@ function isLocationInsideBounds(location: GymLocation, bounds: MapBounds | null)
   );
 }
 
-function findNearestLocationId(locations: GymLocation[], position: Coordinates) {
-  let nearestLocationId: string | null = null;
-  let nearestDistanceKm = Number.POSITIVE_INFINITY;
-
-  locations.forEach((location) => {
-    if (location.latitude === null || location.longitude === null) {
-      return;
-    }
-
-    const distanceKm = haversineDistanceKm(position, {
-      latitude: location.latitude,
-      longitude: location.longitude,
-    });
-
-    if (distanceKm < nearestDistanceKm) {
-      nearestDistanceKm = distanceKm;
-      nearestLocationId = location.id;
-    }
-  });
-
-  return nearestLocationId;
-}
-
 export function LocationMapSection({ locations, lessonIndex }: LocationMapSectionProps) {
   const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
@@ -117,44 +96,43 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
-  const [geolocationStatus, setGeolocationStatus] = useState<"idle" | "loading" | "granted" | "denied" | "fallback" | "error">("idle");
-  const [permissionState, setPermissionState] = useState<GeolocationPermissionState>("unknown");
-  const [geolocationMessage, setGeolocationMessage] = useState("現在地を確認すると、近くのジムを優先して表示できます。");
+  const [geolocationStatus, setGeolocationStatus] = useState<LocationLifecycleState>("not_requested");
+  const [geolocationMessage, setGeolocationMessage] = useState("現在地を確認すると、地図を現在地周辺へ移動できます。");
+  const [selectionNotice, setSelectionNotice] = useState<string | null>(null);
 
-  async function syncPermissionState() {
+  async function syncPermissionState(): Promise<GeolocationPermissionState> {
     if (!("geolocation" in navigator)) {
-      setPermissionState("unsupported");
-      setGeolocationStatus("fallback");
-      setGeolocationMessage("この環境では位置情報に対応していないため、東京中心で表示しています。");
-      return;
+      return "unsupported";
     }
 
     if (!("permissions" in navigator) || !navigator.permissions?.query) {
-      setPermissionState("unknown");
-      return;
+      return "unknown";
     }
 
     try {
       const permissionStatus = await navigator.permissions.query({ name: "geolocation" });
-      setPermissionState(permissionStatus.state);
-
-      permissionStatus.onchange = () => {
-        setPermissionState(permissionStatus.state);
-      };
+      return permissionStatus.state;
     } catch {
-      setPermissionState("unknown");
+      return "unknown";
     }
   }
 
   async function requestCurrentPosition() {
-    if (!("geolocation" in navigator)) {
-      setPermissionState("unsupported");
-      setGeolocationStatus("fallback");
+    const nextPermissionState = await syncPermissionState();
+
+    if (nextPermissionState === "unsupported") {
+      setGeolocationStatus("unavailable");
       setGeolocationMessage("この環境では位置情報に対応していないため、東京中心で表示しています。");
       return;
     }
 
-    setGeolocationStatus("loading");
+    if (nextPermissionState === "denied") {
+      setGeolocationStatus("denied");
+      setGeolocationMessage("このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。");
+      return;
+    }
+
+    setGeolocationStatus("requesting");
     setGeolocationMessage("現在地を取得しています…");
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -165,19 +143,18 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
         setCurrentPosition(nextPosition);
         setMapFocusCenter(nextPosition);
-        setSelectedLocationId(findNearestLocationId(locations, nextPosition));
-        setListScope("nearby");
-        setGeolocationStatus("granted");
-        setPermissionState("granted");
-        setGeolocationMessage("現在地を取得しました。近い順で表示しています。");
+        setGeolocationStatus("obtained");
+        setGeolocationMessage("現在地を取得し、地図を移動しました。店舗の並び順と選択は変更していません。");
       },
-      () => {
-        setGeolocationStatus("denied");
-        setGeolocationMessage(
-          permissionState === "denied"
-            ? "このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。"
-            : "位置情報を取得できませんでした。許可設定または端末の位置情報設定をご確認ください。",
-        );
+      (error) => {
+        if (error.code === error.PERMISSION_DENIED) {
+          setGeolocationStatus("denied");
+          setGeolocationMessage("このサイトでは位置情報が拒否されています。ブラウザ設定から許可してください。");
+          return;
+        }
+
+        setGeolocationStatus(currentPosition ? "stale" : "unavailable");
+        setGeolocationMessage("位置情報を取得できませんでした。端末の位置情報設定を確認して、もう一度お試しください。");
       },
       {
         enableHighAccuracy: false,
@@ -186,11 +163,6 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
       },
     );
   }
-
-  useEffect(() => {
-    syncPermissionState();
-    requestCurrentPosition();
-  }, []);
 
   const normalizedQuery = normalizeSearchKeyword(programQuery);
   const matchesByLocationId = new Map<string, MapLessonSearchItem[]>();
@@ -208,7 +180,6 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   });
 
   const matchedLocationIds = new Set(matchesByLocationId.keys());
-  const fallbackCenter = currentPosition ?? TOKYO_CENTER;
   const mappableLocations = useMemo(
     () =>
       locations
@@ -217,7 +188,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           ...location,
           distanceKm:
             location.latitude !== null && location.longitude !== null
-              ? haversineDistanceKm(fallbackCenter, {
+              ? haversineDistanceKm(TOKYO_CENTER, {
                   latitude: location.latitude,
                   longitude: location.longitude,
                 })
@@ -238,7 +209,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
           return left.distanceKm - right.distanceKm;
         }),
-    [fallbackCenter, locations],
+    [locations],
   );
   const mapLocations = useMemo(
     () =>
@@ -278,8 +249,29 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     return listScope !== "map" || isLocationInsideBounds(location, mapBounds);
   });
   const nearbyLocations = listCandidates.slice(0, 10);
-  const selectedLocation =
-    mappableLocations.find((location) => location.id === selectedLocationId) ?? mappableLocations[0] ?? null;
+  const selectionEntities = useMemo(
+    () => locations.map((location) => ({ id: location.id, publicKey: location.slug })),
+    [locations],
+  );
+  const publicKeyByLocationId = useMemo(
+    () => new Map(selectionEntities.map((entity) => [entity.id, entity.publicKey])),
+    [selectionEntities],
+  );
+  const selectedLocation = useMemo(() => {
+    const selectedMappableLocation =
+      mappableLocations.find((location) => location.id === selectedLocationId) ?? null;
+    const selectedDomainLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
+
+    return (
+      selectedMappableLocation ??
+      (selectedDomainLocation
+        ? {
+            ...selectedDomainLocation,
+            distanceKm: null,
+          }
+        : null)
+    );
+  }, [locations, mappableLocations, selectedLocationId]);
   const mapCenter = useMemo(
     () =>
       mapFocusCenter ??
@@ -288,13 +280,38 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             latitude: selectedLocation.latitude,
             longitude: selectedLocation.longitude,
           }
-        : fallbackCenter),
-    [fallbackCenter, mapFocusCenter, selectedLocation],
+        : TOKYO_CENTER),
+    [mapFocusCenter, selectedLocation],
   );
-  const handleSelectLocation = useCallback((locationId: string) => {
-    setMapFocusCenter(null);
-    setSelectedLocationId(locationId);
-  }, []);
+  const handleSelectLocation = useCallback(
+    (locationId: string) => {
+      const publicKey = publicKeyByLocationId.get(locationId);
+
+      if (!publicKey) {
+        return;
+      }
+
+      setMapFocusCenter(null);
+      setSelectionNotice(null);
+
+      if (selectedLocationId === locationId) {
+        return;
+      }
+
+      setSelectedLocationId(locationId);
+      window.history.pushState(null, "", buildMapSelectionHref(window.location.href, publicKey));
+    },
+    [publicKeyByLocationId, selectedLocationId],
+  );
+  const handleClearSelection = useCallback(() => {
+    if (selectedLocationId === null) {
+      return;
+    }
+
+    setSelectedLocationId(null);
+    setSelectionNotice(null);
+    window.history.pushState(null, "", buildMapSelectionHref(window.location.href, null));
+  }, [selectedLocationId]);
   const handleMapProviderError = useCallback(() => {
     setActiveMapProvider((provider) => (provider === "osm" ? provider : "osm"));
   }, []);
@@ -326,20 +343,54 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   }
 
   useEffect(() => {
-    if (!mappableLocations.length) {
-      setSelectedLocationId(null);
-      return;
+    function restoreSelectionFromUrl() {
+      if (selectionEntities.length === 0) {
+        setSelectedLocationId(null);
+        setSelectionNotice(null);
+        return;
+      }
+
+      const selection = resolveMapSelection(window.location.search, selectionEntities);
+
+      setMapFocusCenter(null);
+
+      if (selection.kind === "invalid") {
+        setSelectedLocationId(null);
+        setSelectionNotice("指定された店舗を表示できなかったため、選択を解除しました。");
+        window.history.replaceState(null, "", buildMapSelectionHref(window.location.href, null));
+        return;
+      }
+
+      setSelectedLocationId(selection.selectedId);
+      setSelectionNotice(null);
     }
 
-    if (!selectedLocationId || !mappableLocations.some((location) => location.id === selectedLocationId)) {
-      setSelectedLocationId(mappableLocations[0].id);
+    window.addEventListener("popstate", restoreSelectionFromUrl);
+    queueMicrotask(restoreSelectionFromUrl);
+
+    return () => {
+      window.removeEventListener("popstate", restoreSelectionFromUrl);
+    };
+  }, [selectionEntities]);
+
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        handleClearSelection();
+      }
     }
-  }, [selectedLocationId, mappableLocations]);
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [handleClearSelection]);
 
   const statusLabel =
-    geolocationStatus === "granted"
-      ? "現在地を基準に近い順"
-      : geolocationStatus === "loading"
+    geolocationStatus === "obtained"
+      ? "現在地を地図に表示中 / 東京駅を基準に近い順"
+      : geolocationStatus === "requesting"
         ? "現在地を取得中"
         : "東京駅を基準に近い順";
   const resultSummary = normalizedQuery
@@ -403,14 +454,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           <button
             type="button"
             className={listScope === "nearby" ? "is-active" : ""}
-            onClick={() => {
-              setListScope("nearby");
-
-              if (currentPosition) {
-                setMapFocusCenter(currentPosition);
-                setSelectedLocationId(mappableLocations[0]?.id ?? null);
-              }
-            }}
+            onClick={() => setListScope("nearby")}
           >
             近い店舗から探す
           </button>
@@ -426,19 +470,19 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         <p className="map-status muted">
           {statusLabel} / {resultSummary}
         </p>
-        {geolocationStatus !== "granted" ? (
+        {selectionNotice ? <p className="map-status muted" aria-live="polite">{selectionNotice}</p> : null}
+        {geolocationStatus !== "obtained" ? (
           <div className="map-geolocation-help">
             <p className="muted">{geolocationMessage}</p>
             <button
               type="button"
               className="map-geolocation-button"
               onClick={() => {
-                void syncPermissionState();
                 void requestCurrentPosition();
               }}
-              disabled={geolocationStatus === "loading"}
+              disabled={geolocationStatus === "requesting"}
             >
-              {geolocationStatus === "loading" ? "現在地を取得中…" : "現在地を使う"}
+              {geolocationStatus === "requesting" ? "現在地を取得中…" : "現在地を使う"}
             </button>
           </div>
         ) : null}
@@ -451,7 +495,9 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             selectedLocationId={selectedLocation?.id ?? null}
             center={mapCenter}
             currentPosition={currentPosition}
+            focusCenter={mapFocusCenter !== null}
             onSelectLocation={handleSelectLocation}
+            onClearSelection={handleClearSelection}
             onBoundsChange={setMapBounds}
             onProviderError={handleMapProviderError}
           />
@@ -494,6 +540,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
                   key={location.id}
                   className={`map-location-item map-location-item-compact${selectedLocation?.id === location.id ? " is-active" : ""}`}
                   role="button"
+                  aria-pressed={selectedLocation?.id === location.id}
                   tabIndex={0}
                   onClick={() => handleSelectLocation(location.id)}
                   onKeyDown={(event) => {

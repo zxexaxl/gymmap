@@ -2,14 +2,29 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
-import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
+import type { CircleMarker as LeafletCircleMarker, LatLngBoundsExpression, LatLngExpression } from "leaflet";
 
 import type { Coordinates, MapBounds, MapComponentProps } from "@/components/map/map-types";
 
-function MapBoundsReporter({ onBoundsChange }: { onBoundsChange?: (bounds: MapBounds) => void }) {
+function MapInteractionReporter({
+  onBoundsChange,
+  onClearSelection,
+}: {
+  onBoundsChange?: (bounds: MapBounds) => void;
+  onClearSelection?: () => void;
+}) {
   const lastBoundsRef = useRef<MapBounds | null>(null);
 
   useMapEvents({
+    click(event) {
+      const target = event.originalEvent.target;
+
+      if (target instanceof Element && target.closest(".leaflet-interactive, .leaflet-control")) {
+        return;
+      }
+
+      onClearSelection?.();
+    },
     moveend(event) {
       const bounds = event.target.getBounds();
       const nextBounds = {
@@ -38,20 +53,86 @@ function MapBoundsReporter({ onBoundsChange }: { onBoundsChange?: (bounds: MapBo
   return null;
 }
 
+function AccessibleLocationMarker({
+  location,
+  selected,
+  onSelect,
+}: {
+  location: MapComponentProps["locations"][number];
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  const markerRef = useRef<LeafletCircleMarker | null>(null);
+  const accessibleLabel = location.brandName ? `${location.brandName} / ${location.name}` : location.name;
+
+  useEffect(() => {
+    const element = markerRef.current?.getElement();
+
+    if (!element) {
+      return;
+    }
+
+    element.setAttribute("tabindex", "0");
+    element.setAttribute("role", "button");
+    element.setAttribute("aria-label", accessibleLabel);
+    element.setAttribute("aria-pressed", String(selected));
+
+    function handleKeyDown(event: Event) {
+      if (!(event instanceof KeyboardEvent)) {
+        return;
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onSelect();
+      }
+    }
+
+    element.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      element.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [accessibleLabel, onSelect, selected]);
+
+  return (
+    <CircleMarker
+      ref={markerRef}
+      center={[location.latitude as number, location.longitude as number]}
+      radius={selected ? 11 : 8}
+      pathOptions={{
+        color: selected ? "#7f2f16" : "#b0502d",
+        fillColor: selected ? "#7f2f16" : "#b0502d",
+        fillOpacity: 0.92,
+        weight: 2,
+      }}
+      eventHandlers={{
+        click: onSelect,
+      }}
+    >
+      <Tooltip direction="top" offset={[0, -8]}>
+        {accessibleLabel}
+      </Tooltip>
+    </CircleMarker>
+  );
+}
+
 function MapController({
   center,
   bounds,
   hasSelectedLocation,
+  focusCenter,
 }: {
   center: Coordinates;
   bounds: LatLngBoundsExpression | null;
   hasSelectedLocation: boolean;
+  focusCenter: boolean;
 }) {
   const map = useMap();
   const hasPositionedRef = useRef(false);
 
   useEffect(() => {
-    if (hasSelectedLocation || !bounds) {
+    if (hasSelectedLocation || focusCenter || !bounds) {
       const nextCenter: LatLngExpression = [center.latitude, center.longitude];
       const isAlreadyAtTarget =
         map.distance(map.getCenter(), nextCenter) < 1 && Math.abs(map.getZoom() - 13) < 0.01;
@@ -75,7 +156,7 @@ function MapController({
     }
 
     hasPositionedRef.current = true;
-  }, [bounds, center.latitude, center.longitude, hasSelectedLocation, map]);
+  }, [bounds, center.latitude, center.longitude, focusCenter, hasSelectedLocation, map]);
 
   useEffect(() => {
     const container = map.getContainer();
@@ -110,7 +191,9 @@ export function LeafletGymMap({
   selectedLocationId,
   center,
   currentPosition,
+  focusCenter = false,
   onSelectLocation,
+  onClearSelection,
   onBoundsChange,
   unselectedCaption,
 }: MapComponentProps) {
@@ -157,8 +240,13 @@ export function LeafletGymMap({
           });
         }}
       >
-        <MapBoundsReporter onBoundsChange={onBoundsChange} />
-        <MapController center={center} bounds={bounds} hasSelectedLocation={Boolean(selectedLocation)} />
+        <MapInteractionReporter onBoundsChange={onBoundsChange} onClearSelection={onClearSelection} />
+        <MapController
+          center={center}
+          bounds={bounds}
+          hasSelectedLocation={Boolean(selectedLocation)}
+          focusCenter={focusCenter}
+        />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -185,24 +273,12 @@ export function LeafletGymMap({
             const isSelected = location.id === selectedLocationId;
 
             return (
-              <CircleMarker
+              <AccessibleLocationMarker
                 key={location.id}
-                center={[location.latitude as number, location.longitude as number]}
-                radius={isSelected ? 11 : 8}
-                pathOptions={{
-                  color: isSelected ? "#7f2f16" : "#b0502d",
-                  fillColor: isSelected ? "#7f2f16" : "#b0502d",
-                  fillOpacity: 0.92,
-                  weight: 2,
-                }}
-                eventHandlers={{
-                  click: () => onSelectLocation(location.id),
-                }}
-              >
-                <Tooltip direction="top" offset={[0, -8]}>
-                  {location.brandName ? `${location.brandName} / ${location.name}` : location.name}
-                </Tooltip>
-              </CircleMarker>
+                location={location}
+                selected={isSelected}
+                onSelect={() => onSelectLocation(location.id)}
+              />
             );
           })}
       </MapContainer>
