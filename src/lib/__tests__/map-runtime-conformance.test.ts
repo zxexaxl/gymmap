@@ -15,6 +15,10 @@ const leafletMapSource = readFileSync(
   new URL("../../components/map/leaflet-gym-map.tsx", import.meta.url),
   "utf8",
 );
+const appleMapSource = readFileSync(
+  new URL("../../components/map/apple-gym-map.tsx", import.meta.url),
+  "utf8",
+);
 
 test("M0-R1 keeps location not requested until the explicit locate action", () => {
   assert.match(
@@ -108,6 +112,27 @@ test("bounded clear, Escape, keyboard marker, and selected semantics are wired w
   assert.match(leafletMapSource, /event\.key === "Enter"/);
   assert.match(leafletMapSource, /element\.addEventListener\("keydown"/);
   assert.match(leafletMapSource, /element\.setAttribute\("aria-pressed", String\(selected\)\)/);
+});
+
+test("M0-R1.1 Apple provider clears only through bare-map activation", () => {
+  assert.match(appleMapSource, /addEventListener\("single-tap", handleBackgroundActivation\)/);
+  assert.match(appleMapSource, /handleBackgroundActivation = \(\) => \{\s*onClearSelection\?\.\(\)/);
+  assert.doesNotMatch(appleMapSource, /annotation\.addEventListener\("select",[\s\S]{0,200}onClearSelection/);
+});
+
+test("M0-R1.1 Apple markers share canonical pointer and keyboard selection", () => {
+  assert.match(appleMapSource, /annotation\.addEventListener\("select"/);
+  assert.match(appleMapSource, /event\.key !== "Enter" && event\.key !== " "/);
+  assert.match(appleMapSource, /element\.addEventListener\("keydown", handleKeyDown\)/);
+  assert.match(appleMapSource, /onSelectLocation\(location\.id\)/);
+});
+
+test("M0-R1.1 Apple provider reflects selected identity semantically and programmatically", () => {
+  assert.match(appleMapSource, /annotation\.accessibilityLabel = accessibleLabel/);
+  assert.match(appleMapSource, /element\.setAttribute\("aria-pressed", String\(selected\)\)/);
+  assert.match(appleMapSource, /map\.selectedAnnotation = selectedLocationIndex >= 0 \? annotations\[selectedLocationIndex\] : null/);
+  assert.match(appleMapSource, /if \(!isSynchronizingSelectionRef\.current\)/);
+  assert.doesNotMatch(appleMapSource, /selectedLocationId \?\? locations\[0\]/);
 });
 
 test("Lesson query, filters, viewport scope, ordering, and domain content stay in the Lesson consumer", () => {
