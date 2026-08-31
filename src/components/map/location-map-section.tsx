@@ -4,6 +4,12 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import {
+  CurrentLocationControl,
+  MapChrome,
+  MapSelectionSurface,
+  MapStateNotice,
+} from "@/components/map/map-presentation";
 import { buildMapSelectionHref, resolveMapSelection } from "@/components/map/map-runtime-state";
 import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
@@ -15,7 +21,11 @@ const LeafletGymMap = dynamic(
   () => import("@/components/map/leaflet-gym-map").then((module) => module.LeafletGymMap),
   {
     ssr: false,
-    loading: () => <div className="map-canvas map-canvas-fallback">地図を読み込んでいます…</div>,
+    loading: () => (
+      <div className="map-canvas map-canvas-fallback">
+        <MapStateNotice kind="loading">地図を読み込んでいます…</MapStateNotice>
+      </div>
+    ),
   },
 );
 
@@ -23,7 +33,11 @@ const AppleGymMap = dynamic(
   () => import("@/components/map/apple-gym-map").then((module) => module.AppleGymMap),
   {
     ssr: false,
-    loading: () => <div className="map-canvas map-canvas-fallback">Apple Maps を読み込んでいます…</div>,
+    loading: () => (
+      <div className="map-canvas map-canvas-fallback">
+        <MapStateNotice kind="loading">Apple Maps を読み込んでいます…</MapStateNotice>
+      </div>
+    ),
   },
 );
 
@@ -342,6 +356,31 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     return query ? `/search?${query}` : `/search?area=${encodeURIComponent(location.name)}`;
   }
 
+  function renderSelectedLocationContent() {
+    if (!selectedLocation) {
+      return null;
+    }
+
+    return (
+      <>
+        <p className="map-list-label">選択中の店舗</p>
+        <p className="map-location-brand">{selectedLocation.brand?.name ?? "-"}</p>
+        <h3>{selectedLocation.name}</h3>
+        <p className="muted">
+          {getLocationAddress(selectedLocation.prefecture, selectedLocation.city, selectedLocation.address_line)}
+        </p>
+        <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
+        {normalizedQuery && formatMatchedLessonSummary(selectedLocation.id) ? (
+          <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
+        ) : null}
+        <div className="map-link-row">
+          {normalizedQuery ? <Link href={buildLessonDetailHref(selectedLocation)}>レッスン詳細を見る</Link> : null}
+          <Link href={`/locations/${selectedLocation.slug}`}>店舗詳細を見る</Link>
+        </div>
+      </>
+    );
+  }
+
   useEffect(() => {
     function restoreSelectionFromUrl() {
       if (selectionEntities.length === 0) {
@@ -471,21 +510,6 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           {statusLabel} / {resultSummary}
         </p>
         {selectionNotice ? <p className="map-status muted" aria-live="polite">{selectionNotice}</p> : null}
-        {geolocationStatus !== "obtained" ? (
-          <div className="map-geolocation-help">
-            <p className="muted">{geolocationMessage}</p>
-            <button
-              type="button"
-              className="map-geolocation-button"
-              onClick={() => {
-                void requestCurrentPosition();
-              }}
-              disabled={geolocationStatus === "requesting"}
-            >
-              {geolocationStatus === "requesting" ? "現在地を取得中…" : "現在地を使う"}
-            </button>
-          </div>
-        ) : null}
       </div>
 
       <div className="map-layout">
@@ -501,28 +525,41 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             onBoundsChange={setMapBounds}
             onProviderError={handleMapProviderError}
           />
+          {geolocationStatus !== "obtained" ? (
+            <MapChrome label="地図の現在地コントロール">
+              <CurrentLocationControl
+                state={geolocationStatus}
+                message={geolocationMessage}
+                onClick={() => {
+                  void requestCurrentPosition();
+                }}
+                disabled={geolocationStatus === "requesting"}
+              />
+            </MapChrome>
+          ) : null}
+          {selectedLocation ? (
+            <MapSelectionSurface
+              placement="mobile"
+              ariaLabel="選択中の店舗"
+              closeLabel="選択中の店舗を閉じる"
+              onClose={handleClearSelection}
+            >
+              {renderSelectedLocationContent()}
+            </MapSelectionSurface>
+          ) : null}
         </div>
 
         <div className="map-sidebar">
           {selectedLocation ? (
-            <article className="map-location-item map-selected-location is-active" aria-live="polite">
-              <p className="map-list-label">選択中の店舗</p>
-              <p className="map-location-brand">{selectedLocation.brand?.name ?? "-"}</p>
-              <h3>{selectedLocation.name}</h3>
-              <p className="muted">
-                {getLocationAddress(selectedLocation.prefecture, selectedLocation.city, selectedLocation.address_line)}
-              </p>
-              <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
-              {normalizedQuery && formatMatchedLessonSummary(selectedLocation.id) ? (
-                <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
-              ) : null}
-              <div className="map-link-row">
-                {normalizedQuery ? <Link href={buildLessonDetailHref(selectedLocation)}>レッスン詳細を見る</Link> : null}
-                <Link href={`/locations/${selectedLocation.slug}`}>店舗詳細を見る</Link>
-              </div>
-            </article>
+            <MapSelectionSurface
+              placement="desktop"
+              ariaLabel="選択中の店舗"
+              closeLabel="選択中の店舗を閉じる"
+              onClose={handleClearSelection}
+            >
+              {renderSelectedLocationContent()}
+            </MapSelectionSurface>
           ) : null}
-
           <div className="map-nearby-section">
             <div className="map-list-heading">
               <h3>{listScope === "map" ? "地図範囲内の近い10店舗" : "近い10店舗"}</h3>

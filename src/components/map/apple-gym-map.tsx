@@ -3,6 +3,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { appleMapsToken } from "@/lib/map-provider";
+import {
+  getMapMarkerPresentation,
+  resolveMapMarkerState,
+  type MapMarkerState,
+} from "@/components/map/map-marker-presentation";
 import type { MapBounds, MapComponentProps } from "@/components/map/map-types";
 
 const APPLE_MAPKIT_SCRIPT_URL = "https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js";
@@ -129,6 +134,7 @@ function bindAccessibleAnnotationElement(
   annotation: AppleAnnotation,
   accessibleLabel: string,
   selected: boolean,
+  markerState: MapMarkerState,
   onActivate: () => void,
 ) {
   const element = annotation.element;
@@ -150,6 +156,9 @@ function bindAccessibleAnnotationElement(
   element.setAttribute("role", "button");
   element.setAttribute("aria-label", accessibleLabel);
   element.setAttribute("aria-pressed", String(selected));
+  element.setAttribute("data-marker-state", markerState);
+  element.classList.add("apple-gym-map-marker");
+  element.classList.toggle("apple-gym-map-marker--selected", selected);
   element.addEventListener("keydown", handleKeyDown);
 
   return () => {
@@ -293,18 +302,27 @@ export function AppleGymMap({
       annotation: AppleAnnotation;
       accessibleLabel: string;
       selected: boolean;
+      markerState: MapMarkerState;
       onActivate: () => void;
     }> = [];
 
     const annotations = locations
       .filter((location) => location.latitude !== null && location.longitude !== null)
       .map((location) => {
+        const selected = location.id === selectedLocationId;
+        const markerState = resolveMapMarkerState({
+          selected,
+          previewed: false,
+          hasSelection: selectedLocationId !== null,
+        });
+        const presentation = getMapMarkerPresentation(markerState);
         const annotation = new mapkitState.MarkerAnnotation(
           new mapkitState.Coordinate(location.latitude as number, location.longitude as number),
           {
             title: location.name,
             subtitle: location.brandName ?? "",
-            color: location.id === selectedLocationId ? "#7f2f16" : "#b0502d",
+            color: presentation.fillColor,
+            glyphText: presentation.glyphText ?? "",
           },
         );
 
@@ -320,7 +338,8 @@ export function AppleGymMap({
         pendingAccessibleBindings.push({
           annotation,
           accessibleLabel,
-          selected: location.id === selectedLocationId,
+          selected,
+          markerState,
           onActivate: () => onSelectLocation(location.id),
         });
         return annotation;
@@ -332,6 +351,7 @@ export function AppleGymMap({
         {
           title: "現在地",
           color: "#2563eb",
+          glyphText: "◎",
         },
       );
       map.addAnnotation(currentPositionAnnotation);
@@ -355,6 +375,7 @@ export function AppleGymMap({
           pending.annotation,
           pending.accessibleLabel,
           pending.selected,
+          pending.markerState,
           pending.onActivate,
         );
 
@@ -397,21 +418,32 @@ export function AppleGymMap({
 
     const nextCoordinate = new mapkitState.Coordinate(selectedCenter.latitude, selectedCenter.longitude);
 
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (mapkitState.CoordinateRegion && mapkitState.CoordinateSpan) {
-      const nextRegion = new mapkitState.CoordinateRegion(nextCoordinate, new mapkitState.CoordinateSpan(0.08, 0.08));
-      if (typeof map.setRegionAnimated === "function") {
+      const narrow = containerRef.current ? containerRef.current.clientWidth <= 640 : false;
+      const presentationAdjustedCoordinate = selectedLocation
+        ? new mapkitState.Coordinate(
+            selectedCenter.latitude - (narrow ? 0.016 : 0),
+            selectedCenter.longitude,
+          )
+        : nextCoordinate;
+      const nextRegion = new mapkitState.CoordinateRegion(
+        presentationAdjustedCoordinate,
+        new mapkitState.CoordinateSpan(0.08, 0.08),
+      );
+      if (!reduceMotion && typeof map.setRegionAnimated === "function") {
         map.setRegionAnimated(nextRegion);
       } else {
         map.region = nextRegion;
       }
-    } else if (typeof map.setCenterAnimated === "function") {
+    } else if (!reduceMotion && typeof map.setCenterAnimated === "function") {
       map.setCenterAnimated(nextCoordinate);
     } else {
       map.center = nextCoordinate;
     }
 
     lastCenterKeyRef.current = nextCenterKey;
-  }, [mapkitState, selectedCenter.latitude, selectedCenter.longitude]);
+  }, [mapkitState, selectedCenter.latitude, selectedCenter.longitude, selectedLocation]);
 
   useEffect(() => {
     const map = mapRef.current;

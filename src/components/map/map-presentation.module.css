@@ -1,0 +1,189 @@
+.chrome {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 650;
+  display: grid;
+  max-width: min(320px, calc(100% - 28px));
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--panel-strong) 94%, transparent);
+  box-shadow: var(--shadow-surface);
+  backdrop-filter: blur(10px);
+}
+
+.locationControl {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.locationButton {
+  width: auto;
+  min-height: 44px;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.locationGlyph {
+  display: inline-grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: var(--space-2);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.locationMessage {
+  max-width: 30ch;
+  margin: 0;
+  padding: 0 var(--space-2) var(--space-1);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.selectionSurface {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: visible;
+  border: 1px solid color-mix(in srgb, var(--accent) 36%, var(--line));
+  border-radius: var(--radius-surface);
+  background: color-mix(in srgb, var(--panel-strong) 97%, transparent);
+  box-shadow: 0 16px 36px rgb(49 32 22 / 16%);
+  padding: var(--space-5);
+}
+
+.mobileSurface {
+  display: none;
+}
+
+.selectionContent {
+  padding-right: 32px;
+}
+
+.selectionContent p,
+.selectionContent h3 {
+  margin-top: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 2;
+  width: 44px !important;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.sheetHandle {
+  display: none;
+}
+
+.stateNotice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  width: min(440px, calc(100% - 28px));
+  margin: auto;
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: color-mix(in srgb, var(--panel-strong) 96%, transparent);
+  color: var(--text);
+  box-shadow: var(--shadow-surface);
+}
+
+.stateNotice[data-state-kind="error"] {
+  border-color: color-mix(in srgb, var(--color-error) 38%, var(--line));
+}
+
+.stateIcon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.stateAction {
+  justify-self: end;
+}
+
+.marker {
+  cursor: pointer;
+  filter: drop-shadow(0 2px 3px rgb(43 28 20 / 24%));
+  transition: fill 140ms ease, fill-opacity 140ms ease, stroke 140ms ease;
+}
+
+.markerSelected {
+  filter: drop-shadow(0 0 0.3rem rgb(127 47 22 / 38%));
+}
+
+.marker:focus-visible,
+:global(.apple-gym-map-marker:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+:global(.apple-gym-map-marker--selected)::after {
+  content: "✓";
+}
+
+@media (max-width: 640px) {
+  .chrome {
+    top: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .locationMessage {
+    display: none;
+  }
+
+  .desktopSurface {
+    display: none;
+  }
+
+  .mobileSurface {
+    display: block;
+    position: absolute;
+    top: auto;
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    z-index: 620;
+    width: auto;
+    max-height: min(58%, 340px);
+    overflow: auto;
+    padding: var(--space-5) var(--space-4) var(--space-4);
+    border-radius: 22px 22px 16px 16px;
+    padding-bottom: max(var(--space-4), env(safe-area-inset-bottom));
+  }
+
+  .sheetHandle {
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin: calc(var(--space-2) * -1) auto var(--space-3);
+    border-radius: 999px;
+    background: var(--color-text-muted);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marker {
+    transition: none;
+  }
+}
