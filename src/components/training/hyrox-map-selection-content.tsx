@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Badge, Chip } from "@/components/ui";
 import {
+  buildHyroxDetailPath,
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
@@ -49,7 +50,7 @@ export function HyroxMapSelectionContent({
       ) : null}
 
       <div className={styles.actions}>
-        <Link className={styles.primaryAction} href={`/locations/${location.slug}`}>
+        <Link className={styles.primaryAction} href={buildHyroxDetailPath(location.slug)}>
           GymMapで詳細を見る
         </Link>
         {location.officialUrl ? (
