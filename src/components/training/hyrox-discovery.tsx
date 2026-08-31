@@ -1,21 +1,47 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
+import {
+  CurrentLocationControl,
+  MapChrome,
+  MapSelectionSurface,
+  MapStateNotice,
+} from "@/components/map/map-presentation";
+import { buildMapSelectionHref, resolveMapSelection } from "@/components/map/map-runtime-state";
 import { HyroxFacilityCard } from "@/components/training/hyrox-facility-card";
+import { HyroxMapSelectionContent } from "@/components/training/hyrox-map-selection-content";
+import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
 import {
   filterHyroxLocations,
   getHyroxPrefectureOptions,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
 
+import styles from "./hyrox-map-ui.module.css";
+
 const LeafletGymMap = dynamic(
   () => import("@/components/map/leaflet-gym-map").then((module) => module.LeafletGymMap),
   {
     ssr: false,
-    loading: () => <div className="map-canvas map-canvas-fallback">地図を読み込んでいます…</div>,
+    loading: () => (
+      <div className="map-canvas map-canvas-fallback">
+        <MapStateNotice kind="loading">地図を読み込んでいます…</MapStateNotice>
+      </div>
+    ),
+  },
+);
+
+const AppleGymMap = dynamic(
+  () => import("@/components/map/apple-gym-map").then((module) => module.AppleGymMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="map-canvas map-canvas-fallback">
+        <MapStateNotice kind="loading">Apple Maps を読み込んでいます…</MapStateNotice>
+      </div>
+    ),
   },
 );
 
@@ -24,34 +50,230 @@ const JAPAN_CENTER = {
   longitude: 138.2529,
 };
 
+type Coordinates = {
+  latitude: number;
+  longitude: number;
+};
+
+type LocationLifecycleState =
+  | "not_requested"
+  | "requesting"
+  | "obtained"
+  | "denied"
+  | "unavailable"
+  | "stale";
+
 type HyroxDiscoveryProps = {
   locations: HyroxDiscoveryLocation[];
 };
 
 export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
+  const [activeMapProvider, setActiveMapProvider] = useState<MapProvider>(configuredMapProvider);
   const [prefecture, setPrefecture] = useState("");
   const [selectedLocationId, setSelectedLocationId] = useState<string | null>(null);
+  const [selectionNotice, setSelectionNotice] = useState<string | null>(null);
+  const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
+  const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
+  const [geolocationStatus, setGeolocationStatus] =
+    useState<LocationLifecycleState>("not_requested");
+  const [geolocationMessage, setGeolocationMessage] = useState(
+    "現在地を確認すると、地図を現在地周辺へ移動できます。",
+  );
   const prefectureOptions = useMemo(() => getHyroxPrefectureOptions(locations), [locations]);
   const filteredLocations = useMemo(
     () => filterHyroxLocations(locations, prefecture),
     [locations, prefecture],
   );
-  const selectedLocation =
-    filteredLocations.find((location) => location.id === selectedLocationId) ?? null;
+  const selectionEntities = useMemo(
+    () => locations.map((location) => ({ id: location.id, publicKey: location.slug })),
+    [locations],
+  );
+  const publicKeyByLocationId = useMemo(
+    () => new Map(selectionEntities.map((entity) => [entity.id, entity.publicKey])),
+    [selectionEntities],
+  );
+  const selectedLocation = useMemo(
+    () => locations.find((location) => location.id === selectedLocationId) ?? null,
+    [locations, selectedLocationId],
+  );
+  const selectedFilteredLocation = useMemo(
+    () => filteredLocations.find((location) => location.id === selectedLocationId) ?? null,
+    [filteredLocations, selectedLocationId],
+  );
   const mapCenter =
-    filteredLocations.length === 1
+    mapFocusCenter ??
+    (selectedFilteredLocation
       ? {
-          latitude: filteredLocations[0].latitude,
-          longitude: filteredLocations[0].longitude,
+          latitude: selectedFilteredLocation.latitude,
+          longitude: selectedFilteredLocation.longitude,
         }
-      : JAPAN_CENTER;
-  const mapLocations = filteredLocations.map((location) => ({
-    id: location.id,
-    name: location.name,
-    brandName: location.brandName,
-    latitude: location.latitude,
-    longitude: location.longitude,
-  }));
+      : filteredLocations.length === 1
+        ? {
+            latitude: filteredLocations[0].latitude,
+            longitude: filteredLocations[0].longitude,
+          }
+        : JAPAN_CENTER);
+  const mapLocations = useMemo(
+    () =>
+      filteredLocations.map((location) => ({
+        id: location.id,
+        name: location.name,
+        brandName: location.brandName,
+        latitude: location.latitude,
+        longitude: location.longitude,
+      })),
+    [filteredLocations],
+  );
+  const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
+
+  const handleSelectLocation = useCallback(
+    (locationId: string, revealInCompactList = false) => {
+      const publicKey = publicKeyByLocationId.get(locationId);
+
+      if (!publicKey) {
+        return;
+      }
+
+      setMapFocusCenter(null);
+      setSelectionNotice(null);
+
+      if (selectedLocationId !== locationId) {
+        setSelectedLocationId(locationId);
+        window.history.pushState(null, "", buildMapSelectionHref(window.location.href, publicKey));
+      }
+
+      if (revealInCompactList) {
+        requestAnimationFrame(() => {
+          document.getElementById(`hyrox-map-list-${locationId}`)?.scrollIntoView({
+            block: "nearest",
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "auto"
+              : "smooth",
+          });
+        });
+      }
+    },
+    [publicKeyByLocationId, selectedLocationId],
+  );
+
+  const handleClearSelection = useCallback(() => {
+    if (selectedLocationId === null) {
+      return;
+    }
+
+    setSelectedLocationId(null);
+    setSelectionNotice(null);
+    window.history.pushState(null, "", buildMapSelectionHref(window.location.href, null));
+  }, [selectedLocationId]);
+
+  const handleMapProviderError = useCallback(() => {
+    setActiveMapProvider((provider) => (provider === "osm" ? provider : "osm"));
+  }, []);
+
+  async function requestCurrentPosition() {
+    if (!("geolocation" in navigator)) {
+      setGeolocationStatus("unavailable");
+      setGeolocationMessage("この環境では位置情報を利用できません。地図と施設一覧は引き続き利用できます。");
+      return;
+    }
+
+    if ("permissions" in navigator && navigator.permissions?.query) {
+      try {
+        const permission = await navigator.permissions.query({ name: "geolocation" });
+
+        if (permission.state === "denied") {
+          setGeolocationStatus("denied");
+          setGeolocationMessage("位置情報が拒否されています。ブラウザ設定から許可してください。");
+          return;
+        }
+      } catch {
+        // Some browsers expose geolocation without supporting the permission query.
+      }
+    }
+
+    setGeolocationStatus("requesting");
+    setGeolocationMessage("現在地を取得しています…");
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const nextPosition = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        };
+
+        setCurrentPosition(nextPosition);
+        setMapFocusCenter(nextPosition);
+        setGeolocationStatus("obtained");
+        setGeolocationMessage("現在地を表示しました。施設の絞り込みと選択は変更していません。");
+      },
+      (error) => {
+        if (error.code === error.PERMISSION_DENIED) {
+          setGeolocationStatus("denied");
+          setGeolocationMessage("位置情報が拒否されています。ブラウザ設定から許可してください。");
+          return;
+        }
+
+        setGeolocationStatus(currentPosition ? "stale" : "unavailable");
+        setGeolocationMessage("現在地を取得できませんでした。設定を確認して、もう一度お試しください。");
+      },
+      {
+        enableHighAccuracy: false,
+        timeout: 8000,
+        maximumAge: 5 * 60 * 1000,
+      },
+    );
+  }
+
+  function renderSelectedLocationContent() {
+    if (!selectedLocation) {
+      return null;
+    }
+
+    return (
+      <HyroxMapSelectionContent
+        location={selectedLocation}
+        outsideCurrentResults={!filteredLocations.some((location) => location.id === selectedLocation.id)}
+      />
+    );
+  }
+
+  useEffect(() => {
+    function restoreSelectionFromUrl() {
+      const selection = resolveMapSelection(window.location.search, selectionEntities);
+
+      setMapFocusCenter(null);
+
+      if (selection.kind === "invalid") {
+        setSelectedLocationId(null);
+        setSelectionNotice("指定された施設を表示できなかったため、選択を解除しました。");
+        window.history.replaceState(null, "", buildMapSelectionHref(window.location.href, null));
+        return;
+      }
+
+      setSelectedLocationId(selection.selectedId);
+      setSelectionNotice(null);
+    }
+
+    window.addEventListener("popstate", restoreSelectionFromUrl);
+    queueMicrotask(restoreSelectionFromUrl);
+
+    return () => {
+      window.removeEventListener("popstate", restoreSelectionFromUrl);
+    };
+  }, [selectionEntities]);
+
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        handleClearSelection();
+      }
+    }
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [handleClearSelection]);
 
   return (
     <>
@@ -62,13 +284,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         </div>
         <label className="hyrox-prefecture-filter">
           <span>都道府県</span>
-          <select
-            value={prefecture}
-            onChange={(event) => {
-              setPrefecture(event.target.value);
-              setSelectedLocationId(null);
-            }}
-          >
+          <select value={prefecture} onChange={(event) => setPrefecture(event.target.value)}>
             <option value="">全国 ({locations.length})</option>
             {prefectureOptions.map((option) => (
               <option key={option.prefecture} value={option.prefecture}>
@@ -83,43 +299,99 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         <div className="section-heading hyrox-section-heading">
           <div>
             <p className="hyrox-eyebrow">MAP</p>
-            <h2 id="hyrox-map-heading">地図から探す</h2>
+            <h2 id="hyrox-map-heading" className={styles.mapHeading}>地図から探す</h2>
           </div>
           <p aria-live="polite">{filteredLocations.length}施設を表示</p>
         </div>
-        <div className="hyrox-map-canvas" aria-label="HYROX Official Training Clubの位置マップ">
-          <LeafletGymMap
-            locations={mapLocations}
-            selectedLocationId={selectedLocationId}
-            center={mapCenter}
-            currentPosition={null}
-            onSelectLocation={setSelectedLocationId}
-            unselectedCaption={`${prefecture || "全国"}の${filteredLocations.length}施設を表示中`}
-          />
+        {selectionNotice ? <p className="map-status muted" aria-live="polite">{selectionNotice}</p> : null}
+        <div className="map-layout">
+          <div
+            className={`map-canvas ${styles.mapCanvas}`}
+            aria-label="HYROX Official Training Clubの位置マップ"
+          >
+            <MapComponent
+              locations={mapLocations}
+              selectedLocationId={selectedFilteredLocation?.id ?? null}
+              center={mapCenter}
+              currentPosition={currentPosition}
+              focusCenter={mapFocusCenter !== null}
+              onSelectLocation={(locationId) => handleSelectLocation(locationId, true)}
+              onClearSelection={handleClearSelection}
+              onProviderError={handleMapProviderError}
+              unselectedCaption={`${prefecture || "全国"}の${filteredLocations.length}施設を表示中`}
+            />
+            {geolocationStatus !== "obtained" ? (
+              <MapChrome label="地図の現在地コントロール">
+                <CurrentLocationControl
+                  state={geolocationStatus}
+                  message={geolocationMessage}
+                  onClick={() => {
+                    void requestCurrentPosition();
+                  }}
+                  disabled={geolocationStatus === "requesting"}
+                />
+              </MapChrome>
+            ) : null}
+            {selectedLocation ? (
+              <MapSelectionSurface
+                placement="mobile"
+                ariaLabel="選択中のHYROX施設"
+                closeLabel="選択中のHYROX施設を閉じる"
+                onClose={handleClearSelection}
+              >
+                {renderSelectedLocationContent()}
+              </MapSelectionSurface>
+            ) : null}
+          </div>
+
+          <div
+            className={`map-sidebar ${styles.mapSidebar}${selectedLocation ? "" : ` ${styles.sidebarWithoutSelection}`}`}
+          >
+            {selectedLocation ? (
+              <MapSelectionSurface
+                placement="desktop"
+                ariaLabel="選択中のHYROX施設"
+                closeLabel="選択中のHYROX施設を閉じる"
+                onClose={handleClearSelection}
+              >
+                {renderSelectedLocationContent()}
+              </MapSelectionSurface>
+            ) : null}
+            <div className="map-nearby-section">
+              <div className="map-list-heading">
+                <h3>{prefecture || "全国"}の施設</h3>
+                <span>{filteredLocations.length}件</span>
+              </div>
+              <div className="map-location-list" aria-label="地図に表示中のHYROX施設">
+                {filteredLocations.map((location) => (
+                  <article
+                    id={`hyrox-map-list-${location.id}`}
+                    key={location.id}
+                    className={`map-location-item map-location-item-compact ${styles.compactListItem}${selectedLocation?.id === location.id ? " is-active" : ""}`}
+                    role="button"
+                    aria-pressed={selectedLocation?.id === location.id}
+                    tabIndex={0}
+                    onClick={() => handleSelectLocation(location.id)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        handleSelectLocation(location.id);
+                      }
+                    }}
+                  >
+                    <div>
+                      <p className="map-location-brand">{location.brandName}</p>
+                      <h3>{location.name}</h3>
+                      <p className="muted">
+                        {location.prefecture} {location.city}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        {selectedLocation ? (
-          <article className="hyrox-map-selection" aria-live="polite">
-            <div>
-              <span className="hyrox-official-badge">Official Training Club</span>
-              <p>{selectedLocation.brandName}</p>
-              <h3>{selectedLocation.name}</h3>
-              <p className="muted">{selectedLocation.address}</p>
-            </div>
-            <div className="hyrox-card-actions">
-              <Link href={`/locations/${selectedLocation.slug}`}>GymMapで詳細を見る</Link>
-              {selectedLocation.officialUrl ? (
-                <a
-                  href={selectedLocation.officialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${selectedLocation.name}の公式サイトを新しいタブで開く`}
-                >
-                  施設公式サイト ↗
-                </a>
-              ) : null}
-            </div>
-          </article>
-        ) : null}
       </section>
 
       <section className="panel" aria-labelledby="hyrox-results-heading">
@@ -137,7 +409,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
                 key={location.id}
                 location={location}
                 onMapFocus={(locationId) => {
-                  setSelectedLocationId(locationId);
+                  handleSelectLocation(locationId, true);
                   document.getElementById("hyrox-map-heading")?.scrollIntoView({ behavior: "smooth" });
                 }}
               />
