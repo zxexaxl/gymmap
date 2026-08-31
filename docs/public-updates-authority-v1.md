@@ -1,6 +1,10 @@
 # GymMap Public Updates & Data Transparency authority v1
 
-Status: `FROZEN_FOR_HUMAN_REVIEW`
+Status: `ACCEPTED_AND_FROZEN`
+
+Human Review: `ACCEPTED` on 2026-08-31 (Asia/Tokyo)
+
+Accepted candidate commit: `951cf2a512bb96a56aa304fd3d6545c78a4dcd99`
 
 Authority ID: `PUBLIC_UPDATES_AUTHORITY_V1`
 
@@ -51,7 +55,8 @@ The following are frozen outcomes:
 - `NO_RUNTIME_IMPLEMENTATION`
 - `NO_DB_MIGRATION`
 - `NO_PRODUCTION_MUTATION`
-- `READY_FOR_HUMAN_REVIEW`
+- `PUBLIC_UPDATES_HUMAN_REVIEW_DECISIONS_FROZEN`
+- `STATIC_CURATED_MVP_AUTHORIZED`
 
 This document does **not** declare `GYMMAP_UI_U3_U1_COMPLETE`.
 
@@ -402,11 +407,11 @@ U3-U1 Public Updates UI / curated MVP
 
 H3-10B production completion supplies current positive-equipment presentation but does not make automated public updates safe. M1 remains separate. H3-10C remains blocked on M1 but does not block U3-U1.
 
-Next gate: `U3-U1 — READY_AFTER_HUMAN_REVIEW` for a static/curated flat-list MVP only. Automation remains blocked by evidence/history requirements.
+Next gate: `U3-U1 — READY_FOR_SEPARATE_AUTHORIZATION` for a static/curated flat-list MVP only. Automation remains `BLOCKED_BY_INSUFFICIENT_SEMANTIC_HISTORY`.
 
 ## 16. MVP recommendation
 
-Choose **STATIC / CURATED**.
+The accepted MVP direction is **STATIC / CURATED**.
 
 U3-U1 should use a bounded code/content record source, manually authored and reviewed, with no DB table and no generation from operational logs. Lesson and HYROX data announcements require their domain owner's evidence approval; Product announcements are manual. This path can honor dates, grouping, corrections, privacy, accessibility, and idempotent IDs without pretending the current mutable datasets are an event ledger.
 
@@ -452,9 +457,9 @@ Current analytics provide generic telemetry but no repository-defined Product Up
 
 Event names/properties, consent/privacy, and analytics owner approval remain `ANALYTICS_REQUIREMENT_FOR_U3U1`, not an implementation in this phase.
 
-## 19. Human-review decisions
+## 19. Accepted Human Review decisions
 
-Authority defaults presented for confirmation:
+The following authority decisions are accepted and frozen:
 
 1. `/updates` should exist: **YES**, as a secondary transparency route.
 2. Placement: **footer/utility menu**, not top-level Header; Home teaser deferred.
@@ -467,7 +472,7 @@ Authority defaults presented for confirmation:
 9. Home recent updates: **DEFER** until at least three meaningful entries and separate Home review.
 10. History: **at least 12 months; flat up to 50, then pagination/archive**.
 
-Any rejection of these defaults returns the affected decision to Product/UI and relevant domain authority before U3-U1 implementation.
+Changing an accepted decision requires a new explicit Product/UI authorization and the relevant domain review before implementation.
 
 ## 20. Mutation audit
 

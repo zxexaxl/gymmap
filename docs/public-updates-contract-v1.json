@@ -2,9 +2,15 @@
   "schema_version": 1,
   "authority_id": "PUBLIC_UPDATES_AUTHORITY_V1",
   "phase": "U3-U0",
-  "status": "FROZEN_FOR_HUMAN_REVIEW",
+  "status": "ACCEPTED_AND_FROZEN",
   "freeze_date": "2026-08-31",
   "timezone": "Asia/Tokyo",
+  "human_review": {
+    "status": "ACCEPTED",
+    "accepted_date": "2026-08-31",
+    "timezone": "Asia/Tokyo",
+    "accepted_candidate_commit": "951cf2a512bb96a56aa304fd3d6545c78a4dcd99"
+  },
   "repository_baseline": {
     "remote_ref": "origin/main",
     "commit": "362c6dcf19a433b062a4cd31ec59660b43bf55a4",
@@ -338,7 +344,9 @@
       "depends_on": ["U3-U0"],
       "consumes_when_applicable": ["Lesson domain authority", "H3 domain authority"],
       "does_not_depend_on": ["M1", "H3-10C"],
-      "status": "READY_AFTER_HUMAN_REVIEW_FOR_STATIC_CURATED_MVP"
+      "status": "READY_FOR_SEPARATE_AUTHORIZATION",
+      "authorized_mvp_scope": "STATIC_CURATED",
+      "automation_status": "BLOCKED_BY_INSUFFICIENT_SEMANTIC_HISTORY"
     },
     "H3_10C": {
       "blocked_until": ["M1_COMPLETE"],
@@ -363,7 +371,7 @@
     "whole-site freshness from one domain or process timestamp",
     "material change from import or updated_at alone"
   ],
-  "human_review_defaults": {
+  "human_review_accepted_decisions": {
     "updates_route_should_exist": true,
     "placement": "FOOTER_OR_UTILITY_MENU_NOT_TOP_LEVEL_HEADER",
     "public_categories": ["LESSON_DATA", "HYROX_DATA", "PRODUCT_FEATURE"],
@@ -389,7 +397,8 @@
     "NO_RUNTIME_IMPLEMENTATION",
     "NO_DB_MIGRATION",
     "NO_PRODUCTION_MUTATION",
-    "READY_FOR_HUMAN_REVIEW"
+    "PUBLIC_UPDATES_HUMAN_REVIEW_DECISIONS_FROZEN",
+    "STATIC_CURATED_MVP_AUTHORIZED"
   ],
   "explicit_non_verdict": "GYMMAP_UI_U3_U1_COMPLETE"
 }
