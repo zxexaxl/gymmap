@@ -2,9 +2,37 @@
 
 ## Candidate verdict
 
-`GYMMAP_MAP_POLISH_P1_IMPLEMENTATION_CANDIDATE_READY`
+`GYMMAP_MAP_POLISH_P1_V2_CANDIDATE_READY`
 
-The shared Leaflet/OpenStreetMap basemap is materially quieter while GymMap markers, selected state, focus presentation, MapChrome, Lesson behavior, and HYROX semantics remain unchanged. Human visual review is still required; this is not P1 completion.
+The shared Leaflet/OpenStreetMap basemap is now brighter and substantially lower-chroma. Road color competition is reduced without weakening the dark railway/station orientation layer as the earlier low-contrast P1 treatment did. GymMap markers, selected state, focus presentation, MapChrome, Lesson behavior, and HYROX semantics remain unchanged. Human visual review is still required; this is not P1 completion.
+
+## P1 v2 Human Visual Review correction
+
+The first P1 candidate used `saturate(0.32) contrast(0.82) brightness(1.08)`. Human review correctly found that this sank all basemap features together: roads remained visually competitive, while railway/station orientation also became weak.
+
+OSM Standard raster tiles are pre-rendered. CSS cannot independently restyle roads, railways, stations, water, green space, labels, or POI. The v2 comparison therefore used the only safe raster-level lever available: progressively lower chroma, a brighter canvas, and restoration of neutral-detail contrast.
+
+All variants were captured at the same 1440-class Lesson viewport, zoom, 433-marker set, filters, selected facility (`Gold's Gym / 銀座東京`), and panel state.
+
+| Variant | Filter direction | Roads / shields | Station and railway orientation | Labels / geography | Marker contrast | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| Current P1 | low chroma, low contrast, modest brightness | colored expressway/arterial strokes still compete | muted with the rest of the raster | acceptable but dark/muddy | improved from pre-P1 | superseded |
+| A | moderate chroma reduction, restored contrast, brighter | materially quieter, but burgundy arterial color remains | acceptable | clear | strong | useful but not enough road-color suppression |
+| B | strong chroma reduction, near-neutral contrast, brighter | red/orange/yellow competition becomes neutral background | acceptable; dark rail corridors and station text remain useful | district labels, water, and green remain distinguishable | strongest balanced hierarchy | **selected** |
+| C | near-monochrome, higher contrast, brightest | color competition is lowest | dark lines remain, but surrounding orientation loses useful differentiation | water/green and secondary geography become washed out | strongest foreground separation | rejected as gray-fog limit |
+
+Selected v2 treatment: `saturate(0.1) contrast(0.98) brightness(1.18)`.
+
+Explicit central-Tokyo review:
+
+- Station names: `acceptable` — 東京 and nearby station context remain readable at the reviewed zoom.
+- Railway lines: `acceptable` — the dark Tokyo / 有楽町 rail corridor remains one of the strongest basemap orientation features.
+- Major roads: `background` — still present, but their colored emphasis is removed.
+- Road shields / IC-style technical labels: `background` — visible when sought, no longer an initial focal point.
+- District labels: `clear` — 千代田区, 中央区, 港区 and surrounding place context remain legible.
+- Water / green: `acceptable` — still separable in B; materially weakened in rejected C.
+
+This is close to the useful limit of global OSM raster filtering, but the limit has not been reached: B satisfies the GymMap hierarchy without the road-versus-rail failure that would require an architecture decision.
 
 ## Baseline and architecture
 
@@ -21,7 +49,7 @@ The shared Leaflet/OpenStreetMap basemap is materially quieter while GymMap mark
 
 The raster source cannot independently style roads, railway, water, green space, POI, labels, or road shields. Before P1 it had no tile filter or opacity treatment; the map loading canvas used a stronger beige background.
 
-## Options evaluated
+## Architecture options evaluated
 
 ### A — current raster plus CSS treatment (chosen)
 
@@ -46,7 +74,8 @@ The raster source cannot independently style roads, railway, water, green space,
 
 - Normalize the existing provider URL to the OSMF-required `https://tile.openstreetmap.org/{z}/{x}/{y}.png` form.
 - Add a dedicated `gymmap-basemap-tiles` class to the Leaflet raster layer.
-- Apply low saturation, reduced contrast, and modest brightness to that layer only.
+- Apply strong saturation reduction, near-neutral contrast, and higher brightness to that layer only.
+- P1 v2 replaces the first candidate's low-contrast treatment with strong chroma suppression, restored neutral-detail contrast, and a brighter raster canvas.
 - Use a near-white warm-neutral tile-loading canvas.
 - Keep controls, attribution, markers, current location, tooltips, panels, and focus presentation outside the filter.
 
@@ -60,6 +89,16 @@ The raster source cannot independently style roads, railway, water, green space,
 - Markers: default coral markers separate more clearly from the background.
 - Selected marker: remains the strongest map focal point.
 - Map is lighter but not reduced to featureless gray.
+
+P1 v2 clarification:
+
+- Expressway and arterial color is materially quieter than current P1.
+- Railway/station orientation is at least as useful because neutral contrast is restored.
+- Default and selected GymMap markers are easier to locate without marker changes.
+- Selected marker remains clearly primary on Lesson and HYROX maps.
+- The map reads brighter rather than merely darker/muted.
+- Current-location chrome remains visually strong: `MAP_CHROME_POLISH_FOLLOWUP`.
+- Nationwide 433-marker density remains: `P2_FOLLOWUP_RECOMMENDED`; P2 is not started.
 
 ## Preservation audit
 
@@ -77,6 +116,27 @@ The raster source cannot independently style roads, railway, water, green space,
 The current-location instruction surface remains visually prominent. Classify any future redesign as `MAP_CHROME_POLISH_FOLLOWUP`, outside P1.
 
 ## Visual evidence
+
+### P1 v2 matched comparison
+
+| Treatment | Evidence |
+| --- | --- |
+| Original pre-P1 | [original](evidence/lesson-desktop-before-selected.png) |
+| Current P1 | [current P1](evidence-v2/lesson-desktop-current-p1-selected.png) |
+| Variant A | [variant A](evidence-v2/lesson-desktop-variant-a-selected.png) |
+| Variant B / selected P1 v2 | [variant B](evidence-v2/lesson-desktop-variant-b-selected.png) |
+| Variant C | [variant C](evidence-v2/lesson-desktop-variant-c-selected.png) |
+
+### P1 v2 final surfaces
+
+| Surface | Evidence |
+| --- | --- |
+| Lesson desktop default | [image](evidence-v2/lesson-desktop-v2-default.png) |
+| Lesson desktop selected | [image](evidence-v2/lesson-desktop-v2-selected.png) |
+| Lesson 390 selected | [image](evidence-v2/lesson-390-v2-selected.png) |
+| Lesson 430 selected | [image](evidence-v2/lesson-430-v2-selected.png) |
+| HYROX desktop selected | [image](evidence-v2/hyrox-desktop-v2-selected.png) |
+| HYROX 390 selected | [image](evidence-v2/hyrox-390-v2-selected.png) |
 
 ### Lesson desktop
 
@@ -111,8 +171,8 @@ The current-location instruction surface remains visually prominent. Classify an
 
 ## Validation
 
-- Focused Map/HYROX tests: 32 passed
-- Full authoritative tests: 164 passed
+- Focused Map/HYROX tests: 39 passed
+- Full authoritative tests: 165 passed
 - TypeScript: passed
 - Lint: passed
 - Production build: passed (723 static pages generated)

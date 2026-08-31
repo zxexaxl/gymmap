@@ -2102,7 +2102,7 @@ p {
 }
 
 .leaflet-map .gymmap-basemap-tiles {
-  filter: saturate(0.32) contrast(0.82) brightness(1.08);
+  filter: saturate(0.1) contrast(0.98) brightness(1.18);
 }
 
 .leaflet-map .leaflet-control-attribution {

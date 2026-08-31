@@ -27,6 +27,20 @@ test("P1 quiets only the raster basemap tiles", () => {
   assert.doesNotMatch(globalStyles, /\.leafletMarkerFocusTarget[\s\S]*?filter:\s*saturate/);
 });
 
+test("P1 v2 uses a bright low-chroma raster treatment without flattening neutral detail", () => {
+  const match = globalStyles.match(
+    /\.leaflet-map \.gymmap-basemap-tiles\s*\{[\s\S]*?filter:\s*saturate\(([^)]+)\)\s+contrast\(([^)]+)\)\s+brightness\(([^)]+)\)/,
+  );
+
+  assert.ok(match);
+
+  const [, saturation, contrast, brightness] = match.map(Number);
+
+  assert.ok(saturation <= 0.15, "road color competition should remain strongly suppressed");
+  assert.ok(contrast >= 0.9, "neutral rail and station detail should not be flattened");
+  assert.ok(brightness >= 1.1, "the raster should be brighter rather than darkened");
+});
+
 test("P1 adds no vector map dependency or client provider secret", () => {
   assert.doesNotMatch(packageManifest, /maplibre|mapbox-gl/i);
   assert.doesNotMatch(leafletMapSource, /api[_-]?key|access[_-]?token|NEXT_PUBLIC_.*(?:TILE|MAPBOX|CARTO)/i);
