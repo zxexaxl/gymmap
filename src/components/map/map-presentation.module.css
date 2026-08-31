@@ -133,8 +133,13 @@
 
 .marker:focus-visible,
 :global(.apple-gym-map-marker:focus-visible) {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+  outline: none;
+  filter:
+    drop-shadow(0 0 1px #fff)
+    drop-shadow(0 0 1px #fff)
+    drop-shadow(0 0 1px var(--color-focus))
+    drop-shadow(0 0 1px var(--color-focus))
+    drop-shadow(0 2px 3px rgb(43 28 20 / 24%));
 }
 
 :global(.apple-gym-map-marker--selected)::after {

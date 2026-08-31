@@ -70,6 +70,20 @@ test("selected marker is immediate, semantic, and not color-only", () => {
   assert.match(appleMapSource, /data-marker-state/);
 });
 
+test("keyboard focus keeps selected semantics and follows the marker silhouette", () => {
+  assert.match(
+    presentationStyles,
+    /\.marker:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: none/,
+  );
+  assert.match(presentationStyles, /drop-shadow\(0 0 1px var\(--color-focus\)\)/);
+  assert.doesNotMatch(
+    presentationStyles,
+    /\.marker:focus-visible,[\s\S]*apple-gym-map-marker:focus-visible[\s\S]*outline: 3px/,
+  );
+  assert.match(leafletMapSource, /aria-pressed", String\(selected\)/);
+  assert.match(appleMapSource, /aria-pressed", String\(selected\)/);
+});
+
 test("selection panel accepts opaque domain children and owns no domain semantics", () => {
   assert.match(presentationSource, /type MapSelectionSurfaceProps[\s\S]*children: ReactNode/);
   assert.match(presentationSource, /\{children\}/);
