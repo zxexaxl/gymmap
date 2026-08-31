@@ -1,12 +1,14 @@
 # GymMap Product/UI Refresh — U4 Reconciliation and Closure Review v1
 
-Status: `READY_FOR_HUMAN_CLOSURE_REVIEW`
+Status: `GYMMAP_PRODUCT_UI_REFRESH_COMPLETE`
 
 Initial audit: 2026-08-31 (JST)
 
 Closure re-check: 2026-09-01 (JST)
 
-This document preserves the initial U4 closure-blocked decision and records the subsequent U4-R1 remediation, main integration, production acceptance, and focused closure re-check. It does not declare the Product/UI Refresh complete. Human Product/UI Closure Review remains the final gate.
+Human Product/UI Closure Review acceptance: 2026-09-01 (JST)
+
+This document preserves the initial U4 closure-blocked decision and records the subsequent U4-R1 remediation, main integration, production acceptance, focused closure re-check, and final Human Product/UI Closure Review acceptance. The authorized GymMap Product/UI Refresh scope is formally complete.
 
 This artifact is documentation only. It does not authorize or contain runtime, UI, Map, data, analytics, deployment, or production changes.
 
@@ -16,9 +18,10 @@ This artifact is documentation only. It does not authorize or contain runtime, U
 - Initial close blocker: `U4-01 — HYROX facility detail domain-context discontinuity`
 - U4-R1 remediation: implemented, Human Visual Review accepted, integrated to main, exact-main verified, and production accepted
 - Closure re-check decision: `READY_FOR_CLOSURE`
+- Human Product/UI Closure Review: `ACCEPTED`
 - Current close blocker count: **0**
-- Product state: `GYMMAP_PRODUCT_UI_REFRESH_READY_FOR_HUMAN_CLOSURE_REVIEW`
-- Final Product/UI closure: **not yet declared**
+- Product state: `GYMMAP_PRODUCT_UI_REFRESH_COMPLETE`
+- Final Product/UI closure: **declared**
 
 ## 2. Current exact authority and production identity
 
@@ -239,11 +242,11 @@ No material production runtime failure, deployment-only asset regression, or U4-
 
 ## 14. Closure decision and next priority
 
-Closure decision: `READY_FOR_CLOSURE`
+Closure decision: `COMPLETE`
 
 Reason: the only initial close blocker, U4-01, is resolved in the exact current production artifact; focused cross-surface reconciliation found no new close blocker.
 
-Human gate: `READY_FOR_HUMAN_CLOSURE_REVIEW`
+Human gate: `ACCEPTED`
 
 Priority decision: `ANALYTICS_FIRST`
 
@@ -251,7 +254,7 @@ The core Product/UI refresh now has healthy production journeys and no close blo
 
 ## 15. Product/UI Refresh completion scope
 
-When Human Product/UI Closure Review accepts this artifact, closure means:
+Human Product/UI Closure Review accepted this artifact. Formal closure means:
 
 - the accepted Lesson, HYROX, shared Map, and Public Updates user journeys form one coherent production product;
 - U0 through U4/U4-R1 authority and domain boundaries are reconciled;
@@ -278,6 +281,8 @@ Closure does **not** mean:
 - Production changed by closure re-check: no
 - Main merge by closure re-check: no
 
-Next gate: **Human Product/UI Closure Review**
+Formal declaration: `GYMMAP_PRODUCT_UI_REFRESH_COMPLETE`
+
+Next separately authorized workstream recommendation: **GymMap Analytics / UX Measurement**
 
 Do not automatically start Analytics, Performance, Targeted Polish, Map revision, or new Product/UI feature work from this document.
