@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import { Header } from "@/components/layout/header";
+import { UtilityFooter } from "@/components/layout/utility-footer";
 
 type AppShellProps = Readonly<{
   children: ReactNode;
@@ -14,6 +15,7 @@ export function AppShell({ children }: AppShellProps) {
       <main className="container page-shell" id="main-content">
         {children}
       </main>
+      <UtilityFooter />
     </div>
   );
 }

@@ -5,8 +5,12 @@ export type CoreSitemapEntry = {
   priority: number;
 };
 
-export function buildCoreSitemapEntries(siteUrl: string, lastmod: string): CoreSitemapEntry[] {
-  return [
+export function buildCoreSitemapEntries(
+  siteUrl: string,
+  lastmod: string,
+  latestPublicUpdatePublishedAt: string | null = null,
+): CoreSitemapEntry[] {
+  const entries: CoreSitemapEntry[] = [
     {
       loc: `${siteUrl}/`,
       lastmod,
@@ -32,4 +36,15 @@ export function buildCoreSitemapEntries(siteUrl: string, lastmod: string): CoreS
       priority: 0.9,
     },
   ];
+
+  if (latestPublicUpdatePublishedAt) {
+    entries.push({
+      loc: `${siteUrl}/updates`,
+      lastmod: latestPublicUpdatePublishedAt,
+      changefreq: "weekly",
+      priority: 0.5,
+    });
+  }
+
+  return entries;
 }
