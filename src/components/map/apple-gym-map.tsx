@@ -131,10 +131,11 @@ function bindAccessibleAnnotationElement(
   selected: boolean,
   onActivate: () => void,
 ) {
-  let active = true;
-  let remainingAttempts = 60;
-  let animationFrameId: number | null = null;
-  let boundElement: HTMLElement | null = null;
+  const element = annotation.element;
+
+  if (!element) {
+    return null;
+  }
 
   function handleKeyDown(event: KeyboardEvent) {
     if (event.key !== "Enter" && event.key !== " ") {
@@ -145,39 +146,14 @@ function bindAccessibleAnnotationElement(
     onActivate();
   }
 
-  function bindWhenAvailable() {
-    if (!active) {
-      return;
-    }
-
-    const element = annotation.element;
-
-    if (!element && remainingAttempts > 0) {
-      remainingAttempts -= 1;
-      animationFrameId = window.requestAnimationFrame(bindWhenAvailable);
-      return;
-    }
-
-    if (!element) {
-      return;
-    }
-
-    boundElement = element;
-    element.setAttribute("tabindex", "0");
-    element.setAttribute("role", "button");
-    element.setAttribute("aria-label", accessibleLabel);
-    element.setAttribute("aria-pressed", String(selected));
-    element.addEventListener("keydown", handleKeyDown);
-  }
-
-  bindWhenAvailable();
+  element.setAttribute("tabindex", "0");
+  element.setAttribute("role", "button");
+  element.setAttribute("aria-label", accessibleLabel);
+  element.setAttribute("aria-pressed", String(selected));
+  element.addEventListener("keydown", handleKeyDown);
 
   return () => {
-    active = false;
-    if (animationFrameId !== null) {
-      window.cancelAnimationFrame(animationFrameId);
-    }
-    boundElement?.removeEventListener("keydown", handleKeyDown);
+    element.removeEventListener("keydown", handleKeyDown);
   };
 }
 
@@ -313,6 +289,12 @@ export function AppleGymMap({
       }
     });
     annotationsRef.current = [];
+    const pendingAccessibleBindings: Array<{
+      annotation: AppleAnnotation;
+      accessibleLabel: string;
+      selected: boolean;
+      onActivate: () => void;
+    }> = [];
 
     const annotations = locations
       .filter((location) => location.latitude !== null && location.longitude !== null)
@@ -335,14 +317,12 @@ export function AppleGymMap({
         });
 
         map.addAnnotation(annotation);
-        annotationCleanupRef.current.push(
-          bindAccessibleAnnotationElement(
-            annotation,
-            accessibleLabel,
-            location.id === selectedLocationId,
-            () => onSelectLocation(location.id),
-          ),
-        );
+        pendingAccessibleBindings.push({
+          annotation,
+          accessibleLabel,
+          selected: location.id === selectedLocationId,
+          onActivate: () => onSelectLocation(location.id),
+        });
         return annotation;
       });
 
@@ -366,6 +346,36 @@ export function AppleGymMap({
     isSynchronizingSelectionRef.current = true;
     map.selectedAnnotation = selectedLocationIndex >= 0 ? annotations[selectedLocationIndex] : null;
     isSynchronizingSelectionRef.current = false;
+
+    let annotationObserver: MutationObserver | null = null;
+    const bindAvailableAnnotationElements = () => {
+      for (let index = pendingAccessibleBindings.length - 1; index >= 0; index -= 1) {
+        const pending = pendingAccessibleBindings[index];
+        const cleanup = bindAccessibleAnnotationElement(
+          pending.annotation,
+          pending.accessibleLabel,
+          pending.selected,
+          pending.onActivate,
+        );
+
+        if (cleanup) {
+          annotationCleanupRef.current.push(cleanup);
+          pendingAccessibleBindings.splice(index, 1);
+        }
+      }
+
+      if (pendingAccessibleBindings.length === 0) {
+        annotationObserver?.disconnect();
+        annotationObserver = null;
+      }
+    };
+
+    bindAvailableAnnotationElements();
+    if (pendingAccessibleBindings.length > 0 && containerRef.current) {
+      annotationObserver = new MutationObserver(bindAvailableAnnotationElements);
+      annotationObserver.observe(containerRef.current, { childList: true, subtree: true });
+      annotationCleanupRef.current.push(() => annotationObserver?.disconnect());
+    }
 
     return () => {
       annotationCleanupRef.current.forEach((cleanup) => cleanup());
