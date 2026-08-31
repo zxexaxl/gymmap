@@ -111,6 +111,7 @@ test("compact list and panel actions remain keyboard/text accessible", () => {
   assert.match(discoverySource, /aria-pressed/);
   assert.match(discoverySource, /event\.key === "Enter" \|\| event\.key === " "/);
   assert.match(selectionSource, /GymMapで詳細を見る/);
+  assert.match(selectionSource, /buildHyroxDetailPath\(location\.slug\)/);
   assert.match(selectionSource, /施設公式サイト/);
   assert.match(selectionSource, /<Chip key=\{equipment\} tone="positive">/);
   assert.doesNotMatch(selectionSource, /<button[^>]*>[^<]*(SkiErg|設備)/);
