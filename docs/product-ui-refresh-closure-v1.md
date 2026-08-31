@@ -1,23 +1,41 @@
 # GymMap Product/UI Refresh — U4 Reconciliation and Closure Review v1
 
-Status: `CLOSURE_BLOCKED`
+Status: `READY_FOR_HUMAN_CLOSURE_REVIEW`
 
-Audit date: 2026-08-31 (JST)
+Initial audit: 2026-08-31 (JST)
 
-This document records the read-only U4 repository, exact-main, and production audit. It does not authorize or contain runtime, UI, map, data, analytics, deployment, or production changes. Human Product/UI Closure Review is still required.
+Closure re-check: 2026-09-01 (JST)
 
-## 1. Exact authority and production identity
+This document preserves the initial U4 closure-blocked decision and records the subsequent U4-R1 remediation, main integration, production acceptance, and focused closure re-check. It does not declare the Product/UI Refresh complete. Human Product/UI Closure Review remains the final gate.
 
-- Repository authority: `origin/main` at `9ec8a5f811752bb9713f02dea568fa627e95155a`
+This artifact is documentation only. It does not authorize or contain runtime, UI, Map, data, analytics, deployment, or production changes.
+
+## 1. Executive status
+
+- Initial U4 decision: `CLOSURE_BLOCKED`
+- Initial close blocker: `U4-01 — HYROX facility detail domain-context discontinuity`
+- U4-R1 remediation: implemented, Human Visual Review accepted, integrated to main, exact-main verified, and production accepted
+- Closure re-check decision: `READY_FOR_CLOSURE`
+- Current close blocker count: **0**
+- Product state: `GYMMAP_PRODUCT_UI_REFRESH_READY_FOR_HUMAN_CLOSURE_REVIEW`
+- Final Product/UI closure: **not yet declared**
+
+## 2. Current exact authority and production identity
+
+- Repository authority: `origin/main` at `a4442da52f634edb350b5c1d919ac565e224bcc9`
+- Previous U4 audited main: `9ec8a5f811752bb9713f02dea568fa627e95155a`
+- U4-R1 accepted candidate: `f3cfb7cd4eccb2541abb576b0bac5af7ff056dd2`
+- U4-R1 main integration: `a4442da52f634edb350b5c1d919ac565e224bcc9`
 - Production domain: `https://gymmap.vercel.app`
-- Production deployment: Vercel deployment `G6am7iRq1fM3ivEno9tZJhtmrBa2`
-- GitHub deployment ID: `6180893858`
-- Deployment source SHA: `9ec8a5f811752bb9713f02dea568fa627e95155a`
-- Deployment status: success
-- Deployment timestamp: 2026-08-31T12:18:48Z
+- GitHub production deployment ID: `6182816159`
+- Vercel deployment identifier: `FuyHxEFSokm1SXdubmtaE4wGKKvF`
+- Deployment source SHA: `a4442da52f634edb350b5c1d919ac565e224bcc9`
+- Deployment status: success (`Deployment has completed`)
+- Deployment timestamp: 2026-08-31T14:13:57Z
 - Production and current `origin/main`: exact match
+- Re-check HTTP status: Home, Search, Lesson Detail, HYROX list, both HYROX detail evidence cases, Favorites, and Updates returned 200
 
-The following phase history is present in current-main ancestry and/or its authoritative contracts and tests:
+Current phase authority:
 
 - U0A / U0B — Product/UI authority: complete
 - U1 — Minimum Shared Design Foundation: complete
@@ -29,11 +47,12 @@ The following phase history is present in current-main ancestry and/or its autho
 - M1 — Shared Map Presentation: complete
 - H3-10A — Positive Evidence UX Contract: complete
 - H3-10B — List / Detail UI: production complete
-- H3-10C — HYROX Map UI: complete and deployed at current main
+- H3-10C — HYROX Map UI: complete and present in current production
+- U4-R1 — HYROX Facility Detail Domain Context Reconciliation: production complete
 
-The historical progress labels in `product-ui-ownership-v1.json` predate H3-10C. They remain useful for ownership boundaries but are not the current implementation-progress source of truth.
+The historical progress labels in `docs/product-ui-ownership-v1.json` remain useful for ownership boundaries but are not the sole current implementation-progress source of truth.
 
-## 2. Production surface inventory
+## 3. Production surface inventory
 
 ### Lesson Discovery
 
@@ -43,170 +62,222 @@ The historical progress labels in `product-ui-ownership-v1.json` predate H3-10C.
 - Program: `/programs/[slug]`
 - Area × Program: `/areas/[area]/[program]`
 - Favorites: `/favorites`
-- Lesson Map: `/#map-section`
+- Lesson Map: `/#map-section`, with selection state `/?selected=[slug]#map-section`
 
 ### HYROX Discovery
 
 - Landing, filters, list, and map: `/training/hyrox`
-- HYROX map selection state: `/training/hyrox?selected=[slug]#hyrox-map-heading`
-- Current facility continuation from HYROX: `/locations/[slug]`
+- HYROX Map selection: `/training/hyrox?selected=[slug]`
+- Domain-stable HYROX facility detail: `/training/hyrox/[slug]`
+- Positive-evidence re-check route: `/training/hyrox/hyrox-training-club-3700001`
+- No-positive omission re-check route: `/training/hyrox/hyrox-training-club-0630062`
 
 ### Transparency and global UI
 
 - Public Updates: `/updates`
 - Global Header: GymMap, レッスン, HYROX
-- Lesson-local menu: Lesson-context routes only, except for the HYROX-detail context issue recorded below
+- Lesson-local menu: Lesson-context routes only
 - Utility/footer: includes Public Updates discovery
-- Shared Map presentation: marker, selected state, focus treatment, MapChrome, panel/sheet shell, responsive structure
+- Shared Map presentation: marker, selected state, focus treatment, MapChrome, panel/sheet shell, and responsive structure
 
-## 3. User journey results
+## 4. Initial U4 closure-blocked history
+
+The initial U4 audit at main `9ec8a5f811752bb9713f02dea568fa627e95155a` found one genuine close blocker:
+
+`U4-01 — HYROX → facility detail domain-context discontinuity`
+
+At that time, `GymMapで詳細を見る` from HYROX continued to `/locations/[slug]`. The destination presented Lesson as the active domain, exposed Lesson-local navigation and Lesson breadcrumbs, showed Lesson-specific zero schedule/program summaries for a HYROX-only context, and omitted confirmed-positive HYROX equipment. The initial audit therefore classified Flow E as `BLOCKER` and set the closure decision to `CLOSURE_BLOCKED`.
+
+That historical decision remains part of the audit record and has not been rewritten as though the blocker never existed.
+
+## 5. U4-R1 remediation history
+
+U4-R1 provided a bounded domain-context reconciliation without changing M0/M1 shared Map presentation:
+
+1. Added the domain-stable route `/training/hyrox/[slug]`.
+2. Updated HYROX list and Map panel internal continuation to the dedicated HYROX detail route.
+3. Kept HYROX active and suppressed Lesson-local navigation on HYROX detail.
+4. Preserved positive-only equipment evidence and the rule that missing evidence is not a negative assertion.
+5. Omitted the equipment section for the no-positive case rather than presenting absence.
+6. Avoided Lesson-only zero schedule/program claims in HYROX detail context.
+7. Preserved the public official-site continuation and M1 map shell/selection contracts.
+
+Acceptance history:
+
+- U4-R1 implementation candidate: `f3cfb7cd4eccb2541abb576b0bac5af7ff056dd2`
+- Human Visual Review: accepted
+- Main integration: `a4442da52f634edb350b5c1d919ac565e224bcc9`
+- Exact-main verification: pass
+- Production deployment: success, exact integration SHA
+- Production acceptance: pass
+
+## 6. Focused closure re-check
+
+The re-check used the current exact production artifact. It was a focused cross-surface sanity check, not a new redesign review.
+
+| Surface | Result | Evidence summary |
+| --- | --- | --- |
+| Home | `PASS` | Search-first hierarchy, dynamic counts, popular programs, Favorites, HYROX secondary entry, and Lesson Map anchor remained present. |
+| Search | `PASS` | `q=ヨガ` hydrated, `#search-results` rendered, and Detail/Program/Area continuations were present. |
+| Lesson Detail | `PASS` | Lesson domain context, Search/Brand/Program continuation, official/Google Maps links, and mobile overflow remained healthy. |
+| Favorites | `PASS` | Existing saved state and weekly continuation rendered without contract change. |
+| Public Updates | `PASS` | Three authorized records, semantic wording, and Lesson/HYROX continuations remained present. |
+| HYROX list | `PASS` | 82 Official Training Clubs, positive-only disclosure, dedicated detail links, and HYROX-only Header context remained present. |
+| HYROX positive detail | `PASS` | Dedicated HYROX route rendered confirmed-positive equipment and no Lesson-local controls. |
+| HYROX no-positive detail | `PASS` | Dedicated HYROX route omitted the equipment section and made no negative assertion. |
+| Lesson Map selected | `PASS` | Shared marker hook, `aria-pressed`, selected panel, accessible close control, and Lesson Detail CTA remained present. |
+| HYROX Map selected | `PASS` | Selected query state, shared panel/close affordance, and dedicated HYROX Detail CTA remained present. |
+
+Responsive evidence:
+
+- 390px: audited priority Lesson and HYROX surfaces had no horizontal overflow
+- 430px: selected Lesson and HYROX Map states had no horizontal overflow
+- 1440px class: selected Lesson and HYROX Map states had no horizontal overflow
+- Browser console errors/warnings captured during the final Map re-check: none
+
+No production-only regression or stale pre-U4-R1 artifact was found.
+
+## 7. User journey results after remediation
 
 | Flow | Result | Evidence summary |
 | --- | --- | --- |
-| A — Home → Search → Facility Detail → related discovery | `PASS` | Search-first Home, hydrated Search, readable Detail, and continuation routes were present and healthy. |
-| B — Home popular program → Program → Area/facility → timetable/detail | `PASS` | Existing public route architecture and discovery continuation were preserved. |
-| C — Search/Program → Favorite → Favorites → Detail/timetable | `PASS` | Existing saved program rendered with accessible state and weekly continuation; no storage contract mutation was made. |
-| D — Lesson Map → marker → panel/sheet → Detail | `MINOR_FRICTION` | Shared presentation and keyboard selection passed. The initial all-Japan view is visually dense, so overlapping marker pointer selection can be ambiguous before zoom/filtering. |
-| E — HYROX → list/map → facility → Detail/official link | `BLOCKER` | HYROX list/map/panel passed, but the internal facility continuation switches into Lesson-specific detail context and drops HYROX equipment context. |
-| F — Footer/utility → Updates → relevant destination | `PASS` | Footer discovery, three semantic update records, safe HYROX wording, canonical route, and sitemap inclusion passed. |
+| A — Home → Search → Facility Detail → related discovery | `PASS` | Accepted Lesson hierarchy and continuation remain healthy. |
+| B — Home popular program → Program → Area/facility → timetable/detail | `PASS` | Existing public route architecture remains intact. |
+| C — Search/Program → Favorite → Favorites → Detail/timetable | `PASS` | Existing Lesson-local saved-program contract remains intact. |
+| D — Lesson Map → marker → panel/sheet → Detail | `MINOR_FRICTION` | Shared presentation and exact keyboard selection pass; nationwide pointer density remains non-blocking polish. |
+| E — HYROX → list/map → HYROX Detail/official link | `PASS` | Dedicated HYROX detail preserves domain context and evidence semantics. |
+| F — Footer/utility → Updates → relevant destination | `PASS` | Utility discovery and safe cross-domain continuation remain healthy. |
 
-## 4. Reconciliation summary
+## 8. Product-wide reconciliation
 
 ### Lesson UI
 
-- Home remains search-first with dynamic counts, popular programs, favorites access, Lesson Map access, and HYROX as a secondary entry.
-- Search retains primary/advanced hierarchy, direct URL hydration, result hierarchy, favorites, and mobile first-result reachability.
-- Facility Detail, Program, Area × Program, and Favorites retain the accepted U3-L hierarchy and responsive presentation.
-- No material old-template island was found in the audited Lesson-native journeys.
+- Home remains search-first and has not regressed to the previous photo-first experience.
+- Search retains primary/advanced hierarchy, URL hydration, result hierarchy, Favorites, and Detail continuation.
+- Facility Detail, Program, Area × Program, and Favorites remain in the accepted U3-L visual and route system.
+- No material Lesson old-template island was found in the focused re-check.
 
 ### Shared Map presentation
 
-- Lesson and HYROX use the same marker presentation, selected state, focus treatment, MapChrome, panel/sheet geometry, close affordance, and responsive structure.
-- Keyboard marker selection, `aria-pressed`, focus-visible treatment, accessible selection regions, and panel close controls were present.
-- The stable M1 focus hook was present; native Leaflet rectangle markers were absent; the accepted focus ring was visible.
+- Lesson and HYROX retain the same marker presentation, selected state, focus treatment, MapChrome, panel/sheet geometry, close affordance, and responsive structure.
+- Lesson production exposed stable marker focus-target classes, accessible names, and `aria-pressed` state.
+- Both domains exposed accessible selected-panel close controls and domain-correct internal detail links.
 - Shared presentation consistency: `PASS`
-- Domain ownership separation inside map surfaces: `PASS`
+- Domain ownership separation: `PASS`
 
-### HYROX list, detail continuation, and map
+### HYROX list, detail, and map
 
-- Production displayed 82 official facilities.
-- 22 facilities exposed confirmed-positive equipment, totaling 109 positive equipment chips.
-- Negative assertions: 0.
-- Capability UI: 0.
-- Equipment filter: 0.
-- Positive-only disclosure explicitly states that missing display does not mean unavailable or unsupported.
-- HYROX map filters, marker selection, positive equipment content, mobile partial sheet, desktop panel, internal detail link, and official link operated.
-- The internal detail link leads to a Lesson-context facility page. That discontinuity is the sole closure blocker.
+- Official facility list: 82 in the current production evidence.
+- Confirmed-positive equipment remains positive-only.
+- Missing positive evidence remains unknown, not unavailable/unsupported/absent.
+- No-positive detail omits the equipment section.
+- Equipment filter: absent.
+- Capability UI: absent.
+- Lesson-local menu leakage on HYROX routes: absent.
+- Dedicated detail, official link, Map selection, and back-to-list continuation: present.
 
 ### Public Updates
 
-- `/updates` returned successfully and was discoverable from the footer/utility area.
-- Updates was absent from top-level Header navigation and absent as a Home teaser.
-- The three authorized initial records rendered in chronology order with semantic dates and category labels.
-- HYROX update wording preserved positive-only semantics.
-- Canonical and sitemap discovery were present.
+- `/updates` remains discoverable from utility/footer and absent from the top-level Header.
+- The three accepted initial records remain in chronology order with semantic dates and category labels.
+- HYROX wording preserves positive-only semantics.
 
-## 5. Responsive and accessibility review
+## 9. Accessibility and responsive reconciliation
 
-The audited priority surfaces were reviewed at 390px, 430px, and desktop class where applicable.
-
-- Horizontal overflow: none observed
-- Header compression: healthy
-- Schedule readability: healthy
-- Map visibility beneath mobile partial sheet: preserved
-- Desktop map panel: healthy
-- Touch targets: accepted shared controls remained usable
-- Keyboard navigation and visible focus: present
-- Active domain state: present on Lesson and HYROX surfaces, except the HYROX-to-detail blocker
+- Semantic headings and domain navigation: present
+- Active domain state: present on Lesson and HYROX contexts
+- Lesson-local controls on HYROX: absent
 - Favorite state: accessible via `aria-pressed`
-- Map controls and markers: accessible names present
-- Selected Map region and close control: accessible names present
-- Color-independent meaning: preserved in audited primary interactions
+- Map markers: accessible names and selection state present
+- Selected Map panel: accessible close label present
+- Keyboard/focus-visible shared Map contract: preserved by M1 and current production hooks
+- Color-independent positive/unknown meaning: preserved
+- Touch-target and Header compression regressions: none observed in focused re-check
+- Horizontal overflow: none observed at audited 390px, 430px, and desktop states
 
-## 6. Production runtime
+## 10. Findings and final classification
 
-Representative fresh production requests for Home, Search, Lesson Detail, Program, Area × Program, Favorites, HYROX, HYROX-linked facility detail, Updates, and sitemap returned HTTP 200.
-
-No new React error overlay, hydration error, failed critical chunk, missing CSS, critical request failure, or material horizontal overflow was observed. The exact current-main production artifact was served.
-
-The current exact-main authoritative test suite completed with 155 passing tests and 0 failures during U4 evidence collection.
-
-## 7. Findings and classification
-
-| ID | Surface | Finding | Severity | Class | Recommended owner |
+| ID | Surface | Final finding | Severity | Final disposition | Recommended owner |
 | --- | --- | --- | --- | --- | --- |
-| U4-01 | HYROX → facility detail | `GymMapで詳細を見る` opens `/locations/hyrox-training-club-3700001` in Lesson context: Lesson is active, Lesson-local navigation and breadcrumb appear, the page reports 0 weekly lessons / 0 programs, and confirmed-positive HYROX equipment is absent. | High | `CLOSE_BLOCKER` | HYROX/Product UI authority; bounded detail-context reconciliation, not M1 |
-| U4-02 | Lesson Map initial nationwide view | Dense overlapping markers can make direct pointer selection ambiguous until the user zooms, filters, or uses the exact nearby list. Keyboard selection remains exact. | Low | `TARGETED_POLISH` | Future shared Map UX follow-up, preserving M0/M1 contracts |
-| U4-03 | Home/Search data delivery | Lesson search index is 2,575,767 bytes (>2MB). A fresh-browser Search result render was observed within approximately 4.2 seconds in this audit; no runtime failure occurred. | Medium | `BACKLOG / SEPARATE_DEBT` | Performance/Data |
-| U4-04 | Product analytics | Generic analytics providers are wired, but primary product interactions do not have a complete named-event measurement contract. | Medium | `BACKLOG / SEPARATE_DEBT` | Analytics/Product |
+| U4-01 | HYROX → facility detail | Original domain-context blocker was remediated by the dedicated HYROX detail route and confirmed in production. | Resolved | `RESOLVED` | None; retain regression coverage |
+| U4-02 | Lesson Map nationwide view | Dense overlapping markers can make direct pointer selection ambiguous until zoom/filter/list use; keyboard selection remains exact. | Low | `TARGETED_POLISH / NON_BLOCKING` | Future shared Map UX follow-up, preserving M0/M1 |
+| U4-03 | Home/Search data delivery | Lesson search index is 2,575,767 bytes (>2MB). One prior audit observed about 4.2 seconds to a Search result; this is not a CWV measurement. | Medium | `SEPARATE_PERFORMANCE_DEBT` | Performance/Data |
+| U4-04 | Product analytics | Generic analytics providers exist, but primary product interactions lack a complete named-event contract. | Medium | `SEPARATE_ANALYTICS_DEBT` | Analytics/Product |
 
-## 8. Close blocker and minimum remediation authority
+Open close blocker count: **0**
 
-Close blocker count: **1**
+## 11. Targeted polish
 
-Recommended bounded phase:
+Non-blocking, bounded candidate:
 
-`U4-R1 — HYROX Facility Detail Domain Context Reconciliation`
+- Lesson Map nationwide marker-density/pointer ambiguity. Any follow-up must preserve M0 behavior and M1 shared presentation authority. This does not justify reopening M1 during closure.
 
-Minimum scope:
+## 12. Separate performance debt
 
-1. Define the authoritative HYROX facility-detail continuation model without changing M1.
-2. Preserve the existing public slug/deep-link unless a separately reviewed URL authority requires otherwise.
-3. Present HYROX as the active domain and suppress Lesson-local navigation for HYROX facility context.
-4. Preserve positive-only equipment and unknown semantics on the detail continuation.
-5. Avoid Lesson-specific 0 schedule/program claims for a HYROX-only facility unless real Lesson data exists.
-6. Re-run focused mobile/desktop Human Visual Review for the HYROX list/map → detail flow.
+Evidence-backed debt:
 
-No remediation is implemented by U4.
+1. Lesson/Home search index: 2,575,767 bytes, pre-existing and not caused by U4/U4-R1.
+2. A single fresh-browser Search observation in the original audit was approximately 4.2 seconds. It is directional evidence only, not Core Web Vitals or a statistically meaningful production measurement.
 
-## 9. Analytics readiness
+No material production runtime failure, deployment-only asset regression, or U4-R1-specific performance regression was found. Performance work remains a separately authorized phase.
+
+## 13. Analytics readiness
 
 | Measurement | Readiness | Current evidence |
 | --- | --- | --- |
-| Home → Search start | `PARTIAL` | Page/navigation inference is possible; no named product event was found. |
+| Home → Search start | `PARTIAL` | Navigation/pageview inference is possible; no named product event was found. |
 | Search submit | `PARTIAL` | Query URL/pageview inference is possible; no named submit event was found. |
-| Result click | `PARTIAL` | Destination navigation can be inferred; no named result-click event was found. |
-| Detail click | `PARTIAL` | Detail route visit is measurable; source interaction is not explicit. |
+| Result click | `PARTIAL` | Destination navigation can be inferred; source interaction is not explicit. |
+| Detail click | `PARTIAL` | Detail route visit is measurable; originating interaction is not explicit. |
 | Favorite add/remove | `NOT_INSTRUMENTED` | Local state action has no explicit product event. |
 | Program visit | `MEASURABLE` | Route pageview is available through generic analytics. |
 | HYROX entry | `PARTIAL` | Route visit is available; entry source is not explicit. |
 | HYROX Map use | `NOT_INSTRUMENTED` | No named map-use event was found. |
 | Lesson Map use | `NOT_INSTRUMENTED` | No named map-use event was found. |
 | Updates view | `MEASURABLE` | Route pageview is available through generic analytics. |
-| Mobile / desktop split | `EXTERNAL_ACCESS_REQUIRED` | Provider dashboards are required for observed audience/device reporting. |
+| Mobile / desktop split | `EXTERNAL_ACCESS_REQUIRED` | Provider dashboard access is required for observed device reporting. |
 
-Exact production volumes and funnels require access to the configured external analytics dashboards.
+## 14. Closure decision and next priority
 
-## 10. Performance readiness
+Closure decision: `READY_FOR_CLOSURE`
 
-Evidence-backed debt:
+Reason: the only initial close blocker, U4-01, is resolved in the exact current production artifact; focused cross-surface reconciliation found no new close blocker.
 
-1. Lesson/Home search index: 2,575,767 bytes, pre-existing and not caused by U4.
-2. Fresh-browser Search result availability in this audit was approximately 4.2 seconds. This is a single observation, not a Core Web Vitals measurement, and should be measured before optimization.
+Human gate: `READY_FOR_HUMAN_CLOSURE_REVIEW`
 
-No evidence of a material production runtime failure, duplicate map runtime on a single surface, or deployment-only asset regression was found.
+Priority decision: `ANALYTICS_FIRST`
 
-## 11. Closure decision and next priorities
+The core Product/UI refresh now has healthy production journeys and no close blocker. The highest immediate product value is to measure whether the refreshed journeys improve Search starts, result/detail continuation, Favorites, and Map use. The known 2.58MB search-index debt remains important, but current evidence does not establish a material production failure; measurement should precede broad optimization. Performance should follow as an evidence-led, separately authorized phase, with U4-02 optional targeted polish after that unless new user evidence elevates it.
 
-Decision: `CLOSURE_BLOCKED`
+## 15. Product/UI Refresh completion scope
 
-Reason: one material cross-domain continuity and semantics blocker remains in the HYROX facility-detail continuation.
+When Human Product/UI Closure Review accepts this artifact, closure means:
 
-Priority decision: `OTHER`
+- the accepted Lesson, HYROX, shared Map, and Public Updates user journeys form one coherent production product;
+- U0 through U4/U4-R1 authority and domain boundaries are reconciled;
+- no known `CLOSE_BLOCKER` remains;
+- non-blocking polish and separate performance/analytics debt are explicitly owned outside closure.
 
-1. First: complete the bounded U4-R1 blocker remediation and Human review.
-2. After closure: Analytics / UX Measurement should precede broad performance optimization because the redesign currently lacks complete interaction measurement, while the known 2.58MB debt did not produce a material runtime failure in this audit.
-3. Next: evidence-led performance work.
-4. Then: optional Lesson Map marker-density polish.
-5. Public Updates automation and new product features remain separate authorizations.
+Closure does **not** mean:
 
-## 12. Mutation audit
+- every pixel or copy choice is final;
+- performance and analytics debt is complete;
+- new product features, data work, Public Updates automation, or future Map polish is authorized;
+- runtime, main, or production changes may proceed without separate authority.
 
-- Runtime changed by U4: no
-- UI changed by U4: no
-- Map changed by U4: no
-- HYROX changed by U4: no
-- DB or migration changed by U4: no
-- Analytics changed by U4: no
-- Production changed by U4: no
-- Documentation changed by U4: this file only
+## 16. Closure artifact and mutation audit
+
+- Artifact: `docs/product-ui-refresh-closure-v1.md`
+- Artifact type: documentation only
+- Runtime changed by closure re-check: no
+- UI changed by closure re-check: no
+- Map changed by closure re-check: no
+- HYROX runtime changed by closure re-check: no
+- DB or migration changed by closure re-check: no
+- Analytics changed by closure re-check: no
+- Production changed by closure re-check: no
+- Main merge by closure re-check: no
+
+Next gate: **Human Product/UI Closure Review**
+
+Do not automatically start Analytics, Performance, Targeted Polish, Map revision, or new Product/UI feature work from this document.
