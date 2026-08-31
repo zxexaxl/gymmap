@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "authority_id": "PUBLIC_UPDATES_AUTHORITY_V1",
+  "phase": "U3-U0",
+  "status": "ACCEPTED_AND_FROZEN",
+  "freeze_date": "2026-08-31",
+  "timezone": "Asia/Tokyo",
+  "human_review": {
+    "status": "ACCEPTED",
+    "accepted_date": "2026-08-31",
+    "timezone": "Asia/Tokyo",
+    "accepted_candidate_commit": "951cf2a512bb96a56aa304fd3d6545c78a4dcd99"
+  },
+  "repository_baseline": {
+    "remote_ref": "origin/main",
+    "commit": "362c6dcf19a433b062a4cd31ec59660b43bf55a4",
+    "main_advanced_from_expected_baseline": false,
+    "branch": "codex/ui-u3-u0-public-updates-contract",
+    "worktree": "/private/tmp/gymmap-ui-u3-u0-public-updates-contract"
+  },
+  "phase_guards": {
+    "documentation_only": true,
+    "runtime_changes_allowed": false,
+    "ui_implementation_allowed": false,
+    "updates_route_allowed": false,
+    "database_changes_allowed": false,
+    "migration_changes_allowed": false,
+    "crawler_import_monitor_changes_allowed": false,
+    "analytics_changes_allowed": false,
+    "automation_allowed": false,
+    "production_mutation_allowed": false
+  },
+  "definitions": {
+    "public_update_date": "Intentional publication time of a user-meaningful GymMap change.",
+    "confirmation_date": "Date GymMap checked the source supporting a specific fact or schedule.",
+    "freshness": "Domain-owned policy result; Public Updates and shared UI do not calculate it.",
+    "internal_process_date": "Crawler, import, monitor, build, deploy, or migration execution time; not a public update by itself.",
+    "effective_or_source_period": "Optional date or period the changed content concerns, distinct from published_at."
+  },
+  "semantic_invariants": [
+    "public update != confirmation date",
+    "public update != freshness badge",
+    "public update != internal process execution",
+    "same-content re-import is not a public update",
+    "HYROX missing or empty positive evidence is not negative evidence",
+    "Public Updates consumes and never redefines Lesson or HYROX freshness",
+    "site-wide last updated is prohibited without aggregate completeness authority"
+  ],
+  "public_update_categories": [
+    {
+      "id": "LESSON_DATA",
+      "recommended_label_ja": "レッスン",
+      "semantic_owner": "LESSON"
+    },
+    {
+      "id": "HYROX_DATA",
+      "recommended_label_ja": "HYROX",
+      "semantic_owner": "H3"
+    },
+    {
+      "id": "PRODUCT_FEATURE",
+      "recommended_label_ja": "機能改善",
+      "semantic_owner": "PRODUCT_UI_MAIN"
+    }
+  ],
+  "excluded_public_categories": [
+    "crawler",
+    "import",
+    "monitor",
+    "migration",
+    "backend",
+    "deployment",
+    "database",
+    "internal_phase"
+  ],
+  "eligibility_states": [
+    "ELIGIBLE",
+    "NOT_ELIGIBLE",
+    "REQUIRES_EDITORIAL_REVIEW",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "event_classes": [
+    {
+      "id": "LESSON_SCHEDULE_MATERIAL_CHANGE",
+      "minimum_evidence": [
+        "Lesson-approved semantic before and after",
+        "exact affected facility set",
+        "source period when claimed"
+      ],
+      "current_data_availability": "PARTIAL",
+      "eligibility": "ELIGIBLE",
+      "publication_mode": "EDITORIAL_REVIEW",
+      "auto_safe_now": false
+    },
+    {
+      "id": "LESSON_SAME_CONTENT_REIMPORT",
+      "minimum_evidence": ["semantic equality or absence of material diff"],
+      "current_data_availability": "PARTIAL",
+      "eligibility": "NOT_ELIGIBLE",
+      "publication_mode": "NOT_PUBLISHABLE",
+      "auto_safe_now": false
+    },
+    {
+      "id": "LESSON_PROCESS_TIMESTAMP_OR_ROW_COUNT_ONLY",
+      "minimum_evidence": ["process timestamp or row count only"],
+      "current_data_availability": "YES",
+      "eligibility": "INSUFFICIENT_EVIDENCE",
+      "publication_mode": "NOT_PUBLISHABLE",
+      "auto_safe_now": false
+    },
+    {
+      "id": "LESSON_PROGRAM_MAPPING_CORRECTION",
+      "minimum_evidence": ["reviewed user-visible before and after", "affected scope"],
+      "current_data_availability": "PARTIAL",
+      "eligibility": "ELIGIBLE",
+      "publication_mode": "EDITORIAL_REVIEW",
+      "auto_safe_now": false
+    },
+    {
+      "id": "HYROX_REVIEWED_POSITIVE_EVIDENCE_RELEASE",
+      "minimum_evidence": [
+        "H3-approved positive claims",
+        "accepted supporting evidence",
+        "exact affected facility set",
+        "coherent reviewed release or publication batch"
+      ],
+      "current_data_availability": "PARTIAL",
+      "eligibility": "ELIGIBLE",
+      "publication_mode": "EDITORIAL_REVIEW",
+      "auto_safe_now": false,
+      "forbidden_inferences": [
+        "real-world equipment addition",
+        "prior unavailability",
+        "completeness",
+        "negative state from missing claims"
+      ]
+    },
+    {
+      "id": "HYROX_MONITOR_EXECUTION_OR_NO_CHANGE",
+      "minimum_evidence": ["monitor execution/result only"],
+      "current_data_availability": "YES",
+      "eligibility": "NOT_ELIGIBLE",
+      "publication_mode": "NOT_PUBLISHABLE",
+      "auto_safe_now": false
+    },
+    {
+      "id": "HYROX_SOURCE_DRIFT_MISSING_OR_STALE_SIGNAL",
+      "minimum_evidence": ["H3 review signal"],
+      "current_data_availability": "YES",
+      "eligibility": "REQUIRES_EDITORIAL_REVIEW",
+      "publication_mode": "EDITORIAL_REVIEW",
+      "auto_safe_now": false,
+      "negative_publication_from_signal": "PROHIBITED"
+    },
+    {
+      "id": "PRODUCT_USER_VISIBLE_IMPROVEMENT",
+      "minimum_evidence": ["shipped user-visible behavior", "approved user-benefit copy"],
+      "current_data_availability": "YES_FOR_MANUAL_CURATION",
+      "eligibility": "ELIGIBLE",
+      "publication_mode": "MANUAL",
+      "auto_safe_now": false
+    },
+    {
+      "id": "INTERNAL_OPERATION_SUCCESS",
+      "minimum_evidence": ["crawler, import, monitor, build, deploy, migration, or refactor completion only"],
+      "current_data_availability": "YES",
+      "eligibility": "NOT_ELIGIBLE",
+      "publication_mode": "NOT_PUBLISHABLE",
+      "auto_safe_now": false
+    },
+    {
+      "id": "PUBLIC_UPDATE_CORRECTION_OR_RETRACTION",
+      "minimum_evidence": ["existing public update", "reviewed correction or retraction reason"],
+      "current_data_availability": "NO_STORED_PUBLIC_HISTORY_YET",
+      "eligibility": "ELIGIBLE",
+      "publication_mode": "EDITORIAL_REVIEW",
+      "manual_publication_allowed": true,
+      "auto_safe_now": false
+    }
+  ],
+  "publication_modes": {
+    "AUTO_SAFE": {
+      "authorized_event_classes": [],
+      "status": "NO_CURRENT_CLASS_AUTHORIZED"
+    },
+    "EDITORIAL_REVIEW": {
+      "required_for": [
+        "Lesson data updates",
+        "HYROX data updates",
+        "material data corrections",
+        "data-driven grouping and wording"
+      ]
+    },
+    "MANUAL": {
+      "required_for": ["Product and feature announcements", "exceptional corrections or retractions"]
+    },
+    "NOT_PUBLISHABLE": {
+      "applies_to": [
+        "same-content refresh",
+        "crawler or import execution",
+        "monitor execution or no-change result",
+        "build or deployment",
+        "migration or refactor"
+      ]
+    }
+  },
+  "grouping": {
+    "unit": "one reviewed user-meaningful change group",
+    "dimensions": [
+      "category or domain",
+      "domain-approved semantic change type",
+      "public-safe source or brand scope",
+      "effective or source period",
+      "affected entity set",
+      "reviewed publication batch"
+    ],
+    "clock_only_window": null,
+    "clock_only_grouping_prohibited": true,
+    "membership_authority": "reviewed publication_batch_id",
+    "counts": {
+      "allowed_default_units": ["facility", "store", "program", "brand"],
+      "internal_by_default": ["row", "claim", "inserted record", "updated record", "job source"],
+      "omit_when_scope_unproven": true
+    },
+    "stable_identity_pattern": "v1:{category}:{change_type}:{source_scope}:{source_period_or_none}:{semantic_fingerprint}",
+    "identity_excludes": [
+      "job_id",
+      "retry_number",
+      "processing_timestamp",
+      "deployment_id",
+      "public_wording_edit"
+    ]
+  },
+  "conceptual_model": {
+    "public_fields": {
+      "required": ["id", "category", "title", "published_at", "status"],
+      "optional": [
+        "summary",
+        "source_period",
+        "affected_entity_type",
+        "affected_entity_count",
+        "destination",
+        "correction_note"
+      ],
+      "statuses": ["PUBLISHED", "CORRECTED", "RETRACTED"]
+    },
+    "internal_fields": {
+      "required": [
+        "domain_event_class",
+        "publication_mode",
+        "publication_batch_id",
+        "dedupe_key",
+        "semantic_fingerprint",
+        "evidence_refs",
+        "editorial_state"
+      ],
+      "conditional": ["approved_by_role", "approved_at", "supersedes_id"]
+    },
+    "never_public": [
+      "internal job IDs",
+      "raw database IDs",
+      "internal file paths",
+      "credentials",
+      "reviewer identity",
+      "private notes",
+      "raw error messages",
+      "commit hashes",
+      "raw evidence text",
+      "internal event references"
+    ]
+  },
+  "route_and_ia": {
+    "future_route": "/updates",
+    "route_collision": false,
+    "indexable": true,
+    "canonical": "/updates",
+    "sitemap_when_implemented_with_content": true,
+    "sitemap_lastmod_semantics": "latest public published_at",
+    "top_level_header_item": false,
+    "preferred_discovery": ["footer", "utility menu"],
+    "detail_route_required_for_mvp": false,
+    "home_teaser": {
+      "implemented_in_U3_U1": false,
+      "recommended_after_minimum_entries": 3,
+      "requires_separate_home_review": true,
+      "maximum_items": 3
+    }
+  },
+  "retention_and_corrections": {
+    "minimum_visible_months": 12,
+    "flat_list_entry_limit_before_pagination_or_archive": 50,
+    "ordering": "published_at_descending",
+    "material_silent_rewrite_allowed": false,
+    "minor_nonsemantic_copy_edit_allowed": true,
+    "retraction_tombstone_required": true
+  },
+  "data_sufficiency": {
+    "lesson_schedule_batch_update": "PARTIAL",
+    "lesson_program_mapping_correction": "PARTIAL",
+    "lesson_facility_information_update": "PARTIAL",
+    "hyrox_positive_equipment_update": "PARTIAL",
+    "hyrox_official_affiliation_update": "PARTIAL",
+    "product_feature_update": "YES_FOR_MANUAL_CURATION",
+    "correction_retraction_history": "MISSING",
+    "can_build_U3_U1_without_new_schema": "YES_FOR_STATIC_CURATED_MVP_NO_FOR_SAFE_AUTOMATION"
+  },
+  "mvp": {
+    "recommendation": "STATIC_CURATED",
+    "storage_direction": "bounded code or content records",
+    "database_schema_required_now": false,
+    "editorial_approval_required": true,
+    "automation_authorized": false
+  },
+  "ownership": {
+    "shared_ui": [
+      "visual card and list primitives",
+      "typography",
+      "semantic-only date presentation",
+      "AppShell"
+    ],
+    "lesson": [
+      "Lesson confirmation semantics",
+      "Lesson freshness policy",
+      "Lesson data-change interpretation",
+      "Lesson wording evidence approval"
+    ],
+    "hyrox_h3": [
+      "evidence semantics",
+      "freshness",
+      "positive and unknown interpretation",
+      "HYROX wording constraints",
+      "HYROX evidence approval"
+    ],
+    "public_updates": [
+      "eligibility",
+      "grouping",
+      "publication status",
+      "public taxonomy",
+      "editorial and publication flow"
+    ]
+  },
+  "dependencies": {
+    "U3_U1": {
+      "depends_on": ["U3-U0"],
+      "consumes_when_applicable": ["Lesson domain authority", "H3 domain authority"],
+      "does_not_depend_on": ["M1", "H3-10C"],
+      "status": "READY_FOR_SEPARATE_AUTHORIZATION",
+      "authorized_mvp_scope": "STATIC_CURATED",
+      "automation_status": "BLOCKED_BY_INSUFFICIENT_SEMANTIC_HISTORY"
+    },
+    "H3_10C": {
+      "blocked_until": ["M1_COMPLETE"],
+      "blocks_U3_U1": false
+    }
+  },
+  "future_automation_requirements": [
+    "immutable domain change events or reviewed before and after snapshots",
+    "content-level semantic diff that ignores same-content imports",
+    "exact affected public entity set and human-unit count",
+    "reliable source or effective period",
+    "stable publication batch, semantic fingerprint, and dedupe key",
+    "domain eligibility decision and approval state",
+    "public correction and retraction history",
+    "durable provenance beyond transient workflow artifacts"
+  ],
+  "forbidden_inferences": [
+    "HYROX equipment absence from missing claims",
+    "HYROX capability absence from false or empty projections",
+    "facility closure from missing listing",
+    "real-world addition from newly confirmed evidence",
+    "whole-site freshness from one domain or process timestamp",
+    "material change from import or updated_at alone"
+  ],
+  "human_review_accepted_decisions": {
+    "updates_route_should_exist": true,
+    "placement": "FOOTER_OR_UTILITY_MENU_NOT_TOP_LEVEL_HEADER",
+    "public_categories": ["LESSON_DATA", "HYROX_DATA", "PRODUCT_FEATURE"],
+    "lesson_auto_generation_now": false,
+    "hyrox_auto_generation_now": false,
+    "manual_editorial_approval_required": true,
+    "new_schema_required_for_curated_mvp": false,
+    "new_schema_or_history_required_before_automation": true,
+    "home_recent_updates_now": false,
+    "minimum_history_months": 12
+  },
+  "success_verdicts": [
+    "GYMMAP_UI_U3_U0_CONTRACT_COMPLETE",
+    "PUBLIC_UPDATES_AUTHORITY_V1_FROZEN",
+    "INTERNAL_EVENT_PUBLICATION_BOUNDARY_FROZEN",
+    "PUBLIC_UPDATE_ELIGIBILITY_FROZEN",
+    "PUBLIC_UPDATE_GROUPING_CONTRACT_FROZEN",
+    "LESSON_UPDATE_SEMANTICS_PRESERVED",
+    "HYROX_H3_SEMANTICS_PRESERVED",
+    "FRESHNESS_UPDATE_DATE_SEPARATION_FROZEN",
+    "PUBLICATION_AUTHORITY_FROZEN",
+    "U3_U1_IMPLEMENTATION_SCOPE_DEFINED",
+    "NO_RUNTIME_IMPLEMENTATION",
+    "NO_DB_MIGRATION",
+    "NO_PRODUCTION_MUTATION",
+    "PUBLIC_UPDATES_HUMAN_REVIEW_DECISIONS_FROZEN",
+    "STATIC_CURATED_MVP_AUTHORIZED"
+  ],
+  "explicit_non_verdict": "GYMMAP_UI_U3_U1_COMPLETE"
+}
