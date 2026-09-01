@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-09-01T00:30:00Z",
+  "baseline": {
+    "origin_main": "dee7e83bb725ae848ff14fcccad6313bab21af95"
+  },
+  "viewport": {
+    "desktop": { "width": 1280, "height": 720 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "matched_desktop_three_run_median": {
+    "raster": {
+      "ready_ms_runs": [122, 36, 39],
+      "ready_ms_median": 39,
+      "requests": 12,
+      "map_payload_bytes": 461030
+    },
+    "vector": {
+      "ready_ms_runs": [439, 655, 430],
+      "ready_ms_median": 439,
+      "requests": 9,
+      "map_payload_bytes": 339726
+    }
+  },
+  "proposed_dependency_artifacts": {
+    "maplibre_gl": "6.6.0",
+    "maplibre_gl_leaflet": "0.1.4",
+    "gzip_js_bytes": 287450,
+    "gzip_css_bytes": 10619,
+    "note": "Source artifact gzip total, not a production Next.js chunk measurement."
+  },
+  "station_source_checks": {
+    "tokyo": true,
+    "yurakucho": true,
+    "ginza": true,
+    "shinjuku": true,
+    "regional_names": ["前橋", "中央前橋", "新前橋", "高崎", "北高崎", "南高崎", "高崎問屋町"]
+  },
+  "interaction_checks": {
+    "leaflet_outer_pan": "PASS",
+    "leaflet_outer_zoom": "PASS",
+    "resize_1280_to_390": "PASS",
+    "webgl_desktop": "PASS",
+    "webgl_mobile": "PASS",
+    "context_loss_raster_fallback": "PASS",
+    "m1_marker_selected_aria_pressed": "PASS",
+    "m1_marker_focus_preview": "PASS"
+  }
+}
