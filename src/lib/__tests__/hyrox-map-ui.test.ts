@@ -80,7 +80,7 @@ test("selection uses M0 URL identity, history, close, Escape, and explicit locat
   assert.match(discoverySource, /addEventListener\("popstate"/);
   assert.match(discoverySource, /event\.key === "Escape"/);
   assert.match(discoverySource, /onClearSelection=\{handleClearSelection\}/);
-  assert.match(discoverySource, /onClick=\{\(\) => \{\s*void requestCurrentPosition\(\)/);
+  assert.match(discoverySource, /onClick=\{handleCurrentLocationAction\}/);
   assert.doesNotMatch(discoverySource, /useEffect\([\s\S]{0,400}requestCurrentPosition\(\)/);
 });
 

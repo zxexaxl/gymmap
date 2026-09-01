@@ -31,7 +31,7 @@ test("M0-R1 keeps location not requested until the explicit locate action", () =
   );
   assert.match(
     locationMapSource,
-    /onClick=\{\(\) => \{\s*void requestCurrentPosition\(\);\s*\}\}/,
+    /onClick=\{handleCurrentLocationAction\}/,
   );
   assert.match(locationMapSource, /navigator\.geolocation\.getCurrentPosition/);
 });
@@ -133,6 +133,42 @@ test("M0-R1.1 Apple provider reflects selected identity semantically and program
   assert.match(appleMapSource, /map\.selectedAnnotation = selectedLocationIndex >= 0 \? annotations\[selectedLocationIndex\] : null/);
   assert.match(appleMapSource, /if \(!isSynchronizingSelectionRef\.current\)/);
   assert.doesNotMatch(appleMapSource, /selectedLocationId \?\? locations\[0\]/);
+});
+
+test("P4-A selection clear preserves the current provider viewport", () => {
+  assert.match(
+    leafletMapSource,
+    /selectionWasCleared = hadSelectedLocationRef\.current && !hasSelectedLocation/,
+  );
+  assert.match(
+    leafletMapSource,
+    /if \(selectionWasCleared && !focusCenter\) \{\s*return;/,
+  );
+  assert.match(
+    appleMapSource,
+    /previousSelectedLocationIdRef\.current !== null && selectedLocationId === null/,
+  );
+  assert.match(
+    appleMapSource,
+    /if \(selectionWasCleared && !focusWasRequested\) \{\s*return;/,
+  );
+});
+
+test("P4-A repeat locate requests camera movement without another acquisition", () => {
+  assert.match(locationMapSource, /focusRequestId=\{mapFocusRequestId\}/);
+  assert.match(leafletMapSource, /focusRequestId/);
+  assert.match(appleMapSource, /focusWasRequested/);
+
+  const returnBranch = locationMapSource.match(
+    /function handleCurrentLocationAction\(\) \{([\s\S]*?)\n\s*\}/,
+  )?.[1];
+
+  assert.ok(returnBranch);
+  assert.match(returnBranch, /setMapFocusCenter\(currentPosition\)/);
+  assert.match(returnBranch, /setMapFocusRequestId/);
+  assert.doesNotMatch(returnBranch, /getCurrentPosition/);
+  assert.match(leafletMapSource, /hasSelectedLocation && !focusCenter/);
+  assert.match(appleMapSource, /selectedLocation && !focusCenter/);
 });
 
 test("Lesson query, filters, viewport scope, ordering, and domain content stay in the Lesson consumer", () => {

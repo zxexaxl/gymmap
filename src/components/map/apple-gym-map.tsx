@@ -171,6 +171,8 @@ export function AppleGymMap({
   selectedLocationId,
   center,
   currentPosition,
+  focusCenter = false,
+  focusRequestId = 0,
   onSelectLocation,
   onClearSelection,
   onBoundsChange,
@@ -182,6 +184,8 @@ export function AppleGymMap({
   const annotationCleanupRef = useRef<Array<() => void>>([]);
   const isSynchronizingSelectionRef = useRef(false);
   const lastCenterKeyRef = useRef<string | null>(null);
+  const lastFocusRequestIdRef = useRef(focusRequestId);
+  const previousSelectedLocationIdRef = useRef(selectedLocationId);
   const lastBoundsRef = useRef<MapBounds | null>(null);
   const [mapkitState, setMapkitState] = useState<AppleMapKit | null>(null);
   const [mapError, setMapError] = useState<string | null>(null);
@@ -190,13 +194,13 @@ export function AppleGymMap({
 
   const selectedCenter = useMemo(
     () =>
-      selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
+      !focusCenter && selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null
         ? {
             latitude: selectedLocation.latitude,
             longitude: selectedLocation.longitude,
           }
         : { latitude: center.latitude, longitude: center.longitude },
-    [center, selectedLocation],
+    [center, focusCenter, selectedLocation],
   );
 
   useEffect(() => {
@@ -411,8 +415,18 @@ export function AppleGymMap({
       return;
     }
 
+    const selectionWasCleared =
+      previousSelectedLocationIdRef.current !== null && selectedLocationId === null;
+    previousSelectedLocationIdRef.current = selectedLocationId;
+    const focusWasRequested = lastFocusRequestIdRef.current !== focusRequestId;
+    lastFocusRequestIdRef.current = focusRequestId;
+
+    if (selectionWasCleared && !focusWasRequested) {
+      return;
+    }
+
     const nextCenterKey = `${selectedCenter.latitude}:${selectedCenter.longitude}`;
-    if (lastCenterKeyRef.current === nextCenterKey) {
+    if (!focusWasRequested && lastCenterKeyRef.current === nextCenterKey) {
       return;
     }
 
@@ -421,7 +435,7 @@ export function AppleGymMap({
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (mapkitState.CoordinateRegion && mapkitState.CoordinateSpan) {
       const narrow = containerRef.current ? containerRef.current.clientWidth <= 640 : false;
-      const presentationAdjustedCoordinate = selectedLocation
+      const presentationAdjustedCoordinate = selectedLocation && !focusCenter
         ? new mapkitState.Coordinate(
             selectedCenter.latitude - (narrow ? 0.016 : 0),
             selectedCenter.longitude,
@@ -443,7 +457,7 @@ export function AppleGymMap({
     }
 
     lastCenterKeyRef.current = nextCenterKey;
-  }, [mapkitState, selectedCenter.latitude, selectedCenter.longitude, selectedLocation]);
+  }, [focusCenter, focusRequestId, mapkitState, selectedCenter.latitude, selectedCenter.longitude, selectedLocation, selectedLocationId]);
 
   useEffect(() => {
     const map = mapRef.current;

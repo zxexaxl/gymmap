@@ -190,17 +190,27 @@ function MapController({
   bounds,
   hasSelectedLocation,
   focusCenter,
+  focusRequestId,
 }: {
   center: Coordinates;
   bounds: LatLngBoundsExpression | null;
   hasSelectedLocation: boolean;
   focusCenter: boolean;
+  focusRequestId: number;
 }) {
   const map = useMap();
   const hasPositionedRef = useRef(false);
+  const hadSelectedLocationRef = useRef(hasSelectedLocation);
 
   useEffect(() => {
     if (!map.getPane("mapPane")) {
+      return;
+    }
+
+    const selectionWasCleared = hadSelectedLocationRef.current && !hasSelectedLocation;
+    hadSelectedLocationRef.current = hasSelectedLocation;
+
+    if (selectionWasCleared && !focusCenter) {
       return;
     }
 
@@ -238,7 +248,7 @@ function MapController({
             animate: !reduceMotion,
             duration: reduceMotion ? 0 : 0.35,
           });
-          if (hasSelectedLocation) {
+          if (hasSelectedLocation && !focusCenter) {
             revealTimer = window.setTimeout(
               () => revealSelectedMarker(map),
               reduceMotion ? 0 : 400,
@@ -246,11 +256,11 @@ function MapController({
           }
         } else {
           map.setView(nextCenter, 13, { animate: false });
-          if (hasSelectedLocation) {
+          if (hasSelectedLocation && !focusCenter) {
             revealSelectedMarker(map);
           }
         }
-      } else if (hasSelectedLocation) {
+      } else if (hasSelectedLocation && !focusCenter) {
         revealSelectedMarker(map);
       }
     } else {
@@ -270,7 +280,7 @@ function MapController({
         window.clearTimeout(revealTimer);
       }
     };
-  }, [bounds, center.latitude, center.longitude, focusCenter, hasSelectedLocation, map]);
+  }, [bounds, center.latitude, center.longitude, focusCenter, focusRequestId, hasSelectedLocation, map]);
 
   useEffect(() => {
     const container = map.getContainer();
@@ -306,6 +316,7 @@ export function LeafletGymMap({
   center,
   currentPosition,
   focusCenter = false,
+  focusRequestId = 0,
   onSelectLocation,
   onClearSelection,
   onBoundsChange,
@@ -394,6 +405,7 @@ export function LeafletGymMap({
           bounds={bounds}
           hasSelectedLocation={Boolean(selectedLocation)}
           focusCenter={focusCenter}
+          focusRequestId={focusRequestId}
         />
         {showVectorBasemap ? (
           <Suspense fallback={null}>
@@ -445,7 +457,9 @@ export function LeafletGymMap({
         })}
       </MapContainer>
       <div className="map-caption">
-        {selectedLocation
+        {focusCenter && currentPosition
+          ? "現在地周辺のジムを地図表示中"
+          : selectedLocation
           ? `${selectedLocation.name} を中心に表示`
           : currentPosition
             ? "現在地周辺のジムを地図表示中"

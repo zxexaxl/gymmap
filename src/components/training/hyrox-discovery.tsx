@@ -74,6 +74,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
   const [selectionNotice, setSelectionNotice] = useState<string | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
+  const [mapFocusRequestId, setMapFocusRequestId] = useState(0);
   const [geolocationStatus, setGeolocationStatus] =
     useState<LocationLifecycleState>("not_requested");
   const [geolocationMessage, setGeolocationMessage] = useState(
@@ -202,6 +203,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
 
         setCurrentPosition(nextPosition);
         setMapFocusCenter(nextPosition);
+        setMapFocusRequestId((requestId) => requestId + 1);
         setGeolocationStatus("obtained");
         setGeolocationMessage("現在地を表示しました。施設の絞り込みと選択は変更していません。");
       },
@@ -221,6 +223,16 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         maximumAge: 5 * 60 * 1000,
       },
     );
+  }
+
+  function handleCurrentLocationAction() {
+    if (currentPosition) {
+      setMapFocusCenter(currentPosition);
+      setMapFocusRequestId((requestId) => requestId + 1);
+      return;
+    }
+
+    void requestCurrentPosition();
   }
 
   function renderSelectedLocationContent() {
@@ -315,23 +327,20 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
               center={mapCenter}
               currentPosition={currentPosition}
               focusCenter={mapFocusCenter !== null}
+              focusRequestId={mapFocusRequestId}
               onSelectLocation={(locationId) => handleSelectLocation(locationId, true)}
               onClearSelection={handleClearSelection}
               onProviderError={handleMapProviderError}
               unselectedCaption={`${prefecture || "全国"}の${filteredLocations.length}施設を表示中`}
             />
-            {geolocationStatus !== "obtained" ? (
-              <MapChrome label="地図の現在地コントロール">
-                <CurrentLocationControl
-                  state={geolocationStatus}
-                  message={geolocationMessage}
-                  onClick={() => {
-                    void requestCurrentPosition();
-                  }}
-                  disabled={geolocationStatus === "requesting"}
-                />
-              </MapChrome>
-            ) : null}
+            <MapChrome label="地図の現在地コントロール">
+              <CurrentLocationControl
+                state={geolocationStatus}
+                message={geolocationMessage}
+                onClick={handleCurrentLocationAction}
+                disabled={geolocationStatus === "requesting"}
+              />
+            </MapChrome>
             {selectedLocation ? (
               <MapSelectionSurface
                 placement="mobile"
