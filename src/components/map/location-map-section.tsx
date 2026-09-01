@@ -10,6 +10,13 @@ import {
   MapSelectionSurface,
   MapStateNotice,
 } from "@/components/map/map-presentation";
+import {
+  createCurrentLocationProximityOrigin,
+  DEFAULT_LESSON_PROXIMITY_ORIGIN,
+  rankLessonLocationsByProximity,
+  type LessonCoordinates,
+  type LessonProximityOrigin,
+} from "@/components/map/lesson-proximity";
 import { buildMapSelectionHref, resolveMapSelection } from "@/components/map/map-runtime-state";
 import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
@@ -46,33 +53,16 @@ type LocationMapSectionProps = {
   lessonIndex: MapLocationLessonIndex[];
 };
 
-type Coordinates = {
-  latitude: number;
-  longitude: number;
-};
+type Coordinates = LessonCoordinates;
 
 type GeolocationPermissionState = "granted" | "prompt" | "denied" | "unsupported" | "unknown";
 type LocationLifecycleState = "not_requested" | "requesting" | "obtained" | "denied" | "unavailable" | "stale";
 
+// Camera fallback authority only. Lesson distance authority lives in proximityOrigin.
 const TOKYO_CENTER: Coordinates = {
   latitude: 35.681236,
   longitude: 139.767125,
 };
-
-function haversineDistanceKm(from: Coordinates, to: Coordinates) {
-  const toRadians = (value: number) => (value * Math.PI) / 180;
-  const earthRadiusKm = 6371;
-  const deltaLatitude = toRadians(to.latitude - from.latitude);
-  const deltaLongitude = toRadians(to.longitude - from.longitude);
-  const latitudeA = toRadians(from.latitude);
-  const latitudeB = toRadians(to.latitude);
-
-  const a =
-    Math.sin(deltaLatitude / 2) * Math.sin(deltaLatitude / 2) +
-    Math.cos(latitudeA) * Math.cos(latitudeB) * Math.sin(deltaLongitude / 2) * Math.sin(deltaLongitude / 2);
-
-  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
 
 function formatDistanceLabel(distanceKm: number | null) {
   if (distanceKm === null) {
@@ -107,6 +97,9 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const [prefectureFilter, setPrefectureFilter] = useState("");
   const [distanceFilter, setDistanceFilter] = useState("");
   const [listScope, setListScope] = useState<"nearby" | "map">("nearby");
+  const [proximityOrigin, setProximityOrigin] = useState<LessonProximityOrigin>(
+    DEFAULT_LESSON_PROXIMITY_ORIGIN,
+  );
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
@@ -159,8 +152,10 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         setCurrentPosition(nextPosition);
         setMapFocusCenter(nextPosition);
         setMapFocusRequestId((requestId) => requestId + 1);
+        setProximityOrigin(createCurrentLocationProximityOrigin(nextPosition));
+        setListScope("nearby");
         setGeolocationStatus("obtained");
-        setGeolocationMessage("現在地を取得し、地図を移動しました。店舗の並び順と選択は変更していません。");
+        setGeolocationMessage("現在地を取得し、現在地から近い順に店舗を表示しました。");
       },
       (error) => {
         if (error.code === error.PERMISSION_DENIED) {
@@ -208,34 +203,14 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const matchedLocationIds = new Set(matchesByLocationId.keys());
   const mappableLocations = useMemo(
     () =>
-      locations
-        .filter((location) => location.latitude !== null && location.longitude !== null)
-        .map((location) => ({
-          ...location,
-          distanceKm:
-            location.latitude !== null && location.longitude !== null
-              ? haversineDistanceKm(TOKYO_CENTER, {
-                  latitude: location.latitude,
-                  longitude: location.longitude,
-                })
-              : null,
-        }))
-        .sort((left, right) => {
-          if (left.distanceKm === null && right.distanceKm === null) {
-            return left.name.localeCompare(right.name);
-          }
-
-          if (left.distanceKm === null) {
-            return 1;
-          }
-
-          if (right.distanceKm === null) {
-            return -1;
-          }
-
-          return left.distanceKm - right.distanceKm;
-        }),
-    [locations],
+      rankLessonLocationsByProximity(
+        locations.filter(
+          (location): location is GymLocation & { latitude: number; longitude: number } =>
+            location.latitude !== null && location.longitude !== null,
+        ),
+        proximityOrigin,
+      ),
+    [locations, proximityOrigin],
   );
   const mapLocations = useMemo(
     () =>
@@ -440,13 +415,13 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
   const statusLabel =
     geolocationStatus === "obtained"
-      ? "現在地を地図に表示中 / 東京駅を基準に近い順"
+      ? `現在地を地図に表示中 / ${proximityOrigin.label}を基準に近い順`
       : geolocationStatus === "requesting"
         ? "現在地を取得中"
-        : "東京駅を基準に近い順";
+        : `${proximityOrigin.label}を基準に近い順`;
   const resultSummary = normalizedQuery
-    ? `「${programQuery.trim()}」に一致する${listCandidates.length}店舗・${matchedLessonCount}レッスンから近い10店舗を表示`
-    : `${mappableLocations.length}店舗を地図に表示 / 条件に合う${listCandidates.length}店舗から近い10店舗を表示`;
+    ? `「${programQuery.trim()}」に一致する${listCandidates.length}店舗・${matchedLessonCount}レッスンから上位10店舗を表示`
+    : `${mappableLocations.length}店舗を地図に表示 / 条件に合う${listCandidates.length}店舗から上位10店舗を表示`;
   const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
 
   return (
@@ -491,7 +466,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             </select>
           </label>
           <label className="map-search-field">
-            <span>基準地点からの距離</span>
+            <span>{proximityOrigin.label}からの距離</span>
             <select value={distanceFilter} onChange={(event) => setDistanceFilter(event.target.value)}>
               <option value="">指定なし</option>
               <option value="1">1km以内</option>
@@ -506,14 +481,16 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             type="button"
             className={listScope === "nearby" ? "is-active" : ""}
             onClick={() => setListScope("nearby")}
+            aria-pressed={listScope === "nearby"}
           >
-            近い店舗から探す
+            近い順で見る
           </button>
           <button
             type="button"
             className={listScope === "map" ? "is-active" : ""}
             onClick={() => setListScope("map")}
             disabled={!mapBounds}
+            aria-pressed={listScope === "map"}
           >
             この地図範囲から探す
           </button>
@@ -572,14 +549,20 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
           ) : null}
           <div className="map-nearby-section">
             <div className="map-list-heading">
-              <h3>{listScope === "map" ? "地図範囲内の近い10店舗" : "近い10店舗"}</h3>
-              <span>{listCandidates.length}件中</span>
+              <h3>
+                {listScope === "map" ? "この地図範囲の店舗" : `${proximityOrigin.label}から近い10店舗`}
+              </h3>
+              <span>
+                {listScope === "map"
+                  ? `${proximityOrigin.label}から近い順 / ${listCandidates.length}件中（最大10件）`
+                  : `${listCandidates.length}件中`}
+              </span>
             </div>
             <div className="map-location-list">
               {nearbyLocations.length === 0 ? (
                 <article className="map-location-item">
                   <h3>該当する店舗がありません</h3>
-                  <p className="muted">条件を変更するか、「近い店舗から探す」に戻してください。</p>
+                  <p className="muted">条件を変更するか、「近い順で見る」に戻してください。</p>
                 </article>
               ) : null}
               {nearbyLocations.map((location, index) => (

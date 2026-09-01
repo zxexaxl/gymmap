@@ -36,7 +36,7 @@ test("M0-R1 keeps location not requested until the explicit locate action", () =
   assert.match(locationMapSource, /navigator\.geolocation\.getCurrentPosition/);
 });
 
-test("M0-R1 location success changes only location viewport state", () => {
+test("P4-B first location success extends viewport state only with Lesson proximity state", () => {
   const successCallback = locationMapSource.match(
     /navigator\.geolocation\.getCurrentPosition\(\s*\(position\) => \{([\s\S]*?)\n\s*\},\s*\n\s*\(error\)/,
   )?.[1];
@@ -44,7 +44,9 @@ test("M0-R1 location success changes only location viewport state", () => {
   assert.ok(successCallback);
   assert.match(successCallback, /setCurrentPosition\(nextPosition\)/);
   assert.match(successCallback, /setMapFocusCenter\(nextPosition\)/);
-  assert.doesNotMatch(successCallback, /setSelectedLocationId|setListScope|setProgramQuery|setBrandFilter|setPrefectureFilter|setDistanceFilter/);
+  assert.match(successCallback, /setProximityOrigin\(createCurrentLocationProximityOrigin\(nextPosition\)\)/);
+  assert.match(successCallback, /setListScope\("nearby"\)/);
+  assert.doesNotMatch(successCallback, /setSelectedLocationId|setProgramQuery|setBrandFilter|setPrefectureFilter|setDistanceFilter/);
   assert.doesNotMatch(locationMapSource, /findNearestLocationId/);
 });
 
