@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
 import type {
   CircleMarker as LeafletCircleMarker,
@@ -14,8 +14,19 @@ import {
   resolveMapMarkerState,
 } from "@/components/map/map-marker-presentation";
 import type { Coordinates, MapBounds, MapComponentProps } from "@/components/map/map-types";
+import {
+  configuredMapBasemapMode,
+  shouldRenderVectorBasemap,
+  type VectorBasemapFailureReason,
+} from "@/lib/map-basemap";
 
 import presentationStyles from "./map-presentation.module.css";
+
+const OpenFreeMapVectorBasemap = lazy(() =>
+  import("@/components/map/openfreemap-vector-basemap").then((module) => ({
+    default: module.OpenFreeMapVectorBasemap,
+  })),
+);
 
 function MapInteractionReporter({
   onBoundsChange,
@@ -277,6 +288,15 @@ export function LeafletGymMap({
   unselectedCaption,
 }: MapComponentProps) {
   const [tileError, setTileError] = useState<string | null>(null);
+  const [vectorFailureReason, setVectorFailureReason] = useState<VectorBasemapFailureReason | null>(null);
+  const showVectorBasemap = shouldRenderVectorBasemap({
+    mode: configuredMapBasemapMode,
+    failureReason: vectorFailureReason,
+  });
+  const handleVectorFatal = useCallback((reason: VectorBasemapFailureReason) => {
+    console.error("[map] falling back to raster basemap", { reason });
+    setVectorFailureReason(reason);
+  }, []);
 
   const selectedLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
 
@@ -326,19 +346,25 @@ export function LeafletGymMap({
           hasSelectedLocation={Boolean(selectedLocation)}
           focusCenter={focusCenter}
         />
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          eventHandlers={{
-            tileerror: (event) => {
-              console.error("[map] tile request failed", event);
-              setTileError("地図タイルの読み込みに失敗しました。ネットワーク接続をご確認ください。");
-            },
-            load: () => {
-              setTileError(null);
-            },
-          }}
-        />
+        {showVectorBasemap ? (
+          <Suspense fallback={null}>
+            <OpenFreeMapVectorBasemap onFatal={handleVectorFatal} />
+          </Suspense>
+        ) : (
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            eventHandlers={{
+              tileerror: (event) => {
+                console.error("[map] tile request failed", event);
+                setTileError("地図タイルの読み込みに失敗しました。ネットワーク接続をご確認ください。");
+              },
+              load: () => {
+                setTileError(null);
+              },
+            }}
+          />
+        )}
         {currentPosition ? (
           <CircleMarker center={[currentPosition.latitude, currentPosition.longitude]} radius={8} pathOptions={{ color: "#2563eb", fillColor: "#2563eb", fillOpacity: 0.9 }}>
             <Tooltip direction="top" offset={[0, -8]} permanent={false}>
@@ -370,6 +396,11 @@ export function LeafletGymMap({
             : (unselectedCaption ?? "東京中心のフォールバック地図を表示中")}
       </div>
       {tileError ? <div className="map-overlay-message">{tileError}</div> : null}
+      {vectorFailureReason ? (
+        <div className="map-overlay-message" role="status">
+          ベクター地図を読み込めなかったため、標準地図に切り替えました。
+        </div>
+      ) : null}
       {locations.length === 0 ? <div className="map-overlay-message">表示できる店舗がないため、東京中心の地図だけを表示しています。</div> : null}
     </div>
   );

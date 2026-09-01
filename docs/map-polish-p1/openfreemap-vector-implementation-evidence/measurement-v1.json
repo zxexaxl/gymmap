@@ -1,0 +1,74 @@
+{
+  "measuredAt": "2026-09-01T10:04:14+09:00",
+  "baseline": {
+    "originMain": "dee7e83bb725ae848ff14fcccad6313bab21af95",
+    "p1M0ContractCommit": "901a51441697f7de22ce0f635cfc41eebf940897",
+    "rasterReference": {
+      "readyMedianMs": 39,
+      "requests": 12,
+      "bytes": 461030
+    },
+    "vectorP1M0Reference": {
+      "readyMedianMs": 439,
+      "requests": 9,
+      "bytes": 339726
+    }
+  },
+  "p1M1Candidate": {
+    "observedVectorReadyMs": 534,
+    "lazyJavaScript": {
+      "rawBytes": 1088387,
+      "gzipBytes": 288365,
+      "chunks": 2
+    },
+    "lazyCss": {
+      "rawBytes": 82869,
+      "gzipBytes": 10533,
+      "chunks": 1
+    },
+    "ownedStyle": {
+      "rawBytes": 39225,
+      "gzipBytes": 3790
+    },
+    "workerPair": {
+      "rawBytes": 508167,
+      "gzipBytes": 141790,
+      "files": 2
+    },
+    "totalLocalMapRuntime": {
+      "rawBytes": 1718648,
+      "gzipBytes": 444478
+    },
+    "pageAssetObserver": {
+      "mapSpecificAssetsObserved": 13,
+      "workerInternalTileFetchesIncluded": false,
+      "unrelatedUpdatesRouteMapLibreAssets": 0
+    },
+    "responsive": {
+      "lesson390ClientWidth": 390,
+      "lesson390ScrollWidth": 390,
+      "hyrox430ClientWidth": 430,
+      "hyrox430ScrollWidth": 430
+    },
+    "lifecycle": {
+      "afterUnmountVectorCanvases": 0,
+      "afterRemountVectorCanvases": 1,
+      "afterRemountLeafletMaps": 1
+    },
+    "fallback": {
+      "providerOutageRasterTiles": 15,
+      "providerOutageVectorCanvases": 0,
+      "providerOutageMarkers": 6,
+      "providerOutageSelectedMarkers": 1,
+      "webglContextLossRasterTiles": 15,
+      "webglContextLossVectorCanvases": 0,
+      "webglContextLossMarkers": 2,
+      "webglContextLossSelectedMarkers": 1
+    }
+  },
+  "notes": [
+    "P1-M0 request/byte figures are the frozen reference, not remeasured P1-M1 values.",
+    "Browser page-asset observation does not enumerate worker-internal vector tile fetches, so its request count is not compared directly with the P1-M0 request count.",
+    "The production wrapper prebuild could not fetch Supabase-backed sitemaps without environment variables; direct Next production build compiled, typechecked, and generated 146 static pages."
+  ]
+}
