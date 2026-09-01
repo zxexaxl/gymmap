@@ -1,13 +1,15 @@
 "use client";
 
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { CircleMarker, MapContainer, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
+import { CircleMarker, MapContainer, Marker, TileLayer, Tooltip, useMap, useMapEvents } from "react-leaflet";
 import type {
   CircleMarker as LeafletCircleMarker,
   LatLngBoundsExpression,
   LatLngExpression,
   Map as LeafletMap,
+  Marker as LeafletMarker,
 } from "leaflet";
+import { divIcon, latLngBounds } from "leaflet";
 
 import {
   getMapMarkerPresentation,
@@ -19,6 +21,12 @@ import {
   shouldRenderVectorBasemap,
   type VectorBasemapFailureReason,
 } from "@/lib/map-basemap";
+import {
+  buildDensityClusterLabel,
+  buildLessonMarkerDensity,
+  LESSON_DENSITY_INDIVIDUAL_ZOOM,
+  type DensityCluster,
+} from "@/lib/map-marker-density";
 
 import presentationStyles from "./map-presentation.module.css";
 
@@ -161,6 +169,154 @@ function AccessibleLocationMarker({
   );
 }
 
+function AccessibleDensityCluster({
+  cluster,
+  onActivate,
+}: {
+  cluster: DensityCluster;
+  onActivate: () => void;
+}) {
+  const markerRef = useRef<LeafletMarker | null>(null);
+  const accessibleLabel = buildDensityClusterLabel(cluster.count);
+  const icon = useMemo(
+    () =>
+      divIcon({
+        "className": `${presentationStyles.densityCluster} lesson-density-cluster`,
+        html: `<span aria-hidden="true">${cluster.count}</span>`,
+        iconAnchor: [22, 22],
+        iconSize: [44, 44],
+      }),
+    [cluster.count],
+  );
+
+  useEffect(() => {
+    const element = markerRef.current?.getElement();
+
+    if (!element) {
+      return;
+    }
+
+    element.setAttribute("tabindex", "0");
+    element.setAttribute("role", "button");
+    element.setAttribute("aria-label", accessibleLabel);
+    element.setAttribute("data-cluster-count", String(cluster.count));
+
+    function handleKeyDown(event: Event) {
+      if (!(event instanceof KeyboardEvent)) {
+        return;
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onActivate();
+      }
+    }
+
+    element.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      element.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [accessibleLabel, cluster.count, onActivate]);
+
+  return (
+    <Marker
+      ref={markerRef}
+      position={[cluster.latitude, cluster.longitude]}
+      icon={icon}
+      eventHandlers={{ click: onActivate }}
+      keyboard={false}
+      riseOnHover
+    >
+      <Tooltip direction="top" offset={[0, -22]}>
+        この周辺に{cluster.count}店舗
+      </Tooltip>
+    </Marker>
+  );
+}
+
+function LessonDensityMarkers({
+  locations,
+  selectedLocationId,
+  onSelectLocation,
+}: {
+  locations: MapComponentProps["locations"];
+  selectedLocationId: string | null;
+  onSelectLocation: (id: string) => void;
+}) {
+  const map = useMap();
+  const [zoom, setZoom] = useState(map.getZoom());
+
+  useMapEvents({
+    zoomend(event) {
+      setZoom(event.target.getZoom());
+    },
+  });
+
+  const densityItems = useMemo(
+    () => buildLessonMarkerDensity({ locations, zoom, selectedLocationId }),
+    [locations, selectedLocationId, zoom],
+  );
+
+  const activateCluster = useCallback(
+    (cluster: DensityCluster) => {
+      const memberBounds = latLngBounds(
+        cluster.locations.map((location) => [location.latitude as number, location.longitude as number]),
+      );
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const northEast = memberBounds.getNorthEast();
+      const southWest = memberBounds.getSouthWest();
+      const nextZoom = Math.min(
+        LESSON_DENSITY_INDIVIDUAL_ZOOM,
+        Math.max(map.getZoom() + 2, map.getZoom()),
+      );
+
+      if (northEast.equals(southWest)) {
+        map.setView(memberBounds.getCenter(), nextZoom, { animate: !reduceMotion });
+        return;
+      }
+
+      const options = {
+        animate: !reduceMotion,
+        duration: reduceMotion ? 0 : 0.35,
+        maxZoom: Math.min(LESSON_DENSITY_INDIVIDUAL_ZOOM, map.getZoom() + 3),
+        padding: [48, 48] as [number, number],
+      };
+
+      if (reduceMotion) {
+        map.fitBounds(memberBounds, options);
+      } else {
+        map.flyToBounds(memberBounds, options);
+      }
+    },
+    [map],
+  );
+
+  return densityItems.map((item) => {
+    if (item.kind === "cluster") {
+      return (
+        <AccessibleDensityCluster
+          key={item.id}
+          cluster={item}
+          onActivate={() => activateCluster(item)}
+        />
+      );
+    }
+
+    const isSelected = item.location.id === selectedLocationId;
+
+    return (
+      <AccessibleLocationMarker
+        key={item.location.id}
+        location={item.location}
+        selected={isSelected}
+        hasSelection={selectedLocationId !== null}
+        onSelect={() => onSelectLocation(item.location.id)}
+      />
+    );
+  });
+}
+
 function MapController({
   center,
   bounds,
@@ -282,6 +438,7 @@ export function LeafletGymMap({
   center,
   currentPosition,
   focusCenter = false,
+  markerDensityMode = "individual",
   onSelectLocation,
   onClearSelection,
   onBoundsChange,
@@ -372,21 +529,29 @@ export function LeafletGymMap({
             </Tooltip>
           </CircleMarker>
         ) : null}
-        {locations
-          .filter((location) => location.latitude !== null && location.longitude !== null)
-          .map((location) => {
-            const isSelected = location.id === selectedLocationId;
+        {markerDensityMode === "lesson" ? (
+          <LessonDensityMarkers
+            locations={locations}
+            selectedLocationId={selectedLocationId}
+            onSelectLocation={onSelectLocation}
+          />
+        ) : (
+          locations
+            .filter((location) => location.latitude !== null && location.longitude !== null)
+            .map((location) => {
+              const isSelected = location.id === selectedLocationId;
 
-            return (
-              <AccessibleLocationMarker
-                key={location.id}
-                location={location}
-                selected={isSelected}
-                hasSelection={selectedLocationId !== null}
-                onSelect={() => onSelectLocation(location.id)}
-              />
-            );
-          })}
+              return (
+                <AccessibleLocationMarker
+                  key={location.id}
+                  location={location}
+                  selected={isSelected}
+                  hasSelection={selectedLocationId !== null}
+                  onSelect={() => onSelectLocation(location.id)}
+                />
+              );
+            })
+        )}
       </MapContainer>
       <div className="map-caption">
         {selectedLocation

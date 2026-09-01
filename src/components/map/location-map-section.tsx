@@ -516,6 +516,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         <div className="map-canvas" aria-label="ジム位置マップ">
           <MapComponent
             locations={mapLocations}
+            markerDensityMode="lesson"
             selectedLocationId={selectedLocation?.id ?? null}
             center={mapCenter}
             currentPosition={currentPosition}

@@ -24,6 +24,7 @@ export type MapComponentProps = {
   center: Coordinates;
   currentPosition: Coordinates | null;
   focusCenter?: boolean;
+  markerDensityMode?: "individual" | "lesson";
   onSelectLocation: (id: string) => void;
   onClearSelection?: () => void;
   onBoundsChange?: (bounds: MapBounds) => void;
