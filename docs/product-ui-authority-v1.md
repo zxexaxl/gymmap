@@ -49,6 +49,15 @@ There are no repository-configured rewrites or redirects in `next.config.ts`. He
 
 ### 1.3 Current Lesson Discovery contract
 
+#### Lesson location membership authority (2026-09-01 amendment)
+
+- `gym_locations` is the shared physical facility registry. Presence in that table does not, by itself, make a facility part of Lesson Discovery.
+- A facility is a Lesson Discovery member only when it has a row in `lesson_location_memberships`; public Lesson surfaces also require `gym_locations.is_active=true`. This is a positive membership predicate, not an exclusion such as “not HYROX”.
+- `class_schedules` records are Lesson content attached to an already-classified facility. Schedule existence must never be used as the sole location-membership predicate.
+- Home/map, search and its fallback, program/area landings, favorites, `/locations/[slug]` static params/detail, and generated sitemaps must all fail closed through this same positive membership boundary.
+- Lesson location and schedule writers must create the membership row explicitly and idempotently. Physical-facility writers outside Lesson, including HYROX authority flows, must not infer or create Lesson membership.
+- A facility may independently belong to both Lesson and HYROX. The two positive authorities remain separate; neither is computed as the complement of the other.
+
 #### Searchable fields and normalization
 
 - `q` searches Lesson program text only: raw program name, normalized canonical program name, program brand, configured program aliases, and brand aliases.
@@ -62,7 +71,7 @@ There are no repository-configured rewrites or redirects in `next.config.ts`. He
 - Weekdays are Monday through Sunday.
 - Morning is 06:00 inclusive to 12:00 exclusive; afternoon is 12:00 inclusive to 17:00 exclusive; evening is 17:00 inclusive to 23:00 exclusive.
 - Duration `short` is at most 45 minutes, `medium` is 46–59, and `long` is at least 60. A null duration fails an active duration filter.
-- Search reads only the latest applicable schedule period per location. The preferred path calls `search_class_schedule_page`; failures fall back to the cached Lesson index and joined schedule fetches.
+- Search reads only the latest applicable schedule period per Lesson-member location. The preferred path calls `search_lesson_class_schedule_page`; failures fall back to the membership-filtered cached Lesson index and joined schedule fetches.
 
 #### Ordering, pagination, and result hierarchy
 
@@ -160,7 +169,7 @@ No repository evidence creates a material contract conflict with the H3-10A hand
 
 #### Lesson map
 
-- Source: all `gym_locations` plus a cached, latest-period Lesson search index derived from all class schedule rows. Both are loaded by Home on the server and passed to the client map section.
+- Source: active locations with positive `lesson_location_memberships` plus a cached, latest-period Lesson search index restricted by the same membership authority. Both are loaded by Home on the server and passed to the client map section.
 - Query/filter state is client-local: Lesson program query, exact brand, exact prefecture, distance (1/3/5/10 km), nearby versus current map bounds, selected location, geolocation, and provider fallback. None is encoded in the URL.
 - Geolocation is requested on mount. Success centers on the user and selects the nearest location. Failure/denial falls back to Tokyo Station and retains a retry control. Distances are straight-line haversine approximations.
 - All mappable locations remain markers; filters reduce the accompanying candidate list, not the marker dataset. The sidebar shows the selected facility and at most the nearest 10 candidates. A Lesson query can deep-link to `/search` with `q` and the selected location name as `area`.
@@ -201,7 +210,7 @@ No analytics events were added in this phase.
 
 ### 1.8 Performance and payload baseline
 
-- Home awaits four server data operations in parallel: every brand, every location, the complete latest-period Lesson map search index, and up to 48 popular programs. Locations serve the count and map; the Lesson index serves map filtering. These are cached for one hour at the data layer; Home revalidates every 15 minutes.
+- Home awaits four server data operations in parallel: every brand, every active Lesson-member location, the complete membership-filtered latest-period Lesson map search index, and up to 48 membership-filtered popular programs. Locations serve the count and map; the Lesson index serves map filtering. These are cached for one hour at the data layer; Home revalidates every 15 minutes.
 - Home sends the location cohort and compact Lesson map index to the client `LocationMapSection`. This is the main repository-visible large-data boundary. It must not be accidentally expanded during a visual refresh.
 - The current hero image is a local 93,195-byte PNG, rendered with `priority`. A large replacement hero asset is not required by authority v1.
 - Leaflet and Apple map components are client-only dynamic imports. Leaflet CSS is globally imported. `react-leaflet`/Leaflet and, conditionally, Apple MapKit are the notable map-side dependencies.

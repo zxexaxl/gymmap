@@ -6,7 +6,12 @@ import { LocationMapSection } from "@/components/map/location-map-section";
 import { FeaturedProgramTabs, type FeaturedProgramTab } from "@/components/programs/featured-program-tabs";
 import { SearchForm } from "@/components/search/search-form";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getBrands, getLocations, getMapLessonSearchIndex, getPopularPrograms } from "@/lib/data";
+import {
+  getLessonDiscoveryBrands,
+  getLessonDiscoveryLocations,
+  getMapLessonSearchIndex,
+  getPopularPrograms,
+} from "@/lib/data";
 import { featuredProgramShortcuts, getFeaturedProgramBrand } from "@/lib/featured-programs";
 import type { ProgramBrand } from "@/lib/program-master";
 import { buildCanonicalPath, buildProgramPath, siteDescription, siteName } from "@/lib/site";
@@ -33,7 +38,10 @@ const brandTabDefinitions: Array<{ id: string; label: string; brands: ProgramBra
 
 export default async function HomePage() {
   const [brands, locations, lessonIndex, popularPrograms] = await Promise.all([
-    getBrands(), getLocations(), getMapLessonSearchIndex(), getPopularPrograms(48),
+    getLessonDiscoveryBrands(),
+    getLessonDiscoveryLocations(),
+    getMapLessonSearchIndex(),
+    getPopularPrograms(48),
   ]);
   const brandedPrograms = popularPrograms.flatMap((program) => {
     const programBrand = getFeaturedProgramBrand(program.name);

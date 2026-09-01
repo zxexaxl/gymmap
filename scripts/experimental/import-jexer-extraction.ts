@@ -5,7 +5,9 @@ import path from "node:path";
 
 import { createClient } from "@supabase/supabase-js";
 
+import type { Database } from "../../src/lib/database.types";
 import type { JexerExtractionResult, NormalizedExtractedJexerScheduleRecord } from "../../src/lib/extraction/jexer-types";
+import { ensureLessonLocationMembership } from "../../src/lib/lesson-membership-writer";
 
 type ProgramRow = {
   id: string;
@@ -58,7 +60,7 @@ function getImportSupabaseClient() {
     throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be configured.");
   }
 
-  return createClient(url, serviceRoleKey, {
+  return createClient<Database>(url, serviceRoleKey, {
     auth: {
       persistSession: false,
       autoRefreshToken: false,
@@ -318,6 +320,7 @@ async function main() {
   let deletedStaleCount = 0;
   const warnings: string[] = [];
   const touchedLocationIds = new Set<string>();
+  const membershipEnsuredLocationIds = new Set<string>();
   const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
   const snapshotId = path.basename(args.file);
   const importedKeysByLocation = new Map<string, Set<string>>();
@@ -388,6 +391,15 @@ async function main() {
         console.log(`[dry-run] would insert schedule: ${record.raw_program_name} @ ${record.location_name} ${record.weekday} ${record.start_time}`);
       }
       continue;
+    }
+
+    if (!membershipEnsuredLocationIds.has(location.id)) {
+      await ensureLessonLocationMembership(
+        supabase,
+        location.id,
+        "lesson-schedule-import:jexer",
+      );
+      membershipEnsuredLocationIds.add(location.id);
     }
 
     if (existingSchedule) {

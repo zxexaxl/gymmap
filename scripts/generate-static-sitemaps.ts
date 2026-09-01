@@ -22,6 +22,10 @@ type GymLocationRow = {
   updated_at: string;
 };
 
+type LessonLocationMembershipRow = {
+  gym_locations: GymLocationRow | GymLocationRow[];
+};
+
 type ProgramRow = {
   id: string;
   name: string;
@@ -137,15 +141,22 @@ async function main() {
 
   mkdirSync(publicDir, { recursive: true });
 
-  const { data: locations, error: locationsError } = await supabase
-    .from("gym_locations")
-    .select("id, slug, is_active, prefecture, city, last_verified_at, updated_at")
-    .eq("is_active", true)
-    .order("slug");
+  const { data: memberships, error: locationsError } = await supabase
+    .from("lesson_location_memberships")
+    .select(
+      "gym_locations!inner(id, slug, is_active, prefecture, city, last_verified_at, updated_at)",
+    )
+    .eq("gym_locations.is_active", true);
 
   if (locationsError) {
     throw locationsError;
   }
+
+  const locations = ((memberships as LessonLocationMembershipRow[] | null) ?? [])
+    .flatMap((membership) =>
+      Array.isArray(membership.gym_locations) ? membership.gym_locations : [membership.gym_locations],
+    )
+    .sort((left, right) => left.slug.localeCompare(right.slug));
 
   const { data: programs, error: programsError } = await supabase
     .from("programs")
@@ -183,7 +194,7 @@ async function main() {
   }
 
   const activeLocations = new Map(
-    ((locations as GymLocationRow[] | null) ?? []).map((location) => [location.id, location]),
+    locations.map((location) => [location.id, location]),
   );
   const seoPrograms = new Map(
     ((programs as ProgramRow[] | null) ?? []).map((program) => [program.id, program]),

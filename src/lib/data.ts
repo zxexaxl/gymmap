@@ -49,6 +49,7 @@ import {
 type SupabaseJoinedSchedule = ClassSchedule & {
   gym_locations: GymLocation & {
     gym_brands: GymBrand;
+    lesson_location_memberships: { location_id: string };
   };
   programs: Program;
 };
@@ -273,7 +274,7 @@ async function getLocationIdsForFilters(filters?: SearchFilters) {
 
   const brandKeyword = filters.brand.toLowerCase();
   const areaKeyword = filters.area.toLowerCase();
-  const locations = await getLocations();
+  const locations = await getLessonDiscoveryLocations();
 
   return locations
     .filter((location) => !brandKeyword || location.brand?.name.toLowerCase().includes(brandKeyword))
@@ -321,7 +322,7 @@ type ScheduleQueryVariant =
 
 async function fetchLatestSchedulePeriodEntries() {
   const supabase = getSupabaseClient();
-  const { data, error } = await supabase.rpc("get_latest_schedule_periods_by_location");
+  const { data, error } = await supabase.rpc("get_lesson_latest_schedule_periods_by_location");
 
   if (error) {
     throw error;
@@ -332,8 +333,11 @@ async function fetchLatestSchedulePeriodEntries() {
 
 const getLatestSchedulePeriodEntriesFromDataCache = unstable_cache(
   fetchLatestSchedulePeriodEntries,
-  ["latest-schedule-period-by-location-v1"],
-  { revalidate: sharedDataRevalidateSeconds, tags: ["class-schedules"] },
+  ["lesson-latest-schedule-period-by-location-v2"],
+  {
+    revalidate: sharedDataRevalidateSeconds,
+    tags: ["lesson-location-memberships", "class-schedules"],
+  },
 );
 
 async function getScheduleQueryVariants(filters?: SearchFilters): Promise<ScheduleQueryVariant[]> {
@@ -383,13 +387,16 @@ async function fetchJoinedSchedulesForVariant(
       .select(
         `
           *,
-          gym_locations (
+          gym_locations!inner (
             *,
-            gym_brands (*)
+            gym_brands (*),
+            lesson_location_memberships!inner (location_id)
           ),
           programs (*)
         `,
       );
+
+    query = query.eq("gym_locations.is_active", true);
 
     if (filters?.weekday) {
       query = query.eq("weekday", filters.weekday);
@@ -605,7 +612,7 @@ async function fetchSearchSchedulePageRpc(
   const queryCompact = query.replace(/\s+/g, "");
   const expansions = expandProgramSearchKeyword(filters.q);
   const offset = (Math.max(requestedPage, 1) - 1) * pageSize;
-  const { data, error } = await supabase.rpc("search_class_schedule_page", {
+  const { data, error } = await supabase.rpc("search_lesson_class_schedule_page", {
     p_query: query,
     p_query_compact: queryCompact,
     p_canonical_names: expansions.canonicalNames,
@@ -644,13 +651,15 @@ async function fetchJoinedSchedulesByIds(scheduleIds: string[]) {
     .select(
       `
         *,
-        gym_locations (
+        gym_locations!inner (
           *,
-          gym_brands (*)
+          gym_brands (*),
+          lesson_location_memberships!inner (location_id)
         ),
         programs (*)
       `,
     )
+    .eq("gym_locations.is_active", true)
     .in("id", scheduleIds);
 
   if (error) {
@@ -684,7 +693,7 @@ export async function getFavoriteScheduleWeek(
 
   const uniqueProgramIds = Array.from(new Set(programIds)).slice(0, 8);
   const supabase = getSupabaseClient();
-  const { data, error } = await supabase.rpc("favorite_class_schedule_week", {
+  const { data, error } = await supabase.rpc("favorite_lesson_class_schedule_week", {
     p_program_ids: uniqueProgramIds,
     p_area: area.trim().slice(0, 80),
     p_start_weekday: Math.min(Math.max(Math.trunc(startWeekday), 0), 6),
@@ -755,7 +764,9 @@ type MapLessonRow = {
   valid_from: string | null;
   extracted_at: string | null;
   updated_at: string;
-  gym_locations: { name: string } | Array<{ name: string }>;
+  gym_locations:
+    | { name: string; lesson_location_memberships: { location_id: string } }
+    | Array<{ name: string; lesson_location_memberships: { location_id: string } }>;
 };
 
 async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
@@ -770,8 +781,9 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
     const { data, error } = await supabase
       .from("class_schedules")
       .select(
-        "id, location_id, raw_program_name, weekday, start_time, end_time, duration_minutes, valid_from, extracted_at, updated_at, gym_locations(name)",
+        "id, location_id, raw_program_name, weekday, start_time, end_time, duration_minutes, valid_from, extracted_at, updated_at, gym_locations!inner(name, lesson_location_memberships!inner(location_id))",
       )
+      .eq("gym_locations.is_active", true)
       .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
 
@@ -828,10 +840,10 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
 
 const getLessonSearchIndexFromDataCache = unstable_cache(
   fetchLessonSearchIndex,
-  ["lesson-search-index-v5-latest-period"],
+  ["lesson-search-index-v6-membership"],
   {
     revalidate: sharedDataRevalidateSeconds,
-    tags: ["map-lesson-search-index", "class-schedules"],
+    tags: ["map-lesson-search-index", "lesson-location-memberships", "class-schedules"],
   },
 );
 
@@ -860,64 +872,97 @@ export async function getMapLessonSearchIndex(): Promise<MapLocationLessonIndex[
   }
 }
 
-async function fetchBrands(): Promise<GymBrand[]> {
+type LessonMembershipBrandRow = {
+  gym_locations:
+    | { gym_brands: GymBrand }
+    | Array<{ gym_brands: GymBrand }>;
+};
+
+async function fetchLessonDiscoveryBrands(): Promise<GymBrand[]> {
   const supabase = getSupabaseClient();
-  const { data, error } = await supabase.from("gym_brands").select("*").order("name");
+  const { data, error } = await supabase
+    .from("lesson_location_memberships")
+    .select("gym_locations!inner(gym_brands(*))")
+    .eq("gym_locations.is_active", true);
 
   if (error) {
     throw error;
   }
 
-  return data ?? [];
+  const brandsById = new Map<string, GymBrand>();
+
+  ((data as LessonMembershipBrandRow[] | null) ?? [])
+    .flatMap((membership) =>
+      Array.isArray(membership.gym_locations) ? membership.gym_locations : [membership.gym_locations],
+    )
+    .forEach((location) => brandsById.set(location.gym_brands.id, location.gym_brands));
+
+  return Array.from(brandsById.values()).sort((left, right) => left.name.localeCompare(right.name, "ja"));
 }
 
-const getBrandsFromDataCache = unstable_cache(fetchBrands, ["gym-brands-v1"], {
+const getLessonDiscoveryBrandsFromDataCache = unstable_cache(
+  fetchLessonDiscoveryBrands,
+  ["lesson-discovery-brands-v1"],
+  {
   revalidate: sharedDataRevalidateSeconds,
-  tags: ["gym-brands"],
-});
+    tags: ["lesson-location-memberships", "gym-locations", "gym-brands"],
+  },
+);
 
-export async function getBrands(): Promise<GymBrand[]> {
+export async function getLessonDiscoveryBrands(): Promise<GymBrand[]> {
   if (!hasSupabaseEnv()) {
     return [];
   }
 
   try {
-    return await getBrandsFromDataCache();
+    return await getLessonDiscoveryBrandsFromDataCache();
   } catch (error) {
     console.error("Failed to load brands from Supabase:", error instanceof Error ? error.message : String(error));
     return [];
   }
 }
 
-async function fetchLocations(): Promise<GymLocation[]> {
+type LessonLocationMembershipRow = {
+  gym_locations:
+    | (GymLocation & { gym_brands: GymBrand })
+    | Array<GymLocation & { gym_brands: GymBrand }>;
+};
+
+async function fetchLessonDiscoveryLocations(): Promise<GymLocation[]> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
-    .from("gym_locations")
-    .select("*, gym_brands(*)")
-    .order("name");
+    .from("lesson_location_memberships")
+    .select("gym_locations!inner(*, gym_brands(*))")
+    .eq("gym_locations.is_active", true);
 
   if (error) {
     throw error;
   }
 
-  return ((data as Array<GymLocation & { gym_brands: GymBrand }>) ?? []).map((row) => ({
-    ...row,
-    brand: row.gym_brands,
-  }));
+  return ((data as LessonLocationMembershipRow[] | null) ?? [])
+    .flatMap((membership) =>
+      Array.isArray(membership.gym_locations) ? membership.gym_locations : [membership.gym_locations],
+    )
+    .map((location) => ({ ...location, brand: location.gym_brands }))
+    .sort((left, right) => left.name.localeCompare(right.name, "ja"));
 }
 
-const getLocationsFromDataCache = unstable_cache(fetchLocations, ["gym-locations-v1"], {
+const getLessonDiscoveryLocationsFromDataCache = unstable_cache(
+  fetchLessonDiscoveryLocations,
+  ["lesson-discovery-locations-v1"],
+  {
   revalidate: sharedDataRevalidateSeconds,
-  tags: ["gym-locations", "gym-brands"],
-});
+    tags: ["lesson-location-memberships", "gym-locations", "gym-brands"],
+  },
+);
 
-export async function getLocations(): Promise<GymLocation[]> {
+export async function getLessonDiscoveryLocations(): Promise<GymLocation[]> {
   if (!hasSupabaseEnv()) {
     return [];
   }
 
   try {
-    return await getLocationsFromDataCache();
+    return await getLessonDiscoveryLocationsFromDataCache();
   } catch (error) {
     console.error("Failed to load locations from Supabase:", error instanceof Error ? error.message : String(error));
     return [];
@@ -926,7 +971,7 @@ export async function getLocations(): Promise<GymLocation[]> {
 
 async function fetchPopularPrograms(): Promise<Program[]> {
   const supabase = getSupabaseClient();
-  const { data, error } = await supabase.rpc("get_popular_program_summary");
+  const { data, error } = await supabase.rpc("get_lesson_popular_program_summary");
 
   if (error) {
     throw error;
@@ -935,9 +980,9 @@ async function fetchPopularPrograms(): Promise<Program[]> {
   return popularProgramsFromSummary((data as PopularProgramSummaryRow[] | null) ?? [], seoProgramNameSet);
 }
 
-const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v2-latest-period"], {
+const getPopularProgramsFromDataCache = unstable_cache(fetchPopularPrograms, ["popular-programs-v3-membership"], {
   revalidate: sharedDataRevalidateSeconds,
-  tags: ["popular-programs", "class-schedules", "programs"],
+  tags: ["popular-programs", "lesson-location-memberships", "class-schedules", "programs"],
 });
 
 export async function getPopularPrograms(limit = 8): Promise<Program[]> {
@@ -963,17 +1008,24 @@ export async function getLocationSlugs(): Promise<string[]> {
   }
 
   const supabase = getSupabaseClient();
-  const { data, error } = await supabase.from("gym_locations").select("slug").eq("is_active", true).order("slug");
+  const { data, error } = await supabase
+    .from("lesson_location_memberships")
+    .select("gym_locations!inner(slug)")
+    .eq("gym_locations.is_active", true);
 
   if (error || !data) {
     return [];
   }
 
-  return data.map((row) => row.slug).filter((slug): slug is string => Boolean(slug));
+  return data
+    .flatMap((row) => (Array.isArray(row.gym_locations) ? row.gym_locations : [row.gym_locations]))
+    .map((location) => location.slug)
+    .filter((slug): slug is string => Boolean(slug))
+    .sort();
 }
 
 export const getLocationBySlug = cache(async (slug: string): Promise<LocationDetail | null> => {
-  const locations = await getLocations();
+  const locations = await getLessonDiscoveryLocations();
   const location = locations.find((item) => item.slug === slug);
   const brand = location?.brand;
 
@@ -1094,7 +1146,7 @@ export const getAreaProgramLandingByParams = cache(
       // the shared Next.js data cache and load its small lookup sets directly.
       const [program, locations] = await Promise.all([
         resolveLandingProgramWithoutDataCache(programSlug),
-        fetchLocations(),
+        fetchLessonDiscoveryLocations(),
       ]);
 
       if (!program || !seoProgramNameSet.has(program.name)) {

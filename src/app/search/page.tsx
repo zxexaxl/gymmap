@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
 import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
-import { getBrands, getSearchResultPage } from "@/lib/data";
+import { getLessonDiscoveryBrands, getSearchResultPage } from "@/lib/data";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import { siteDescription } from "@/lib/site";
 import { normalizeSearchFilters } from "@/lib/utils";
@@ -28,7 +28,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const currentPage = Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1;
   const debugEnabled = resolvedSearchParams.debug === "1";
   const hasActiveFilters = Object.values(filters).some(Boolean);
-  const [brands, resultPage] = await Promise.all([getBrands(), getSearchResultPage(filters, currentPage)]);
+  const [brands, resultPage] = await Promise.all([
+    getLessonDiscoveryBrands(),
+    getSearchResultPage(filters, currentPage),
+  ]);
   const { results } = resultPage;
   const filterLabels = [
     filters.q && `プログラム: ${filters.q}`,
