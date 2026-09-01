@@ -110,6 +110,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
   const [currentPosition, setCurrentPosition] = useState<Coordinates | null>(null);
   const [mapFocusCenter, setMapFocusCenter] = useState<Coordinates | null>(null);
+  const [mapFocusRequestId, setMapFocusRequestId] = useState(0);
   const [geolocationStatus, setGeolocationStatus] = useState<LocationLifecycleState>("not_requested");
   const [geolocationMessage, setGeolocationMessage] = useState("現在地を確認すると、地図を現在地周辺へ移動できます。");
   const [selectionNotice, setSelectionNotice] = useState<string | null>(null);
@@ -157,6 +158,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
         setCurrentPosition(nextPosition);
         setMapFocusCenter(nextPosition);
+        setMapFocusRequestId((requestId) => requestId + 1);
         setGeolocationStatus("obtained");
         setGeolocationMessage("現在地を取得し、地図を移動しました。店舗の並び順と選択は変更していません。");
       },
@@ -176,6 +178,16 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         maximumAge: 5 * 60 * 1000,
       },
     );
+  }
+
+  function handleCurrentLocationAction() {
+    if (currentPosition) {
+      setMapFocusCenter(currentPosition);
+      setMapFocusRequestId((requestId) => requestId + 1);
+      return;
+    }
+
+    void requestCurrentPosition();
   }
 
   const normalizedQuery = normalizeSearchKeyword(programQuery);
@@ -520,24 +532,21 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             center={mapCenter}
             currentPosition={currentPosition}
             focusCenter={mapFocusCenter !== null}
+            focusRequestId={mapFocusRequestId}
             onSelectLocation={handleSelectLocation}
             onClearSelection={handleClearSelection}
             onBoundsChange={setMapBounds}
             onProviderError={handleMapProviderError}
             markerPresentationMode="lesson-progressive"
           />
-          {geolocationStatus !== "obtained" ? (
-            <MapChrome label="地図の現在地コントロール">
-              <CurrentLocationControl
-                state={geolocationStatus}
-                message={geolocationMessage}
-                onClick={() => {
-                  void requestCurrentPosition();
-                }}
-                disabled={geolocationStatus === "requesting"}
-              />
-            </MapChrome>
-          ) : null}
+          <MapChrome label="地図の現在地コントロール">
+            <CurrentLocationControl
+              state={geolocationStatus}
+              message={geolocationMessage}
+              onClick={handleCurrentLocationAction}
+              disabled={geolocationStatus === "requesting"}
+            />
+          </MapChrome>
           {selectedLocation ? (
             <MapSelectionSurface
               placement="mobile"

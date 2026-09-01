@@ -40,7 +40,7 @@ const locationLabels: Record<MapLocationPresentationState, string> = {
   granted: "現在地を確認する",
   denied: "位置情報の設定を確認",
   unavailable: "現在地を再取得",
-  obtained: "現在地を表示中",
+  obtained: "現在地へ戻る",
   stale: "現在地を更新",
   refreshing: "現在地を更新中",
 };

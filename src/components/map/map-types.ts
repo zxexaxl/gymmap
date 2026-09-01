@@ -26,6 +26,7 @@ export type MapComponentProps = {
   center: Coordinates;
   currentPosition: Coordinates | null;
   focusCenter?: boolean;
+  focusRequestId?: number;
   onSelectLocation: (id: string) => void;
   onClearSelection?: () => void;
   onBoundsChange?: (bounds: MapBounds) => void;

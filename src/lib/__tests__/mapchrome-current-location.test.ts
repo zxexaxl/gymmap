@@ -58,7 +58,19 @@ test("Lesson and HYROX keep one shared MapChrome contract", () => {
   for (const domainSource of [lessonMapSource, hyroxMapSource]) {
     assert.match(domainSource, /CurrentLocationControl/);
     assert.match(domainSource, /MapChrome/);
-    assert.match(domainSource, /geolocationStatus !== "obtained"/);
+    assert.match(domainSource, /onClick=\{handleCurrentLocationAction\}/);
+    assert.doesNotMatch(domainSource, /geolocationStatus !== "obtained"/);
+  }
+});
+
+test("obtained location remains an available return action", () => {
+  assert.match(presentationSource, /obtained: "現在地へ戻る"/);
+
+  for (const domainSource of [lessonMapSource, hyroxMapSource]) {
+    assert.match(
+      domainSource,
+      /function handleCurrentLocationAction\(\) \{[\s\S]*if \(currentPosition\) \{[\s\S]*setMapFocusCenter\(currentPosition\)[\s\S]*setMapFocusRequestId[\s\S]*return;[\s\S]*void requestCurrentPosition\(\)/,
+    );
   }
 });
 
