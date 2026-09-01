@@ -34,7 +34,7 @@ Show one 44 px secondary action with the existing location glyph. Do not render 
 
 ### Loading state
 
-Keep the existing disabled/loading button semantics and `現在地を取得中` label. Show the existing polite live status in a compact surface below the action.
+Keep the existing disabled/loading button semantics and `現在地を取得中` label. Retain the existing polite live status for assistive technology without showing a second visible requesting message.
 
 ### Success state
 
@@ -61,7 +61,7 @@ The action remains a native button with a minimum 44 px target, keyboard activat
 | State | Control | Guidance/status | Persistence and announcement |
 | --- | --- | --- | --- |
 | `not_requested` / user has not acted | Visible, enabled | Existing explanatory paragraph; hidden by current mobile CSS | No dismissal or persistence; polite live region exists |
-| `requesting` | Visible, disabled/loading | `現在地を取得しています…` | Polite live region; transient |
+| `requesting` | Visible, disabled/loading | No duplicate visible explanation | Polite live region remains screen-reader accessible; transient |
 | `obtained` / available | MapChrome removed | No chrome message; current-location marker is shown | Component state only; remount resets |
 | `denied` | Visible recovery control | Browser-setting guidance | Polite live region; component state only |
 | `unavailable` / geolocation error | Visible retry control | Domain-specific error/retry guidance | Polite live region; component state only |

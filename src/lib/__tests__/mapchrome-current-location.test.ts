@@ -30,12 +30,18 @@ test("idle MapChrome is a single compact current-location action", () => {
   assert.doesNotMatch(presentationStyles, /\.locationMessage\s*\{[^}]*display:\s*none/);
 });
 
-test("status remains announced only when explanatory copy is visible", () => {
+test("requesting status is announced without a duplicate visible surface", () => {
   assert.match(
     presentationSource,
     /aria-describedby=\{showStatus \? "map-location-status" : undefined\}/,
   );
+  assert.match(presentationSource, /const visuallyHideStatus = state === "requesting"/);
+  assert.match(
+    presentationSource,
+    /className=\{`\$\{styles\.locationMessage\} \$\{visuallyHideStatus \? styles\.visuallyHidden : ""\}`\}/,
+  );
   assert.match(presentationSource, /id="map-location-status"[\s\S]*aria-live="polite"/);
+  assert.match(presentationStyles, /\.visuallyHidden\s*\{[\s\S]*clip: rect\(0, 0, 0, 0\)/);
   assert.match(presentationSource, /const pending = state === "requesting" \|\| state === "refreshing"/);
   assert.match(presentationSource, /disabled=\{disabled\}/);
   assert.match(presentationSource, /loading=\{pending\}/);

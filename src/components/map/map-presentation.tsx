@@ -53,6 +53,7 @@ export function CurrentLocationControl({
 }: CurrentLocationControlProps) {
   const pending = state === "requesting" || state === "refreshing";
   const showStatus = state !== "not_requested" && state !== "obtained";
+  const visuallyHideStatus = state === "requesting";
 
   return (
     <div className={styles.locationControl} data-location-state={state}>
@@ -70,7 +71,11 @@ export function CurrentLocationControl({
         {locationLabels[state]}
       </Button>
       {showStatus ? (
-        <p id="map-location-status" className={styles.locationMessage} aria-live="polite">
+        <p
+          id="map-location-status"
+          className={`${styles.locationMessage} ${visuallyHideStatus ? styles.visuallyHidden : ""}`}
+          aria-live="polite"
+        >
           {message}
         </p>
       ) : null}
