@@ -1,7 +1,9 @@
 # GymMap Map Polish P2 — Marker Density candidate evidence
 
-Date: 2026-09-01  
-Candidate branch: `codex/map-polish-p2-marker-density`  
+Date: 2026-09-01
+
+Candidate branch: `codex/map-polish-p2-marker-density`
+
 Authority baseline: `origin/main` at `386f5405e4c56f123e9872f18e150ff4bcf59ee0`
 
 ## Decision
