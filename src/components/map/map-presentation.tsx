@@ -35,7 +35,7 @@ type CurrentLocationControlProps = {
 };
 
 const locationLabels: Record<MapLocationPresentationState, string> = {
-  not_requested: "現在地を使う",
+  not_requested: "現在地から探す",
   requesting: "現在地を取得中",
   granted: "現在地を確認する",
   denied: "位置情報の設定を確認",
@@ -52,6 +52,7 @@ export function CurrentLocationControl({
   disabled = false,
 }: CurrentLocationControlProps) {
   const pending = state === "requesting" || state === "refreshing";
+  const showStatus = state !== "not_requested" && state !== "obtained";
 
   return (
     <div className={styles.locationControl} data-location-state={state}>
@@ -63,14 +64,16 @@ export function CurrentLocationControl({
         disabled={disabled}
         loading={pending}
         loadingLabel={locationLabels[state]}
-        aria-describedby="map-location-status"
+        aria-describedby={showStatus ? "map-location-status" : undefined}
       >
         <span className={styles.locationGlyph} aria-hidden="true">◎</span>
         {locationLabels[state]}
       </Button>
-      <p id="map-location-status" className={styles.locationMessage} aria-live="polite">
-        {message}
-      </p>
+      {showStatus ? (
+        <p id="map-location-status" className={styles.locationMessage} aria-live="polite">
+          {message}
+        </p>
+      ) : null}
     </div>
   );
 }
