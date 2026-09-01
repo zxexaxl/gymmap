@@ -116,6 +116,8 @@ export function normalizeSearchFilters(searchParams?: Record<string, string | st
     durationRange: pick("durationRange").trim(),
     brand: pick("brand").trim(),
     area: pick("area").trim(),
+    prefecture: pick("prefecture").trim(),
+    municipality: pick("municipality").trim(),
   };
 }
 

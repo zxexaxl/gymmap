@@ -4,7 +4,8 @@ import Link from "next/link";
 import { ResultsList } from "@/components/search/results-list";
 import { SearchForm } from "@/components/search/search-form";
 import { durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
-import { getLessonDiscoveryBrands, getSearchResultPage } from "@/lib/data";
+import { getLessonDiscoveryBrands, getLessonDiscoveryLocations, getSearchResultPage } from "@/lib/data";
+import { getStructuredAreaLabel } from "@/lib/structured-area";
 import { getProgramQueryDebug, normalizeSearchKeyword } from "@/lib/search-query";
 import { siteDescription } from "@/lib/site";
 import { normalizeSearchFilters } from "@/lib/utils";
@@ -28,14 +29,16 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const currentPage = Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1;
   const debugEnabled = resolvedSearchParams.debug === "1";
   const hasActiveFilters = Object.values(filters).some(Boolean);
-  const [brands, resultPage] = await Promise.all([
+  const [brands, locations, resultPage] = await Promise.all([
     getLessonDiscoveryBrands(),
+    getLessonDiscoveryLocations(),
     getSearchResultPage(filters, currentPage),
   ]);
   const { results } = resultPage;
   const filterLabels = [
     filters.q && `プログラム: ${filters.q}`,
-    filters.area && `エリア: ${filters.area}`,
+    filters.prefecture && `${filters.municipality ? "市区町村" : "都道府県"}: ${getStructuredAreaLabel(filters.prefecture, filters.municipality ?? "")}`,
+    !filters.prefecture && filters.area && `エリア / 店舗: ${filters.area}`,
     filters.weekday && `曜日: ${weekdayOptions.find((option) => option.value === filters.weekday)?.label ?? filters.weekday}`,
     filters.timeRange && `時間: ${timeRangeOptions.find((option) => option.value === filters.timeRange)?.label ?? filters.timeRange}`,
     filters.durationRange && `所要時間: ${durationRangeOptions.find((option) => option.value === filters.durationRange)?.label ?? filters.durationRange}`,
@@ -90,7 +93,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             <p>DEBUG MODE ON</p><p>query={filters.q || "(empty)"}</p><p>debug={String(debugEnabled)}</p><p>resultCount={results.length}</p>
           </div>
         ) : null}
-        <SearchForm brands={brands} initialValues={filters} />
+        <SearchForm brands={brands} locations={locations} initialValues={filters} />
       </section>
 
       <div className={styles.resultIntro}>

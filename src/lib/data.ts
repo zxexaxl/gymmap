@@ -11,6 +11,7 @@ import {
   scoreProgramTextQueryMatch,
 } from "@/lib/search-query";
 import { enrichScheduleWithNormalization, enrichSchedulesWithNormalization } from "@/lib/schedule-normalization";
+import { locationMatchesStructuredArea } from "@/lib/structured-area";
 import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
@@ -88,9 +89,11 @@ const emptySearchFilters: SearchFilters = {
   durationRange: "",
   brand: "",
   area: "",
+  prefecture: "",
+  municipality: "",
 };
 function isTrackedSearch(filters: SearchFilters) {
-  const value = [filters.q, filters.area, filters.brand].join(" ").toLowerCase();
+  const value = [filters.q, filters.area, filters.prefecture, filters.municipality, filters.brand].join(" ").toLowerCase();
   return trackedSearchMarkers.some((marker) => value.includes(marker.toLowerCase()));
 }
 
@@ -159,6 +162,7 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
   const keyword = normalizeSearchKeyword(filters.q);
   const brandKeyword = filters.brand.toLowerCase();
   const areaKeyword = filters.area.toLowerCase();
+  const hasStructuredArea = Boolean(filters.prefecture);
   logTrackedSearchStage("before_filter", filters, results);
 
   const filtered = results
@@ -189,7 +193,15 @@ function filterResults(results: SearchResult[], filters: SearchFilters) {
         return null;
       }
 
-      if (areaKeyword) {
+      if (hasStructuredArea && !locationMatchesStructuredArea(
+        item.location,
+        filters.prefecture ?? "",
+        filters.municipality ?? "",
+      )) {
+        return null;
+      }
+
+      if (!hasStructuredArea && areaKeyword) {
         const locationText = [
           item.location.name,
           item.location.slug,
@@ -268,17 +280,22 @@ function getTimeBounds(timeRange: string) {
 }
 
 async function getLocationIdsForFilters(filters?: SearchFilters) {
-  if (!filters?.brand && !filters?.area) {
+  if (!filters?.brand && !filters?.area && !filters?.prefecture) {
     return null;
   }
 
   const brandKeyword = filters.brand.toLowerCase();
   const areaKeyword = filters.area.toLowerCase();
+  const hasStructuredArea = Boolean(filters.prefecture);
   const locations = await getLessonDiscoveryLocations();
 
   return locations
     .filter((location) => !brandKeyword || location.brand?.name.toLowerCase().includes(brandKeyword))
     .filter((location) => {
+      if (hasStructuredArea) {
+        return locationMatchesStructuredArea(location, filters.prefecture ?? "", filters.municipality ?? "");
+      }
+
       if (!areaKeyword) {
         return true;
       }
@@ -726,6 +743,10 @@ export async function getSearchResultPage(
   }
 
   try {
+    if (filters.prefecture) {
+      return getSearchResultPageLegacy(filters, requestedPage, pageSize);
+    }
+
     let page = await fetchSearchSchedulePageRpc(filters, requestedPage, pageSize);
     const totalPages = Math.max(1, Math.ceil(page.totalResults / pageSize));
     const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);

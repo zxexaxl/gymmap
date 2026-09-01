@@ -144,6 +144,25 @@ export type SearchFilters = {
   durationRange: string;
   brand: string;
   area: string;
+  prefecture?: string;
+  municipality?: string;
+};
+
+export type StructuredAreaOption = {
+  type: "prefecture" | "municipality";
+  prefecture: string;
+  municipality: string;
+  label: string;
+  count: number;
+  searchableText: string;
+};
+
+export type StoreSearchOption = {
+  id: string;
+  name: string;
+  brandName: string;
+  areaLabel: string;
+  searchableText: string;
 };
 
 export type SearchResult = {
