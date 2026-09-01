@@ -3,7 +3,7 @@ with golds_brand as (
   from gym_brands
   where slug = 'golds-gym'
   limit 1
-)
+), inserted_locations as (
 insert into gym_locations (
   brand_id,
   name,
@@ -84,4 +84,11 @@ where not exists (
   select 1
   from gym_locations existing
   where existing.slug = data.slug
-);
+)
+returning id
+)
+
+insert into lesson_location_memberships (location_id, authority_source)
+select inserted_locations.id, 'lesson-location-seed:golds-kanto'
+from inserted_locations
+on conflict (location_id) do nothing;

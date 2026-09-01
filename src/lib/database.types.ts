@@ -297,6 +297,35 @@ export type Database = {
           },
         ]
       }
+      lesson_location_memberships: {
+        Row: {
+          authority_source: string
+          created_at: string
+          location_id: string
+          updated_at: string
+        }
+        Insert: {
+          authority_source: string
+          created_at?: string
+          location_id: string
+          updated_at?: string
+        }
+        Update: {
+          authority_source?: string
+          created_at?: string
+          location_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_location_memberships_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: true
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       ingestion_items: {
         Row: {
           created_at: string
@@ -1363,6 +1392,20 @@ export type Database = {
       }
     }
     Functions: {
+      favorite_lesson_class_schedule_week: {
+        Args: {
+          p_area?: string
+          p_limit?: number
+          p_program_ids?: string[]
+          p_start_weekday?: number
+        }
+        Returns: {
+          latest_schedule_update: string
+          result_order: number
+          schedule_id: string
+          total_count: number
+        }[]
+      }
       favorite_class_schedule_week: {
         Args: {
           p_area?: string
@@ -1384,6 +1427,29 @@ export type Database = {
           location_id: string
         }[]
       }
+      get_lesson_latest_schedule_periods_by_location: {
+        Args: never
+        Returns: {
+          latest_valid_from: string
+          location_id: string
+        }[]
+      }
+      get_lesson_popular_program_summary: {
+        Args: never
+        Returns: {
+          beginner_friendly: boolean
+          category: string
+          created_at: string
+          default_duration_minutes: number
+          description: string
+          id: string
+          intensity_level: number
+          name: string
+          schedule_count: number
+          slug: string
+          updated_at: string
+        }[]
+      }
       get_popular_program_summary: {
         Args: never
         Returns: {
@@ -1401,6 +1467,27 @@ export type Database = {
         }[]
       }
       search_class_schedule_page: {
+        Args: {
+          p_area?: string
+          p_brand?: string
+          p_canonical_names?: string[]
+          p_duration_range?: string
+          p_limit?: number
+          p_offset?: number
+          p_program_brands?: string[]
+          p_query?: string
+          p_query_compact?: string
+          p_time_range?: string
+          p_weekday?: string
+        }
+        Returns: {
+          latest_schedule_update: string
+          result_order: number
+          schedule_id: string
+          total_count: number
+        }[]
+      }
+      search_lesson_class_schedule_page: {
         Args: {
           p_area?: string
           p_brand?: string

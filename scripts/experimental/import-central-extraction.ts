@@ -5,8 +5,10 @@ import path from "node:path";
 
 import { createClient } from "@supabase/supabase-js";
 
+import type { Database } from "../../src/lib/database.types";
 import { prepareCentralImportRecords } from "../../src/lib/extraction/central-import-cleanup";
 import type { JexerExtractionResult, NormalizedExtractedJexerScheduleRecord } from "../../src/lib/extraction/jexer-types";
+import { ensureLessonLocationMembership } from "../../src/lib/lesson-membership-writer";
 
 type ProgramRow = {
   id: string;
@@ -64,7 +66,7 @@ function getImportSupabaseClient() {
     throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be configured.");
   }
 
-  return createClient(url, serviceRoleKey, {
+  return createClient<Database>(url, serviceRoleKey, {
     auth: {
       persistSession: false,
       autoRefreshToken: false,
@@ -481,6 +483,7 @@ async function main() {
   let notFoundLocationMatchCount = 0;
   const locationNotFoundExamples: string[] = [];
   const touchedLocationIds = new Set<string>();
+  const membershipEnsuredLocationIds = new Set<string>();
   const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
   const snapshotId = path.basename(args.file);
   const importedKeysByLocation = new Map<string, Set<string>>();
@@ -600,6 +603,15 @@ async function main() {
         );
       }
       continue;
+    }
+
+    if (!membershipEnsuredLocationIds.has(location.id)) {
+      await ensureLessonLocationMembership(
+        supabase,
+        location.id,
+        "lesson-schedule-import:central",
+      );
+      membershipEnsuredLocationIds.add(location.id);
     }
 
     if (existingSchedule) {
