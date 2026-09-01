@@ -148,13 +148,13 @@
   width: 44px !important;
   height: 44px !important;
   margin: 0 !important;
-  border: 2px solid rgb(255 255 255 / 94%);
+  border: 2px solid #536178;
   border-radius: 50%;
-  background: #25354d;
-  color: #fff;
+  background: rgb(247 245 240 / 96%);
+  color: #17263b;
   box-shadow:
-    0 0 0 1px rgb(26 40 60 / 68%),
-    0 4px 10px rgb(24 37 55 / 22%);
+    0 0 0 1px rgb(255 255 255 / 82%),
+    0 3px 8px rgb(24 37 55 / 18%);
   font-size: 0.82rem;
   font-weight: 800;
   line-height: 1;
@@ -163,7 +163,7 @@
 }
 
 .densityCluster:hover {
-  background: #1d2b40;
+  background: #e8edf2;
 }
 
 .densityCluster:focus-visible {
@@ -171,7 +171,7 @@
   box-shadow:
     0 0 0 2px #fff,
     0 0 0 5px var(--color-focus),
-    0 4px 10px rgb(24 37 55 / 22%);
+    0 3px 8px rgb(24 37 55 / 18%);
 }
 
 :global(.apple-gym-map-marker--selected)::after {

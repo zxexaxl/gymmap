@@ -36,6 +36,8 @@ const OpenFreeMapVectorBasemap = lazy(() =>
   })),
 );
 
+const LESSON_DENSITY_CLUSTER_PANE = "lessonDensityClusterPane";
+
 function MapInteractionReporter({
   onBoundsChange,
   onClearSelection,
@@ -224,6 +226,7 @@ function AccessibleDensityCluster({
       ref={markerRef}
       position={[cluster.latitude, cluster.longitude]}
       icon={icon}
+      pane={LESSON_DENSITY_CLUSTER_PANE}
       eventHandlers={{ click: onActivate }}
       keyboard={false}
       riseOnHover
@@ -246,6 +249,12 @@ function LessonDensityMarkers({
 }) {
   const map = useMap();
   const [zoom, setZoom] = useState(map.getZoom());
+
+  useEffect(() => {
+    const pane = map.getPane(LESSON_DENSITY_CLUSTER_PANE) ?? map.createPane(LESSON_DENSITY_CLUSTER_PANE);
+    pane.style.zIndex = "390";
+    pane.style.pointerEvents = "auto";
+  }, [map]);
 
   useMapEvents({
     zoomend(event) {
@@ -292,7 +301,14 @@ function LessonDensityMarkers({
     [map],
   );
 
-  return densityItems.map((item) => {
+  const orderedDensityItems = [...densityItems].sort((left, right) => {
+    const leftSelected = left.kind === "individual" && left.location.id === selectedLocationId;
+    const rightSelected = right.kind === "individual" && right.location.id === selectedLocationId;
+
+    return Number(leftSelected) - Number(rightSelected);
+  });
+
+  return orderedDensityItems.map((item) => {
     if (item.kind === "cluster") {
       return (
         <AccessibleDensityCluster
