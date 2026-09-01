@@ -13,18 +13,28 @@ import {
   getMapMarkerPresentation,
   resolveMapMarkerState,
 } from "@/components/map/map-marker-presentation";
-import type { Coordinates, MapBounds, MapComponentProps } from "@/components/map/map-types";
+import {
+  LESSON_M1_MARKER_MIN_ZOOM,
+  type Coordinates,
+  type MapBounds,
+  type MapComponentProps,
+} from "@/components/map/map-types";
 import {
   configuredMapBasemapMode,
   shouldRenderVectorBasemap,
   type VectorBasemapFailureReason,
 } from "@/lib/map-basemap";
-
 import presentationStyles from "./map-presentation.module.css";
 
 const OpenFreeMapVectorBasemap = lazy(() =>
   import("@/components/map/openfreemap-vector-basemap").then((module) => ({
     default: module.OpenFreeMapVectorBasemap,
+  })),
+);
+
+const LessonFacilityMicroDotLayer = lazy(() =>
+  import("@/components/map/lesson-facility-micro-dot-layer").then((module) => ({
+    default: module.LessonFacilityMicroDotLayer,
   })),
 );
 
@@ -71,6 +81,20 @@ function MapInteractionReporter({
       onBoundsChange?.(nextBounds);
     },
   });
+
+  return null;
+}
+
+function MapZoomReporter({ onZoomChange }: { onZoomChange: (zoom: number) => void }) {
+  const map = useMapEvents({
+    zoomend(event) {
+      onZoomChange(event.target.getZoom());
+    },
+  });
+
+  useEffect(() => {
+    onZoomChange(map.getZoom());
+  }, [map, onZoomChange]);
 
   return null;
 }
@@ -286,9 +310,11 @@ export function LeafletGymMap({
   onClearSelection,
   onBoundsChange,
   unselectedCaption,
+  markerPresentationMode = "individual",
 }: MapComponentProps) {
   const [tileError, setTileError] = useState<string | null>(null);
   const [vectorFailureReason, setVectorFailureReason] = useState<VectorBasemapFailureReason | null>(null);
+  const [zoom, setZoom] = useState(selectedLocationId ? 13 : 12);
   const showVectorBasemap = shouldRenderVectorBasemap({
     mode: configuredMapBasemapMode,
     failureReason: vectorFailureReason,
@@ -299,6 +325,24 @@ export function LeafletGymMap({
   }, []);
 
   const selectedLocation = locations.find((location) => location.id === selectedLocationId) ?? null;
+  const handleZoomChange = useCallback((nextZoom: number) => {
+    setZoom((currentZoom) => (currentZoom === nextZoom ? currentZoom : nextZoom));
+  }, []);
+  const usesMicroDots =
+    markerPresentationMode === "lesson-progressive" && zoom < LESSON_M1_MARKER_MIN_ZOOM;
+  const m1Locations = useMemo(
+    () =>
+      usesMicroDots
+        ? selectedLocation &&
+          selectedLocation.latitude !== null &&
+          selectedLocation.longitude !== null
+          ? [selectedLocation]
+          : []
+        : locations.filter(
+            (location) => location.latitude !== null && location.longitude !== null,
+          ),
+    [locations, selectedLocation, usesMicroDots],
+  );
 
   const mapCenter: LatLngExpression = useMemo(() => {
     if (selectedLocation && selectedLocation.latitude !== null && selectedLocation.longitude !== null) {
@@ -325,7 +369,11 @@ export function LeafletGymMap({
   }, [currentPosition, locations]);
 
   return (
-    <div className="leaflet-map-root">
+    <div
+      className="leaflet-map-root"
+      data-map-zoom={zoom}
+      data-marker-presentation-mode={markerPresentationMode}
+    >
       <MapContainer
         center={mapCenter}
         zoom={selectedLocation ? 13 : 12}
@@ -340,6 +388,7 @@ export function LeafletGymMap({
         }}
       >
         <MapInteractionReporter onBoundsChange={onBoundsChange} onClearSelection={onClearSelection} />
+        <MapZoomReporter onZoomChange={handleZoomChange} />
         <MapController
           center={center}
           bounds={bounds}
@@ -365,6 +414,15 @@ export function LeafletGymMap({
             }}
           />
         )}
+        {usesMicroDots ? (
+          <Suspense fallback={null}>
+            <LessonFacilityMicroDotLayer
+              locations={locations}
+              selectedLocationId={selectedLocationId}
+              zoom={zoom}
+            />
+          </Suspense>
+        ) : null}
         {currentPosition ? (
           <CircleMarker center={[currentPosition.latitude, currentPosition.longitude]} radius={8} pathOptions={{ color: "#2563eb", fillColor: "#2563eb", fillOpacity: 0.9 }}>
             <Tooltip direction="top" offset={[0, -8]} permanent={false}>
@@ -372,21 +430,19 @@ export function LeafletGymMap({
             </Tooltip>
           </CircleMarker>
         ) : null}
-        {locations
-          .filter((location) => location.latitude !== null && location.longitude !== null)
-          .map((location) => {
-            const isSelected = location.id === selectedLocationId;
+        {m1Locations.map((location) => {
+          const isSelected = location.id === selectedLocationId;
 
-            return (
-              <AccessibleLocationMarker
-                key={location.id}
-                location={location}
-                selected={isSelected}
-                hasSelection={selectedLocationId !== null}
-                onSelect={() => onSelectLocation(location.id)}
-              />
-            );
-          })}
+          return (
+            <AccessibleLocationMarker
+              key={location.id}
+              location={location}
+              selected={isSelected}
+              hasSelection={selectedLocationId !== null}
+              onSelect={() => onSelectLocation(location.id)}
+            />
+          );
+        })}
       </MapContainer>
       <div className="map-caption">
         {selectedLocation
