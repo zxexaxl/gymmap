@@ -3,6 +3,8 @@ export type Coordinates = {
   longitude: number;
 };
 
+export const LESSON_M1_MARKER_MIN_ZOOM = 12;
+
 export type MapBounds = {
   north: number;
   south: number;
@@ -29,4 +31,5 @@ export type MapComponentProps = {
   onBoundsChange?: (bounds: MapBounds) => void;
   onProviderError?: (message: string) => void;
   unselectedCaption?: string;
+  markerPresentationMode?: "individual" | "lesson-progressive";
 };

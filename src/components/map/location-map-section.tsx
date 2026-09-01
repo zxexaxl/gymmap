@@ -524,6 +524,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
             onClearSelection={handleClearSelection}
             onBoundsChange={setMapBounds}
             onProviderError={handleMapProviderError}
+            markerPresentationMode="lesson-progressive"
           />
           {geolocationStatus !== "obtained" ? (
             <MapChrome label="地図の現在地コントロール">
