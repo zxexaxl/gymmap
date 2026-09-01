@@ -46,6 +46,12 @@ const removedLayerIds = new Set([
   "highway-shield-us-interstate",
   "road_shield_us",
 ]);
+const roadPalette = {
+  casing: { color: "#d9d7d2", opacity: 0.2 },
+  expressway: { color: "#ddd9d2", opacity: 0.52 },
+  primary: { color: "#e3e0da", opacity: 0.46 },
+  minor: { color: "#edeae5", opacity: 0.42 },
+};
 
 style.name = "GymMap OpenFreeMap Liberty v1";
 style.metadata = {
@@ -109,13 +115,17 @@ for (const layer of style.layers) {
   );
   if (isRoad && layer.type === "line" && !isRail) {
     const isCasing = layer.id.endsWith("_casing");
-    const isMajor = /motorway|trunk|primary/.test(layer.id);
-    layer.paint["line-color"] = isCasing
-      ? "#d8d2c8"
-      : isMajor
-        ? "#ded6c8"
-        : "#ebe7df";
-    layer.paint["line-opacity"] = isCasing ? 0.38 : isMajor ? 0.7 : 0.62;
+    const isExpressway = /motorway/.test(layer.id);
+    const isPrimary = /trunk|primary/.test(layer.id);
+    const roadClass = isCasing
+      ? roadPalette.casing
+      : isExpressway
+        ? roadPalette.expressway
+        : isPrimary
+          ? roadPalette.primary
+          : roadPalette.minor;
+    layer.paint["line-color"] = roadClass.color;
+    layer.paint["line-opacity"] = roadClass.opacity;
   }
 
   if (layer.id === "poi_transit") {
@@ -138,6 +148,11 @@ for (const layer of style.layers) {
     layer.layout["text-field"] = japaneseFallback;
     layer.paint["text-color"] = layer["source-layer"] === "place" ? "#40464a" : "#77736d";
     layer.paint["text-halo-color"] = "#fdfcf8";
+
+    if (layer["source-layer"] === "transportation_name") {
+      layer.paint["text-color"] = "#898680";
+      layer.paint["text-opacity"] = layer.id === "highway-name-major" ? 0.68 : 0.54;
+    }
   }
 
   if (layer.id === "highway-name-minor") {

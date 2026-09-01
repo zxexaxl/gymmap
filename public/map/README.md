@@ -14,7 +14,7 @@ vector basemap candidate.
 Reviewed SHA-256 values:
 
 - upstream Liberty: `6010998863b4876911ac9a2d62c9a28d97c8877f6d20cd158b74808572257b60`
-- generated GymMap style v1: `b1ded770bd2a4507a92f784636bc3d73613512a29f50783e1b91f66e57217b9e`
+- generated GymMap style v1: `9128cbf4ee5ca74b626cf3669c104b4a41a0451c6269c512c28f7a2fb31d2577`
 - MapLibre worker: `b081c9b3d0691d9d85552b5624f2601f69f24ed37573959d279d322e98e4ee2f`
 - MapLibre shared worker runtime: `34c2cb0330cec92e81c4fa7344e7008451442bbb9cca1da3465db4041a934073`
 

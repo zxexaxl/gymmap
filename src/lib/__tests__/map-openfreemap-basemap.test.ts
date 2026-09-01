@@ -32,6 +32,11 @@ test("owned style preserves OpenFreeMap authority and the Japanese station hiera
   );
   const transit = style.layers.find((layer: { id: string }) => layer.id === "poi_transit");
   const roadMinor = style.layers.find((layer: { id: string }) => layer.id === "road_minor");
+  const roadMotorway = style.layers.find((layer: { id: string }) => layer.id === "road_motorway");
+  const roadPrimary = style.layers.find((layer: { id: string }) => layer.id === "road_trunk_primary");
+  const roadCasing = style.layers.find((layer: { id: string }) => layer.id === "road_motorway_casing");
+  const majorRoadName = style.layers.find((layer: { id: string }) => layer.id === "highway-name-major");
+  const minorRoadName = style.layers.find((layer: { id: string }) => layer.id === "highway-name-minor");
   const rail = style.layers.find((layer: { id: string }) => layer.id === "road_major_rail");
   const place = style.layers.find((layer: { id: string }) => layer.id === "label_city");
 
@@ -57,7 +62,18 @@ test("owned style preserves OpenFreeMap authority and the Japanese station hiera
     ["get", "name:nonlatin"],
   ]);
   assert.ok(rail.paint["line-opacity"] > roadMinor.paint["line-opacity"]);
+  assert.deepEqual(
+    [roadCasing.paint["line-opacity"], roadMotorway.paint["line-opacity"], roadPrimary.paint["line-opacity"], roadMinor.paint["line-opacity"]],
+    [0.2, 0.52, 0.46, 0.42],
+  );
+  assert.deepEqual(
+    [roadCasing.paint["line-color"], roadMotorway.paint["line-color"], roadPrimary.paint["line-color"], roadMinor.paint["line-color"]],
+    ["#d9d7d2", "#ddd9d2", "#e3e0da", "#edeae5"],
+  );
+  assert.equal(majorRoadName.paint["text-opacity"], 0.68);
+  assert.equal(minorRoadName.paint["text-opacity"], 0.54);
   assert.equal(style.layers.some((layer: { id: string }) => layer.id === "road_one_way_arrow"), false);
+  assert.equal(style.layers.some((layer: { id: string }) => layer.id.startsWith("highway-shield")), false);
   assert.equal(style.layers.some((layer: { id: string }) => layer.id === "poi_r20"), false);
 });
 

@@ -1,0 +1,58 @@
+{
+  "measuredAt": "2026-09-01T10:35:22+09:00",
+  "acceptedBaseline": "b3531cb3a261c82498cc445e14946e0ae39e1a9a",
+  "originMain": "dee7e83bb725ae848ff14fcccad6313bab21af95",
+  "style": {
+    "sha256": "9128cbf4ee5ca74b626cf3669c104b4a41a0451c6269c512c28f7a2fb31d2577",
+    "rawBytes": 39272,
+    "gzipBytes": 3771,
+    "changedLayers": 49,
+    "roadLineLayers": 46,
+    "roadLabelLayers": 3,
+    "allRoadWidthsUnchanged": true,
+    "railLayersChanged": false,
+    "stationLayerChanged": false,
+    "placeLabelLayersChanged": false
+  },
+  "palette": {
+    "casing": { "color": "#d9d7d2", "opacity": 0.2 },
+    "expressway": { "color": "#ddd9d2", "opacity": 0.52 },
+    "primary": { "color": "#e3e0da", "opacity": 0.46 },
+    "minor": { "color": "#edeae5", "opacity": 0.42 },
+    "majorRoadLabel": { "color": "#898680", "opacity": 0.68 },
+    "minorRoadLabel": { "color": "#898680", "opacity": 0.54 }
+  },
+  "browser": {
+    "matchedPairs": 6,
+    "screenshots": 12,
+    "vectorReadyObservedMs": [656, 294, 138, 270, 93],
+    "consoleErrors": 0,
+    "markerCountInHyrox390": 2,
+    "selectedMarkersInHyrox390": 1,
+    "markerRole": "button",
+    "markerTabIndex": 0,
+    "mapLibreCanvasTabIndex": -1,
+    "enterAndSpacePreservedSelection": true
+  },
+  "runtimeDelta": {
+    "packageFiles": 0,
+    "rendererAndBridgeFiles": 0,
+    "lessonConsumerFiles": 0,
+    "hyroxConsumerFiles": 0,
+    "fallbackFiles": 0,
+    "markerPresentationFiles": 0,
+    "mapChromeFiles": 0,
+    "lazyJavaScriptRawBytes": 0,
+    "lazyJavaScriptGzipBytes": 0,
+    "lazyCssRawBytes": 0,
+    "lazyCssGzipBytes": 0
+  },
+  "validation": {
+    "tests": { "passed": 165, "failed": 0 },
+    "lint": "pass",
+    "typecheck": "pass",
+    "glStyleValidate": "pass",
+    "directNextBuild": "pass; compiled and generated 146 routes",
+    "npmBuildWrapper": "blocked before Next by missing Supabase environment variables"
+  }
+}
