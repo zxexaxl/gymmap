@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "authority": "H3-11A_AUTHORITY_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+  "runtime": false,
+  "publicSemantics": {
+    "mode": "POSITIVE_ONLY",
+    "emptyMeans": "NO_CURRENT_PUBLISHED_POSITIVE_EVIDENCE",
+    "emptyMustNotMean": [
+      "UNAVAILABLE",
+      "ABSENT",
+      "UNSUPPORTED",
+      "REVIEWED_NO_POSITIVE",
+      "SOURCE_INSUFFICIENT"
+    ]
+  },
+  "reviewContract": {
+    "unit": [
+      "facility_id",
+      "discipline_id",
+      "review_dimension_id",
+      "review_aspect",
+      "protocol_version",
+      "review_cycle_id"
+    ],
+    "aspects": [
+      "FACILITY_IDENTITY",
+      "EQUIPMENT_FACT",
+      "SPACE_FACT",
+      "USAGE_ACCESS_FACT",
+      "COACHING_PROGRAM_FACT"
+    ],
+    "progress": [
+      "UNREVIEWED",
+      "PARTIAL",
+      "COMPLETE"
+    ],
+    "sourceSufficiency": [
+      "UNKNOWN",
+      "SUFFICIENT",
+      "INSUFFICIENT",
+      "BLOCKED"
+    ],
+    "positiveOutcome": [
+      "NOT_ASSESSED",
+      "POSITIVE_FOUND",
+      "NO_POSITIVE_FOUND"
+    ],
+    "validityRules": [
+      "UNREVIEWED_REQUIRES_UNKNOWN_AND_NOT_ASSESSED",
+      "COMPLETE_REQUIRES_SUFFICIENT",
+      "NO_POSITIVE_FOUND_REQUIRES_COMPLETE_AND_SUFFICIENT",
+      "INSUFFICIENT_OR_BLOCKED_CANNOT_COUNT_AS_COMPLETE",
+      "POSITIVE_FOUND_MAY_EXIST_WHILE_REVIEW_IS_PARTIAL",
+      "LEDGER_STATE_IS_INTERNAL_AND_NEVER_A_PUBLIC_NEGATIVE_FACT"
+    ]
+  },
+  "usageClaims": [
+    {
+      "id": "OPEN_USE_CONFIRMED",
+      "positive": true,
+      "meaning": "The identified station or explicitly scoped facility equipment is positively confirmed for self-directed use, subject to recorded conditions."
+    },
+    {
+      "id": "COACHED_USE_CONFIRMED",
+      "positive": true,
+      "meaning": "Use is positively confirmed in coached instruction; this does not imply self-directed use."
+    },
+    {
+      "id": "PROGRAM_ONLY_CONFIRMED",
+      "positive": true,
+      "meaning": "Use is positively confirmed only as part of an identified program or class; this does not imply open or generally coached access."
+    },
+    {
+      "id": "NO_CURRENT_POSITIVE_USAGE_EVIDENCE",
+      "positive": false,
+      "meaning": "No current publishable positive usage claim is present; this is not unavailability."
+    }
+  ],
+  "sourceClasses": [
+    {
+      "id": "GOVERNING_BODY_FINDER_DETAIL",
+      "supports": ["FACILITY_IDENTITY", "AFFILIATION", "EXPLICIT_PROGRAM_OR_STATION_FACT"],
+      "limitations": "A listing alone is not an exhaustive equipment, space, or usage inventory."
+    },
+    {
+      "id": "FACILITY_SPECIFIC_OFFICIAL_PAGE",
+      "supports": ["FACILITY_IDENTITY", "EQUIPMENT_FACT", "SPACE_FACT", "USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT"],
+      "limitations": "Omission is not negative unless the source is demonstrably enumerative and the protocol authorizes no-positive closure."
+    },
+    {
+      "id": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "supports": ["FACILITY_IDENTITY", "EQUIPMENT_FACT", "SPACE_FACT", "USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT"],
+      "limitations": "Evidence must be bound to the specific facility; a generic brand page cannot silently provide facility identity or inventory."
+    },
+    {
+      "id": "OFFICIAL_EQUIPMENT_PAGE",
+      "supports": ["EQUIPMENT_FACT", "SPACE_FACT"],
+      "limitations": "Must be facility-scoped or explicitly state the facilities to which the inventory applies; presence does not establish access."
+    },
+    {
+      "id": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "supports": ["EQUIPMENT_FACT", "SPACE_FACT", "USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT"],
+      "limitations": "Generic discipline descriptions do not establish facility-specific facts."
+    },
+    {
+      "id": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "supports": ["USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT", "EXPLICIT_STATION_ASSOCIATION"],
+      "limitations": "Program participation does not establish open use and must be facility-scoped."
+    },
+    {
+      "id": "OFFICIAL_BOOKING_MEMBER_SYSTEM",
+      "supports": ["FACILITY_IDENTITY", "USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT"],
+      "limitations": "A generic login or booking home without facility identity is insufficient. Authenticated or inaccessible content may be BLOCKED."
+    },
+    {
+      "id": "OFFICIAL_SCHEDULE_PAGE",
+      "supports": ["COACHING_PROGRAM_FACT", "DATED_SERVICE_OCCURRENCE"],
+      "limitations": "A dated schedule is volatile and does not establish open use or durable equipment presence by itself."
+    },
+    {
+      "id": "OFFICIAL_SOCIAL_MEDIA",
+      "supports": ["EQUIPMENT_FACT", "SPACE_FACT", "USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT"],
+      "limitations": "Facility identity, date, context, and currentness must be explicit; isolated imagery is not an exhaustive inventory."
+    },
+    {
+      "id": "OFFICIAL_IMAGE_GALLERY",
+      "supports": ["EQUIPMENT_FACT", "SPACE_FACT"],
+      "limitations": "Identity and object/space interpretation must be unambiguous; generic turf or floor imagery is insufficient for a station derivation."
+    }
+  ],
+  "stations": [
+    {
+      "id": "ski-erg",
+      "name": "SkiErg",
+      "equipmentFacts": ["ski-erg"],
+      "spaceFacts": [],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:ski-erg"],
+        "note": "Presence establishes equipment and minimum physical feasibility, not permission or access."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "SkiErgを確認",
+        "physicalOnly": "SkiErg設備を確認",
+        "practice": "Requires a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED scoped to SkiErg or an explicitly inclusive facility equipment set."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires current facility-bound SkiErg evidence. No-positive closure requires review of a sufficiently authoritative facility-specific enumerative equipment source set."
+    },
+    {
+      "id": "sled-push",
+      "name": "Sled Push",
+      "equipmentFacts": ["weighted-sled"],
+      "spaceFacts": ["sled-push-lane"],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:weighted-sled", "CURRENT_POSITIVE_SPACE:sled-push-lane", "SAME_FACILITY_COMPATIBLE_ASSOCIATION"],
+        "note": "Generic turf imagery does not satisfy sled-push-lane."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "スレッドを確認",
+        "physicalOnly": "スレッドプッシュ用設備・スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the sled-push setup."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires sled, suitable lane, and association. No-positive closure requires equipment plus HYROX/training/space sources to be adequately reviewed."
+    },
+    {
+      "id": "sled-pull",
+      "name": "Sled Pull",
+      "equipmentFacts": ["weighted-sled", "sled-pull-rope-or-apparatus"],
+      "spaceFacts": ["sled-pull-lane"],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:weighted-sled", "CURRENT_POSITIVE_EQUIPMENT:sled-pull-rope-or-apparatus", "CURRENT_POSITIVE_SPACE:sled-pull-lane", "SAME_FACILITY_COMPATIBLE_ASSOCIATION"],
+        "note": "Sled Push evidence never supplies the rope/pull apparatus dependency automatically."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "Confirmed component facts may be published separately.",
+        "physicalOnly": "スレッドプル用設備・スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the sled-pull setup."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires sled, rope/pull apparatus, suitable lane, and association. Push-only evidence cannot close this dimension."
+    },
+    {
+      "id": "burpee-broad-jump",
+      "name": "Burpee Broad Jump",
+      "equipmentFacts": [],
+      "spaceFacts": ["burpee-broad-jump-lane"],
+      "physicalRule": {
+        "anyOf": ["CURRENT_EXPLICIT_FACILITY_STATION_SPACE_FACT", "CURRENT_DEDICATED_LANE_WITH_EXPLICIT_BURPEE_BROAD_JUMP_ASSOCIATION"],
+        "note": "A gym floor or generic lane alone is insufficient."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": null,
+        "physicalOnly": "バーピーブロードジャンプ用スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the identified space."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Review HYROX/training/program and facility-bound space or gallery sources; generic floor review cannot produce positive closure."
+    },
+    {
+      "id": "row",
+      "name": "Row",
+      "equipmentFacts": ["row-erg"],
+      "spaceFacts": [],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:row-erg"],
+        "note": "Presence establishes equipment and minimum physical feasibility, not permission or access."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "RowErgを確認",
+        "physicalOnly": "RowErg設備を確認",
+        "practice": "Requires a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED scoped to RowErg or an explicitly inclusive facility equipment set."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires current facility-bound RowErg evidence. No-positive closure requires review of a sufficiently authoritative facility-specific enumerative equipment source set."
+    },
+    {
+      "id": "farmers-carry",
+      "name": "Farmers Carry",
+      "equipmentFacts": ["farmers-carry-implements"],
+      "spaceFacts": ["farmers-carry-lane"],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:farmers-carry-implements", "CURRENT_POSITIVE_SPACE:farmers-carry-lane", "SAME_FACILITY_COMPATIBLE_ASSOCIATION"],
+        "note": "Kettlebells or dumbbells count only when official evidence explicitly identifies suitable Farmers Carry or HYROX use."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "ファーマーズキャリー用器具を確認",
+        "physicalOnly": "ファーマーズキャリー用設備・スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the carry setup."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires suitable paired implements, carry space, and association. Generic free weights do not close the equipment dependency."
+    },
+    {
+      "id": "sandbag-lunges",
+      "name": "Sandbag Lunges",
+      "equipmentFacts": ["suitable-sandbag"],
+      "spaceFacts": ["sandbag-lunge-space"],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:suitable-sandbag", "CURRENT_POSITIVE_SPACE:sandbag-lunge-space", "SAME_FACILITY_COMPATIBLE_ASSOCIATION"],
+        "note": "A sandbag fact alone does not establish movement space."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "サンドバッグを確認",
+        "physicalOnly": "サンドバッグランジ用設備・スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the lunge setup."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires suitable sandbag, movement space, and association; inventory-only sources cannot close the space review."
+    },
+    {
+      "id": "wall-balls",
+      "name": "Wall Balls",
+      "equipmentFacts": ["suitable-wall-ball", "wall-ball-target"],
+      "spaceFacts": ["wall-ball-use-area"],
+      "physicalRule": {
+        "allOf": ["CURRENT_POSITIVE_EQUIPMENT:suitable-wall-ball", "CURRENT_POSITIVE_EQUIPMENT:wall-ball-target", "CURRENT_POSITIVE_SPACE:wall-ball-use-area", "SAME_FACILITY_COMPATIBLE_ASSOCIATION"],
+        "note": "Legacy wall-ball-target evidence alone cannot establish full station feasibility."
+      },
+      "usageScopeRequired": true,
+      "publicClaims": {
+        "equipmentOnly": "Confirmed target or ball facts may be published separately.",
+        "physicalOnly": "ウォールボール用設備・スペースを確認",
+        "practice": "Requires physical feasibility plus a current station-scoped positive usage claim.",
+        "openPractice": "Requires OPEN_USE_CONFIRMED for the wall-ball setup."
+      },
+      "missingBehavior": "NO_DERIVATION_AND_NO_PUBLIC_NEGATIVE",
+      "sufficiencyProtocol": "Positive closure requires ball, target/height evidence, usable area, and association. Target-only evidence remains a raw positive fact."
+    }
+  ],
+  "auxiliaryDimensions": [
+    {
+      "id": "running-environment",
+      "name": "Running environment",
+      "notAStation": true,
+      "supportingFacts": ["treadmill", "running-track", "outdoor-running-access"],
+      "rule": "Facts remain typed alternatives; none alone becomes full HYROX running-practice capability without explicit environment and usage scope."
+    }
+  ],
+  "legacyEquipmentMappings": [
+    {"slug": "ski-erg", "classification": "DIRECT_STATION_EQUIPMENT_FACT", "stations": ["ski-erg"]},
+    {"slug": "row-erg", "classification": "DIRECT_STATION_EQUIPMENT_FACT", "stations": ["row"]},
+    {"slug": "weighted-sled", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["sled-push", "sled-pull"]},
+    {"slug": "wall-ball-target", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["wall-balls"]},
+    {"slug": "farmers-carry-implements", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["farmers-carry"]},
+    {"slug": "sandbag", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["sandbag-lunges"]},
+    {"slug": "functional-training-lane", "classification": "SUPPORTING_PHYSICAL_FACT_REQUIRES_STATION_ASSOCIATION", "stations": ["sled-push", "sled-pull", "burpee-broad-jump", "farmers-carry", "sandbag-lunges"]},
+    {"slug": "treadmill", "classification": "AUXILIARY_TRAINING_FACT", "stations": [], "auxiliaryDimension": "running-environment"},
+    {"slug": "running-track", "classification": "AUXILIARY_TRAINING_FACT", "stations": [], "auxiliaryDimension": "running-environment"}
+  ],
+  "legacyCapabilityMappings": [
+    {"slug": "open-training", "classification": "REUSABLE_FACILITY_LEVEL_USAGE_FACT_NOT_STATION_SCOPED"},
+    {"slug": "discipline-coaching", "classification": "REUSABLE_SERVICE_MODALITY_FACT_NOT_STATION_SCOPED"},
+    {"slug": "competition-simulation", "classification": "REUSABLE_LEGACY_PROGRAM_FACT_NOT_STATION_SCOPED"},
+    {"slug": "sled-push-pull-space", "classification": "SUPPORTING_LEGACY_SPACE_FACT_REVIEW_REQUIRED_FOR_PUSH_PULL_COMPONENTS"},
+    {"slug": "outdoor-running-access", "classification": "AUXILIARY_RUNNING_FACT_NOT_STATION_SCOPED"}
+  ],
+  "freshnessComposition": {
+    "physicalValidity": "ALL_REQUIRED_CURRENT_PHYSICAL_DEPENDENCIES",
+    "usageValidity": "PHYSICAL_VALIDITY_AND_CURRENT_USAGE_DEPENDENCY",
+    "rule": "Each typed derivation fails closed independently when any required dependency is stale, unpublished, refuted, or source-invalid; sibling derivations remain valid if their own dependencies remain current."
+  },
+  "provenanceRequirements": [
+    "DERIVED_CLAIM_TO_RAW_FACT_IDS",
+    "RAW_FACT_TO_EVIDENCE_IDS",
+    "EVIDENCE_TO_SOURCE_IDS",
+    "DERIVATION_RULE_ID_AND_VERSION",
+    "DEPENDENCY_FRESHNESS_AND_PUBLICATION_VALIDITY",
+    "REVIEW_PROTOCOL_VERSION_AND_REVIEW_CYCLE"
+  ]
+}
