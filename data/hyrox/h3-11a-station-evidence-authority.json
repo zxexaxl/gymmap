@@ -52,7 +52,32 @@
       "INSUFFICIENT_OR_BLOCKED_CANNOT_COUNT_AS_COMPLETE",
       "POSITIVE_FOUND_MAY_EXIST_WHILE_REVIEW_IS_PARTIAL",
       "LEDGER_STATE_IS_INTERNAL_AND_NEVER_A_PUBLIC_NEGATIVE_FACT"
-    ]
+    ],
+    "currentness": {
+      "historicalEventRetention": "A completed review event remains an immutable historical record even after its coverage expires or is invalidated.",
+      "currentCoverageRule": "KPI and filter-readiness calculations count only review coverage whose currentness derivation is true.",
+      "derivedFrom": [
+        "reviewed_at",
+        "review_cycle_id",
+        "protocol_version",
+        "relevant_source_state",
+        "applicable_freshness_policy"
+      ],
+      "invalidationRules": [
+        "EXPIRY_DOES_NOT_DELETE_HISTORICAL_COMPLETE",
+        "EXPIRED_OR_INVALIDATED_REVIEW_DOES_NOT_COUNT_AS_CURRENT_COVERAGE",
+        "MATERIAL_SOURCE_DRIFT_MAY_INVALIDATE_CURRENT_COVERAGE",
+        "PROTOCOL_CHANGE_REQUIRES_REEVALUATION_AGAINST_THE_NEW_PROTOCOL",
+        "EXPIRED_REVIEW_CANNOT_AUTHORIZE_CURRENT_NO_POSITIVE_FOUND"
+      ],
+      "existingPolicyReuse": {
+        "physicalEquipmentDays": 180,
+        "openTrainingCoachingAndSledSpaceDays": 90,
+        "competitionSimulationDays": 30,
+        "scope": "Reuse an existing horizon only when the review aspect has the same volatility and authority semantics. Do not assign a blanket ledger horizon.",
+        "deferred": "H3-11B or H3-11E must map aspects without an existing equivalent policy; no new numeric horizon is authorized by H3-11A."
+      }
+    }
   },
   "usageClaims": [
     {
@@ -66,16 +91,23 @@
       "meaning": "Use is positively confirmed in coached instruction; this does not imply self-directed use."
     },
     {
-      "id": "PROGRAM_ONLY_CONFIRMED",
+      "id": "PROGRAM_USE_CONFIRMED",
       "positive": true,
-      "meaning": "Use is positively confirmed only as part of an identified program or class; this does not imply open or generally coached access."
-    },
-    {
-      "id": "NO_CURRENT_POSITIVE_USAGE_EVIDENCE",
-      "positive": false,
-      "meaning": "No current publishable positive usage claim is present; this is not unavailability."
+      "meaning": "Use is positively confirmed in an identified program or class; this makes no claim about use outside that program."
     }
   ],
+  "usageAbsenceInterpretation": {
+    "id": "NO_CURRENT_POSITIVE_USAGE_EVIDENCE",
+    "persistedPositiveClaim": false,
+    "persistedUsageState": false,
+    "derivedWhen": "The current positive usage-claim set is empty.",
+    "meaning": "Internal absence interpretation only; absence is not unavailability."
+  },
+  "explicitAccessRestrictionEvidence": {
+    "authorizedForPublicNegativePublication": false,
+    "rule": "An explicit official restriction such as program-time-only or normal-use-unavailable must be preserved separately from positive usage claims and must never be inferred from ordinary program or coached-use evidence.",
+    "futureAuthorityRequired": true
+  },
   "sourceClasses": [
     {
       "id": "GOVERNING_BODY_FINDER_DETAIL",
@@ -105,7 +137,7 @@
     {
       "id": "OFFICIAL_PROGRAM_SERVICE_PAGE",
       "supports": ["USAGE_ACCESS_FACT", "COACHING_PROGRAM_FACT", "EXPLICIT_STATION_ASSOCIATION"],
-      "limitations": "Program participation does not establish open use and must be facility-scoped."
+      "limitations": "Program participation does not establish open use, does not establish that use is restricted to the program, and must be facility-scoped."
     },
     {
       "id": "OFFICIAL_BOOKING_MEMBER_SYSTEM",
@@ -136,12 +168,12 @@
       "spaceFacts": [],
       "physicalRule": {
         "allOf": ["CURRENT_POSITIVE_EQUIPMENT:ski-erg"],
-        "note": "Presence establishes equipment and minimum physical feasibility, not permission or access."
+        "note": "The raw equipment fact is a single-input dependency. A versioned derivation rule is still mandatory for a typed station physical state; the existing claim is not retroactively retyped."
       },
       "usageScopeRequired": true,
       "publicClaims": {
         "equipmentOnly": "SkiErgを確認",
-        "physicalOnly": "SkiErg設備を確認",
+        "physicalOnly": "A future typed station physical state requires a versioned derivation trace; the existing public-safe claim remains the equipment fact.",
         "practice": "Requires a current station-scoped positive usage claim.",
         "openPractice": "Requires OPEN_USE_CONFIRMED scoped to SkiErg or an explicitly inclusive facility equipment set."
       },
@@ -212,12 +244,12 @@
       "spaceFacts": [],
       "physicalRule": {
         "allOf": ["CURRENT_POSITIVE_EQUIPMENT:row-erg"],
-        "note": "Presence establishes equipment and minimum physical feasibility, not permission or access."
+        "note": "The raw equipment fact is a single-input dependency. A versioned derivation rule is still mandatory for a typed station physical state; the existing claim is not retroactively retyped."
       },
       "usageScopeRequired": true,
       "publicClaims": {
         "equipmentOnly": "RowErgを確認",
-        "physicalOnly": "RowErg設備を確認",
+        "physicalOnly": "A future typed station physical state requires a versioned derivation trace; the existing public-safe claim remains the equipment fact.",
         "practice": "Requires a current station-scoped positive usage claim.",
         "openPractice": "Requires OPEN_USE_CONFIRMED scoped to RowErg or an explicitly inclusive facility equipment set."
       },
@@ -292,8 +324,8 @@
     }
   ],
   "legacyEquipmentMappings": [
-    {"slug": "ski-erg", "classification": "DIRECT_STATION_EQUIPMENT_FACT", "stations": ["ski-erg"]},
-    {"slug": "row-erg", "classification": "DIRECT_STATION_EQUIPMENT_FACT", "stations": ["row"]},
+    {"slug": "ski-erg", "classification": "RAW_DIRECT_STATION_EQUIPMENT_FACT_SINGLE_INPUT_DERIVATION_DEPENDENCY", "stations": ["ski-erg"]},
+    {"slug": "row-erg", "classification": "RAW_DIRECT_STATION_EQUIPMENT_FACT_SINGLE_INPUT_DERIVATION_DEPENDENCY", "stations": ["row"]},
     {"slug": "weighted-sled", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["sled-push", "sled-pull"]},
     {"slug": "wall-ball-target", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["wall-balls"]},
     {"slug": "farmers-carry-implements", "classification": "SUPPORTING_PHYSICAL_FACT_INSUFFICIENT_ALONE", "stations": ["farmers-carry"]},

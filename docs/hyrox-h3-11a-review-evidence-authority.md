@@ -37,6 +37,14 @@ source insufficient           != facility lacks the item
 
 Running is an auxiliary training dimension, not a ninth workout station. Physical facts, service modality, and dated schedule are separate concepts. A `5/8`, HYROX readiness/completeness score, station score, negative filter, or capability completeness score remains **HOLD**.
 
+### 1.1 Human-review clarification record
+
+This corrected candidate supersedes candidate `0bc7cf08bbd27c0d36ed800184313ff1587a9cbb` on three narrow points:
+
+1. Positive program usage is `PROGRAM_USE_CONFIRMED`, never an inferred program-only restriction. Explicit restrictions remain separate evidence and receive no public negative authority here.
+2. Ledger events are historical; KPI/filter-readiness uses only derived current review coverage. Expiry, source drift, or protocol mismatch can invalidate current coverage without deleting history.
+3. Existing SkiErg/Row claims remain raw direct equipment facts. Even a single-input station physical result must pass through a versioned derivation rule and must not retroactively retype the existing claim.
+
 ## 2. Read-only observed baseline
 
 The public `search_training_locations` RPC and committed enrichment-monitor authority were read on 2026-09-02. Existing monitors were run without writes.
@@ -152,6 +160,28 @@ Future persistence must retain, logically if not as identically named columns:
 
 Review rows must not masquerade as claim evidence, and claim rows must not imply review completeness.
 
+### 4.4 Historical review events and current coverage
+
+A ledger review event is a retained historical record. `COMPLETE`, `SUFFICIENT`, and its recorded outcome describe what happened in that review cycle; expiry or invalidation must not delete or rewrite that history.
+
+Current review coverage is a separate derived authority. Future KPI and filter-readiness calculations count a historical review event only while its coverage is current. Currentness derives from:
+
+- `reviewed_at`;
+- review cycle;
+- protocol version;
+- relevant source state, including material source drift;
+- the applicable existing freshness policy.
+
+Normative currentness rules:
+
+1. Expiry preserves historical `COMPLETE` but removes the event from current coverage.
+2. Material source change, support drift, lost facility binding, or source invalidation may invalidate current coverage before time expiry.
+3. A protocol-version change requires reevaluation of whether an old review satisfies the new protocol. It does not automatically upgrade.
+4. Expired or invalidated review must not authorize current `NO_POSITIVE_FOUND` and must not be counted in current reviewed-no-positive KPIs.
+5. Currentness failure creates no public negative fact.
+
+Existing horizons are reused only where volatility and semantics match: physical equipment currently uses 180 days; open training, coaching, and sled space use 90 days; competition simulation uses 30 days. H3-11A authorizes no blanket ledger horizon and invents no new number. H3-11B/H3-11E must map review aspects without an existing equivalent policy before implementation.
+
 ## 5. Source-class authority
 
 Existing `training_sources.source_kind` and `publisher_authority` remain unchanged. The following is a logical H3-11 review taxonomy; H3-11B decides representation.
@@ -163,7 +193,7 @@ Existing `training_sources.source_kind` and `publisher_authority` remain unchang
 | `BRAND_OFFICIAL_FACILITY_PAGE` | Same categories when the facility is explicitly identified | A generic brand page cannot silently apply to every branch. |
 | `OFFICIAL_EQUIPMENT_PAGE` | Facility-bound equipment and explicit space facts | Presence does not establish permission; generic brand inventory is insufficient. |
 | `OFFICIAL_HYROX_TRAINING_PAGE` | Facility-bound equipment, station/space, usage, coaching/program | Generic HYROX explanation is not facility evidence. |
-| `OFFICIAL_PROGRAM_SERVICE_PAGE` | Program/coaching/usage and explicit station association | Program use is not open use. |
+| `OFFICIAL_PROGRAM_SERVICE_PAGE` | Program/coaching/usage and explicit station association | Program use is neither open use nor evidence that use is restricted to the program. |
 | `OFFICIAL_BOOKING_MEMBER_SYSTEM` | Facility identity and positive bookable usage/program facts | Generic login/booking home without facility identity is insufficient; inaccessible gated content may be blocked. |
 | `OFFICIAL_SCHEDULE_PAGE` | Dated program occurrence and coaching/service facts | Volatile; not durable equipment presence or open access by itself. |
 | `OFFICIAL_SOCIAL_MEDIA` | Facility-bound, dated equipment/space/use/program facts | Identity, date, context, and currency must be unambiguous; not exhaustive. |
@@ -194,11 +224,11 @@ The machine-readable counterpart is `data/hyrox/h3-11a-station-evidence-authorit
 
 | Station | Required positive equipment facts | Required positive space/environment facts | Physical derivation | Usage/access | Public-safe claim | Missing evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| SkiErg | `ski-erg` | None beyond the confirmed installed machine fact | Current SkiErg presence establishes equipment/minimum physical feasibility only | Station-scoped open/coached/program fact separately required | Presence: `SkiErgを確認`. Practice/open practice requires the respective usage fact. | No derivation; no negative. |
+| SkiErg | `ski-erg` | None beyond the confirmed installed machine fact | Raw fact is the single input to a mandatory versioned physical derivation | Station-scoped open/coached/program fact separately required | Existing claim: `SkiErgを確認`. Typed physical/practice claims require their derivation/usage trace. | No derivation; no negative. |
 | Sled Push | `weighted-sled` | Suitable sled-push lane plus facility/component association | Sled **and** lane **and** compatible same-facility association | Separate station-scoped positive use | `スレッドを確認` for equipment; `スレッドプッシュ用設備・スペースを確認` only when composed | Generic turf or missing lane means no derivation. |
 | Sled Pull | `weighted-sled`; rope/pull apparatus | Suitable sled-pull lane plus association | Sled **and** pull apparatus **and** lane **and** association | Separate station-scoped positive use | Full equipment/space wording only after all dependencies | Push evidence never supplies rope or pull feasibility automatically. |
 | Burpee Broad Jump | None | Explicit facility station-space fact, or dedicated lane explicitly associated with BBJ | Explicit BBJ space, not a generic gym floor/lane | Separate station-scoped positive use | `バーピーブロードジャンプ用スペースを確認` | Generic floor/functional area yields no derivation. |
-| Row | `row-erg` | None beyond the confirmed installed machine fact | Current RowErg presence establishes equipment/minimum physical feasibility only | Station-scoped open/coached/program fact separately required | Presence: `RowErgを確認`. Practice/open practice requires usage. | No derivation; no negative. |
+| Row | `row-erg` | None beyond the confirmed installed machine fact | Raw fact is the single input to a mandatory versioned physical derivation | Station-scoped open/coached/program fact separately required | Existing claim: `RowErgを確認`. Typed physical/practice claims require their derivation/usage trace. | No derivation; no negative. |
 | Farmers Carry | Suitable paired farmers-carry implements | Suitable carry lane/space plus association | Implements **and** carry space **and** association | Separate station-scoped positive use | Equipment-only or full setup wording according to dependencies | Kettlebells/dumbbells alone are insufficient unless explicitly identified for Farmers Carry/HYROX use. |
 | Sandbag Lunges | Suitable sandbag | Suitable lunge/movement space plus association | Sandbag **and** lunge space **and** association | Separate station-scoped positive use | Equipment-only or full setup wording according to dependencies | Sandbag alone yields no station feasibility. |
 | Wall Balls | Suitable wall ball; target/target-height evidence | Usable wall-ball area plus association | Ball **and** target **and** usable area **and** association | Separate station-scoped positive use | Component facts may be stated separately; full setup only after composition | Legacy target alone yields no full feasibility. |
@@ -207,12 +237,23 @@ For every composite station, dependencies must belong to the same facility, be p
 
 ### 7.1 SkiErg and Row claim levels
 
-For SkiErg and Row, the machine is both the direct equipment fact and minimum physical feasibility fact. The wording levels remain distinct:
+For SkiErg and Row, the existing claim remains a `RAW DIRECT STATION EQUIPMENT FACT`. It may be the only input required by a future physical derivation, but it is not already a derived station state and must not be retroactively retyped.
+
+The required trace remains explicit even for a one-input rule:
+
+```text
+raw ski-erg / row-erg equipment fact
+  -> versioned derivation rule
+  -> typed station physical state
+```
+
+The wording levels remain distinct:
 
 | Evidence | Allowed meaning |
 | --- | --- |
 | Machine presence only | `SkiErgを確認` / `RowErgを確認` |
-| Current machine fact without usage | Equipment/minimum physical feasibility; do not say autonomous or generally available practice |
+| Current machine fact without derivation/usage | Equipment presence only; do not treat the legacy claim as an already-derived station state |
+| Current machine fact through a valid versioned physical rule | Typed station physical state; still no permission or access implication |
 | Station-scoped coached/program use | Coached/program practice only, matching the exact modality |
 | Station-scoped open use | `自主練で…利用を確認`, subject to recorded membership/reservation/conditions |
 
@@ -228,10 +269,13 @@ Usage is a non-exclusive typed positive-claim set, not one boolean or one mutual
 | --- | --- |
 | `OPEN_USE_CONFIRMED` | Self-directed use of the identified station or an explicitly inclusive facility equipment set is positively confirmed, with conditions retained. |
 | `COACHED_USE_CONFIRMED` | Use is positively confirmed in coached instruction; no open-use implication. |
-| `PROGRAM_ONLY_CONFIRMED` | Use is positively confirmed only in an identified program/class; no open or generic coached-access implication. |
-| `NO_CURRENT_POSITIVE_USAGE_EVIDENCE` | Internal zero-set interpretation only. It is not a positive fact and not unavailability. |
+| `PROGRAM_USE_CONFIRMED` | Use is positively confirmed in an identified program/class. It says nothing about use outside the program. |
+
+`NO_CURRENT_POSITIVE_USAGE_EVIDENCE` is not a persisted positive claim and not a persisted usage state. It is an internal absence interpretation derived when the current positive usage-claim set is empty. Absence is not unavailability.
 
 Scope must be retained: station-specific, explicitly inclusive equipment set, or facility-level only. Existing `open-training`, `discipline-coaching`, and `competition-simulation` are facility/high-level claims unless their original evidence explicitly supplies narrower scope. Membership, booking, reservation, appointment, and time constraints are conditions on a positive usage claim, not separate proof of station availability.
+
+Ordinary program or coached-use evidence must never imply exclusivity. If an official source explicitly states `プログラム時のみ利用可`, `通常利用不可`, or an equivalent restriction, that evidence must be preserved separately as explicit access-restriction evidence. H3-11A does not authorize its negative/restriction publication; a future separate authority is required.
 
 Personal training, group training, program/class, and schedule remain service modalities. A schedule is a dated service occurrence and must not be folded into durable physical facts.
 
@@ -244,7 +288,7 @@ Personal training, group training, program/class, and schedule remain service mo
 - derived physical feasibility;
 - open-use confirmation;
 - coached-use confirmation;
-- program-only confirmation;
+- program-use confirmation;
 - separate high-level service/program capabilities.
 
 A caller must name the type it means. `station_capability=true` is prohibited because it hides whether the basis was equipment, space, usage, or program evidence. “Physically feasible” alone must not be labeled “available for practice” without usage authority.
@@ -292,14 +336,16 @@ typed usage station current
 
 If sled and lane remain current while open-use becomes stale, physical feasibility may remain current and open-use fails closed. If a required physical fact becomes stale, only derivations depending on it fail closed. Missing/stale/refuted/source-invalid dependency means **NO DERIVATION**, never a negative.
 
+Review currentness composes separately under section 4.4. In particular, no-positive review authority must expire or invalidate even though it generated no monitored positive claim. Historical review state remains retained while current coverage and current `NO_POSITIVE_FOUND` authority fail closed.
+
 ## 12. Legacy equipment compatibility
 
 All 109 current equipment claims remain reusable without semantic change as raw positive facts.
 
 | Slug | Claims | New-model classification | Station conversion |
 | --- | ---: | --- | --- |
-| `ski-erg` | 6 | Direct station equipment fact | Direct equipment/minimum physical feasibility for SkiErg; usage separate. |
-| `row-erg` | 19 | Direct station equipment fact | Direct equipment/minimum physical feasibility for Row; usage separate. |
+| `ski-erg` | 6 | Raw direct station equipment fact | Single-input dependency for a future versioned SkiErg physical derivation; existing claim is not retyped. |
+| `row-erg` | 19 | Raw direct station equipment fact | Single-input dependency for a future versioned Row physical derivation; existing claim is not retyped. |
 | `weighted-sled` | 18 | Supporting physical fact | Insufficient alone for Push or Pull. |
 | `wall-ball-target` | 5 | Supporting physical fact | Insufficient without ball and usable area. |
 | `farmers-carry-implements` | 21 | Supporting physical fact | Insufficient without carry space/association. |
@@ -327,7 +373,7 @@ No legacy capability is retroactively redefined.
 Two views are required because “reusable” and “sufficient for station derivation” are different questions:
 
 1. **Semantic preservation:** all 150 current claims remain directly reusable under their existing semantics: 109 raw equipment facts + 41 legacy high-level capabilities.
-2. **Exclusive station-conversion disposition:** 25 direct equipment/minimum-feasibility facts (`ski-erg` 6 + `row-erg` 19); 66 supporting composite-station physical facts; 18 separate auxiliary-running facts; 3 legacy sled-space claims requiring evidence re-review; 38 separate legacy service/program claims. Total: 150.
+2. **Exclusive station-conversion disposition:** 25 raw direct station equipment facts that may be single-input derivation dependencies (`ski-erg` 6 + `row-erg` 19); 66 supporting composite-station physical facts; 18 separate auxiliary-running facts; 3 legacy sled-space claims requiring evidence re-review; 38 separate legacy service/program claims. Total: 150. None of the 25 is an already-derived station physical capability.
 
 The 25 current enriched facilities demonstrate that the model can retain equipment-rich, capability-rich, mixed, and no-current-positive cases without treating any omitted station as negative. UFC Gym 荻窪/用賀 and 東陽町 provide composite-rich compatibility examples; OTF locations provide program/coaching-rich but not open-use station scope; BEYOND 浜松店 provides the awkward/degraded-source case. No source was broadly recrawled and no claim was republished.
 
@@ -341,18 +387,18 @@ Future operations must report axes explicitly:
 
 | KPI | Exact numerator | Exact denominator / caveat |
 | --- | --- | --- |
-| Facility source-inventory coverage | Facilities whose facility identity/source-inventory protocol is `COMPLETE + SUFFICIENT` | Current official facility cohort; not station coverage. |
-| Physical station review coverage | Station dimensions whose required physical aspects are `COMPLETE + SUFFICIENT` | `current official facilities × 8`; report numerator and denominator, protocol version, and as-of time. |
-| Usage review coverage | Station usage aspects `COMPLETE + SUFFICIENT` | Report separately from physical coverage; never impute from equipment. |
-| Fully physically reviewed facilities | Facilities with all eight physical station dimensions complete/sufficient under the same current protocol version | Usage completeness is a separate KPI. |
-| Partially physically reviewed facilities | Facilities with at least one attempted physical station dimension but not all eight complete/sufficient | Do not include untouched facilities. |
+| Facility source-inventory coverage | Facilities whose facility identity/source-inventory protocol is currently `COMPLETE + SUFFICIENT` | Current official facility cohort; expired history excluded. |
+| Physical station review coverage | Currently covered station dimensions whose required physical aspects are `COMPLETE + SUFFICIENT` | `current official facilities × 8`; report protocol version and as-of time. |
+| Usage review coverage | Currently covered station usage aspects with `COMPLETE + SUFFICIENT` | Report separately; expired history excluded. |
+| Fully physically reviewed facilities | Facilities with all eight physical station dimensions currently complete/sufficient under the applicable protocol | Usage completeness is a separate KPI. |
+| Partially physically reviewed facilities | Facilities with at least one current attempted physical station dimension but not all eight currently complete/sufficient | Historical-only attempts are excluded. |
 | Source-insufficient facilities | Facilities with at least one current `INSUFFICIENT` station/aspect | Also report affected unit count; do not call them reviewed. |
 | Source-blocked facilities | Facilities with at least one current `BLOCKED` station/aspect | Report separately from insufficient. |
 | Positive raw facts | Current publishable facts by fact type | Not a completeness numerator. |
 | Positive derived stations | Current typed derivations by station and claim type | Not a station score or denominator of capability completeness. |
-| Reviewed-no-positive units | `COMPLETE + SUFFICIENT + NO_POSITIVE_FOUND` units | Internal only; not facility absence. |
+| Reviewed-no-positive units | Current `COMPLETE + SUFFICIENT + NO_POSITIVE_FOUND` units | Expired/invalidated history excluded; internal only. |
 
-`64/82 reviewed` is invalid without the numerator definition. A valid example is “64/82 official facilities have at least one physical station dimension complete/sufficient under protocol vN as of T.” Prefer the full KPI set over one percentage.
+`64/82 reviewed` is invalid without the numerator definition. A valid example is “64/82 official facilities have at least one currently complete/sufficient physical station dimension under protocol vN as of T.” Prefer the full KPI set over one percentage.
 
 ## 17. Future filter readiness inputs
 
@@ -394,15 +440,15 @@ Absence boxes are review outcomes only after sufficient protocol completion; the
 
 | Case | Deterministic outcome |
 | --- | --- |
-| A. SkiErg explicitly listed, usage absent | Raw `ski-erg` and minimum physical feasibility positive; public equipment wording allowed. Usage is `NO_CURRENT_POSITIVE_USAGE_EVIDENCE`; no autonomous/open practice claim and no negative. |
+| A. SkiErg explicitly listed, usage absent | Preserve raw `ski-erg`; public equipment wording is allowed. A typed physical state requires the one-input versioned derivation. Empty current usage claims yield the internal absence interpretation; no open/practice claim or negative. |
 | B. Sled shown + turf shown, no use statement | If identity and sled↔suitable-lane association satisfy the contract, physical Sled Push may derive; otherwise only component facts. No usage claim. Generic turf alone never closes the lane. |
-| C. Sled + rope + lane, coached HYROX program only | Sled Pull physical feasibility derives; `COACHED_USE_CONFIRMED` or `PROGRAM_ONLY_CONFIRMED` according to the exact source. Open use remains unknown. Sled Push derives only if push suitability is also evidenced. |
+| C. Sled + rope + lane, coached HYROX program | Sled Pull physical feasibility derives; `COACHED_USE_CONFIRMED` and/or `PROGRAM_USE_CONFIRMED` according to exact evidence. Neither implies exclusivity or open use. Sled Push derives only if push suitability is also evidenced. |
 | D. Wall-ball target shown, ball absent | Preserve target raw fact. Full Wall Balls physical feasibility does not derive; no negative. |
 | E. Sandbag listed, movement space absent | Preserve sandbag raw fact. Sandbag Lunges physical feasibility does not derive; no negative. |
 | F. Generic large gym floor, no BBJ evidence | No BBJ space fact or derivation. Review may remain partial/insufficient; floor presence is not a negative or positive BBJ claim. |
-| G. Official site thoroughly reviewed, no SkiErg mention | Only if the facility-specific source set is sufficiently enumerative and protocol-complete: `COMPLETE / SUFFICIENT / NO_POSITIVE_FOUND`. Public UI renders nothing; no absence claim. Otherwise `INSUFFICIENT`. |
+| G. Official site thoroughly reviewed, no SkiErg mention | If sufficiently enumerative and protocol-complete: historical `COMPLETE / SUFFICIENT / NO_POSITIVE_FOUND`. It authorizes current coverage only while its currentness derivation remains valid. Public UI renders nothing. |
 | H. Only generic booking portal | `PARTIAL / INSUFFICIENT / NOT_ASSESSED`, or `BLOCKED` when a required facility-bound path exists but cannot be accessed. Never no-positive or negative. |
-| I. One positive dependency stale | Every derivation requiring it fails closed; independent current raw facts/derivations remain. No negative is created. |
+| I. One positive dependency or review authority becomes stale | Dependent station claims fail closed; expired review leaves historical COMPLETE intact but exits current coverage and cannot support current no-positive authority. No negative is created. |
 | J. Legacy `sled-push-pull-space` | Remains a current legacy high-level positive claim. It can support explicitly evidenced lane scope after re-review, but supplies neither sled nor rope nor usage and does not automatically prove both stations. |
 
 ## 20. H3-11B minimal handoff
@@ -416,8 +462,9 @@ H3-11B must produce the smallest persistence/derivation design that can:
 5. represent non-exclusive usage claims with explicit scope and conditions;
 6. trace a typed derived claim through raw facts/evidence/sources and a rule version;
 7. compose freshness and fail closed per typed derivation;
-8. keep all legacy claims valid under their original meaning and identify only the rows that require re-review for station conversion;
-9. validate that internal `NO_POSITIVE_FOUND`, `INSUFFICIENT`, and `BLOCKED` states cannot flow into public negative semantics.
+8. derive review currentness from review/source/protocol/freshness inputs while retaining historical events;
+9. keep all legacy claims valid under their original meaning and identify only the rows that require re-review for station conversion;
+10. validate that internal `NO_POSITIVE_FOUND`, `INSUFFICIENT`, and `BLOCKED` states cannot flow into public negative semantics.
 
 H3-11B must decide whether new ledger persistence, review dimensions, raw space/usage fact structures, and derivation provenance structures are required. It must not treat this document as implementation SQL. H3-11C/D collection begins only after this authority is accepted.
 
