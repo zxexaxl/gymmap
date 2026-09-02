@@ -1094,6 +1094,352 @@ export type Database = {
           },
         ]
       }
+      training_review_cycles: {
+        Row: {
+          created_at: string
+          cycle_key: string
+          cycle_kind: string
+          discipline_id: string
+          id: string
+          location_id: string
+          notes: string | null
+          protocol_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          supersedes_review_cycle_id: string | null
+          supersession_reason: string | null
+        }
+        Insert: {
+          created_at?: string
+          cycle_key: string
+          cycle_kind?: string
+          discipline_id: string
+          id?: string
+          location_id: string
+          notes?: string | null
+          protocol_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          supersedes_review_cycle_id?: string | null
+          supersession_reason?: string | null
+        }
+        Update: {
+          created_at?: string
+          cycle_key?: string
+          cycle_kind?: string
+          discipline_id?: string
+          id?: string
+          location_id?: string
+          notes?: string | null
+          protocol_id?: string
+          reviewed_at?: string
+          reviewer_authority?: string
+          supersedes_review_cycle_id?: string | null
+          supersession_reason?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_cycles_discipline_fk"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_review_cycles_location_fk"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "gym_locations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_review_cycles_protocol_discipline_fk"
+            columns: ["protocol_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_protocols"
+            referencedColumns: ["id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_review_cycles_supersedes_same_scope_fk"
+            columns: ["supersedes_review_cycle_id", "location_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_cycles"
+            referencedColumns: ["id", "location_id", "discipline_id"]
+          },
+        ]
+      }
+      training_review_dimensions: {
+        Row: {
+          created_at: string
+          discipline_id: string
+          display_order: number
+          dimension_kind: string
+          id: string
+          name: string
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          discipline_id: string
+          display_order?: number
+          dimension_kind: string
+          id?: string
+          name: string
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          discipline_id?: string
+          display_order?: number
+          dimension_kind?: string
+          id?: string
+          name?: string
+          slug?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_dimensions_discipline_fk"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      training_review_invalidations: {
+        Row: {
+          created_at: string
+          details: string | null
+          discipline_id: string
+          id: string
+          invalidated_at: string
+          invalidation_authority: string
+          invalidation_key: string
+          reason_code: string
+          replacement_protocol_id: string | null
+          review_unit_id: string
+          training_source_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          details?: string | null
+          discipline_id: string
+          id?: string
+          invalidated_at: string
+          invalidation_authority: string
+          invalidation_key: string
+          reason_code: string
+          replacement_protocol_id?: string | null
+          review_unit_id: string
+          training_source_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          details?: string | null
+          discipline_id?: string
+          id?: string
+          invalidated_at?: string
+          invalidation_authority?: string
+          invalidation_key?: string
+          reason_code?: string
+          replacement_protocol_id?: string | null
+          review_unit_id?: string
+          training_source_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_invalidations_protocol_discipline_fk"
+            columns: ["replacement_protocol_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_protocols"
+            referencedColumns: ["id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_review_invalidations_source_fk"
+            columns: ["training_source_id"]
+            isOneToOne: false
+            referencedRelation: "training_sources"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_review_invalidations_unit_discipline_fk"
+            columns: ["review_unit_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_units"
+            referencedColumns: ["id", "discipline_id"]
+          },
+        ]
+      }
+      training_review_protocols: {
+        Row: {
+          authority_commit_sha: string
+          authority_document_path: string
+          authority_document_sha256: string
+          authority_matrix_path: string
+          authority_matrix_sha256: string
+          created_at: string
+          discipline_id: string
+          id: string
+          protocol_key: string
+          protocol_version: string
+        }
+        Insert: {
+          authority_commit_sha: string
+          authority_document_path: string
+          authority_document_sha256: string
+          authority_matrix_path: string
+          authority_matrix_sha256: string
+          created_at?: string
+          discipline_id: string
+          id?: string
+          protocol_key: string
+          protocol_version: string
+        }
+        Update: {
+          authority_commit_sha?: string
+          authority_document_path?: string
+          authority_document_sha256?: string
+          authority_matrix_path?: string
+          authority_matrix_sha256?: string
+          created_at?: string
+          discipline_id?: string
+          id?: string
+          protocol_key?: string
+          protocol_version?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_protocols_discipline_fk"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_disciplines"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      training_review_unit_sources: {
+        Row: {
+          binding_basis: string | null
+          created_at: string
+          facility_binding: string
+          id: string
+          notes: string | null
+          observed_at: string
+          review_unit_id: string
+          reviewed_at: string
+          source_availability_state_at_review: string
+          source_class: string
+          source_content_hash_at_review: string | null
+          sufficiency_role: string
+          training_source_id: string
+        }
+        Insert: {
+          binding_basis?: string | null
+          created_at?: string
+          facility_binding: string
+          id?: string
+          notes?: string | null
+          observed_at: string
+          review_unit_id: string
+          reviewed_at: string
+          source_availability_state_at_review: string
+          source_class: string
+          source_content_hash_at_review?: string | null
+          sufficiency_role: string
+          training_source_id: string
+        }
+        Update: {
+          binding_basis?: string | null
+          created_at?: string
+          facility_binding?: string
+          id?: string
+          notes?: string | null
+          observed_at?: string
+          review_unit_id?: string
+          reviewed_at?: string
+          source_availability_state_at_review?: string
+          source_class?: string
+          source_content_hash_at_review?: string | null
+          sufficiency_role?: string
+          training_source_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_unit_sources_source_fk"
+            columns: ["training_source_id"]
+            isOneToOne: false
+            referencedRelation: "training_sources"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "training_review_unit_sources_unit_fk"
+            columns: ["review_unit_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      training_review_units: {
+        Row: {
+          coverage_expires_at: string | null
+          created_at: string
+          discipline_id: string
+          freshness_policy_key_at_review: string | null
+          id: string
+          notes: string | null
+          positive_outcome: string
+          review_aspect: string
+          review_cycle_id: string
+          review_dimension_id: string
+          review_progress: string
+          source_sufficiency: string
+        }
+        Insert: {
+          coverage_expires_at?: string | null
+          created_at?: string
+          discipline_id: string
+          freshness_policy_key_at_review?: string | null
+          id?: string
+          notes?: string | null
+          positive_outcome: string
+          review_aspect: string
+          review_cycle_id: string
+          review_dimension_id: string
+          review_progress: string
+          source_sufficiency: string
+        }
+        Update: {
+          coverage_expires_at?: string | null
+          created_at?: string
+          discipline_id?: string
+          freshness_policy_key_at_review?: string | null
+          id?: string
+          notes?: string | null
+          positive_outcome?: string
+          review_aspect?: string
+          review_cycle_id?: string
+          review_dimension_id?: string
+          review_progress?: string
+          source_sufficiency?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_review_units_cycle_discipline_fk"
+            columns: ["review_cycle_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_cycles"
+            referencedColumns: ["id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_review_units_dimension_discipline_fk"
+            columns: ["review_dimension_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_dimensions"
+            referencedColumns: ["id", "discipline_id"]
+          },
+        ]
+      }
       training_sources: {
         Row: {
           availability_state: string
