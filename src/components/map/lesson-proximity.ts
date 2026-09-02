@@ -55,6 +55,10 @@ type MappableLessonLocation = {
   longitude: number;
 };
 
+export type MapCenterRankedLessonLocation<T extends MappableLessonLocation> = T & {
+  mapCenterDistanceKm: number;
+};
+
 export function rankLessonLocationsByProximity<T extends MappableLessonLocation>(
   locations: readonly T[],
   origin: LessonProximityOrigin,
@@ -68,4 +72,19 @@ export function rankLessonLocationsByProximity<T extends MappableLessonLocation>
       }),
     }))
     .sort((left, right) => left.distanceKm - right.distanceKm);
+}
+
+export function rankLessonLocationsByMapCenter<T extends MappableLessonLocation>(
+  locations: readonly T[],
+  mapCenter: LessonCoordinates,
+): MapCenterRankedLessonLocation<T>[] {
+  return locations
+    .map((location) => ({
+      ...location,
+      mapCenterDistanceKm: haversineDistanceKm(mapCenter, {
+        latitude: location.latitude,
+        longitude: location.longitude,
+      }),
+    }))
+    .sort((left, right) => left.mapCenterDistanceKm - right.mapCenterDistanceKm);
 }

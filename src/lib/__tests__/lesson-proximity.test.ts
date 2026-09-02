@@ -6,6 +6,7 @@ import {
   createCurrentLocationProximityOrigin,
   DEFAULT_LESSON_PROXIMITY_ORIGIN,
   haversineDistanceKm,
+  rankLessonLocationsByMapCenter,
   rankLessonLocationsByProximity,
 } from "@/components/map/lesson-proximity";
 
@@ -94,6 +95,59 @@ test("the established Haversine result remains stable", () => {
   assert.ok(tokyoToOsakaKm > 400 && tokyoToOsakaKm < 410);
 });
 
+test("map scope reranks the same eastward viewport candidates around its center", () => {
+  const westOrigin = createCurrentLocationProximityOrigin({ latitude: 35.68, longitude: 139.7 });
+  const viewportCandidates = [
+    { id: "west-edge", name: "West edge", latitude: 35.68, longitude: 139.75 },
+    { id: "center", name: "Viewport center", latitude: 35.68, longitude: 139.8 },
+    { id: "east-edge", name: "East edge", latitude: 35.68, longitude: 139.85 },
+  ] as const;
+  const proximityRanked = rankLessonLocationsByProximity(viewportCandidates, westOrigin);
+  const mapRanked = rankLessonLocationsByMapCenter(proximityRanked, {
+    latitude: 35.68,
+    longitude: 139.8,
+  });
+
+  assert.deepEqual(proximityRanked.map((location) => location.id), ["west-edge", "center", "east-edge"]);
+  assert.equal(mapRanked[0].id, "center");
+  assert.deepEqual(
+    new Set(mapRanked.map((location) => location.id)),
+    new Set(proximityRanked.map((location) => location.id)),
+  );
+  assert.deepEqual(westOrigin.coordinates, { latitude: 35.68, longitude: 139.7 });
+  assert.deepEqual(
+    mapRanked.map((location) => location.distanceKm),
+    mapRanked.map((location) => proximityRanked.find((candidate) => candidate.id === location.id)?.distanceKm),
+  );
+});
+
+test("panning in map scope reranks without changing proximity distances", () => {
+  const westOrigin = createCurrentLocationProximityOrigin({ latitude: 35.68, longitude: 139.7 });
+  const proximityRanked = rankLessonLocationsByProximity(
+    [
+      { id: "west", name: "West", latitude: 35.68, longitude: 139.77 },
+      { id: "east", name: "East", latitude: 35.68, longitude: 139.83 },
+    ],
+    westOrigin,
+  );
+  const firstViewport = rankLessonLocationsByMapCenter(proximityRanked, {
+    latitude: 35.68,
+    longitude: 139.77,
+  });
+  const pannedViewport = rankLessonLocationsByMapCenter(proximityRanked, {
+    latitude: 35.68,
+    longitude: 139.83,
+  });
+
+  assert.equal(firstViewport[0].id, "west");
+  assert.equal(pannedViewport[0].id, "east");
+  assert.deepEqual(
+    firstViewport.map(({ id, distanceKm }) => ({ id, distanceKm })),
+    pannedViewport.map(({ id, distanceKm }) => ({ id, distanceKm })).reverse(),
+  );
+  assert.deepEqual(westOrigin.coordinates, { latitude: 35.68, longitude: 139.7 });
+});
+
 test("Lesson owns runtime-only origin and first-success scope while repeat return stays camera-only", () => {
   assert.match(
     lessonMapSource,
@@ -141,7 +195,9 @@ test("scope controls preserve origin and disclose the active basis accessibly", 
   assert.match(lessonMapSource, /\{proximityOrigin\.label\}からの距離/);
   assert.match(lessonMapSource, /`\$\{proximityOrigin\.label\}から近い10店舗`/);
   assert.match(lessonMapSource, /"この地図範囲の店舗"/);
-  assert.match(lessonMapSource, /`\$\{proximityOrigin\.label\}から近い順 \/ \$\{listCandidates\.length\}件中（最大10件）`/);
+  assert.match(lessonMapSource, /`地図の中心に近い順 \/ \$\{listCandidates\.length\}件中（最大10件）`/);
+  assert.match(lessonMapSource, /`地図中心から\$\{formatDistanceLabel\(mapCenterDistanceKm\)\}`/);
+  assert.match(lessonMapSource, /rankLessonLocationsByMapCenter\(listCandidates, mapViewportCenter\)/);
   assert.match(lessonMapSource, /近い順で見る/);
   assert.match(lessonMapSource, /この地図範囲から探す/);
   assert.match(lessonMapSource, /aria-pressed=\{listScope === "nearby"\}/);

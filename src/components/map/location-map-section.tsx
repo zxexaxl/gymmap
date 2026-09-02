@@ -13,6 +13,8 @@ import {
 import {
   createCurrentLocationProximityOrigin,
   DEFAULT_LESSON_PROXIMITY_ORIGIN,
+  haversineDistanceKm,
+  rankLessonLocationsByMapCenter,
   rankLessonLocationsByProximity,
   type LessonCoordinates,
   type LessonProximityOrigin,
@@ -88,6 +90,17 @@ function isLocationInsideBounds(location: GymLocation, bounds: MapBounds | null)
     location.longitude <= bounds.east &&
     location.longitude >= bounds.west
   );
+}
+
+function getMapBoundsCenter(bounds: MapBounds | null): Coordinates | null {
+  if (!bounds) {
+    return null;
+  }
+
+  return {
+    latitude: (bounds.north + bounds.south) / 2,
+    longitude: (bounds.east + bounds.west) / 2,
+  };
 }
 
 export function LocationMapSection({ locations, lessonIndex }: LocationMapSectionProps) {
@@ -219,6 +232,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     new Set(mappableLocations.map((location) => location.prefecture).filter((name): name is string => Boolean(name))),
   ).sort((left, right) => left.localeCompare(right, "ja"));
   const maximumDistanceKm = distanceFilter ? Number(distanceFilter) : null;
+  const mapViewportCenter = getMapBoundsCenter(mapBounds);
   const listCandidates = mappableLocations.filter((location) => {
     if (normalizedQuery && !matchedLocationIds.has(location.id)) {
       return false;
@@ -238,7 +252,11 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
 
     return listScope !== "map" || isLocationInsideBounds(location, mapBounds);
   });
-  const nearbyLocations = listCandidates.slice(0, 10);
+  const rankedListCandidates =
+    listScope === "map" && mapViewportCenter
+      ? rankLessonLocationsByMapCenter(listCandidates, mapViewportCenter)
+      : listCandidates;
+  const nearbyLocations = rankedListCandidates.slice(0, 10);
   const selectionEntities = useMemo(
     () => locations.map((location) => ({ id: location.id, publicKey: location.slug })),
     [locations],
@@ -328,6 +346,22 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
     return query ? `/search?${query}` : `/search?area=${encodeURIComponent(location.name)}`;
   }
 
+  function formatLocationDistance(location: GymLocation & { distanceKm?: number | null }) {
+    if (listScope === "map" && mapViewportCenter && location.latitude !== null && location.longitude !== null) {
+      const mapCenterDistanceKm =
+        "mapCenterDistanceKm" in location && typeof location.mapCenterDistanceKm === "number"
+          ? location.mapCenterDistanceKm
+          : haversineDistanceKm(mapViewportCenter, {
+              latitude: location.latitude,
+              longitude: location.longitude,
+            });
+
+      return `地図中心から${formatDistanceLabel(mapCenterDistanceKm)}`;
+    }
+
+    return formatDistanceLabel(location.distanceKm ?? null);
+  }
+
   function renderSelectedLocationContent() {
     if (!selectedLocation) {
       return null;
@@ -341,7 +375,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
         <p className="muted">
           {getLocationAddress(selectedLocation.prefecture, selectedLocation.city, selectedLocation.address_line)}
         </p>
-        <p className="muted">{formatDistanceLabel(selectedLocation.distanceKm ?? null)}</p>
+        <p className="muted">{formatLocationDistance(selectedLocation)}</p>
         {normalizedQuery && formatMatchedLessonSummary(selectedLocation.id) ? (
           <p className="muted">一致レッスン: {formatMatchedLessonSummary(selectedLocation.id)}</p>
         ) : null}
@@ -399,7 +433,9 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   }, [handleClearSelection]);
 
   const statusLabel =
-    geolocationStatus === "obtained"
+    listScope === "map"
+      ? "地図の中心に近い順"
+      : geolocationStatus === "obtained"
       ? `現在地を地図に表示中 / ${proximityOrigin.label}を基準に近い順`
       : geolocationStatus === "requesting"
         ? "現在地を取得中"
@@ -539,7 +575,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
               </h3>
               <span>
                 {listScope === "map"
-                  ? `${proximityOrigin.label}から近い順 / ${listCandidates.length}件中（最大10件）`
+                  ? `地図の中心に近い順 / ${listCandidates.length}件中（最大10件）`
                   : `${listCandidates.length}件中`}
               </span>
             </div>
@@ -571,7 +607,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
                     <h3>{location.name}</h3>
                     <p className="muted">
                       {getLocationAddress(location.prefecture, location.city, location.address_line)} ・{" "}
-                      {formatDistanceLabel(location.distanceKm ?? null)}
+                      {formatLocationDistance(location)}
                     </p>
                   </div>
                 </article>
