@@ -1,0 +1,3180 @@
+{
+  "authority": {
+    "schema_version": 1,
+    "source_main": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "h3_11a_protocol_key": "hyrox-review-coverage",
+    "h3_11a_protocol_version": "h3-11a-v1",
+    "h3_11c_candidate": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "reviewed_at": "2026-09-02T10:00:00.000Z",
+    "candidate_only": true,
+    "production_writes": false,
+    "station_derivation": false
+  },
+  "semantics": {
+    "public_domain_claims_positive_only": true,
+    "access_restrictions_internal_only": true,
+    "negative_or_restriction_publication_authorized": false,
+    "absence_is_not_unavailable": true,
+    "source_fact_is_not_derived_station_state": true
+  },
+  "facilities": [
+    {
+      "identity": {
+        "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+        "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+        "slug": "club-360-1060046",
+        "facility_name": "CLUB 360",
+        "brand": "CLUB 360",
+        "prefecture": "東京都",
+        "city": "港区",
+        "address": "106-0046, Minato City, Vort Building B1",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-f50a268869cfd07c",
+        "src-75b51f42cb58283c"
+      ],
+      "fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-coaching-hyrox",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-row-erg",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-sandbag",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-ski-erg",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-weighted-sled",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-program-private-simulation",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-open-gym",
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+        "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+        "slug": "fitone-shibuya-1500011",
+        "facility_name": "FITONE SHIBUYA",
+        "brand": "FITONE SHIBUYA",
+        "prefecture": "東京都",
+        "city": "渋谷区",
+        "address": "150-0011, Shibuya, 2-17-9 Higashi, Shibuya-ku",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-6563ef5f6053bb20",
+        "src-a48a70a7cd91aa43"
+      ],
+      "fact_ids": [
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-coaching-hyrox",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-weighted-sled",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running",
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-usage-open-gym"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+        "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+        "slug": "g-zone-park",
+        "facility_name": "g-zone PARK",
+        "brand": "g-zone",
+        "prefecture": "京都府",
+        "city": "京都市右京区",
+        "address": "615-0933, 京都府, 京都市右京区梅津後藤町1-3",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-a8e25bb632b3c25c",
+        "src-9d7c6221a96b6ff0",
+        "src-fd93de4a3b4d752f"
+      ],
+      "fact_ids": [
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-coaching-hyrox",
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set",
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours",
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor",
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-usage-free-use"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+        "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+        "slug": "vamos-1500011",
+        "facility_name": "VAMOS",
+        "brand": "VAMOS",
+        "prefecture": "東京都",
+        "city": "渋谷区",
+        "address": "1500011, 3-20-2 KIビル, Tokyo Shibuya-ku Higashi",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-92a06be4c5082a1e",
+        "src-fb5d0715281764cc",
+        "src-bca76865cd84dfb5"
+      ],
+      "fact_ids": [
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-coaching-hyrox",
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set",
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation",
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-usage-open-gym"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+        "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+        "slug": "crossfit-ashiya",
+        "facility_name": "CrossFit Ashiya",
+        "brand": "CrossFit Ashiya",
+        "prefecture": "兵庫県",
+        "city": "芦屋市",
+        "address": "659-0013, Ashiya,HYOGO, 7-5 Iwazono-cho",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-dccfcf19f2ff6760",
+        "src-191a91bead0e5e9a",
+        "src-cb938cddb3bc0b4c",
+        "src-bcb787edf0bdecc1"
+      ],
+      "fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-coaching-program",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-farmers-implements",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-row-erg",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sandbag",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-ski-erg",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-weighted-sled",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-space-sled-turf",
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+        "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+        "slug": "improve-kyoto",
+        "facility_name": "Improve KYOTO",
+        "brand": "Improve KYOTO",
+        "prefecture": "京都府",
+        "city": "京都市中京区",
+        "address": "6048221, 京都, B1F, 280 Tenjinyama-cho, Nishikikoji-dori Muromachi Nishi-iru, Nakagyo-ku",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-826b7ae04aa7d581",
+        "src-88f0214ede1b29db",
+        "src-11499b6f05256677"
+      ],
+      "fact_ids": [
+        "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-coaching-all-stations",
+        "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-program-simulation",
+        "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+        "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+        "slug": "htc-chikusa-human-performance-training-center-4600007",
+        "facility_name": "HTC CHIKUSA– Human Performance Training Center –",
+        "brand": "HTC CHIKUSA– Human Performance Training Center –",
+        "prefecture": "愛知県",
+        "city": "名古屋市中区",
+        "address": "460-0007, Nagoya, 新栄３丁目６−３",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-4fd68eeda3981de7",
+        "src-7068c574e9c94ca8",
+        "src-fecd5cdb81a50241",
+        "src-175889803fe84dc3"
+      ],
+      "fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-coaching-all-stations",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-farmers-implements",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-row-erg",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sandbag",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-ski-erg",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-treadmill",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball-target",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-weighted-sled",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-program-simulation",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-pull",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-push",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-open-gym",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations"
+      ]
+    },
+    {
+      "identity": {
+        "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+        "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+        "slug": "nota-gym-6150851",
+        "facility_name": "NOTA GYM 西京極店",
+        "brand": "NOTA GYM",
+        "prefecture": "京都府",
+        "city": "京都市右京区",
+        "address": "615-0851, 京都市, 京都市右京区西京極西池田町9番地4 コスミック西京極2階",
+        "current_official": true,
+        "current_positive_enrichment_count": 0
+      },
+      "source_refs": [
+        "src-c55c78eb99ca187f",
+        "src-f8573ad47d17726d",
+        "src-751b2b6c971308c0"
+      ],
+      "fact_ids": [
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-coaching-hyrox",
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-row-erg",
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-ski-erg"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_ref": "src-f50a268869cfd07c",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/minato-city/club-360-HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/minato-city/club-360-HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at CLUB 360 in Minato City | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:50:58.135Z",
+      "content_sha256": "b62944e193adc9a3b15388a5f1f5c4d78e06cd550cfd48bf74726ecc94a2e124",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "987a402d-6303-45a7-9b17-06c2d1984cfc",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-75b51f42cb58283c",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "requested_url": "https://www.club360.jp/hyrox",
+      "final_url": "https://www.club360.jp/hyrox",
+      "canonical_url": "https://www.club360.jp/hyrox",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "HYROX SERVICES | Club 360",
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against CLUB 360."
+    },
+    {
+      "source_ref": "src-6563ef5f6053bb20",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "requested_url": "https://fitone-club.com/",
+      "final_url": "https://fitone-club.com/",
+      "canonical_url": "https://fitone-club.com/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against FITONE SHIBUYA."
+    },
+    {
+      "source_ref": "src-a48a70a7cd91aa43",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/shibuya/fitone-shibuya-HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/shibuya/fitone-shibuya-HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at FITONE SHIBUYA in Shibuya | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:01.713Z",
+      "content_sha256": "d290a2f8413bb62d3fd8756b61ce3853c9a35b9234ab80e2780b8abe5e9bcf5d",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "cc1e4710-e0a3-46b3-8aa4-473b7c500aa7",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-a8e25bb632b3c25c",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "requested_url": "https://g-zone.co.jp/park/",
+      "final_url": "https://g-zone.co.jp/park/",
+      "canonical_url": "https://g-zone.co.jp/park/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "g-zone park｜HYROX・パーソナル・少人数制フィットネス",
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "content_sha256": "ed309efd79194495a055c8c7dc95c3d7d1d383544969e03ecb088602846cfc0d",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against g-zone PARK."
+    },
+    {
+      "source_ref": "src-9d7c6221a96b6ff0",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "requested_url": "https://g-zone.co.jp/park/hyrox/",
+      "final_url": "https://g-zone.co.jp/park/hyrox/",
+      "canonical_url": "https://g-zone.co.jp/park/hyrox/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "Hyroxトレーニング｜g-zone park",
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against g-zone PARK."
+    },
+    {
+      "source_ref": "src-fd93de4a3b4d752f",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/g-zone-park-HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/g-zone-park-HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at g-zone PARK in 京都府 | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:02.947Z",
+      "content_sha256": "e67d562c402fddfeab0aa39581228a940d24c90e8e22b5db8e80c7dc788e3387",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "18ecd043-1afe-4e7c-9363-fc2fc174bd48",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-92a06be4c5082a1e",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/3-20-2-ki/vamos-HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/3-20-2-ki/vamos-HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at VAMOS in 3-20-2 Kiビル | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:02.948Z",
+      "content_sha256": "eb713b85cff7d81e2c54abb8be11803470cc06a8ec694c17996a6d2475e545b1",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "29c3bc1a-b17e-4d1b-abcc-3b86ceebcb40",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-fb5d0715281764cc",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "requested_url": "https://vamos-training.com/ja",
+      "final_url": "https://vamos-training.com/ja",
+      "canonical_url": null,
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "VAMOS — HYROX Training in Ebisu, Tokyo",
+      "observed_at": "2026-09-02T09:51:02.948Z",
+      "content_sha256": "c457d73de2a0c8db0c1bda8ad2bbb2a8bafff9a3fa1d8a182e42be4725ea6993",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against VAMOS."
+    },
+    {
+      "source_ref": "src-bca76865cd84dfb5",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "requested_url": "https://vamos-training.com/ja/classes",
+      "final_url": "https://vamos-training.com/ja/classes",
+      "canonical_url": null,
+      "source_class": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "今すぐ予約 · VAMOS",
+      "observed_at": "2026-09-02T09:51:05.303Z",
+      "content_sha256": "6bf2576606658d811c578298854cf12d9ed0c46bb73ce6d23b48630035e03e9d",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against VAMOS."
+    },
+    {
+      "source_ref": "src-dccfcf19f2ff6760",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "requested_url": "https://crossfitashiya.com/",
+      "final_url": "https://crossfitashiya.com/",
+      "canonical_url": "https://crossfitashiya.com/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "芦屋初の本格的CrossFitトレーニングジム誕生 - HYROX認定ジム",
+      "observed_at": "2026-09-02T09:51:05.304Z",
+      "content_sha256": "462aa58e4ddf837c33c66798345f58135db9233a314ab1cb79b8981a4ff32e1d",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against CrossFit Ashiya."
+    },
+    {
+      "source_ref": "src-191a91bead0e5e9a",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "requested_url": "https://crossfitashiya.com/facility",
+      "final_url": "https://crossfitashiya.com/facility/",
+      "canonical_url": "http://crossfitashiya.com/facility/",
+      "source_class": "OFFICIAL_IMAGE_GALLERY",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "施設紹介 - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "observed_at": "2026-09-02T09:51:05.305Z",
+      "content_sha256": "3e2a8a2107e5089ac836419164ae7c067a52c8013cae127c6942105b066467e0",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against CrossFit Ashiya."
+    },
+    {
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "requested_url": "https://crossfitashiya.com/hyrox",
+      "final_url": "https://crossfitashiya.com/hyrox/",
+      "canonical_url": "https://crossfitashiya.com/hyrox/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against CrossFit Ashiya."
+    },
+    {
+      "source_ref": "src-bcb787edf0bdecc1",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/ashiya-hyogo/crossfit-ashiya-HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/ashiya-hyogo/crossfit-ashiya-HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at CrossFit Ashiya in Ashiya,HYOGO | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:07.358Z",
+      "content_sha256": "de9654199c5bbd826c1226a65e745cba2c83b4f0db41dd6549997f00368da537",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "d18322e6-02c1-46ff-aac2-b201407bc6f7",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-826b7ae04aa7d581",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/improve-kyoto-HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/improve-kyoto-HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at Improve KYOTO in 京都 | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:07.358Z",
+      "content_sha256": "e0718554e179629bd6e9c5d45044a69c8ac333cdf7c208c07ec94f3abee04f0d",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "312286dc-b864-4672-aaed-01147cb3d7f7",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-88f0214ede1b29db",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "requested_url": "https://improve-hyrox.com/",
+      "final_url": "https://improve-hyrox.com/",
+      "canonical_url": "https://improve-hyrox.com/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "Improve KYOTO HYROX Training Club | 京都・関西最大級のHYROXトレーニングクラブ",
+      "observed_at": "2026-09-02T09:51:09.308Z",
+      "content_sha256": "307b89e971be1c1d0ad1bc9422fe1e939a11e48f0e88bb73d4f4989751f15d6a",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against Improve KYOTO."
+    },
+    {
+      "source_ref": "src-11499b6f05256677",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "requested_url": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "final_url": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "canonical_url": null,
+      "source_class": "OFFICIAL_BOOKING_MEMBER_SYSTEM",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "hacomono",
+      "observed_at": "2026-09-02T09:51:09.309Z",
+      "content_sha256": "088473deaeede10dd0f679ca10fdae66a119b0dcadb8767ac19e32d7e4c1ed72",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against Improve KYOTO."
+    },
+    {
+      "source_ref": "src-4fd68eeda3981de7",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "requested_url": "https://htc-chikusa.com/",
+      "final_url": "https://htc-chikusa.com/",
+      "canonical_url": "https://htc-chikusa.com/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "HTC CHIKUSA｜千種駅徒歩5分のジム・HYROX TRAINING CLUB（名古屋）",
+      "observed_at": "2026-09-02T09:51:09.309Z",
+      "content_sha256": "d5d6ecd3d05280e8a3a08671bfbe49ca5d576d266e8ce9d88d906ddff882e1a8",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against HTC CHIKUSA– Human Performance Training Center –."
+    },
+    {
+      "source_ref": "src-7068c574e9c94ca8",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "requested_url": "https://htc-chikusa.com/facility.html",
+      "final_url": "https://htc-chikusa.com/facility.html",
+      "canonical_url": "https://htc-chikusa.com/facility.html",
+      "source_class": "OFFICIAL_IMAGE_GALLERY",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against HTC CHIKUSA– Human Performance Training Center –."
+    },
+    {
+      "source_ref": "src-fecd5cdb81a50241",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "requested_url": "https://htc-chikusa.com/program.html",
+      "final_url": "https://htc-chikusa.com/program.html",
+      "canonical_url": "https://htc-chikusa.com/program.html",
+      "source_class": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against HTC CHIKUSA– Human Performance Training Center –."
+    },
+    {
+      "source_ref": "src-175889803fe84dc3",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/nagoya/htc-chikusa-human-performance-training-center-HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/nagoya/htc-chikusa-human-performance-training-center-HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at HTC CHIKUSA– Human Performance Training Center – in Nagoya | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:10.780Z",
+      "content_sha256": "9f26bbc772ad43ad7cce3a31bb2ef841b07c65c56be942314eb80706fcb5c1c6",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "d21c41a0-c3c1-43d7-9800-2d01e5688696",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-c55c78eb99ca187f",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "requested_url": "https://hyrox-training-finder.hyrox.com/gym/HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "final_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/nota-gym-HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "canonical_url": "https://hyrox-training-finder.hyrox.com/gyms/jp/nota-gym-HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "source_class": "GOVERNING_BODY_FINDER_DETAIL",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "FOLLOWED",
+      "page_title": "HYROX Training at NOTA GYM 西京極店 in 京都市 | HYROX Training Finder",
+      "observed_at": "2026-09-02T09:51:11.876Z",
+      "content_sha256": "c07117b9c35f457d238ce20b8ebdb4c41859674ef6d0147a87f71387b86a7171",
+      "training_source_resolution": "REUSE_EXISTING_TRAINING_SOURCE",
+      "existing_training_source_id": "65d4faf5-96d4-40a8-ae2b-2c84621abca2",
+      "identity_binding_basis": "Exact HGY identity in governing-body Finder detail."
+    },
+    {
+      "source_ref": "src-f8573ad47d17726d",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "requested_url": "https://nota-gym.com/",
+      "final_url": "https://nota-gym.com/",
+      "canonical_url": "https://nota-gym.com/",
+      "source_class": "FACILITY_SPECIFIC_OFFICIAL_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "京都・西京極のセミパーソナルジムならNOTA GYM",
+      "observed_at": "2026-09-02T09:51:11.877Z",
+      "content_sha256": "1a758ee1c9747eb67d3a8ff8a5adaab1743a1329cb90f7fe64d8c83b073fa6a7",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against NOTA GYM 西京極店."
+    },
+    {
+      "source_ref": "src-751b2b6c971308c0",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "requested_url": "https://nota-gym.com/hyrox/",
+      "final_url": "https://nota-gym.com/hyrox/",
+      "canonical_url": "https://nota-gym.com/hyrox/",
+      "source_class": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facility_binding": "FACILITY_SPECIFIC",
+      "access_state": "AVAILABLE",
+      "http_status": 200,
+      "redirect_behavior": "NONE",
+      "page_title": "京都でHYROX（ハイロックス）ならNOTA GYM",
+      "observed_at": "2026-09-02T09:51:11.878Z",
+      "content_sha256": "ef700a34b7a73c5b4925f95a996ba4d734384f04ff53b72b36ac088323a17d2c",
+      "training_source_resolution": "NEW_TRAINING_SOURCE_CANDIDATE",
+      "existing_training_source_id": null,
+      "identity_binding_basis": "Facility-specific title/address/content rechecked against NOTA GYM 西京極店."
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-coaching-hyrox",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "HYROX group and personal training are offered.",
+      "structured_observation": "HYROX group and personal training are offered.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-row-erg",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "row"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "row-erg",
+      "statement": "Open Gym lists rowing machines among HYROX training equipment.",
+      "structured_observation": "Open Gym lists rowing machines among HYROX training equipment.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "row-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-sandbag",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "sandbag",
+      "statement": "Open Gym lists sandbags among HYROX training equipment; movement space is not established.",
+      "structured_observation": "Open Gym lists sandbags among HYROX training equipment; movement space is not established.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "sandbag"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-ski-erg",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "ski-erg",
+      "statement": "Open Gym lists SkiErg among HYROX training equipment.",
+      "structured_observation": "Open Gym lists SkiErg among HYROX training equipment.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "ski-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-weighted-sled",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "weighted-sled",
+      "statement": "Open Gym lists sleds among HYROX training equipment; rope and lane are not established.",
+      "structured_observation": "Open Gym lists sleds among HYROX training equipment; rope and lane are not established.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "weighted-sled"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-program-private-simulation",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "competition-simulation",
+      "statement": "A private HYROX race simulation is offered in Singles and Doubles formats.",
+      "structured_observation": "A private HYROX race simulation is offered in Singles and Doubles formats.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "competition-simulation"
+      },
+      "freshness_policy_key": "competition-simulation-30-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-open-gym",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "open-training",
+      "statement": "Open Gym is offered for people training by themselves for HYROX.",
+      "structured_observation": "Open Gym is offered for people training by themselves for HYROX.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "open-training"
+      },
+      "freshness_policy_key": "open-training-90-day"
+    },
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "usage-program-simulation",
+      "statement": "Booked participants can use the station set in a private HYROX race simulation.",
+      "structured_observation": "Booked participants can use the station set in a private HYROX race simulation.",
+      "evidence_location_context": "HYROX SERVICES | Club 360",
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ],
+      "source_urls": [
+        "https://www.club360.jp/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.150Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "54248b4c7ca416d0adf071e3db709984e456358cb74132c36608ee60a36fe31a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_USAGE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-coaching-hyrox",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "Coach-led 45-minute HYROX-based lessons are offered.",
+      "structured_observation": "Coach-led 45-minute HYROX-based lessons are offered.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "equipment-sled-rope",
+      "statement": "Facility presentation explicitly identifies ROPE alongside SLED.",
+      "structured_observation": "Facility presentation explicitly identifies ROPE alongside SLED.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-weighted-sled",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "weighted-sled",
+      "statement": "Facility presentation explicitly identifies SLED.",
+      "structured_observation": "Facility presentation explicitly identifies SLED.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "weighted-sled"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_ACCESS_RESTRICTION_EVIDENCE",
+      "normalized_value_key": "restriction-open-gym-membership",
+      "statement": "OPEN GYM use is limited to UNLIMITED and OPEN GYM membership categories.",
+      "structured_observation": "OPEN GYM use is limited to UNLIMITED and OPEN GYM membership categories.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": false,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RESTRICTION_PERSISTENCE_GAP",
+        "gap_subtype": "RESTRICTION_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [
+        "sled-push",
+        "sled-pull",
+        "farmers-carry"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-push-pull-carry",
+      "statement": "Training floor states that pushing, pulling, and carrying movements can be completed there; exact lane dimensions are not stated.",
+      "structured_observation": "Training floor states that pushing, pulling, and carrying movements can be completed there; exact lane dimensions are not stated.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [
+        "running-environment"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-running",
+      "statement": "Training floor states that running movement can be completed there; full HYROX running practice is not derived.",
+      "structured_observation": "Training floor states that running movement can be completed there; full HYROX running practice is not derived.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-usage-open-gym",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "open-training",
+      "statement": "OPEN GYM permits autonomous use of the floor between lessons for eligible members.",
+      "structured_observation": "OPEN GYM permits autonomous use of the floor between lessons for eligible members.",
+      "evidence_location_context": "FITONE SHIBUYA | 渋谷・恵比寿のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ],
+      "source_urls": [
+        "https://fitone-club.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:50:58.151Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "61faee91390b61aacdb582d3830fd1ee1d4da2c088276a938390dad17532960c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "open-training"
+      },
+      "freshness_policy_key": "open-training-90-day"
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-coaching-hyrox",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "dimensions": [],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "Certified coaches deliver HYROX classes and movement instruction.",
+      "structured_observation": "Certified coaches deliver HYROX classes and movement instruction.",
+      "evidence_location_context": "Hyroxトレーニング｜g-zone park",
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "source_urls": [
+        "https://g-zone.co.jp/park/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "dimensions": [],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_SOURCE_ASSERTION",
+      "normalized_value_key": "equipment-official-tools-set",
+      "statement": "The facility states that official HYROX tools are used, without itemizing station components.",
+      "structured_observation": "The facility states that official HYROX tools are used, without itemizing station components.",
+      "evidence_location_context": "Hyroxトレーニング｜g-zone park",
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "source_urls": [
+        "https://g-zone.co.jp/park/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_ACCESS_RESTRICTION_EVIDENCE",
+      "normalized_value_key": "restriction-program-hours",
+      "statement": "Facility free-use is not offered during the enumerated PARK program hours and requires a reservation slot.",
+      "structured_observation": "Facility free-use is not offered during the enumerated PARK program hours and requires a reservation slot.",
+      "evidence_location_context": "Hyroxトレーニング｜g-zone park",
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "source_urls": [
+        "https://g-zone.co.jp/park/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": false,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RESTRICTION_PERSISTENCE_GAP",
+        "gap_subtype": "RESTRICTION_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "dimensions": [],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-training-floor",
+      "statement": "The HYROX page describes an approximately 90-tsubo training floor.",
+      "structured_observation": "The HYROX page describes an approximately 90-tsubo training floor.",
+      "evidence_location_context": "Hyroxトレーニング｜g-zone park",
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "source_urls": [
+        "https://g-zone.co.jp/park/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-usage-free-use",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "open-training",
+      "statement": "Reserved facility free-use is offered to members and visitors, with stated unavailable program hours.",
+      "structured_observation": "Reserved facility free-use is offered to members and visitors, with stated unavailable program hours.",
+      "evidence_location_context": "Hyroxトレーニング｜g-zone park",
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "source_urls": [
+        "https://g-zone.co.jp/park/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:01.714Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "8c3c2ff0174235276595e4bec807338da4c8e7aba3be23a44561dbc0e37b9717",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "open-training"
+      },
+      "freshness_policy_key": "open-training-90-day"
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-coaching-hyrox",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "dimensions": [],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "HYROX performance coaches deliver current HYROX and entry-level classes.",
+      "structured_observation": "HYROX performance coaches deliver current HYROX and entry-level classes.",
+      "evidence_location_context": "今すぐ予約 · VAMOS",
+      "source_refs": [
+        "src-bca76865cd84dfb5"
+      ],
+      "source_urls": [
+        "https://vamos-training.com/ja/classes"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:05.303Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "6bf2576606658d811c578298854cf12d9ed0c46bb73ce6d23b48630035e03e9d",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "dimensions": [],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_SOURCE_ASSERTION",
+      "normalized_value_key": "equipment-official-set",
+      "statement": "VAMOS states that official HYROX equipment is fully provided but does not itemize components on the reviewed page.",
+      "structured_observation": "VAMOS states that official HYROX equipment is fully provided but does not itemize components on the reviewed page.",
+      "evidence_location_context": "VAMOS — HYROX Training in Ebisu, Tokyo",
+      "source_refs": [
+        "src-fb5d0715281764cc"
+      ],
+      "source_urls": [
+        "https://vamos-training.com/ja"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:02.948Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c457d73de2a0c8db0c1bda8ad2bbb2a8bafff9a3fa1d8a182e42be4725ea6993",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_ACCESS_RESTRICTION_EVIDENCE",
+      "normalized_value_key": "restriction-reservation",
+      "statement": "OPEN GYM appears as reservable timed sessions governed by the published cancellation policy.",
+      "structured_observation": "OPEN GYM appears as reservable timed sessions governed by the published cancellation policy.",
+      "evidence_location_context": "今すぐ予約 · VAMOS",
+      "source_refs": [
+        "src-bca76865cd84dfb5"
+      ],
+      "source_urls": [
+        "https://vamos-training.com/ja/classes"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:05.303Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "6bf2576606658d811c578298854cf12d9ed0c46bb73ce6d23b48630035e03e9d",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": false,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RESTRICTION_PERSISTENCE_GAP",
+        "gap_subtype": "RESTRICTION_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-usage-open-gym",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "open-training",
+      "statement": "The current schedule includes bookable OPEN GYM autonomous-training slots.",
+      "structured_observation": "The current schedule includes bookable OPEN GYM autonomous-training slots.",
+      "evidence_location_context": "今すぐ予約 · VAMOS",
+      "source_refs": [
+        "src-bca76865cd84dfb5"
+      ],
+      "source_urls": [
+        "https://vamos-training.com/ja/classes"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:05.303Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "6bf2576606658d811c578298854cf12d9ed0c46bb73ce6d23b48630035e03e9d",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "open-training"
+      },
+      "freshness_policy_key": "open-training-90-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-coaching-program",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "Coach-led HYROX classes follow the race format.",
+      "structured_observation": "Coach-led HYROX classes follow the race format.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-farmers-implements",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "farmers-carry-implements",
+      "statement": "Kettlebells are listed at HYROX category weights for Farmers Carry.",
+      "structured_observation": "Kettlebells are listed at HYROX category weights for Farmers Carry.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "farmers-carry-implements"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-row-erg",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "row"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "row-erg",
+      "statement": "Four Concept2 rowing machines are explicitly listed.",
+      "structured_observation": "Four Concept2 rowing machines are explicitly listed.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "row-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sandbag",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "sandbag",
+      "statement": "Sandbags matching race shape and weights are explicitly listed.",
+      "structured_observation": "Sandbags matching race shape and weights are explicitly listed.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "sandbag"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-ski-erg",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "ski-erg",
+      "statement": "One Concept2 SkiErg is explicitly listed.",
+      "structured_observation": "One Concept2 SkiErg is explicitly listed.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "ski-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "equipment-sled-rope",
+      "statement": "A CENTR official sled-pull rope is explicitly listed.",
+      "structured_observation": "A CENTR official sled-pull rope is explicitly listed.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "equipment-wall-ball",
+      "statement": "CENTR wall balls at HYROX category weights are explicitly listed; target evidence is separate and absent.",
+      "structured_observation": "CENTR wall balls at HYROX category weights are explicitly listed; target evidence is separate and absent.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-weighted-sled",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "weighted-sled",
+      "statement": "One CENTR 50 kg sled and category plates are explicitly listed.",
+      "structured_observation": "One CENTR 50 kg sled and category plates are explicitly listed.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "weighted-sled"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-space-sled-turf",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "sled-push-pull-space",
+      "statement": "HYROX-equivalent turf is explicitly installed for Sled Push/Pull practice.",
+      "structured_observation": "HYROX-equivalent turf is explicitly installed for Sled Push/Pull practice.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "sled-push-pull-space"
+      },
+      "freshness_policy_key": "sled-push-pull-space-90-day"
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "usage-program",
+      "statement": "HYROX class drop-in and reserved group/solo facility rental are offered for HYROX practice.",
+      "structured_observation": "HYROX class drop-in and reserved group/solo facility rental are offered for HYROX practice.",
+      "evidence_location_context": "HYROX - クロスフィット芦屋｜セミパーソナルトレーニングジム - HYROX認定ジム",
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "source_urls": [
+        "https://crossfitashiya.com/hyrox"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:07.357Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "806973b11cf6049c240be4cb90ee2bb0baaaf916b15c0d3190ed7450510a7d6b",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_USAGE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-coaching-all-stations",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls",
+        "running-environment"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "Qualified trainers deliver the 60-minute HYROX class across all eight stations and running.",
+      "structured_observation": "Qualified trainers deliver the 60-minute HYROX class across all eight stations and running.",
+      "evidence_location_context": "Improve KYOTO HYROX Training Club | 京都・関西最大級のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-88f0214ede1b29db"
+      ],
+      "source_urls": [
+        "https://improve-hyrox.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:09.308Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "307b89e971be1c1d0ad1bc9422fe1e939a11e48f0e88bb73d4f4989751f15d6a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-program-simulation",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "competition-simulation",
+      "statement": "The current official schedule lists Improve KYOTO HYROX Training Simulation sessions.",
+      "structured_observation": "The current official schedule lists Improve KYOTO HYROX Training Simulation sessions.",
+      "evidence_location_context": "hacomono",
+      "source_refs": [
+        "src-11499b6f05256677"
+      ],
+      "source_urls": [
+        "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true"
+      ],
+      "source_classes": [
+        "OFFICIAL_BOOKING_MEMBER_SYSTEM"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:09.309Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "088473deaeede10dd0f679ca10fdae66a119b0dcadb8767ac19e32d7e4c1ed72",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "competition-simulation"
+      },
+      "freshness_policy_key": "competition-simulation-30-day"
+    },
+    {
+      "fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls",
+        "running-environment"
+      ],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "usage-program-all-stations",
+      "statement": "Improve KYOTO offers a reserved HYROX class combining all eight stations and running.",
+      "structured_observation": "Improve KYOTO offers a reserved HYROX class combining all eight stations and running.",
+      "evidence_location_context": "Improve KYOTO HYROX Training Club | 京都・関西最大級のHYROXトレーニングクラブ",
+      "source_refs": [
+        "src-88f0214ede1b29db"
+      ],
+      "source_urls": [
+        "https://improve-hyrox.com/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:09.308Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "307b89e971be1c1d0ad1bc9422fe1e939a11e48f0e88bb73d4f4989751f15d6a",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_USAGE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-coaching-all-stations",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "Small-group coaching covers the official eight stations with form oversight.",
+      "structured_observation": "Small-group coaching covers the official eight stations with form oversight.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-farmers-implements",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "farmers-carry-implements",
+      "statement": "The Farmers Carry station explicitly uses carried weights.",
+      "structured_observation": "The Farmers Carry station explicitly uses carried weights.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "farmers-carry-implements"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-row-erg",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "row"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "row-erg",
+      "statement": "Rowing equipment is explicitly placed on the second-floor endurance zone.",
+      "structured_observation": "Rowing equipment is explicitly placed on the second-floor endurance zone.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "row-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sandbag",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "sandbag",
+      "statement": "The Sandbag Lunges station explicitly uses a carried sandbag.",
+      "structured_observation": "The Sandbag Lunges station explicitly uses a carried sandbag.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "sandbag"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-ski-erg",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "ski-erg",
+      "statement": "SkiErg is explicitly placed on the second-floor endurance zone.",
+      "structured_observation": "SkiErg is explicitly placed on the second-floor endurance zone.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "ski-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "equipment-sled-rope",
+      "statement": "The Sled Pull program explicitly describes a rope and sled.",
+      "structured_observation": "The Sled Pull program explicitly describes a rope and sled.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-treadmill",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "running-environment"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "treadmill",
+      "statement": "A treadmill is explicitly placed on the second floor.",
+      "structured_observation": "A treadmill is explicitly placed on the second floor.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "treadmill"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "equipment-wall-ball",
+      "statement": "The Wall Balls station explicitly uses a ball.",
+      "structured_observation": "The Wall Balls station explicitly uses a ball.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_COMPONENT_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball-target",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "wall-ball-target",
+      "statement": "The Wall Balls program explicitly describes throwing the ball to a target.",
+      "structured_observation": "The Wall Balls program explicitly describes throwing the ball to a target.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "wall-ball-target"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-weighted-sled",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "weighted-sled",
+      "statement": "The program describes a weighted sled for Sled Push and Sled Pull.",
+      "structured_observation": "The program describes a weighted sled for Sled Push and Sled Pull.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "weighted-sled"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-program-simulation",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "competition-simulation",
+      "statement": "HYROX simulation is explicitly offered in race format.",
+      "structured_observation": "HYROX simulation is explicitly offered in race format.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "competition-simulation"
+      },
+      "freshness_policy_key": "competition-simulation-30-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_ACCESS_RESTRICTION_EVIDENCE",
+      "normalized_value_key": "restriction-open-gym-plan",
+      "statement": "Open Gym availability is limited to class-external time and varies by membership plan.",
+      "structured_observation": "Open Gym availability is limited to class-external time and varies by membership plan.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": false,
+      "public_negative_authorized": false,
+      "closure": "PARTIAL_POSITIVE",
+      "persistence": {
+        "fit": "RESTRICTION_PERSISTENCE_GAP",
+        "gap_subtype": "RESTRICTION_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "burpee-broad-jump"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-burpee-broad-jump",
+      "statement": "The first-floor layout explicitly assigns usable space to burpee-broad-jump; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to burpee-broad-jump; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-farmers-carry",
+      "statement": "The first-floor layout explicitly assigns usable space to farmers-carry; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to farmers-carry; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "running-environment"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-running",
+      "statement": "The facility states that running and all eight stations can be completed indoors, with treadmill provision.",
+      "structured_observation": "The facility states that running and all eight stations can be completed indoors, with treadmill provision.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-sandbag-lunges",
+      "statement": "The first-floor layout explicitly assigns usable space to sandbag-lunges; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to sandbag-lunges; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-pull",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sled-pull"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "sled-push-pull-space",
+      "statement": "The first-floor layout explicitly assigns usable space to sled-pull; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to sled-pull; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "sled-push-pull-space"
+      },
+      "freshness_policy_key": "sled-push-pull-space-90-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-push",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "sled-push"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "sled-push-pull-space",
+      "statement": "The first-floor layout explicitly assigns usable space to sled-push; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to sled-push; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "sled-push-pull-space"
+      },
+      "freshness_policy_key": "sled-push-pull-space-90-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "review_aspect": "SPACE_FACT",
+      "candidate_fact_type": "RAW_SPACE_FACT",
+      "normalized_value_key": "space-wall-balls",
+      "statement": "The first-floor layout explicitly assigns usable space to wall-balls; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "structured_observation": "The first-floor layout explicitly assigns usable space to wall-balls; Wall Balls additionally has a 3 m ceiling and regulation-condition statement.",
+      "evidence_location_context": "施設・設備｜HYROX全8種目完備・一棟二層ジム | HTC CHIKUSA",
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/facility.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_IMAGE_GALLERY"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.778Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "c86e26e21b1fd4d43c68502bc0a5f46054bac82b67ba9c614ec23793a0e4cb0c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_SPACE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-open-gym",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "open-training",
+      "statement": "Open Gym provides autonomous training during class-external slots according to membership plan.",
+      "structured_observation": "Open Gym provides autonomous training during class-external slots according to membership plan.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "open-training"
+      },
+      "freshness_policy_key": "open-training-90-day"
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "review_aspect": "USAGE_ACCESS_FACT",
+      "candidate_fact_type": "RAW_USAGE_FACT",
+      "normalized_value_key": "usage-program-all-stations",
+      "statement": "All-plan members can undertake the official eight-station system; HYROX simulation is also offered.",
+      "structured_observation": "All-plan members can undertake the official eight-station system; HYROX simulation is also offered.",
+      "evidence_location_context": "プログラム・クラス紹介｜HYROXトレーニング | HTC CHIKUSA 名古屋",
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ],
+      "source_urls": [
+        "https://htc-chikusa.com/program.html"
+      ],
+      "source_classes": [
+        "OFFICIAL_PROGRAM_SERVICE_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:10.779Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "RAW_FACT_PERSISTENCE_GAP",
+        "gap_subtype": "RAW_USAGE_PERSISTENCE_GAP"
+      },
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-coaching-hyrox",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "dimensions": [],
+      "review_aspect": "COACHING_PROGRAM_FACT",
+      "candidate_fact_type": "RAW_COACHING_PROGRAM_FACT",
+      "normalized_value_key": "discipline-coaching",
+      "statement": "The semipersonal gym offers trainer-supported HYROX-oriented training and lessons.",
+      "structured_observation": "The semipersonal gym offers trainer-supported HYROX-oriented training and lessons.",
+      "evidence_location_context": "京都でHYROX（ハイロックス）ならNOTA GYM",
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ],
+      "source_urls": [
+        "https://nota-gym.com/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:11.878Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "ef700a34b7a73c5b4925f95a996ba4d734384f04ff53b72b36ac088323a17d2c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_training_capabilities",
+        "capability_slug": "discipline-coaching"
+      },
+      "freshness_policy_key": "discipline-coaching-90-day"
+    },
+    {
+      "fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-row-erg",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "dimensions": [
+        "row"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "row-erg",
+      "statement": "NOTA explicitly states that its environment includes rowing machines.",
+      "structured_observation": "NOTA explicitly states that its environment includes rowing machines.",
+      "evidence_location_context": "京都でHYROX（ハイロックス）ならNOTA GYM",
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ],
+      "source_urls": [
+        "https://nota-gym.com/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:11.878Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "ef700a34b7a73c5b4925f95a996ba4d734384f04ff53b72b36ac088323a17d2c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "row-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    },
+    {
+      "fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-ski-erg",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "review_aspect": "EQUIPMENT_FACT",
+      "candidate_fact_type": "RAW_EQUIPMENT_FACT",
+      "normalized_value_key": "ski-erg",
+      "statement": "NOTA explicitly states that its environment includes SkiErg.",
+      "structured_observation": "NOTA explicitly states that its environment includes SkiErg.",
+      "evidence_location_context": "京都でHYROX（ハイロックス）ならNOTA GYM",
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ],
+      "source_urls": [
+        "https://nota-gym.com/hyrox/"
+      ],
+      "source_classes": [
+        "OFFICIAL_HYROX_TRAINING_PAGE"
+      ],
+      "facility_bindings": [
+        "FACILITY_SPECIFIC"
+      ],
+      "observed_at": "2026-09-02T09:51:11.878Z",
+      "reviewed_at": "2026-09-02T10:00:00.000Z",
+      "content_sha256": "ef700a34b7a73c5b4925f95a996ba4d734384f04ff53b72b36ac088323a17d2c",
+      "reviewer_process_authority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "directness": "DIRECT_TEXT",
+      "positive_only": true,
+      "public_negative_authorized": false,
+      "closure": "COMPLETE_POSITIVE",
+      "persistence": {
+        "fit": "EXISTING_CANONICAL_PERSISTENCE",
+        "canonical_target": "location_equipment",
+        "equipment_slug": "ski-erg"
+      },
+      "freshness_policy_key": "physical-equipment-180-day"
+    }
+  ],
+  "deterministic_hashes": {
+    "COHORT_1_IDENTITY_SHA256": "1c53bd0698c0d1998f25e227409ee35c788c274994a22711e1dec1a323ce8fda",
+    "REVIEW_PACKET_SHA256": "e86585713574c03663b27cfdbb2b9c3a1ab0b5940a491a9d5b78bf73a6983172",
+    "LEDGER_CANDIDATE_SHA256": "fce0ff185ddc571c59d12c96cab80b56b574544b4de8b7a4c717d1c8c9ecd536",
+    "POSITIVE_CANDIDATE_SHA256": "fe820952c155b43ff3249ec5c686f32c92484816293c5296494abd39916a3804",
+    "PERSISTENCE_GAP_SHA256": "9cc5248c71cd941af327d79a96b91ef33cbe4041dcd58df1f3d4df61f0f1d89c"
+  }
+}

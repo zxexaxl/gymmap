@@ -1,0 +1,1043 @@
+{
+  "authority": {
+    "schema_version": 1,
+    "source_main": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "h3_11a_protocol_key": "hyrox-review-coverage",
+    "h3_11a_protocol_version": "h3-11a-v1",
+    "h3_11c_candidate": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "reviewed_at": "2026-09-02T10:00:00.000Z",
+    "candidate_only": true,
+    "production_writes": false,
+    "station_derivation": false
+  },
+  "baseline_before_candidate": {
+    "equipment_claims": 109,
+    "capability_claims": 41,
+    "cohort_existing_equipment_claims": 0,
+    "cohort_existing_capability_claims": 0
+  },
+  "equipment_claims": [
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|row-erg",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-row-erg"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|sandbag",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-sandbag"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|ski-erg",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-ski-erg"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|weighted-sled",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-weighted-sled"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|equipment|weighted-sled",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-weighted-sled"
+      ],
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|farmers-carry-implements",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-farmers-implements"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|row-erg",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-row-erg"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|sandbag",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sandbag"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|ski-erg",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-ski-erg"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|weighted-sled",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-weighted-sled"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|farmers-carry-implements",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "farmers-carry-implements",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-farmers-implements"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|row-erg",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-row-erg"
+      ],
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|sandbag",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "sandbag",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sandbag"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|ski-erg",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-ski-erg"
+      ],
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|treadmill",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "treadmill",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-treadmill"
+      ],
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|wall-ball-target",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "wall-ball-target",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball-target"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|weighted-sled",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "equipment_slug": "weighted-sled",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-weighted-sled"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|row-erg",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "equipment_slug": "row-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-row-erg"
+      ],
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ]
+    },
+    {
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|ski-erg",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "equipment_slug": "ski-erg",
+      "availability_state": "available",
+      "access_mode": "unknown",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2027-03-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-ski-erg"
+      ],
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ]
+    }
+  ],
+  "capability_claims": [
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|competition-simulation",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "capability_slug": "competition-simulation",
+      "availability_state": "available",
+      "access_mode": "appointment_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-10-02T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-program-private-simulation"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|discipline-coaching",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-coaching-hyrox"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|open-training",
+      "hgy_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "location_id": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-open-gym"
+      ],
+      "source_refs": [
+        "src-75b51f42cb58283c"
+      ]
+    },
+    {
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|discipline-coaching",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-coaching-hyrox"
+      ],
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ]
+    },
+    {
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|open-training",
+      "hgy_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "location_id": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-usage-open-gym"
+      ],
+      "source_refs": [
+        "src-6563ef5f6053bb20"
+      ]
+    },
+    {
+      "claim_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|discipline-coaching",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-coaching-hyrox"
+      ],
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ]
+    },
+    {
+      "claim_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|open-training",
+      "hgy_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "location_id": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_C0V7CK7K15SLUrMhBvyyO0phM-usage-free-use"
+      ],
+      "source_refs": [
+        "src-9d7c6221a96b6ff0"
+      ]
+    },
+    {
+      "claim_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|discipline-coaching",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-coaching-hyrox"
+      ],
+      "source_refs": [
+        "src-bca76865cd84dfb5"
+      ]
+    },
+    {
+      "claim_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|open-training",
+      "hgy_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "location_id": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_CKpn4DHneWfrqTUVaA7D5Whop-usage-open-gym"
+      ],
+      "source_refs": [
+        "src-bca76865cd84dfb5"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|discipline-coaching",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-coaching-program"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|sled-push-pull-space",
+      "hgy_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "location_id": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "capability_slug": "sled-push-pull-space",
+      "availability_state": "available",
+      "access_mode": "appointment_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_Cl8QF5olON4Y0D7mho4iGg34L-space-sled-turf"
+      ],
+      "source_refs": [
+        "src-cb938cddb3bc0b4c"
+      ]
+    },
+    {
+      "claim_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|competition-simulation",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "capability_slug": "competition-simulation",
+      "availability_state": "available",
+      "access_mode": "appointment_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-10-02T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-program-simulation"
+      ],
+      "source_refs": [
+        "src-11499b6f05256677"
+      ]
+    },
+    {
+      "claim_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|discipline-coaching",
+      "hgy_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "location_id": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-coaching-all-stations"
+      ],
+      "source_refs": [
+        "src-88f0214ede1b29db"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|competition-simulation",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "capability_slug": "competition-simulation",
+      "availability_state": "available",
+      "access_mode": "appointment_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-10-02T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-program-simulation"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|discipline-coaching",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-coaching-all-stations"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|open-training",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "capability_slug": "open-training",
+      "availability_state": "available",
+      "access_mode": "open_training",
+      "reservation_requirement": "unknown",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-open-gym"
+      ],
+      "source_refs": [
+        "src-fecd5cdb81a50241"
+      ]
+    },
+    {
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|sled-push-pull-space",
+      "hgy_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "location_id": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "capability_slug": "sled-push-pull-space",
+      "availability_state": "available",
+      "access_mode": "appointment_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-pull",
+        "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-push"
+      ],
+      "source_refs": [
+        "src-7068c574e9c94ca8"
+      ]
+    },
+    {
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|capability|discipline-coaching",
+      "hgy_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "location_id": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "capability_slug": "discipline-coaching",
+      "availability_state": "available",
+      "access_mode": "coached_only",
+      "reservation_requirement": "required",
+      "verification_status": "confirmed",
+      "last_confirmed_at": "2026-09-02T10:00:00.000Z",
+      "stale_at": "2026-12-01T10:00:00.000Z",
+      "evidence_fact_ids": [
+        "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-coaching-hyrox"
+      ],
+      "source_refs": [
+        "src-751b2b6c971308c0"
+      ]
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|competition-simulation|HGY_4GF2DeDJoIzNRU4jn9scAv65V-program-private-simulation|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|competition-simulation",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-program-private-simulation",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|discipline-coaching|HGY_4GF2DeDJoIzNRU4jn9scAv65V-coaching-hyrox|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-coaching-hyrox",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|open-training|HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-open-gym|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|capability|open-training",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-open-gym",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|row-erg|HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-row-erg|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|row-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-row-erg",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|sandbag|HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-sandbag|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|sandbag",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-sandbag",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|ski-erg|HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-ski-erg|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|ski-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-ski-erg",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|weighted-sled|HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-weighted-sled|src-75b51f42cb58283c",
+      "claim_key": "HGY_4GF2DeDJoIzNRU4jn9scAv65V|equipment|weighted-sled",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-equipment-weighted-sled",
+      "source_ref": "src-75b51f42cb58283c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|discipline-coaching|HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-coaching-hyrox|src-6563ef5f6053bb20",
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-coaching-hyrox",
+      "source_ref": "src-6563ef5f6053bb20",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|open-training|HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-usage-open-gym|src-6563ef5f6053bb20",
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|capability|open-training",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-usage-open-gym",
+      "source_ref": "src-6563ef5f6053bb20",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|equipment|weighted-sled|HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-weighted-sled|src-6563ef5f6053bb20",
+      "claim_key": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc|equipment|weighted-sled",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-weighted-sled",
+      "source_ref": "src-6563ef5f6053bb20",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|discipline-coaching|HGY_C0V7CK7K15SLUrMhBvyyO0phM-coaching-hyrox|src-9d7c6221a96b6ff0",
+      "claim_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-coaching-hyrox",
+      "source_ref": "src-9d7c6221a96b6ff0",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|open-training|HGY_C0V7CK7K15SLUrMhBvyyO0phM-usage-free-use|src-9d7c6221a96b6ff0",
+      "claim_key": "HGY_C0V7CK7K15SLUrMhBvyyO0phM|capability|open-training",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-usage-free-use",
+      "source_ref": "src-9d7c6221a96b6ff0",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|discipline-coaching|HGY_CKpn4DHneWfrqTUVaA7D5Whop-coaching-hyrox|src-bca76865cd84dfb5",
+      "claim_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-coaching-hyrox",
+      "source_ref": "src-bca76865cd84dfb5",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|open-training|HGY_CKpn4DHneWfrqTUVaA7D5Whop-usage-open-gym|src-bca76865cd84dfb5",
+      "claim_key": "HGY_CKpn4DHneWfrqTUVaA7D5Whop|capability|open-training",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-usage-open-gym",
+      "source_ref": "src-bca76865cd84dfb5",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|discipline-coaching|HGY_Cl8QF5olON4Y0D7mho4iGg34L-coaching-program|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-coaching-program",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|sled-push-pull-space|HGY_Cl8QF5olON4Y0D7mho4iGg34L-space-sled-turf|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|capability|sled-push-pull-space",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-space-sled-turf",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|farmers-carry-implements|HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-farmers-implements|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|farmers-carry-implements",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-farmers-implements",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|row-erg|HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-row-erg|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|row-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-row-erg",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|sandbag|HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sandbag|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|sandbag",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sandbag",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|ski-erg|HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-ski-erg|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|ski-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-ski-erg",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|weighted-sled|HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-weighted-sled|src-cb938cddb3bc0b4c",
+      "claim_key": "HGY_Cl8QF5olON4Y0D7mho4iGg34L|equipment|weighted-sled",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-weighted-sled",
+      "source_ref": "src-cb938cddb3bc0b4c",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|competition-simulation|HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-program-simulation|src-11499b6f05256677",
+      "claim_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|competition-simulation",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-program-simulation",
+      "source_ref": "src-11499b6f05256677",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|discipline-coaching|HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-coaching-all-stations|src-88f0214ede1b29db",
+      "claim_key": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-coaching-all-stations",
+      "source_ref": "src-88f0214ede1b29db",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|competition-simulation|HGY_j1Szv4JmxytARCgfm48f0Z4xS-program-simulation|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|competition-simulation",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-program-simulation",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|discipline-coaching|HGY_j1Szv4JmxytARCgfm48f0Z4xS-coaching-all-stations|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-coaching-all-stations",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|open-training|HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-open-gym|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|open-training",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-open-gym",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|sled-push-pull-space|HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-pull|src-7068c574e9c94ca8",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|sled-push-pull-space",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-pull",
+      "source_ref": "src-7068c574e9c94ca8",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|sled-push-pull-space|HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-push|src-7068c574e9c94ca8",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|capability|sled-push-pull-space",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sled-push",
+      "source_ref": "src-7068c574e9c94ca8",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|farmers-carry-implements|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-farmers-implements|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|farmers-carry-implements",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-farmers-implements",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|row-erg|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-row-erg|src-7068c574e9c94ca8",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|row-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-row-erg",
+      "source_ref": "src-7068c574e9c94ca8",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|sandbag|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sandbag|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|sandbag",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sandbag",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|ski-erg|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-ski-erg|src-7068c574e9c94ca8",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|ski-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-ski-erg",
+      "source_ref": "src-7068c574e9c94ca8",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|treadmill|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-treadmill|src-7068c574e9c94ca8",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|treadmill",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-treadmill",
+      "source_ref": "src-7068c574e9c94ca8",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|wall-ball-target|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball-target|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|wall-ball-target",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball-target",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|weighted-sled|HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-weighted-sled|src-fecd5cdb81a50241",
+      "claim_key": "HGY_j1Szv4JmxytARCgfm48f0Z4xS|equipment|weighted-sled",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-weighted-sled",
+      "source_ref": "src-fecd5cdb81a50241",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|capability|discipline-coaching|HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-coaching-hyrox|src-751b2b6c971308c0",
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|capability|discipline-coaching",
+      "target_table": "location_training_capabilities",
+      "evidence_fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-coaching-hyrox",
+      "source_ref": "src-751b2b6c971308c0",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|row-erg|HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-row-erg|src-751b2b6c971308c0",
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|row-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-row-erg",
+      "source_ref": "src-751b2b6c971308c0",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "relationship_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|ski-erg|HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-ski-erg|src-751b2b6c971308c0",
+      "claim_key": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC|equipment|ski-erg",
+      "target_table": "location_equipment",
+      "evidence_fact_id": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC-equipment-ski-erg",
+      "source_ref": "src-751b2b6c971308c0",
+      "evidence_scope": "direct",
+      "persistence_status": "CANDIDATE_NOT_APPLIED"
+    }
+  ],
+  "publication_status": "CANDIDATE_NOT_PUBLISHED",
+  "derived_station_rows": 0,
+  "deterministic_hashes": {
+    "COHORT_1_IDENTITY_SHA256": "1c53bd0698c0d1998f25e227409ee35c788c274994a22711e1dec1a323ce8fda",
+    "REVIEW_PACKET_SHA256": "e86585713574c03663b27cfdbb2b9c3a1ab0b5940a491a9d5b78bf73a6983172",
+    "LEDGER_CANDIDATE_SHA256": "fce0ff185ddc571c59d12c96cab80b56b574544b4de8b7a4c717d1c8c9ecd536",
+    "POSITIVE_CANDIDATE_SHA256": "fe820952c155b43ff3249ec5c686f32c92484816293c5296494abd39916a3804",
+    "PERSISTENCE_GAP_SHA256": "9cc5248c71cd941af327d79a96b91ef33cbe4041dcd58df1f3d4df61f0f1d89c"
+  }
+}

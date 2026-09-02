@@ -1,0 +1,103 @@
+{
+  "authority": {
+    "schema_version": 1,
+    "source_main": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "h3_11a_protocol_key": "hyrox-review-coverage",
+    "h3_11a_protocol_version": "h3-11a-v1",
+    "h3_11c_candidate": "45182f0804c07adcde20150e5d5fccc3fd312586",
+    "reviewed_at": "2026-09-02T10:00:00.000Z",
+    "candidate_only": true,
+    "production_writes": false,
+    "station_derivation": false
+  },
+  "verdict": "RAW_FACT_PERSISTENCE_GATE_REQUIRED",
+  "gaps": [
+    {
+      "gap_id": "RAW_COMPONENT_PERSISTENCE_GAP",
+      "persistence_fit": "RAW_FACT_PERSISTENCE_GAP",
+      "observed_fact_count": 7,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": true,
+      "affected_examples": [
+        "sled pull rope",
+        "wall ball object",
+        "unitemized official equipment set"
+      ],
+      "next_phase": "RAW FACT PERSISTENCE GATE BEFORE H3-11E"
+    },
+    {
+      "gap_id": "RAW_SPACE_PERSISTENCE_GAP",
+      "persistence_fit": "RAW_FACT_PERSISTENCE_GAP",
+      "observed_fact_count": 8,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": true,
+      "affected_examples": [
+        "movement floor",
+        "carry/lunge/jump area",
+        "running area"
+      ],
+      "next_phase": "RAW FACT PERSISTENCE GATE BEFORE H3-11E"
+    },
+    {
+      "gap_id": "RAW_USAGE_PERSISTENCE_GAP",
+      "persistence_fit": "RAW_FACT_PERSISTENCE_GAP",
+      "observed_fact_count": 4,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": true,
+      "affected_examples": [
+        "PROGRAM_USE_CONFIRMED per station",
+        "appointment/rental use"
+      ],
+      "next_phase": "RAW FACT PERSISTENCE GATE BEFORE H3-11E"
+    },
+    {
+      "gap_id": "RESTRICTION_PERSISTENCE_GAP",
+      "persistence_fit": "RESTRICTION_PERSISTENCE_GAP",
+      "observed_fact_count": 4,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": true,
+      "affected_examples": [
+        "membership eligibility",
+        "reservation-only free use",
+        "program-hour exclusion"
+      ],
+      "next_phase": "DEFER EXPLICIT RESTRICTION MODEL; NEGATIVE PUBLICATION NOT AUTHORIZED"
+    },
+    {
+      "gap_id": "FRESHNESS_POLICY_GAP",
+      "persistence_fit": "RAW_FACT_PERSISTENCE_GAP",
+      "observed_fact_count": 19,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": true,
+      "affected_examples": [
+        "new raw component facts",
+        "non-sled space facts",
+        "typed station program-use facts"
+      ],
+      "next_phase": "FREEZE POLICY KEYS WITHOUT INVENTING NEW HORIZONS"
+    },
+    {
+      "gap_id": "DERIVATION_ONLY_FUTURE",
+      "persistence_fit": "DERIVATION_ONLY_FUTURE",
+      "observed_fact_count": 0,
+      "blocks_publication": true,
+      "blocks_review_ledger": false,
+      "blocks_derivation": false,
+      "affected_examples": [],
+      "next_phase": "H3-11E ONLY; NO DERIVED STATE CREATED"
+    }
+  ],
+  "schema_migration_authorized": false,
+  "deterministic_hashes": {
+    "COHORT_1_IDENTITY_SHA256": "1c53bd0698c0d1998f25e227409ee35c788c274994a22711e1dec1a323ce8fda",
+    "REVIEW_PACKET_SHA256": "e86585713574c03663b27cfdbb2b9c3a1ab0b5940a491a9d5b78bf73a6983172",
+    "LEDGER_CANDIDATE_SHA256": "fce0ff185ddc571c59d12c96cab80b56b574544b4de8b7a4c717d1c8c9ecd536",
+    "POSITIVE_CANDIDATE_SHA256": "fe820952c155b43ff3249ec5c686f32c92484816293c5296494abd39916a3804",
+    "PERSISTENCE_GAP_SHA256": "9cc5248c71cd941af327d79a96b91ef33cbe4041dcd58df1f3d4df61f0f1d89c"
+  }
+}
