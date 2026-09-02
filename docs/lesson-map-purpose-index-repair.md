@@ -76,4 +76,15 @@ The existing full index remains live only for the legacy free-text fallback. No 
 - dependency delta: 0
 - migration delta: 0
 
-Preview URL and responsive smoke evidence are added after the exact candidate is pushed.
+## Exact Vercel Preview
+
+- Implementation commit: `b4796692e108419ab686571972c8ea1be45009b7`
+- Preview: `https://gymmap-otfhhqgdb-tes-projects-f349e739.vercel.app`
+- Vercel status: Ready
+- Vercel build-log search for `items over 2MB`: no results
+- Preview vs Production `BODYCOMBAT`: both show 90 mappable locations and 626 schedules
+- Selected-location preview: raw-name identity/order preserved (`BODYCOMBAT, BODY COMBAT` in the sampled NAS location)
+- 390 px, 430 px, and 1,440 px: no horizontal overflow; Map canvas and section present
+- Preview console errors/warnings during Home smoke: none
+
+The Preview is access-protected, so unauthenticated `curl` receives Vercel SSO rather than the app payload. Decoded/gzip byte comparisons therefore use the exact local production build of the same implementation, while behavior and responsive checks use the authenticated exact Preview.
