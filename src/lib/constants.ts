@@ -42,4 +42,6 @@ export const defaultSearchFilters: SearchFilters = {
   durationRange: "",
   brand: "",
   area: "",
+  prefecture: "",
+  municipality: "",
 };

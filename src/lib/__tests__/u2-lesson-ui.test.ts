@@ -7,9 +7,9 @@ function source(path: string) {
 }
 
 test("Lesson search keeps every public query parameter and separates advanced controls", () => {
-  const form = source("components/search/search-form.tsx");
+  const form = `${source("components/search/search-form.tsx")}\n${source("components/search/area-store-combobox.tsx")}`;
 
-  for (const name of ["q", "area", "weekday", "timeRange", "durationRange", "brand"]) {
+  for (const name of ["q", "area", "prefecture", "municipality", "weekday", "timeRange", "durationRange", "brand"]) {
     assert.match(form, new RegExp(`name=\\"${name}\\"`));
   }
 
@@ -19,6 +19,23 @@ test("Lesson search keeps every public query parameter and separates advanced co
   assert.match(form, /initialValues\.durationRange/);
   assert.match(form, /initialValues\.brand/);
   assert.match(form, /action = "\/search"/);
+  assert.match(form, /AreaStoreCombobox/);
+});
+
+test("structured selection is explicit and manual edits clear hidden area identity", () => {
+  const combobox = source("components/search/area-store-combobox.tsx");
+
+  assert.match(combobox, /role="combobox"/);
+  assert.match(combobox, /role="listbox"/);
+  assert.match(combobox, /aria-activedescendant/);
+  assert.match(combobox, /name="prefecture"/);
+  assert.match(combobox, /name="municipality"/);
+  assert.match(combobox, /hidden type="text" name="prefecture"/);
+  assert.match(combobox, /onChange=[\s\S]*?\{/);
+  assert.match(combobox, /clearStructuredSelection\(\)/);
+  for (const key of ["ArrowDown", "ArrowUp", "Enter", "Escape", "Tab"]) {
+    assert.match(combobox, new RegExp(`event\\.key === \\"${key}\\"`));
+  }
 });
 
 test("Search page hydrates legacy URLs without changing normalization or paging", () => {

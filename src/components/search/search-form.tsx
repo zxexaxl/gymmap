@@ -3,12 +3,16 @@ import Form from "next/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { defaultSearchFilters, durationRangeOptions, timeRangeOptions, weekdayOptions } from "@/lib/constants";
-import type { GymBrand, SearchFilters } from "@/lib/types";
+import { buildStoreSearchOptions, buildStructuredAreaCatalog, getStructuredAreaLabel } from "@/lib/structured-area";
+import type { GymBrand, GymLocation, SearchFilters } from "@/lib/types";
+
+import { AreaStoreCombobox } from "./area-store-combobox";
 
 import styles from "./search-form.module.css";
 
 type SearchFormProps = {
   brands: GymBrand[];
+  locations: GymLocation[];
   initialValues?: SearchFilters;
   action?: string;
   variant?: "default" | "hero";
@@ -16,11 +20,17 @@ type SearchFormProps = {
 
 export function SearchForm({
   brands,
+  locations,
   initialValues = defaultSearchFilters,
   action = "/search",
   variant = "default",
 }: SearchFormProps) {
   const advancedFilterCount = [initialValues.timeRange, initialValues.durationRange, initialValues.brand].filter(Boolean).length;
+  const areaOptions = buildStructuredAreaCatalog(locations);
+  const storeOptions = buildStoreSearchOptions(locations);
+  const initialPrefecture = initialValues.prefecture ?? "";
+  const initialMunicipality = initialValues.municipality ?? "";
+  const initialAreaValue = initialValues.area || getStructuredAreaLabel(initialPrefecture, initialMunicipality);
 
   return (
     <Form className={`${styles.form} ${variant === "hero" ? styles.hero : styles.default}`} action={action}>
@@ -40,12 +50,14 @@ export function SearchForm({
           defaultValue={initialValues.q}
           placeholder="BODYCOMBAT / ヨガ など"
         />
-        <Input
+        <AreaStoreCombobox
+          key={`${initialAreaValue}\u0000${initialPrefecture}\u0000${initialMunicipality}`}
           id={`${variant}-lesson-area`}
-          name="area"
-          label="エリア / 店舗"
-          defaultValue={initialValues.area}
-          placeholder="渋谷 / 新宿 / 店舗名"
+          initialValue={initialAreaValue}
+          initialPrefecture={initialPrefecture}
+          initialMunicipality={initialMunicipality}
+          areaOptions={areaOptions}
+          storeOptions={storeOptions}
         />
         <label className={styles.selectField} htmlFor={`${variant}-lesson-weekday`}>
           <span>曜日</span>

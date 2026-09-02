@@ -120,7 +120,7 @@ export default async function HomePage() {
             <a href="#popular-programs">人気プログラムを見る</a>
           </div>
         </div>
-        <SearchForm brands={brands} variant="hero" />
+        <SearchForm brands={brands} locations={locations} variant="hero" />
       </section>
 
       <div className={styles.favorite}><FavoriteHomePanel /></div>
