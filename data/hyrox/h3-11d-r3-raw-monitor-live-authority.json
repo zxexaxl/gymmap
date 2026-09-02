@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "mode": "LIVE_MONITORED",
+  "authority": {
+    "r2Commit": "34705f65477019165a11beba359d3dd8f13bb00f",
+    "r2PolicyVersion": "h3-11d-r2-v1",
+    "freshnessPolicyHash": "42ed943a807d505b3fdc4deadef0bc94014d0007287ca752d366cc83e2c31295",
+    "factMappingHash": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
+    "restrictionMappingHash": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
+    "cohort1MappingHash": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e",
+    "monitorPacketHash": "ccac7a73af03d30714c044b38f4ca9f5d1fe9fbbae57894f84b1f0821aeccf03",
+    "dbImportPacketHash": null,
+    "releaseCoherenceHash": null
+  },
+  "counts": {
+    "sources": 0,
+    "entries": 0,
+    "rawFacts": 0,
+    "restrictions": 0
+  },
+  "sources": [],
+  "entries": [],
+  "manifestHash": "e29b61edbe1f3dea1912ebfdd147d4dd866304230ed069fd4799a4f1317b1e84"
+}

@@ -1,0 +1,120 @@
+{
+  "mode": "CANDIDATE_NOT_IMPORTED",
+  "observations": [
+    {
+      "sourceKey": "src-6563ef5f6053bb20",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://fitone-club.com/",
+      "finalUrl": "https://fitone-club.com/",
+      "canonicalUrl": "https://fitone-club.com/",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "fitone shibuya — 渋谷 — sled — rope — open gym — unlimited — push — pull — carry — run"
+    },
+    {
+      "sourceKey": "src-7068c574e9c94ca8",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://htc-chikusa.com/facility.html",
+      "finalUrl": "https://htc-chikusa.com/facility.html",
+      "canonicalUrl": "https://htc-chikusa.com/facility.html",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "htc chikusa — 名古屋 — burpee broad jump — farmers carry — running — indoor — sandbag lunges — wall balls — 3m"
+    },
+    {
+      "sourceKey": "src-75b51f42cb58283c",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://www.club360.jp/hyrox",
+      "finalUrl": "https://www.club360.jp/hyrox",
+      "canonicalUrl": "https://www.club360.jp/hyrox",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "club 360 — hyrox — simulation"
+    },
+    {
+      "sourceKey": "src-88f0214ede1b29db",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://improve-hyrox.com/",
+      "finalUrl": "https://improve-hyrox.com/",
+      "canonicalUrl": "https://improve-hyrox.com/",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "improve kyoto — hyrox — 8"
+    },
+    {
+      "sourceKey": "src-9d7c6221a96b6ff0",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://g-zone.co.jp/park/hyrox/",
+      "finalUrl": "https://g-zone.co.jp/park/hyrox/",
+      "canonicalUrl": "https://g-zone.co.jp/park/hyrox/",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "g-zone — park — hyrox — official — park — 予約 — 90 — training"
+    },
+    {
+      "sourceKey": "src-bca76865cd84dfb5",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://vamos-training.com/ja/classes",
+      "finalUrl": "https://vamos-training.com/ja/classes",
+      "canonicalUrl": "https://vamos-training.com/ja/classes",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "vamos — open gym — 予約"
+    },
+    {
+      "sourceKey": "src-cb938cddb3bc0b4c",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://crossfitashiya.com/hyrox",
+      "finalUrl": "https://crossfitashiya.com/hyrox/",
+      "canonicalUrl": "https://crossfitashiya.com/hyrox/",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "crossfit ashiya — sled — rope — wall ball — hyrox — drop-in"
+    },
+    {
+      "sourceKey": "src-fb5d0715281764cc",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://vamos-training.com/ja",
+      "finalUrl": "https://vamos-training.com/ja",
+      "canonicalUrl": "https://vamos-training.com/ja",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "vamos — hyrox — official"
+    },
+    {
+      "sourceKey": "src-fecd5cdb81a50241",
+      "status": "AVAILABLE",
+      "requestedUrl": "https://htc-chikusa.com/program.html",
+      "finalUrl": "https://htc-chikusa.com/program.html",
+      "canonicalUrl": "https://htc-chikusa.com/program.html",
+      "httpStatus": 200,
+      "attempts": 1,
+      "error": null,
+      "materialRedirect": false,
+      "normalizedContent": "htc chikusa — 名古屋 — sled pull — rope — wall balls — ball — open gym — plan — hyrox — 8"
+    }
+  ],
+  "stats": {
+    "entries": 23,
+    "uniqueSources": 9,
+    "requestsAfterDedup": 9,
+    "retries": 0,
+    "concurrency": 4
+  }
+}
