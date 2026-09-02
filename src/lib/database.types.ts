@@ -839,6 +839,123 @@ export type Database = {
           },
         ]
       }
+      training_access_restrictions: {
+        Row: {
+          created_at: string
+          directness: string
+          discipline_id: string
+          evidence_location_context: string | null
+          evidence_text: string
+          freshness_expires_at: string | null
+          freshness_policy_key: string | null
+          id: string
+          location_id: string
+          observed_at: string
+          restriction_key: string
+          restriction_type: string
+          review_aspect: string
+          review_cycle_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          source_class: string
+          source_content_hash_at_review: string | null
+          statement: string
+          training_source_id: string
+        }
+        Insert: {
+          created_at?: string
+          directness: string
+          discipline_id: string
+          evidence_location_context?: string | null
+          evidence_text: string
+          freshness_expires_at?: string | null
+          freshness_policy_key?: string | null
+          id?: string
+          location_id: string
+          observed_at: string
+          restriction_key: string
+          restriction_type: string
+          review_aspect: string
+          review_cycle_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          source_class: string
+          source_content_hash_at_review?: string | null
+          statement: string
+          training_source_id: string
+        }
+        Update: {
+          created_at?: string
+          directness?: string
+          discipline_id?: string
+          evidence_location_context?: string | null
+          evidence_text?: string
+          freshness_expires_at?: string | null
+          freshness_policy_key?: string | null
+          id?: string
+          location_id?: string
+          observed_at?: string
+          restriction_key?: string
+          restriction_type?: string
+          review_aspect?: string
+          review_cycle_id?: string
+          review_unit_id?: string
+          review_unit_source_id?: string
+          reviewed_at?: string
+          reviewer_authority?: string
+          source_class?: string
+          source_content_hash_at_review?: string | null
+          statement?: string
+          training_source_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_access_restrictions_cycle_location_discipline_fk"
+            columns: ["review_cycle_id", "location_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_cycles"
+            referencedColumns: ["id", "location_id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_access_restrictions_unit_scope_fk"
+            columns: [
+              "review_unit_id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_units"
+            referencedColumns: [
+              "id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+          },
+          {
+            foreignKeyName: "training_access_restrictions_unit_source_fk"
+            columns: [
+              "review_unit_source_id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_unit_sources"
+            referencedColumns: [
+              "id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
+          },
+        ]
+      }
       training_affiliations: {
         Row: {
           affiliation_state: string
@@ -1091,6 +1208,250 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "training_sources"
             referencedColumns: ["id"]
+          },
+        ]
+      }
+      training_raw_fact_dimensions: {
+        Row: {
+          created_at: string
+          discipline_id: string
+          raw_fact_id: string
+          review_aspect: string
+          review_cycle_id: string
+          review_dimension_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          source_class: string
+          training_source_id: string
+        }
+        Insert: {
+          created_at?: string
+          discipline_id: string
+          raw_fact_id: string
+          review_aspect: string
+          review_cycle_id: string
+          review_dimension_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          source_class: string
+          training_source_id: string
+        }
+        Update: {
+          created_at?: string
+          discipline_id?: string
+          raw_fact_id?: string
+          review_aspect?: string
+          review_cycle_id?: string
+          review_dimension_id?: string
+          review_unit_id?: string
+          review_unit_source_id?: string
+          source_class?: string
+          training_source_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_raw_fact_dimensions_fact_scope_fk"
+            columns: [
+              "raw_fact_id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_raw_facts"
+            referencedColumns: [
+              "id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+          },
+          {
+            foreignKeyName: "training_raw_fact_dimensions_unit_source_fk"
+            columns: [
+              "review_unit_source_id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_unit_sources"
+            referencedColumns: [
+              "id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
+          },
+          {
+            foreignKeyName: "training_raw_fact_dimensions_unit_scope_fk"
+            columns: [
+              "review_unit_id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_dimension_id",
+              "review_aspect",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_units"
+            referencedColumns: [
+              "id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_dimension_id",
+              "review_aspect",
+            ]
+          },
+        ]
+      }
+      training_raw_fact_types: {
+        Row: {
+          created_at: string
+          description: string
+          fact_family: string
+          id: string
+          review_aspect: string
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          fact_family: string
+          id?: string
+          review_aspect: string
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          fact_family?: string
+          id?: string
+          review_aspect?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      training_raw_facts: {
+        Row: {
+          created_at: string
+          directness: string
+          discipline_id: string
+          evidence_location_context: string | null
+          evidence_text: string
+          fact_key: string
+          fact_type_id: string
+          freshness_expires_at: string | null
+          freshness_policy_key: string | null
+          id: string
+          location_id: string
+          observed_at: string
+          review_aspect: string
+          review_cycle_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          source_class: string
+          source_content_hash_at_review: string | null
+          statement: string
+          training_source_id: string
+        }
+        Insert: {
+          created_at?: string
+          directness: string
+          discipline_id: string
+          evidence_location_context?: string | null
+          evidence_text: string
+          fact_key: string
+          fact_type_id: string
+          freshness_expires_at?: string | null
+          freshness_policy_key?: string | null
+          id?: string
+          location_id: string
+          observed_at: string
+          review_aspect: string
+          review_cycle_id: string
+          review_unit_id: string
+          review_unit_source_id: string
+          reviewed_at: string
+          reviewer_authority: string
+          source_class: string
+          source_content_hash_at_review?: string | null
+          statement: string
+          training_source_id: string
+        }
+        Update: {
+          created_at?: string
+          directness?: string
+          discipline_id?: string
+          evidence_location_context?: string | null
+          evidence_text?: string
+          fact_key?: string
+          fact_type_id?: string
+          freshness_expires_at?: string | null
+          freshness_policy_key?: string | null
+          id?: string
+          location_id?: string
+          observed_at?: string
+          review_aspect?: string
+          review_cycle_id?: string
+          review_unit_id?: string
+          review_unit_source_id?: string
+          reviewed_at?: string
+          reviewer_authority?: string
+          source_class?: string
+          source_content_hash_at_review?: string | null
+          statement?: string
+          training_source_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "training_raw_facts_cycle_location_discipline_fk"
+            columns: ["review_cycle_id", "location_id", "discipline_id"]
+            isOneToOne: false
+            referencedRelation: "training_review_cycles"
+            referencedColumns: ["id", "location_id", "discipline_id"]
+          },
+          {
+            foreignKeyName: "training_raw_facts_type_aspect_fk"
+            columns: ["fact_type_id", "review_aspect"]
+            isOneToOne: false
+            referencedRelation: "training_raw_fact_types"
+            referencedColumns: ["id", "review_aspect"]
+          },
+          {
+            foreignKeyName: "training_raw_facts_unit_scope_fk"
+            columns: [
+              "review_unit_id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_units"
+            referencedColumns: [
+              "id",
+              "review_cycle_id",
+              "discipline_id",
+              "review_aspect",
+            ]
+          },
+          {
+            foreignKeyName: "training_raw_facts_unit_source_fk"
+            columns: [
+              "review_unit_source_id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
+            isOneToOne: false
+            referencedRelation: "training_review_unit_sources"
+            referencedColumns: [
+              "id",
+              "review_unit_id",
+              "training_source_id",
+              "source_class",
+            ]
           },
         ]
       }

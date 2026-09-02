@@ -1,0 +1,136 @@
+{
+  "authority": {
+    "schema_version": 1,
+    "source_main": "1b1ed6ece68d0350a723f5763161e0c93d8fa0ad",
+    "source_review_packet_sha256": "e86585713574c03663b27cfdbb2b9c3a1ab0b5940a491a9d5b78bf73a6983172",
+    "candidate_only": true,
+    "production_writes": false,
+    "station_derivation": false,
+    "public_publication": false
+  },
+  "raw_fact_gaps": [
+    {
+      "fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation",
+      "fact_type_slugs": ["program-use-confirmed"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope",
+      "fact_type_slugs": ["sled-pull-rope"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry",
+      "fact_type_slugs": ["multi-movement-training-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running",
+      "fact_type_slugs": ["running-movement-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set",
+      "fact_type_slugs": ["official-hyrox-equipment-set-assertion"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor",
+      "fact_type_slugs": ["general-training-floor"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set",
+      "fact_type_slugs": ["official-hyrox-equipment-set-assertion"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope",
+      "fact_type_slugs": ["sled-pull-rope"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball",
+      "fact_type_slugs": ["wall-ball"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program",
+      "fact_type_slugs": ["program-use-confirmed", "rental-use-confirmed"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations",
+      "fact_type_slugs": ["program-use-confirmed"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope",
+      "fact_type_slugs": ["sled-pull-rope"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball",
+      "fact_type_slugs": ["wall-ball"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump",
+      "fact_type_slugs": ["burpee-broad-jump-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry",
+      "fact_type_slugs": ["farmers-carry-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running",
+      "fact_type_slugs": ["running-movement-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges",
+      "fact_type_slugs": ["sandbag-lunges-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls",
+      "fact_type_slugs": ["wall-balls-space"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations",
+      "fact_type_slugs": ["program-use-confirmed"],
+      "freshness_policy_key": null
+    }
+  ],
+  "restriction_gaps": [
+    {
+      "fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership",
+      "restriction_types": ["MEMBERSHIP_ELIGIBILITY"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours",
+      "restriction_types": ["PROGRAM_HOUR_EXCLUSION", "RESERVATION_REQUIRED"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation",
+      "restriction_types": ["RESERVATION_REQUIRED"],
+      "freshness_policy_key": null
+    },
+    {
+      "fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan",
+      "restriction_types": ["PLAN_DEPENDENT_ACCESS", "PROGRAM_HOUR_EXCLUSION"],
+      "freshness_policy_key": null
+    }
+  ],
+  "unresolved_blockers": [],
+  "freshness_authority": {
+    "new_horizons_introduced": false,
+    "all_new_semantics_fail_closed_without_policy": true,
+    "next_gate": "H3-11D-R2_RAW_FACT_FRESHNESS_POLICY_REQUIRED"
+  }
+}
