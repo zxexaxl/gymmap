@@ -1508,6 +1508,28 @@ export type Database = {
           total_count: number
         }[]
       }
+      search_structured_lesson_class_schedule_page: {
+        Args: {
+          p_brand?: string
+          p_canonical_names?: string[]
+          p_duration_range?: string
+          p_limit?: number
+          p_municipality?: string
+          p_offset?: number
+          p_prefecture?: string
+          p_program_brands?: string[]
+          p_query?: string
+          p_query_compact?: string
+          p_time_range?: string
+          p_weekday?: string
+        }
+        Returns: {
+          latest_schedule_update: string
+          result_order: number
+          schedule_id: string
+          total_count: number
+        }[]
+      }
       search_training_locations: {
         Args: {
           p_capability_slugs?: string[]
