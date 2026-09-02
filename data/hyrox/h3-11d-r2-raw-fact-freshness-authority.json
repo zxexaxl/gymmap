@@ -1,0 +1,204 @@
+{
+  "authority": {
+    "schema_version": 1,
+    "policy_version": "h3-11d-r2-v1",
+    "source_main": "47d8ef3d7d75e801cfc0af3c27644ce0d9078c50",
+    "candidate_only": true,
+    "production_writes": false,
+    "monitor_implementation": false,
+    "station_derivation": false,
+    "public_publication": false
+  },
+  "currentness_contract": {
+    "clock_anchor": "reviewed_at",
+    "due_soon_days": 30,
+    "urgent_days": 14,
+    "current_eligibility_requires": [
+      "accepted_policy_key",
+      "non_null_freshness_expires_at",
+      "checked_at_before_freshness_expires_at",
+      "no_applicable_persisted_invalidation",
+      "facility_bound_accepted_source",
+      "no_reviewed_support_removal_or_contradiction"
+    ],
+    "null_policy_state": "AUTHORITY_MISSING_HISTORICAL_ONLY",
+    "expired_state": "TIME_EXPIRED_HISTORICAL_ONLY",
+    "stale_is_negative": false,
+    "restriction_expiry_means_unrestricted": false,
+    "monitor_error_mutates_currentness": false,
+    "source_unavailable_rule": "SOURCE_UNAVAILABLE blocks reconfirmation but does not by itself invalidate or extend currentness; reviewed support removal, binding loss, contradiction, or the time boundary controls eligibility",
+    "monitor_error_rule": "429, timeout, and infrastructure failures are MONITOR_ERROR; they neither invalidate nor extend currentness",
+    "http_fetch_reconfirms": false,
+    "explicit_validity_rule": "freshness_expires_at is the earliest of reviewed_at plus policy horizon and any source-explicit end/effective-period boundary",
+    "future_effective_evidence_rule": "HOLD until effective and positively re-reviewed; do not represent it as currently eligible",
+    "multi_source_rule": "Each row is one source-backed historical observation; any one current semantically equivalent observation may supply that raw fact, while distinct required fact types remain separate dependencies"
+  },
+  "policies": [
+    {
+      "policy_key": "raw-physical-component-180-day",
+      "semantic_class": "DURABLE_PHYSICAL_COMPONENT",
+      "horizon_days": 180,
+      "existing_authority_reuse": "physical-equipment-180-day",
+      "clock_anchor": "reviewed_at",
+      "due_soon_days": 30,
+      "urgent_days": 14,
+      "monitor_requirement": "H3-11D-R3_REQUIRED_BEFORE_IMPORT",
+      "derivation_eligibility": "CURRENT_ONLY_AS_TYPED_RAW_DEPENDENCY",
+      "rationale": "A rope or wall ball is a directly identified durable inventory component with the same inventory volatility and positive-support burden as existing equipment facts.",
+      "reconfirmation": "A reviewed accepted facility-bound source must explicitly continue to identify the same component.",
+      "invalidation": ["SUPPORT_REMOVED", "FACILITY_BINDING_LOST", "EXPLICIT_CONTRADICTION", "HUMAN_INVALIDATION"]
+    },
+    {
+      "policy_key": "raw-equipment-set-assertion-90-day",
+      "semantic_class": "BROAD_SOURCE_ASSERTION",
+      "horizon_days": 90,
+      "existing_authority_reuse": null,
+      "clock_anchor": "reviewed_at",
+      "due_soon_days": 30,
+      "urgent_days": 14,
+      "monitor_requirement": "H3-11D-R3_REQUIRED_BEFORE_IMPORT",
+      "derivation_eligibility": "NEVER_DIRECT_STATION_DEPENDENCY",
+      "rationale": "A non-itemized official-equipment-set statement is broader and more copy-dependent than a direct equipment fact; 90 days limits reliance while keeping it a source assertion that cannot directly derive stations.",
+      "reconfirmation": "The facility-bound official source must still make the same broad assertion; individual items may not be inferred.",
+      "invalidation": ["ASSERTION_REMOVED", "FACILITY_BINDING_LOST", "EXPLICIT_CONTRADICTION", "HUMAN_INVALIDATION"]
+    },
+    {
+      "policy_key": "raw-space-90-day",
+      "semantic_class": "PHYSICAL_SPACE_OR_LAYOUT",
+      "horizon_days": 90,
+      "existing_authority_reuse": "sled-push-pull-space-90-day",
+      "clock_anchor": "reviewed_at",
+      "due_soon_days": 30,
+      "urgent_days": 14,
+      "monitor_requirement": "H3-11D-R3_REQUIRED_BEFORE_IMPORT",
+      "derivation_eligibility": "CURRENT_ONLY_AS_EXACT_TYPED_RAW_DEPENDENCY",
+      "rationale": "Layouts and dedicated movement areas can change faster than durable equipment; the accepted sled-space 90-day authority is the closest semantic precedent.",
+      "reconfirmation": "A reviewed facility-bound source must continue to explicitly support the same space semantics; generic floor existence is insufficient for a station-specific space.",
+      "invalidation": ["SPACE_SUPPORT_REMOVED", "LAYOUT_CONTRADICTION", "FACILITY_BINDING_LOST", "HUMAN_INVALIDATION"]
+    },
+    {
+      "policy_key": "raw-usage-90-day",
+      "semantic_class": "POSITIVE_USAGE_OR_SERVICE_MODE",
+      "horizon_days": 90,
+      "existing_authority_reuse": "open-training-and-coaching-90-day",
+      "clock_anchor": "reviewed_at",
+      "due_soon_days": 30,
+      "urgent_days": 14,
+      "monitor_requirement": "H3-11D-R3_REQUIRED_BEFORE_IMPORT",
+      "derivation_eligibility": "CURRENT_ONLY_AS_TYPED_USAGE_DEPENDENCY",
+      "rationale": "Program, appointment, and rental availability are operationally volatile and match the established 90-day open-training/coaching review burden.",
+      "reconfirmation": "The same non-exclusive usage mode must remain explicitly offered by a reviewed facility-bound official source.",
+      "invalidation": ["USAGE_SUPPORT_REMOVED", "FACILITY_BINDING_LOST", "EXPLICIT_CONTRADICTION", "HUMAN_INVALIDATION"]
+    },
+    {
+      "policy_key": "raw-access-restriction-90-day",
+      "semantic_class": "EXPLICIT_ACCESS_RESTRICTION",
+      "horizon_days": 90,
+      "existing_authority_reuse": null,
+      "clock_anchor": "reviewed_at",
+      "due_soon_days": 30,
+      "urgent_days": 14,
+      "monitor_requirement": "H3-11D-R3_REQUIRED_BEFORE_IMPORT",
+      "derivation_eligibility": "NOT_A_POSITIVE_STATION_DEPENDENCY",
+      "rationale": "Restrictions are user-decision-sensitive operational terms and therefore may not be looser than comparable usage facts; source-explicit end dates shorten this horizon.",
+      "reconfirmation": "The restriction must still be explicitly stated by a reviewed facility-bound official source; absence never proves unrestricted access.",
+      "invalidation": ["RESTRICTION_TEXT_REMOVED", "EXPLICIT_END_DATE_REACHED", "FACILITY_BINDING_LOST", "EXPLICIT_CONTRADICTION", "HUMAN_INVALIDATION"]
+    }
+  ],
+  "fact_type_mappings": [
+    {"fact_type": "sled-pull-rope", "policy_key": "raw-physical-component-180-day", "reuse_classification": "REUSE_PHYSICAL_180", "rationale": "Direct durable component with existing equipment-like inventory volatility."},
+    {"fact_type": "wall-ball", "policy_key": "raw-physical-component-180-day", "reuse_classification": "REUSE_PHYSICAL_180", "rationale": "Direct durable component with existing equipment-like inventory volatility."},
+    {"fact_type": "official-hyrox-equipment-set-assertion", "policy_key": "raw-equipment-set-assertion-90-day", "reuse_classification": "NEW_POLICY_REQUIRED", "rationale": "Broad source wording is more copy-dependent than itemized equipment and never proves individual items."},
+    {"fact_type": "multi-movement-training-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Facility layout may change and matches the existing sled-space review burden."},
+    {"fact_type": "general-training-floor", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Layout may change; freshness does not strengthen this weak non-station-specific fact."},
+    {"fact_type": "burpee-broad-jump-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Station-associated layout support can change independently of equipment."},
+    {"fact_type": "farmers-carry-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Station-associated layout support can change independently of equipment."},
+    {"fact_type": "sandbag-lunges-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Station-associated layout support can change independently of equipment."},
+    {"fact_type": "wall-balls-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Station-associated layout support can change independently of equipment."},
+    {"fact_type": "running-movement-space", "policy_key": "raw-space-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Running layout/access surface can change and remains an auxiliary dimension."},
+    {"fact_type": "program-use-confirmed", "policy_key": "raw-usage-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Non-exclusive program availability matches coaching/service volatility."},
+    {"fact_type": "appointment-use-confirmed", "policy_key": "raw-usage-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Appointment availability is an operational service mode."},
+    {"fact_type": "rental-use-confirmed", "policy_key": "raw-usage-90-day", "reuse_classification": "REUSE_OPERATIONAL_90", "rationale": "Rental availability is an operational service mode."}
+  ],
+  "restriction_type_mappings": [
+    {"restriction_type": "MEMBERSHIP_ELIGIBILITY", "policy_key": "raw-access-restriction-90-day", "reuse_classification": "NEW_POLICY_REQUIRED", "rationale": "Decision-sensitive membership terms must be no looser than usage authority."},
+    {"restriction_type": "RESERVATION_REQUIRED", "policy_key": "raw-access-restriction-90-day", "reuse_classification": "NEW_POLICY_REQUIRED", "rationale": "Decision-sensitive reservation terms must be no looser than usage authority."},
+    {"restriction_type": "PROGRAM_HOUR_EXCLUSION", "policy_key": "raw-access-restriction-90-day", "reuse_classification": "NEW_POLICY_REQUIRED", "rationale": "Schedule-bound exclusions use the earlier explicit end or 90-day boundary."},
+    {"restriction_type": "PLAN_DEPENDENT_ACCESS", "policy_key": "raw-access-restriction-90-day", "reuse_classification": "NEW_POLICY_REQUIRED", "rationale": "Decision-sensitive plan terms must be no looser than usage authority."}
+  ],
+  "cohort1_raw_observation_mappings": [
+    {"fact_id": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation", "facility": "CLUB 360", "fact_types": ["program-use-confirmed"], "policy_key": "raw-usage-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope", "facility": "FITONE SHIBUYA", "fact_types": ["sled-pull-rope"], "policy_key": "raw-physical-component-180-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2027-03-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry", "facility": "FITONE SHIBUYA", "fact_types": ["multi-movement-training-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running", "facility": "FITONE SHIBUYA", "fact_types": ["running-movement-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set", "facility": "g-zone PARK", "fact_types": ["official-hyrox-equipment-set-assertion"], "policy_key": "raw-equipment-set-assertion-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor", "facility": "g-zone PARK", "fact_types": ["general-training-floor"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set", "facility": "VAMOS", "fact_types": ["official-hyrox-equipment-set-assertion"], "policy_key": "raw-equipment-set-assertion-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope", "facility": "CrossFit Ashiya", "fact_types": ["sled-pull-rope"], "policy_key": "raw-physical-component-180-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2027-03-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball", "facility": "CrossFit Ashiya", "fact_types": ["wall-ball"], "policy_key": "raw-physical-component-180-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2027-03-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program", "facility": "CrossFit Ashiya", "fact_types": ["program-use-confirmed", "rental-use-confirmed"], "policy_key": "raw-usage-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations", "facility": "Improve KYOTO", "fact_types": ["program-use-confirmed"], "policy_key": "raw-usage-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["sled-pull-rope"], "policy_key": "raw-physical-component-180-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2027-03-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["wall-ball"], "policy_key": "raw-physical-component-180-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2027-03-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["burpee-broad-jump-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["farmers-carry-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["running-movement-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["sandbag-lunges-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["wall-balls-space"], "policy_key": "raw-space-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations", "facility": "HTC CHIKUSA– Human Performance Training Center –", "fact_types": ["program-use-confirmed"], "policy_key": "raw-usage-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"}
+  ],
+  "cohort1_restriction_observation_mappings": [
+    {"fact_id": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership", "facility": "FITONE SHIBUYA", "restriction_types": ["MEMBERSHIP_ELIGIBILITY"], "policy_key": "raw-access-restriction-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "source_explicit_end_at": null, "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours", "facility": "g-zone PARK", "restriction_types": ["PROGRAM_HOUR_EXCLUSION", "RESERVATION_REQUIRED"], "policy_key": "raw-access-restriction-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "source_explicit_end_at": null, "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation", "facility": "VAMOS", "restriction_types": ["RESERVATION_REQUIRED"], "policy_key": "raw-access-restriction-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "source_explicit_end_at": null, "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"},
+    {"fact_id": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan", "facility": "HTC CHIKUSA– Human Performance Training Center –", "restriction_types": ["PLAN_DEPENDENT_ACCESS", "PROGRAM_HOUR_EXCLUSION"], "policy_key": "raw-access-restriction-90-day", "reviewed_at": "2026-09-02T10:00:00.000Z", "source_explicit_end_at": null, "freshness_expires_at": "2026-12-01T10:00:00.000Z", "currentness_eligibility": "CURRENT_IMPORT_ELIGIBLE", "operational_gate": "HOLD_MONITOR_INTEGRATION"}
+  ],
+  "existing_canonical_coherence": {
+    "observations": 38,
+    "claims": 37,
+    "missing_policy": 0,
+    "policy_counts": {
+      "physical-equipment-180-day": 19,
+      "discipline-coaching-90-day": 8,
+      "open-training-90-day": 5,
+      "sled-push-pull-space-90-day": 3,
+      "competition-simulation-30-day": 3
+    }
+  },
+  "monitoring_contract": {
+    "existing_monitor_reads_raw_facts": false,
+    "existing_monitor_reads_restrictions": false,
+    "cadence": "WEEKLY",
+    "source_request_concurrency_max": 4,
+    "source_request_attempts_max": 2,
+    "deduplicate_source_fetches": true,
+    "monitor_observation_extends_freshness": false,
+    "required_classifications": ["NO_CHANGE", "DUE_SOON_RECONFIRMATION", "URGENT_RECONFIRMATION", "TIME_EXPIRED", "SUPPORT_DRIFT", "SOURCE_UNAVAILABLE", "FACILITY_BINDING_DRIFT", "MONITOR_ERROR", "AUTHORITY_MISSING"],
+    "implementation_decision": "REQUIRED_BEFORE_COHORT1_IMPORT"
+  },
+  "persistence_sufficiency": {
+    "status": "YES",
+    "no_migration_required": true,
+    "explicit_validity_storage": "Use freshness_expires_at for the earliest currentness boundary and preserve the source date in evidence_text/context; already-expired or future-effective evidence is historical-only/held rather than forced current."
+  },
+  "edge_cases": [
+    {"case": "A", "outcome": "CURRENT until the 180-day boundary if no invalidation; reachability alone does not reconfirm."},
+    {"case": "B", "outcome": "SUPPORT_DRIFT; fail current eligibility after reviewed/deterministic confirmation, retain history, infer no removal."},
+    {"case": "C", "outcome": "TIME_EXPIRED_HISTORICAL_ONLY; no negative facility conclusion."},
+    {"case": "D", "outcome": "FACILITY_BINDING_DRIFT; not reconfirmed and no current eligibility through the generic target."},
+    {"case": "E", "outcome": "TIME_EXPIRED_HISTORICAL_ONLY; does not mean reservation is unnecessary."},
+    {"case": "F", "outcome": "Currentness ends at the explicit end date when earlier than the 90-day boundary."},
+    {"case": "G", "outcome": "A new reviewed facility-bound accepted source creates a new-cycle observation and may reconfirm the same fact semantics."},
+    {"case": "H", "outcome": "MONITOR_ERROR; no invalidation and no freshness extension; retry with bounded backoff."},
+    {"case": "I", "outcome": "AUTHORITY_MISSING_HISTORICAL_ONLY; ineligible for currentness, derivation, search, or publication."},
+    {"case": "J", "outcome": "No CURRENT Sled Pull derivation unless every required dependency is CURRENT; no unavailability inference."},
+    {"case": "K", "outcome": "Historical row and provenance are retained after expiry."},
+    {"case": "L", "outcome": "NO_CURRENT_RESTRICTION_AUTHORITY; never interpret as unrestricted."}
+  ],
+  "deterministic_hashes": {
+    "freshness_policy_authority_sha256": "42ed943a807d505b3fdc4deadef0bc94014d0007287ca752d366cc83e2c31295",
+    "fact_policy_mapping_sha256": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
+    "restriction_policy_mapping_sha256": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
+    "cohort1_freshness_mapping_sha256": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e"
+  }
+}
