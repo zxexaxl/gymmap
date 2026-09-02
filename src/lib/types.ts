@@ -186,11 +186,12 @@ export type FavoriteScheduleWeek = {
   latestScheduleUpdate: string | null;
 };
 
-export type MapLessonSearchItem = {
-  rawProgramName: string;
-  canonicalProgramName: string | null;
-  programBrand: string | null;
-};
+export type MapLessonSearchItem = [
+  rawProgramName: string,
+  canonicalProgramName: string | null,
+  programBrand: string | null,
+  scheduleCount: number,
+];
 
 export type MapLocationLessonIndex = {
   locationId: string;

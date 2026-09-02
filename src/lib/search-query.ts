@@ -1,5 +1,5 @@
 import { getProgramBrandAliases, getProgramSearchAliases, programMaster } from "@/lib/program-master";
-import type { MapLessonSearchItem, SearchResult } from "@/lib/types";
+import type { SearchResult } from "@/lib/types";
 
 export type ProgramQueryHit = {
   field: "raw_program_name" | "canonical_program_name" | "program_brand" | "searchAliases" | "brandAliases";
@@ -137,12 +137,29 @@ export function scoreProgramQueryMatch(item: SearchResult, query: string) {
   );
 }
 
-export function scoreProgramTextQueryMatch(item: MapLessonSearchItem, query: string) {
-  const aliases = getProgramSearchAliases(item.canonicalProgramName);
-  const brandAliases = getProgramBrandAliases(item.programBrand);
-  const rawScore = getMatchScore(query, item.rawProgramName) * 100;
-  const canonicalScore = getMatchScore(query, item.canonicalProgramName) * 90;
-  const brandScore = getMatchScore(query, item.programBrand) * 85;
+export function scoreProgramTextQueryMatch(
+  item: { rawProgramName: string; canonicalProgramName: string | null; programBrand: string | null },
+  query: string,
+) {
+  return scoreProgramTextValues(
+    item.rawProgramName,
+    item.canonicalProgramName,
+    item.programBrand,
+    query,
+  );
+}
+
+export function scoreProgramTextValues(
+  rawProgramName: string,
+  canonicalProgramName: string | null,
+  programBrand: string | null,
+  query: string,
+) {
+  const aliases = getProgramSearchAliases(canonicalProgramName);
+  const brandAliases = getProgramBrandAliases(programBrand);
+  const rawScore = getMatchScore(query, rawProgramName) * 100;
+  const canonicalScore = getMatchScore(query, canonicalProgramName) * 90;
+  const brandScore = getMatchScore(query, programBrand) * 85;
   const aliasScore = Math.max(...aliases.map((alias) => getMatchScore(query, alias) * 80), 0);
   const brandAliasScore = Math.max(...brandAliases.map((alias) => getMatchScore(query, alias) * 82), 0);
 

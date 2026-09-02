@@ -16,6 +16,10 @@ import { hasSupabaseEnv, getSupabaseClient } from "@/lib/supabase";
 import type { Database } from "@/lib/database.types";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import {
+  buildMapLessonPurposeIndex,
+  type MapLessonPurposeSourceRow,
+} from "@/lib/map-lesson-purpose-index";
+import {
   latestSchedulePeriodEntriesFromSummary,
   popularProgramsFromSummary,
   type LatestSchedulePeriodSummaryRow,
@@ -916,22 +920,60 @@ const getLessonSearchIndexFromDataCache = unstable_cache(
   },
 );
 
+async function fetchMapLessonPurposeIndex(): Promise<MapLocationLessonIndex[]> {
+  const supabase = getSupabaseClient();
+  const pageSize = 1000;
+  const rows: MapLessonPurposeSourceRow[] = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("class_schedules")
+      .select(
+        "location_id, raw_program_name, valid_from, gym_locations!inner(lesson_location_memberships!inner())",
+      )
+      .eq("gym_locations.is_active", true)
+      .order("id", { ascending: true })
+      .range(from, from + pageSize - 1);
+
+    if (error) {
+      throw error;
+    }
+
+    const batch = (data as MapLessonPurposeSourceRow[]) ?? [];
+    rows.push(...batch);
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    from += pageSize;
+  }
+
+  return buildMapLessonPurposeIndex(rows);
+}
+
+const getMapLessonPurposeIndexFromDataCache = unstable_cache(
+  fetchMapLessonPurposeIndex,
+  ["lesson-map-program-aggregate-v1-membership"],
+  {
+    revalidate: sharedDataRevalidateSeconds,
+    tags: [
+      "lesson-map-program-aggregate",
+      "lesson-location-memberships",
+      "class-schedules",
+      "gym-locations",
+    ],
+  },
+);
+
 export async function getMapLessonSearchIndex(): Promise<MapLocationLessonIndex[]> {
   if (!hasSupabaseEnv()) {
     return [];
   }
 
   try {
-    const index = await getLessonSearchIndexFromDataCache();
-
-    return index.map((locationEntry) => ({
-      locationId: locationEntry.l,
-      lessons: locationEntry.x.map((lesson) => ({
-        rawProgramName: lesson.r,
-        canonicalProgramName: lesson.c,
-        programBrand: lesson.b,
-      })),
-    }));
+    return await getMapLessonPurposeIndexFromDataCache();
   } catch (error) {
     console.error(
       "Failed to load map lesson search index from Supabase:",

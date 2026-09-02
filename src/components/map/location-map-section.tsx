@@ -20,8 +20,9 @@ import {
 import { buildMapSelectionHref, resolveMapSelection } from "@/components/map/map-runtime-state";
 import type { MapBounds } from "@/components/map/map-types";
 import { configuredMapProvider, type MapProvider } from "@/lib/map-provider";
-import { scoreProgramTextQueryMatch, normalizeSearchKeyword } from "@/lib/search-query";
-import type { GymLocation, MapLessonSearchItem, MapLocationLessonIndex } from "@/lib/types";
+import { formatMapLessonMatchPreview, getMapLessonQueryMatches } from "@/lib/map-lesson-purpose-index";
+import { normalizeSearchKeyword } from "@/lib/search-query";
+import type { GymLocation, MapLocationLessonIndex } from "@/lib/types";
 import { buildSearchQuery, getLocationAddress } from "@/lib/utils";
 
 const LeafletGymMap = dynamic(
@@ -186,19 +187,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
   }
 
   const normalizedQuery = normalizeSearchKeyword(programQuery);
-  const matchesByLocationId = new Map<string, MapLessonSearchItem[]>();
-  let matchedLessonCount = 0;
-
-  lessonIndex.forEach((locationEntry) => {
-    const matches = normalizedQuery
-      ? locationEntry.lessons.filter((lesson) => scoreProgramTextQueryMatch(lesson, normalizedQuery) > 0)
-      : locationEntry.lessons;
-
-    if (matches.length) {
-      matchesByLocationId.set(locationEntry.locationId, matches);
-      matchedLessonCount += matches.length;
-    }
-  });
+  const { matchesByLocationId, matchedLessonCount } = getMapLessonQueryMatches(lessonIndex, normalizedQuery);
 
   const matchedLocationIds = new Set(matchesByLocationId.keys());
   const mappableLocations = useMemo(
@@ -323,11 +312,7 @@ export function LocationMapSection({ locations, lessonIndex }: LocationMapSectio
       return null;
     }
 
-    const uniqueNames = Array.from(new Set(matches.map((item) => item.rawProgramName)));
-    const preview = uniqueNames.slice(0, 3);
-    const restCount = uniqueNames.length - preview.length;
-
-    return restCount > 0 ? `${preview.join(", ")} 他${restCount}件` : preview.join(", ");
+    return formatMapLessonMatchPreview(matches);
   }
 
   function buildLessonDetailHref(location: GymLocation) {

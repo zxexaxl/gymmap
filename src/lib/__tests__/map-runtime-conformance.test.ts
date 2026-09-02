@@ -175,7 +175,7 @@ test("P4-A repeat locate requests camera movement without another acquisition", 
 
 test("Lesson query, filters, viewport scope, ordering, and domain content stay in the Lesson consumer", () => {
   for (const token of [
-    "scoreProgramTextQueryMatch",
+    "getMapLessonQueryMatches",
     "programQuery",
     "brandFilter",
     "prefectureFilter",
