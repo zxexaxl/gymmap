@@ -8,9 +8,9 @@
     "factMappingHash": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
     "restrictionMappingHash": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
     "cohort1MappingHash": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e",
-    "monitorPacketHash": "2e0bc0fa905c2d9f009ba6ae98fc5aab74ef12bd3bfa1a0ebec46ddb274a2057",
+    "monitorPacketHash": "0053ca193f69d371476f791f939a123ef445a22cef20fe7ee05284fa90e4bab9",
     "dbImportPacketHash": "c1c89a9716604fe8fd2d0b5ba3d2f11ee81b3723fdfb96652550c623029f6046",
-    "releaseCoherenceHash": "6dbfc3d8bbfbf7aff78a59f8db1c64c00d07ef9da909ce49550b497e8b5d3a78"
+    "releaseCoherenceHash": "ddb06a02bd92f425ed0181fa0288b32c599868cec86e1d32b91044e5cf4a6439"
   },
   "counts": {
     "sources": 9,
@@ -275,13 +275,16 @@
         "mode": "TEXT_PATTERN",
         "patternGroups": [
           [
-            "push"
+            "push",
+            "押す"
           ],
           [
-            "pull"
+            "pull",
+            "引く"
           ],
           [
-            "carry"
+            "carry",
+            "担ぐ"
           ]
         ]
       },
@@ -730,6 +733,7 @@
         "patternGroups": [
           [
             "burpee broad jump",
+            "burpees broad jump",
             "バーピーブロードジャンプ"
           ]
         ]
@@ -788,11 +792,14 @@
         "patternGroups": [
           [
             "running",
-            "ランニング"
+            "ランニング",
+            "走り",
+            "走る"
           ],
           [
             "indoor",
-            "屋内"
+            "屋内",
+            "館内"
           ]
         ]
       },
@@ -896,5 +903,5 @@
       "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations"
     }
   ],
-  "manifestHash": "507b170ca427438096298ddc55364394d11a915577f5077a4aa0c01b110837ed"
+  "manifestHash": "791b6255c0819ee11e7fab8f022f0dbbfd2298949b22c50943501fc575f0d718"
 }

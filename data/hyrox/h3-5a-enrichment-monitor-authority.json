@@ -4277,6 +4277,7 @@
         ],
         [
           "turf",
+          "ターフ",
           "lane",
           "space",
           "スペース",
@@ -4731,5 +4732,5 @@
       ]
     }
   ],
-  "manifestHash": "1614549ec0a7d0fbf043c448cc25e508ec651198640d691504b06fe3ae42600f"
+  "manifestHash": "dfa64409699629929f648eadd023934be30d1ca8e9fbd2163e5e06a7e3dd9593"
 }
