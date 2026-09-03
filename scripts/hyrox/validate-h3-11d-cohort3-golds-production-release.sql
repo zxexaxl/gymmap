@@ -1,0 +1,25 @@
+\set ON_ERROR_STOP on
+create or replace function pg_temp.expect(condition boolean, message text) returns void language plpgsql as $$ begin if not condition then raise exception 'H3-11D Cohort 3 validation failed: %', message; end if; end $$;
+select pg_temp.expect((select count(*)=8 from public.training_sources),'3 Finder plus 5 new sources');
+select pg_temp.expect((select count(*)=3 from public.training_review_cycles),'3 cycles');
+select pg_temp.expect((select count(*)=111 from public.training_review_units),'111 units');
+select pg_temp.expect((select count(*)=141 from public.training_review_unit_sources),'141 source relations');
+select pg_temp.expect((select count(*)=0 from public.training_review_units where positive_outcome='NO_POSITIVE_FOUND'),'no NO_POSITIVE_FOUND');
+select pg_temp.expect((select count(*)=29 from public.training_review_units where review_progress='COMPLETE' and source_sufficiency='SUFFICIENT' and positive_outcome='POSITIVE_FOUND'),'29 positive complete units');
+select pg_temp.expect((select count(*)=82 from public.training_review_units where review_progress='PARTIAL' and source_sufficiency='INSUFFICIENT' and positive_outcome='NOT_ASSESSED'),'82 fail-closed partial units');
+select pg_temp.expect((select count(*)=6 from public.location_equipment),'6 equipment claims');
+select pg_temp.expect((select count(*)=3 from public.location_training_capabilities),'3 capability claims');
+select pg_temp.expect((select count(*)=9 from public.training_evidence where location_equipment_id is not null or location_training_capability_id is not null),'9 canonical evidence rows');
+select pg_temp.expect((select count(*)=5 from public.training_raw_facts),'5 raw facts');
+select pg_temp.expect((select count(*)=16 from public.training_raw_fact_dimensions),'16 raw dimensions');
+select pg_temp.expect((select count(*)=0 from public.training_access_restrictions),'no included restrictions');
+select pg_temp.expect((select count(*)=0 from information_schema.tables where table_schema='public' and table_name like '%derived%station%'),'no station derivation');
+select pg_temp.expect((select count(*)=3 from public.published_location_training_disciplines),'publication intact');
+select pg_temp.expect((select count(*)=6 from public.published_location_equipment),'equipment publication exact');
+select pg_temp.expect((select count(*)=3 from public.published_location_training_capabilities),'capability publication exact');
+select pg_temp.expect((select count(*)=3 from public.search_training_locations('hyrox',p_official_only=>true,p_limit=>100)),'search remains coherent');
+select pg_temp.expect((select bool_and(relrowsecurity) from pg_class where relname in ('training_review_cycles','training_review_units','training_review_unit_sources','training_review_invalidations','training_raw_fact_types','training_raw_facts','training_raw_fact_dimensions','training_access_restrictions')),'RLS enabled');
+select pg_temp.expect((select count(*)=0 from pg_policies where tablename in ('training_review_cycles','training_review_units','training_review_unit_sources','training_review_invalidations','training_raw_fact_types','training_raw_facts','training_raw_fact_dimensions','training_access_restrictions')),'no policies');
+select pg_temp.expect((select bool_and(not has_table_privilege('anon',format('public.%I',name),'SELECT')) from (values ('training_review_cycles'),('training_review_units'),('training_review_unit_sources'),('training_raw_fact_types'),('training_raw_facts'),('training_raw_fact_dimensions'),('training_access_restrictions')) t(name)),'anon denied');
+select pg_temp.expect((select bool_and(not has_table_privilege('authenticated',format('public.%I',name),'SELECT')) from (values ('training_review_cycles'),('training_review_units'),('training_review_unit_sources'),('training_raw_fact_types'),('training_raw_facts'),('training_raw_fact_dimensions'),('training_access_restrictions')) t(name)),'authenticated denied');
+select 'H3-11D Cohort 3 disposable validation PASS' as result;

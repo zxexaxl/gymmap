@@ -1,0 +1,812 @@
+{
+  "authority": {
+    "sourceMain": "5561cbdd5a2fb8a352a850e04b0fc6e690812a17",
+    "protocolKey": "hyrox-review-coverage",
+    "protocolVersion": "h3-11a-v1",
+    "reviewedAt": "2026-09-03T04:20:00.000Z",
+    "reviewerAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+    "productionWrites": false,
+    "stationDerivation": false,
+    "publicNegativePublication": false
+  },
+  "facilities": [
+    {
+      "hgy_id": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "location_id": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "slug": "golds-gym-chiba-newtown",
+      "facility_name": "千葉ニュータウン",
+      "brand": "Gold's Gym",
+      "prefecture": "千葉県",
+      "city": "印西市",
+      "address": "中央南1-8千葉ニュータウン駅前センタービル 3階",
+      "page_url": "https://www.goldsgym.jp/shop/chiba-newtown/",
+      "legacy_review_status": "LEGACY_REVIEW_AVAILABLE",
+      "current_enrichment": {
+        "equipment": 0,
+        "capabilities": 0,
+        "rawFacts": 0,
+        "restrictions": 0,
+        "reviewCycles": 0
+      }
+    },
+    {
+      "hgy_id": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "location_id": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "slug": "hyrox-training-club-6340008",
+      "facility_name": "ゴールドジム 橿原奈良",
+      "brand": "Gold's Gym",
+      "prefecture": "奈良県",
+      "city": "橿原市",
+      "address": "6340008, Toichicho, Kashihara-shi, 2F Twin Gate Kashihara,1222-1",
+      "page_url": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "legacy_review_status": "LEGACY_REVIEW_AVAILABLE",
+      "current_enrichment": {
+        "equipment": 0,
+        "capabilities": 0,
+        "rawFacts": 0,
+        "restrictions": 0,
+        "reviewCycles": 0
+      }
+    },
+    {
+      "hgy_id": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "location_id": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "slug": "golds-gym-12131",
+      "facility_name": "幕張ベイパークアリーナ",
+      "brand": "Gold's Gym",
+      "prefecture": "千葉県",
+      "city": "千葉市美浜区",
+      "address": "若葉3-1-37幕張ベイパークウェルネスセンター",
+      "page_url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "legacy_review_status": "LEGACY_REVIEW_AVAILABLE",
+      "current_enrichment": {
+        "equipment": 0,
+        "capabilities": 0,
+        "rawFacts": 0,
+        "restrictions": 0,
+        "reviewCycles": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "sourceRef": "src-4575cb7f1e8e8989",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "6672f2a5-f64e-46fb-bcd1-2c3d996c592c",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T15:27:31.000Z",
+      "contentHash": "979e687f5b60f5511066c247c4934d5599d1dcf6592a22336f72162ca611032f",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv"
+      }
+    },
+    {
+      "sourceRef": "src-45b72dd345473a9c",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "2ca53207-353e-5edf-987f-f2009235958a",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T04:20:00.000Z",
+      "contentHash": "66fc1f5ba2b391ade3f5e628978d243a9b00c2c78b4c20d7cb63bc4eeee956ad",
+      "sourceClass": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-45b72dd345473a9c",
+        "sourceClass": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort3"
+      }
+    },
+    {
+      "sourceRef": "src-9060fa39965c45ff",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "a342d29b-8e82-50c2-bdc9-68bbb4b329cf",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T04:20:00.000Z",
+      "contentHash": "710c8671715ad9a498854e4d68b0baed534bf6669e8b594d74308aff04e9c4ba",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-9060fa39965c45ff",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort3"
+      }
+    },
+    {
+      "sourceRef": "src-964586f3201be212",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "2b8f417e-5ef9-4ac5-8df4-2eba7de07df6",
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T23:03:31.000Z",
+      "contentHash": "6f9c482c5dee3ba7a2be50020909b360f3fd2993d78e58c52108a352da1ba2bc",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_DnvhbwSSMXQWN6DL1AdCp966G"
+      }
+    },
+    {
+      "sourceRef": "src-a8bff052e27b007f",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "9728fa0f-e8f5-4133-8848-318a05e0d1a3",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-28T17:26:12.761Z",
+      "contentHash": "487145a500744223d292705752d44737dabd5924695f433e5e5f3402aee05616",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_CckOFxMw5VG60QfRbUzlk3VMy"
+      }
+    },
+    {
+      "sourceRef": "src-c42805d71f8e30f7",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "21dcca7a-abb3-5417-948f-1d8fa5485dd9",
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "url": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T04:20:00.000Z",
+      "contentHash": "6b722c7b0330fe0a88768dca3fc5b513cd2e12a0562e3294bfb7f8d8276b4bc8",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-c42805d71f8e30f7",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort3"
+      }
+    },
+    {
+      "sourceRef": "src-d003a735fde3181d",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "4ccb5273-b9a4-5396-92bb-2d2a984ba2be",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T04:20:00.000Z",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-d003a735fde3181d",
+        "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort3"
+      }
+    },
+    {
+      "sourceRef": "src-e0efec6deaa27aa1",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "cf4b1234-9679-540d-84ae-9914c7959247",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T04:20:00.000Z",
+      "contentHash": "143b4e63eea055b48d9c9f6cad4099d3a5c0275238750c464241d6f67a32a4a4",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-e0efec6deaa27aa1",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort3"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-coaching-hyrox-circuit",
+      "kind": "canonical_capability",
+      "slug": "discipline-coaching",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "COACHING_PROGRAM_FACT",
+      "statement": "The branch runs a trainer-supported HYROX Circuit Training program covering all eight HYROX disciplines.",
+      "evidenceText": "HYROXの8種目をサーキット形式で行う20分プログラムで、トレーナーがサポートします。",
+      "evidenceContext": "HYROX Circuit Training 開催中",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "contentHash": "66fc1f5ba2b391ade3f5e628978d243a9b00c2c78b4c20d7cb63bc4eeee956ad",
+      "freshnessPolicyKey": "discipline-coaching-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "HYROX Circuit Training"
+        ],
+        [
+          "HYROXの８種目",
+          "HYROXの8種目"
+        ],
+        [
+          "トレーナーがしっかりとサポート"
+        ]
+      ],
+      "sourceRef": "src-45b72dd345473a9c"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "anchorDimension": "farmers-carry",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment notice lists a 32 kg Octo kettlebell within the branch HYROX equipment set.",
+      "evidenceText": "The facility-specific HYROX equipment notice lists a 32 kg Octo kettlebell within the branch HYROX equipment set.",
+      "evidenceContext": "千葉ニュータウン店設置HYROX器具",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "オクトケトルベル32"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-functional-training-lane",
+      "kind": "canonical_equipment",
+      "slug": "functional-training-lane",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "burpee-broad-jump"
+      ],
+      "anchorDimension": "burpee-broad-jump",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment notice explicitly lists a 16.2 m turf surface.",
+      "evidenceText": "The facility-specific HYROX equipment notice explicitly lists a 16.2 m turf surface.",
+      "evidenceContext": "千葉ニュータウン店設置HYROX器具",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "ターフ"
+        ],
+        [
+          "16.2ｍ",
+          "16.2m"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-official-hyrox-set",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "official-hyrox-equipment-set-assertion"
+      ],
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "sled-push",
+        "sled-pull",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "anchorDimension": "sled-push",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The branch notice explicitly labels its listed turf, sled, sandbag, wall balls, and kettlebell as installed HYROX equipment; this preserves the scoped set assertion without station derivation.",
+      "evidenceText": "千葉ニュータウン店設置HYROX器具",
+      "evidenceContext": "HYROX公式器具追加設置のお知らせ",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "raw-equipment-set-assertion-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "パワースレッド"
+        ],
+        [
+          "ウォールボール"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "anchorDimension": "sandbag-lunges",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment notice explicitly lists a 30 kg sandbag.",
+      "evidenceText": "The facility-specific HYROX equipment notice explicitly lists a 30 kg sandbag.",
+      "evidenceContext": "千葉ニュータウン店設置HYROX器具",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "サンドバッグ30"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The branch HYROX equipment notice lists 4 kg and 9 kg wall balls; no target or usable wall-ball area is inferred.",
+      "evidenceText": "ウォールボール4kg・9kg",
+      "evidenceContext": "千葉ニュータウン店設置HYROX器具",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "ウォールボール4",
+          "ウォールボール4㎏"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "sled-push",
+        "sled-pull"
+      ],
+      "anchorDimension": "sled-push",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment notice explicitly lists a 50 kg power sled.",
+      "evidenceText": "The facility-specific HYROX equipment notice explicitly lists a 50 kg power sled.",
+      "evidenceContext": "千葉ニュータウン店設置HYROX器具",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "パワースレッド50"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_EQUIPMENT_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-usage-open-training",
+      "kind": "canonical_capability",
+      "slug": "open-training",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "sled-push",
+        "sled-pull",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "anchorDimension": "sled-push",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The facility-specific equipment notice invites patrons to use the installed HYROX equipment and makes trainer guidance optional on request.",
+      "evidenceText": "皆さま是非ご利用ください。ご希望であれば、トレーナーが使い方・ポイントをご指導します。",
+      "evidenceContext": "HYROX公式器具追加設置のお知らせ",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "contentHash": "8936c3ee41c526d33716630a58f78b979c341bc655cdfc931fa17e406e617006",
+      "freshnessPolicyKey": "open-training-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "皆さま是非ご利用ください"
+        ],
+        [
+          "ご希望であれば"
+        ],
+        [
+          "トレーナー"
+        ]
+      ],
+      "sourceRef": "src-d003a735fde3181d"
+    },
+    {
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "sourceClass": "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-usage-program-all-stations",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "program-use-confirmed"
+      ],
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "dimensions": [
+        "ski-erg",
+        "sled-push",
+        "sled-pull",
+        "burpee-broad-jump",
+        "row",
+        "farmers-carry",
+        "sandbag-lunges",
+        "wall-balls"
+      ],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The branch currently offers a 20-minute HYROX Circuit Training program covering all eight disciplines; this is non-exclusive program-use evidence.",
+      "evidenceText": "HYROXの8種目をサーキット形式で1種目1分、インターバル1分、ランニングなしで行う20分プログラム。",
+      "evidenceContext": "HYROX Circuit Training 開催中",
+      "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "contentHash": "66fc1f5ba2b391ade3f5e628978d243a9b00c2c78b4c20d7cb63bc4eeee956ad",
+      "freshnessPolicyKey": "raw-usage-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "HYROX Circuit Training"
+        ],
+        [
+          "HYROXの８種目",
+          "HYROXの8種目"
+        ],
+        [
+          "２０分プログラム",
+          "20分プログラム"
+        ]
+      ],
+      "sourceRef": "src-45b72dd345473a9c"
+    },
+    {
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-multi-movement",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "multi-movement-training-space"
+      ],
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "dimensions": [
+        "running-environment"
+      ],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility-specific agility-space description explicitly supports running, jumping, and change-of-direction training; no HYROX station suitability is inferred.",
+      "evidenceText": "走る、跳ねる、切り返すなど、主に敏捷性を高めるトレーニングに適しているスペースです。",
+      "evidenceContext": "アジリティスペース",
+      "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "アジリティスペース"
+        ],
+        [
+          "走る、跳ねる、切り返す"
+        ]
+      ],
+      "sourceRef": "src-c42805d71f8e30f7",
+      "contentHash": "6b722c7b0330fe0a88768dca3fc5b513cd2e12a0562e3294bfb7f8d8276b4bc8"
+    },
+    {
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-running",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "dimensions": [
+        "running-environment"
+      ],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility-specific agility-space description explicitly identifies running as a supported movement; this is not full HYROX running capability.",
+      "evidenceText": "走る、跳ねる、切り返すなど、主に敏捷性を高めるトレーニングに適しているスペースです。",
+      "evidenceContext": "アジリティスペース",
+      "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "アジリティスペース"
+        ],
+        [
+          "走る、跳ねる、切り返す"
+        ]
+      ],
+      "sourceRef": "src-c42805d71f8e30f7",
+      "contentHash": "6b722c7b0330fe0a88768dca3fc5b513cd2e12a0562e3294bfb7f8d8276b4bc8"
+    },
+    {
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "anchorDimension": "farmers-carry",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The official branch page embeds a facility-identified HYROX post explicitly presenting 200 m Farmers Carry with 16 kg, 24 kg, and 32 kg implements.",
+      "evidenceText": "幕張ベイパークアリーナ — HYROX実施可能種目 ⑥200mファーマーズキャリー（16kg,24kg,32kg）。",
+      "evidenceContext": "公式店舗ページ内 facility social feed",
+      "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "幕張ベイパークアリーナ"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "16㎏、24㎏、32㎏",
+          "16kg,24kg,32kg"
+        ]
+      ],
+      "sourceRef": "src-9060fa39965c45ff",
+      "contentHash": "710c8671715ad9a498854e4d68b0baed534bf6669e8b594d74308aff04e9c4ba"
+    },
+    {
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "dimensions": [
+        "running-environment"
+      ],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific cardio description explicitly lists treadmills for walking and running.",
+      "evidenceText": "トレッドミル（ウォーキング、ランニング）を種類豊富に揃えています。",
+      "evidenceContext": "カーディオトレーニングエリア",
+      "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル"
+        ],
+        [
+          "ウォーキング、ランニング"
+        ]
+      ],
+      "sourceRef": "src-9060fa39965c45ff",
+      "contentHash": "710c8671715ad9a498854e4d68b0baed534bf6669e8b594d74308aff04e9c4ba"
+    },
+    {
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T04:20:00.000Z",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "directness": "DIRECT_TEXT",
+      "observationId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv-usage-outdoor-running",
+      "kind": "canonical_capability",
+      "slug": "outdoor-running-access",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "dimensions": [
+        "running-environment"
+      ],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The facility-specific cardio description explicitly permits outdoor running after notifying the front desk.",
+      "evidenceText": "外出してのランニングもフロントでお申し出頂ければ可能です。",
+      "evidenceContext": "カーディオトレーニングエリア",
+      "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "freshnessPolicyKey": "outdoor-running-access-90-day",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "supportPatternGroups": [
+        [
+          "外出してのランニング"
+        ],
+        [
+          "フロントでお申し出"
+        ],
+        [
+          "可能"
+        ]
+      ],
+      "sourceRef": "src-9060fa39965c45ff",
+      "contentHash": "710c8671715ad9a498854e4d68b0baed534bf6669e8b594d74308aff04e9c4ba"
+    }
+  ],
+  "deferredGaps": [
+    {
+      "gapId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv-visual-hyrox-machine-poster",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "category": "VISUAL_MONITOR_POLICY_GAP",
+      "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/news/17957/",
+      "imageUrl": "https://www.goldsgym.jp/wp-content/uploads/2026/07/Makuhari_Baypark_HYROX.jpg",
+      "contentHash": "5df1c6a6da02fb8bdd2dbc2a9970d925e0332815a65d62aab3e78c99984be7df",
+      "evidence": "Facility-specific official poster visually lists SkiErg, Burpee Broad Jump, Rowing, Farmers Carry, Sandbag Lunges, Sled Push, Sled Pull, and Wall Balls, and contains time/space caveats.",
+      "potentialCanonicalEquipment": [
+        "ski-erg",
+        "row-erg",
+        "weighted-sled",
+        "sandbag"
+      ],
+      "potentialRawFactTypes": [
+        "wall-ball",
+        "multi-movement-training-space"
+      ],
+      "potentialRestrictionTypes": [
+        "PROGRAM_HOUR_EXCLUSION"
+      ],
+      "releaseDisposition": "DEFERRED_NON_BLOCKING",
+      "reason": "R3 text-pattern monitoring cannot deterministically validate the poster semantics; the separate text-supported Farmers Carry claim remains included.",
+      "stationDerivation": false
+    }
+  ],
+  "reviewCoverageSummary": {
+    "cycles": 3,
+    "units": 111,
+    "unitSources": 141,
+    "complete": 29,
+    "partial": 82,
+    "sufficient": 29,
+    "insufficient": 82,
+    "blocked": 0,
+    "positiveFound": 29,
+    "noPositiveFound": 0,
+    "notAssessed": 82
+  },
+  "deterministicHashes": {
+    "COHORT_3_IDENTITY_SHA256": "23a4fb25a8ecd4b0413a5a74c645065219e75a9e456e8fa799380304cfd15a2a",
+    "EVIDENCE_PACKET_SHA256": "29a749b7ef7adbf6629b04f564f2936b7c57ff7553d35565dff70565606e84f4"
+  }
+}
