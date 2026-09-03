@@ -1,0 +1,2351 @@
+{
+  "authority": {
+    "sourceMain": "973d7a71c01dc1b65a4b12c49bc484ad3cfd2e5f",
+    "protocolKey": "hyrox-review-coverage",
+    "protocolVersion": "h3-11a-v1",
+    "reviewedAt": "2026-09-03T01:30:00.000Z",
+    "reviewerAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+    "productionWrites": false,
+    "stationDerivation": false,
+    "publicNegativePublication": false
+  },
+  "facilities": [
+    {
+      "hgy_id": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "location_id": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "slug": "beequick-fitness-fuji-imaizumi",
+      "facility_name": "Beequick Fitness　Fuji imaizumi",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "静岡県",
+      "city": "富士市",
+      "address": "417-0001, Fuji-shi, imaizumi3-5-1",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "page_title": "富士今泉店",
+      "page_content_sha256": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4"
+    },
+    {
+      "hgy_id": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "location_id": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "slug": "beequick-kyotango",
+      "facility_name": "Beequick Kyotango",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "京都府",
+      "city": "京丹後市",
+      "address": "627-0005, Kyoto-fu kyotango-shi, mineyamachoshinmachi 1981-1",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/kyotango/",
+      "page_title": "京丹後店",
+      "page_content_sha256": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389"
+    },
+    {
+      "hgy_id": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "location_id": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "slug": "beequick-fitness-iga-ninjyanosato",
+      "facility_name": "Beequick Fitness　Iga Ninjyanosato",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "三重県",
+      "city": "伊賀市",
+      "address": "518-0820, iga-shi, hiranonishimachi63",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/iganinjanosato/",
+      "page_title": "伊賀忍者の里店",
+      "page_content_sha256": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb"
+    },
+    {
+      "hgy_id": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "location_id": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "slug": "beequick-fitness-sanda",
+      "facility_name": "Beequick Fitness　Sanda",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "兵庫県",
+      "city": "三田市",
+      "address": "669-1321, Hyogo-ken Sanda-shi, keyakidai 1-6-2",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/sanda/",
+      "page_title": "イオン三田ウッディタウン店",
+      "page_content_sha256": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14"
+    },
+    {
+      "hgy_id": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "location_id": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "slug": "beequick-fitness-tateyama",
+      "facility_name": "Beequick Fitness　Tateyama",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "千葉県",
+      "city": "館山市",
+      "address": "294-0047, Chiba-ken Tateyama-shi, Yawata 545-1",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/tateyama/",
+      "page_title": "イオンタウン館山店",
+      "page_content_sha256": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba"
+    },
+    {
+      "hgy_id": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "location_id": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "slug": "beequick-fitness-kasugai-oshisawadai",
+      "facility_name": "Beequick Fitness　Kasugai  oshisawadai",
+      "brand": "BeeQuick Fitness",
+      "prefecture": "愛知県",
+      "city": "春日井市",
+      "address": "487-0005, Aichi-ken Kasugai-shi, Oshisawadai 1-7-24",
+      "current_official": true,
+      "current_enrichment_count": 0,
+      "page_url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "page_title": "春日井押沢台店",
+      "page_content_sha256": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243"
+    }
+  ],
+  "sources": [
+    {
+      "sourceRef": "src-2581800dc0810e34",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "4985197c-c540-4b61-9be3-fa192927a8c4",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T13:50:28.000Z",
+      "contentHash": "0364b7fb77ac564358827f71259f64292953f8ac1bd4d28a398bdddb799bdf8b",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju"
+      }
+    },
+    {
+      "sourceRef": "src-285c40069a731761",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "e0daaa48-c65c-5fdc-9b96-6a11eb70dde1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "url": "https://www.beequick.jp/location/tateyama/",
+      "canonicalUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-285c40069a731761",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-5ea1d65675ec48a4",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "58a0351a-d8f4-4d48-9fa7-6ba4105cf0e1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T23:03:31.000Z",
+      "contentHash": "a94d33476ed4a2abfa347e9952a642cb348c6f21a70d62b84bd3212c3cccd1b2",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1"
+      }
+    },
+    {
+      "sourceRef": "src-84fe51b7bd8d42e5",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "96cac290-7b78-4307-a0cf-63043e1f897b",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T23:03:31.000Z",
+      "contentHash": "c0300db5898ac5592c9c136fe58e3e3b9b988a23601cb414ec07d08b87664439",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_sbFQoJaYts6eUUShzWUC6e8sv"
+      }
+    },
+    {
+      "sourceRef": "src-92849d22a78b9b40",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "1fb50d3c-f0ea-5d2e-829d-24d3cec36f60",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "url": "https://www.beequick.jp/location/iganinjanosato/",
+      "canonicalUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-92849d22a78b9b40",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-aefead94366b95d8",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "21ab4192-2f48-4672-b398-9229d72b37b4",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T23:03:31.000Z",
+      "contentHash": "dcf494c2304677363793ea2ccabaf621edb30d05867224a46b17ae7797d7617e",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_KXsKkigAHxENjfO8pM4ocl6FF"
+      }
+    },
+    {
+      "sourceRef": "src-bf0f19d5c0cf157d",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "d96836b2-e67a-4b70-afbf-f1e6ffb96254",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T23:03:31.000Z",
+      "contentHash": "fe3caa9d2a56200847399c755704a60ca724afe6959c9a59089f8dbde67e024a",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk"
+      }
+    },
+    {
+      "sourceRef": "src-d756abfd0f69262e",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "c02c20d7-89d6-5418-9706-25d33fff89e5",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "canonicalUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-d756abfd0f69262e",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "aee39071-ce91-5672-9413-9bae05571201",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "canonicalUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-d90ef5055fd1e8b8",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-ee8c134fcd421557",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "3acbd22b-8247-5d35-82ba-701609cc4e1d",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "url": "https://www.beequick.jp/location/sanda/",
+      "canonicalUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-ee8c134fcd421557",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "resolution": "NEW_SOURCE_INSERT",
+      "id": "30dbccd4-e9b9-57ea-8e92-c1fbd36235ea",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "url": "https://www.beequick.jp/location/kyotango/",
+      "canonicalUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceKind": "facility_page",
+      "publisherAuthority": "facility_official",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "metadata": {
+        "sourceRef": "src-f0f29c64552c8a2d",
+        "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+        "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+        "release": "h3-11d-cohort2"
+      }
+    },
+    {
+      "sourceRef": "src-f7f51bdba3ee8917",
+      "resolution": "REUSE_EXISTING_SOURCE",
+      "id": "84e92c84-5a13-4e85-8f8a-2dd4527c2e52",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "url": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "canonicalUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "sourceKind": "finder",
+      "publisherAuthority": "governing_body",
+      "availabilityState": "available",
+      "lastCheckedAt": "2026-08-29T13:50:28.000Z",
+      "contentHash": "2a09cb3f75fb90acd87a731b1b99a3e14407a026c5c09542b1a560747f0639b3",
+      "sourceClass": "GOVERNING_BODY_FINDER_DETAIL",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "metadata": {
+        "namespace": "hyrox-training-club",
+        "externalIdentifier": "HGY_VNYgC17BsAJ3cLgavQTUPCgay"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceContext": "HYROXエリア器具 / ウォールボール",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [
+        "sled-push"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceText": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ジム会員"
+        ],
+        [
+          "hyrox会員"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-trial-reservation",
+      "kind": "restriction",
+      "typeKeys": [
+        "RESERVATION_REQUIRED"
+      ],
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The offered HYROX trial is accessed through an explicit reservation entrypoint; this restriction is scoped to the trial, not ordinary HYROX-area use.",
+      "evidenceText": "The offered HYROX trial is accessed through an explicit reservation entrypoint; this restriction is scoped to the trial, not ordinary HYROX-area use.",
+      "evidenceContext": "HYROX体験予約",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "体験予約"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-usage-hyrox-trial-appointment",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "appointment-use-confirmed"
+      ],
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The facility page offers a facility-bound HYROX trial reservation entrypoint; this is appointment use, not general coaching or program-only exclusivity.",
+      "evidenceText": "The facility page offers a facility-bound HYROX trial reservation entrypoint; this is appointment use, not general coaching or program-only exclusivity.",
+      "evidenceContext": "HYROX体験予約",
+      "sourceRef": "src-ee8c134fcd421557",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5d7fbbd5040b723c8b5d94dd22fc191e38813f9bc3457bf0e444a54ecc586c14",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-usage-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "体験予約"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [
+        "sled-push"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceText": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "月会費"
+        ],
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-trial-reservation",
+      "kind": "restriction",
+      "typeKeys": [
+        "RESERVATION_REQUIRED"
+      ],
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The offered HYROX trial is accessed through an explicit reservation entrypoint; this restriction is scoped to the trial, not ordinary HYROX-area use.",
+      "evidenceText": "The offered HYROX trial is accessed through an explicit reservation entrypoint; this restriction is scoped to the trial, not ordinary HYROX-area use.",
+      "evidenceContext": "HYROX体験予約",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "体験予約"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-usage-hyrox-trial-appointment",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "appointment-use-confirmed"
+      ],
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The facility page offers a facility-bound HYROX trial reservation entrypoint; this is appointment use, not general coaching or program-only exclusivity.",
+      "evidenceText": "The facility page offers a facility-bound HYROX trial reservation entrypoint; this is appointment use, not general coaching or program-only exclusivity.",
+      "evidenceContext": "HYROX体験予約",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-usage-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "体験予約"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-usage-open-training",
+      "kind": "canonical_capability",
+      "slug": "open-training",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "dimensions": [],
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The facility page says the HYROX area is available without reservation and HYROX use is included in the published membership.",
+      "evidenceText": "The facility page says the HYROX area is available without reservation and HYROX use is included in the published membership.",
+      "evidenceContext": "店舗情報 / HYROXエリア",
+      "sourceRef": "src-285c40069a731761",
+      "sourceUrl": "https://www.beequick.jp/location/tateyama/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "7940287be239d6e179423ab143f6a37e6ef52c1571788c75fc1b83792522a7ba",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "open-training-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceContext": "HYROXエリア器具 / ウォールボール",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceText": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ジム会員"
+        ],
+        [
+          "hyrox会員"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-d756abfd0f69262e",
+      "sourceUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "a904c5b38739021c5a2e4ff9b1d93e41a4798e2b7c58a29e6fcf33190d67c1f4",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceContext": "HYROXエリア器具 / ウォールボール",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [
+        "sled-push"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceText": "The page separates general-gym and HYROX membership, so HYROX-area access is membership- and plan-dependent.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ジム会員"
+        ],
+        [
+          "hyrox会員"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-d90ef5055fd1e8b8",
+      "sourceUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "2980ce7a0f1f83a530f6b60f7e909a96bd2f2b4982edb8f986f8ad6320775243",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceContext": "HYROXエリア器具 / ウォールボール",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [
+        "sled-push"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceText": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "月会費"
+        ],
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-usage-open-training",
+      "kind": "canonical_capability",
+      "slug": "open-training",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "dimensions": [],
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page states that the 24-hour all-you-can-use gym includes an available HYROX area.",
+      "evidenceText": "The page states that the 24-hour all-you-can-use gym includes an available HYROX area.",
+      "evidenceContext": "店舗情報 / HYROXエリア",
+      "sourceRef": "src-f0f29c64552c8a2d",
+      "sourceUrl": "https://www.beequick.jp/location/kyotango/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "6bf1f4863245549161ab5d6f481d6a0fef51e6605d82e14d374ff1156d6e3389",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "open-training-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-farmers-carry-implements",
+      "kind": "canonical_equipment",
+      "slug": "farmers-carry-implements",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "farmers-carry"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceText": "The facility-specific HYROX-area list identifies kettlebells at stated weights, satisfying the H3-11A HYROX-use qualification for carry implements.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-row-erg",
+      "kind": "canonical_equipment",
+      "slug": "row-erg",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "row"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies RowErg/rower.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-running-track",
+      "kind": "canonical_equipment",
+      "slug": "running-track",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX area explicitly identifies an indoor 100 m running course.",
+      "evidenceText": "The facility-specific HYROX area explicitly identifies an indoor 100 m running course.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "屋内ランニングコース"
+        ],
+        [
+          "100m",
+          "１００ｍ"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-sandbag",
+      "kind": "canonical_equipment",
+      "slug": "sandbag",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "sandbag-lunges"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies sandbags at stated weights.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-ski-erg",
+      "kind": "canonical_equipment",
+      "slug": "ski-erg",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "ski-erg"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies SkiErg.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-treadmill",
+      "kind": "canonical_equipment",
+      "slug": "treadmill",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "running-environment"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceText": "The facility-specific machine inventory explicitly identifies treadmills.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-wall-ball",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "wall-balls"
+      ],
+      "anchorDimension": "wall-balls",
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies wall balls; no target or usable-area fact is inferred.",
+      "evidenceContext": "HYROXエリア器具 / ウォールボール",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-physical-component-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-weighted-sled",
+      "kind": "canonical_equipment",
+      "slug": "weighted-sled",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "sled-push"
+      ],
+      "reviewAspect": "EQUIPMENT_FACT",
+      "statement": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceText": "The facility-specific HYROX equipment list explicitly identifies weighted sled equipment.",
+      "evidenceContext": "HYROXエリア器具",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "physical-equipment-180-day",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-restriction-hyrox-membership",
+      "kind": "restriction",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [],
+      "anchorDimension": "ski-erg",
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceText": "The page ties HYROX-area use to the published gym membership offering.",
+      "evidenceContext": "月会費 / HYROX利用",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-access-restriction-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "月会費"
+        ],
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-general-training-floor",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceText": "The facility page describes a spacious gym floor for training; this weak fact has no station-specific implication.",
+      "evidenceContext": "マシン詳細",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "広々"
+        ],
+        [
+          "トレーニング"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-running-course",
+      "kind": "raw_fact",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [
+        "running-environment"
+      ],
+      "anchorDimension": "running-environment",
+      "reviewAspect": "SPACE_FACT",
+      "statement": "The facility-specific HYROX area explicitly identifies an indoor 100 m running course.",
+      "evidenceText": "The facility-specific HYROX area explicitly identifies an indoor 100 m running course.",
+      "evidenceContext": "HYROXエリア器具 / 屋内ランニングコース（1周100m）",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "raw-space-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "屋内ランニングコース"
+        ],
+        [
+          "100m",
+          "１００ｍ"
+        ]
+      ]
+    },
+    {
+      "observationId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-usage-open-training",
+      "kind": "canonical_capability",
+      "slug": "open-training",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "dimensions": [],
+      "reviewAspect": "USAGE_ACCESS_FACT",
+      "statement": "The page states that the 24-hour all-you-can-use gym includes an available HYROX area.",
+      "evidenceText": "The page states that the 24-hour all-you-can-use gym includes an available HYROX area.",
+      "evidenceContext": "店舗情報 / HYROXエリア",
+      "sourceRef": "src-92849d22a78b9b40",
+      "sourceUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "observedAt": "2026-09-03T01:30:00.000Z",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "contentHash": "5690a0abf58f59faba69948000666837ef74cae5b625dcbcecf549d56ac5b8fb",
+      "directness": "DIRECT_TEXT",
+      "freshnessPolicyKey": "open-training-90-day",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    }
+  ],
+  "deferredGaps": [
+    {
+      "gapId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-visual-sled-rope-lane",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "category": "MONITOR_POLICY_GAP",
+      "sourceUrl": "https://www.beequick.jp/location/sanda/img/hyrox/img_03.jpg?20260602",
+      "evidence": "Facility-bound unique image visibly shows a weighted sled, rope, and marked turf lane.",
+      "potentialFactTypes": [
+        "sled-pull-rope",
+        "multi-movement-training-space"
+      ],
+      "releaseDisposition": "DEFERRED_NON_BLOCKING",
+      "reason": "The accepted R3 text-pattern monitor cannot deterministically verify image semantics; no weaker HTML text is substituted.",
+      "stationDerivation": false
+    }
+  ],
+  "reviewCoverageSummary": {
+    "cycles": 6,
+    "units": 222,
+    "unitSources": 228,
+    "complete": 75,
+    "partial": 147,
+    "sufficient": 75,
+    "insufficient": 147,
+    "blocked": 0,
+    "positiveFound": 75,
+    "noPositiveFound": 0,
+    "notAssessed": 147
+  },
+  "deterministicHashes": {
+    "COHORT_2_IDENTITY_SHA256": "b8cae6c92d3bba76979270dbde5107a0f31d99aaf0eebdfd5726730f2913ded0",
+    "EVIDENCE_PACKET_SHA256": "a0f7a410ac628f97cfbfad8bfcde50e7c3ad2d0cf1bcfdab030ecbe110f522a2"
+  }
+}
