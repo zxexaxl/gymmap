@@ -8,14 +8,14 @@
     "factMappingHash": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
     "restrictionMappingHash": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
     "cohort1MappingHash": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e",
-    "monitorPacketHash": "d5e694d959172752ae1c2f9a1ae3be474072d6c75be08ddbd2948f46124d0df2",
-    "dbImportPacketHash": "8110a514eb2127f97be6c3c58e75da8638b99125b2a5c47e79bd1c55e7d8da1e",
-    "releaseCoherenceHash": "38df7a5a477b71c3c5c66dd8303853e5cd6a8af21ce8797111d1537d7de95e26"
+    "monitorPacketHash": "73734b5fb1ce362b0422a102345aac803c04dd2e2aba73309736225d5c999e0c",
+    "dbImportPacketHash": "8ca4ea82696b5fa6a5fff9e516abe33c3d0912ff5717acc5d32ef28c237d7020",
+    "releaseCoherenceHash": "7747143d726537209595a4c2492241f3313d281ead469a6d0b4b237247aa2adb"
   },
   "counts": {
-    "sources": 15,
-    "entries": 45,
-    "rawFacts": 33,
+    "sources": 18,
+    "entries": 50,
+    "rawFacts": 38,
     "restrictions": 12
   },
   "sources": [
@@ -254,6 +254,63 @@
         [
           "beequick",
           "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-45b72dd345473a9c",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "千葉ニュータウン",
+          "千葉ニュータウン"
+        ],
+        [
+          "gold's",
+          "golds",
+          "ゴールドジム"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-c42805d71f8e30f7",
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "url": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/kashihara-nara/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "ゴールドジム 橿原奈良",
+          "橿原奈良"
+        ],
+        [
+          "gold's",
+          "golds",
+          "ゴールドジム"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-d003a735fde3181d",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "千葉ニュータウン",
+          "千葉ニュータウン"
+        ],
+        [
+          "gold's",
+          "golds",
+          "ゴールドジム"
         ]
       ]
     }
@@ -1755,7 +1812,186 @@
       "persistenceKeys": [
         "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-running-course"
       ]
+    },
+    {
+      "observationKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-official-hyrox-set",
+      "kind": "raw_fact",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "facilityName": "千葉ニュータウン",
+      "typeKeys": [
+        "official-hyrox-equipment-set-assertion"
+      ],
+      "policyKey": "raw-equipment-set-assertion-90-day",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d003a735fde3181d"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "千葉ニュータウン店設置HYROX器具"
+          ],
+          [
+            "パワースレッド"
+          ],
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-official-hyrox-set",
+      "persistenceKeys": [
+        "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-official-hyrox-set"
+      ]
+    },
+    {
+      "observationKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "facilityName": "千葉ニュータウン",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T04:20:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d003a735fde3181d"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "千葉ニュータウン店設置HYROX器具"
+          ],
+          [
+            "ウォールボール4",
+            "ウォールボール4㎏"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_CckOFxMw5VG60QfRbUzlk3VMy-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-usage-program-all-stations",
+      "kind": "raw_fact",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "facilityName": "千葉ニュータウン",
+      "typeKeys": [
+        "program-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-45b72dd345473a9c"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "HYROX Circuit Training"
+          ],
+          [
+            "HYROXの８種目",
+            "HYROXの8種目"
+          ],
+          [
+            "２０分プログラム",
+            "20分プログラム"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_CckOFxMw5VG60QfRbUzlk3VMy-usage-program-all-stations",
+      "persistenceKeys": [
+        "HGY_CckOFxMw5VG60QfRbUzlk3VMy-usage-program-all-stations"
+      ]
+    },
+    {
+      "observationKey": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-multi-movement",
+      "kind": "raw_fact",
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "facilityName": "ゴールドジム 橿原奈良",
+      "typeKeys": [
+        "multi-movement-training-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-c42805d71f8e30f7"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "アジリティスペース"
+          ],
+          [
+            "走る、跳ねる、切り返す"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-multi-movement",
+      "persistenceKeys": [
+        "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-multi-movement"
+      ]
+    },
+    {
+      "observationKey": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-running",
+      "kind": "raw_fact",
+      "locationId": "1de9a4af-9fc4-495a-8628-467a4d240842",
+      "hgyId": "HGY_DnvhbwSSMXQWN6DL1AdCp966G",
+      "facilityName": "ゴールドジム 橿原奈良",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T04:20:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T04:20:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-c42805d71f8e30f7"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "アジリティスペース"
+          ],
+          [
+            "走る、跳ねる、切り返す"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 3 Gold's one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-running",
+      "persistenceKeys": [
+        "HGY_DnvhbwSSMXQWN6DL1AdCp966G-space-running"
+      ]
     }
   ],
-  "manifestHash": "02b076a08a666ac66b7623bb817417ce9a5051fae46b01fff92bc9ec26588903"
+  "manifestHash": "6dcef897338c20a756ed8d0694ab6cedfb19eab4f55b886c4726f03f9f9471e9"
 }

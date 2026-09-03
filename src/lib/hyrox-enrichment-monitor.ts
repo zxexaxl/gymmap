@@ -158,10 +158,16 @@ export function validateEnrichmentManifest(manifest: EnrichmentAuthorityManifest
     manifest.authority.currentManifestHash === "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299" &&
     manifest.authority.deltaHash === "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a" &&
     manifest.authority.dbCandidateHash === "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e";
-  if (!h35 && !h38 && !h311d && !h311dCohort2) throw new Error("HYROX enrichment manifest authority/count mismatch");
+  const h311dCohort3 = manifest.schemaVersion === 2 && manifest.counts.sources === 45 && manifest.sources.length === 45 &&
+    manifest.counts.equipment === 170 && manifest.counts.capabilities === 65 && manifest.counts.claims === 235 &&
+    manifest.claims.length === 235 && manifest.counts.enrichedLocations === 41 &&
+    manifest.authority.currentManifestHash === "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299" &&
+    manifest.authority.deltaHash === "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a" &&
+    manifest.authority.dbCandidateHash === "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e";
+  if (!h35 && !h38 && !h311d && !h311dCohort2 && !h311dCohort3) throw new Error("HYROX enrichment manifest authority/count mismatch");
   if (enrichmentManifestHash(manifest) !== manifest.manifestHash) throw new Error("Enrichment manifest hash mismatch");
   const sourceKeys = new Set(manifest.sources.map((item) => item.sourceKey));
-  const expectedUrls = h311dCohort2 ? 31 : h311d ? 25 : h38 ? 15 : 10;
+  const expectedUrls = h311dCohort3 ? 34 : h311dCohort2 ? 31 : h311d ? 25 : h38 ? 15 : 10;
   if (sourceKeys.size !== manifest.counts.sources || new Set(manifest.sources.map((item) => item.url)).size !== expectedUrls ||
       new Set(manifest.claims.map((item) => item.claimKey)).size !== manifest.counts.claims ||
       manifest.claims.some((item) => !sourceKeys.has(item.sourceKey) || item.claimKey !== enrichmentClaimKey(item.kind, item.locationId, item.slug) ||

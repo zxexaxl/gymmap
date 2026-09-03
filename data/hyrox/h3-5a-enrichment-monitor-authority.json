@@ -6,12 +6,12 @@
     "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e"
   },
   "counts": {
-    "sources": 42,
-    "uniqueExternalUrls": 31,
-    "equipment": 164,
-    "capabilities": 62,
-    "claims": 226,
-    "enrichedLocations": 39
+    "sources": 45,
+    "uniqueExternalUrls": 34,
+    "equipment": 170,
+    "capabilities": 65,
+    "claims": 235,
+    "enrichedLocations": 41
   },
   "sources": [
     {
@@ -389,6 +389,33 @@
       "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
       "url": "https://www.beequick.jp/location/kyotango/",
       "canonicalUrl": "https://www.beequick.jp/location/kyotango/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort3:src-45b72dd345473a9c",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6171/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort3:src-9060fa39965c45ff",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "url": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "url": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
+      "canonicalUrl": "https://www.goldsgym.jp/shop/chiba-newtown/news/6412/",
       "quality": "Q2",
       "publisherAuthority": "facility_official"
     }
@@ -5618,7 +5645,223 @@
           "sled"
         ]
       ]
+    },
+    {
+      "claimKey": "capability:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:discipline-coaching",
+      "kind": "capability",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort3:src-45b72dd345473a9c",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2026-12-02T04:20:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "096af5bb7826e72166869e5c48211df8b9e3e1b3ac096f339f4125b61e20009d",
+      "supportPatternGroups": [
+        [
+          "HYROX Circuit Training"
+        ],
+        [
+          "HYROXの８種目",
+          "HYROXの8種目"
+        ],
+        [
+          "トレーナーがしっかりとサポート"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:open-training",
+      "kind": "capability",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "open-training",
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2026-12-02T04:20:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "fdf1edacde0438b84cebbf30cd8077182eda2712d712acc85c89d3ce6093c907",
+      "supportPatternGroups": [
+        [
+          "皆さま是非ご利用ください"
+        ],
+        [
+          "ご希望であれば"
+        ],
+        [
+          "トレーナー"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:73a4df85-88c1-4545-a74b-4fcf9a5ffaf8:outdoor-running-access",
+      "kind": "capability",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "locationSlug": "golds-gym-12131",
+      "locationName": "幕張ベイパークアリーナ",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "slug": "outdoor-running-access",
+      "sourceKey": "cohort3:src-9060fa39965c45ff",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2026-12-02T04:20:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "59f0cbabffb96361a913f18889009ef2395b629a20ee9c0798b7d333833ea804",
+      "supportPatternGroups": [
+        [
+          "外出してのランニング"
+        ],
+        [
+          "フロントでお申し出"
+        ],
+        [
+          "可能"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "af0252b4a22e78159f43805865d7248cd0550d809fefd39218d41a1cab2e5530",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "オクトケトルベル32"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:functional-training-lane",
+      "kind": "equipment",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "functional-training-lane",
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3ed3e050dc73d2576dbdfb6c1154a82e1c18cc26491ef8f43c6af67e764eeaaa",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "ターフ"
+        ],
+        [
+          "16.2ｍ",
+          "16.2m"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:sandbag",
+      "kind": "equipment",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "sandbag",
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3207206b97fe70991ad02f866e99b92653ffd51f8da1058ce5c0f8d46c3475eb",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "サンドバッグ30"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4d3bd3ba-cb00-44be-bdd6-d9b901f73195:weighted-sled",
+      "kind": "equipment",
+      "locationId": "4d3bd3ba-cb00-44be-bdd6-d9b901f73195",
+      "locationSlug": "golds-gym-chiba-newtown",
+      "locationName": "千葉ニュータウン",
+      "hgyId": "HGY_CckOFxMw5VG60QfRbUzlk3VMy",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort3:src-d003a735fde3181d",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "b02aba1e30c18b7cc5c38bf1847a6a5ef03d548b30f49f97297cba311ed7a2ee",
+      "supportPatternGroups": [
+        [
+          "千葉ニュータウン店設置HYROX器具"
+        ],
+        [
+          "パワースレッド50"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:73a4df85-88c1-4545-a74b-4fcf9a5ffaf8:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "locationSlug": "golds-gym-12131",
+      "locationName": "幕張ベイパークアリーナ",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort3:src-9060fa39965c45ff",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "6dfcca3b174a2a37c9cf5565ec74665bbaf1d9bbeb74067e2b25aff69eb953c2",
+      "supportPatternGroups": [
+        [
+          "幕張ベイパークアリーナ"
+        ],
+        [
+          "ファーマーズキャリー"
+        ],
+        [
+          "16㎏、24㎏、32㎏",
+          "16kg,24kg,32kg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:73a4df85-88c1-4545-a74b-4fcf9a5ffaf8:treadmill",
+      "kind": "equipment",
+      "locationId": "73a4df85-88c1-4545-a74b-4fcf9a5ffaf8",
+      "locationSlug": "golds-gym-12131",
+      "locationName": "幕張ベイパークアリーナ",
+      "hgyId": "HGY_mkqpr1PrUO2WFjQgpVsFUSkMv",
+      "slug": "treadmill",
+      "sourceKey": "cohort3:src-9060fa39965c45ff",
+      "lastConfirmedAt": "2026-09-03T04:20:00.000Z",
+      "staleAt": "2027-03-02T04:20:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "e4ccf96cd656666246899a3c3b12872e4de33c79d5b70a15d30a2d166431c038",
+      "supportPatternGroups": [
+        [
+          "トレッドミル"
+        ],
+        [
+          "ウォーキング、ランニング"
+        ]
+      ]
     }
   ],
-  "manifestHash": "614048ba7d0890c8fbadfc0318ea37fa3e6da06e72dc15710800e7544f00ad2f"
+  "manifestHash": "48aafdfb2ecb07be07266078ed4765cc1bfa04de1709c21b3e102d59f54a5808"
 }
