@@ -82,9 +82,9 @@ test("accepted R2 authority and both monitor manifests are deterministic", () =>
   assert.throws(() => validateR2FreshnessAuthority(corrupted), /authority hash mismatch/);
 });
 
-test("live inventory is empty while Cohort 1 remains a complete non-live simulation", () => {
-  const liveRun = buildRawMonitorRun({ manifest: live, authority: r2, sourceObservations: [], checkedAt: "2026-09-03T00:00:00.000Z" });
-  assert.deepEqual({ entries: liveRun.entries, rawFacts: liveRun.rawFacts, restrictions: liveRun.restrictions, sources: liveRun.uniqueSources }, { entries: 0, rawFacts: 0, restrictions: 0, sources: 0 });
+test("live inventory contains the released Cohort 1 packet while the accepted candidate remains frozen", () => {
+  const liveRun = buildRawMonitorRun({ manifest: live, authority: r2, sourceObservations: fixture.observations, checkedAt: "2026-09-03T00:00:00.000Z", requestStats: fixture.stats });
+  assert.deepEqual({ entries: liveRun.entries, rawFacts: liveRun.rawFacts, restrictions: liveRun.restrictions, sources: liveRun.uniqueSources }, { entries: 23, rawFacts: 19, restrictions: 4, sources: 9 });
   assert.equal(live.mode, "LIVE_MONITORED");
   assert.equal(candidate.mode, "CANDIDATE_NOT_IMPORTED");
   assert.deepEqual(candidate.counts, { sources: 9, entries: 23, rawFacts: 19, restrictions: 4 });
@@ -337,10 +337,10 @@ test("R3 adds no privileged secret, database write, public endpoint, or automati
   }
 });
 
-test("existing 150-claim monitor inventory remains separate and unchanged", () => {
+test("canonical monitor inventory contains the released 37-claim delta and remains separate from raw observations", () => {
   const enrichment = JSON.parse(fs.readFileSync("data/hyrox/h3-5a-enrichment-monitor-authority.json", "utf8"));
-  assert.equal(enrichment.counts.claims, 150);
-  assert.equal(enrichment.counts.equipment, 109);
-  assert.equal(enrichment.counts.capabilities, 41);
+  assert.equal(enrichment.counts.claims, 187);
+  assert.equal(enrichment.counts.equipment, 128);
+  assert.equal(enrichment.counts.capabilities, 59);
   assert.equal(candidate.entries.some((entry) => "claimKey" in entry), false);
 });

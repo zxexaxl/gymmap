@@ -53,7 +53,7 @@ export type EnrichmentAuthorityManifest = {
     deltaHash?: string;
     dbCandidateHash?: string;
   };
-  counts: { sources: number; equipment: number; capabilities: number; claims: number; enrichedLocations: number };
+  counts: { sources: number; uniqueExternalUrls?: number; equipment: number; capabilities: number; claims: number; enrichedLocations: number };
   sources: EnrichmentMonitorSource[];
   claims: EnrichmentMonitorClaim[];
   manifestHash: string;
@@ -146,10 +146,17 @@ export function validateEnrichmentManifest(manifest: EnrichmentAuthorityManifest
     manifest.authority.currentManifestHash === "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299" &&
     manifest.authority.deltaHash === "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a" &&
     manifest.authority.dbCandidateHash === "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e";
-  if (!h35 && !h38) throw new Error("HYROX enrichment manifest authority/count mismatch");
+  const h311d = manifest.schemaVersion === 2 && manifest.counts.sources === 36 && manifest.sources.length === 36 &&
+    manifest.counts.equipment === 128 && manifest.counts.capabilities === 59 && manifest.counts.claims === 187 &&
+    manifest.claims.length === 187 && manifest.counts.enrichedLocations === 33 &&
+    manifest.authority.currentManifestHash === "cf15436a522e0571a53d9e8b3f9bf3722ebe5f5bfee6e3e2cefddcdcf7538299" &&
+    manifest.authority.deltaHash === "f3cfeca4db5828308e6cb85d4c370153d61a489d11429ad6618d4bae0b02e79a" &&
+    manifest.authority.dbCandidateHash === "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e";
+  if (!h35 && !h38 && !h311d) throw new Error("HYROX enrichment manifest authority/count mismatch");
   if (enrichmentManifestHash(manifest) !== manifest.manifestHash) throw new Error("Enrichment manifest hash mismatch");
   const sourceKeys = new Set(manifest.sources.map((item) => item.sourceKey));
-  if (sourceKeys.size !== manifest.counts.sources || new Set(manifest.sources.map((item) => item.url)).size !== (h38 ? 15 : 10) ||
+  const expectedUrls = h311d ? 25 : h38 ? 15 : 10;
+  if (sourceKeys.size !== manifest.counts.sources || new Set(manifest.sources.map((item) => item.url)).size !== expectedUrls ||
       new Set(manifest.claims.map((item) => item.claimKey)).size !== manifest.counts.claims ||
       manifest.claims.some((item) => !sourceKeys.has(item.sourceKey) || item.claimKey !== enrichmentClaimKey(item.kind, item.locationId, item.slug) ||
         item.supportPatternGroups.length === 0 || item.supportPatternGroups.some((group) => group.length === 0))) throw new Error("Enrichment manifest natural identity/support mismatch");

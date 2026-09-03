@@ -61,21 +61,21 @@ function run(manifest: EnrichmentAuthorityManifest, overrides: {
   });
 }
 
-test("authority manifest freezes the exact H3-8 release graph and canonical hash", async () => {
+test("authority manifest includes the exact H3-11D Cohort 1 release graph and canonical hash", async () => {
   const manifest = await loadManifest();
-  assert.deepEqual(manifest.counts, { sources: 26, uniqueExternalUrls: 15, equipment: 109, capabilities: 41, claims: 150, enrichedLocations: 25 });
+  assert.deepEqual(manifest.counts, { sources: 36, uniqueExternalUrls: 25, equipment: 128, capabilities: 59, claims: 187, enrichedLocations: 33 });
   assert.equal(enrichmentManifestHash(manifest), manifest.manifestHash);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 150);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 26);
-  assert.equal(new Set(manifest.sources.map((source) => source.url)).size, 15);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 187);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 36);
+  assert.equal(new Set(manifest.sources.map((source) => source.url)).size, 25);
 });
 
-test("initial frozen time produces 137 fresh and thirteen due-soon competition claims", async () => {
+test("initial frozen time preserves thirteen due-soon legacy claims and adds 37 fresh Cohort 1 claims", async () => {
   const result = run(await loadManifest());
-  assert.equal(result.records.length, 150);
-  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 137);
+  assert.equal(result.records.length, 187);
+  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 174);
   assert.equal(result.records.filter((record) => record.freshness.status === "DUE_SOON").length, 13);
-  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 137);
+  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 174);
   assert.equal(result.reviewQueue.length, 13);
   assert.ok(result.reviewQueue.every((record) => record.slug === "competition-simulation"));
   assert.ok(result.reviewQueue.every((record) => record.classifications.includes("DUE_SOON_RECONFIRMATION")));
@@ -93,9 +93,9 @@ test("freshness boundaries preserve category horizons and UTC instants", async (
     const record = run(manifest, { checkedAt: at }).records.find((item) => item.claimKey === claim.claimKey)!;
     assert.equal(record.freshness.status, expected);
   }
-  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 109);
-  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 28);
-  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 30).length, 13);
+  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 128);
+  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 43);
+  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 30).length, 16);
 });
 
 test("support matcher tolerates harmless markup/reordering but rejects unrelated keywords", async () => {
@@ -159,8 +159,8 @@ test("global outage creates one run-level root cause instead of disappearance al
   const result = run(manifest, { observations });
   assert.deepEqual(result.runIssues.map((issue) => issue.code), ["MONITOR_SOURCE_OUTAGE"]);
   assert.equal(result.records.filter((record) => record.classifications.includes("SOURCE_UNAVAILABLE")).length, 0);
-  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 150);
-  assert.equal(result.sourceIssues.length, 26);
+  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 187);
+  assert.equal(result.sourceIssues.length, 36);
   assert.equal(result.reviewQueue.length, 13, "freshness queue remains visible while outage noise is grouped");
 });
 

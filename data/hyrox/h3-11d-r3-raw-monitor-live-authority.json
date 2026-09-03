@@ -8,17 +8,893 @@
     "factMappingHash": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
     "restrictionMappingHash": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
     "cohort1MappingHash": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e",
-    "monitorPacketHash": "ccac7a73af03d30714c044b38f4ca9f5d1fe9fbbae57894f84b1f0821aeccf03",
-    "dbImportPacketHash": null,
-    "releaseCoherenceHash": null
+    "monitorPacketHash": "2e0bc0fa905c2d9f009ba6ae98fc5aab74ef12bd3bfa1a0ebec46ddb274a2057",
+    "dbImportPacketHash": "c1c89a9716604fe8fd2d0b5ba3d2f11ee81b3723fdfb96652550c623029f6046",
+    "releaseCoherenceHash": "6dbfc3d8bbfbf7aff78a59f8db1c64c00d07ef9da909ce49550b497e8b5d3a78"
   },
   "counts": {
-    "sources": 0,
-    "entries": 0,
-    "rawFacts": 0,
-    "restrictions": 0
+    "sources": 9,
+    "entries": 23,
+    "rawFacts": 19,
+    "restrictions": 4
   },
-  "sources": [],
-  "entries": [],
-  "manifestHash": "e29b61edbe1f3dea1912ebfdd147d4dd866304230ed069fd4799a4f1317b1e84"
+  "sources": [
+    {
+      "sourceKey": "src-6563ef5f6053bb20",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "url": "https://fitone-club.com/",
+      "canonicalUrl": "https://fitone-club.com/",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "fitone shibuya",
+          "fitone"
+        ],
+        [
+          "渋谷",
+          "shibuya"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-7068c574e9c94ca8",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "url": "https://htc-chikusa.com/facility.html",
+      "canonicalUrl": "https://htc-chikusa.com/facility.html",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "htc chikusa"
+        ],
+        [
+          "名古屋",
+          "chikusa"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-75b51f42cb58283c",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "url": "https://www.club360.jp/hyrox",
+      "canonicalUrl": "https://www.club360.jp/hyrox",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "club 360",
+          "club360"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-88f0214ede1b29db",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "url": "https://improve-hyrox.com/",
+      "canonicalUrl": "https://improve-hyrox.com/",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "improve kyoto"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-9d7c6221a96b6ff0",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "url": "https://g-zone.co.jp/park/hyrox/",
+      "canonicalUrl": "https://g-zone.co.jp/park/hyrox/",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "g-zone",
+          "g zone"
+        ],
+        [
+          "park"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-bca76865cd84dfb5",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "url": "https://vamos-training.com/ja/classes",
+      "canonicalUrl": "https://vamos-training.com/ja/classes",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "vamos"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-cb938cddb3bc0b4c",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "url": "https://crossfitashiya.com/hyrox",
+      "canonicalUrl": "https://crossfitashiya.com/hyrox/",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "crossfit ashiya",
+          "クロスフィット芦屋"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-fb5d0715281764cc",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "url": "https://vamos-training.com/ja",
+      "canonicalUrl": "https://vamos-training.com/ja",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "vamos"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-fecd5cdb81a50241",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "url": "https://htc-chikusa.com/program.html",
+      "canonicalUrl": "https://htc-chikusa.com/program.html",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "htc chikusa"
+        ],
+        [
+          "名古屋",
+          "chikusa"
+        ]
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "observationKey": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation",
+      "kind": "raw_fact",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "facilityName": "CLUB 360",
+      "typeKeys": [
+        "program-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-75b51f42cb58283c"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_4GF2DeDJoIzNRU4jn9scAv65V-usage-program-simulation"
+    },
+    {
+      "observationKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope",
+      "kind": "raw_fact",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "facilityName": "FITONE SHIBUYA",
+      "typeKeys": [
+        "sled-pull-rope"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2027-03-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-6563ef5f6053bb20"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "sled"
+          ],
+          [
+            "rope",
+            "ロープ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-equipment-sled-rope"
+    },
+    {
+      "observationKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership",
+      "kind": "restriction",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "facilityName": "FITONE SHIBUYA",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-6563ef5f6053bb20"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "open gym"
+          ],
+          [
+            "unlimited",
+            "membership",
+            "会員"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-restriction-open-gym-membership"
+    },
+    {
+      "observationKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry",
+      "kind": "raw_fact",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "facilityName": "FITONE SHIBUYA",
+      "typeKeys": [
+        "multi-movement-training-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-6563ef5f6053bb20"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "push"
+          ],
+          [
+            "pull"
+          ],
+          [
+            "carry"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-push-pull-carry"
+    },
+    {
+      "observationKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running",
+      "kind": "raw_fact",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "facilityName": "FITONE SHIBUYA",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-6563ef5f6053bb20"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "run",
+            "ランニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc-space-running"
+    },
+    {
+      "observationKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set",
+      "kind": "raw_fact",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "facilityName": "g-zone PARK",
+      "typeKeys": [
+        "official-hyrox-equipment-set-assertion"
+      ],
+      "policyKey": "raw-equipment-set-assertion-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "official",
+            "公式"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-equipment-official-tools-set"
+    },
+    {
+      "observationKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours",
+      "kind": "restriction",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "facilityName": "g-zone PARK",
+      "typeKeys": [
+        "PROGRAM_HOUR_EXCLUSION",
+        "RESERVATION_REQUIRED"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "park"
+          ],
+          [
+            "予約",
+            "reservation"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-restriction-program-hours"
+    },
+    {
+      "observationKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor",
+      "kind": "raw_fact",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "facilityName": "g-zone PARK",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-9d7c6221a96b6ff0"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "90",
+            "９０"
+          ],
+          [
+            "training",
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_C0V7CK7K15SLUrMhBvyyO0phM-space-training-floor"
+    },
+    {
+      "observationKey": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set",
+      "kind": "raw_fact",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "facilityName": "VAMOS",
+      "typeKeys": [
+        "official-hyrox-equipment-set-assertion"
+      ],
+      "policyKey": "raw-equipment-set-assertion-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-fb5d0715281764cc"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "official",
+            "公式"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-equipment-official-set"
+    },
+    {
+      "observationKey": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation",
+      "kind": "restriction",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "facilityName": "VAMOS",
+      "typeKeys": [
+        "RESERVATION_REQUIRED"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-bca76865cd84dfb5"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "open gym"
+          ],
+          [
+            "予約",
+            "reserve"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_CKpn4DHneWfrqTUVaA7D5Whop-restriction-reservation"
+    },
+    {
+      "observationKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope",
+      "kind": "raw_fact",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "facilityName": "CrossFit Ashiya",
+      "typeKeys": [
+        "sled-pull-rope"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2027-03-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "sled"
+          ],
+          [
+            "rope",
+            "ロープ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-sled-rope"
+    },
+    {
+      "observationKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "facilityName": "CrossFit Ashiya",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2027-03-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "wall ball",
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-equipment-wall-ball"
+    },
+    {
+      "observationKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program",
+      "kind": "raw_fact",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "facilityName": "CrossFit Ashiya",
+      "typeKeys": [
+        "program-use-confirmed",
+        "rental-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-cb938cddb3bc0b4c"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "drop-in",
+            "ドロップイン",
+            "rental",
+            "レンタル"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_Cl8QF5olON4Y0D7mho4iGg34L-usage-program"
+    },
+    {
+      "observationKey": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations",
+      "kind": "raw_fact",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "facilityName": "Improve KYOTO",
+      "typeKeys": [
+        "program-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-88f0214ede1b29db"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "8",
+            "eight",
+            "全8"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr-usage-program-all-stations"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "sled-pull-rope"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2027-03-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-fecd5cdb81a50241"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "sled pull",
+            "スレッドプル"
+          ],
+          [
+            "rope",
+            "ロープ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-sled-rope"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2027-03-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-fecd5cdb81a50241"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "wall balls",
+            "ウォールボール"
+          ],
+          [
+            "ball",
+            "ボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-equipment-wall-ball"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan",
+      "kind": "restriction",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "PLAN_DEPENDENT_ACCESS",
+        "PROGRAM_HOUR_EXCLUSION"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-fecd5cdb81a50241"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "open gym",
+            "オープンジム"
+          ],
+          [
+            "plan",
+            "プラン"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-restriction-open-gym-plan"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "burpee-broad-jump-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-7068c574e9c94ca8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "burpee broad jump",
+            "バーピーブロードジャンプ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-burpee-broad-jump"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "farmers-carry-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-7068c574e9c94ca8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "farmers carry",
+            "ファーマーズキャリー"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-farmers-carry"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-7068c574e9c94ca8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "running",
+            "ランニング"
+          ],
+          [
+            "indoor",
+            "屋内"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-running"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "sandbag-lunges-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-7068c574e9c94ca8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "sandbag lunges",
+            "サンドバッグランジ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-sandbag-lunges"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "wall-balls-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-7068c574e9c94ca8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "wall balls",
+            "ウォールボール"
+          ],
+          [
+            "3m",
+            "3 m",
+            "3ｍ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-space-wall-balls"
+    },
+    {
+      "observationKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations",
+      "kind": "raw_fact",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "facilityName": "HTC CHIKUSA– Human Performance Training Center –",
+      "typeKeys": [
+        "program-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-02T10:00:00.000Z",
+      "freshnessExpiresAt": "2026-12-01T10:00:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-fecd5cdb81a50241"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "8",
+            "eight",
+            "全8"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations"
+    }
+  ],
+  "manifestHash": "507b170ca427438096298ddc55364394d11a915577f5077a4aa0c01b110837ed"
 }

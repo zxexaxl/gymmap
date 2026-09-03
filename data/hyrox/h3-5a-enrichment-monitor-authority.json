@@ -6,12 +6,12 @@
     "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e"
   },
   "counts": {
-    "sources": 26,
-    "uniqueExternalUrls": 15,
-    "equipment": 109,
-    "capabilities": 41,
-    "claims": 150,
-    "enrichedLocations": 25
+    "sources": 36,
+    "uniqueExternalUrls": 25,
+    "equipment": 128,
+    "capabilities": 59,
+    "claims": 187,
+    "enrichedLocations": 33
   },
   "sources": [
     {
@@ -245,6 +245,96 @@
       "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
       "url": "https://www.orangetheoryfitness.co.jp/hyrox/",
       "canonicalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-11499b6f05256677",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "url": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "canonicalUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "quality": "Q2",
+      "publisherAuthority": "official_schedule"
+    },
+    {
+      "sourceKey": "cohort1:src-6563ef5f6053bb20",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "url": "https://fitone-club.com/",
+      "canonicalUrl": "https://fitone-club.com/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-7068c574e9c94ca8",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "url": "https://htc-chikusa.com/facility.html",
+      "canonicalUrl": "https://htc-chikusa.com/facility.html",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-751b2b6c971308c0",
+      "locationId": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "hgyId": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "url": "https://nota-gym.com/hyrox/",
+      "canonicalUrl": "https://nota-gym.com/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "url": "https://www.club360.jp/hyrox",
+      "canonicalUrl": "https://www.club360.jp/hyrox",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-88f0214ede1b29db",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "url": "https://improve-hyrox.com/",
+      "canonicalUrl": "https://improve-hyrox.com/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-9d7c6221a96b6ff0",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "url": "https://g-zone.co.jp/park/hyrox/",
+      "canonicalUrl": "https://g-zone.co.jp/park/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-bca76865cd84dfb5",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "url": "https://vamos-training.com/ja/classes",
+      "canonicalUrl": "https://vamos-training.com/ja/classes",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "url": "https://crossfitashiya.com/hyrox",
+      "canonicalUrl": "https://crossfitashiya.com/hyrox/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "url": "https://htc-chikusa.com/program.html",
+      "canonicalUrl": "https://htc-chikusa.com/program.html",
       "quality": "Q2",
       "publisherAuthority": "facility_official"
     }
@@ -3800,7 +3890,846 @@
           "スレッド"
         ]
       ]
+    },
+    {
+      "claimKey": "capability:0470dd2d-e6db-4c77-aa29-5cd72b597a4c:discipline-coaching",
+      "kind": "capability",
+      "locationId": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "locationSlug": "nota-gym-6150851",
+      "locationName": "NOTA GYM 西京極店",
+      "hgyId": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-751b2b6c971308c0",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "83b3b487451d7a3329a04251dfd89607f92562913866f0a740bcf4fa753d78dc",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:competition-simulation",
+      "kind": "capability",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "competition-simulation",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-10-02T10:00:00.000Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "db5884eb86c23649e5db08eeed757ac31a5be614d22eabcbbf4a462dcb7c0ed2",
+      "supportPatternGroups": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:discipline-coaching",
+      "kind": "capability",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "d2d6b14244d2c2f380a1ae7335acece74a082f796fd28af50c423c4bb2418835",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:open-training",
+      "kind": "capability",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "open-training",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "e3e4f99021fd16260a53a81074422e2566c92423fcda873f2e22d209abfceea4",
+      "supportPatternGroups": [
+        [
+          "open gym",
+          "free use",
+          "フリー利用",
+          "自主トレ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:competition-simulation",
+      "kind": "capability",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "competition-simulation",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-10-02T10:00:00.000Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "91847d847570112a46d4cf2277bf615c172be67b14bf927e35d5229638eef801",
+      "supportPatternGroups": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:discipline-coaching",
+      "kind": "capability",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "9c32dadccbc4f665ebfff5a2c82354a75b97ab5edfdc7cfd4bbef350b9228d3e",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:open-training",
+      "kind": "capability",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "open-training",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "4ab5680e9e34d7d45d053017ec665c0d0bd459afe20cc9e0004c1598affc2cbf",
+      "supportPatternGroups": [
+        [
+          "open gym",
+          "free use",
+          "フリー利用",
+          "自主トレ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:sled-push-pull-space",
+      "kind": "capability",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "sled-push-pull-space",
+      "sourceKey": "cohort1:src-7068c574e9c94ca8",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "b3995910e595d8b43122432cc8bb2858db7f19022e54cc776543dc2ec26289b5",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ],
+        [
+          "turf",
+          "lane",
+          "space",
+          "スペース",
+          "1階"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:53b51872-63cb-4bfd-aa25-861df7cf203b:discipline-coaching",
+      "kind": "capability",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "locationSlug": "vamos-1500011",
+      "locationName": "VAMOS",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-bca76865cd84dfb5",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "e1ce02b4faa911197ed79da50975c04e3d3bbb65e25c63592908d451a98fc936",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:53b51872-63cb-4bfd-aa25-861df7cf203b:open-training",
+      "kind": "capability",
+      "locationId": "53b51872-63cb-4bfd-aa25-861df7cf203b",
+      "locationSlug": "vamos-1500011",
+      "locationName": "VAMOS",
+      "hgyId": "HGY_CKpn4DHneWfrqTUVaA7D5Whop",
+      "slug": "open-training",
+      "sourceKey": "cohort1:src-bca76865cd84dfb5",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "76d18c2a3bca41fe68da1c7128b97eabdb8c6f754e663f1d5ec46cac8c48ebe0",
+      "supportPatternGroups": [
+        [
+          "open gym",
+          "free use",
+          "フリー利用",
+          "自主トレ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:53fb0bd7-5dde-4936-99e5-812fef6928de:discipline-coaching",
+      "kind": "capability",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "locationSlug": "fitone-shibuya-1500011",
+      "locationName": "FITONE SHIBUYA",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-6563ef5f6053bb20",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "fafa027e054d58010da463a15b1ffbc0e1b5f0c94ec06e62d46a7eed3f44688c",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:53fb0bd7-5dde-4936-99e5-812fef6928de:open-training",
+      "kind": "capability",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "locationSlug": "fitone-shibuya-1500011",
+      "locationName": "FITONE SHIBUYA",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "slug": "open-training",
+      "sourceKey": "cohort1:src-6563ef5f6053bb20",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "05a71216f4137ba78277f6a4d9388a8723b72d27813aa36d989f91e7a8866b4d",
+      "supportPatternGroups": [
+        [
+          "open gym",
+          "free use",
+          "フリー利用",
+          "自主トレ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:6a648255-f646-4b01-b602-5898ef28ea5f:discipline-coaching",
+      "kind": "capability",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "locationSlug": "g-zone-park",
+      "locationName": "g-zone PARK",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-9d7c6221a96b6ff0",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "2669c3481f33300f06d5fade3c01c744e757a1da1385409a1619a9bd7ef240f8",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:6a648255-f646-4b01-b602-5898ef28ea5f:open-training",
+      "kind": "capability",
+      "locationId": "6a648255-f646-4b01-b602-5898ef28ea5f",
+      "locationSlug": "g-zone-park",
+      "locationName": "g-zone PARK",
+      "hgyId": "HGY_C0V7CK7K15SLUrMhBvyyO0phM",
+      "slug": "open-training",
+      "sourceKey": "cohort1:src-9d7c6221a96b6ff0",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "296bb974b04362bd19ad0d156308d1f8cc29d35c2e3b485591dec0b78c3248a4",
+      "supportPatternGroups": [
+        [
+          "open gym",
+          "free use",
+          "フリー利用",
+          "自主トレ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:9d7ac2ff-be49-4219-bcde-75e3745df6a4:discipline-coaching",
+      "kind": "capability",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "88db01e419f2b61425d43f36fe4f10aa69f44395b17b97f3758ec092221ad04c",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:9d7ac2ff-be49-4219-bcde-75e3745df6a4:sled-push-pull-space",
+      "kind": "capability",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "sled-push-pull-space",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "b863d8774b46da86f0815a49dce264a79e4fcaf32b3253605752164f808f3425",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ],
+        [
+          "turf",
+          "lane",
+          "space",
+          "スペース",
+          "1階"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:competition-simulation",
+      "kind": "capability",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "locationSlug": "improve-kyoto",
+      "locationName": "Improve KYOTO",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "slug": "competition-simulation",
+      "sourceKey": "cohort1:src-11499b6f05256677",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-10-02T10:00:00.000Z",
+      "freshnessHorizonDays": 30,
+      "evidenceHash": "c1341ce66fc35418951f20043bb42c0e0d910af0e6d9d1356962901a11b1cabc",
+      "supportPatternGroups": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:discipline-coaching",
+      "kind": "capability",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "locationSlug": "improve-kyoto",
+      "locationName": "Improve KYOTO",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "slug": "discipline-coaching",
+      "sourceKey": "cohort1:src-88f0214ede1b29db",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2026-12-01T10:00:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "e68fd79a44f0f7dff3f3507f155a8cdca3c3718adbc63b6fd70df847a576babb",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "class",
+          "training",
+          "coach",
+          "クラス",
+          "トレーニング",
+          "指導"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0470dd2d-e6db-4c77-aa29-5cd72b597a4c:row-erg",
+      "kind": "equipment",
+      "locationId": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "locationSlug": "nota-gym-6150851",
+      "locationName": "NOTA GYM 西京極店",
+      "hgyId": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "slug": "row-erg",
+      "sourceKey": "cohort1:src-751b2b6c971308c0",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "01dbae8c005cdcde31214e087e1a5134edc3cb8b01baf31524e751ef3eaf79fb",
+      "supportPatternGroups": [
+        [
+          "rower",
+          "rowing",
+          "row erg",
+          "rowerg",
+          "ローイング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:0470dd2d-e6db-4c77-aa29-5cd72b597a4c:ski-erg",
+      "kind": "equipment",
+      "locationId": "0470dd2d-e6db-4c77-aa29-5cd72b597a4c",
+      "locationSlug": "nota-gym-6150851",
+      "locationName": "NOTA GYM 西京極店",
+      "hgyId": "HGY_w8GnFtzgPzHOTZfWMBGzdEtoC",
+      "slug": "ski-erg",
+      "sourceKey": "cohort1:src-751b2b6c971308c0",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c25e5fbf4b54a37b5fbf8a528229e0e2f866836477c44de2c635188d207a9899",
+      "supportPatternGroups": [
+        [
+          "skierg",
+          "ski erg",
+          "スキーエルゴ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:33bc8540-aca5-4aca-9921-c3f14dd8d067:row-erg",
+      "kind": "equipment",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "row-erg",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c7e2468b812ad665427634e734ae314bbe2a6c329a16444b4a5df76fac070e5b",
+      "supportPatternGroups": [
+        [
+          "rower",
+          "rowing",
+          "row erg",
+          "rowerg",
+          "ローイング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:33bc8540-aca5-4aca-9921-c3f14dd8d067:sandbag",
+      "kind": "equipment",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "sandbag",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a1c5c299396293de08a8fdd18721ec394674314badb3ed8937199fa705b5cb35",
+      "supportPatternGroups": [
+        [
+          "sandbag",
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:33bc8540-aca5-4aca-9921-c3f14dd8d067:ski-erg",
+      "kind": "equipment",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "ski-erg",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "e12d08102a7d9be11ab073e4ba01bfdb8c07fc87c87567bc925e25b74dca553d",
+      "supportPatternGroups": [
+        [
+          "skierg",
+          "ski erg",
+          "スキーエルゴ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:33bc8540-aca5-4aca-9921-c3f14dd8d067:weighted-sled",
+      "kind": "equipment",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "locationName": "CLUB 360",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort1:src-75b51f42cb58283c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "b72a3d4f024754368e7147902daad632c233c1dd05df1c9b4dfbeb859c95e503",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "4a1349b52ff482a3197fdf17476556bf3be1535fa3708df63a980ceb97548b9e",
+      "supportPatternGroups": [
+        [
+          "farmers",
+          "farmer's",
+          "ファーマーズ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:row-erg",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "row-erg",
+      "sourceKey": "cohort1:src-7068c574e9c94ca8",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "c9c2aae2704df3dd10348bccdf5a5b0a64bc8144c6650bcb59a5b397744e5e94",
+      "supportPatternGroups": [
+        [
+          "rower",
+          "rowing",
+          "row erg",
+          "rowerg",
+          "ローイング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:sandbag",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "sandbag",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1432f08bb58b2380bbb0a9b375f7752f0d26aa3e990cfe49383dd78582163cea",
+      "supportPatternGroups": [
+        [
+          "sandbag",
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:ski-erg",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "ski-erg",
+      "sourceKey": "cohort1:src-7068c574e9c94ca8",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1b23313b762a5dfbdadf84b56a101806dfa8984c303a18216142b30d5fdffaa8",
+      "supportPatternGroups": [
+        [
+          "skierg",
+          "ski erg",
+          "スキーエルゴ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:treadmill",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "treadmill",
+      "sourceKey": "cohort1:src-7068c574e9c94ca8",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "da38f51acfc4776cbb619260db87108d87ac5d877ecfadfdcee1db7c1b8653e5",
+      "supportPatternGroups": [
+        [
+          "treadmill",
+          "トレッドミル"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:wall-ball-target",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "wall-ball-target",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "ba37932080d22cfdee1ce1caaef849d3c170bf41370866d7377d3a67bae42811",
+      "supportPatternGroups": [
+        [
+          "wall ball",
+          "wall balls",
+          "ウォールボール"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4a07f1c3-3666-4648-bedd-35c283912e26:weighted-sled",
+      "kind": "equipment",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "locationName": "HTC CHIKUSA– Human Performance Training Center –",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort1:src-fecd5cdb81a50241",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "6dfd00144b3363381d36c41331abc997204dab63ff77ce038c4f50ec0164c0a1",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:53fb0bd7-5dde-4936-99e5-812fef6928de:weighted-sled",
+      "kind": "equipment",
+      "locationId": "53fb0bd7-5dde-4936-99e5-812fef6928de",
+      "locationSlug": "fitone-shibuya-1500011",
+      "locationName": "FITONE SHIBUYA",
+      "hgyId": "HGY_6lR3pcwsQaSGSlsQTdrNrO1jc",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort1:src-6563ef5f6053bb20",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3c1f61492884e2b6dcc3c0711ba285aeecf791a2fc5075a3b9da755f28927415",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:9d7ac2ff-be49-4219-bcde-75e3745df6a4:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "77a341146bcc6bbecee6ff59448bd1f830eb13e563ab8c79f14242c12b29ee7f",
+      "supportPatternGroups": [
+        [
+          "farmers",
+          "farmer's",
+          "ファーマーズ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:9d7ac2ff-be49-4219-bcde-75e3745df6a4:row-erg",
+      "kind": "equipment",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "row-erg",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "27d7a0b8932b09e4c1e93f8f9805693f35deaa8b0777a8368142bd19c676723a",
+      "supportPatternGroups": [
+        [
+          "rower",
+          "rowing",
+          "row erg",
+          "rowerg",
+          "ローイング"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:9d7ac2ff-be49-4219-bcde-75e3745df6a4:sandbag",
+      "kind": "equipment",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "sandbag",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "47b609391c78f02c5a8e0f79c58440345e14add9e27ed7e2c694faab28929fa2",
+      "supportPatternGroups": [
+        [
+          "sandbag",
+          "サンドバッグ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:9d7ac2ff-be49-4219-bcde-75e3745df6a4:ski-erg",
+      "kind": "equipment",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "ski-erg",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3454fe81182dfc9540dff7feff85c16ddcdc3aa02d684d5383c135fc2b91f3d5",
+      "supportPatternGroups": [
+        [
+          "skierg",
+          "ski erg",
+          "スキーエルゴ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:9d7ac2ff-be49-4219-bcde-75e3745df6a4:weighted-sled",
+      "kind": "equipment",
+      "locationId": "9d7ac2ff-be49-4219-bcde-75e3745df6a4",
+      "locationSlug": "crossfit-ashiya",
+      "locationName": "CrossFit Ashiya",
+      "hgyId": "HGY_Cl8QF5olON4Y0D7mho4iGg34L",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort1:src-cb938cddb3bc0b4c",
+      "lastConfirmedAt": "2026-09-02T10:00:00.000Z",
+      "staleAt": "2027-03-01T10:00:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7e7c31ece329cc5375b5f4f4e7794d0db835172224aeb4d331a32007d87060c7",
+      "supportPatternGroups": [
+        [
+          "sled",
+          "スレッド"
+        ]
+      ]
     }
   ],
-  "manifestHash": "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2"
+  "manifestHash": "1614549ec0a7d0fbf043c448cc25e508ec651198640d691504b06fe3ae42600f"
 }

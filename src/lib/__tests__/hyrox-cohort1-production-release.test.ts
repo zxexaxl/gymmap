@@ -18,9 +18,18 @@ const ledger = read("data/hyrox/h3-11d-cohort1-review-ledger-candidate.json");
 const positive = read("data/hyrox/h3-11d-cohort1-positive-claim-candidate.json");
 const r2 = read("data/hyrox/h3-11d-r2-raw-fact-freshness-authority.json");
 const r3 = read("data/hyrox/h3-11d-r3-cohort1-monitor-candidate.json");
-const enrichment = read("data/hyrox/h3-5a-enrichment-monitor-authority.json");
+const liveEnrichment = read("data/hyrox/h3-5a-enrichment-monitor-authority.json");
 const sourceRecheck = read("data/hyrox/h3-11d-cohort1-source-recheck.json");
 const committed = read("data/hyrox/h3-11d-cohort1-production-release.json");
+const deltaSourceKeys = new Set(committed.canonicalMonitorDelta.sources.map((row: any) => row.sourceKey));
+const deltaClaimKeys = new Set(committed.canonicalMonitorDelta.claims.map((row: any) => row.claimKey));
+const enrichment = liveEnrichment.counts.claims === 150 ? liveEnrichment : {
+  ...liveEnrichment,
+  counts: { sources: 26, uniqueExternalUrls: 15, equipment: 109, capabilities: 41, claims: 150, enrichedLocations: 25 },
+  sources: liveEnrichment.sources.filter((row: any) => !deltaSourceKeys.has(row.sourceKey)),
+  claims: liveEnrichment.claims.filter((row: any) => !deltaClaimKeys.has(row.claimKey)),
+  manifestHash: "65a7e36c81f52d72b6215e26ab03caecac3d036e73a378a740fc8c3a03e34df2",
+};
 
 const build = () => validateCohort1Release(buildCohort1Release({
   raw, ledger, positive, r2, r3Candidate: r3, existingEnrichment: enrichment, sourceRecheck,

@@ -17,6 +17,7 @@
     "hyrox:cohort1:source-recheck": "tsx scripts/hyrox/recheck-h3-11d-cohort1-sources.ts",
     "hyrox:cohort1:release": "tsx scripts/hyrox/build-h3-11d-cohort1-release.ts",
     "hyrox:cohort1:release:sql": "tsx scripts/hyrox/render-h3-11d-cohort1-release-sql.ts",
+    "hyrox:cohort1:monitor-activate": "tsx scripts/hyrox/activate-h3-11d-cohort1-monitors.ts",
     "hyrox:monitor:enrichment:manifest": "tsx scripts/hyrox/build-h3-5a-enrichment-manifest.ts",
     "hyrox:monitor:enrichment:onboard-h3-8": "tsx scripts/hyrox/apply-h3-8-enrichment-monitor-onboarding.ts",
     "start": "next start",
