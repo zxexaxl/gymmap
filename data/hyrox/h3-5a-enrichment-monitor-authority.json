@@ -6,12 +6,12 @@
     "dbCandidateHash": "9610b5ea03d43c78823857620d4813203f6db2a1e12632c5c559dffec19ba83e"
   },
   "counts": {
-    "sources": 36,
-    "uniqueExternalUrls": 25,
-    "equipment": 128,
-    "capabilities": 59,
-    "claims": 187,
-    "enrichedLocations": 33
+    "sources": 42,
+    "uniqueExternalUrls": 31,
+    "equipment": 164,
+    "capabilities": 62,
+    "claims": 226,
+    "enrichedLocations": 39
   },
   "sources": [
     {
@@ -335,6 +335,60 @@
       "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
       "url": "https://htc-chikusa.com/program.html",
       "canonicalUrl": "https://htc-chikusa.com/program.html",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "url": "https://www.beequick.jp/location/tateyama/",
+      "canonicalUrl": "https://www.beequick.jp/location/tateyama/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "url": "https://www.beequick.jp/location/iganinjanosato/",
+      "canonicalUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "canonicalUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "canonicalUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "url": "https://www.beequick.jp/location/sanda/",
+      "canonicalUrl": "https://www.beequick.jp/location/sanda/",
+      "quality": "Q2",
+      "publisherAuthority": "facility_official"
+    },
+    {
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "url": "https://www.beequick.jp/location/kyotango/",
+      "canonicalUrl": "https://www.beequick.jp/location/kyotango/",
       "quality": "Q2",
       "publisherAuthority": "facility_official"
     }
@@ -4730,7 +4784,841 @@
           "スレッド"
         ]
       ]
+    },
+    {
+      "claimKey": "capability:08a40e56-5405-4b97-98ed-2bc16263c9df:open-training",
+      "kind": "capability",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "open-training",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2026-12-02T01:30:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "2b25112699824a4dcbf8302ce394245f74103839b808a92b5a1a9dc679a01d40",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:42267408-cbb5-4c3f-9b5f-10a102271a27:open-training",
+      "kind": "capability",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "open-training",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2026-12-02T01:30:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "b1c82b086e5920e9934453deeb010d71558059f33c43b50fea45fc508621e7a2",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    },
+    {
+      "claimKey": "capability:4972bb69-ded7-4ed9-9f99-0898f099837c:open-training",
+      "kind": "capability",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "open-training",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2026-12-02T01:30:00.000Z",
+      "freshnessHorizonDays": 90,
+      "evidenceHash": "ed2dcf16f4f37deb735573bec7ff697a519e1ab8f243f8466db5bfb0e0a43983",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "利用も可能",
+          "利用可能",
+          "hyrox会員",
+          "予約不要"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7471e4cad1294750b75da22ba34ef56f33aa625bf80899501b82f8d4fbdbaab6",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:row-erg",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f37546335c9a53c82283a7d6b698cba53c586fa33cd3ee30a54b073c70e6ea0a",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:running-track",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "running-track",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "f74d79834292185dc2b8bef235ba674d3de992f0bac15662fb39d5412d20883b",
+      "supportPatternGroups": [
+        [
+          "屋内ランニングコース"
+        ],
+        [
+          "100m",
+          "１００ｍ"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:sandbag",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "9326455e717ce7e823136abe646634e5d12006c58bcbf3bce2cf3c8a66843985",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:ski-erg",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "53686f9489de499f084cd6fe18166f0f0a2af10f9d828cfc63f2bd6d609c66a8",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:treadmill",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "662d75de1ac6626605d0e00c14d2e15da6965b5cc382ade2067894c105d5e590",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:08a40e56-5405-4b97-98ed-2bc16263c9df:weighted-sled",
+      "kind": "equipment",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "locationSlug": "beequick-fitness-iga-ninjyanosato",
+      "locationName": "Beequick Fitness　Iga Ninjyanosato",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort2:src-92849d22a78b9b40",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1e87389a8ce3a1ba80ce870a08609ff16a663b9f30a16cd707b38b51067c93fe",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d373a4dec9c9b48ace8387dfee31a959bbf40129f2293ad13162834b0c4dcd32",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:row-erg",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5b91bef4360598544492fae3049a5caf782ac843e49baec166f880e69e999ee5",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:sandbag",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "ebd9eab305c1306d3ae8f2c4aa666f3cdda8a6883dae0ed8d2bc7729ffe64490",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:ski-erg",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "348d9a82106435f5b2dae9d5911bd99700464fa8e4e82d7dab786d16c94bd7ca",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:treadmill",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "b7edba63cae83239b74f7efb823cf977d17b5570f61348773ee6304805e81d3b",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:42267408-cbb5-4c3f-9b5f-10a102271a27:weighted-sled",
+      "kind": "equipment",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "locationSlug": "beequick-kyotango",
+      "locationName": "Beequick Kyotango",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort2:src-f0f29c64552c8a2d",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1e7a4fc1582b8ee476dfa9d5693804d470c3f9a099c21fc1804bf4f07db23517",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "eaa1f72e0e2f727485dc3a4b59198d2b880d78d32e0f906546ae409d49b64a53",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:row-erg",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7034fc8422d8348421e8aae60f1125daec517fb56b4d6a060653b9152862dddd",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:sandbag",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "d512249e43fe66a31a5f3b6e4a9d6f44925478828f68dbd30028e6040fd85fef",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:ski-erg",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "fe3c2619900c96a0b7da59d6471221c933fe7f2945f40651e803c890fc85b88e",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:treadmill",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "0bf38d5edd61597847153e97b74f1c3fa92f3e808d1458114f5c2ae5dd7d9be4",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:4972bb69-ded7-4ed9-9f99-0898f099837c:weighted-sled",
+      "kind": "equipment",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "locationSlug": "beequick-fitness-tateyama",
+      "locationName": "Beequick Fitness　Tateyama",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort2:src-285c40069a731761",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1eefa6b828e36e73558a47b3aa2c4f3da1ad433541fa681f6131226a46d5fa49",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "03c2d39deed02e316f5374799bd7f8cb33d75fbfe71c4793ee54d97b399008b2",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:row-erg",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a23a8475038eea1d6d0e06a13550e81c9a72f3cfc3443d109faca7d471d0a956",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:sandbag",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "efb2b5065aa9fb5e8d9223e5bc9586d2089b2d044cdd137b69e10a21d13f45e2",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:ski-erg",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "77989773457fb810a717fb7a8dabbfca3079eda48c92519636b6af9ae5611590",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:treadmill",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1f65a80c4717fb9dff0d53553c0f14db728cf2429da70eee1a7ad67c003904b2",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:49c4308c-8f8a-4d45-8e6f-d03cd28d987b:weighted-sled",
+      "kind": "equipment",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "locationSlug": "beequick-fitness-sanda",
+      "locationName": "Beequick Fitness　Sanda",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort2:src-ee8c134fcd421557",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "186ade3b1c89f086d3d1f885e8af369e8db8c794497d375aab148c70e779da9a",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:81c17ac2-dc15-4a04-8cc8-da5587ccdcef:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "locationSlug": "beequick-fitness-fuji-imaizumi",
+      "locationName": "Beequick Fitness　Fuji imaizumi",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "e17e3a4caffab7538a716d882a02e06f2678997c03dcff14aa842635f85828d6",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:81c17ac2-dc15-4a04-8cc8-da5587ccdcef:row-erg",
+      "kind": "equipment",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "locationSlug": "beequick-fitness-fuji-imaizumi",
+      "locationName": "Beequick Fitness　Fuji imaizumi",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "9802480db43507198a0577e49bf511e4e7c276d2ae57cad3d22a7b6ead65d8dd",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:81c17ac2-dc15-4a04-8cc8-da5587ccdcef:sandbag",
+      "kind": "equipment",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "locationSlug": "beequick-fitness-fuji-imaizumi",
+      "locationName": "Beequick Fitness　Fuji imaizumi",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "7b3c497ed201f8b7e7943316c96723c2cbd43d2cf68f5baf7d4001d15667aa6c",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:81c17ac2-dc15-4a04-8cc8-da5587ccdcef:ski-erg",
+      "kind": "equipment",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "locationSlug": "beequick-fitness-fuji-imaizumi",
+      "locationName": "Beequick Fitness　Fuji imaizumi",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "4faf74788fdca3173365a5e49b2b0dfa025922280992ffd6749d3cea061a918a",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:81c17ac2-dc15-4a04-8cc8-da5587ccdcef:treadmill",
+      "kind": "equipment",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "locationSlug": "beequick-fitness-fuji-imaizumi",
+      "locationName": "Beequick Fitness　Fuji imaizumi",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-d756abfd0f69262e",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "e196b00c32b3717450da71893aa11b3fe6a311b6aec5118805b8d2579543b645",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:farmers-carry-implements",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "farmers-carry-implements",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "a5efe749688aa0ce6eca97fff044cfca0e5e362dc7cae5319254748a2a9e4dfd",
+      "supportPatternGroups": [
+        [
+          "hyrox"
+        ],
+        [
+          "ケトルベル",
+          "kettlebell"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:row-erg",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "row-erg",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "1dd1a31e7a13e914fb5a98fb0df3e6763c78085b16d0f05e0812c65f29f0fc60",
+      "supportPatternGroups": [
+        [
+          "ローエルゴ",
+          "ローワー",
+          "rowerg",
+          "rower"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:sandbag",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "sandbag",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "82a5b2e069bf7709ad719c74a9e2a4b38893e69999e733f914d74320dc5326db",
+      "supportPatternGroups": [
+        [
+          "サンドバッグ",
+          "sandbag"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:ski-erg",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "ski-erg",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "5a097b1108929eee5f7d3914c62c0cc72f3d850bbf202691e9eacc2c0bbf9b74",
+      "supportPatternGroups": [
+        [
+          "スキーエルゴ",
+          "skierg"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:treadmill",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "treadmill",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "3c9010155baaa2ae1eae561718ea2377d24237b6bb5a181693ade9fb1340264c",
+      "supportPatternGroups": [
+        [
+          "トレッドミル",
+          "ランニングマシン",
+          "treadmill"
+        ]
+      ]
+    },
+    {
+      "claimKey": "equipment:bb010542-dd04-4d87-b362-807fccc68fdf:weighted-sled",
+      "kind": "equipment",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "locationSlug": "beequick-fitness-kasugai-oshisawadai",
+      "locationName": "Beequick Fitness　Kasugai  oshisawadai",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "slug": "weighted-sled",
+      "sourceKey": "cohort2:src-d90ef5055fd1e8b8",
+      "lastConfirmedAt": "2026-09-03T01:30:00.000Z",
+      "staleAt": "2027-03-02T01:30:00.000Z",
+      "freshnessHorizonDays": 180,
+      "evidenceHash": "17f82d832b96fc7e05af892585805e8227e668911acb5c262c8b02abdf527874",
+      "supportPatternGroups": [
+        [
+          "スレッド",
+          "sled"
+        ]
+      ]
     }
   ],
-  "manifestHash": "dfa64409699629929f648eadd023934be30d1ca8e9fbd2163e5e06a7e3dd9593"
+  "manifestHash": "614048ba7d0890c8fbadfc0318ea37fa3e6da06e72dc15710800e7544f00ad2f"
 }

@@ -8,15 +8,15 @@
     "factMappingHash": "8beedc6399f50209660b69e97911a735428a2ac76fc93525e6d1d0bd88021c9f",
     "restrictionMappingHash": "39b6c945b5539571764dc5cc923929ed3d872b97e6780e77f5a51d8cd793a720",
     "cohort1MappingHash": "7bf0c89e92247a3571cda4d66616616473903413bcc0cd36641c382beabecd1e",
-    "monitorPacketHash": "0053ca193f69d371476f791f939a123ef445a22cef20fe7ee05284fa90e4bab9",
-    "dbImportPacketHash": "c1c89a9716604fe8fd2d0b5ba3d2f11ee81b3723fdfb96652550c623029f6046",
-    "releaseCoherenceHash": "ddb06a02bd92f425ed0181fa0288b32c599868cec86e1d32b91044e5cf4a6439"
+    "monitorPacketHash": "d5e694d959172752ae1c2f9a1ae3be474072d6c75be08ddbd2948f46124d0df2",
+    "dbImportPacketHash": "8110a514eb2127f97be6c3c58e75da8638b99125b2a5c47e79bd1c55e7d8da1e",
+    "releaseCoherenceHash": "38df7a5a477b71c3c5c66dd8303853e5cd6a8af21ce8797111d1537d7de95e26"
   },
   "counts": {
-    "sources": 9,
-    "entries": 23,
-    "rawFacts": 19,
-    "restrictions": 4
+    "sources": 15,
+    "entries": 45,
+    "rawFacts": 33,
+    "restrictions": 12
   },
   "sources": [
     {
@@ -152,6 +152,108 @@
         [
           "名古屋",
           "chikusa"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-285c40069a731761",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "url": "https://www.beequick.jp/location/tateyama/",
+      "canonicalUrl": "https://www.beequick.jp/location/tateyama/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "イオンタウン館山店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-92849d22a78b9b40",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "url": "https://www.beequick.jp/location/iganinjanosato/",
+      "canonicalUrl": "https://www.beequick.jp/location/iganinjanosato/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "伊賀忍者の里店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-d756abfd0f69262e",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "url": "https://www.beequick.jp/location/fujiimaizumi/",
+      "canonicalUrl": "https://www.beequick.jp/location/fujiimaizumi/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "富士今泉店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-d90ef5055fd1e8b8",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "url": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "canonicalUrl": "https://www.beequick.jp/location/kasugaioshizawadai/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "春日井押沢台店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-ee8c134fcd421557",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "url": "https://www.beequick.jp/location/sanda/",
+      "canonicalUrl": "https://www.beequick.jp/location/sanda/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "イオン三田ウッディタウン店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
+        ]
+      ]
+    },
+    {
+      "sourceKey": "src-f0f29c64552c8a2d",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "url": "https://www.beequick.jp/location/kyotango/",
+      "canonicalUrl": "https://www.beequick.jp/location/kyotango/",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "facilityIdentityPatternGroups": [
+        [
+          "京丹後店"
+        ],
+        [
+          "beequick",
+          "ビークイック"
         ]
       ]
     }
@@ -901,7 +1003,759 @@
       },
       "reviewAuthority": "H3-11D Cohort 1 one-pass review / h3-11a-v1",
       "expectedPersistenceKey": "HGY_j1Szv4JmxytARCgfm48f0Z4xS-usage-program-all-stations"
+    },
+    {
+      "observationKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "facilityName": "Beequick Fitness　Sanda",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-ee8c134fcd421557"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "facilityName": "Beequick Fitness　Sanda",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-ee8c134fcd421557"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ジム会員"
+          ],
+          [
+            "hyrox会員"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-membership|MEMBERSHIP_ELIGIBILITY",
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-membership|PLAN_DEPENDENT_ACCESS"
+      ]
+    },
+    {
+      "observationKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-trial-reservation",
+      "kind": "restriction",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "facilityName": "Beequick Fitness　Sanda",
+      "typeKeys": [
+        "RESERVATION_REQUIRED"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-ee8c134fcd421557"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "体験予約"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-trial-reservation",
+      "persistenceKeys": [
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-restriction-hyrox-trial-reservation"
+      ]
+    },
+    {
+      "observationKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "facilityName": "Beequick Fitness　Sanda",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-ee8c134fcd421557"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-usage-hyrox-trial-appointment",
+      "kind": "raw_fact",
+      "locationId": "49c4308c-8f8a-4d45-8e6f-d03cd28d987b",
+      "hgyId": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju",
+      "facilityName": "Beequick Fitness　Sanda",
+      "typeKeys": [
+        "appointment-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-ee8c134fcd421557"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "体験予約"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-usage-hyrox-trial-appointment",
+      "persistenceKeys": [
+        "HGY_e48JpyZiFH8V9aqp7zJ8ouQju-usage-hyrox-trial-appointment"
+      ]
+    },
+    {
+      "observationKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "facilityName": "Beequick Fitness　Tateyama",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-285c40069a731761"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "月会費"
+          ],
+          [
+            "hyrox"
+          ],
+          [
+            "利用も可能",
+            "利用可能"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-membership"
+      ]
+    },
+    {
+      "observationKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-trial-reservation",
+      "kind": "restriction",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "facilityName": "Beequick Fitness　Tateyama",
+      "typeKeys": [
+        "RESERVATION_REQUIRED"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-285c40069a731761"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "体験予約"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-trial-reservation",
+      "persistenceKeys": [
+        "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-restriction-hyrox-trial-reservation"
+      ]
+    },
+    {
+      "observationKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "facilityName": "Beequick Fitness　Tateyama",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-285c40069a731761"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-usage-hyrox-trial-appointment",
+      "kind": "raw_fact",
+      "locationId": "4972bb69-ded7-4ed9-9f99-0898f099837c",
+      "hgyId": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1",
+      "facilityName": "Beequick Fitness　Tateyama",
+      "typeKeys": [
+        "appointment-use-confirmed"
+      ],
+      "policyKey": "raw-usage-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-285c40069a731761"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "hyrox"
+          ],
+          [
+            "体験予約"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-usage-hyrox-trial-appointment",
+      "persistenceKeys": [
+        "HGY_hh2gFINyLgIbu8P1uFb9ChYf1-usage-hyrox-trial-appointment"
+      ]
+    },
+    {
+      "observationKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "facilityName": "Beequick Fitness　Fuji imaizumi",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d756abfd0f69262e"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_KXsKkigAHxENjfO8pM4ocl6FF-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "facilityName": "Beequick Fitness　Fuji imaizumi",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d756abfd0f69262e"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ジム会員"
+          ],
+          [
+            "hyrox会員"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_KXsKkigAHxENjfO8pM4ocl6FF-restriction-hyrox-membership|MEMBERSHIP_ELIGIBILITY",
+        "HGY_KXsKkigAHxENjfO8pM4ocl6FF-restriction-hyrox-membership|PLAN_DEPENDENT_ACCESS"
+      ]
+    },
+    {
+      "observationKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "81c17ac2-dc15-4a04-8cc8-da5587ccdcef",
+      "hgyId": "HGY_KXsKkigAHxENjfO8pM4ocl6FF",
+      "facilityName": "Beequick Fitness　Fuji imaizumi",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d756abfd0f69262e"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_KXsKkigAHxENjfO8pM4ocl6FF-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_KXsKkigAHxENjfO8pM4ocl6FF-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "facilityName": "Beequick Fitness　Kasugai  oshisawadai",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d90ef5055fd1e8b8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_sbFQoJaYts6eUUShzWUC6e8sv-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "facilityName": "Beequick Fitness　Kasugai  oshisawadai",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY",
+        "PLAN_DEPENDENT_ACCESS"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d90ef5055fd1e8b8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ジム会員"
+          ],
+          [
+            "hyrox会員"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_sbFQoJaYts6eUUShzWUC6e8sv-restriction-hyrox-membership|MEMBERSHIP_ELIGIBILITY",
+        "HGY_sbFQoJaYts6eUUShzWUC6e8sv-restriction-hyrox-membership|PLAN_DEPENDENT_ACCESS"
+      ]
+    },
+    {
+      "observationKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "bb010542-dd04-4d87-b362-807fccc68fdf",
+      "hgyId": "HGY_sbFQoJaYts6eUUShzWUC6e8sv",
+      "facilityName": "Beequick Fitness　Kasugai  oshisawadai",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-d90ef5055fd1e8b8"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_sbFQoJaYts6eUUShzWUC6e8sv-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_sbFQoJaYts6eUUShzWUC6e8sv-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "facilityName": "Beequick Kyotango",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-f0f29c64552c8a2d"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_VNYgC17BsAJ3cLgavQTUPCgay-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "facilityName": "Beequick Kyotango",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-f0f29c64552c8a2d"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "月会費"
+          ],
+          [
+            "hyrox"
+          ],
+          [
+            "利用も可能",
+            "利用可能"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_VNYgC17BsAJ3cLgavQTUPCgay-restriction-hyrox-membership"
+      ]
+    },
+    {
+      "observationKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "42267408-cbb5-4c3f-9b5f-10a102271a27",
+      "hgyId": "HGY_VNYgC17BsAJ3cLgavQTUPCgay",
+      "facilityName": "Beequick Kyotango",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-f0f29c64552c8a2d"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_VNYgC17BsAJ3cLgavQTUPCgay-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_VNYgC17BsAJ3cLgavQTUPCgay-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-wall-ball",
+      "kind": "raw_fact",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "facilityName": "Beequick Fitness　Iga Ninjyanosato",
+      "typeKeys": [
+        "wall-ball"
+      ],
+      "policyKey": "raw-physical-component-180-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2027-03-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-92849d22a78b9b40"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "ウォールボール"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-wall-ball",
+      "persistenceKeys": [
+        "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-equipment-wall-ball"
+      ]
+    },
+    {
+      "observationKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-restriction-hyrox-membership",
+      "kind": "restriction",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "facilityName": "Beequick Fitness　Iga Ninjyanosato",
+      "typeKeys": [
+        "MEMBERSHIP_ELIGIBILITY"
+      ],
+      "policyKey": "raw-access-restriction-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-92849d22a78b9b40"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "月会費"
+          ],
+          [
+            "hyrox"
+          ],
+          [
+            "利用も可能",
+            "利用可能"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-restriction-hyrox-membership",
+      "persistenceKeys": [
+        "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-restriction-hyrox-membership"
+      ]
+    },
+    {
+      "observationKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-general-training-floor",
+      "kind": "raw_fact",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "facilityName": "Beequick Fitness　Iga Ninjyanosato",
+      "typeKeys": [
+        "general-training-floor"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-92849d22a78b9b40"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "広々"
+          ],
+          [
+            "トレーニング"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-general-training-floor",
+      "persistenceKeys": [
+        "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-general-training-floor"
+      ]
+    },
+    {
+      "observationKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-running-course",
+      "kind": "raw_fact",
+      "locationId": "08a40e56-5405-4b97-98ed-2bc16263c9df",
+      "hgyId": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk",
+      "facilityName": "Beequick Fitness　Iga Ninjyanosato",
+      "typeKeys": [
+        "running-movement-space"
+      ],
+      "policyKey": "raw-space-90-day",
+      "reviewedAt": "2026-09-03T01:30:00.000Z",
+      "freshnessExpiresAt": "2026-12-02T01:30:00.000Z",
+      "sourceExplicitStartsAt": null,
+      "sourceExplicitEndsAt": null,
+      "sourceKeys": [
+        "src-92849d22a78b9b40"
+      ],
+      "supportCheck": {
+        "mode": "TEXT_PATTERN",
+        "patternGroups": [
+          [
+            "屋内ランニングコース"
+          ],
+          [
+            "100m",
+            "１００ｍ"
+          ]
+        ]
+      },
+      "reviewAuthority": "H3-11D Cohort 2 BeeQuick one-pass review / h3-11a-v1",
+      "expectedPersistenceKey": "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-running-course",
+      "persistenceKeys": [
+        "HGY_YZfgVtrVZUDXC2kDU4ctStVOk-space-running-course"
+      ]
     }
   ],
-  "manifestHash": "791b6255c0819ee11e7fab8f022f0dbbfd2298949b22c50943501fc575f0d718"
+  "manifestHash": "02b076a08a666ac66b7623bb817417ce9a5051fae46b01fff92bc9ec26588903"
 }

@@ -21,8 +21,11 @@ const r3 = read("data/hyrox/h3-11d-r3-cohort1-monitor-candidate.json");
 const liveEnrichment = read("data/hyrox/h3-5a-enrichment-monitor-authority.json");
 const sourceRecheck = read("data/hyrox/h3-11d-cohort1-source-recheck.json");
 const committed = read("data/hyrox/h3-11d-cohort1-production-release.json");
+const cohort2 = read("data/hyrox/h3-11d-cohort2-beequick-production-release.json");
 const deltaSourceKeys = new Set(committed.canonicalMonitorDelta.sources.map((row: any) => row.sourceKey));
 const deltaClaimKeys = new Set(committed.canonicalMonitorDelta.claims.map((row: any) => row.claimKey));
+for (const row of cohort2.canonicalMonitorDelta.sources) deltaSourceKeys.add(row.sourceKey);
+for (const row of cohort2.canonicalMonitorDelta.claims) deltaClaimKeys.add(row.claimKey);
 const enrichment = liveEnrichment.counts.claims === 150 ? liveEnrichment : {
   ...liveEnrichment,
   counts: { sources: 26, uniqueExternalUrls: 15, equipment: 109, capabilities: 41, claims: 150, enrichedLocations: 25 },

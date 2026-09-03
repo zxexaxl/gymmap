@@ -61,21 +61,21 @@ function run(manifest: EnrichmentAuthorityManifest, overrides: {
   });
 }
 
-test("authority manifest includes the exact H3-11D Cohort 1 release graph and canonical hash", async () => {
+test("authority manifest includes the exact H3-11D Cohort 1 and Cohort 2 release graph and canonical hash", async () => {
   const manifest = await loadManifest();
-  assert.deepEqual(manifest.counts, { sources: 36, uniqueExternalUrls: 25, equipment: 128, capabilities: 59, claims: 187, enrichedLocations: 33 });
+  assert.deepEqual(manifest.counts, { sources: 42, uniqueExternalUrls: 31, equipment: 164, capabilities: 62, claims: 226, enrichedLocations: 39 });
   assert.equal(enrichmentManifestHash(manifest), manifest.manifestHash);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 187);
-  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 36);
-  assert.equal(new Set(manifest.sources.map((source) => source.url)).size, 25);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.claimKey)).size, 226);
+  assert.equal(new Set(manifest.claims.map((claim) => claim.sourceKey)).size, 42);
+  assert.equal(new Set(manifest.sources.map((source) => source.url)).size, 31);
 });
 
-test("initial frozen time preserves thirteen due-soon legacy claims and adds 37 fresh Cohort 1 claims", async () => {
+test("initial frozen time preserves thirteen due-soon legacy claims and both fresh Cohort deltas", async () => {
   const result = run(await loadManifest());
-  assert.equal(result.records.length, 187);
-  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 174);
+  assert.equal(result.records.length, 226);
+  assert.equal(result.records.filter((record) => record.freshness.status === "FRESH").length, 213);
   assert.equal(result.records.filter((record) => record.freshness.status === "DUE_SOON").length, 13);
-  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 174);
+  assert.equal(result.records.filter((record) => record.classifications.includes("NO_CHANGE")).length, 213);
   assert.equal(result.reviewQueue.length, 13);
   assert.ok(result.reviewQueue.every((record) => record.slug === "competition-simulation"));
   assert.ok(result.reviewQueue.every((record) => record.classifications.includes("DUE_SOON_RECONFIRMATION")));
@@ -93,8 +93,8 @@ test("freshness boundaries preserve category horizons and UTC instants", async (
     const record = run(manifest, { checkedAt: at }).records.find((item) => item.claimKey === claim.claimKey)!;
     assert.equal(record.freshness.status, expected);
   }
-  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 128);
-  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 43);
+  assert.equal(manifest.claims.filter((item) => item.kind === "equipment" && item.freshnessHorizonDays === 180).length, 164);
+  assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 90).length, 46);
   assert.equal(manifest.claims.filter((item) => item.kind === "capability" && item.freshnessHorizonDays === 30).length, 16);
 });
 
@@ -159,8 +159,8 @@ test("global outage creates one run-level root cause instead of disappearance al
   const result = run(manifest, { observations });
   assert.deepEqual(result.runIssues.map((issue) => issue.code), ["MONITOR_SOURCE_OUTAGE"]);
   assert.equal(result.records.filter((record) => record.classifications.includes("SOURCE_UNAVAILABLE")).length, 0);
-  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 187);
-  assert.equal(result.sourceIssues.length, 36);
+  assert.equal(result.records.filter((record) => record.classifications.includes("MONITOR_ERROR")).length, 226);
+  assert.equal(result.sourceIssues.length, 42);
   assert.equal(result.reviewQueue.length, 13, "freshness queue remains visible while outage noise is grouped");
 });
 
