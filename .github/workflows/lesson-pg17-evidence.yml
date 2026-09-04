@@ -1,0 +1,52 @@
+name: Lesson coordinate PG17 evidence
+on:
+  push:
+    branches: [codex/lesson-coordinate-guard-pg17-ci-evidence]
+permissions:
+  contents: read
+jobs:
+  pg17:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: disposable-ci-only
+          POSTGRES_DB: lesson_guard_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      PGPASSWORD: disposable-ci-only
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 8af78bf08e8e18c546f0ce32798cae44e4d9602d
+          path: candidate
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Exact candidate and PG17 authority
+        working-directory: candidate
+        run: |
+          test "$(git rev-parse HEAD)" = 8af78bf08e8e18c546f0ce32798cae44e4d9602d
+          psql -h localhost -U postgres -d lesson_guard_test -Atc 'select version()'
+          test "$(psql -h localhost -U postgres -d lesson_guard_test -Atc 'show server_version_num')" -ge 170000
+          test "$(psql -h localhost -U postgres -d lesson_guard_test -Atc 'show server_version_num')" -lt 180000
+      - run: npm ci
+        working-directory: candidate
+      - name: Exact candidate focused tests
+        working-directory: candidate
+        run: node --import tsx --test src/lib/__tests__/lesson-coordinate*.test.ts src/lib/__tests__/lesson-location-membership.test.ts
+      - name: Exact candidate eight SQL packets on PG17
+        working-directory: candidate
+        run: node --import tsx scripts/validate-lesson-coordinate-ingestion-sql.mjs --local-url=postgresql://postgres@localhost:5432/lesson_guard_test
+      - name: Additional transaction side-effect assertions
+        working-directory: candidate
+        run: node --import tsx ../.github/scripts/lesson-pg17-assertions.mjs
