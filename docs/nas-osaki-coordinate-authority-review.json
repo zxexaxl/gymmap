@@ -1,0 +1,92 @@
+{
+  "status": "NAS_OSAKI_COORDINATE_AUTHORITY_AMBIGUOUS",
+  "checkedAt": "2026-09-04T00:48:33.443Z",
+  "baseSha": "86d0219812c24179319ecf69776a461b10b487b8",
+  "productionMigrationHead": "0015",
+  "proposedCoordinate": null,
+  "candidateCreated": false,
+  "productionDataMutation": false,
+  "officialNas": {
+    "page": "https://www.nas-club.co.jp/osaki/",
+    "map": "https://goo.gl/maps/3bkGsPW9vnz",
+    "latitude": 35.618258,
+    "longitude": 139.726683,
+    "precision": "6 decimal digits in explicit map destination; surveyed/entrance accuracy not established; viewport longitude 139.724489 is not destination",
+    "pageSha256": "b4aee57531c4204f64e80127f4656eaee365f05661e270f7baac243254bdce52"
+  },
+  "gsi": {
+    "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E5%A4%A7%E5%B4%8E2-1-3",
+    "response": [
+      {
+        "geometry": {
+          "coordinates": [
+            139.726807,
+            35.619083
+          ],
+          "type": "Point"
+        },
+        "type": "Feature",
+        "properties": {
+          "addressCode": "",
+          "title": "東京都品川区大崎二丁目１番３号"
+        }
+      }
+    ],
+    "precision": "address representative point, 6 decimal digits; entrance accuracy not established"
+  },
+  "distanceMeters": 92.42,
+  "osakiCurrentSemantics": [
+    {
+      "id": "e5250e8c-8a51-41e1-87e6-56f332efc044",
+      "name": "NAS PILATES ON THE GO 大崎",
+      "coordinates": [
+        35.619083,
+        139.726807
+      ],
+      "membership": true,
+      "scheduleRows": 0,
+      "purposeIndex": false,
+      "bodycombatCount": 0,
+      "mapEligible": true
+    },
+    {
+      "id": "c3afed3c-5a34-4eb4-bc9b-57f4a6b2013a",
+      "name": "ホットヨガスタジオ美温 大崎",
+      "coordinates": [
+        35.619083,
+        139.726807
+      ],
+      "membership": true,
+      "scheduleRows": 0,
+      "purposeIndex": false,
+      "bodycombatCount": 0,
+      "mapEligible": true
+    },
+    {
+      "id": "ce0f6e5d-3455-4305-85b8-68a50dd5a57b",
+      "name": "NAS大崎",
+      "coordinates": [
+        null,
+        null
+      ],
+      "membership": true,
+      "scheduleRows": 104,
+      "purposeIndex": true,
+      "bodycombatCount": 8,
+      "mapEligible": false
+    }
+  ],
+  "systemicNote": [
+    {
+      "name": "NAS西葛西",
+      "parentCoordinatesStillNull": true,
+      "appearsSameDefectClass": true
+    },
+    {
+      "name": "NAS篠崎",
+      "parentCoordinatesStillNull": true,
+      "appearsSameDefectClass": true
+    }
+  ],
+  "localHistoricalChildCoordinateSource": "/Users/te/Documents/GymMap/output/geocoding/location-geocoding-cache.json; both GSI address search, 2026-08-07; corroborating provenance only"
+}
