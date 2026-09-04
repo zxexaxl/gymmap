@@ -7,6 +7,7 @@ import { createClient } from "@supabase/supabase-js";
 
 import type { Database } from "../../src/lib/database.types";
 import type { JexerExtractionResult, NormalizedExtractedJexerScheduleRecord } from "../../src/lib/extraction/jexer-types";
+import { validateLessonPublicationLocations, type LessonPublicationLocation } from "../../src/lib/lesson-coordinate-publication";
 import { ensureLessonLocationMembership } from "../../src/lib/lesson-membership-writer";
 
 type ProgramRow = {
@@ -17,7 +18,7 @@ type ProgramRow = {
   default_duration_minutes: number | null;
 };
 
-type LocationRow = {
+type LocationRow = LessonPublicationLocation & {
   id: string;
   name: string;
 };
@@ -275,7 +276,7 @@ async function main() {
 
   const [{ data: locations, error: locationsError }, { data: programs, error: programsError }, { data: schedules, error: schedulesError }] =
     await Promise.all([
-      supabase.from("gym_locations").select("id, name"),
+      supabase.from("gym_locations").select("id, name, is_active, latitude, longitude"),
       supabase.from("programs").select("id, name, slug, category, default_duration_minutes"),
       supabase
         .from("class_schedules")
@@ -324,6 +325,11 @@ async function main() {
   const locationNamesById = new Map<string, string>(locations.map((location) => [location.id, location.name]));
   const snapshotId = path.basename(args.file);
   const importedKeysByLocation = new Map<string, Set<string>>();
+
+  validateLessonPublicationLocations(extraction.records.flatMap((record) => {
+    const location = locationsByName.get(normalizeNameKey(record.location_name));
+    return location ? [location] : [];
+  }));
 
   for (const record of extraction.records) {
     const location = locationsByName.get(normalizeNameKey(record.location_name));

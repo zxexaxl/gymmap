@@ -1,3 +1,8 @@
+-- Managed Lesson publication: incomplete source rows remain HOLD.
+-- Run as a complete packet; a failure rolls back the entire batch.
+begin;
+lock table public.gym_locations, public.lesson_location_memberships in share row exclusive mode;
+
 with golds_brand as (
   select id
   from gym_brands
@@ -92,3 +97,21 @@ insert into lesson_location_memberships (location_id, authority_source)
 select inserted_locations.id, 'lesson-location-seed:golds-kanto'
 from inserted_locations
 on conflict (location_id) do nothing;
+
+do $$
+begin
+  if exists (
+    select 1 from public.gym_locations g
+    join public.lesson_location_memberships m on m.location_id = g.id
+    where g.is_active and (
+      g.latitude is null or g.longitude is null
+      or not (g.latitude between -90 and 90)
+      or not (g.longitude between -180 and 180)
+    )
+  ) then
+    raise exception 'LESSON_COORDINATE_PUBLICATION_HOLD: active Lesson location requires complete valid coordinates';
+  end if;
+end;
+$$;
+
+commit;

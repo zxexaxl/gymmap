@@ -26,7 +26,8 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "tsx --test src/lib/__tests__/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lesson:coordinates:preflight": "node --import tsx scripts/validate-lesson-coordinate-publication.ts --read-only"
   },
   "dependencies": {
     "@maplibre/maplibre-gl-leaflet": "0.1.4",

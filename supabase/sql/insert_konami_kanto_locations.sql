@@ -1,3 +1,8 @@
+-- Managed Lesson publication: incomplete source rows remain HOLD.
+-- Run as a complete packet; a failure rolls back the entire batch.
+begin;
+lock table public.gym_locations, public.lesson_location_memberships in share row exclusive mode;
+
 -- Konami Sports 東京・埼玉・千葉・神奈川の施設一括追加 SQL です。
 -- 取得元: 検索結果ページの実データ API
 -- - result page: https://www.konami.com/sportsclub/shisetsu/result.html?pref=%E5%9F%BC%E7%8E%89%E7%9C%8C$$%E5%8D%83%E8%91%89%E7%9C%8C$$%E6%9D%B1%E4%BA%AC%E9%83%BD$$%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C
@@ -115,3 +120,21 @@ insert into lesson_location_memberships (location_id, authority_source)
 select inserted_locations.id, 'lesson-location-seed:konami-kanto'
 from inserted_locations
 on conflict (location_id) do nothing;
+
+do $$
+begin
+  if exists (
+    select 1 from public.gym_locations g
+    join public.lesson_location_memberships m on m.location_id = g.id
+    where g.is_active and (
+      g.latitude is null or g.longitude is null
+      or not (g.latitude between -90 and 90)
+      or not (g.longitude between -180 and 180)
+    )
+  ) then
+    raise exception 'LESSON_COORDINATE_PUBLICATION_HOLD: active Lesson location requires complete valid coordinates';
+  end if;
+end;
+$$;
+
+commit;
