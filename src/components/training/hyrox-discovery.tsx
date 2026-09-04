@@ -328,7 +328,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
               currentPosition={currentPosition}
               focusCenter={mapFocusCenter !== null}
               focusRequestId={mapFocusRequestId}
-              onSelectLocation={(locationId) => handleSelectLocation(locationId, true)}
+              onSelectLocation={handleSelectLocation}
               onClearSelection={handleClearSelection}
               onProviderError={handleMapProviderError}
               unselectedCaption={`${prefecture || "全国"}の${filteredLocations.length}施設を表示中`}
