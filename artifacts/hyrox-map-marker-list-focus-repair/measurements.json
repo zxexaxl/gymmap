@@ -1,0 +1,187 @@
+{
+  "candidate": "ae84390256c0caf81d41145b77b6e22be3063dcf",
+  "preview": "https://gymmap-9sfjal9x4-tes-projects-f349e739.vercel.app/training/hyrox",
+  "method": "Values transcribed from read-only browser DOM measurements returned alongside each screenshot. Pointer taps used viewport coordinates; no locator focus or auto-scroll during measured pointer sequences.",
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "before",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-before.png",
+      "selected": null,
+      "activeTag": "BODY"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "first-open",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-first-open.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "first-settled",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-first-settled.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "second-open",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-second-open.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "second-settled",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-second-settled.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "close",
+      "scrollY": 1026.5,
+      "listScrollTop": 506.5,
+      "screenshot": "390-close.png",
+      "selected": null,
+      "activeTag": "BODY"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "before",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-before.png",
+      "selected": null,
+      "activeTag": "BODY"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "first-open",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-first-open.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "first-settled",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-first-settled.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "second-open",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-second-open.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "second-settled",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-second-settled.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "stage": "close",
+      "scrollY": 1012.5,
+      "listScrollTop": 512.5,
+      "screenshot": "430-close.png",
+      "selected": null,
+      "activeTag": "BODY"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "before",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-before.png",
+      "selected": null,
+      "activeTag": "BODY"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "first-open",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-first-open.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "first-settled",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-first-settled.png",
+      "selected": "f45-training-hamamatsucho",
+      "activeTag": "path"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "second-open",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-second-open.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "second-settled",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-second-settled.png",
+      "selected": "golds-gym-13210",
+      "activeTag": "path"
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "stage": "close",
+      "scrollY": 862.5,
+      "listScrollTop": 500,
+      "screenshot": "1440-close.png",
+      "selected": null,
+      "activeTag": "BODY"
+    }
+  ]
+}

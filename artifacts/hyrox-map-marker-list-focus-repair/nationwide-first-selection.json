@@ -1,0 +1,55 @@
+[
+  {
+    "stage": "before",
+    "activeId": "",
+    "activeLabel": null,
+    "activeTag": "BODY",
+    "detail": [],
+    "height": 844,
+    "listHeight": 488,
+    "listScrollTop": 506.5,
+    "mapTop": 104.3203125,
+    "scrollY": 1026.5,
+    "selected": [],
+    "url": "https://gymmap-9sfjal9x4-tes-projects-f349e739.vercel.app/training/hyrox",
+    "width": 390
+  },
+  {
+    "stage": "first-open",
+    "activeId": "",
+    "activeLabel": "Orangetheory Fitness / オレンジセオリーフィットネス溝の口",
+    "activeTag": "path",
+    "detail": [
+      "××Official Training ClubOrangetheory Fitnessオレンジセオリーフィットネス溝の口神奈川県 川崎市高津区2130001, Kawasaki, 1-13-18-B1 Mizonokuchi, Takatsu確認できた設備RowErgウェイトスレッドファーマーズキャリー用器具サンドバッグトレッドミルGymMapで詳細を見る施設公式サイト ↗"
+    ],
+    "height": 844,
+    "listHeight": 476,
+    "listScrollTop": 506.5,
+    "mapTop": 104.3203125,
+    "scrollY": 1026.5,
+    "selected": [
+      "Orangetheory Fitness / オレンジセオリーフィットネス溝の口"
+    ],
+    "url": "https://gymmap-9sfjal9x4-tes-projects-f349e739.vercel.app/training/hyrox?selected=hyrox-training-club-2130001",
+    "width": 390
+  },
+  {
+    "stage": "first-settled",
+    "activeId": "",
+    "activeLabel": "Orangetheory Fitness / オレンジセオリーフィットネス溝の口",
+    "activeTag": "path",
+    "detail": [
+      "××Official Training ClubOrangetheory Fitnessオレンジセオリーフィットネス溝の口神奈川県 川崎市高津区2130001, Kawasaki, 1-13-18-B1 Mizonokuchi, Takatsu確認できた設備RowErgウェイトスレッドファーマーズキャリー用器具サンドバッグトレッドミルGymMapで詳細を見る施設公式サイト ↗"
+    ],
+    "height": 844,
+    "listHeight": 476,
+    "listScrollTop": 506.5,
+    "mapTop": 104.3203125,
+    "scrollY": 1026.5,
+    "selected": [
+      "Orangetheory Fitness / オレンジセオリーフィットネス溝の口"
+    ],
+    "url": "https://gymmap-9sfjal9x4-tes-projects-f349e739.vercel.app/training/hyrox?selected=hyrox-training-club-2130001",
+    "width": 390
+  }
+]

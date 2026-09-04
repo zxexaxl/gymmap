@@ -1,0 +1,38 @@
+  Generating static pages using 9 workers (162/648) 
+  Generating static pages using 9 workers (324/648) 
+  Generating static pages using 9 workers (486/648) 
+✓ Generating static pages using 9 workers (648/648) in 17.6s
+  Finalizing page optimization ...
+
+Route (app)                                 Revalidate  Expire
+┌ ○ /                                              15m      1y
+├ ○ /_not-found
+├ ƒ /admin/data
+├ ƒ /api/favorites/schedules
+├ ● /areas/[area]/[program]                         1h      1y
+│ ├ /areas/東京都/bodypump                             1h      1y
+│ ├ /areas/東京都/ヨガ                                   1h      1y
+│ ├ /areas/港区/ヨガ                                    1h      1y
+│ └ [+246 more paths]
+├ ○ /favorites
+├ ● /locations/[slug]                               1h      1y
+│ ├ /locations/central-aoto                         1h      1y
+│ ├ /locations/central-centerminami                 1h      1y
+│ ├ /locations/central-cf-higashimatsuyama          1h      1y
+│ └ [+363 more paths]
+├ ● /programs/[slug]                                1h      1y
+│ ├ /programs/ヨガ                                    1h      1y
+│ ├ /programs/エアロビクス                                1h      1y
+│ ├ /programs/zumba                                 1h      1y
+│ └ [+22 more paths]
+├ ○ /robots.txt
+├ ƒ /search
+├ ○ /training/hyrox                                 1h      1y
+├ ƒ /training/hyrox/[slug]
+└ ○ /updates
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
