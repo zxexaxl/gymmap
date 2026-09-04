@@ -1,0 +1,255 @@
+{
+  "status": "NAS_OSAKI_COORDINATE_AUTHORITY_RESOLVED",
+  "checkedAt": "2026-09-04",
+  "baseSha": "86d0219812c24179319ecf69776a461b10b487b8",
+  "productionMigrationHead": "0015",
+  "proposedCoordinate": {
+    "latitude": 35.618258,
+    "longitude": 139.726683,
+    "precisionClass": "building/site level; no surveyed entrance accuracy claim"
+  },
+  "candidateCreated": true,
+  "productionDataMutation": false,
+  "officialNas": {
+    "page": "https://www.nas-club.co.jp/osaki/",
+    "map": "https://goo.gl/maps/3bkGsPW9vnz",
+    "latitude": 35.618258,
+    "longitude": 139.726683,
+    "precision": "6 decimal digits in explicit map destination; surveyed/entrance accuracy not established; viewport longitude 139.724489 is not destination",
+    "pageSha256": "b4aee57531c4204f64e80127f4656eaee365f05661e270f7baac243254bdce52",
+    "pinType": "coordinate-target / dropped-coordinate link, not a named facility Place ID; manual authoring provenance unknown"
+  },
+  "gsi": {
+    "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E5%A4%A7%E5%B4%8E2-1-3",
+    "response": [
+      {
+        "geometry": {
+          "coordinates": [
+            139.726807,
+            35.619083
+          ],
+          "type": "Point"
+        },
+        "type": "Feature",
+        "properties": {
+          "addressCode": "",
+          "title": "東京都品川区大崎二丁目１番３号"
+        }
+      }
+    ],
+    "precision": "address-search coordinate; API does not identify building centroid or entrance. GSI documents basis-number/frontage points that do not uniquely identify individual buildings; exact derivation of this result not exposed."
+  },
+  "distanceMeters": 92.42,
+  "osakiCurrentSemantics": [
+    {
+      "id": "e5250e8c-8a51-41e1-87e6-56f332efc044",
+      "name": "NAS PILATES ON THE GO 大崎",
+      "coordinates": [
+        35.619083,
+        139.726807
+      ],
+      "membership": true,
+      "scheduleRows": 0,
+      "purposeIndex": false,
+      "bodycombatCount": 0,
+      "mapEligible": true
+    },
+    {
+      "id": "c3afed3c-5a34-4eb4-bc9b-57f4a6b2013a",
+      "name": "ホットヨガスタジオ美温 大崎",
+      "coordinates": [
+        35.619083,
+        139.726807
+      ],
+      "membership": true,
+      "scheduleRows": 0,
+      "purposeIndex": false,
+      "bodycombatCount": 0,
+      "mapEligible": true
+    },
+    {
+      "id": "ce0f6e5d-3455-4305-85b8-68a50dd5a57b",
+      "name": "NAS大崎",
+      "coordinates": [
+        null,
+        null
+      ],
+      "membership": true,
+      "scheduleRows": 104,
+      "purposeIndex": true,
+      "bodycombatCount": 8,
+      "mapEligible": false
+    }
+  ],
+  "systemicNote": [
+    {
+      "name": "NAS西葛西",
+      "parentCoordinatesStillNull": true,
+      "appearsSameDefectClass": true
+    },
+    {
+      "name": "NAS篠崎",
+      "parentCoordinatesStillNull": true,
+      "appearsSameDefectClass": true
+    }
+  ],
+  "localHistoricalChildCoordinateSource": "/Users/te/Documents/GymMap/output/geocoding/location-geocoding-cache.json; both GSI address search, 2026-08-07; corroborating provenance only",
+  "supersedesAuditCommit": "4d3176d4e132783096b1540255f55f11513d3bf3",
+  "decision": "A/B: official hotel/NAS building and access evidence corroborates the NAS coordinate; GSI address point is outside that building to the north",
+  "officialHotel": {
+    "accessUrl": "https://www.daiwaroynet.jp/osaki/access/",
+    "mapLink": "https://goo.gl/maps/nTQhFnLgvARLdBQ38",
+    "placeId": "0x60188af389706285:0xc2e0a31507ee8b28",
+    "latitude": 35.6181067,
+    "longitude": 139.7266833,
+    "facts": [
+      "address matches NAS",
+      "bridge-like walkway arrives at 2F containing NAS",
+      "hotel reception is 4F, distinct from NAS 2F reception"
+    ],
+    "brochureUrl": "https://www.daiwaroynet.jp/osaki/assets/hotel_brochure.pdf",
+    "brochurePage": 3,
+    "brochureFacts": [
+      "NAS occupies floors 1-3",
+      "NAS entrance is on floor 2",
+      "access diagram places hotel west/southwest of ThinkPark tower"
+    ]
+  },
+  "mapEvidence": [
+    {
+      "url": "https://maps.gsi.go.jp/#18/35.618258/139.726683/&base=std&ls=std&disp=1",
+      "file": "gsi-nas-official-point.png",
+      "observation": "Crosshair at north edge of mapped low-rise building area west/southwest of ThinkPark tower, consistent with hotel/NAS complex and 2F bridge access."
+    },
+    {
+      "url": "https://maps.gsi.go.jp/#18/35.619083/139.726807/&base=std&ls=std&disp=1",
+      "file": "gsi-address-point.png",
+      "observation": "Crosshair in external northern street-edge/walkway/open space, north of the NAS/hotel building footprint."
+    }
+  ],
+  "gsiDocumentation": "https://www.gsi.go.jp/kihonjohochousa/jukyo_jusho.html",
+  "policyAudit": {
+    "historicalCommit": "8c9be865aba5bd29aa1db6821eb924a1481108c5",
+    "rule": "official-page coordinate first, GSI fallback; explicit overrides allowed; no entrance-only rule found",
+    "precedents": [
+      "NAS Fujisawa official map link",
+      "NAS Totsuka official map link",
+      "JEXER and other NAS GSI address fallback"
+    ],
+    "hyroxPolicyNotTransferred": true
+  },
+  "productionAuthority": {
+    "sha": "86d0219812c24179319ecf69776a461b10b487b8",
+    "deploymentId": 6241868927,
+    "url": "https://gymmap-ojbzf2p4q-tes-projects-f349e739.vercel.app",
+    "state": "success",
+    "migrationHead": "0015",
+    "baselineCheckedAt": "2026-09-04T01:10:01.642Z"
+  },
+  "validation": {
+    "status": "PASS",
+    "checkedAt": "2026-09-04T02:29:02.328Z",
+    "engine": "PostgreSQL 18.3 (PGlite 0.5.8) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+    "baselineCheckedAt": "2026-09-04T01:10:01.642Z",
+    "migrationFiles": [
+      "0001_init.sql",
+      "0002_add_class_schedule_normalization_columns.sql",
+      "0003_add_gym_locations_location_type.sql",
+      "0004_add_paginated_schedule_search.sql",
+      "0005_add_favorite_schedule_week.sql",
+      "0006_balance_favorite_schedule_week.sql",
+      "0007_add_schedule_summary_rpcs.sql",
+      "0008_add_training_domain_foundation.sql",
+      "0009_add_training_location_facts_and_evidence.sql",
+      "0010_add_training_publication_layer.sql",
+      "0011_add_lesson_discovery_membership.sql",
+      "0012_add_structured_lesson_schedule_search.sql",
+      "0013_add_training_review_ledger.sql",
+      "0014_restrict_training_review_ledger_service_role_privileges.sql",
+      "0015_add_training_raw_fact_persistence.sql"
+    ],
+    "publicTablesCompared": 31,
+    "locationId": "ce0f6e5d-3455-4305-85b8-68a50dd5a57b",
+    "coordinates": [
+      35.618258,
+      139.726683
+    ],
+    "changedFields": [
+      "latitude",
+      "longitude",
+      "updated_at"
+    ],
+    "queries": {
+      "blank": {
+        "ownScheduleCount": 104,
+        "before": false,
+        "after": true,
+        "beforeMatchingMappableLocations": 6,
+        "afterMatchingMappableLocations": 7
+      },
+      "bodycombat": {
+        "ownScheduleCount": 8,
+        "before": false,
+        "after": true,
+        "beforeMatchingMappableLocations": 0,
+        "afterMatchingMappableLocations": 1
+      }
+    },
+    "purposeIndexUnchanged": true,
+    "membershipUnchanged": true,
+    "schedulesUnchanged": true,
+    "childRowsUnchanged": true,
+    "otherPublicTablesUnchanged": true,
+    "s1ResultUnchanged": true,
+    "s1Rows": 8,
+    "mapScopePass": true,
+    "nearbyRankingPass": true,
+    "negativeScenarios": [
+      "migration-head-changed",
+      "already-populated-coordinate",
+      "membership-removed",
+      "schedule-changed",
+      "child-changed"
+    ],
+    "replayFailsClosed": true,
+    "sqlSha256": "1786c7fec689f2dddecdc91c5b7b138f9e45cdf6f6038473b896a04f15ec2f89",
+    "baselineFileSha256": "c09c9f3a0519821b7f3d25c26ee10888af2cd5c08654433fbce86192fe42f932",
+    "scheduleRowsSha256": "4ac1ceb738193b04d63b8e88623554b3373d68c63482446199de5d64958fe4cb",
+    "membershipRowsSha256": "0ee9c16c760741bf24898cf2c76a05f3f51180da8292c24f6b905c2a8be057ee",
+    "productionWrites": false
+  },
+  "sourceFileHashes": {
+    "nas.txt": "b4aee57531c4204f64e80127f4656eaee365f05661e270f7baac243254bdce52",
+    "hotel.txt": "ffb7d305b55cc72b2b0bd123a9d8c4ee9ad127ec140ae54b2814c7c2ee37443d",
+    "hotel-brochure.pdf": "ae207b4a205ac3fff0f2b9b2ac27cbbdfb1c9ae2d790f4a83d9756e51d54ef41",
+    "gsi.txt": "f711498f167f8c779af380c02abcfd2c98998a2161a7eaf9fab38f90990373ea",
+    "hotel-map.html": "cebf8a8d4d6c69e167e41cbfbf0c708a132d41363ef11c498e973bbc4b27702c",
+    "gsi-nas-official-point.png": "2abc445792b603a0f4b4339d5975d83609a42487a4748ea8499971d30218303b",
+    "gsi-address-point.png": "3ba2940ac9223a88f212ade1b6e3ef7ba1bcc82be3eca9f17321e2d37de97d07",
+    "ui-before-blank.png": "1f60d502dcf770379cec323bac904322bf9ccf4ae615d2d51ef2c8b424b53997",
+    "ui-after-building.png": "65200867adb1e7b9603464654aaef3ac338f7eca59271ba3c8536d8cff0b0254",
+    "ui-after-blank.png": "c16c216dd1203bf6be08e1f852c224d431535aee5390487aeed60f629b075815",
+    "ui-before-bodycombat.png": "9a32693a6c4f204b617b8e7dc5d7848ae710e4dc8f85d0e05bb9683f3c9cef9d",
+    "ui-after-bodycombat-map-scope.png": "d36c9620e1c799377d2d471f0189a826585da07ab9c8ed65179823ab01ad3465"
+  },
+  "regressionTests": {
+    "passed": 71,
+    "failed": 0
+  },
+  "uiValidation": {
+    "kind": "disposable 9-location fixture; current unmodified LocationMapSection/LeafletGymMap in separate Next app",
+    "blank": {
+      "mappableBefore": 6,
+      "mappableAfter": 7
+    },
+    "bodycombat": {
+      "matchingMappableBefore": 0,
+      "matchingMappableAfter": 1,
+      "fixtureIndexMultiplicityUnchanged": 28,
+      "nasOsakiOwnMultiplicity": 8
+    },
+    "mapScopeAndNearbyToggle": "PASS",
+    "selectedFacility": "sports-club-nas-osaki-index",
+    "productionAccess": false
+  }
+}

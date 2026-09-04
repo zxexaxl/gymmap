@@ -1,4 +1,6 @@
-# NAS大崎 coordinate authority review — stopped
+# NAS大崎 coordinate authority review — historical stop
+
+Superseded by [the coordinate authority resolution and candidate](nas-osaki-coordinate-resolution.md). The text below preserves the earlier fail-closed investigation; it is not the current verdict.
 
 `NAS_OSAKI_COORDINATE_AUTHORITY_AMBIGUOUS`
 

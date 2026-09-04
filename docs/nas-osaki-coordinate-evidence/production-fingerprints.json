@@ -1,0 +1,14 @@
+{
+  "gym_locations": {
+    "hash": "47105e0603e10d0f34096874d8651dde06395163777bbb7335182f5a35f1819d",
+    "count": 3
+  },
+  "lesson_location_memberships": {
+    "hash": "32681a5c98347bc8475e1a59f1bcbc228e98e1347931c982484f0321e2a979b5",
+    "count": 3
+  },
+  "class_schedules": {
+    "hash": "1a306629aad5dff2f92cfa4e030ac3d66a0fd8e0d1bef8679f0230f16412cd74",
+    "count": 104
+  }
+}

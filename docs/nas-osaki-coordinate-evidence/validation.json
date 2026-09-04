@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-09-04T02:29:02.328Z",
+  "engine": "PostgreSQL 18.3 (PGlite 0.5.8) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+  "baselineCheckedAt": "2026-09-04T01:10:01.642Z",
+  "migrationFiles": [
+    "0001_init.sql",
+    "0002_add_class_schedule_normalization_columns.sql",
+    "0003_add_gym_locations_location_type.sql",
+    "0004_add_paginated_schedule_search.sql",
+    "0005_add_favorite_schedule_week.sql",
+    "0006_balance_favorite_schedule_week.sql",
+    "0007_add_schedule_summary_rpcs.sql",
+    "0008_add_training_domain_foundation.sql",
+    "0009_add_training_location_facts_and_evidence.sql",
+    "0010_add_training_publication_layer.sql",
+    "0011_add_lesson_discovery_membership.sql",
+    "0012_add_structured_lesson_schedule_search.sql",
+    "0013_add_training_review_ledger.sql",
+    "0014_restrict_training_review_ledger_service_role_privileges.sql",
+    "0015_add_training_raw_fact_persistence.sql"
+  ],
+  "publicTablesCompared": 31,
+  "locationId": "ce0f6e5d-3455-4305-85b8-68a50dd5a57b",
+  "coordinates": [
+    35.618258,
+    139.726683
+  ],
+  "changedFields": [
+    "latitude",
+    "longitude",
+    "updated_at"
+  ],
+  "queries": {
+    "blank": {
+      "ownScheduleCount": 104,
+      "before": false,
+      "after": true,
+      "beforeMatchingMappableLocations": 6,
+      "afterMatchingMappableLocations": 7
+    },
+    "bodycombat": {
+      "ownScheduleCount": 8,
+      "before": false,
+      "after": true,
+      "beforeMatchingMappableLocations": 0,
+      "afterMatchingMappableLocations": 1
+    }
+  },
+  "purposeIndexUnchanged": true,
+  "membershipUnchanged": true,
+  "schedulesUnchanged": true,
+  "childRowsUnchanged": true,
+  "otherPublicTablesUnchanged": true,
+  "s1ResultUnchanged": true,
+  "s1Rows": 8,
+  "mapScopePass": true,
+  "nearbyRankingPass": true,
+  "negativeScenarios": [
+    "migration-head-changed",
+    "already-populated-coordinate",
+    "membership-removed",
+    "schedule-changed",
+    "child-changed"
+  ],
+  "replayFailsClosed": true,
+  "sqlSha256": "1786c7fec689f2dddecdc91c5b7b138f9e45cdf6f6038473b896a04f15ec2f89",
+  "baselineFileSha256": "c09c9f3a0519821b7f3d25c26ee10888af2cd5c08654433fbce86192fe42f932",
+  "scheduleRowsSha256": "4ac1ceb738193b04d63b8e88623554b3373d68c63482446199de5d64958fe4cb",
+  "membershipRowsSha256": "0ee9c16c760741bf24898cf2c76a05f3f51180da8292c24f6b905c2a8be057ee",
+  "productionWrites": false
+}

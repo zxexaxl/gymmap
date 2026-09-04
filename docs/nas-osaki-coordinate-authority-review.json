@@ -88,5 +88,7 @@
       "appearsSameDefectClass": true
     }
   ],
-  "localHistoricalChildCoordinateSource": "/Users/te/Documents/GymMap/output/geocoding/location-geocoding-cache.json; both GSI address search, 2026-08-07; corroborating provenance only"
+  "localHistoricalChildCoordinateSource": "/Users/te/Documents/GymMap/output/geocoding/location-geocoding-cache.json; both GSI address search, 2026-08-07; corroborating provenance only",
+  "historicalAudit": true,
+  "supersededBy": "docs/nas-osaki-coordinate-resolution.json"
 }

@@ -114,5 +114,13 @@
     "coordinateSource": "gsi_address_search",
     "sourceUrl": "https://megalos.co.jp/minatomirai_reflet/",
     "note": "Official Megalos Reflet Minatomirai address geocoded with GSI address search."
+  },
+  {
+    "slug": "sports-club-nas-osaki-index",
+    "latitude": 35.618258,
+    "longitude": 139.726683,
+    "coordinateSource": "official_page",
+    "sourceUrl": "https://goo.gl/maps/3bkGsPW9vnz",
+    "note": "Official NAS Osaki coordinate pin corroborated against Daiwa Roynet Hotel Tokyo Osaki official 2F NAS access / 1F-3F tenancy and GSI building footprint. Building/site-level, not surveyed entrance accuracy. GSI address-search point is north of the NAS/hotel building. See docs/nas-osaki-coordinate-resolution.md."
   }
 ]
