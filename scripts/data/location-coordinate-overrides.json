@@ -122,5 +122,13 @@
     "coordinateSource": "official_page",
     "sourceUrl": "https://goo.gl/maps/3bkGsPW9vnz",
     "note": "Official NAS Osaki coordinate pin corroborated against Daiwa Roynet Hotel Tokyo Osaki official 2F NAS access / 1F-3F tenancy and GSI building footprint. Building/site-level, not surveyed entrance accuracy. GSI address-search point is north of the NAS/hotel building. See docs/nas-osaki-coordinate-resolution.md."
+  },
+  {
+    "slug": "sports-club-nas-higashiomiya-newbuild-index",
+    "latitude": 35.947483,
+    "longitude": 139.641284,
+    "coordinateSource": "official_page",
+    "sourceUrl": "https://higashi-omiya.com/archives/shop/nas-club",
+    "note": "Local merchant association and Kawai official maps identify the NAS new-building Place. NAS official access diagram, current building geometry, and co-tenant official dual 26-1/26-3 address corroborate this building/site-level point. Raw Place 35.9474829,139.6412836 rounded to existing numeric(9,6); not a surveyed entrance. See docs/nas-higashiomiya-coordinate-resolution.md."
   }
 ]

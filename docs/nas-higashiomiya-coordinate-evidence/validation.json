@@ -1,0 +1,115 @@
+{
+  "status": "NAS_HIGASHIOMIYA_PG17_REHEARSAL_PASS",
+  "checkedAt": "2026-09-04T07:27:06.193Z",
+  "engine": "PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.1.1.101), 64-bit",
+  "locationId": "a6d34e4b-6cc1-4f6f-9fd0-793240e203d4",
+  "acceptedCoordinates": [
+    35.947483,
+    139.641284
+  ],
+  "baselineCheckedAt": "2026-09-04T06:49:50.432321+00:00",
+  "freshHashesCheckedAt": "2026-09-04T07:18:06.521499+00:00",
+  "baselineSha256": "db3b8f3c687db1eddb82c3c9d390d566870d1d4a059ab5c85fe34e98a3d42e70",
+  "freshWholeTableHashesMatch": true,
+  "migrations": [
+    "0001_init.sql",
+    "0002_add_class_schedule_normalization_columns.sql",
+    "0003_add_gym_locations_location_type.sql",
+    "0004_add_paginated_schedule_search.sql",
+    "0005_add_favorite_schedule_week.sql",
+    "0006_balance_favorite_schedule_week.sql",
+    "0007_add_schedule_summary_rpcs.sql",
+    "0008_add_training_domain_foundation.sql",
+    "0009_add_training_location_facts_and_evidence.sql",
+    "0010_add_training_publication_layer.sql",
+    "0011_add_lesson_discovery_membership.sql",
+    "0012_add_structured_lesson_schedule_search.sql",
+    "0013_add_training_review_ledger.sql",
+    "0014_restrict_training_review_ledger_service_role_privileges.sql",
+    "0015_add_training_raw_fact_persistence.sql"
+  ],
+  "publicTablesCompared": 31,
+  "fixture": "User-supplied existing public Lesson snapshot; five tables matched to fresh read-only hashes. Other public tables are schema-only.",
+  "changedFields": [
+    "latitude",
+    "longitude",
+    "updated_at"
+  ],
+  "exactOneLocationChanged": true,
+  "membershipsAndSchedulesUnchanged": true,
+  "scheduleCount": 143,
+  "latestPeriod": "2026-08-01",
+  "latestCount": 143,
+  "schemaUnchanged": true,
+  "purposeIndexUnchanged": true,
+  "activePositiveMembers": 366,
+  "mappableBefore": 365,
+  "mappableAfter": 366,
+  "gapsAfter": 0,
+  "queries": [
+    {
+      "query": "blank",
+      "ownCount": 143,
+      "preview": "POWER VR, LESMILLS DANCE VR, MEGADANZ VR 他73件",
+      "before": false,
+      "after": true,
+      "s1Rows": 199,
+      "s1TargetRows": 143
+    },
+    {
+      "query": "bodycombat",
+      "ownCount": 6,
+      "preview": "BODYCOMBAT VR, BODYCOMBAT, BODY COMBAT VR",
+      "before": false,
+      "after": true,
+      "s1Rows": 6,
+      "s1TargetRows": 6
+    },
+    {
+      "query": "bodypump",
+      "ownCount": 6,
+      "preview": "BODYPUMP VR, BODY PUMP",
+      "before": false,
+      "after": true,
+      "s1Rows": 6,
+      "s1TargetRows": 6
+    }
+  ],
+  "nearbyAndMapScopePass": true,
+  "selectionHref": "/?q=bodycombat&selected=sports-club-nas-higashiomiya-newbuild-index",
+  "nearestOthers": [
+    {
+      "id": "27d0e5a5-2882-40ba-b4ba-e2e20c07de2a",
+      "name": "ホットヨガスタジオ BODY UP東大宮",
+      "distanceM": 53.54249068378333
+    },
+    {
+      "id": "4c5a52e9-8cb5-4c70-91c4-5a24e373323d",
+      "name": "セントラルスポーツ ジムスタ ハレノテラス東大宮",
+      "distanceM": 918.7630041659692
+    },
+    {
+      "id": "04323f77-2eeb-4b40-8728-5eab8c746369",
+      "name": "セントラルウェルネスクラブ 大宮宮原",
+      "distanceM": 2190.6704784171666
+    }
+  ],
+  "negativeScenarios": [
+    "latitude-filled",
+    "longitude-filled",
+    "inactive",
+    "identity",
+    "membership-removed",
+    "schedule-content",
+    "schedule-owner",
+    "other-location",
+    "migration"
+  ],
+  "applyReplayRejected": true,
+  "rollbackPass": true,
+  "rollbackReceiptTamperRejected": true,
+  "rollbackReplayRejected": true,
+  "applySha256": "46b5f6907caf7c1851d690628b4aebfb6125b888eefdfb5a01f77f82b9914a8f",
+  "rollbackSha256": "968bb4078d87b6228766086d65f2864e4ef2733779ee0cc7c93f2648aa458a0a",
+  "productionWrites": false
+}
