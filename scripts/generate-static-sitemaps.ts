@@ -118,6 +118,11 @@ ${urls
 }
 
 async function main() {
+  if (process.env.GYMMAP_MAINTENANCE_MODE === "true") {
+    console.log("Skipping sitemap generation while GymMap maintenance mode is enabled.");
+    return;
+  }
+
   loadDotEnvFile(".env.local");
   loadDotEnvFile(".env");
 
