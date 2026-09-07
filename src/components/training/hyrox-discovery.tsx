@@ -18,6 +18,12 @@ import {
   getHyroxPrefectureOptions,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
+import {
+  trackHyroxAreaSelect,
+  trackHyroxCurrentLocationUse,
+  trackHyroxFacilitySelect,
+  type HyroxFacilitySource,
+} from "@/lib/hyrox-analytics";
 
 import styles from "./hyrox-map-ui.module.css";
 
@@ -128,7 +134,12 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
   const MapComponent = activeMapProvider === "apple" ? AppleGymMap : LeafletGymMap;
 
   const handleSelectLocation = useCallback(
-    (locationId: string, revealInCompactList = false) => {
+    (
+      locationId: string,
+      source: HyroxFacilitySource,
+      listPosition?: number,
+      revealInCompactList = false,
+    ) => {
       const publicKey = publicKeyByLocationId.get(locationId);
 
       if (!publicKey) {
@@ -139,6 +150,13 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
       setSelectionNotice(null);
 
       if (selectedLocationId !== locationId) {
+        trackHyroxFacilitySelect({
+          facility_id: locationId,
+          source,
+          action: "focus_map",
+          list_position: listPosition,
+          result_count: filteredLocations.length,
+        });
         setSelectedLocationId(locationId);
         window.history.pushState(null, "", buildMapSelectionHref(window.location.href, publicKey));
       }
@@ -154,7 +172,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         });
       }
     },
-    [publicKeyByLocationId, selectedLocationId],
+    [filteredLocations.length, publicKeyByLocationId, selectedLocationId],
   );
 
   const handleClearSelection = useCallback(() => {
@@ -226,6 +244,11 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
   }
 
   function handleCurrentLocationAction() {
+    trackHyroxCurrentLocationUse({
+      action_type: currentPosition ? "recenter" : "request",
+      result_count: filteredLocations.length,
+    });
+
     if (currentPosition) {
       setMapFocusCenter(currentPosition);
       setMapFocusRequestId((requestId) => requestId + 1);
@@ -244,6 +267,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
       <HyroxMapSelectionContent
         location={selectedLocation}
         outsideCurrentResults={!filteredLocations.some((location) => location.id === selectedLocation.id)}
+        resultCount={filteredLocations.length}
       />
     );
   }
@@ -296,7 +320,23 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         </div>
         <label className="hyrox-prefecture-filter">
           <span>都道府県</span>
-          <select value={prefecture} onChange={(event) => setPrefecture(event.target.value)}>
+          <select
+            value={prefecture}
+            onChange={(event) => {
+              const nextPrefecture = event.target.value;
+
+              if (nextPrefecture === prefecture) {
+                return;
+              }
+
+              trackHyroxAreaSelect({
+                area_type: "prefecture",
+                area_id: nextPrefecture || "all",
+                result_count: filterHyroxLocations(locations, nextPrefecture).length,
+              });
+              setPrefecture(nextPrefecture);
+            }}
+          >
             <option value="">全国 ({locations.length})</option>
             {prefectureOptions.map((option) => (
               <option key={option.prefecture} value={option.prefecture}>
@@ -328,7 +368,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
               currentPosition={currentPosition}
               focusCenter={mapFocusCenter !== null}
               focusRequestId={mapFocusRequestId}
-              onSelectLocation={handleSelectLocation}
+              onSelectLocation={(locationId) => handleSelectLocation(locationId, "map_marker")}
               onClearSelection={handleClearSelection}
               onProviderError={handleMapProviderError}
               unselectedCaption={`${prefecture || "全国"}の${filteredLocations.length}施設を表示中`}
@@ -372,7 +412,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
                 <span>{filteredLocations.length}件</span>
               </div>
               <div className="map-location-list" aria-label="地図に表示中のHYROX施設">
-                {filteredLocations.map((location) => (
+                {filteredLocations.map((location, index) => (
                   <article
                     id={`hyrox-map-list-${location.id}`}
                     key={location.id}
@@ -380,11 +420,11 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
                     role="button"
                     aria-pressed={selectedLocation?.id === location.id}
                     tabIndex={0}
-                    onClick={() => handleSelectLocation(location.id)}
+                    onClick={() => handleSelectLocation(location.id, "map_list", index + 1)}
                     onKeyDown={(event) => {
                       if (event.key === "Enter" || event.key === " ") {
                         event.preventDefault();
-                        handleSelectLocation(location.id);
+                        handleSelectLocation(location.id, "map_list", index + 1);
                       }
                     }}
                   >
@@ -413,12 +453,14 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
         </div>
         {filteredLocations.length ? (
           <div className="hyrox-location-grid">
-            {filteredLocations.map((location) => (
+            {filteredLocations.map((location, index) => (
               <HyroxFacilityCard
                 key={location.id}
                 location={location}
+                listPosition={index + 1}
+                resultCount={filteredLocations.length}
                 onMapFocus={(locationId) => {
-                  handleSelectLocation(locationId, true);
+                  handleSelectLocation(locationId, "facility_card", index + 1, true);
                   document.getElementById("hyrox-map-heading")?.scrollIntoView({ behavior: "smooth" });
                 }}
               />

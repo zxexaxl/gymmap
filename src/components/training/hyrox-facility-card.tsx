@@ -1,18 +1,27 @@
 import Link from "next/link";
 
 import { Badge, Button, CardSurface, Chip } from "@/components/ui";
+import { HyroxOfficialSiteLink } from "@/components/training/hyrox-official-site-link";
 import {
   buildHyroxDetailPath,
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
+import { trackHyroxFacilitySelect } from "@/lib/hyrox-analytics";
 
 type HyroxFacilityCardProps = {
   location: HyroxDiscoveryLocation;
+  listPosition: number;
   onMapFocus: (locationId: string) => void;
+  resultCount: number;
 };
 
-export function HyroxFacilityCard({ location, onMapFocus }: HyroxFacilityCardProps) {
+export function HyroxFacilityCard({
+  location,
+  listPosition,
+  onMapFocus,
+  resultCount,
+}: HyroxFacilityCardProps) {
   return (
     <CardSurface className="hyrox-location-card">
       <div className="hyrox-location-card__identity">
@@ -42,16 +51,27 @@ export function HyroxFacilityCard({ location, onMapFocus }: HyroxFacilityCardPro
         <Button variant="ghost" onClick={() => onMapFocus(location.id)}>
           地図で見る
         </Button>
-        <Link href={buildHyroxDetailPath(location.slug)}>GymMapで詳細を見る</Link>
+        <Link
+          href={buildHyroxDetailPath(location.slug)}
+          onClick={() =>
+            trackHyroxFacilitySelect({
+              facility_id: location.id,
+              source: "facility_card",
+              action: "open_detail",
+              list_position: listPosition,
+              result_count: resultCount,
+            })
+          }
+        >
+          GymMapで詳細を見る
+        </Link>
         {location.officialUrl ? (
-          <a
+          <HyroxOfficialSiteLink
+            facilityId={location.id}
             href={location.officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${location.name}の公式サイトを新しいタブで開く`}
-          >
-            施設公式サイト ↗
-          </a>
+            label={`${location.name}の公式サイトを新しいタブで開く`}
+            source="facility_card"
+          />
         ) : null}
       </div>
     </CardSurface>

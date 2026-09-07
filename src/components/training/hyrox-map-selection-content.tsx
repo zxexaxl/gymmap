@@ -1,22 +1,26 @@
 import Link from "next/link";
 
 import { Badge, Chip } from "@/components/ui";
+import { HyroxOfficialSiteLink } from "@/components/training/hyrox-official-site-link";
 import {
   buildHyroxDetailPath,
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
+import { trackHyroxFacilitySelect } from "@/lib/hyrox-analytics";
 
 import styles from "./hyrox-map-ui.module.css";
 
 type HyroxMapSelectionContentProps = {
   location: HyroxDiscoveryLocation;
   outsideCurrentResults: boolean;
+  resultCount: number;
 };
 
 export function HyroxMapSelectionContent({
   location,
   outsideCurrentResults,
+  resultCount,
 }: HyroxMapSelectionContentProps) {
   return (
     <div className={styles.selectionContent}>
@@ -50,18 +54,27 @@ export function HyroxMapSelectionContent({
       ) : null}
 
       <div className={styles.actions}>
-        <Link className={styles.primaryAction} href={buildHyroxDetailPath(location.slug)}>
+        <Link
+          className={styles.primaryAction}
+          href={buildHyroxDetailPath(location.slug)}
+          onClick={() =>
+            trackHyroxFacilitySelect({
+              facility_id: location.id,
+              source: "map_selection",
+              action: "open_detail",
+              result_count: resultCount,
+            })
+          }
+        >
           GymMapで詳細を見る
         </Link>
         {location.officialUrl ? (
-          <a
+          <HyroxOfficialSiteLink
+            facilityId={location.id}
             href={location.officialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${location.name}の公式サイトを新しいタブで開く`}
-          >
-            施設公式サイト ↗
-          </a>
+            label={`${location.name}の公式サイトを新しいタブで開く`}
+            source="map_selection"
+          />
         ) : null}
       </div>
     </div>

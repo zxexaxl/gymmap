@@ -15,6 +15,10 @@ const selectionSource = readFileSync(
   new URL("../../components/training/hyrox-map-selection-content.tsx", import.meta.url),
   "utf8",
 );
+const officialSiteLinkSource = readFileSync(
+  new URL("../../components/training/hyrox-official-site-link.tsx", import.meta.url),
+  "utf8",
+);
 const markerSource = readFileSync(
   new URL("../../components/map/map-marker-presentation.ts", import.meta.url),
   "utf8",
@@ -67,8 +71,8 @@ test("one filtered HYROX dataset feeds map, compact list, and full list", () => 
 
   assert.deepEqual(tokyo.map((item) => item.id), ["location-1", "location-3"]);
   assert.match(discoverySource, /filteredLocations\.map\(\(location\) => \(\{/);
-  assert.match(discoverySource, /filteredLocations\.map\(\(location\) => \(\s*<article/);
-  assert.match(discoverySource, /filteredLocations\.map\(\(location\) => \(\s*<HyroxFacilityCard/);
+  assert.match(discoverySource, /filteredLocations\.map\(\(location, index\) => \(\s*<article/);
+  assert.match(discoverySource, /filteredLocations\.map\(\(location, index\) => \(\s*<HyroxFacilityCard/);
   assert.doesNotMatch(discoverySource, /setSelectedLocationId\(null\)[\s\S]{0,120}setPrefecture|setPrefecture[\s\S]{0,120}setSelectedLocationId\(null\)/);
 });
 
@@ -112,7 +116,8 @@ test("compact list and panel actions remain keyboard/text accessible", () => {
   assert.match(discoverySource, /event\.key === "Enter" \|\| event\.key === " "/);
   assert.match(selectionSource, /GymMapで詳細を見る/);
   assert.match(selectionSource, /buildHyroxDetailPath\(location\.slug\)/);
-  assert.match(selectionSource, /施設公式サイト/);
+  assert.match(selectionSource, /HyroxOfficialSiteLink/);
+  assert.match(officialSiteLinkSource, /施設公式サイト/);
   assert.match(selectionSource, /<Chip key=\{equipment\} tone="positive">/);
   assert.doesNotMatch(selectionSource, /<button[^>]*>[^<]*(SkiErg|設備)/);
 });

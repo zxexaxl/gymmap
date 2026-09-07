@@ -137,7 +137,7 @@ ADMIN_ACCESS_KEY=your-admin-access-key
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `NEXT_PUBLIC_MAP_PROVIDER`
    - `NEXT_PUBLIC_APPLE_MAPS_TOKEN`
-   - `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN`
+   - `NEXT_PUBLIC_GA_MEASUREMENT_ID`
    - `ADMIN_ACCESS_KEY`
 5. Deploy を実行
 
@@ -155,25 +155,16 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 必須 | Supabase anon key |
 | `NEXT_PUBLIC_MAP_PROVIDER` | 任意 | 地図プロバイダ。`osm` または `apple`。未設定時は `osm` |
 | `NEXT_PUBLIC_APPLE_MAPS_TOKEN` | Apple Maps を使う場合は必須 | Apple MapKit JS 用の Maps token |
-| `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Cloudflare Web Analytics を使う場合は必須 | Cloudflare Web Analytics の beacon token |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 を使う場合は必須 | GymMap Production用Web data streamのMeasurement ID (`G-...`) |
 | `ADMIN_ACCESS_KEY` | 管理画面を使う場合は必須 | `/admin/data` の簡易保護用キー |
 
 サンプルフォールバックは削除済みなので、画面確認には Supabase 設定と実データ投入が必要です。
 
-## Cloudflare Web Analytics
+## Google Analytics 4
 
-Cloudflare Web Analytics は `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` が設定されているときだけ読み込まれます。token 未設定でも build は落ちず、script も挿入されません。
+GA4 は `NEXT_PUBLIC_GA_MEASUREMENT_ID` が設定された Vercel Production deployment でのみ読み込まれます。変数未設定、localhost、PreviewではGoogle tagもイベントも送信されません。
 
-Vercel で使う場合:
-
-1. Cloudflare Web Analytics で token を発行する
-2. Vercel の Environment Variables に `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN` を追加する
-3. 再デプロイ後にページアクセスして確認する
-
-補足:
-
-- Next.js の App Router 共通レイアウトで `afterInteractive` 読み込みにしているため、描画を邪魔しにくい構成です
-- Cloudflare 側のダッシュボード反映には少し時間がかかる場合があります
+HYROXの施設選択は同一画面内でURL queryを更新するため、GA4 Web data streamでは Enhanced Measurement の「Page changes based on browser history events」を無効にしてください。アプリは `pathname` が変わった実際のApp Router navigationだけを `page_view` として送信します。
 
 ## 地図プロバイダ切替
 

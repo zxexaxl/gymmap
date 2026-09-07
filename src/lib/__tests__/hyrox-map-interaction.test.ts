@@ -15,6 +15,7 @@ const compiled = ts.transpileModule(source, {
 
 type Node = { type: string; props: Record<string, unknown> & { children?: Node | Node[] } };
 type Action = (...args: unknown[]) => void;
+type AnalyticsEvent = { name: string; parameters: Record<string, unknown> };
 
 // Execute the actual component and its event callbacks with deterministic hooks.
 // Browser layout/scroll measurements are a separate exact-Preview review gate.
@@ -26,9 +27,12 @@ function harness(initialSearch = "") {
   const scrolls: string[] = [];
   const focuses: string[] = [];
   const history: string[] = [];
+  const analytics: AnalyticsEvent[] = [];
+  let geolocationSuccess: ((position: { coords: { latitude: number; longitude: number } }) => void) | undefined;
+  let geolocationError: ((error: { code: number; PERMISSION_DENIED: number }) => void) | undefined;
   const location = new URL(`https://example.com/training/hyrox${initialSearch}`);
-  const locations = ["first", "second"].map((id) => ({
-    id, slug: `${id}-club`, name: id, brandName: "Club", prefecture: "東京都",
+  const locations = ["first", "second"].map((id, index) => ({
+    id, slug: `${id}-club`, name: id, brandName: "Club", prefecture: index === 0 ? "東京都" : "神奈川県",
     city: "東京", latitude: 35.6, longitude: 139.7, confirmedEquipment: [],
   }));
   const componentModule = { exports: {} as { HyroxDiscovery: (props: unknown) => Node } };
@@ -54,6 +58,19 @@ function harness(initialSearch = "") {
       if (id === "react/jsx-runtime") return require(id);
       if (id === "next/dynamic") return { __esModule: true, default: () => "Map" };
       if (id.endsWith("hyrox-discovery")) return discovery;
+      if (id.endsWith("hyrox-analytics")) return {
+        trackHyroxAreaSelect: (parameters: Record<string, unknown>) =>
+          analytics.push({ name: "hyrox_area_select", parameters: { ...parameters } }),
+        trackHyroxCurrentLocationUse: (parameters: Record<string, unknown>) =>
+          analytics.push({ name: "hyrox_current_location_use", parameters: { ...parameters } }),
+        trackHyroxFacilitySelect: (parameters: Record<string, unknown>) =>
+          analytics.push({
+            name: "hyrox_facility_select",
+            parameters: Object.fromEntries(
+              Object.entries(parameters).filter(([, value]) => value !== undefined),
+            ),
+          }),
+      };
       if (id.endsWith("map-runtime-state")) return selection;
       if (id.endsWith("map-provider")) return { configuredMapProvider: "osm" };
       if (id.endsWith(".css")) return { __esModule: true, default: {} };
@@ -68,6 +85,17 @@ function harness(initialSearch = "") {
     document: { getElementById: (id: string) => ({
       scrollIntoView: () => scrolls.push(id), focus: () => focuses.push(id),
     }) },
+    navigator: {
+      geolocation: {
+        getCurrentPosition(
+          success: typeof geolocationSuccess,
+          error: typeof geolocationError,
+        ) {
+          geolocationSuccess = success;
+          geolocationError = error;
+        },
+      },
+    },
     requestAnimationFrame: (callback: () => void) => callback(),
     queueMicrotask: (callback: () => void) => callback(),
   });
@@ -89,9 +117,22 @@ function harness(initialSearch = "") {
       details: nodes.filter((node) => node.type === "HyroxMapSelectionContent"),
       cards: nodes.filter((node) => node.type === "article"),
       fullCards: nodes.filter((node) => node.type === "HyroxFacilityCard"),
+      select: nodes.find((node) => node.type === "select")!,
+      currentLocation: nodes.find((node) => node.type === "CurrentLocationControl")!,
     };
   }
-  return { render, scrolls, focuses, history, location, effects, events };
+  return {
+    render,
+    scrolls,
+    focuses,
+    history,
+    location,
+    effects,
+    events,
+    analytics,
+    geolocationSuccess: () => geolocationSuccess,
+    geolocationError: () => geolocationError,
+  };
 }
 
 function act(node: Node, event: string, ...args: unknown[]) {
@@ -113,6 +154,19 @@ test("marker, second marker and close update detail/URL without revealing or foc
     assert.deepEqual(h.focuses, []);
     assert.equal(view.cards.find((card) => card.props.id === `hyrox-map-list-${id}`)?.props["aria-pressed"], true);
   }
+  assert.deepEqual(h.analytics, [
+    {
+      name: "hyrox_facility_select",
+      parameters: { facility_id: "first", source: "map_marker", action: "focus_map", result_count: 2 },
+    },
+    {
+      name: "hyrox_facility_select",
+      parameters: { facility_id: "second", source: "map_marker", action: "focus_map", result_count: 2 },
+    },
+  ]);
+
+  act(view.map, "onSelectLocation", "second");
+  assert.equal(h.analytics.length, 2, "same selected marker is not a new focus intent");
   act(view.surfaces[0], "onClose");
   view = h.render();
   assert.equal(view.map.props.selectedLocationId, null);
@@ -121,17 +175,81 @@ test("marker, second marker and close update detail/URL without revealing or foc
   assert.equal(h.history.length, 3);
   assert.deepEqual(h.scrolls, []);
   assert.deepEqual(h.focuses, []);
+  assert.equal(h.analytics.length, 2, "close does not emit analytics");
 });
 
 test("compact list and full-card map actions preserve their distinct reveal behavior", () => {
   const h = harness();
   act(h.render().cards[0], "onClick");
   assert.equal(h.render().map.props.selectedLocationId, "first");
+  assert.deepEqual(h.analytics[0], {
+    name: "hyrox_facility_select",
+    parameters: { facility_id: "first", source: "map_list", action: "focus_map", list_position: 1, result_count: 2 },
+  });
   assert.deepEqual(h.scrolls, []);
   act(h.render().fullCards[1], "onMapFocus", "second");
   assert.equal(h.render().map.props.selectedLocationId, "second");
+  assert.deepEqual(h.analytics[1], {
+    name: "hyrox_facility_select",
+    parameters: { facility_id: "second", source: "facility_card", action: "focus_map", list_position: 2, result_count: 2 },
+  });
   assert.deepEqual(h.scrolls, ["hyrox-map-list-second", "hyrox-map-heading"]);
   assert.deepEqual(h.focuses, []);
+});
+
+test("area analytics fires only for real changes and uses stable all semantics", () => {
+  const h = harness();
+  let view = h.render();
+  assert.equal(h.analytics.length, 0, "initial render emits nothing");
+
+  act(view.select, "onChange", { target: { value: "東京都" } });
+  view = h.render();
+  assert.deepEqual(h.analytics[0], {
+    name: "hyrox_area_select",
+    parameters: { area_type: "prefecture", area_id: "東京都", result_count: 1 },
+  });
+
+  act(view.select, "onChange", { target: { value: "東京都" } });
+  assert.equal(h.analytics.length, 1, "same effective selection emits nothing");
+
+  act(view.select, "onChange", { target: { value: "" } });
+  assert.deepEqual(h.analytics[1], {
+    name: "hyrox_area_select",
+    parameters: { area_type: "prefecture", area_id: "all", result_count: 2 },
+  });
+});
+
+test("current-location clicks emit request/recenter but callbacks emit nothing", () => {
+  const h = harness();
+  let view = h.render();
+  act(view.currentLocation, "onClick");
+  assert.deepEqual(h.analytics, [
+    {
+      name: "hyrox_current_location_use",
+      parameters: { action_type: "request", result_count: 2 },
+    },
+  ]);
+
+  h.geolocationSuccess()!({ coords: { latitude: 35.68, longitude: 139.76 } });
+  assert.equal(h.analytics.length, 1, "geolocation success callback emits nothing");
+  view = h.render();
+  act(view.currentLocation, "onClick");
+  assert.deepEqual(h.analytics[1], {
+    name: "hyrox_current_location_use",
+    parameters: { action_type: "recenter", result_count: 2 },
+  });
+  assert.doesNotMatch(JSON.stringify(h.analytics), /latitude|longitude|coordinates|\"lat\"|\"lng\"/i);
+});
+
+test("geolocation errors and automatic map synchronization emit no additional events", () => {
+  const h = harness();
+  const view = h.render();
+  act(view.currentLocation, "onClick");
+  h.geolocationError()!({ code: 1, PERMISSION_DENIED: 1 });
+  assert.equal(h.analytics.length, 1);
+  act(view.map, "onProviderError");
+  h.render();
+  assert.equal(h.analytics.length, 1);
 });
 
 test("deep-link restoration retains selection authority without list reveal", () => {
@@ -139,9 +257,11 @@ test("deep-link restoration retains selection authority without list reveal", ()
   h.render();
   h.effects.forEach((effect) => effect());
   assert.equal(h.render().map.props.selectedLocationId, "second");
+  assert.equal(h.analytics.length, 0, "URL restoration emits no intent event");
   h.location.search = "?selected=first-club";
   h.events.get("popstate")!();
   assert.equal(h.render().map.props.selectedLocationId, "first");
+  assert.equal(h.analytics.length, 0, "back/forward restoration emits no intent event");
   assert.deepEqual(h.scrolls, []);
   assert.deepEqual(h.focuses, []);
 });

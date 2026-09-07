@@ -186,8 +186,8 @@ No repository evidence creates a material contract conflict with the H3-10A hand
 
 Repository integrations:
 
-- **AVAILABLE (integration):** Microsoft Clarity is loaded after interaction with project ID `weo79q5hg6`.
-- **AVAILABLE when deployment token exists:** Cloudflare Web Analytics is conditionally loaded from `NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN`.
+- **AVAILABLE in Production (integration):** Microsoft Clarity is loaded after interaction with project ID `weo79q5hg6`.
+- **AVAILABLE in Production when configured:** GA4 is conditionally loaded from `NEXT_PUBLIC_GA_MEASUREMENT_ID`; custom HYROX interaction events use the same provider.
 - **AVAILABLE (integration):** Vercel Speed Insights is mounted globally.
 - **AVAILABLE but diagnostic, not product analytics:** targeted server console traces for a small Oimachi/BODYCOMBAT/BODYPUMP search-debug case and map initialization/tile errors.
 - **EXTERNAL ACCESS REQUIRED:** dashboards, consent/filter settings, retention, traffic counts, funnels, session replays, Web Vitals values, and mobile/desktop breakdowns. No numeric baseline is inferred here.

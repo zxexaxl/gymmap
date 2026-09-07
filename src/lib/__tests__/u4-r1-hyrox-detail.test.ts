@@ -26,6 +26,9 @@ test("HYROX detail owns Header context, breadcrumb, identity, and continuation",
   assert.match(route, /地図で確認する/);
   assert.match(route, /HYROXの施設一覧に戻る/);
   assert.match(route, /施設公式サイト/);
+  assert.match(route, /HyroxOfficialSiteLink/);
+  assert.match(route, /source="facility_detail"/);
+  assert.doesNotMatch(route, /useEffect|hyrox_facility_detail_view|trackHyroxFacilitySelect/);
   assert.doesNotMatch(route, /レッスン検索|週間レッスン|プログラム|レッスンを探す/);
 });
 

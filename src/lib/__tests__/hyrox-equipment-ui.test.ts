@@ -33,7 +33,9 @@ test("equipment-positive card renders exact positive labels as non-interactive c
   const markup = renderToStaticMarkup(
     createElement(HyroxFacilityCard, {
       location: location(["ski-erg", "weighted-sled", "farmers-carry-implements"]),
+      listPosition: 1,
       onMapFocus() {},
+      resultCount: 1,
     }),
   );
 
@@ -50,7 +52,9 @@ test("no-positive card omits the equipment section and every missing-state treat
   const markup = renderToStaticMarkup(
     createElement(HyroxFacilityCard, {
       location: location([]),
+      listPosition: 1,
       onMapFocus() {},
+      resultCount: 1,
     }),
   );
 

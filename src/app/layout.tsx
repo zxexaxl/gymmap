@@ -3,13 +3,16 @@ import { connection } from "next/server";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { Ga4PageView } from "@/components/analytics/ga4-page-view";
 import { AppShell } from "@/components/layout/app-shell";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
-const cloudflareWebAnalyticsToken = process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
 const clarityProjectId = "weo79q5hg6";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+const isProductionDeployment = process.env.VERCEL_ENV === "production";
+const hasValidGaMeasurementId = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -46,7 +49,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body>
         <AppShell>{children}</AppShell>
 
-        {clarityProjectId ? (
+        {isProductionDeployment && clarityProjectId ? (
           <Script
             id="microsoft-clarity"
             strategy="afterInteractive"
@@ -62,14 +65,27 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           />
         ) : null}
 
-        {cloudflareWebAnalyticsToken ? (
-          <Script
-            id="cloudflare-web-analytics"
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            strategy="afterInteractive"
-            defer
-            data-cf-beacon={JSON.stringify({ token: cloudflareWebAnalyticsToken })}
-          />
+        {isProductionDeployment && hasValidGaMeasurementId ? (
+          <>
+            <Script
+              id="google-analytics-bootstrap"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  window.gtag = function(){window.dataLayer.push(arguments);};
+                  window.gtag('js', new Date());
+                  window.gtag('config', '${gaMeasurementId}', { send_page_view: false });
+                `,
+              }}
+            />
+            <Script
+              id="google-analytics"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Ga4PageView />
+          </>
         ) : null}
 
         <SpeedInsights />

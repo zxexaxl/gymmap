@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { HyroxOfficialSiteLink } from "@/components/training/hyrox-official-site-link";
 import { Badge, CardSurface, Chip } from "@/components/ui";
 import {
   buildHyroxDetailPath,
@@ -134,14 +135,12 @@ export default async function HyroxDetailPage({ params }: HyroxDetailPageProps) 
           </Link>
           <Link href="/training/hyrox">HYROXの施設一覧に戻る</Link>
           {location.officialUrl ? (
-            <a
+            <HyroxOfficialSiteLink
+              facilityId={location.id}
               href={location.officialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${location.name}の公式サイトを新しいタブで開く`}
-            >
-              施設公式サイト ↗
-            </a>
+              label={`${location.name}の公式サイトを新しいタブで開く`}
+              source="facility_detail"
+            />
           ) : null}
         </div>
       </CardSurface>
