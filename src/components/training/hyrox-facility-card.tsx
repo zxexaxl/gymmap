@@ -7,7 +7,7 @@ import {
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
-import { trackHyroxFacilitySelect } from "@/lib/hyrox-analytics";
+import { trackFacilitySelect } from "@/lib/analytics/events";
 
 type HyroxFacilityCardProps = {
   location: HyroxDiscoveryLocation;
@@ -54,7 +54,8 @@ export function HyroxFacilityCard({
         <Link
           href={buildHyroxDetailPath(location.slug)}
           onClick={() =>
-            trackHyroxFacilitySelect({
+            trackFacilitySelect({
+              context: "hyrox",
               facility_id: location.id,
               source: "facility_card",
               action: "open_detail",

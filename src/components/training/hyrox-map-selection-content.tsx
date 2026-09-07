@@ -7,7 +7,7 @@ import {
   HYROX_EQUIPMENT_LABELS,
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
-import { trackHyroxFacilitySelect } from "@/lib/hyrox-analytics";
+import { trackFacilitySelect } from "@/lib/analytics/events";
 
 import styles from "./hyrox-map-ui.module.css";
 
@@ -58,7 +58,8 @@ export function HyroxMapSelectionContent({
           className={styles.primaryAction}
           href={buildHyroxDetailPath(location.slug)}
           onClick={() =>
-            trackHyroxFacilitySelect({
+            trackFacilitySelect({
+              context: "hyrox",
               facility_id: location.id,
               source: "map_selection",
               action: "open_detail",

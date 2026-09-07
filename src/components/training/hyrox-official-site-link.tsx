@@ -1,12 +1,12 @@
 "use client";
 
-import { trackHyroxExternalLinkClick, type HyroxExternalLinkSource } from "@/lib/hyrox-analytics";
+import { trackExternalLinkClick, type ExternalLinkSource } from "@/lib/analytics/events";
 
 type HyroxOfficialSiteLinkProps = {
   facilityId: string;
   href: string;
   label: string;
-  source: HyroxExternalLinkSource;
+  source: ExternalLinkSource;
 };
 
 export function HyroxOfficialSiteLink({
@@ -22,7 +22,8 @@ export function HyroxOfficialSiteLink({
       rel="noopener noreferrer"
       aria-label={label}
       onClick={() =>
-        trackHyroxExternalLinkClick({
+        trackExternalLinkClick({
+          context: "hyrox",
           facility_id: facilityId,
           destination_type: "facility_official_site",
           source,

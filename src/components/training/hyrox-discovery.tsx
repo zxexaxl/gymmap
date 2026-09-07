@@ -19,11 +19,11 @@ import {
   type HyroxDiscoveryLocation,
 } from "@/lib/hyrox-discovery";
 import {
-  trackHyroxAreaSelect,
-  trackHyroxCurrentLocationUse,
-  trackHyroxFacilitySelect,
-  type HyroxFacilitySource,
-} from "@/lib/hyrox-analytics";
+  trackAreaSelect,
+  trackCurrentLocationUse,
+  trackFacilitySelect,
+  type FacilitySource,
+} from "@/lib/analytics/events";
 
 import styles from "./hyrox-map-ui.module.css";
 
@@ -136,7 +136,7 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
   const handleSelectLocation = useCallback(
     (
       locationId: string,
-      source: HyroxFacilitySource,
+      source: FacilitySource,
       listPosition?: number,
       revealInCompactList = false,
     ) => {
@@ -150,7 +150,8 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
       setSelectionNotice(null);
 
       if (selectedLocationId !== locationId) {
-        trackHyroxFacilitySelect({
+        trackFacilitySelect({
+          context: "hyrox",
           facility_id: locationId,
           source,
           action: "focus_map",
@@ -244,7 +245,8 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
   }
 
   function handleCurrentLocationAction() {
-    trackHyroxCurrentLocationUse({
+    trackCurrentLocationUse({
+      context: "hyrox",
       action_type: currentPosition ? "recenter" : "request",
       result_count: filteredLocations.length,
     });
@@ -329,7 +331,8 @@ export function HyroxDiscovery({ locations }: HyroxDiscoveryProps) {
                 return;
               }
 
-              trackHyroxAreaSelect({
+              trackAreaSelect({
+                context: "hyrox",
                 area_type: "prefecture",
                 area_id: nextPrefecture || "all",
                 result_count: filterHyroxLocations(locations, nextPrefecture).length,

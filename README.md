@@ -162,9 +162,9 @@ ADMIN_ACCESS_KEY=your-admin-access-key
 
 ## Google Analytics 4
 
-GA4 は `NEXT_PUBLIC_GA_MEASUREMENT_ID` が設定された Vercel Production deployment でのみ読み込まれます。変数未設定、localhost、PreviewではGoogle tagもイベントも送信されません。
+GA4 は `NEXT_PUBLIC_GA_MEASUREMENT_ID` が設定された Vercel Production deployment でのみ読み込まれます。変数未設定、localhost、PreviewではGoogle tagもイベントも送信されません。HYROXは共有Analytics Coreの最初のpilotで、`area_select`、`facility_select`、`current_location_use`、`external_link_click`を`context=hyrox`で送信します。
 
-HYROXの施設選択は同一画面内でURL queryを更新するため、GA4 Web data streamでは Enhanced Measurement の「Page changes based on browser history events」を無効にしてください。アプリは `pathname` が変わった実際のApp Router navigationだけを `page_view` として送信します。
+HYROXの施設選択は同一画面内でURL queryを更新するため、GA4 Web data streamでは Enhanced Measurement の「Page changes based on browser history events」を無効にしてください。アプリは `pathname` が変わった実際のApp Router navigationだけを `page_view` として送信し、custom eventの`page_location`もquery/hashを除いた`origin + pathname`に限定します。
 
 ## 地図プロバイダ切替
 

@@ -12,11 +12,11 @@ import { HyroxFacilityCard } from "@/components/training/hyrox-facility-card";
 import { HyroxOfficialSiteLink } from "@/components/training/hyrox-official-site-link";
 import type { HyroxDiscoveryLocation } from "@/lib/hyrox-discovery";
 import {
-  trackHyroxAreaSelect,
-  trackHyroxCurrentLocationUse,
-  trackHyroxExternalLinkClick,
-  trackHyroxFacilitySelect,
-} from "@/lib/hyrox-analytics";
+  trackAreaSelect,
+  trackCurrentLocationUse,
+  trackExternalLinkClick,
+  trackFacilitySelect,
+} from "@/lib/analytics/events";
 
 type GtagCall = ["event", string, Record<string, string | number>];
 type UiElement = ReactElement<Record<string, unknown>>;
@@ -44,7 +44,7 @@ function loadMapSelectionContent() {
     exports: componentModule.exports,
     require(id: string) {
       if (id === "react/jsx-runtime") return require(id);
-      if (id.endsWith("hyrox-analytics")) return { trackHyroxFacilitySelect };
+      if (id.endsWith("analytics/events")) return { trackFacilitySelect };
       if (id.endsWith("hyrox-discovery")) {
         return {
           buildHyroxDetailPath: (slug: string) => `/training/hyrox/${slug}`,
@@ -85,7 +85,12 @@ function withGtag(run: (calls: GtagCall[]) => void) {
   Object.defineProperty(globalThis, "window", {
     configurable: true,
     value: {
-      location: { origin: "https://gymmap.example" },
+      location: {
+        origin: "https://gymmap.example",
+        pathname: "/training/hyrox",
+        search: "?selected=private-facility",
+        hash: "#hyrox-map-heading",
+      },
       gtag: (...args: GtagCall) => calls.push(args),
     },
   });
@@ -108,27 +113,29 @@ function descendants(node: ReactNode): UiElement[] {
   return [node, ...descendants(node.props.children as ReactNode)];
 }
 
-test("typed HYROX helpers dispatch only the four exact event families and allowlisted payloads", () => {
+test("shared helpers dispatch four exact event families with HYROX and query-free page context", () => {
   withGtag((calls) => {
-    trackHyroxAreaSelect({ area_type: "prefecture", area_id: "all", result_count: 12 });
-    trackHyroxFacilitySelect({
+    trackAreaSelect({ context: "hyrox", area_type: "prefecture", area_id: "all", result_count: 12 });
+    trackFacilitySelect({
+      context: "hyrox",
       facility_id: "facility-123",
       source: "map_marker",
       action: "focus_map",
       result_count: 12,
     });
-    trackHyroxCurrentLocationUse({ action_type: "request", result_count: 12 });
-    trackHyroxExternalLinkClick({
+    trackCurrentLocationUse({ context: "hyrox", action_type: "request", result_count: 12 });
+    trackExternalLinkClick({
+      context: "hyrox",
       facility_id: "facility-123",
       destination_type: "facility_official_site",
       source: "facility_detail",
     });
 
     assert.deepEqual(calls, [
-      ["event", "hyrox_area_select", { area_type: "prefecture", area_id: "all", result_count: 12 }],
-      ["event", "hyrox_facility_select", { facility_id: "facility-123", source: "map_marker", action: "focus_map", result_count: 12 }],
-      ["event", "hyrox_current_location_use", { action_type: "request", result_count: 12 }],
-      ["event", "hyrox_external_link_click", { facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_detail" }],
+      ["event", "area_select", { context: "hyrox", area_type: "prefecture", area_id: "all", result_count: 12, page_location: "https://gymmap.example/training/hyrox" }],
+      ["event", "facility_select", { context: "hyrox", facility_id: "facility-123", source: "map_marker", action: "focus_map", result_count: 12, page_location: "https://gymmap.example/training/hyrox" }],
+      ["event", "current_location_use", { context: "hyrox", action_type: "request", result_count: 12, page_location: "https://gymmap.example/training/hyrox" }],
+      ["event", "external_link_click", { context: "hyrox", facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_detail", page_location: "https://gymmap.example/training/hyrox" }],
     ]);
   });
 });
@@ -151,13 +158,15 @@ test("facility-card detail click emits one open_detail event with numeric list c
     assert.deepEqual(calls, [
       [
         "event",
-        "hyrox_facility_select",
+        "facility_select",
         {
+          context: "hyrox",
           facility_id: "facility-123",
           source: "facility_card",
           action: "open_detail",
           list_position: 4,
           result_count: 12,
+          page_location: "https://gymmap.example/training/hyrox",
         },
       ],
     ]);
@@ -192,12 +201,14 @@ test("map-selection duplicate trees emit only from the clicked detail control", 
     assert.deepEqual(calls, [
       [
         "event",
-        "hyrox_facility_select",
+        "facility_select",
         {
+          context: "hyrox",
           facility_id: "facility-123",
           source: "map_selection",
           action: "open_detail",
           result_count: 8,
+          page_location: "https://gymmap.example/training/hyrox",
         },
       ],
     ]);
@@ -218,16 +229,20 @@ test("official-site clicks use controlled sources and never dispatch the URL", (
     }
 
     assert.deepEqual(calls, [
-      ["event", "hyrox_external_link_click", { facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_card" }],
-      ["event", "hyrox_external_link_click", { facility_id: "facility-123", destination_type: "facility_official_site", source: "map_selection" }],
-      ["event", "hyrox_external_link_click", { facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_detail" }],
+      ["event", "external_link_click", { context: "hyrox", facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_card", page_location: "https://gymmap.example/training/hyrox" }],
+      ["event", "external_link_click", { context: "hyrox", facility_id: "facility-123", destination_type: "facility_official_site", source: "map_selection", page_location: "https://gymmap.example/training/hyrox" }],
+      ["event", "external_link_click", { context: "hyrox", facility_id: "facility-123", destination_type: "facility_official_site", source: "facility_detail", page_location: "https://gymmap.example/training/hyrox" }],
     ]);
-    assert.doesNotMatch(JSON.stringify(calls), /https?:|campaign=|Example HYROX Club/);
+    assert.doesNotMatch(JSON.stringify(calls), /campaign=|private-facility|hyrox-map-heading|Example HYROX Club/);
   });
 });
 
-test("forbidden HYROX events are absent from production source", () => {
+test("legacy and out-of-scope events are absent from production source", () => {
   const forbidden = [
+    "hyrox_area_select",
+    "hyrox_facility_select",
+    "hyrox_current_location_use",
+    "hyrox_external_link_click",
     "hyrox_page_view",
     "hyrox_facility_detail_view",
     "hyrox_map_open",
@@ -235,6 +250,12 @@ test("forbidden HYROX events are absent from production source", () => {
     "hyrox_equipment_select",
     "hyrox_capability_select",
     "hyrox_no_results",
+    "search_submit",
+    "filter_change",
+    "favorite_change",
+    "program_select",
+    "schedule_select",
+    "facility_impression",
   ];
   const files: string[] = [];
   const visit = (directory: string) => {
@@ -253,4 +274,14 @@ test("forbidden HYROX events are absent from production source", () => {
   for (const eventName of forbidden) {
     assert.doesNotMatch(source, new RegExp(`['\"]${eventName}['\"]`));
   }
+
+  const instrumentedFiles = files
+    .filter((file) => fs.readFileSync(file, "utf8").includes("@/lib/analytics/events"))
+    .sort();
+  assert.deepEqual(instrumentedFiles, [
+    "src/components/training/hyrox-discovery.tsx",
+    "src/components/training/hyrox-facility-card.tsx",
+    "src/components/training/hyrox-map-selection-content.tsx",
+    "src/components/training/hyrox-official-site-link.tsx",
+  ]);
 });
