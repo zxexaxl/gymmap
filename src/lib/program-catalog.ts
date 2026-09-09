@@ -30,6 +30,7 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
   "Group Blast": "group-blast",
   ZUMBA: "zumba",
   バイラバイラ: "baila-baila",
+  "DDD HOUSE WORKOUT": "ddd-house-workout",
   ヨガ: "yoga",
   ピラティス: "pilates",
   エアロビクス: "エアロビクス",

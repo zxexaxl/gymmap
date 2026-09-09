@@ -64,6 +64,7 @@ test("catalog exposes stable canonical detail slugs", () => {
   assert.equal(getCanonicalProgramSlug("LES MILLS SHAPES"), "les-mills-shapes");
   assert.equal(getCanonicalProgramSlug("BODYPUMP HEAVY"), "bodypump-heavy");
   assert.equal(getCanonicalProgramSlug("LES MILLS TONE"), "les-mills-tone");
+  assert.equal(getCanonicalProgramSlug("DDD HOUSE WORKOUT"), "ddd-house-workout");
   assert.equal(findCatalogMasterEntryBySlug("radical-power")?.programBrand, "Radical Fitness");
 });
 
