@@ -224,3 +224,76 @@ test("strict branded identities do not absorb unrelated programs with similar wo
     "メガダンス",
   );
 });
+
+test("canonicalizes the five audited major-program identities", () => {
+  const cases = [
+    ...[
+      "LESMILLS DANCE",
+      "LESMILLS DANCE VR",
+      "LesMills DANCE",
+      "LES MILLS DANCE",
+      "LesMills DANCE (VR)",
+      "Lesmills DANCE",
+      "LesMills DANCE [定員42名]",
+      "LESMILLS DANCE45",
+      "LesMillsDANCE",
+      "LesMILLS DANCE",
+    ].map((rawProgramName) => [rawProgramName, "LES MILLS DANCE", "Les Mills"] as const),
+    ...[
+      "RADICAL POWER",
+      "RADICAL POWER VR",
+      "RADICAL POWER バーチャル(映像)",
+    ].map((rawProgramName) => [rawProgramName, "RADICAL POWER", "Radical Fitness"] as const),
+    ...[
+      "LESMILLS SHAPES",
+      "Lesmills Shapes",
+      "LesMills SHAPES",
+      "LES MILLS SHAPES",
+      "LESMILLS Shapes",
+      "LESMILLS SHAPES45",
+    ].map((rawProgramName) => [rawProgramName, "LES MILLS SHAPES", "Les Mills"] as const),
+    ...[
+      "BODYPUMP HEAVY",
+      "ボディパンプヘビー30",
+      "ボディパンプヘビー45",
+      "BODY PUMP HEAVY45 （暗闇）",
+      "BODY PUMP HEAVY45",
+      "BODY PUMP HEAVY",
+    ].map((rawProgramName) => [rawProgramName, "BODYPUMP HEAVY", "Les Mills"] as const),
+    ...[
+      "LESMILLS TONE",
+      "LES MILLS TONE",
+      "Lesmills TONE",
+      "LESMILLS TONE45",
+    ].map((rawProgramName) => [rawProgramName, "LES MILLS TONE", "Les Mills"] as const),
+  ] as const;
+
+  for (const [rawProgramName, canonicalProgramName, programBrand] of cases) {
+    const result = normalizeProgramName({ rawProgramName });
+    assert.equal(result.canonical_program_name, canonicalProgramName, rawProgramName);
+    assert.equal(result.program_brand, programBrand, rawProgramName);
+    assert.equal(result.needs_review, false, rawProgramName);
+  }
+});
+
+test("major-program matching preserves neighboring generic and branded identities", () => {
+  const cases = [
+    ["フラダンス", "フラダンス"],
+    ["HULA DANCE (フラダンス)", "フラダンス"],
+    ["バレトン", "バレトン"],
+    ["Balletone", "バレトン"],
+    ["Group Power 45", "Group Power"],
+    ["BODYPUMP 45", "BODYPUMP"],
+  ] as const;
+
+  for (const [rawProgramName, canonicalProgramName] of cases) {
+    assert.equal(normalizeProgramName({ rawProgramName }).canonical_program_name, canonicalProgramName);
+  }
+
+  assert.notEqual(normalizeProgramName({ rawProgramName: "POWER" }).canonical_program_name, "RADICAL POWER");
+  assert.notEqual(normalizeProgramName({ rawProgramName: "POWER YOGA" }).canonical_program_name, "RADICAL POWER");
+  assert.notEqual(normalizeProgramName({ rawProgramName: "DANCE" }).canonical_program_name, "LES MILLS DANCE");
+  assert.notEqual(normalizeProgramName({ rawProgramName: "TONE" }).canonical_program_name, "LES MILLS TONE");
+  assert.notEqual(normalizeProgramName({ rawProgramName: "SHAPE BOXING" }).canonical_program_name, "LES MILLS SHAPES");
+  assert.notEqual(normalizeProgramName({ rawProgramName: "HEAVY CONDITIONING" }).canonical_program_name, "BODYPUMP HEAVY");
+});

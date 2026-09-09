@@ -6,6 +6,7 @@ export const standardProgramGenreNames = ["ヨガ", "ピラティス", "エア�
 const canonicalSlugs: Readonly<Record<string, string>> = {
   BODYCOMBAT: "bodycombat",
   BODYPUMP: "bodypump",
+  "BODYPUMP HEAVY": "bodypump-heavy",
   BODYATTACK: "bodyattack",
   BODYBALANCE: "bodybalance",
   BODYJAM: "bodyjam",
@@ -13,10 +14,14 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
   RPM: "rpm",
   GRIT: "grit",
   "LES MILLS CORE": "les-mills-core",
+  "LES MILLS SHAPES": "les-mills-shapes",
+  "LES MILLS TONE": "les-mills-tone",
+  "LES MILLS DANCE": "les-mills-dance",
   "FIGHT DO": "fight-do",
   UBOUND: "ubound",
   X55: "x55",
   OXIGENO: "oxigeno",
+  "RADICAL POWER": "radical-power",
   リトモス: "ritmos",
   メガダンス: "megadanz",
   "Group Fight": "group-fight",
@@ -32,8 +37,9 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
 };
 
 const programPriority = [
-  "BODYCOMBAT", "BODYPUMP", "BODYATTACK", "BODYBALANCE", "BODYJAM", "BODYSTEP", "RPM", "GRIT", "LES MILLS CORE",
-  "FIGHT DO", "UBOUND", "メガダンス", "リトモス", "X55", "OXIGENO",
+  "BODYCOMBAT", "BODYPUMP", "BODYPUMP HEAVY", "BODYATTACK", "BODYBALANCE", "BODYJAM", "LES MILLS DANCE",
+  "BODYSTEP", "RPM", "GRIT", "LES MILLS CORE", "LES MILLS SHAPES", "LES MILLS TONE",
+  "FIGHT DO", "UBOUND", "メガダンス", "リトモス", "X55", "OXIGENO", "RADICAL POWER",
   "Group Fight", "Group Power", "Group Groove", "Group Blast", "ZUMBA", "バイラバイラ",
   ...standardProgramGenreNames,
 ];

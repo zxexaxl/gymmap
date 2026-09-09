@@ -7,6 +7,7 @@ import {
   flattenProgramCatalog,
   getCanonicalProgramSlug,
 } from "../program-catalog";
+import { buildMapLessonPurposeIndex } from "../map-lesson-purpose-index";
 import type { MapLocationLessonIndex, Program } from "../types";
 
 const makeProgram = (name: string, slug: string): Program => ({
@@ -58,6 +59,34 @@ test("catalog exposes stable canonical detail slugs", () => {
   assert.equal(getCanonicalProgramSlug("LES MILLS CORE"), "les-mills-core");
   assert.equal(findCatalogMasterEntryBySlug("bodyattack")?.canonicalProgramName, "BODYATTACK");
   assert.equal(findCatalogMasterEntryBySlug("les-mills-core")?.programBrand, "Les Mills");
+  assert.equal(getCanonicalProgramSlug("LES MILLS DANCE"), "les-mills-dance");
+  assert.equal(getCanonicalProgramSlug("RADICAL POWER"), "radical-power");
+  assert.equal(getCanonicalProgramSlug("LES MILLS SHAPES"), "les-mills-shapes");
+  assert.equal(getCanonicalProgramSlug("BODYPUMP HEAVY"), "bodypump-heavy");
+  assert.equal(getCanonicalProgramSlug("LES MILLS TONE"), "les-mills-tone");
+  assert.equal(findCatalogMasterEntryBySlug("radical-power")?.programBrand, "Radical Fitness");
+});
+
+test("catalog assigns standard BODYPUMP and HEAVY rows exactly once", () => {
+  const index = buildMapLessonPurposeIndex([
+    { location_id: "alpha", raw_program_name: "BODYPUMP 45", valid_from: "2026-09-01" },
+    { location_id: "alpha", raw_program_name: "BODYPUMP HEAVY", valid_from: "2026-09-01" },
+    { location_id: "alpha", raw_program_name: "BODY PUMP HEAVY45", valid_from: "2026-09-01" },
+    { location_id: "bravo", raw_program_name: "ボディパンプヘビー30", valid_from: "2026-09-01" },
+  ]);
+  const items = flattenProgramCatalog(buildProgramCatalog(index, []));
+  const bodyPump = items.find((item) => item.canonicalProgramName === "BODYPUMP");
+  const heavy = items.find((item) => item.canonicalProgramName === "BODYPUMP HEAVY");
+
+  assert.deepEqual(
+    { facilities: bodyPump?.facilityCount, lessons: bodyPump?.weeklyLessonCount },
+    { facilities: 1, lessons: 1 },
+  );
+  assert.deepEqual(
+    { facilities: heavy?.facilityCount, lessons: heavy?.weeklyLessonCount },
+    { facilities: 2, lessons: 3 },
+  );
+  assert.equal((bodyPump?.weeklyLessonCount ?? 0) + (heavy?.weeklyLessonCount ?? 0), 4);
 });
 
 test("catalog drops programs without current Lesson availability", () => {

@@ -121,7 +121,7 @@ test("Home Map source is direct, minimal, membership-positive, and cache-isolate
   assert.match(fetchSource, /\.eq\("gym_locations\.is_active", true\)/);
   assert.match(fetchSource, /\.order\("id", \{ ascending: true \}\)/);
   assert.doesNotMatch(fetchSource, /weekday|start_time|end_time|duration_minutes|extracted_at|updated_at/);
-  assert.match(dataSource, /\["lesson-map-program-aggregate-v1-membership"\]/);
+  assert.match(dataSource, /\["lesson-map-program-aggregate-v2-major-coverage"\]/);
   assert.match(dataSource, /"lesson-map-program-aggregate"/);
   assert.doesNotMatch(getterSource, /getLessonSearchIndexFromDataCache|getSearchResultPageLegacy/);
 
