@@ -106,6 +106,18 @@ test("program identity and brand do not depend on schedule times", () => {
   assert.equal(withTimes.program_brand, withoutTimes.program_brand);
 });
 
+test("raw HOUSE and WORKOUT remain searchable without a false canonical identity", () => {
+  const index = buildMapLessonPurposeIndex([
+    { location_id: "house-location", raw_program_name: "HOUSE", valid_from: "2026-09-01" },
+    { location_id: "workout-location", raw_program_name: "WORKOUT", valid_from: "2026-09-01" },
+  ]);
+
+  assert.equal(index[0]?.lessons[0]?.[1], null);
+  assert.equal(index[1]?.lessons[0]?.[1], null);
+  assert.deepEqual(summarize(index, "HOUSE").locationIds, ["house-location"]);
+  assert.deepEqual(summarize(index, "WORKOUT").locationIds, ["workout-location"]);
+});
+
 test("Home Map source is direct, minimal, membership-positive, and cache-isolated", () => {
   const dataSource = readFileSync(new URL("../data.ts", import.meta.url), "utf8");
   const fetchSource = dataSource.match(
@@ -121,7 +133,7 @@ test("Home Map source is direct, minimal, membership-positive, and cache-isolate
   assert.match(fetchSource, /\.eq\("gym_locations\.is_active", true\)/);
   assert.match(fetchSource, /\.order\("id", \{ ascending: true \}\)/);
   assert.doesNotMatch(fetchSource, /weekday|start_time|end_time|duration_minutes|extracted_at|updated_at/);
-  assert.match(dataSource, /\["lesson-map-program-aggregate-v2-major-coverage"\]/);
+  assert.match(dataSource, /\["lesson-map-program-aggregate-v3-ddd-repair"\]/);
   assert.match(dataSource, /"lesson-map-program-aggregate"/);
   assert.doesNotMatch(getterSource, /getLessonSearchIndexFromDataCache|getSearchResultPageLegacy/);
 

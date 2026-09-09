@@ -12,6 +12,7 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
   BODYJAM: "bodyjam",
   BODYSTEP: "bodystep",
   RPM: "rpm",
+  "THE TRIP": "the-trip",
   GRIT: "grit",
   "LES MILLS CORE": "les-mills-core",
   "LES MILLS SHAPES": "les-mills-shapes",
@@ -30,7 +31,6 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
   "Group Blast": "group-blast",
   ZUMBA: "zumba",
   バイラバイラ: "baila-baila",
-  "DDD HOUSE WORKOUT": "ddd-house-workout",
   ヨガ: "yoga",
   ピラティス: "pilates",
   エアロビクス: "エアロビクス",
@@ -39,7 +39,7 @@ const canonicalSlugs: Readonly<Record<string, string>> = {
 
 const programPriority = [
   "BODYCOMBAT", "BODYPUMP", "BODYPUMP HEAVY", "BODYATTACK", "BODYBALANCE", "BODYJAM", "LES MILLS DANCE",
-  "BODYSTEP", "RPM", "GRIT", "LES MILLS CORE", "LES MILLS SHAPES", "LES MILLS TONE",
+  "BODYSTEP", "RPM", "THE TRIP", "GRIT", "LES MILLS CORE", "LES MILLS SHAPES", "LES MILLS TONE",
   "FIGHT DO", "UBOUND", "メガダンス", "リトモス", "X55", "OXIGENO", "RADICAL POWER",
   "Group Fight", "Group Power", "Group Groove", "Group Blast", "ZUMBA", "バイラバイラ",
   ...standardProgramGenreNames,

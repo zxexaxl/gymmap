@@ -19,6 +19,7 @@ export type ProgramMasterEntry = {
   searchHints: string[];
   searchAliases: string[];
   requiredMatchKeys?: string[];
+  excludedMatchKeys?: string[];
   programBrand: ProgramBrand | null;
   categoryPrimary: ProgramCategoryPrimary;
   tags: string[];
@@ -147,6 +148,17 @@ export const catalogProgramMaster: ProgramMasterEntry[] = [
     comparisonKeys: ["rpm"],
     searchHints: ["les mills rpm", "lm rpm", "RPM"],
     searchAliases: ["RPM", "les mills rpm"],
+    programBrand: "Les Mills",
+    categoryPrimary: "cycling",
+    tags: ["cycling", "cardio", "les_mills"],
+  }),
+  defineCatalogProgramEntry({
+    canonicalProgramName: "THE TRIP",
+    comparisonKeys: ["thetrip"],
+    searchHints: ["THE TRIP"],
+    searchAliases: ["THE TRIP"],
+    requiredMatchKeys: ["thetrip"],
+    excludedMatchKeys: ["rpm"],
     programBrand: "Les Mills",
     categoryPrimary: "cycling",
     tags: ["cycling", "cardio", "les_mills"],
@@ -426,15 +438,6 @@ export const catalogProgramMaster: ProgramMasterEntry[] = [
     programBrand: null,
     categoryPrimary: "conditioning",
     tags: ["conditioning", "control", "core"],
-  }),
-  defineCatalogProgramEntry({
-    canonicalProgramName: "DDD HOUSE WORKOUT",
-    comparisonKeys: ["dddhouseworkout", "dddhouse"],
-    searchHints: ["ddd house workout", "DDD HOUSE", "ddd workout"],
-    searchAliases: ["DDD HOUSE WORKOUT", "ddd house workout"],
-    programBrand: null,
-    categoryPrimary: "dance",
-    tags: ["dance", "cardio", "house"],
   }),
   defineCatalogProgramEntry({
     canonicalProgramName: "VOLTAGE",

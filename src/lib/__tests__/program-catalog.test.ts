@@ -64,8 +64,29 @@ test("catalog exposes stable canonical detail slugs", () => {
   assert.equal(getCanonicalProgramSlug("LES MILLS SHAPES"), "les-mills-shapes");
   assert.equal(getCanonicalProgramSlug("BODYPUMP HEAVY"), "bodypump-heavy");
   assert.equal(getCanonicalProgramSlug("LES MILLS TONE"), "les-mills-tone");
-  assert.equal(getCanonicalProgramSlug("DDD HOUSE WORKOUT"), "ddd-house-workout");
+  assert.equal(getCanonicalProgramSlug("THE TRIP"), "the-trip");
+  assert.equal(findCatalogMasterEntryBySlug("the-trip")?.programBrand, "Les Mills");
+  assert.equal(findCatalogMasterEntryBySlug("ddd-house-workout"), null);
   assert.equal(findCatalogMasterEntryBySlug("radical-power")?.programBrand, "Radical Fitness");
+});
+
+test("catalog counts THE TRIP once and excludes the RPM rotation and raw HOUSE noise", () => {
+  const index = buildMapLessonPurposeIndex([
+    { location_id: "alpha", raw_program_name: "THE TRIP", valid_from: "2026-09-01" },
+    { location_id: "alpha", raw_program_name: "THE TRIP (日本語) (定員25名)", valid_from: "2026-09-01" },
+    { location_id: "bravo", raw_program_name: "THE TRIP (英語) (定員25名)", valid_from: "2026-09-01" },
+    { location_id: "bravo", raw_program_name: "THE TRIP/RPM(週替わり)", valid_from: "2026-09-01" },
+    { location_id: "charlie", raw_program_name: "HOUSE", valid_from: "2026-09-01" },
+    { location_id: "charlie", raw_program_name: "WORKOUT", valid_from: "2026-09-01" },
+  ]);
+  const items = flattenProgramCatalog(buildProgramCatalog(index, []));
+  const theTrip = items.find((item) => item.canonicalProgramName === "THE TRIP");
+
+  assert.deepEqual(
+    { facilities: theTrip?.facilityCount, lessons: theTrip?.weeklyLessonCount },
+    { facilities: 2, lessons: 3 },
+  );
+  assert.equal(items.some((item) => item.canonicalProgramName === "DDD HOUSE WORKOUT"), false);
 });
 
 test("catalog assigns standard BODYPUMP and HEAVY rows exactly once", () => {

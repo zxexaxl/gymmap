@@ -34,6 +34,7 @@ export type ProgramNormalizationResult = {
 const similarityThreshold = 0.78;
 const exactConfidence = 0.99;
 const unresolvedConfidence = 0.2;
+const genericUnresolvedComparisonKeys = new Set(["house", "workout"]);
 
 const removablePhrases = [
   /\bles\s*mills\b/g,
@@ -196,14 +197,20 @@ function scoreProgramSimilarity(left: string, right: string) {
 }
 
 function matchesRequiredKeys(entry: ProgramMasterEntry, normalizedText: string) {
-  if (!entry.requiredMatchKeys?.length) return true;
   const compactText = normalizedText.replace(/[^a-z0-9ぁ-んァ-ヶ一-龠]/g, "");
+  if (entry.excludedMatchKeys?.some((key) =>
+    compactText.includes(normalizeText(key).replace(/[^a-z0-9ぁ-んァ-ヶ一-龠]/g, "")),
+  )) return false;
+  if (!entry.requiredMatchKeys?.length) return true;
   return entry.requiredMatchKeys.some((key) =>
     compactText.includes(normalizeText(key).replace(/[^a-z0-9ぁ-んァ-ヶ一-龠]/g, "")),
   );
 }
 
 function resolveProgram(comparisonKey: string, normalizedText: string) {
+  if (genericUnresolvedComparisonKeys.has(comparisonKey)) return null;
+  if (comparisonKey.includes("thetrip") && comparisonKey.includes("rpm")) return null;
+
   for (const entry of programMaster) {
     if (!matchesRequiredKeys(entry, normalizedText)) continue;
     const masterKeys = buildMasterKeys(entry);

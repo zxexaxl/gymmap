@@ -126,9 +126,6 @@ test("matches additional studio programs with fixed categories", () => {
   const pelvicPilates = normalizeProgramName({
     rawProgramName: "骨盤引締めピラティス",
   });
-  const dddHouse = normalizeProgramName({
-    rawProgramName: "DDD HOUSE WORKOUT 45",
-  });
   const voltage = normalizeProgramName({
     rawProgramName: "VOLTAGE",
   });
@@ -155,14 +152,38 @@ test("matches additional studio programs with fixed categories", () => {
   assert.equal(pelvicStretch.category_primary, "mind_body");
   assert.equal(pelvicPilates.canonical_program_name, "ピラティス");
   assert.equal(pelvicPilates.needs_review, false);
-  assert.equal(dddHouse.canonical_program_name, "DDD HOUSE WORKOUT");
-  assert.equal(dddHouse.category_primary, "dance");
   assert.equal(voltage.canonical_program_name, "VOLTAGE");
   assert.equal(voltage.category_primary, "conditioning");
   assert.equal(beatEx.canonical_program_name, "BEAT-EX");
   assert.equal(beatEx.category_primary, "cardio");
   assert.equal(bodyCare.canonical_program_name, "ボディケア");
   assert.equal(bodyCare.category_primary, "mind_body");
+});
+
+test("keeps HOUSE and WORKOUT raw names unresolved after removing the false DDD identity", () => {
+  for (const rawProgramName of ["HOUSE", "WORKOUT", "DDD HOUSE WORKOUT 45"]) {
+    const result = normalizeProgramName({ rawProgramName });
+    assert.equal(result.canonical_program_name, null, rawProgramName);
+    assert.equal(result.match_method, "unresolved", rawProgramName);
+    assert.equal(result.raw_program_name, rawProgramName);
+  }
+});
+
+test("matches only explicit THE TRIP variants without absorbing cycling collisions", () => {
+  for (const rawProgramName of [
+    "THE TRIP",
+    "THE TRIP (日本語) (定員25名)",
+    "THE TRIP (英語) (定員25名)",
+  ]) {
+    const result = normalizeProgramName({ rawProgramName });
+    assert.equal(result.canonical_program_name, "THE TRIP", rawProgramName);
+    assert.equal(result.program_brand, "Les Mills", rawProgramName);
+  }
+
+  for (const rawProgramName of ["TRIP", "RPM", "バーチャルサイクル"]) {
+    assert.notEqual(normalizeProgramName({ rawProgramName }).canonical_program_name, "THE TRIP", rawProgramName);
+  }
+  assert.equal(normalizeProgramName({ rawProgramName: "THE TRIP/RPM(週替わり)" }).canonical_program_name, null);
 });
 
 test("prefers manually confirmed master rules over later heuristics", () => {

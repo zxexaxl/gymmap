@@ -920,7 +920,7 @@ async function fetchLessonSearchIndex(): Promise<CachedLocationLessonIndex[]> {
 
 const getLessonSearchIndexFromDataCache = unstable_cache(
   fetchLessonSearchIndex,
-  ["lesson-search-index-v7-program-major-coverage"],
+  ["lesson-search-index-v8-ddd-repair"],
   {
     revalidate: sharedDataRevalidateSeconds,
     tags: ["map-lesson-search-index", "lesson-location-memberships", "class-schedules"],
@@ -962,7 +962,7 @@ async function fetchMapLessonPurposeIndex(): Promise<MapLocationLessonIndex[]> {
 
 const getMapLessonPurposeIndexFromDataCache = unstable_cache(
   fetchMapLessonPurposeIndex,
-  ["lesson-map-program-aggregate-v2-major-coverage"],
+  ["lesson-map-program-aggregate-v3-ddd-repair"],
   {
     revalidate: sharedDataRevalidateSeconds,
     tags: [
