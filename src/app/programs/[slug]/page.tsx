@@ -235,8 +235,11 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <p>プログラムから探す</p>
-            <h1>{page.program.name}</h1>
-            <span>受けられる店舗と今週の開催時間を、地域や曜日から探せます。</span>
+            <h1>
+              <span>{page.program.name}</span>
+              <span>が受けられるジム</span>
+            </h1>
+            <span>受けられる店舗と開催時間を、地域や曜日から探せます。</span>
             <div className={styles.heroActions}>
               <Link className={styles.primaryAction} href="#program-locations">
                 受けられるジムを見る
