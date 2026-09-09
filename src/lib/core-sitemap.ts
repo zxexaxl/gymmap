@@ -24,6 +24,12 @@ export function buildCoreSitemapEntries(
       priority: 0.8,
     },
     {
+      loc: `${siteUrl}/programs`,
+      lastmod,
+      changefreq: "daily",
+      priority: 0.9,
+    },
+    {
       loc: `${siteUrl}/locations/jexer-shinjuku`,
       lastmod,
       changefreq: "weekly",

@@ -71,7 +71,7 @@ test("Map-purpose index preserves latest periods, insertion order, and schedule 
         ["BODYCOMBAT 45", "BODYCOMBAT", "Les Mills", 2],
         ["BODYCOMBAT 60", "BODYCOMBAT", "Les Mills", 1],
         ["BODYPUMP 45", "BODYPUMP", "Les Mills", 1],
-        ["BODYATTACK 30", null, null, 1],
+        ["BODYATTACK 30", "BODYATTACK", "Les Mills", 1],
       ],
     },
     {
@@ -87,7 +87,7 @@ test("Map-purpose index preserves latest periods, insertion order, and schedule 
 test("Map-purpose aggregate is equivalent to the former schedule-array oracle", () => {
   const aggregate = buildMapLessonPurposeIndex(sourceRows);
   const oracle = buildUnaggregatedOracle(sourceRows);
-  const queries = ["", "BODYCOMBAT 45", "BODYCOMBAT", "ボディコンバット", "Les Mills", "レズミルズ", "body", "combat"];
+  const queries = ["", "BODYCOMBAT 45", "BODYCOMBAT", "ボディコンバット", "BODYATTACK", "Les Mills", "レズミルズ", "body", "combat"];
 
   for (const query of queries) {
     assert.deepEqual(summarize(aggregate, query), summarize(oracle, query), query || "blank query");

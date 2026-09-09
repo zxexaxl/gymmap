@@ -195,8 +195,17 @@ function scoreProgramSimilarity(left: string, right: string) {
   return baseScore;
 }
 
-function resolveProgram(comparisonKey: string) {
+function matchesRequiredKeys(entry: ProgramMasterEntry, normalizedText: string) {
+  if (!entry.requiredMatchKeys?.length) return true;
+  const compactText = normalizedText.replace(/[^a-z0-9ぁ-んァ-ヶ一-龠]/g, "");
+  return entry.requiredMatchKeys.some((key) =>
+    compactText.includes(normalizeText(key).replace(/[^a-z0-9ぁ-んァ-ヶ一-龠]/g, "")),
+  );
+}
+
+function resolveProgram(comparisonKey: string, normalizedText: string) {
   for (const entry of programMaster) {
+    if (!matchesRequiredKeys(entry, normalizedText)) continue;
     const masterKeys = buildMasterKeys(entry);
     if (masterKeys.includes(comparisonKey)) {
       return {
@@ -210,6 +219,7 @@ function resolveProgram(comparisonKey: string) {
   let bestMatch: { entry: ProgramMasterEntry; confidence: number } | null = null;
 
   for (const entry of programMaster) {
+    if (!matchesRequiredKeys(entry, normalizedText)) continue;
     const masterKeys = buildMasterKeys(entry);
     const bestScore = Math.max(...masterKeys.map((masterKey) => scoreProgramSimilarity(comparisonKey, masterKey)), 0);
 
@@ -279,7 +289,7 @@ export function normalizeProgramName(input: ProgramNormalizationInput): ProgramN
   const durationFromTimes = calculateDurationFromTimes(input.startTime, input.endTime);
   const durationFromName = extractDurationFromName(input.rawProgramName);
   const durationMinutes = durationFromTimes ?? durationFromName;
-  const match = resolveProgram(comparisonKey);
+  const match = resolveProgram(comparisonKey, normalizedText);
 
   if (!match) {
     return {

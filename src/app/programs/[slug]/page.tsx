@@ -71,14 +71,12 @@ function buildBrandSearchPath(brandName: string) {
 }
 
 export async function generateStaticParams() {
-  // Pre-render every SEO landing page. On-demand ISR for decoded Japanese
-  // route segments can fail on Vercel before the fallback page is cached.
+  // Every catalog card points at a route emitted here. Keeping dynamic params
+  // disabled prevents unknown or stale slugs from becoming indexable pages.
   const slugs = await getProgramLandingSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
-// The complete SEO program set is generated above. Unknown slugs should be a
-// router-level 404 rather than an on-demand render (often caused by crawlers).
 export const dynamicParams = false;
 export const revalidate = 86400;
 
@@ -123,7 +121,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
     notFound();
   }
 
-  const featuredPrefectures = page.prefectureNames
+  const featuredPrefectures = (page.supportsAreaLandingPages ? page.prefectureNames : [])
     .map((areaName) => {
       const areaSchedules = page.schedules.filter(
         (item) => item.location.prefecture === areaName,
@@ -143,7 +141,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
         right.scheduleCount - left.scheduleCount ||
         left.areaName.localeCompare(right.areaName, "ja"),
     );
-  const featuredCities = page.areaNames
+  const featuredCities = (page.supportsAreaLandingPages ? page.areaNames : [])
     .filter((areaName) => !page.prefectureNames.includes(areaName))
     .map((areaName) => {
       const areaSchedules = page.schedules.filter(
@@ -226,7 +224,7 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
     <div className={`page-stack ${styles.page}`}>
       <JsonLd data={[collectionJsonLd, breadcrumbJsonLd]} />
       <nav className={styles.breadcrumb} aria-label="パンくずリスト">
-        <Link href="/">レッスンを探す</Link>
+        <Link href="/programs">プログラム一覧</Link>
         <span aria-hidden="true">/</span>
         <span aria-current="page">プログラム</span>
       </nav>
@@ -244,7 +242,9 @@ export default async function ProgramLandingPage({ params }: ProgramLandingPageP
               <Link className={styles.primaryAction} href="#program-locations">
                 受けられるジムを見る
               </Link>
-              <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
+              {page.supportsFavorites ? (
+                <FavoriteProgramButton id={page.program.id} slug={page.program.slug} name={page.program.name} />
+              ) : null}
               <Link href={buildProgramSearchPath(page.program.name)}>条件を追加して検索</Link>
             </div>
           </div>

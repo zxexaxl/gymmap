@@ -195,3 +195,32 @@ test("returns unresolved for ambiguous names", () => {
   assert.equal(result.needs_review, true);
   assert.equal(result.source_of_truth, "raw_unresolved");
 });
+
+test("normalizes audited Les Mills and MOSSA variants to one canonical identity", () => {
+  const cases = [
+    ["BODY ATTACK45 (暗闇)", "BODYATTACK", "Les Mills"],
+    ["ボディジャム45", "BODYJAM", "Les Mills"],
+    ["LESMILLS BODYSTEP", "BODYSTEP", "Les Mills"],
+    ["GRIT CARDIO", "GRIT", "Les Mills"],
+    ["LESMILLS CORE VR", "LES MILLS CORE", "Les Mills"],
+    ["ラディカル ユーバウンド", "UBOUND", "Radical Fitness"],
+    ["Group Power 45", "Group Power", "MOSSA"],
+  ] as const;
+
+  for (const [rawProgramName, canonicalProgramName, programBrand] of cases) {
+    const result = normalizeProgramName({ rawProgramName });
+    assert.equal(result.canonical_program_name, canonicalProgramName, rawProgramName);
+    assert.equal(result.program_brand, programBrand, rawProgramName);
+  }
+});
+
+test("strict branded identities do not absorb unrelated programs with similar words", () => {
+  assert.notEqual(
+    normalizeProgramName({ rawProgramName: "X-CORE RIDING" }).canonical_program_name,
+    "LES MILLS CORE",
+  );
+  assert.notEqual(
+    normalizeProgramName({ rawProgramName: "LESMILLS DANCE VR" }).canonical_program_name,
+    "メガダンス",
+  );
+});

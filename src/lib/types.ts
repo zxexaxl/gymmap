@@ -211,6 +211,8 @@ export type ProgramLandingPage = {
   prefectureNames: string[];
   areaNames: string[];
   brandNames: string[];
+  supportsFavorites: boolean;
+  supportsAreaLandingPages: boolean;
 };
 
 export type AreaProgramLandingPage = {

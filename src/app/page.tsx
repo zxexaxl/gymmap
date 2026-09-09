@@ -132,7 +132,7 @@ export default async function HomePage() {
               <p>プログラムから見つける</p>
               <h2>気になるレッスンを起点に探す</h2>
             </div>
-            <Link href="/search">すべてのレッスンを見る <span aria-hidden="true">→</span></Link>
+            <Link href="/programs">すべてのレッスンを見る <span aria-hidden="true">→</span></Link>
           </div>
           <FeaturedProgramTabs tabs={featuredTabs} />
           {standardGenrePrograms.length ? (

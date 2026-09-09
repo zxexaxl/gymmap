@@ -16,6 +16,15 @@ test("includes the canonical HYROX training route exactly once", () => {
   assert.equal(new Set(entries.map((entry) => entry.loc)).size, entries.length);
 });
 
+test("includes the program catalog as a canonical discovery route", () => {
+  const entries = buildCoreSitemapEntries(
+    "https://gymmap.vercel.app",
+    "2026-09-09T00:00:00.000Z",
+  );
+
+  assert.equal(entries.filter((entry) => entry.loc === "https://gymmap.vercel.app/programs").length, 1);
+});
+
 test("uses public publication time for the optional updates route", () => {
   const entries = buildCoreSitemapEntries(
     "https://gymmap.vercel.app",

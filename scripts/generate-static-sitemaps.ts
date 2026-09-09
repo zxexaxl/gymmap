@@ -7,6 +7,8 @@ import { programMaster } from "@/lib/program-master";
 import { buildCoreSitemapEntries } from "@/lib/core-sitemap";
 import { filterLatestSchedulePeriods } from "@/lib/latest-schedule-period";
 import { buildLocationSitemapEntries } from "@/lib/location-sitemap";
+import { buildMapLessonPurposeIndex } from "@/lib/map-lesson-purpose-index";
+import { getCanonicalProgramSlug } from "@/lib/program-catalog";
 import { getLatestPublicUpdatePublishedAt } from "@/lib/public-updates";
 import { shouldIndexAreaProgramPage } from "@/lib/seo-indexing";
 import { buildAreaProgramPath, buildProgramPath, getSiteUrl } from "@/lib/site";
@@ -35,6 +37,7 @@ type ProgramRow = {
 type ClassScheduleSitemapRow = {
   location_id: string;
   program_id: string;
+  raw_program_name: string;
   valid_from: string | null;
   updated_at: string;
 };
@@ -180,7 +183,7 @@ async function main() {
   while (true) {
     const { data: schedules, error: schedulesError } = await supabase
       .from("class_schedules")
-      .select("location_id, program_id, valid_from, updated_at")
+      .select("location_id, program_id, raw_program_name, valid_from, updated_at")
       .order("id", { ascending: true })
       .range(scheduleFrom, scheduleFrom + schedulePageSize - 1);
 
@@ -216,15 +219,10 @@ async function main() {
   >();
 
   const latestScheduleRows = filterLatestSchedulePeriods(scheduleRows);
-  const scheduledSeoProgramIds = new Set<string>();
 
   latestScheduleRows.forEach((schedule) => {
     const location = activeLocations.get(schedule.location_id);
     const program = seoPrograms.get(schedule.program_id);
-
-    if (program) {
-      scheduledSeoProgramIds.add(program.id);
-    }
 
     if (!location || !program) {
       return;
@@ -256,10 +254,15 @@ async function main() {
     siteUrl,
   );
 
-  const programEntries = ((programs as ProgramRow[] | null) ?? [])
-    .filter((program) => scheduledSeoProgramIds.has(program.id))
+  const scheduledCanonicalProgramNames = new Set(
+    buildMapLessonPurposeIndex(scheduleRows).flatMap((location) =>
+      location.lessons.flatMap((lesson) => lesson[1] ? [lesson[1]] : []),
+    ),
+  );
+  const programEntries = programMaster
+    .filter((program) => scheduledCanonicalProgramNames.has(program.canonicalProgramName))
     .map((program) => ({
-      loc: `${siteUrl}${buildProgramPath(program.slug)}`,
+      loc: `${siteUrl}${buildProgramPath(getCanonicalProgramSlug(program.canonicalProgramName))}`,
       lastmod: now,
       changefreq: "weekly" as const,
       priority: 0.8,

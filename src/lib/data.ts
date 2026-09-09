@@ -2,6 +2,13 @@ import { cache } from "react";
 import { unstable_cache } from "next/cache";
 
 import { programMaster } from "@/lib/program-master";
+import {
+  buildProgramCatalog,
+  findCatalogMasterEntryBySlug,
+  flattenProgramCatalog,
+  getCanonicalProgramSlug,
+  type ProgramCatalogGroup,
+} from "@/lib/program-catalog";
 import { supplementalLandingProgramNames } from "@/lib/featured-programs";
 import { normalizeProgramName } from "@/lib/normalizeProgramName";
 import {
@@ -1113,6 +1120,19 @@ export async function getPopularPrograms(limit = 8): Promise<Program[]> {
   }
 }
 
+export async function getProgramCatalog(): Promise<ProgramCatalogGroup[]> {
+  if (!hasSupabaseEnv()) {
+    return [];
+  }
+
+  const [index, databasePrograms] = await Promise.all([
+    getMapLessonSearchIndex(),
+    getPopularPrograms(Number.MAX_SAFE_INTEGER),
+  ]);
+
+  return buildProgramCatalog(index, databasePrograms);
+}
+
 export async function getLocationSlugs(): Promise<string[]> {
   if (!hasSupabaseEnv()) {
     return [];
@@ -1164,19 +1184,6 @@ export const getLocationBySlug = cache(async (slug: string): Promise<LocationDet
   }
 });
 
-async function resolveLandingProgram(slug: string): Promise<Program | null> {
-  const normalizedSlug = normalizeLandingSlug(slug);
-  const programs = await getPopularPrograms(Number.MAX_SAFE_INTEGER);
-
-  return (
-    programs.find(
-      (program) =>
-        normalizeLandingSlug(program.slug) === normalizedSlug ||
-        normalizeLandingSlug(program.name) === normalizedSlug,
-    ) ?? null
-  );
-}
-
 async function resolveLandingProgramWithoutDataCache(slug: string): Promise<Program | null> {
   if (!hasSupabaseEnv()) {
     return null;
@@ -1200,32 +1207,74 @@ async function resolveLandingProgramWithoutDataCache(slug: string): Promise<Prog
 }
 
 export async function getProgramLandingSlugs(limit = staticProgramLandingPageLimit): Promise<string[]> {
-  const programs = await getPopularPrograms(limit);
-  return programs.map((program) => program.slug);
+  const catalog = flattenProgramCatalog(await getProgramCatalog());
+  return catalog.slice(0, Math.max(0, limit)).map((program) => program.slug);
+}
+
+async function fetchCanonicalProgramSchedules(canonicalProgramName: string) {
+  const masterEntry = programMaster.find((entry) => entry.canonicalProgramName === canonicalProgramName);
+  if (!masterEntry) return [];
+
+  const queryTerms = Array.from(new Set([canonicalProgramName, ...masterEntry.searchAliases]));
+  const pages = await Promise.all(
+    queryTerms.map((q) => fetchSearchSchedulePageRpc({ ...emptySearchFilters, q }, 1, 5000)),
+  );
+  const scheduleIds = Array.from(new Set(pages.flatMap((page) => page.scheduleIds)));
+  const variants: ScheduleQueryVariant[] = [];
+  for (let from = 0; from < scheduleIds.length; from += 100) {
+    variants.push({ kind: "ids", values: scheduleIds.slice(from, from + 100) });
+  }
+  const batches = await Promise.all(
+    variants.map((variant) => fetchJoinedSchedulesForVariant(undefined, null, variant)),
+  );
+  const rowsById = new Map<string, SupabaseJoinedSchedule>();
+  batches.flat().forEach((row) => rowsById.set(row.id, row));
+
+  return filterResults(
+    Array.from(rowsById.values())
+      .map(mapJoinedSchedule)
+      .filter((item) => item.schedule.canonical_program_name === canonicalProgramName),
+    emptySearchFilters,
+  );
 }
 
 export const getProgramLandingBySlug = cache(async (slug: string): Promise<ProgramLandingPage | null> => {
-  const program = await resolveLandingProgram(slug);
-
-  if (!program || !seoProgramNameSet.has(program.name)) {
+  const masterEntry = findCatalogMasterEntryBySlug(slug);
+  if (!masterEntry) {
     return null;
   }
 
   try {
-    const rows = await fetchJoinedSchedulesForVariant(undefined, null, {
-      kind: "programId",
-      value: program.id,
-    });
-    const schedules = filterResults(rows.map(mapJoinedSchedule), emptySearchFilters);
+    const [catalog, schedules] = await Promise.all([
+      getProgramCatalog(),
+      fetchCanonicalProgramSchedules(masterEntry.canonicalProgramName),
+    ]);
+    const catalogItem = flattenProgramCatalog(catalog).find(
+      (item) => item.canonicalProgramName === masterEntry.canonicalProgramName,
+    );
+    if (!catalogItem) return null;
 
     if (!schedules.length) {
       return null;
     }
 
+    const program = catalogItem.databaseProgram ?? {
+      id: `catalog:${catalogItem.slug}`,
+      name: catalogItem.displayName,
+      slug: getCanonicalProgramSlug(masterEntry.canonicalProgramName),
+      category: masterEntry.categoryPrimary,
+      description: null,
+      intensity_level: null,
+      beginner_friendly: false,
+      default_duration_minutes: null,
+      created_at: "",
+      updated_at: "",
+    };
+
     return {
       program,
       schedules,
-      locationCount: new Set(schedules.map((item) => item.location.id)).size,
+      locationCount: catalogItem.facilityCount,
       prefectureNames: Array.from(
         new Set(
           schedules
@@ -1237,6 +1286,8 @@ export const getProgramLandingBySlug = cache(async (slug: string): Promise<Progr
         new Set(schedules.map((item) => getAreaName(item.location.prefecture, item.location.city)).filter(Boolean)),
       ),
       brandNames: Array.from(new Set(schedules.map((item) => item.brand.name))),
+      supportsFavorites: Boolean(catalogItem.databaseProgram),
+      supportsAreaLandingPages: Boolean(catalogItem.databaseProgram),
     };
   } catch (error) {
     console.error(
