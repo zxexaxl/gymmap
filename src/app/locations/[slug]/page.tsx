@@ -48,28 +48,34 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   const { location, schedules } = detail;
   const address = getLocationAddress(location.prefecture, location.city, location.address_line);
-  const programNames = Array.from(new Set(schedules.map((item) => item.program.name))).slice(0, 5);
   const hasSchedules = schedules.length > 0;
   const pageTitle = hasSchedules
     ? `${location.name}のスタジオスケジュール`
     : `${location.name}の店舗情報`;
-  const descriptionParts = [
-    address ? `${address}にある` : "",
-    hasSchedules
-      ? `${location.name}の最新スタジオスケジュール・タイムテーブルです。`
-      : `${location.name}の店舗情報ページです。住所や公式サイトを確認できます。`,
-    programNames.length ? `${programNames.join("、")}などの曜日・時間を確認できます。` : "",
-  ].filter(Boolean);
+  const description = hasSchedules
+    ? [
+        `${location.name}のレッスンスケジュールを曜日別に確認できます。`,
+        "開催プログラム、開始時間、所要時間を掲載しています。",
+        address ? `所在地は${address}です。` : "",
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : [
+        address ? `${address}にある` : "",
+        `${location.name}の店舗情報ページです。住所や公式サイトを確認できます。`,
+      ]
+        .filter(Boolean)
+        .join(" ");
 
   return {
     title: pageTitle,
-    description: descriptionParts.join(" "),
+    description,
     alternates: {
       canonical: `/locations/${slug}`,
     },
     openGraph: {
       title: `${pageTitle} | GymMap`,
-      description: descriptionParts.join(" "),
+      description,
       url: buildCanonicalPath(`/locations/${slug}`),
       locale: "ja_JP",
       type: "article",
@@ -176,7 +182,16 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <Link className={styles.brandLink} href={brandSearchPath}>
               {brand.name}
             </Link>
-            <h1>{location.name}</h1>
+            <h1>
+              {hasSchedules ? (
+                <>
+                  <span>{location.name}の</span>
+                  <span>レッスンスケジュール</span>
+                </>
+              ) : (
+                location.name
+              )}
+            </h1>
             <p className={styles.address}>{address || "住所情報は現在掲載されていません。"}</p>
             {hasSchedules && latestScheduleUpdatedAt ? (
               <FreshnessIndicator

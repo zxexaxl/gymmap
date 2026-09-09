@@ -53,6 +53,10 @@
   overflow-wrap: anywhere;
 }
 
+.identity h1 span {
+  display: block;
+}
+
 .address {
   max-width: 720px;
   margin: 0 0 var(--space-4);
@@ -278,7 +282,7 @@
   }
 
   .identity h1 {
-    font-size: clamp(2rem, 10vw, 2.7rem);
+    font-size: clamp(2rem, 8.5vw, 2.7rem);
   }
 
   .summary {
