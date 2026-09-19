@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "h3-12a-v1",
+  "generatedAt": "2026-09-19T00:00:00+09:00",
+  "researchDate": "2026-09-19",
+  "scope": {
+    "geography": "Tokyo",
+    "mode": "RESEARCH_AUTHORITY_DESIGN_ONLY",
+    "seedUrl": "https://hyfit.jp/insights/tokyo-hyrox-gyms-confirmed/",
+    "seedAuthority": "DISCOVERY_ONLY",
+    "evidenceProtocol": "h3-11a-v1",
+    "publicStationCountsAuthorized": false,
+    "productionMutationAuthorized": false
+  },
+  "verdict": "TOKYO_HYROX_TRAINING_FACILITY_GAP_AUDIT_COMPLETE_PRODUCT_DECISION_REQUIRED",
+  "productionSnapshot": {
+    "observedAt": "2026-09-19",
+    "nationwidePublishedHyroxFacilities": 82,
+    "tokyoPublishedHyroxFacilities": 30,
+    "publishedNonOfficialFacilities": 0,
+    "seedFacilitiesPresent": 2,
+    "seedFacilitiesAbsent": 4,
+    "readOnly": true
+  },
+  "classificationVocabulary": [
+    "FIRST_PARTY_POSITIVE_SUPPORT",
+    "PARTIAL_SUPPORT",
+    "INSUFFICIENT_SUPPORT",
+    "NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND",
+    "SOURCE_BLOCKED"
+  ],
+  "stations": [
+    {"slug":"ski-erg","label":"SkiErg","dependencies":["ski_erg_raw_fact","versioned_station_derivation"]},
+    {"slug":"sled-push","label":"Sled Push","dependencies":["weighted_sled","suitable_push_lane","association"]},
+    {"slug":"sled-pull","label":"Sled Pull","dependencies":["weighted_sled","pull_rope_or_apparatus","suitable_pull_lane","association"]},
+    {"slug":"burpee-broad-jump","label":"Burpee Broad Jump","dependencies":["explicit_bbj_space_or_lane","association"]},
+    {"slug":"row","label":"Row","dependencies":["row_erg_raw_fact","versioned_station_derivation"]},
+    {"slug":"farmers-carry","label":"Farmers Carry","dependencies":["paired_suitable_implements","carry_space_or_lane","association"]},
+    {"slug":"sandbag-lunges","label":"Sandbag Lunges","dependencies":["sandbag","lunge_space","association"]},
+    {"slug":"wall-balls","label":"Wall Balls","dependencies":["suitable_ball","target_or_height","usable_area","association"]}
+  ],
+  "seedFacilities": [
+    {
+      "facility":"WARRIORS GYM Roppongi",
+      "hyfitHypothesis":{"count":"8/8","stations":["ski-erg","sled-push","sled-pull","burpee-broad-jump","row","farmers-carry","sandbag-lunges","wall-balls"]},
+      "gymMap":{"presence":"ABSENT","officialState":"UNRESOLVED"},
+      "identity":{"address":"B1, 3-16-35 Roppongi, Minato-ku, Tokyo","confidence":"HIGH"},
+      "sources":[
+        {"url":"https://warriors-gym.com/facility/","sourceClass":"facility_official","binding":"exact_facility","surface":"text"},
+        {"url":"https://warriors-gym.com/en/floor/","sourceClass":"facility_official","binding":"exact_facility","surface":"text"},
+        {"url":"https://warriors-gym.com/","sourceClass":"facility_official","binding":"exact_facility","surface":"text"}
+      ],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"persist raw SkiErg; derive only under H3-11E"},
+        {"station":"sled-push","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"sled and full-length push track supported; versioned derivation required"},
+        {"station":"sled-pull","classification":"PARTIAL_SUPPORT","safeConclusion":"sled-pull use and track supported; qualifying pull-rope dependency unresolved"},
+        {"station":"burpee-broad-jump","classification":"INSUFFICIENT_SUPPORT","safeConclusion":"generic HYROX arena or track is insufficient without BBJ association"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"persist raw RowErg; derive only under H3-11E"},
+        {"station":"farmers-carry","classification":"PARTIAL_SUPPORT","safeConclusion":"kettlebells alone do not establish carry station"},
+        {"station":"sandbag-lunges","classification":"INSUFFICIENT_SUPPORT","safeConclusion":"described punching bag must not map to lunge sandbag"},
+        {"station":"wall-balls","classification":"PARTIAL_SUPPORT","safeConclusion":"wall-ball use supported; target height and usable area unresolved"}
+      ],
+      "strictEightStationConclusion":false,
+      "gapTypes":["MISSING_SOURCE_COLLECTION","STATION_DERIVATION_GAP","OFFICIAL_ONLY_ELIGIBILITY_GAP"]
+    },
+    {
+      "facility":"CrossFit Roppongi",
+      "hyfitHypothesis":{"count":"8/8","stations":["ski-erg","sled-push","sled-pull","burpee-broad-jump","row","farmers-carry","sandbag-lunges","wall-balls"]},
+      "gymMap":{"presence":"ABSENT","officialState":"UNRESOLVED"},
+      "identity":{"confidence":"HIGH"},
+      "sources":[
+        {"url":"https://crossfitroppongi.com/hyrox","sourceClass":"facility_official","binding":"exact_facility","surface":"text"},
+        {"url":"https://crossfitroppongi.com/schedule","sourceClass":"official_schedule","binding":"exact_facility","surface":"text"},
+        {"url":"https://crossfitroppongi.com/facility/","sourceClass":"official_gallery","binding":"exact_facility","surface":"visual"}
+      ],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"HYROX classes alone do not establish a SkiErg raw fact"},
+        {"station":"sled-push","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no sled and push-lane dependency set found"},
+        {"station":"sled-pull","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no sled, rope and pull-lane dependency set found"},
+        {"station":"burpee-broad-jump","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no explicit BBJ-associated space found"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"official gallery supports Concept2 RowErg raw fact"},
+        {"station":"farmers-carry","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no paired implements and carry association found"},
+        {"station":"sandbag-lunges","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no sandbag and lunge-space association found"},
+        {"station":"wall-balls","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no ball, target and area dependency set found"}
+      ],
+      "strictEightStationConclusion":false,
+      "nonStationEvidence":{"coachedHyroxClasses":true,"nonMemberDropIn":true},
+      "gapTypes":["MISSING_SOURCE_COLLECTION","UNSUPPORTED_THIRD_PARTY_COMPLETENESS","OFFICIAL_ONLY_ELIGIBILITY_GAP"]
+    },
+    {
+      "facility":"CrossFit Setagaya",
+      "hyfitHypothesis":{"count":"8/8","stations":["ski-erg","sled-push","sled-pull","burpee-broad-jump","row","farmers-carry","sandbag-lunges","wall-balls"]},
+      "gymMap":{"presence":"ABSENT","officialState":"UNRESOLVED"},
+      "identity":{"address":"1-18-10 Wakabayashi, Setagaya-ku, Tokyo","confidence":"HIGH"},
+      "sources":[
+        {"url":"https://crossfit-setagaya.com/","sourceClass":"facility_official","binding":"exact_facility","surface":"text"},
+        {"url":"https://crossfit-setagaya.com/faq","sourceClass":"facility_official","binding":"exact_facility","surface":"text"}
+      ],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"facility-bound coached SkiErg use supported"},
+        {"station":"sled-push","classification":"PARTIAL_SUPPORT","safeConclusion":"generic sled does not establish push lane"},
+        {"station":"sled-pull","classification":"PARTIAL_SUPPORT","safeConclusion":"generic sled does not establish rope, pull lane or association"},
+        {"station":"burpee-broad-jump","classification":"PARTIAL_SUPPORT","safeConclusion":"burpees are not explicit BBJ with distance or space"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"facility-bound coached rowing use supported"},
+        {"station":"farmers-carry","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no facility-bound Farmers Carry evidence found"},
+        {"station":"sandbag-lunges","classification":"PARTIAL_SUPPORT","safeConclusion":"lunges do not establish sandbag plus space"},
+        {"station":"wall-balls","classification":"PARTIAL_SUPPORT","safeConclusion":"coached use supported; target, height and area unresolved"}
+      ],
+      "strictEightStationConclusion":false,
+      "gapTypes":["STATION_DERIVATION_GAP","UNSUPPORTED_THIRD_PARTY_COMPLETENESS","OFFICIAL_ONLY_ELIGIBILITY_GAP"]
+    },
+    {
+      "facility":"GYM FIELD Tachikawa Studio",
+      "hyfitHypothesis":{"count":"6/8","stations":["ski-erg","sled-push","sled-pull","row","sandbag-lunges","wall-balls"]},
+      "gymMap":{"presence":"ABSENT","officialState":"UNRESOLVED"},
+      "identity":{"address":"2-22-1 Takamatsucho, Suzuki Building 2F, Tachikawa, Tokyo","confidence":"HIGH"},
+      "sources":[{"url":"https://gym-field-htc.com/lp/tachikawa/","sourceClass":"exact_branch_official","binding":"exact_facility","surface":"text"}],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"exact-branch SkiErg fact supported"},
+        {"station":"sled-push","classification":"PARTIAL_SUPPORT","safeConclusion":"activity and sled supported; lane dependency review remains"},
+        {"station":"sled-pull","classification":"PARTIAL_SUPPORT","safeConclusion":"activity and sled supported; rope and lane dependencies remain"},
+        {"station":"burpee-broad-jump","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no exact-branch BBJ evidence found"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"exact-branch RowErg fact supported"},
+        {"station":"farmers-carry","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no exact-branch Farmers evidence found"},
+        {"station":"sandbag-lunges","classification":"PARTIAL_SUPPORT","safeConclusion":"program use supported; composite physical dependencies remain"},
+        {"station":"wall-balls","classification":"PARTIAL_SUPPORT","safeConclusion":"program use supported; target, height and area remain"}
+      ],
+      "publicCountAuthorized":false,
+      "gapTypes":["OFFICIAL_ONLY_ELIGIBILITY_GAP","STATION_DERIVATION_GAP"]
+    },
+    {
+      "facility":"Orangetheory Fitness Azabu-Juban",
+      "hyfitHypothesis":{"count":"5/8","stations":["burpee-broad-jump","row","farmers-carry","sandbag-lunges","wall-balls"]},
+      "gymMap":{
+        "presence":"PRESENT_HYROX",
+        "locationId":"0b573034-d71b-4176-a3b3-82e9355d123e",
+        "slug":"hyrox-training-club-1060045",
+        "brandId":"d7d4c609-2ed2-4b05-8784-51faf76dc838",
+        "officialState":"OFFICIAL_TRAINING_CLUB",
+        "hgyId":"HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+        "coordinates":{"latitude":35.656450,"longitude":139.734851},
+        "equipment":["farmers-carry-implements","row-erg","sandbag","treadmill","weighted-sled"],
+        "capabilities":["competition-simulation","discipline-coaching"],
+        "rawStationReview":"NOT_FOUND",
+        "canonicalMonitor":"ACTIVE"
+      },
+      "sources":[
+        {"url":"https://www.orangetheoryfitness.co.jp/azabujuban/","sourceClass":"exact_branch_official","binding":"exact_facility","surface":"text"},
+        {"url":"https://www.orangetheoryfitness.co.jp/hyrox/","sourceClass":"brand_official_program","binding":"explicit_all_stores_including_branch","surface":"text"}
+      ],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no branch-bound SkiErg evidence found"},
+        {"station":"sled-push","classification":"PARTIAL_SUPPORT","safeConclusion":"sled use supported; suitable push lane and association unresolved"},
+        {"station":"sled-pull","classification":"PARTIAL_SUPPORT","safeConclusion":"sled use supported; rope, pull lane and association unresolved"},
+        {"station":"burpee-broad-jump","classification":"PARTIAL_SUPPORT","safeConclusion":"coached use and approximate distance supported; space derivation remains"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"branch/program rower use supported"},
+        {"station":"farmers-carry","classification":"PARTIAL_SUPPORT","safeConclusion":"coached use supported; implements and carry-space raw review remains"},
+        {"station":"sandbag-lunges","classification":"PARTIAL_SUPPORT","safeConclusion":"program use supported; composite physical review remains"},
+        {"station":"wall-balls","classification":"PARTIAL_SUPPORT","safeConclusion":"program use supported; target, height and area remain"}
+      ],
+      "gapTypes":["SOURCE_TIMING_DIFFERENCE","RAW_FACT_PERSISTENCE_GAP","STATION_DERIVATION_GAP"]
+    },
+    {
+      "facility":"Club 360",
+      "hyfitHypothesis":{"count":"4/8","stations":["ski-erg","sled-push","row","sandbag-lunges"]},
+      "gymMap":{
+        "presence":"PRESENT_HYROX",
+        "locationId":"33bc8540-aca5-4aca-9921-c3f14dd8d067",
+        "slug":"club-360-1060046",
+        "brandId":"bbaa2720-8f29-487d-a29d-23c86940c080",
+        "officialState":"OFFICIAL_TRAINING_CLUB",
+        "hgyId":"HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+        "coordinates":{"latitude":35.658026,"longitude":139.727543},
+        "equipment":["row-erg","sandbag","ski-erg","weighted-sled"],
+        "capabilities":["competition-simulation","discipline-coaching","open-training"],
+        "rawStationReview":"H3_11D_PRESENT",
+        "canonicalMonitor":"ACTIVE"
+      },
+      "identityIssue":{"state":"BRANCH_AMBIGUITY","locations":["Motoazabu 3-1-35","Higashiazabu 1-8-4"],"requiredAction":"resolve exact location before projecting claims"},
+      "sources":[
+        {"url":"https://www.club360.jp/hyrox","sourceClass":"facility_official","binding":"multi_location_ambiguous","surface":"text"},
+        {"url":"https://www.club360.jp/service-page/hyrox","sourceClass":"official_service","binding":"multi_location_ambiguous","surface":"text"},
+        {"url":"https://www.club360.jp/open-gym","sourceClass":"official_access","binding":"multi_location_ambiguous","surface":"text"}
+      ],
+      "stationAudit":[
+        {"station":"ski-erg","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"accepted current canonical fact exists; exact branch matters"},
+        {"station":"sled-push","classification":"PARTIAL_SUPPORT","safeConclusion":"sled and training use exist; push lane and branch association unresolved"},
+        {"station":"sled-pull","classification":"PARTIAL_SUPPORT","safeConclusion":"complete branch-bound sled, rope and pull-lane set absent"},
+        {"station":"burpee-broad-jump","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no explicit branch-bound BBJ evidence found"},
+        {"station":"row","classification":"FIRST_PARTY_POSITIVE_SUPPORT","safeConclusion":"accepted current canonical fact exists; exact branch matters"},
+        {"station":"farmers-carry","classification":"NO_CURRENT_FIRST_PARTY_SUPPORT_FOUND","safeConclusion":"no branch-bound Farmers dependency set found"},
+        {"station":"sandbag-lunges","classification":"PARTIAL_SUPPORT","safeConclusion":"sandbag fact and lunge use exist; branch and space association remain"},
+        {"station":"wall-balls","classification":"PARTIAL_SUPPORT","safeConclusion":"program use exists; physical dependencies and branch remain"}
+      ],
+      "gapTypes":["FACILITY_IDENTITY_AMBIGUITY","STATION_DERIVATION_GAP"]
+    }
+  ],
+  "additionalCandidates": [
+    {"facility":"JGFS / JiroGym Fitness Studio Gotanda","officialSource":"https://jirogym-fs.com/","gymMapPresence":"ABSENT","officialState":"UNRESOLVED","whyCandidate":"facility claims HYROX classes, eight-station equipment and 5m sled track","priority":"HIGH"},
+    {"facility":"CrossFit Ikebukuro","officialSource":"https://cf-ikebukuro.com/","gymMapPresence":"ABSENT","officialState":"UNRESOLVED","whyCandidate":"HYROX classes, Open Gym and regulation-height/weight wall ball at exact address","priority":"HIGH"},
+    {"facility":"TOMMY WORKOUT GYM Meguro","officialSource":"https://tommyworkout.stores.jp/reserve/tommyworkoutgym","gymMapPresence":"ABSENT","officialState":"UNRESOLVED","whyCandidate":"current facility-bound HYROX classes and Open Gym booking","priority":"HIGH"},
+    {"facility":"GOLD'S GYM Harajuku Tokyo","officialSource":"https://www.goldsgym.jp/shop/harajuku-tokyo/news/6406/","gymMapPresence":"ABSENT","officialState":"UNRESOLVED","whyCandidate":"exact-branch HYROX equipment announcement","priority":"MEDIUM"}
+  ],
+  "excludedDiscovery": [
+    {"facility":"VAMOS Ebisu","reason":"already present as Official Training Club","locationId":"53b51872-63cb-4bfd-aa25-861df7cf203b","hgyId":"HGY_CKpn4DHneWfrqTUVaA7D5Whop"}
+  ],
+  "eligibilityProposal": {
+    "arbitraryStationThresholdAllowed": false,
+    "requirements": [
+      "exact facility identity resolved",
+      "current facility-bound first-party HYROX training, program, or usable-environment evidence",
+      "at least one independently auditable positive training fact",
+      "source provenance, binding, observation time and freshness accepted",
+      "access mode represented separately",
+      "no Official badge without governing-body evidence",
+      "station completeness evaluated separately under H3-11E"
+    ],
+    "recommendedLabel":"施設の公式情報でHYROXトレーニングを確認",
+    "requiredDisclaimer":"HYROX Official Training Clubの認定を示す表示ではありません。"
+  },
+  "architectureFit": {
+    "publishedHyroxWithOfficialFalseFeasible": true,
+    "schemaMigrationRequiredForBasicState": false,
+    "existingSupport":["location_training_disciplines","published_training_affiliations","equipment","capabilities","raw_facts","review_ledger","training_evidence","freshness","monitors","search_training_locations.p_official_only"],
+    "runtimeGaps":["server forces p_official_only=true","domain type fixes official=true","loader rejects official=false","counts badges map list detail metadata copy assume Official-only"],
+    "semanticGaps":["versioned non-Official eligibility outcome","mixed-state count and label authority","H3-11E station derivation"]
+  },
+  "publicOutputDependencies": [
+    {"output":"existing Club 360 and OTF canonical equipment/capabilities","classification":"CAN_DISPLAY_WITH_EXISTING_CANONICAL_FACTS"},
+    {"output":"source observations for absent facilities","classification":"REQUIRES_RAW_FACT_DISPLAY"},
+    {"output":"physical station support","classification":"REQUIRES_H3_11E_STATION_DERIVATION"},
+    {"output":"open-gym or drop-in station use","classification":"REQUIRES_USAGE_AUTHORITY"},
+    {"output":"numeric station scores","classification":"NOT_SUPPORTED_BY_CURRENT_EVIDENCE"}
+  ],
+  "productOptions": [
+    {"id":"A","name":"Official-only plus deeper station data","recommendation":"NOT_SELECTED","integrity":"HIGH","userValue":"MEDIUM","scope":"MEDIUM","maintenance":"MEDIUM","affiliationClarity":"HIGHEST"},
+    {"id":"B","name":"Official-first plus separately labeled verified non-Official facilities","recommendation":"RECOMMENDED","integrity":"HIGH_WITH_GATES","userValue":"HIGH","scope":"MEDIUM_HIGH","maintenance":"MEDIUM_HIGH","affiliationClarity":"HIGH"},
+    {"id":"C","name":"All evidence-qualified facilities with Official as filter and badge","recommendation":"NOT_SELECTED","integrity":"FEASIBLE_HIGHER_MISREAD_RISK","userValue":"HIGHEST","scope":"HIGH","maintenance":"HIGH","affiliationClarity":"MEDIUM"}
+  ],
+  "nextPhases": [
+    "H3-12B non-Official eligibility and labeling authority",
+    "H3-12C Tokyo evidence review and identity resolution",
+    "H3-11E station derivation authority",
+    "H3-12C bounded data release gate",
+    "H3-12D UI search and SEO expansion"
+  ],
+  "humanGate": "Authorize H3-12B for Option B authority design only; do not authorize production data or UI work.",
+  "productionInvariance": {
+    "databaseMutation": false,
+    "schemaMigration": false,
+    "reviewLedgerWrite": false,
+    "monitorActivation": false,
+    "uiChange": false,
+    "rpcChange": false,
+    "seoRouteChange": false,
+    "stationDerivationWrite": false,
+    "deployment": false
+  }
+}
