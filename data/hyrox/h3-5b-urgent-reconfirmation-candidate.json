@@ -1,0 +1,1640 @@
+{
+  "schemaVersion": 1,
+  "authorityKind": "H3_5B_URGENT_RECONFIRMATION_CANDIDATE",
+  "candidateOnly": true,
+  "productionMutationAuthorized": false,
+  "baselineMainSha": "40619256e2088bd8b82a4449602ea262aee52336",
+  "monitorCheckedAt": "2026-09-19T14:11:30.181Z",
+  "reviewedAt": "2026-09-19T14:15:24.000Z",
+  "summary": {
+    "urgentClaims": 16,
+    "uniqueOriginalSources": 5,
+    "actualOriginalSourceRequestsAfterDeduplication": 5,
+    "replacementSourcesReviewed": 1,
+    "reconfirmedCurrent": 15,
+    "supportMovedEquivalentSource": 1,
+    "supportDriftConfirmed": 0,
+    "monitorFalsePositive": 0,
+    "manualReviewHold": 0,
+    "temporaryMonitorError": 0
+  },
+  "requestPolicy": {
+    "maximumConcurrency": 4,
+    "maximumAttempts": 2,
+    "retryAfterSupported": true,
+    "boundedBackoff": true
+  },
+  "sourceReviews": [
+    {
+      "requestedUrl": "https://htc-chikusa.com/program.html",
+      "finalUrl": "https://htc-chikusa.com/program.html",
+      "accessState": "HTTP_200",
+      "redirect": false,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "facilityBinding": "CONFIRMED",
+      "support": "The official program page explicitly offers HYROXシミュレーション in レース形式 and describes it as 実戦さながら."
+    },
+    {
+      "requestedUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "finalUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "accessState": "HTTP_200",
+      "redirect": false,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "7dd7a9df52c343e1b75c641ef1b8ec1c08b5de4817374dd12f88963b16ec90f",
+      "facilityBinding": "CONFIRMED",
+      "support": "The official booking schedule contains Improve KYOTO HYROX Simulation sessions and race-oriented program text."
+    },
+    {
+      "requestedUrl": "https://www.club360.jp/hyrox",
+      "finalUrl": "https://www.club360.jp/hyrox",
+      "accessState": "HTTP_200",
+      "redirect": false,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "7ccb99bd2ab43619bdf7df9fea13a77148851179a569ddba3e00b14bcd05c9ec",
+      "facilityBinding": "CONFIRMED",
+      "support": "The official facility page explicitly offers PRIVATE HYROX SIMULATION and describes a private simulation of the race in Singles and Doubles formats."
+    },
+    {
+      "requestedUrl": "https://www.field-gym.com/hyrox/",
+      "finalUrl": "https://www.gym-field.com/hyrox/",
+      "accessState": "HTTP_200",
+      "redirect": true,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "a24d47a131a9586fc7d12813261d94e8e3ab0f77deb61517ef42ce391d07379d",
+      "facilityBinding": "GENERIC_AFTER_REDIRECT; EXACT_BINDING_MOVED",
+      "support": "The accepted URL now redirects to a generic official HYROX page; exact Higashiosaka binding moved to the official branch page."
+    },
+    {
+      "requestedUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "finalUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "accessState": "HTTP_200",
+      "redirect": false,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "facilityBinding": "CONFIRMED",
+      "support": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら)."
+    },
+    {
+      "requestedUrl": "https://www.gym-field.com/studios/higashiosaka/",
+      "finalUrl": "https://www.gym-field.com/studios/higashiosaka/",
+      "accessState": "HTTP_200",
+      "redirect": false,
+      "checkMode": "TEXT",
+      "sourceContentSha256": "0d47904e8bd9c14076d0a5b8ca8afa0e98a5ccbefe28a783ea8ac8a6965831b7",
+      "facilityBinding": "CONFIRMED: 東大阪; 〒577-0002 東大阪市稲田上町1-3-25 渋谷ビル1F",
+      "support": "HYROX complete alternates running and workouts and is presented with all eight HYROX disciplines.",
+      "role": "REVIEWED_REPLACEMENT_SOURCE"
+    }
+  ],
+  "claims": [
+    {
+      "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:competition-simulation",
+      "facility": "オレンジセオリーフィットネス麻布十番",
+      "locationId": "0b573034-d71b-4176-a3b3-82e9355d123e",
+      "locationSlug": "hyrox-training-club-1060045",
+      "hgyId": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "afd7bb8853589c789641899143af8b0610bce1a25a0fb270d40d447c0a09ecb7",
+      "existingMonitorSupportLocator": [
+        [
+          "麻布十番"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "麻布十番"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "afd7bb8853589c789641899143af8b0610bce1a25a0fb270d40d447c0a09ecb7"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+      "facility": "オレンジセオリーフィットネス溝の口",
+      "locationId": "295cc8bc-32d9-48f4-8b79-b2f18e85cd78",
+      "locationSlug": "hyrox-training-club-2130001",
+      "hgyId": "HGY_n4xTGpLhdouLv9TzuLk2J1OoV",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T09:20:04Z",
+      "previousExpiresAt": "2026-09-29T09:20:04.000Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "70e586116293334f86ddec5e4ea1fecd672e8585e179fbddf1d02c19a79e7d2d",
+      "existingMonitorSupportLocator": [
+        [
+          "溝の口スタジオ"
+        ],
+        [
+          "本番さながら"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "溝の口スタジオ"
+          ],
+          [
+            "本番さながら"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T09:20:04Z",
+        "expectedEvidenceHash": "70e586116293334f86ddec5e4ea1fecd672e8585e179fbddf1d02c19a79e7d2d"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:competition-simulation",
+      "facility": "CLUB 360",
+      "locationId": "33bc8540-aca5-4aca-9921-c3f14dd8d067",
+      "locationSlug": "club-360-1060046",
+      "hgyId": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-09-02T10:00:00.000Z",
+      "previousExpiresAt": "2026-10-02T10:00:00.000Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-11D Cohort 1 accepted review authority",
+      "originalSourceIdentity": "cohort1:src-75b51f42cb58283c",
+      "originalSourceUrl": "https://www.club360.jp/hyrox",
+      "existingEvidenceIdentity": "db5884eb86c23649e5db08eeed757ac31a5be614d22eabcbbf4a462dcb7c0ed2",
+      "existingMonitorSupportLocator": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ],
+      "originalAcceptedSemantics": "A private HYROX race simulation was explicitly offered in Singles and Doubles formats; no open-training semantics were inferred.",
+      "currentSourceUrl": "https://www.club360.jp/hyrox",
+      "currentSourceContentSha256": "7ccb99bd2ab43619bdf7df9fea13a77148851179a569ddba3e00b14bcd05c9ec",
+      "reviewedSupport": "The official facility page explicitly offers PRIVATE HYROX SIMULATION and describes a private simulation of the race in Singles and Doubles formats.",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "cohort1:src-75b51f42cb58283c",
+        "sourceUrl": "https://www.club360.jp/hyrox",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:competition-simulation",
+        "expectedReviewedAt": "2026-09-02T10:00:00.000Z",
+        "expectedEvidenceHash": "db5884eb86c23649e5db08eeed757ac31a5be614d22eabcbbf4a462dcb7c0ed2"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:competition-simulation",
+      "facility": "オレンジセオリーフィットネス 町田",
+      "locationId": "3c1747f5-b8e7-4d50-a31d-c05d31dd0edf",
+      "locationSlug": "hyrox-training-club-1940022",
+      "hgyId": "HGY_h8B3zjgLhoVELa3YhExLIEuxq",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "361d2b8cada7c2b1f29513c670e499c2534323ebd7aa53a5e4979e6889f2da7f",
+      "existingMonitorSupportLocator": [
+        [
+          "町田"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "町田"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "361d2b8cada7c2b1f29513c670e499c2534323ebd7aa53a5e4979e6889f2da7f"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:competition-simulation",
+      "facility": "オレンジセオリーフィットネス下北沢",
+      "locationId": "419f2440-1a1a-4815-8c2e-de4b2a9f9b1a",
+      "locationSlug": "hyrox-training-club-1550032",
+      "hgyId": "HGY_B9sy6uIdHbgwEkUt5vKBAigMH",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "9c856f38d3baba37c5db20f463e1c667a0a746e20762b2501e523f6a183d2d1c",
+      "existingMonitorSupportLocator": [
+        [
+          "下北沢"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "下北沢"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "9c856f38d3baba37c5db20f463e1c667a0a746e20762b2501e523f6a183d2d1c"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:competition-simulation",
+      "facility": "HTC CHIKUSA– Human Performance Training Center –",
+      "locationId": "4a07f1c3-3666-4648-bedd-35c283912e26",
+      "locationSlug": "htc-chikusa-human-performance-training-center-4600007",
+      "hgyId": "HGY_j1Szv4JmxytARCgfm48f0Z4xS",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-09-02T10:00:00.000Z",
+      "previousExpiresAt": "2026-10-02T10:00:00.000Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-11D Cohort 1 accepted review authority",
+      "originalSourceIdentity": "cohort1:src-fecd5cdb81a50241",
+      "originalSourceUrl": "https://htc-chikusa.com/program.html",
+      "existingEvidenceIdentity": "91847d847570112a46d4cf2277bf615c172be67b14bf927e35d5229638eef801",
+      "existingMonitorSupportLocator": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ],
+      "originalAcceptedSemantics": "HYROX simulation was explicitly offered in race format; no general class was promoted into simulation evidence.",
+      "currentSourceUrl": "https://htc-chikusa.com/program.html",
+      "currentSourceContentSha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+      "reviewedSupport": "The official program page explicitly offers HYROXシミュレーション in レース形式 and describes it as 実戦さながら.",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "cohort1:src-fecd5cdb81a50241",
+        "sourceUrl": "https://htc-chikusa.com/program.html",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:competition-simulation",
+        "expectedReviewedAt": "2026-09-02T10:00:00.000Z",
+        "expectedEvidenceHash": "91847d847570112a46d4cf2277bf615c172be67b14bf927e35d5229638eef801"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:competition-simulation",
+      "facility": "オレンジセオリーフィットネス本八幡",
+      "locationId": "4bb064be-730c-4f17-9849-12078fcea96b",
+      "locationSlug": "hyrox-training-club-2720021",
+      "hgyId": "HGY_i25m4SPcDFBD8fDB1UFmCNZvP",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "276517ed9f31422fd4969cca9ee45878e3be77969dcb37f35f208d2dce2777f0",
+      "existingMonitorSupportLocator": [
+        [
+          "本八幡"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "本八幡"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "276517ed9f31422fd4969cca9ee45878e3be77969dcb37f35f208d2dce2777f0"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:competition-simulation",
+      "facility": "オレンジセオリーフィットネス 浦和",
+      "locationId": "530bd4e0-6009-4c84-8c6d-f7ffe24ae79f",
+      "locationSlug": "hyrox-training-club-3300062",
+      "hgyId": "HGY_LofMB67LwXKWbb4m2xQmqsqMD",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "b4a91d3eca00ebc7dd314c4400a6fbe9203b915988b0c24828896f6d8b43626f",
+      "existingMonitorSupportLocator": [
+        [
+          "浦和"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "浦和"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "b4a91d3eca00ebc7dd314c4400a6fbe9203b915988b0c24828896f6d8b43626f"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:competition-simulation",
+      "facility": "オレンジセオリーフィットネス青葉台",
+      "locationId": "58746bc6-200d-49c5-a0ff-9e4601dbea86",
+      "locationSlug": "hyrox-training-club-2270062",
+      "hgyId": "HGY_Gytouu2Jl1EjSpgwMrT4tlmkc",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "ad7372e278e6cb3ad701b34de51c005b2f99db1d267e0c9cb6805f231e0fb958",
+      "existingMonitorSupportLocator": [
+        [
+          "青葉台"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "青葉台"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "ad7372e278e6cb3ad701b34de51c005b2f99db1d267e0c9cb6805f231e0fb958"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:competition-simulation",
+      "facility": "オレンジセオリーフィットネス東久留米",
+      "locationId": "5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12",
+      "locationSlug": "hyrox-training-club-2030014",
+      "hgyId": "HGY_fd08dzI687maGklD0PMhGHHZ7",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "2872c7119cea9828de933559155ea9a73045da0a0ed329723e741be6d80059e2",
+      "existingMonitorSupportLocator": [
+        [
+          "東久留米"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "東久留米"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "2872c7119cea9828de933559155ea9a73045da0a0ed329723e741be6d80059e2"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:competition-simulation",
+      "facility": "オレンジセオリーフィットネス自由が丘",
+      "locationId": "87ee5b5a-431c-4eae-9c70-7a7bed0287de",
+      "locationSlug": "hyrox-training-club-1520035",
+      "hgyId": "HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "cf43fb885cb9efe941f1d7c0d1a06c68ea5aaa8f55712640038e795158fb444d",
+      "existingMonitorSupportLocator": [
+        [
+          "自由が丘"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "自由が丘"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "cf43fb885cb9efe941f1d7c0d1a06c68ea5aaa8f55712640038e795158fb444d"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+      "facility": "GYM FIELD 東大阪（Yoshiyuki Hirano）",
+      "locationId": "cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4",
+      "locationSlug": "yoshiyuki-hirano-5770002",
+      "hgyId": "HGY_0PfI4t6UgVADRV7RfgXX48PR8",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T09:20:04Z",
+      "previousExpiresAt": "2026-09-29T09:20:04.000Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+      "originalSourceUrl": "https://www.field-gym.com/hyrox/",
+      "existingEvidenceIdentity": "c2a5597ac3215d0bda98f4316dbb51071b6560a1bfabb89cd23e113461eda16f",
+      "existingMonitorSupportLocator": [
+        [
+          "東大阪スタジオ"
+        ],
+        [
+          "模擬レース形式"
+        ]
+      ],
+      "originalAcceptedSemantics": "The accepted Higashiosaka evidence explicitly described a mock-race format (模擬レース形式); no open-use or station-availability claim was inferred.",
+      "currentSourceUrl": "https://www.gym-field.com/studios/higashiosaka/",
+      "currentSourceContentSha256": "0d47904e8bd9c14076d0a5b8ca8afa0e98a5ccbefe28a783ea8ac8a6965831b7",
+      "reviewedSupport": "The exact official Higashiosaka branch page identifies 東大阪 at the matching address and offers HYROX complete, a class alternating running and workouts, alongside the eight HYROX disciplines. This preserves the accepted race-format simulation semantics without strengthening them.",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "SUPPORT_MOVED_EQUIVALENT_SOURCE",
+      "classification": "SUPPORT_MOVED_EQUIVALENT_SOURCE",
+      "proposedAction": "SOURCE_REBIND_REQUIRED",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:gym-field-higashiosaka",
+        "sourceUrl": "https://www.gym-field.com/studios/higashiosaka/",
+        "supportPatternGroups": [
+          [
+            "東大阪"
+          ],
+          [
+            "HYROX complete"
+          ],
+          [
+            "ランニングとワークアウトを交互"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T09:20:04Z",
+        "expectedEvidenceHash": "c2a5597ac3215d0bda98f4316dbb51071b6560a1bfabb89cd23e113461eda16f"
+      },
+      "reason": "Current first-party support is equivalent and more precisely facility-bound, but changing the authoritative source relation requires the single Human Gate."
+    },
+    {
+      "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:competition-simulation",
+      "facility": "オレンジセオリーフィットネス武蔵小金井",
+      "locationId": "d5e17f12-a158-4988-aa00-e6626225f8c0",
+      "locationSlug": "hyrox-training-club-1840004",
+      "hgyId": "HGY_kk6NqoZrMoGBicxYBwVJafaE2",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "67b654cbe36c683de8a7002469bb191b1aa85195865becbecb02430761903a7c",
+      "existingMonitorSupportLocator": [
+        [
+          "武蔵小金井"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "武蔵小金井"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "67b654cbe36c683de8a7002469bb191b1aa85195865becbecb02430761903a7c"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:competition-simulation",
+      "facility": "Improve KYOTO",
+      "locationId": "e24cedfb-5333-4cd0-9164-1d764c3f6d73",
+      "locationSlug": "improve-kyoto",
+      "hgyId": "HGY_gp7GcAxbIZtxk5KpvoDwAOOcr",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-09-02T10:00:00.000Z",
+      "previousExpiresAt": "2026-10-02T10:00:00.000Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-11D Cohort 1 accepted review authority",
+      "originalSourceIdentity": "cohort1:src-11499b6f05256677",
+      "originalSourceUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "existingEvidenceIdentity": "c1341ce66fc35418951f20043bb42c0e0d910af0e6d9d1356962901a11b1cabc",
+      "existingMonitorSupportLocator": [
+        [
+          "simulation",
+          "シミュレーション"
+        ]
+      ],
+      "originalAcceptedSemantics": "The official Improve KYOTO schedule explicitly listed HYROX Simulation sessions; no broader equipment or open-use semantics were inferred.",
+      "currentSourceUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+      "currentSourceContentSha256": "7dd7a9df52c343e1b75c641ef1b8ec1c08b5de4817374dd12f88963b16ec90f",
+      "reviewedSupport": "The official booking schedule contains Improve KYOTO HYROX Simulation sessions and race-oriented program text.",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "cohort1:src-11499b6f05256677",
+        "sourceUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:competition-simulation",
+        "expectedReviewedAt": "2026-09-02T10:00:00.000Z",
+        "expectedEvidenceHash": "c1341ce66fc35418951f20043bb42c0e0d910af0e6d9d1356962901a11b1cabc"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:competition-simulation",
+      "facility": "オレンジセオリーフィットネス 八王子オーパ",
+      "locationId": "e77b1201-a8d8-428c-910f-f48edbca71ba",
+      "locationSlug": "hyrox-training-club-1920083",
+      "hgyId": "HGY_GUa4TuelZVO6XiKTfVGi9MmkF",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "58310e66cc8a1c03f5d72f3e826e08754a8053e9772ae771afe096b7d73a000d",
+      "existingMonitorSupportLocator": [
+        [
+          "八王子オーパ"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "八王子オーパ"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "58310e66cc8a1c03f5d72f3e826e08754a8053e9772ae771afe096b7d73a000d"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    },
+    {
+      "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:competition-simulation",
+      "facility": "オレンジセオリーフィットネス三鷹",
+      "locationId": "f6b82f46-09dc-4b5e-abe6-df477665d6fb",
+      "locationSlug": "hyrox-training-club-1810013",
+      "hgyId": "HGY_AoLBcMl9MBTosyMcyW5KxrTM4",
+      "claimFamily": "capability",
+      "slug": "competition-simulation",
+      "policy": "competition-simulation-30-day",
+      "freshnessHorizonDays": 30,
+      "previousReviewedAt": "2026-08-30T11:49:02.406Z",
+      "previousExpiresAt": "2026-09-29T11:49:02.406Z",
+      "observedState": "URGENT",
+      "originalReviewAuthority": "H3-5A legacy enrichment authority",
+      "originalSourceIdentity": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+      "originalSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "existingEvidenceIdentity": "a7608cc33ae477a14bd50aa2ba48baafa936ab239d3a59db5b49f113c14521de",
+      "existingMonitorSupportLocator": [
+        [
+          "三鷹"
+        ],
+        [
+          "全15店舗"
+        ],
+        [
+          "本番さながら"
+        ],
+        [
+          "クラスを開催"
+        ]
+      ],
+      "originalAcceptedSemantics": "The named branch was included in the official OTF HYROX class offer described as reproducing race conditions; no independent station availability was inferred.",
+      "currentSourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+      "currentSourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+      "reviewedSupport": "The official HYROX page names each targeted branch and states that all 15 stores hold a class designed to reproduce race conditions (本番さながら).",
+      "facilityBinding": "CONFIRMED",
+      "supportResult": "EXACT_CURRENT_SUPPORT",
+      "classification": "RECONFIRMED_CURRENT",
+      "proposedAction": "RECONFIRM_CURRENT",
+      "proposedReviewedAt": "2026-09-19T14:15:24.000Z",
+      "proposedExpiresAt": "2026-10-19T14:15:24.000Z",
+      "proposedUrgentAt": "2026-10-05T14:15:24.000Z",
+      "projectedImmediateState": "DUE_SOON",
+      "monitorUpdate": {
+        "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "supportPatternGroups": [
+          [
+            "三鷹"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      "mutationGuard": {
+        "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:competition-simulation",
+        "expectedReviewedAt": "2026-08-30T11:49:02.406Z",
+        "expectedEvidenceHash": "a7608cc33ae477a14bd50aa2ba48baafa936ab239d3a59db5b49f113c14521de"
+      },
+      "reason": "Human review confirmed the same accepted competition-simulation semantics at the exact facility on the current first-party source."
+    }
+  ],
+  "candidateMutationPacket": {
+    "executionState": "NON_EXECUTED",
+    "preservationRules": [
+      "Append reviewed evidence; do not overwrite or delete historical evidence.",
+      "Use claim/evidence/timestamp guards before any future Production release.",
+      "Preserve the old GYM FIELD source relation as historical and add the exact branch source.",
+      "Candidate ACCEPT does not authorize Production mutation."
+    ],
+    "reconfirmationDbDelta": [
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:competition-simulation",
+        "sourceIdentity": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "evidenceIdentity": "afd7bb8853589c789641899143af8b0610bce1a25a0fb270d40d447c0a09ecb7",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+        "sourceIdentity": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+        "evidenceIdentity": "70e586116293334f86ddec5e4ea1fecd672e8585e179fbddf1d02c19a79e7d2d",
+        "expectedPreviousReviewedAt": "2026-08-30T09:20:04Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:competition-simulation",
+        "sourceIdentity": "cohort1:src-75b51f42cb58283c",
+        "evidenceIdentity": "db5884eb86c23649e5db08eeed757ac31a5be614d22eabcbbf4a462dcb7c0ed2",
+        "expectedPreviousReviewedAt": "2026-09-02T10:00:00.000Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "7ccb99bd2ab43619bdf7df9fea13a77148851179a569ddba3e00b14bcd05c9ec"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:competition-simulation",
+        "sourceIdentity": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "evidenceIdentity": "361d2b8cada7c2b1f29513c670e499c2534323ebd7aa53a5e4979e6889f2da7f",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:competition-simulation",
+        "sourceIdentity": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "evidenceIdentity": "9c856f38d3baba37c5db20f463e1c667a0a746e20762b2501e523f6a183d2d1c",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:competition-simulation",
+        "sourceIdentity": "cohort1:src-fecd5cdb81a50241",
+        "evidenceIdentity": "91847d847570112a46d4cf2277bf615c172be67b14bf927e35d5229638eef801",
+        "expectedPreviousReviewedAt": "2026-09-02T10:00:00.000Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:competition-simulation",
+        "sourceIdentity": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "evidenceIdentity": "276517ed9f31422fd4969cca9ee45878e3be77969dcb37f35f208d2dce2777f0",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:competition-simulation",
+        "sourceIdentity": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "evidenceIdentity": "b4a91d3eca00ebc7dd314c4400a6fbe9203b915988b0c24828896f6d8b43626f",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:competition-simulation",
+        "sourceIdentity": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "evidenceIdentity": "ad7372e278e6cb3ad701b34de51c005b2f99db1d267e0c9cb6805f231e0fb958",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:competition-simulation",
+        "sourceIdentity": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "evidenceIdentity": "2872c7119cea9828de933559155ea9a73045da0a0ed329723e741be6d80059e2",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:competition-simulation",
+        "sourceIdentity": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "evidenceIdentity": "cf43fb885cb9efe941f1d7c0d1a06c68ea5aaa8f55712640038e795158fb444d",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:competition-simulation",
+        "sourceIdentity": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "evidenceIdentity": "67b654cbe36c683de8a7002469bb191b1aa85195865becbecb02430761903a7c",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:competition-simulation",
+        "sourceIdentity": "cohort1:src-11499b6f05256677",
+        "evidenceIdentity": "c1341ce66fc35418951f20043bb42c0e0d910af0e6d9d1356962901a11b1cabc",
+        "expectedPreviousReviewedAt": "2026-09-02T10:00:00.000Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "7dd7a9df52c343e1b75c641ef1b8ec1c08b5de4817374dd12f88963b16ec90f"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:competition-simulation",
+        "sourceIdentity": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "evidenceIdentity": "58310e66cc8a1c03f5d72f3e826e08754a8053e9772ae771afe096b7d73a000d",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      },
+      {
+        "operation": "APPEND_REVIEWED_CONFIRMATION_AND_REFRESH_CURRENTNESS",
+        "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:competition-simulation",
+        "sourceIdentity": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "evidenceIdentity": "a7608cc33ae477a14bd50aa2ba48baafa936ab239d3a59db5b49f113c14521de",
+        "expectedPreviousReviewedAt": "2026-08-30T11:49:02.406Z",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7"
+      }
+    ],
+    "publicationHoldDelta": [],
+    "sourceRebindDelta": [
+      {
+        "operation": "APPEND_SOURCE_AND_REVIEWED_EVIDENCE; PRESERVE_HISTORICAL_RELATION",
+        "claimKey": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+        "oldSourceIdentity": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:field-hyrox",
+        "oldSourceUrl": "https://www.field-gym.com/hyrox/",
+        "oldEvidenceIdentity": "c2a5597ac3215d0bda98f4316dbb51071b6560a1bfabb89cd23e113461eda16f",
+        "newSourceIdentity": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:gym-field-higashiosaka",
+        "newSourceUrl": "https://www.gym-field.com/studios/higashiosaka/",
+        "reviewedAt": "2026-09-19T14:15:24.000Z",
+        "expiresAt": "2026-10-19T14:15:24.000Z",
+        "sourceContentSha256": "0d47904e8bd9c14076d0a5b8ca8afa0e98a5ccbefe28a783ea8ac8a6965831b7",
+        "supportPatternGroups": [
+          [
+            "東大阪"
+          ],
+          [
+            "HYROX complete"
+          ],
+          [
+            "ランニングとワークアウトを交互"
+          ]
+        ]
+      }
+    ],
+    "monitorMatcherDelta": [],
+    "canonicalMonitorAuthorityDelta": [
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:0b573034-d71b-4176-a3b3-82e9355d123e:competition-simulation",
+        "sourceKey": "source:HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "麻布十番"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:295cc8bc-32d9-48f4-8b79-b2f18e85cd78:competition-simulation",
+        "sourceKey": "source:HGY_n4xTGpLhdouLv9TzuLk2J1OoV:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "溝の口スタジオ"
+          ],
+          [
+            "本番さながら"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:33bc8540-aca5-4aca-9921-c3f14dd8d067:competition-simulation",
+        "sourceKey": "cohort1:src-75b51f42cb58283c",
+        "sourceUrl": "https://www.club360.jp/hyrox",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "7ccb99bd2ab43619bdf7df9fea13a77148851179a569ddba3e00b14bcd05c9ec",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:3c1747f5-b8e7-4d50-a31d-c05d31dd0edf:competition-simulation",
+        "sourceKey": "source:HGY_h8B3zjgLhoVELa3YhExLIEuxq:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "町田"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:419f2440-1a1a-4815-8c2e-de4b2a9f9b1a:competition-simulation",
+        "sourceKey": "source:HGY_B9sy6uIdHbgwEkUt5vKBAigMH:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "下北沢"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:4a07f1c3-3666-4648-bedd-35c283912e26:competition-simulation",
+        "sourceKey": "cohort1:src-fecd5cdb81a50241",
+        "sourceUrl": "https://htc-chikusa.com/program.html",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "a3b2c8fa1cf69b4efb8242fb9633709cc53bc5e846671bd0bc121340ff91f560",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:4bb064be-730c-4f17-9849-12078fcea96b:competition-simulation",
+        "sourceKey": "source:HGY_i25m4SPcDFBD8fDB1UFmCNZvP:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "本八幡"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:530bd4e0-6009-4c84-8c6d-f7ffe24ae79f:competition-simulation",
+        "sourceKey": "source:HGY_LofMB67LwXKWbb4m2xQmqsqMD:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "浦和"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:58746bc6-200d-49c5-a0ff-9e4601dbea86:competition-simulation",
+        "sourceKey": "source:HGY_Gytouu2Jl1EjSpgwMrT4tlmkc:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "青葉台"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:5cc12f35-0a51-43ad-8bc0-f15ccf4e8a12:competition-simulation",
+        "sourceKey": "source:HGY_fd08dzI687maGklD0PMhGHHZ7:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "東久留米"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:87ee5b5a-431c-4eae-9c70-7a7bed0287de:competition-simulation",
+        "sourceKey": "source:HGY_Yvk64SmAD8pm5EDZ2m9rR02Cx:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "自由が丘"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REBIND_AND_REFRESH",
+        "claimKey": "capability:cc8f2cee-62bd-4756-abfd-5f1b27a9c9d4:competition-simulation",
+        "sourceKey": "source:HGY_0PfI4t6UgVADRV7RfgXX48PR8:gym-field-higashiosaka",
+        "sourceUrl": "https://www.gym-field.com/studios/higashiosaka/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "0d47904e8bd9c14076d0a5b8ca8afa0e98a5ccbefe28a783ea8ac8a6965831b7",
+        "supportPatternGroups": [
+          [
+            "東大阪"
+          ],
+          [
+            "HYROX complete"
+          ],
+          [
+            "ランニングとワークアウトを交互"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:d5e17f12-a158-4988-aa00-e6626225f8c0:competition-simulation",
+        "sourceKey": "source:HGY_kk6NqoZrMoGBicxYBwVJafaE2:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "武蔵小金井"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:e24cedfb-5333-4cd0-9164-1d764c3f6d73:competition-simulation",
+        "sourceKey": "cohort1:src-11499b6f05256677",
+        "sourceUrl": "https://improve-kyoto.hacomono.jp/reserve/schedule/1/2?trial=true",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "7dd7a9df52c343e1b75c641ef1b8ec1c08b5de4817374dd12f88963b16ec90f",
+        "supportPatternGroups": [
+          [
+            "simulation",
+            "シミュレーション"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:e77b1201-a8d8-428c-910f-f48edbca71ba:competition-simulation",
+        "sourceKey": "source:HGY_GUa4TuelZVO6XiKTfVGi9MmkF:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "八王子オーパ"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      },
+      {
+        "operation": "REFRESH_REVIEWED_CURRENTNESS",
+        "claimKey": "capability:f6b82f46-09dc-4b5e-abe6-df477665d6fb:competition-simulation",
+        "sourceKey": "source:HGY_AoLBcMl9MBTosyMcyW5KxrTM4:otf-hyrox",
+        "sourceUrl": "https://www.orangetheoryfitness.co.jp/hyrox/",
+        "lastConfirmedAt": "2026-09-19T14:15:24.000Z",
+        "staleAt": "2026-10-19T14:15:24.000Z",
+        "evidenceHash": "c650ed9c7ce85cdeefeeaeb570fb342e9cf297d2464ef9bf3e86ac6be758dbf7",
+        "supportPatternGroups": [
+          [
+            "三鷹"
+          ],
+          [
+            "全15店舗"
+          ],
+          [
+            "本番さながら"
+          ],
+          [
+            "クラスを開催"
+          ]
+        ]
+      }
+    ]
+  },
+  "blocker": {
+    "h3_12dProductionReleaseBlockedByH3_5b": "YES",
+    "reason": "The reviewed candidate still requires Human acceptance and a separate authorized Production Data Gate before DB and canonical monitor authority can move coherently."
+  }
+}
