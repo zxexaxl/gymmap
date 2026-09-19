@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "h3-12c-publication-design-v1",
+  "mode": "NON_EXECUTED_DESIGN",
+  "architecture": {
+    "schemaChangeRequired": false,
+    "rpcChangeRequired": false,
+    "publicationViewChangeRequired": false,
+    "persistenceGap": false,
+    "trainingEvidenceTarget": "location_training_discipline_id",
+    "officialFalseSupported": true,
+    "affiliationIndependentOfDiscipline": true,
+    "searchDefaultIncludesNonOfficial": true,
+    "searchOfficialFirst": true
+  },
+  "reviewLedger": {
+    "protocolKey": "hyrox-review-coverage",
+    "protocolVersion": "h3-11a-v1",
+    "dimension": { "slug": "discipline-eligibility", "name": "HYROX discipline eligibility", "dimensionKind": "AUXILIARY", "displayOrder": 110 },
+    "productionDimensionExists": false,
+    "taxonomyDataAdditionRequired": true,
+    "schemaMigrationRequired": false,
+    "serviceRoleCanInsertDimension": false,
+    "operationalInsertPath": "METADATA_SEED_MIGRATION_OR_ADMIN_SQL",
+    "unitsPerFacility": [
+      { "aspect": "FACILITY_IDENTITY", "progress": "COMPLETE", "sourceSufficiency": "SUFFICIENT", "positiveOutcome": "POSITIVE_FOUND" },
+      { "aspect": "COACHING_PROGRAM_FACT", "progress": "COMPLETE", "sourceSufficiency": "SUFFICIENT", "positiveOutcome": "POSITIVE_FOUND" },
+      { "aspect": "USAGE_ACCESS_FACT", "progress": "COMPLETE", "sourceSufficiency": "SUFFICIENT", "positiveOutcome": "POSITIVE_FOUND", "optionalWhenCoachingFactAloneClosesEligibility": true }
+    ]
+  },
+  "counts": {
+    "current": { "N": 82, "O": 82, "V": 0 },
+    "projectedIfAllSevenPublished": { "N": 89, "O": 85, "V": 4 },
+    "currentTokyo": { "N": 30, "O": 30, "V": 0 },
+    "projectedTokyoIfAllSevenPublished": { "N": 37, "O": 33, "V": 4 },
+    "invariant": "N = O + V",
+    "dedupeKey": "location_id"
+  },
+  "facilityPackets": [
+    {
+      "facility": "WARRIORS GYM Roppongi",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "location": "NEW_LOCATION_AFTER_COORDINATE_AUTHORITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_training_disciplines", "training_evidence", "training_review_cycles", "training_review_units", "training_review_unit_sources", "eligibility_monitor_manifest"],
+      "official": false,
+      "affiliationRow": "NONE",
+      "hgyId": null,
+      "publicLabel": "HYROXトレーニング情報を確認",
+      "blocker": "COORDINATE_AUTHORITY_REQUIRED"
+    },
+    {
+      "facility": "CrossFit Roppongi",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "location": "NEW_LOCATION_AFTER_COORDINATE_AUTHORITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_training_disciplines", "training_evidence", "training_review_cycles", "training_review_units", "training_review_unit_sources", "eligibility_monitor_manifest"],
+      "official": false,
+      "affiliationRow": "NONE",
+      "hgyId": null,
+      "publicLabel": "HYROXトレーニング情報を確認",
+      "blocker": "COORDINATE_AUTHORITY_REQUIRED"
+    },
+    {
+      "facility": "CrossFit Setagaya",
+      "classification": "ELIGIBLE_OFFICIAL",
+      "location": "NEW_LOCATION_FROM_GOVERNING_BODY_IDENTITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_external_identifiers", "location_training_disciplines", "training_evidence", "training_affiliations", "training_review_cycles", "training_review_units", "training_review_unit_sources", "official_monitor_manifest"],
+      "official": true,
+      "affiliationRow": "REQUIRED_GOVERNING_BODY_ONLY",
+      "hgyId": "HGY_RFVnw99mAdpSM2kA6DzbK0fwO",
+      "publicLabel": "Official Training Club",
+      "blocker": "OFFICIAL_PATH_REBASE_REQUIRED"
+    },
+    {
+      "facility": "GYM FIELD Tachikawa Studio",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "location": "NEW_LOCATION_AFTER_COORDINATE_AUTHORITY",
+      "brand": "REUSE_EXISTING_BRAND:a485c34e-968b-429d-aa77-2a9196b2dd45",
+      "writes": ["gym_locations", "training_sources", "location_training_disciplines", "training_evidence", "training_review_cycles", "training_review_units", "training_review_unit_sources", "eligibility_monitor_manifest"],
+      "official": false,
+      "affiliationRow": "NONE",
+      "hgyId": null,
+      "publicLabel": "HYROXトレーニング情報を確認",
+      "blocker": "COORDINATE_AUTHORITY_REQUIRED"
+    },
+    {
+      "facility": "JGFS / JiroGym Fitness Studio Gotanda",
+      "classification": "ELIGIBLE_OFFICIAL",
+      "location": "NEW_LOCATION_FROM_GOVERNING_BODY_IDENTITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_external_identifiers", "location_training_disciplines", "training_evidence", "training_affiliations", "training_review_cycles", "training_review_units", "training_review_unit_sources", "official_monitor_manifest"],
+      "official": true,
+      "affiliationRow": "REQUIRED_GOVERNING_BODY_ONLY",
+      "hgyId": "HGY_90X3Qce65u8nhankG8yTJUVfT",
+      "publicLabel": "Official Training Club",
+      "blocker": "OFFICIAL_PATH_REBASE_REQUIRED"
+    },
+    {
+      "facility": "CrossFit Ikebukuro",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "location": "NEW_LOCATION_AFTER_COORDINATE_AUTHORITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_training_disciplines", "training_evidence", "training_review_cycles", "training_review_units", "training_review_unit_sources", "eligibility_monitor_manifest"],
+      "official": false,
+      "affiliationRow": "NONE",
+      "hgyId": null,
+      "publicLabel": "HYROXトレーニング情報を確認",
+      "blocker": "COORDINATE_AUTHORITY_REQUIRED"
+    },
+    {
+      "facility": "TOMMY WORKOUT GYM Meguro",
+      "classification": "ELIGIBLE_OFFICIAL",
+      "location": "NEW_LOCATION_FROM_GOVERNING_BODY_IDENTITY",
+      "brand": "NEW_BRAND_CANDIDATE",
+      "writes": ["gym_brands", "gym_locations", "training_sources", "location_external_identifiers", "location_training_disciplines", "training_evidence", "training_affiliations", "training_review_cycles", "training_review_units", "training_review_unit_sources", "official_monitor_manifest"],
+      "official": true,
+      "affiliationRow": "REQUIRED_GOVERNING_BODY_ONLY",
+      "hgyId": "HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "publicLabel": "Official Training Club",
+      "blocker": "OFFICIAL_PATH_REBASE_REQUIRED"
+    }
+  ],
+  "releaseBlockers": {
+    "futureProductionReleaseBlockedByH35B": true,
+    "h35bReason": "The current canonical enrichment monitor reports 16 URGENT claims.",
+    "shared": ["H3-5B resolution", "discipline-eligibility taxonomy seed/admin insert", "implementation-phase human data/visual gate"],
+    "coordinateHolds": ["WARRIORS GYM Roppongi", "CrossFit Roppongi", "GYM FIELD Tachikawa Studio", "CrossFit Ikebukuro"],
+    "officialPathRebases": ["CrossFit Setagaya", "JGFS / JiroGym Fitness Studio Gotanda", "TOMMY WORKOUT GYM Meguro"]
+  },
+  "safetyCases": [
+    { "id": "A", "outcome": "NOT_ELIGIBLE", "determinism": "Equipment and CrossFit identity alone never qualify." },
+    { "id": "B", "outcome": "REVIEW_REQUIRED", "determinism": "Generic brand material cannot bind a branch." },
+    { "id": "C", "outcome": "NOT_CURRENTLY_ELIGIBLE", "determinism": "Ended or stale event support fails closed." },
+    { "id": "D", "outcome": "ELIGIBLE_VERIFIED_NON_OFFICIAL", "determinism": "Current exact-facility class support qualifies absent Finder affiliation." },
+    { "id": "E", "outcome": "ELIGIBLE_VERIFIED_NON_OFFICIAL", "determinism": "Current exact-facility preparation program qualifies absent Finder affiliation." },
+    { "id": "F", "outcome": "NOT_ELIGIBLE", "determinism": "Third-party completeness has discovery value only." },
+    { "id": "G", "outcome": "ELIGIBLE_OFFICIAL", "determinism": "Current Finder affiliation and published discipline are independent of equipment depth." },
+    { "id": "H", "outcome": "ELIGIBLE_VERIFIED_NON_OFFICIAL", "determinism": "Station depth is not an eligibility threshold." },
+    { "id": "I", "outcome": "REVIEW_REQUIRED_WITHHELD", "determinism": "Removed support creates support drift without a negative claim." },
+    { "id": "J", "outcome": "ELIGIBLE_VERIFIED_NON_OFFICIAL", "determinism": "A current facility-bound official schedule can qualify." },
+    { "id": "K", "outcome": "ELIGIBLE_VERIFIED_NON_OFFICIAL", "determinism": "No HGY ID or affiliation row is invented." },
+    { "id": "L", "outcome": "ELIGIBLE_OFFICIAL", "determinism": "Current Finder listing takes precedence and routes to Official ingestion." },
+    { "id": "M", "outcome": "ELIGIBILITY_WITHHELD_EQUIPMENT_PRESERVED", "determinism": "Eligibility and equipment freshness clocks are independent." },
+    { "id": "N", "outcome": "MONITOR_ERROR_CLOCK_UNCHANGED", "determinism": "HTTP 429 never revokes eligibility or reconfirms it." },
+    { "id": "O", "outcome": "IDENTITY_REVIEW_REQUIRED_WITHHELD", "determinism": "Closure or relocation blocks identity until reviewed." },
+    { "id": "P", "outcome": "REUSE_EXISTING_LOCATION_AFTER_EXACT_MATCH", "determinism": "Address, URL and identifiers must close; name-only merge is forbidden." },
+    { "id": "Q", "outcome": "COORDINATE_HOLD", "determinism": "Missing or wrong coordinates cannot be guessed." },
+    { "id": "R", "outcome": "FACILITY_BINDING_DRIFT_WITHHELD", "determinism": "A generic brand HYROX page cannot be shared across unnamed branches." }
+  ],
+  "productionMutation": false
+}

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "h3-12c-eligibility-monitor-v1",
+  "mode": "CANDIDATE_NOT_LIVE",
+  "policy": {
+    "key": "non-official-hyrox-eligibility-90-day",
+    "maxConcurrency": 4,
+    "maxAttempts": 2,
+    "retryAfter": true,
+    "boundedBackoff": true,
+    "requestDeduplicationKey": "canonical_url",
+    "automaticProductionWrite": false,
+    "observationExtendsReviewedAt": false,
+    "newPrivilegedSecret": false
+  },
+  "stateSemantics": {
+    "http429Timeout5xx": "MONITOR_ERROR",
+    "supportRemoved": "SUPPORT_DRIFT",
+    "facilityBindingLost": "FACILITY_BINDING_DRIFT",
+    "reviewExpiryReached": "TIME_EXPIRED",
+    "http403": "CHECK_UNAVAILABLE_ACCESS_RESTRICTED",
+    "negativeEligibilityInferenceAllowed": false
+  },
+  "nonOfficialEligibilityEntries": [
+    {
+      "facility": "WARRIORS GYM Roppongi",
+      "locationIdentity": "warriors-gym-roppongi",
+      "evidenceIdentity": "warriors-gym-roppongi:hyrox-environment",
+      "sourceUrl": "https://warriors-gym.com/facility/",
+      "canonicalUrl": "https://warriors-gym.com/facility/",
+      "sourceClass": "FACILITY_SPECIFIC_OFFICIAL_PAGE",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "bindingBasis": "Page title and site identity bind the dedicated HYROX area to WARRIORS GYM's only published facility.",
+      "reviewedAt": "2026-09-19T13:45:28.030Z",
+      "expiresAt": "2026-12-18T13:45:28.030Z",
+      "explicitEndAt": null,
+      "checkMode": "TEXT_DETERMINISTIC",
+      "supportPatternGroups": [["WARRIORS GYM"], ["HYROX", "ハイロックス"], ["世界基準のトレーニング", "専用エリア", "HYROXレッスン"]],
+      "reviewContentSha256": "4a58db1f8ca42ec843314c4d3e1633206dc04043f6c3af34df3f30051db32945"
+    },
+    {
+      "facility": "CrossFit Roppongi",
+      "locationIdentity": "crossfit-roppongi",
+      "evidenceIdentity": "crossfit-roppongi:hyrox-classes",
+      "sourceUrl": "https://crossfitroppongi.com/hyrox",
+      "canonicalUrl": "https://crossfitroppongi.com/hyrox",
+      "sourceClass": "OFFICIAL_HYROX_TRAINING_PAGE",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "bindingBasis": "Page title, exact facility footer address, and recurring HYROX schedule appear on one page.",
+      "reviewedAt": "2026-09-19T13:45:28.030Z",
+      "expiresAt": "2026-12-18T13:45:28.030Z",
+      "explicitEndAt": null,
+      "checkMode": "TEXT_DETERMINISTIC",
+      "supportPatternGroups": [["CrossFit Roppongi"], ["HYROX"], ["Hyrox training is available", "第2,第4火曜日"]],
+      "reviewContentSha256": "0b306a207e250d11898a863836b4d2cd6f83c335a438e7438a2ee778b5b07bb1"
+    },
+    {
+      "facility": "GYM FIELD Tachikawa Studio",
+      "locationIdentity": "gym-field-tachikawa",
+      "evidenceIdentity": "gym-field-tachikawa:hyrox-program",
+      "sourceUrl": "https://gym-field-htc.com/lp/tachikawa/",
+      "canonicalUrl": "https://gym-field-htc.com/lp/tachikawa/",
+      "sourceClass": "BRAND_OFFICIAL_FACILITY_PAGE",
+      "facilityBinding": "BRAND_FACILITY_SPECIFIC",
+      "bindingBasis": "The page title, branch address, program and pricing all name the Tachikawa studio.",
+      "reviewedAt": "2026-09-19T13:45:28.030Z",
+      "expiresAt": "2026-12-18T13:45:28.030Z",
+      "explicitEndAt": null,
+      "checkMode": "TEXT_DETERMINISTIC",
+      "supportPatternGroups": [["立川スタジオ"], ["HYROX"], ["HYROXに特化した", "トレーニングプログラム"]],
+      "reviewContentSha256": "60339ba19070da1289790798181406b29e51a1b6ece782bbb4eb38bb7897e586"
+    },
+    {
+      "facility": "CrossFit Ikebukuro",
+      "locationIdentity": "crossfit-ikebukuro",
+      "evidenceIdentity": "crossfit-ikebukuro:hyrox-class-access",
+      "sourceUrl": "https://cf-ikebukuro.com/",
+      "canonicalUrl": "https://cf-ikebukuro.com/",
+      "sourceClass": "FACILITY_SPECIFIC_OFFICIAL_PAGE",
+      "facilityBinding": "FACILITY_SPECIFIC",
+      "bindingBasis": "Facility name, HYROX class, Open Gym and exact Ikebukuro address occur on the same page.",
+      "reviewedAt": "2026-09-19T13:45:28.030Z",
+      "expiresAt": "2026-12-18T13:45:28.030Z",
+      "explicitEndAt": null,
+      "checkMode": "TEXT_DETERMINISTIC",
+      "supportPatternGroups": [["クロスフィット池袋", "CrossFit IKEBUKURO"], ["HYROX Class", "HYROXクラス"], ["東京都豊島区池袋3-60-4"]],
+      "reviewContentSha256": "25e93a0f91f7a2f89855a20c5f336a1920a7e52077ae4fcf629f5684184aba91"
+    }
+  ],
+  "officialStatusDriftRouting": [
+    {
+      "facility": "CrossFit Setagaya",
+      "hgyId": "HGY_RFVnw99mAdpSM2kA6DzbK0fwO",
+      "route": "EXISTING_OFFICIAL_FINDER_MONITOR_ONBOARDING",
+      "finderDetailUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_RFVnw99mAdpSM2kA6DzbK0fwO",
+      "facilitySourceUrl": "https://crossfit-setagaya.com/faq",
+      "facilityCheckMode": "TEXT_DETERMINISTIC"
+    },
+    {
+      "facility": "JGFS / JiroGym Fitness Studio Gotanda",
+      "hgyId": "HGY_90X3Qce65u8nhankG8yTJUVfT",
+      "route": "EXISTING_OFFICIAL_FINDER_MONITOR_ONBOARDING",
+      "finderDetailUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_90X3Qce65u8nhankG8yTJUVfT",
+      "facilitySourceUrl": "https://jirogym-fs.com/",
+      "facilityCheckMode": "DYNAMIC_BUT_DETERMINISTIC"
+    },
+    {
+      "facility": "TOMMY WORKOUT GYM Meguro",
+      "hgyId": "HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "route": "EXISTING_OFFICIAL_FINDER_MONITOR_ONBOARDING",
+      "finderDetailUrl": "https://hyrox-training-finder.hyrox.com/gym/HGY_tttU7yUgXd0aaJHOjKg5BCkSn",
+      "facilitySourceUrl": "https://tommyworkout.stores.jp/reserve/tommyworkoutgym",
+      "facilityCheckMode": "CHECK_UNAVAILABLE_ACCESS_RESTRICTED",
+      "limitation": "The current automated fetch receives a STORES captcha HTTP 403; Finder identity monitoring remains deterministic and freshness still fails closed by time."
+    }
+  ],
+  "liveActivation": false
+}

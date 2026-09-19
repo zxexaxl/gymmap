@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "h3-12c-implementation-contract-v1",
+  "mode": "DESIGN_ONLY",
+  "loaderAudit": {
+    "files": ["src/lib/hyrox-discovery-server.ts", "src/lib/hyrox-discovery.ts"],
+    "currentAssumptions": [
+      "The server sends p_official_only=true.",
+      "HyroxDiscoveryLocation fixes official to the literal true type.",
+      "loadCompleteHyroxDiscoveryData throws when official=false is returned.",
+      "The client-side prefecture/city/name sort discards the RPC's Official-first grouping.",
+      "HyroxDiscoveryData exposes only totalCount and cannot express O/V counts."
+    ],
+    "requiredDeltas": [
+      "Call search_training_locations with p_official_only=false for the default dataset.",
+      "Change the DTO field to official:boolean; do not add a redundant stored affiliation enum.",
+      "Accept official=false only from the already fail-closed publication RPC.",
+      "Sort by official descending, then preserve prefecture, city, name and id ordering inside each group.",
+      "Derive totalCount, officialCount and verifiedNonOfficialCount from unique location_id rows and assert N=O+V.",
+      "Retain URL supplementation batching and duplicate/pagination failure checks."
+    ]
+  },
+  "minimumPresentationDto": {
+    "fields": ["id", "slug", "name", "brandId", "brandName", "prefecture", "city", "address", "latitude", "longitude", "official", "officialUrl", "lastConfirmedAt", "confirmedEquipment"],
+    "classificationRule": "Rows in the published HYROX result are currently eligible; official=true means Official Training Club and official=false means verified non-Official.",
+    "redundantStatusField": false
+  },
+  "defaultDataset": {
+    "default": "ALL_VERIFIED",
+    "officialOnlyDefault": false,
+    "stableSort": ["official desc", "prefecture order", "city ja", "name ja", "location_id"],
+    "qualityRanking": false,
+    "stationCountRanking": false
+  },
+  "filter": {
+    "label": "Official Training Clubのみ",
+    "queryParameter": "official",
+    "trueValue": "1",
+    "absentMeans": false,
+    "stateOwner": "HyroxDiscovery client URL state",
+    "predicate": "location.official === true",
+    "mapListCountSynchronization": "One affiliation-filtered array feeds map markers, compact list, result cards and displayed count.",
+    "selectionBehavior": "If enabling the filter hides the selected non-Official facility, clear selected state and its selected query parameter and announce the change.",
+    "prefectureInteraction": "Apply affiliation and prefecture predicates together before map/list/count derivation."
+  },
+  "countContract": {
+    "headline": "HYROXトレーニング施設 N施設（Official O施設）",
+    "mapList": "N施設を表示（Official O・施設公式情報で確認 V）",
+    "officialOnly": "Official O施設を表示",
+    "invariant": "N = O + V",
+    "dedupeKey": "location_id"
+  },
+  "ui": {
+    "officialBadge": "Official Training Club",
+    "verifiedNonOfficialCompactLabel": "HYROXトレーニング情報を確認",
+    "verifiedNonOfficialFullLabel": "施設の公式情報でHYROXトレーニングを確認",
+    "verifiedNonOfficialClarification": "Official Training Clubの認定を示すものではありません",
+    "disclosure": "Officialバッジは、HYROXの公開情報でOfficial Training Clubとして確認できた施設に表示します。このほか、施設自身の公式情報でHYROXトレーニングを確認した施設も掲載しますが、Official Training Clubの認定を示すものではありません。",
+    "facilityIdentityDominant": true,
+    "confirmedEquipmentPositiveOnly": true,
+    "prohibited": ["numeric station completeness", "station score", "HYROX compatibility score", "negative equipment or access states"]
+  },
+  "exactUiFiles": [
+    "src/app/training/hyrox/page.tsx",
+    "src/app/training/hyrox/[slug]/page.tsx",
+    "src/components/training/hyrox-discovery.tsx",
+    "src/components/training/hyrox-facility-card.tsx",
+    "src/components/training/hyrox-map-selection-content.tsx",
+    "src/lib/hyrox-discovery-server.ts",
+    "src/lib/hyrox-discovery.ts",
+    "src/lib/__tests__/hyrox-discovery.test.ts",
+    "src/lib/__tests__/hyrox-equipment-ui.test.ts",
+    "src/lib/__tests__/hyrox-map-ui.test.ts"
+  ],
+  "map": {
+    "authority": "H3-10C / M1 shared presentation",
+    "markerDifference": false,
+    "newMarkerSystem": false,
+    "distinctionSurfaces": ["selected content", "badge or verified label", "Official-only filter"],
+    "ariaLabelDelta": "Replace Official-only map wording with HYROX training facility wording."
+  },
+  "seo": {
+    "route": "/training/hyrox",
+    "newRoute": false,
+    "canonicalUnchanged": true,
+    "robotsUnchanged": true,
+    "sitemapUnchanged": true,
+    "recommendedH1": "HYROXトレーニング施設 N施設（Official O施設）",
+    "inaccurateCurrentCopy": [
+      { "file": "src/app/training/hyrox/page.tsx", "string": "HYROXのトレーニングができるジム・公式Training Club一覧" },
+      { "file": "src/app/training/hyrox/page.tsx", "string": "日本国内のHYROX Official Training Clubを地図と都道府県から探せます。" },
+      { "file": "src/components/training/hyrox-discovery.tsx", "string": "Official Training Club一覧" },
+      { "file": "src/app/training/hyrox/[slug]/page.tsx", "string": "HYROX Official Training Club" },
+      { "file": "src/components/lesson/hyrox-home-entry.tsx", "string": "公式トレーニングクラブを、エリアや地図から確認できます。" }
+    ],
+    "safeDescription": "日本国内のHYROXトレーニング施設を地図と都道府県から探せます。Official Training Clubと、施設公式情報でHYROXトレーニングを確認した施設を区別して掲載します。"
+  },
+  "analytics": {
+    "events": [
+      { "name": "hyrox_affiliation_filter_changed", "dimensions": ["official_only", "source_route"] },
+      { "name": "hyrox_facility_selected", "dimensions": ["affiliation_class", "source_route", "selection_surface"] }
+    ],
+    "sensitiveData": false
+  },
+  "implementationBoundaries": {
+    "noRuntimeImplementationInH312C": true,
+    "noPublicUiImplementationInH312C": true,
+    "noRpcChange": true,
+    "noSchemaChange": true,
+    "noStationDerivation": true
+  }
+}
