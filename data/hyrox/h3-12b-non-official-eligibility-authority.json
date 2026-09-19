@@ -1,0 +1,486 @@
+{
+  "schemaVersion": "h3-12b-v1",
+  "mode": "DESIGN_AUTHORITY_ONLY",
+  "verdict": "NON_OFFICIAL_ELIGIBILITY_AUTHORITY_CANDIDATE_READY_HUMAN_REVIEW_REQUIRED",
+  "baseMain": "110cb9c49f1391dc97df12306f9d7e597566e4c0",
+  "acceptedH312A": "a50013a17b19c86c12b648560b54b4bdf49b6fab",
+  "coreRule": "Official affiliation and independently verified HYROX training evidence are separate authorities. A non-Official facility enters HYROX discovery only when its own current, facility-bound first-party information explicitly establishes a HYROX training relationship.",
+  "stateModel": [
+    {
+      "state": "OFFICIAL_TRAINING_CLUB",
+      "public": true,
+      "derivedWhen": "The location has a current published HYROX discipline and a current published affiliation supported by accepted governing-body evidence with is_official=true."
+    },
+    {
+      "state": "VERIFIED_NON_OFFICIAL_TRAINING_FACILITY",
+      "public": true,
+      "derivedWhen": "The location passes the non-Official publication gate and has no current governing-body Official affiliation."
+    },
+    {
+      "state": "REVIEW_REQUIRED",
+      "public": false,
+      "derivedWhen": "A candidate has unresolved identity, binding, source sufficiency, explicit-date, support-drift, refutation, or monitor-review conditions."
+    },
+    {
+      "state": "NOT_ELIGIBLE_FOR_HYROX_DISCOVERY",
+      "public": false,
+      "derivedWhen": "No qualifying current facility-bound first-party HYROX training assertion exists. This is an authority result, not a claim that the facility does not offer HYROX training."
+    }
+  ],
+  "evidenceAuthority": {
+    "minimumPositiveRule": "At least one accepted, current, facility-bound first-party source must explicitly state that the exact facility offers HYROX training, a HYROX class or program, HYROX preparation/training service, or an intentionally provided place/environment for HYROX training.",
+    "eligibleSourceClasses": [
+      "FACILITY_SPECIFIC_OFFICIAL_PAGE",
+      "BRAND_OFFICIAL_FACILITY_PAGE",
+      "OFFICIAL_HYROX_TRAINING_PAGE",
+      "OFFICIAL_PROGRAM_SERVICE_PAGE",
+      "OFFICIAL_BOOKING_MEMBER_SYSTEM",
+      "OFFICIAL_SCHEDULE_PAGE",
+      "OFFICIAL_SOCIAL_MEDIA"
+    ],
+    "facilityBinding": {
+      "accepted": [
+        "FACILITY_SPECIFIC",
+        "BRAND_FACILITY_SPECIFIC"
+      ],
+      "rejected": [
+        "GENERIC_NON_FACILITY_BOUND",
+        "UNKNOWN_INSUFFICIENT"
+      ],
+      "brandRule": "A brand-wide source qualifies a branch only when it explicitly names, lists, or otherwise unambiguously binds the HYROX training offer to that branch."
+    },
+    "discoveryOnlySources": [
+      "HYFIT",
+      "BLOG",
+      "AGGREGATOR",
+      "REVIEW",
+      "REDDIT",
+      "USER_COMMENT"
+    ],
+    "insufficientAlone": [
+      "SkiErg or other equipment presence",
+      "sled presence",
+      "CrossFit affiliation or identity",
+      "generic functional-fitness suitability",
+      "a third-party HYROX-compatible or station-count claim",
+      "a facility-specific equipment announcement that does not establish a HYROX training offer or usable HYROX training environment",
+      "any 4/8, 8/8, equipment-count, or station-count threshold"
+    ],
+    "stationEvidenceRequired": false,
+    "minimumStationCount": null,
+    "negativeClaimPolicy": "Failure, expiry, or removal of eligibility support means current authority is insufficient; it never authorizes a public claim that HYROX training is unavailable."
+  },
+  "officialSemantics": {
+    "authority": "Current accepted governing-body affiliation evidence only",
+    "nonOfficialOfficialValue": false,
+    "facilityMarketingCanConferOfficialStatus": false,
+    "prohibitedNonOfficialImplications": [
+      "Official Training Club",
+      "HYROX認定",
+      "HYROX公式ジム",
+      "official partnership"
+    ],
+    "unchanged": true
+  },
+  "publicationGate": {
+    "commonRequired": [
+      "gym_locations.is_active=true",
+      "a confirmed available HYROX location_training_disciplines row",
+      "last_confirmed_at is present and stale_at is in the future",
+      "accepted supporting training_evidence",
+      "supporting training_source is available and review_required=false",
+      "no accepted refuting evidence"
+    ],
+    "verifiedNonOfficialAdditionalRequired": [
+      "the accepted supporting evidence satisfies evidenceAuthority.minimumPositiveRule",
+      "the source class is eligible",
+      "facility binding is FACILITY_SPECIFIC or BRAND_FACILITY_SPECIFIC",
+      "the eligibility review unit is complete and sufficient",
+      "explicit source dates, if any, have not ended",
+      "no unresolved dispute, binding drift, or support drift",
+      "no current governing-body Official affiliation is required"
+    ],
+    "officialAdditionalRequired": [
+      "a current published affiliation with is_official=true"
+    ],
+    "statePrecedence": [
+      "OFFICIAL_TRAINING_CLUB",
+      "VERIFIED_NON_OFFICIAL_TRAINING_FACILITY",
+      "REVIEW_REQUIRED",
+      "NOT_ELIGIBLE_FOR_HYROX_DISCOVERY"
+    ],
+    "persistenceDecision": "DERIVE_DO_NOT_STORE_REDUNDANT_ENUM"
+  },
+  "labels": {
+    "official": {
+      "full": "Official Training Club",
+      "compact": "Official",
+      "accessible": "HYROX Official Training Club（HYROXの公開情報で公式所属を確認）"
+    },
+    "verifiedNonOfficial": {
+      "full": "施設の公式情報でHYROXトレーニングを確認",
+      "compact": "HYROXトレーニング情報を確認",
+      "accessible": "施設の公式情報でHYROXトレーニングを確認。HYROX Official Training Clubの認定を示すものではありません。"
+    },
+    "prohibitedForVerifiedNonOfficial": [
+      "HYROX対応",
+      "HYROX認定",
+      "HYROX公式",
+      "Official"
+    ]
+  },
+  "disclosure": "Officialバッジは、HYROXの公開情報でOfficial Training Clubとして確認できた施設に表示します。このほか、施設自身の公式情報でHYROXトレーニングを確認した施設も掲載しますが、Official Training Clubの認定を示すものではありません。",
+  "counts": {
+    "symbols": {
+      "N": "公開中のHYROXトレーニング施設（重複なし）",
+      "O": "Official Training Clubs",
+      "V": "施設公式情報でHYROXトレーニングを確認した非Official施設"
+    },
+    "invariant": "N = O + V",
+    "dedupeKey": "location_id",
+    "headline": "HYROXトレーニング施設 N施設（Official O施設）",
+    "prefectureFilter": "選択都道府県内のN/O/Vを再計算し、単独の無修飾『N施設』をOfficial件数として扱わない",
+    "mapAndList": "現在の同一フィルター集合について『N施設を表示（Official O・施設公式情報で確認 V）』",
+    "officialOnly": "有効時は表示件数=O、総在庫のNは変更せず、表示ラベルを『Official O施設を表示』とする",
+    "doubleCountAllowed": false
+  },
+  "discoveryBehavior": {
+    "recommendedDefault": "ALL_VERIFIED_OFFICIAL_FIRST",
+    "officialOnlyDefault": false,
+    "ordering": "Officialを先に表示し、各群内は既存の地域・名称順を維持する",
+    "rationale": "Option Bの発見価値を既定で提供しつつ、バッジ、群順、件数内訳、説明で所属を明確に分離する。",
+    "officialOnlyFilter": {
+      "label": "Official Training Clubのみ",
+      "predicate": "official=true only",
+      "equipmentOrStationPredicateAllowed": false,
+      "mapListSynchronization": "同一のaffiliation predicateを地図、一覧、選択状態、表示件数へ同時適用する",
+      "urlConcept": "共有・再読込可能な明示query stateにする。未指定はfalseとし、具体的なparameter名は実装フェーズで決定する。"
+    }
+  },
+  "freshness": {
+    "policyKey": "non-official-hyrox-eligibility-90-day",
+    "horizonDays": 90,
+    "justification": "非Official資格は設備の耐久性ではなく、クラス、プログラム、予約可能性、運用中のトレーニング環境という変化し得るサービス関係を表すため、既存のdiscipline-coaching/open-trainingの90日運用権限と意味が一致する。",
+    "anchor": "reviewed_at of the accepted eligibility review, not HTTP checked_at",
+    "staleAtRule": "The earlier of reviewed_at plus 90 days and the first instant after an explicit program/service end boundary.",
+    "continuityRule": "A source-explicit active interval or current/future recurring schedule may establish support continuity only inside its stated interval; it does not move reviewed_at.",
+    "reconfirmationRule": "Advance reviewed_at only after a reviewer confirms the same explicit HYROX relationship, facility binding, source authority, relevant dates, and non-refutation on an accepted first-party surface.",
+    "httpAvailabilityExtendsFreshness": false,
+    "genericPageReachabilityIsReconfirmation": false,
+    "expiryBehavior": "Fail closed by withholding the facility from HYROX discovery while preserving historical evidence and avoiding a negative facility claim.",
+    "immediateInvalidation": [
+      "explicit program end reached",
+      "accepted refuting evidence",
+      "facility binding no longer established",
+      "support text removed or materially changed after review",
+      "source is replaced by generic non-bound marketing"
+    ],
+    "sourceUnavailableBehavior": "Classify eligibility as REVIEW_REQUIRED and withhold it from public HYROX discovery until reviewed authority returns. Preserve historical evidence and do not infer that training is unavailable. The monitor itself performs no Production write and source availability never extends reviewed freshness.",
+    "monitorErrorBehavior": "Do not mutate eligibility or freshness; report monitor error and retain the pre-existing clock."
+  },
+  "monitoring": {
+    "decision": "NEW_NARROW_ELIGIBILITY_MONITOR_REQUIRED",
+    "reuse": [
+      "repository-side deterministic manifest pattern",
+      "source fetch and normalization",
+      "source availability classification",
+      "support-pattern drift detection",
+      "freshness severity classification"
+    ],
+    "reasonExistingManifestIsInsufficient": "The existing enrichment monitor is equipment/capability-claim shaped and assumes Official HGY-linked records; eligibility is a facility-discipline assertion and non-Official candidates need no HGY identifier.",
+    "manifestMinimumFields": [
+      "location_id",
+      "source_key",
+      "source_url and canonical_url",
+      "source_class",
+      "facility_binding and binding basis",
+      "support pattern groups",
+      "reviewed_at",
+      "stale_at",
+      "explicit effective/end dates when present",
+      "evidence content hash"
+    ],
+    "detections": [
+      "TIME_EXPIRY",
+      "SUPPORT_DRIFT",
+      "FACILITY_BINDING_DRIFT",
+      "SOURCE_UNAVAILABLE",
+      "MONITOR_ERROR"
+    ],
+    "monitorObservationExtendsReviewedAt": false,
+    "automaticProductionWrite": false,
+    "newPrivilegedDatabaseSecret": false
+  },
+  "architectureFit": {
+    "schemaChangeRequired": false,
+    "rpcChangeRequired": false,
+    "loaderTypeChangeRequired": true,
+    "uiAssumptionChangeRequired": true,
+    "reviewDimensionDataAdditionRequired": true,
+    "schemaEvidence": [
+      "published_location_training_disciplines does not require an affiliation and accepts facility_official, official_schedule, and official_social authority",
+      "published_training_affiliations derives is_official only from governing_body evidence",
+      "search_training_locations defaults p_official_only=false and derives official independently",
+      "the RPC orders official rows first and can return official=false"
+    ],
+    "currentApplicationBlockers": [
+      "hyrox-discovery-server passes p_official_only=true",
+      "HyroxDiscoveryLocation fixes official:true",
+      "the loader throws on official=false",
+      "page, card, detail, count, metadata, and disclosure text are Official-only"
+    ]
+  },
+  "reviewLedger": {
+    "recommendedDimension": {
+      "slug": "discipline-eligibility",
+      "name": "HYROX discipline eligibility",
+      "dimensionKind": "AUXILIARY"
+    },
+    "existingSchemaCanRepresentDimension": true,
+    "aspects": {
+      "FACILITY_IDENTITY": "identity and branch binding",
+      "COACHING_PROGRAM_FACT": "explicit class, program, preparation, or training-service assertion",
+      "USAGE_ACCESS_FACT": "explicit intentionally usable HYROX training environment or access assertion"
+    },
+    "rule": "At least one complete/sufficient positive COACHING_PROGRAM_FACT or USAGE_ACCESS_FACT unit plus a complete/sufficient FACILITY_IDENTITY unit is required. Do not duplicate eligibility across eight workout-station dimensions.",
+    "migrationRequired": false,
+    "futureAuthorityDataRequired": true
+  },
+  "stationSeparation": {
+    "eligibilityQuestion": "Should this facility appear in HYROX discovery?",
+    "stationQuestion": "What can GymMap positively establish about the facility's training environment?",
+    "h311eRole": "Future versioned station derivation enriches what-can-I-train detail and filters.",
+    "stationDataGatesEligibility": false,
+    "eligibilityGatesStationTruth": false,
+    "publicStationScoreAuthorized": false
+  },
+  "seedValidation": [
+    {
+      "facility": "WARRIORS GYM Roppongi",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "path": "Explicit facility HYROX arena/training environment",
+      "source": "https://warriors-gym.com/facility/",
+      "official": false,
+      "note": "Exact-facility first-party HYROX environment qualifies; station completeness is irrelevant."
+    },
+    {
+      "facility": "CrossFit Roppongi",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "path": "Explicit facility HYROX classes/coaching",
+      "source": "https://crossfitroppongi.com/hyrox",
+      "official": false,
+      "note": "Coached HYROX classes qualify even though only RowErg station evidence was established."
+    },
+    {
+      "facility": "CrossFit Setagaya",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "path": "Explicit facility HYROX class",
+      "source": "https://crossfit-setagaya.com/faq",
+      "official": false,
+      "note": "The facility-bound class relationship qualifies without a station threshold."
+    },
+    {
+      "facility": "GYM FIELD Tachikawa Studio",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "path": "Exact-branch HYROX-specific program",
+      "source": "https://gym-field-htc.com/lp/tachikawa/",
+      "official": false,
+      "note": "The program qualifies; unresolved composite station dependencies do not block eligibility."
+    },
+    {
+      "facility": "Orangetheory Fitness Azabu-Juban",
+      "classification": "ELIGIBLE_OFFICIAL",
+      "path": "Current governing-body affiliation plus published HYROX discipline",
+      "source": "HGY_MBiqaWicnf0xZ4Ftz9b8aMRTE",
+      "official": true,
+      "note": "Official classification is not derived from the brand program page."
+    },
+    {
+      "facility": "Club 360",
+      "classification": "ELIGIBLE_OFFICIAL",
+      "path": "Current governing-body affiliation plus published HYROX discipline",
+      "source": "HGY_4GF2DeDJoIzNRU4jn9scAv65V",
+      "official": true,
+      "note": "Existing Official discovery eligibility remains; branch ambiguity blocks projecting new facility claims, not the governing-body classification."
+    }
+  ],
+  "additionalTokyoValidation": [
+    {
+      "facility": "JGFS / JiroGym Fitness Studio Gotanda",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "source": "https://jirogym-fs.com/",
+      "reason": "Facility first party explicitly states HYROX classes."
+    },
+    {
+      "facility": "CrossFit Ikebukuro",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "source": "https://cf-ikebukuro.com/",
+      "reason": "Exact-facility first party lists HYROX classes and Open Gym."
+    },
+    {
+      "facility": "TOMMY WORKOUT GYM Meguro",
+      "classification": "ELIGIBLE_VERIFIED_NON_OFFICIAL",
+      "source": "https://tommyworkout.stores.jp/reserve/tommyworkoutgym",
+      "reason": "Current exact-facility booking surface offers HYROX group classes and Open Gym."
+    },
+    {
+      "facility": "GOLD'S GYM Harajuku Tokyo",
+      "classification": "REVIEW_REQUIRED",
+      "source": "https://www.goldsgym.jp/shop/harajuku-tokyo/news/6406/",
+      "reason": "The accepted audit establishes an exact-branch HYROX equipment announcement, but not yet an explicit current HYROX training offer or usable HYROX training-environment relationship."
+    }
+  ],
+  "falsePositiveCases": [
+    {"id":"A","scenario":"CrossFit gym with SkiErg/sled but no HYROX mention","result":"NOT_ELIGIBLE_FOR_HYROX_DISCOVERY","reason":"Physical suitability is not an explicit HYROX training relationship."},
+    {"id":"B","scenario":"Brand generic HYROX article but no branch-specific HYROX evidence","result":"REVIEW_REQUIRED","reason":"GENERIC_NON_FACILITY_BOUND evidence cannot qualify a branch."},
+    {"id":"C","scenario":"Old HYROX event page from two years ago","result":"NOT_ELIGIBLE_FOR_HYROX_DISCOVERY","reason":"The program/event support is stale or ended; history is preserved without a negative claim."},
+    {"id":"D","scenario":"Facility-specific current HYROX class page","result":"ELIGIBLE_VERIFIED_NON_OFFICIAL","reason":"Qualifying first-party class assertion, subject to all common gate conditions."},
+    {"id":"E","scenario":"Facility-specific current HYROX preparation program","result":"ELIGIBLE_VERIFIED_NON_OFFICIAL","reason":"Qualifying first-party preparation/training assertion."},
+    {"id":"F","scenario":"Third-party article claims 8/8; facility website never mentions HYROX","result":"NOT_ELIGIBLE_FOR_HYROX_DISCOVERY","reason":"Third-party discovery and station counts have no eligibility authority."},
+    {"id":"G","scenario":"Official Training Club with sparse equipment evidence","result":"ELIGIBLE_OFFICIAL","reason":"Current governing-body affiliation and published discipline qualify it; equipment evidence is separate."},
+    {"id":"H","scenario":"Non-Official facility with explicit HYROX program but only two station facts","result":"ELIGIBLE_VERIFIED_NON_OFFICIAL","reason":"Direct current program evidence qualifies it; no station minimum exists."},
+    {"id":"I","scenario":"HYROX program page removed","result":"REVIEW_REQUIRED_WITHHELD_FROM_DISCOVERY","reason":"Removed support makes current eligibility authority insufficient and fails closed immediately without asserting that HYROX training is unavailable."},
+    {"id":"J","scenario":"Schedule has future/current HYROX class but generic landing page does not","result":"ELIGIBLE_VERIFIED_NON_OFFICIAL","reason":"An exact-facility official schedule is qualifying first party while the class is current/bookable and the freshness/date gate remains satisfied."}
+  ],
+  "phase1Candidates": [
+    {
+      "facility": "WARRIORS GYM Roppongi",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://warriors-gym.com/facility/",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_EXACT_FACILITY_ENVIRONMENT",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "CrossFit Roppongi",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://crossfitroppongi.com/hyrox",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_EXACT_FACILITY_PROGRAM",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "CrossFit Setagaya",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://crossfit-setagaya.com/faq",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_EXACT_FACILITY_CLASS",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "GYM FIELD Tachikawa Studio",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://gym-field-htc.com/lp/tachikawa/",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_EXACT_BRANCH_PROGRAM",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "JGFS / JiroGym Fitness Studio Gotanda",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://jirogym-fs.com/",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_FACILITY_CLASS_ASSERTION",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "CrossFit Ikebukuro",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://cf-ikebukuro.com/",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_EXACT_FACILITY_CLASS_AND_ACCESS",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_IDENTITY_AND_ELIGIBILITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "TOMMY WORKOUT GYM Meguro",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://tommyworkout.stores.jp/reserve/tommyworkoutgym",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "STRONG_DATED_BOOKING_AND_ACCESS",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P1_DATE_AND_IDENTITY_REVIEW",
+      "phase1Disposition": "READY_FOR_REVIEW_NOT_IMPORT"
+    },
+    {
+      "facility": "GOLD'S GYM Harajuku Tokyo",
+      "gymMapIdentity": null,
+      "projectedOfficial": false,
+      "eligibilitySource": "https://www.goldsgym.jp/shop/harajuku-tokyo/news/6406/",
+      "freshness": {"reviewedAt":"2026-09-19","staleAt":"2026-12-18","policyKey":"non-official-hyrox-eligibility-90-day"},
+      "evidenceStrength": "EXACT_BRANCH_EQUIPMENT_ONLY_ELIGIBILITY_INSUFFICIENT",
+      "schemaCanRepresent": true,
+      "h311eNeededForEligibility": false,
+      "h311eNeededForRicherStations": true,
+      "reviewPriority": "P2_FIND_EXPLICIT_TRAINING_RELATIONSHIP",
+      "phase1Disposition": "HOLD_REVIEW_REQUIRED"
+    }
+  ],
+  "seo": {
+    "safePageConcept": "東京のHYROXトレーニング施設",
+    "requiredInventoryExplanation": "Official Training Clubと、施設公式情報でHYROXトレーニングを確認した施設を分けて表示する。",
+    "unsafeImplication": "All listed facilities are Official",
+    "futureEligibilityConditions": [
+      "enough current verified facilities to answer the geographic intent",
+      "unique structured facility data rather than repeated boilerplate",
+      "evidence-rich labels and source-backed descriptions",
+      "stable eligibility freshness and monitoring coverage",
+      "useful synchronized map/list output"
+    ],
+    "thinProgrammaticExpansionAuthorized": false
+  },
+  "productionInvariance": {
+    "databaseMutation": false,
+    "schemaMigration": false,
+    "rpcMutation": false,
+    "trainingDisciplineInsertion": false,
+    "trainingEvidenceInsertion": false,
+    "affiliationMutation": false,
+    "reviewLedgerWrite": false,
+    "monitorActivation": false,
+    "uiChange": false,
+    "seoRouteChange": false,
+    "sitemapMutation": false,
+    "deployment": false
+  },
+  "authorityHashes": {
+    "NON_OFFICIAL_ELIGIBILITY_AUTHORITY_SHA256": "0fc3b5108eb958698338d958ae94d6e11a1f75aa895019290ba539721272e41c",
+    "LABEL_AUTHORITY_SHA256": "ce405a338f9b7d61b5537eecbdd854defaaa69986f48bc6fb56d3050c622fb84",
+    "COUNT_SEMANTICS_SHA256": "2f45149fd8ebbbe37b0a6cb7ec81bbc7c29781dcad6a59578d742d6e54f47dfa",
+    "ELIGIBILITY_FRESHNESS_SHA256": "f6541afcd4a1b06cfadbc68a06bcf0a0a80af787c448fca645f7bc2060795f55",
+    "PHASE1_CANDIDATE_SET_SHA256": "5ebf2ea3d76a2ae016434fbb46b797ab427e82d3a5eb3a0e50ddb066b65d20ff"
+  },
+  "humanGate": "ACCEPT or NEEDS_CORRECTION"
+}
